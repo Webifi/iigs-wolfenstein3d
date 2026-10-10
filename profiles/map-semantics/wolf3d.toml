@@ -1,0 +1,1604 @@
+# Source map words are kept as 16-bit values. Unmapped codes are reported.
+# Named behaviors require corresponding native capabilities; these records
+# describe source meaning and do not supply AI or rendering code.
+# Plane 0 is geometry/areas; plane 1 is objects; plane 2 is unused in these games.
+format = 1
+sprite_catalog = "wolf3d-sprites.toml"
+catalog_id = "wolf3d"
+source_references = ["id Software WOLFSRC/WL_GAME.C: ScanInfoPlane, SetupGameLevel", "id Software WOLFSRC/WL_ACT1.C: statinfo", "id Software WOLFSRC/WL_DEF.H: map constants", "id Software WOLFSRC/WL_STATE.C: KillActor", "id Software WOLFSRC/WL_ACT2.C: actor states, projectiles, morphs"]
+always_resources = ["player.weapons", "presentation.overlays"]
+
+[[objects]]
+name = "Preflagged elevator-texture door-side wall"
+plane = 0
+kind = "geometry"
+behavior = "wall"
+capabilities = ["map.walls", "map.door-side-wall"]
+codes = [85]
+# WL_ACT1.C SpawnDoor marks bit 6; WL_DRAW.C strips it for wall lookup.
+# Cmd_Use tests plain 21, so this flagged wall is not an elevator trigger.
+parameters = { wall_material = 21, door_side = true }
+
+[[objects]]
+name = "Unoccupied geometry"
+plane = 0
+kind = "geometry"
+behavior = "void"
+capabilities = ["map.void"]
+codes = [0]
+
+[[objects]]
+name = "Wall textures"
+plane = 0
+kind = "geometry"
+behavior = "wall"
+capabilities = ["map.walls"]
+ranges = [[1, 20], [23, 63]]
+
+[[objects]]
+name = "Elevator switch"
+plane = 0
+kind = "geometry"
+behavior = "elevator"
+capabilities = ["route.normal_exit", "route.secret_exit"]
+codes = [21]
+
+[[objects]]
+name = "Switched elevator texture"
+plane = 0
+kind = "geometry"
+behavior = "wall"
+capabilities = ["map.walls"]
+codes = [22]
+
+[[objects]]
+name = "Door unlocked"
+plane = 0
+kind = "geometry"
+behavior = "door"
+capabilities = ["door.unlocked"]
+codes = [90, 91]
+parameters = { orientations = ["vertical", "horizontal"] }
+
+[[objects]]
+name = "Door key1"
+plane = 0
+kind = "geometry"
+behavior = "door"
+capabilities = ["door.key1"]
+codes = [92, 93]
+parameters = { orientations = ["vertical", "horizontal"] }
+
+[[objects]]
+name = "Door key2"
+plane = 0
+kind = "geometry"
+behavior = "door"
+capabilities = ["door.key2"]
+codes = [94, 95]
+parameters = { orientations = ["vertical", "horizontal"] }
+
+[[objects]]
+name = "Door key3"
+plane = 0
+kind = "geometry"
+behavior = "door"
+capabilities = ["door.key3"]
+codes = [96, 97]
+parameters = { orientations = ["vertical", "horizontal"] }
+
+[[objects]]
+name = "Door key4"
+plane = 0
+kind = "geometry"
+behavior = "door"
+capabilities = ["door.key4"]
+codes = [98, 99]
+parameters = { orientations = ["vertical", "horizontal"] }
+
+[[objects]]
+name = "Door elevator"
+plane = 0
+kind = "geometry"
+behavior = "door"
+capabilities = ["door.elevator"]
+codes = [100, 101]
+parameters = { orientations = ["vertical", "horizontal"] }
+
+[[objects]]
+name = "Ambush area marker"
+plane = 0
+kind = "geometry"
+behavior = "ambush"
+capabilities = ["map.ambush"]
+codes = [106]
+
+[[objects]]
+name = "Connected floor areas"
+plane = 0
+kind = "geometry"
+behavior = "area"
+capabilities = ["map.areas"]
+ranges = [[107, 143]]
+parameters = { area_base = 107 }
+
+[[objects]]
+name = "Empty object tile"
+plane = 1
+kind = "empty"
+behavior = "empty"
+capabilities = []
+codes = [0]
+
+[[objects]]
+name = "Player start"
+plane = 1
+kind = "player"
+behavior = "player"
+capabilities = ["spawn.player"]
+codes = [19, 20, 21, 22]
+parameters = { directions = ["north", "east", "south", "west"] }
+
+[[objects]]
+name = "Static 0 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [23]
+parameters = { sprite_name = "SPR_STAT_0" }
+resource_id = "static.0"
+
+[[objects]]
+name = "Static 1 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [24]
+parameters = { sprite_name = "SPR_STAT_1" }
+resource_id = "static.1"
+
+[[objects]]
+name = "Static 2 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [25]
+parameters = { sprite_name = "SPR_STAT_2" }
+resource_id = "static.2"
+
+[[objects]]
+name = "Static 3 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [26]
+parameters = { sprite_name = "SPR_STAT_3" }
+resource_id = "static.3"
+
+[[objects]]
+name = "Static 4 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [27]
+parameters = { sprite_name = "SPR_STAT_4" }
+resource_id = "static.4"
+
+[[objects]]
+name = "Static 5 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [28]
+parameters = { sprite_name = "SPR_STAT_5" }
+resource_id = "static.5"
+
+[[objects]]
+name = "Static 6 bo_alpo"
+plane = 1
+kind = "pickup"
+behavior = "bo_alpo"
+capabilities = ["pickup.bo_alpo"]
+codes = [29]
+parameters = { sprite_name = "SPR_STAT_6" }
+resource_id = "static.6"
+
+[[objects]]
+name = "Static 7 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [30]
+parameters = { sprite_name = "SPR_STAT_7" }
+resource_id = "static.7"
+
+[[objects]]
+name = "Static 8 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [31]
+parameters = { sprite_name = "SPR_STAT_8" }
+resource_id = "static.8"
+
+[[objects]]
+name = "Static 9 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [32]
+parameters = { sprite_name = "SPR_STAT_9" }
+resource_id = "static.9"
+
+[[objects]]
+name = "Static 10 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [33]
+parameters = { sprite_name = "SPR_STAT_10" }
+resource_id = "static.10"
+
+[[objects]]
+name = "Static 11 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [34]
+parameters = { sprite_name = "SPR_STAT_11" }
+resource_id = "static.11"
+
+[[objects]]
+name = "Static 12 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [35]
+parameters = { sprite_name = "SPR_STAT_12" }
+resource_id = "static.12"
+
+[[objects]]
+name = "Static 13 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [36]
+parameters = { sprite_name = "SPR_STAT_13" }
+resource_id = "static.13"
+
+[[objects]]
+name = "Static 14 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [37]
+parameters = { sprite_name = "SPR_STAT_14" }
+resource_id = "static.14"
+
+[[objects]]
+name = "Static 15 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [38]
+parameters = { sprite_name = "SPR_STAT_15" }
+resource_id = "static.15"
+
+[[objects]]
+name = "Static 16 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [39]
+parameters = { sprite_name = "SPR_STAT_16" }
+resource_id = "static.16"
+
+[[objects]]
+name = "Static 17 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [40]
+parameters = { sprite_name = "SPR_STAT_17" }
+resource_id = "static.17"
+
+[[objects]]
+name = "Static 18 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [41]
+parameters = { sprite_name = "SPR_STAT_18" }
+resource_id = "static.18"
+
+[[objects]]
+name = "Static 19 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [42]
+parameters = { sprite_name = "SPR_STAT_19" }
+resource_id = "static.19"
+
+[[objects]]
+name = "Static 20 bo_key1"
+plane = 1
+kind = "pickup"
+behavior = "bo_key1"
+capabilities = ["pickup.bo_key1"]
+codes = [43]
+parameters = { sprite_name = "SPR_STAT_20" }
+resource_id = "static.20"
+
+[[objects]]
+name = "Static 21 bo_key2"
+plane = 1
+kind = "pickup"
+behavior = "bo_key2"
+capabilities = ["pickup.bo_key2"]
+codes = [44]
+parameters = { sprite_name = "SPR_STAT_21" }
+resource_id = "static.21"
+
+[[objects]]
+name = "Static 22 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [45]
+parameters = { sprite_name = "SPR_STAT_22" }
+resource_id = "static.22"
+
+[[objects]]
+name = "Static 23 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [46]
+parameters = { sprite_name = "SPR_STAT_23" }
+resource_id = "static.23"
+
+[[objects]]
+name = "Static 24 bo_food"
+plane = 1
+kind = "pickup"
+behavior = "bo_food"
+capabilities = ["pickup.bo_food"]
+codes = [47]
+parameters = { sprite_name = "SPR_STAT_24" }
+resource_id = "static.24"
+
+[[objects]]
+name = "Static 25 bo_firstaid"
+plane = 1
+kind = "pickup"
+behavior = "bo_firstaid"
+capabilities = ["pickup.bo_firstaid"]
+codes = [48]
+parameters = { sprite_name = "SPR_STAT_25" }
+resource_id = "static.25"
+
+[[objects]]
+name = "Static 26 bo_clip"
+plane = 1
+kind = "pickup"
+behavior = "bo_clip"
+capabilities = ["pickup.bo_clip"]
+codes = [49]
+parameters = { sprite_name = "SPR_STAT_26" }
+resource_id = "static.26"
+
+[[objects]]
+name = "Static 27 bo_machinegun"
+plane = 1
+kind = "pickup"
+behavior = "bo_machinegun"
+capabilities = ["pickup.bo_machinegun"]
+codes = [50]
+parameters = { sprite_name = "SPR_STAT_27" }
+resource_id = "static.27"
+
+[[objects]]
+name = "Static 28 bo_chaingun"
+plane = 1
+kind = "pickup"
+behavior = "bo_chaingun"
+capabilities = ["pickup.bo_chaingun"]
+codes = [51]
+parameters = { sprite_name = "SPR_STAT_28" }
+resource_id = "static.28"
+
+[[objects]]
+name = "Static 29 bo_cross"
+plane = 1
+kind = "pickup"
+behavior = "bo_cross"
+capabilities = ["pickup.bo_cross"]
+codes = [52]
+parameters = { sprite_name = "SPR_STAT_29" }
+resource_id = "static.29"
+
+[[objects]]
+name = "Static 30 bo_chalice"
+plane = 1
+kind = "pickup"
+behavior = "bo_chalice"
+capabilities = ["pickup.bo_chalice"]
+codes = [53]
+parameters = { sprite_name = "SPR_STAT_30" }
+resource_id = "static.30"
+
+[[objects]]
+name = "Static 31 bo_bible"
+plane = 1
+kind = "pickup"
+behavior = "bo_bible"
+capabilities = ["pickup.bo_bible"]
+codes = [54]
+parameters = { sprite_name = "SPR_STAT_31" }
+resource_id = "static.31"
+
+[[objects]]
+name = "Static 32 bo_crown"
+plane = 1
+kind = "pickup"
+behavior = "bo_crown"
+capabilities = ["pickup.bo_crown"]
+codes = [55]
+parameters = { sprite_name = "SPR_STAT_32" }
+resource_id = "static.32"
+
+[[objects]]
+name = "Static 33 bo_fullheal"
+plane = 1
+kind = "pickup"
+behavior = "bo_fullheal"
+capabilities = ["pickup.bo_fullheal"]
+codes = [56]
+parameters = { sprite_name = "SPR_STAT_33" }
+resource_id = "static.33"
+
+[[objects]]
+name = "Static 34 bo_gibs"
+plane = 1
+kind = "pickup"
+behavior = "bo_gibs"
+capabilities = ["pickup.bo_gibs"]
+codes = [57]
+parameters = { sprite_name = "SPR_STAT_34" }
+resource_id = "static.34"
+
+[[objects]]
+name = "Static 35 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [58]
+parameters = { sprite_name = "SPR_STAT_35" }
+resource_id = "static.35"
+
+[[objects]]
+name = "Static 36 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [59]
+parameters = { sprite_name = "SPR_STAT_36" }
+resource_id = "static.36"
+
+[[objects]]
+name = "Static 37 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [60]
+parameters = { sprite_name = "SPR_STAT_37" }
+resource_id = "static.37"
+
+[[objects]]
+name = "Static 38 bo_gibs"
+plane = 1
+kind = "pickup"
+behavior = "bo_gibs"
+capabilities = ["pickup.bo_gibs"]
+codes = [61]
+parameters = { sprite_name = "SPR_STAT_38" }
+resource_id = "static.38"
+
+[[objects]]
+name = "Static 39 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [62]
+parameters = { sprite_name = "SPR_STAT_39" }
+resource_id = "static.39"
+
+[[objects]]
+name = "Static 40 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [63]
+parameters = { sprite_name = "SPR_STAT_40" }
+resource_id = "static.40"
+
+[[objects]]
+name = "Static 41 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [64]
+parameters = { sprite_name = "SPR_STAT_41" }
+resource_id = "static.41"
+
+[[objects]]
+name = "Static 42 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [65]
+parameters = { sprite_name = "SPR_STAT_42" }
+resource_id = "static.42"
+
+[[objects]]
+name = "Static 43 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [66]
+parameters = { sprite_name = "SPR_STAT_43" }
+resource_id = "static.43"
+
+[[objects]]
+name = "Static 44 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [67]
+parameters = { sprite_name = "SPR_STAT_44" }
+resource_id = "static.44"
+
+[[objects]]
+name = "Static 45 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [68]
+parameters = { sprite_name = "SPR_STAT_45" }
+resource_id = "static.45"
+
+[[objects]]
+name = "Static 46 block"
+plane = 1
+kind = "scenery"
+behavior = "block"
+capabilities = ["scenery.block"]
+codes = [69]
+parameters = { sprite_name = "SPR_STAT_46" }
+resource_id = "static.46"
+
+[[objects]]
+name = "Static 47 dressing"
+plane = 1
+kind = "scenery"
+behavior = "dressing"
+capabilities = ["scenery.dressing"]
+codes = [70]
+parameters = { sprite_name = "SPR_STAT_47" }
+resource_id = "static.47"
+
+[[objects]]
+name = "Static 48 bo_clip2"
+plane = 1
+kind = "pickup"
+behavior = "bo_clip2"
+capabilities = ["pickup.bo_clip2"]
+codes = [71]
+parameters = { sprite_name = "SPR_STAT_26" }
+resource_id = "static.48"
+
+[[objects]]
+name = "Patrol direction arrows"
+plane = 1
+kind = "marker"
+behavior = "patrol_arrow"
+capabilities = ["actor.patrol-arrows"]
+ranges = [[90, 97]]
+parameters = { direction_base = 90 }
+
+[[objects]]
+name = "Push wall"
+plane = 1
+kind = "marker"
+behavior = "pushwall"
+capabilities = ["map.pushwall"]
+codes = [98]
+
+[[objects]]
+name = "Castle exit"
+plane = 1
+kind = "marker"
+behavior = "bj_exit"
+capabilities = ["route.bj_exit"]
+codes = [99]
+resource_id = "actor.bj"
+
+[[objects]]
+name = "Dead guard"
+plane = 1
+kind = "scenery"
+behavior = "dead_guard"
+capabilities = ["scenery.dead-guard"]
+codes = [124]
+resource_id = "scenery.dead-guard"
+
+[[objects]]
+name = "guard stand difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "guard"
+capabilities = ["actor.guard"]
+codes = [108, 109, 110, 111]
+parameters = { placement = "stand", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.guard"
+
+[[objects]]
+name = "guard patrol difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "guard"
+capabilities = ["actor.guard"]
+codes = [112, 113, 114, 115]
+parameters = { placement = "patrol", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.guard"
+
+[[objects]]
+name = "guard stand difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "guard"
+capabilities = ["actor.guard"]
+codes = [144, 145, 146, 147]
+parameters = { placement = "stand", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.guard"
+
+[[objects]]
+name = "guard patrol difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "guard"
+capabilities = ["actor.guard"]
+codes = [148, 149, 150, 151]
+parameters = { placement = "patrol", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.guard"
+
+[[objects]]
+name = "guard stand difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "guard"
+capabilities = ["actor.guard"]
+codes = [180, 181, 182, 183]
+parameters = { placement = "stand", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.guard"
+
+[[objects]]
+name = "guard patrol difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "guard"
+capabilities = ["actor.guard"]
+codes = [184, 185, 186, 187]
+parameters = { placement = "patrol", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.guard"
+
+[[objects]]
+name = "officer stand difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "officer"
+capabilities = ["actor.officer"]
+codes = [116, 117, 118, 119]
+parameters = { placement = "stand", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.officer"
+
+[[objects]]
+name = "officer patrol difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "officer"
+capabilities = ["actor.officer"]
+codes = [120, 121, 122, 123]
+parameters = { placement = "patrol", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.officer"
+
+[[objects]]
+name = "officer stand difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "officer"
+capabilities = ["actor.officer"]
+codes = [152, 153, 154, 155]
+parameters = { placement = "stand", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.officer"
+
+[[objects]]
+name = "officer patrol difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "officer"
+capabilities = ["actor.officer"]
+codes = [156, 157, 158, 159]
+parameters = { placement = "patrol", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.officer"
+
+[[objects]]
+name = "officer stand difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "officer"
+capabilities = ["actor.officer"]
+codes = [188, 189, 190, 191]
+parameters = { placement = "stand", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.officer"
+
+[[objects]]
+name = "officer patrol difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "officer"
+capabilities = ["actor.officer"]
+codes = [192, 193, 194, 195]
+parameters = { placement = "patrol", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.officer"
+
+[[objects]]
+name = "ss stand difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "ss"
+capabilities = ["actor.ss"]
+codes = [126, 127, 128, 129]
+parameters = { placement = "stand", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.ss"
+
+[[objects]]
+name = "ss patrol difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "ss"
+capabilities = ["actor.ss"]
+codes = [130, 131, 132, 133]
+parameters = { placement = "patrol", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.ss"
+
+[[objects]]
+name = "ss stand difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "ss"
+capabilities = ["actor.ss"]
+codes = [162, 163, 164, 165]
+parameters = { placement = "stand", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.ss"
+
+[[objects]]
+name = "ss patrol difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "ss"
+capabilities = ["actor.ss"]
+codes = [166, 167, 168, 169]
+parameters = { placement = "patrol", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.ss"
+
+[[objects]]
+name = "ss stand difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "ss"
+capabilities = ["actor.ss"]
+codes = [198, 199, 200, 201]
+parameters = { placement = "stand", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.ss"
+
+[[objects]]
+name = "ss patrol difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "ss"
+capabilities = ["actor.ss"]
+codes = [202, 203, 204, 205]
+parameters = { placement = "patrol", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.ss"
+
+[[objects]]
+name = "dog stand difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "dog"
+capabilities = ["actor.dog"]
+codes = [134, 135, 136, 137]
+parameters = { placement = "stand", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.dog"
+
+[[objects]]
+name = "dog patrol difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "dog"
+capabilities = ["actor.dog"]
+codes = [138, 139, 140, 141]
+parameters = { placement = "patrol", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.dog"
+
+[[objects]]
+name = "dog stand difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "dog"
+capabilities = ["actor.dog"]
+codes = [170, 171, 172, 173]
+parameters = { placement = "stand", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.dog"
+
+[[objects]]
+name = "dog patrol difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "dog"
+capabilities = ["actor.dog"]
+codes = [174, 175, 176, 177]
+parameters = { placement = "patrol", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.dog"
+
+[[objects]]
+name = "dog stand difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "dog"
+capabilities = ["actor.dog"]
+codes = [206, 207, 208, 209]
+parameters = { placement = "stand", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.dog"
+
+[[objects]]
+name = "dog patrol difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "dog"
+capabilities = ["actor.dog"]
+codes = [210, 211, 212, 213]
+parameters = { placement = "patrol", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.dog"
+
+[[objects]]
+name = "mutant stand difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "mutant"
+capabilities = ["actor.mutant"]
+codes = [216, 217, 218, 219]
+parameters = { placement = "stand", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.mutant"
+
+[[objects]]
+name = "mutant patrol difficulty 0"
+plane = 1
+kind = "actor"
+behavior = "mutant"
+capabilities = ["actor.mutant"]
+codes = [220, 221, 222, 223]
+parameters = { placement = "patrol", minimum_difficulty = 0, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.mutant"
+
+[[objects]]
+name = "mutant stand difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "mutant"
+capabilities = ["actor.mutant"]
+codes = [234, 235, 236, 237]
+parameters = { placement = "stand", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.mutant"
+
+[[objects]]
+name = "mutant patrol difficulty 2"
+plane = 1
+kind = "actor"
+behavior = "mutant"
+capabilities = ["actor.mutant"]
+codes = [238, 239, 240, 241]
+parameters = { placement = "patrol", minimum_difficulty = 2, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.mutant"
+
+[[objects]]
+name = "mutant stand difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "mutant"
+capabilities = ["actor.mutant"]
+codes = [252, 253, 254, 255]
+parameters = { placement = "stand", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.mutant"
+
+[[objects]]
+name = "mutant patrol difficulty 3"
+plane = 1
+kind = "actor"
+behavior = "mutant"
+capabilities = ["actor.mutant"]
+codes = [256, 257, 258, 259]
+parameters = { placement = "patrol", minimum_difficulty = 3, directions = ["east", "north", "west", "south"] }
+resource_id = "actor.mutant"
+
+[[objects]]
+name = "hans"
+plane = 1
+kind = "actor"
+behavior = "hans"
+capabilities = ["actor.hans"]
+codes = [214]
+resource_id = "actor.hans"
+
+[[objects]]
+name = "gretel"
+plane = 1
+kind = "actor"
+behavior = "gretel"
+capabilities = ["actor.gretel"]
+codes = [197]
+resource_id = "actor.gretel"
+
+[[objects]]
+name = "schabbs"
+plane = 1
+kind = "actor"
+behavior = "schabbs"
+capabilities = ["actor.schabbs"]
+codes = [196]
+resource_id = "actor.schabbs"
+
+[[objects]]
+name = "fake-hitler"
+plane = 1
+kind = "actor"
+behavior = "fake-hitler"
+capabilities = ["actor.fake-hitler"]
+codes = [160]
+resource_id = "actor.fake-hitler"
+
+[[objects]]
+name = "mecha-hitler"
+plane = 1
+kind = "actor"
+behavior = "mecha-hitler"
+capabilities = ["actor.mecha-hitler"]
+codes = [178]
+resource_id = "actor.mecha-hitler"
+
+[[objects]]
+name = "giftmacher"
+plane = 1
+kind = "actor"
+behavior = "giftmacher"
+capabilities = ["actor.giftmacher"]
+codes = [215]
+resource_id = "actor.giftmacher"
+
+[[objects]]
+name = "fatface"
+plane = 1
+kind = "actor"
+behavior = "fatface"
+capabilities = ["actor.fatface"]
+codes = [179]
+resource_id = "actor.fatface"
+
+[[objects]]
+name = "blinky"
+plane = 1
+kind = "actor"
+behavior = "blinky"
+capabilities = ["actor.blinky"]
+codes = [224]
+resource_id = "actor.blinky"
+
+[[objects]]
+name = "clyde"
+plane = 1
+kind = "actor"
+behavior = "clyde"
+capabilities = ["actor.clyde"]
+codes = [225]
+resource_id = "actor.clyde"
+
+[[objects]]
+name = "pinky"
+plane = 1
+kind = "actor"
+behavior = "pinky"
+capabilities = ["actor.pinky"]
+codes = [226]
+resource_id = "actor.pinky"
+
+[[objects]]
+name = "inky"
+plane = 1
+kind = "actor"
+behavior = "inky"
+capabilities = ["actor.inky"]
+codes = [227]
+resource_id = "actor.inky"
+
+[[objects]]
+name = "Unused third plane"
+plane = 2
+kind = "empty"
+behavior = "empty"
+capabilities = []
+codes = [0]
+
+[[resources]]
+resource_id = "actor.bj"
+sprite_names = []
+sprite_prefixes = ["SPR_BJ_"]
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "actor.blinky"
+sprite_names = []
+sprite_prefixes = ["SPR_BLINKY_"]
+requires = []
+capabilities = ["actor.blinky"]
+
+[[resources]]
+resource_id = "actor.clyde"
+sprite_names = []
+sprite_prefixes = ["SPR_CLYDE_"]
+requires = []
+capabilities = ["actor.clyde"]
+
+[[resources]]
+resource_id = "actor.dog"
+sprite_names = []
+sprite_prefixes = ["SPR_DOG_"]
+requires = []
+capabilities = ["actor.dog"]
+
+[[resources]]
+resource_id = "actor.fake-hitler"
+sprite_names = []
+sprite_prefixes = ["SPR_FAKE_"]
+requires = ["projectile.fire"]
+capabilities = ["actor.fake-hitler"]
+
+[[resources]]
+resource_id = "actor.fatface"
+sprite_names = []
+sprite_prefixes = ["SPR_FAT_"]
+requires = ["projectile.rocket"]
+capabilities = ["actor.fatface"]
+
+[[resources]]
+resource_id = "actor.giftmacher"
+sprite_names = []
+sprite_prefixes = ["SPR_GIFT_"]
+requires = ["projectile.rocket"]
+capabilities = ["actor.giftmacher"]
+
+[[resources]]
+resource_id = "actor.gretel"
+sprite_names = []
+sprite_prefixes = ["SPR_GRETEL_"]
+requires = ["drop.key1"]
+capabilities = ["actor.gretel"]
+
+[[resources]]
+resource_id = "actor.guard"
+sprite_names = []
+sprite_prefixes = ["SPR_GRD_"]
+requires = ["drop.clip"]
+capabilities = ["actor.guard"]
+
+[[resources]]
+resource_id = "actor.hans"
+sprite_names = []
+sprite_prefixes = ["SPR_BOSS_"]
+requires = ["drop.key1"]
+capabilities = ["actor.hans"]
+
+[[resources]]
+resource_id = "actor.hitler"
+sprite_names = []
+sprite_prefixes = ["SPR_HITLER_"]
+requires = []
+capabilities = ["actor.hitler"]
+
+[[resources]]
+resource_id = "actor.inky"
+sprite_names = []
+sprite_prefixes = ["SPR_INKY_"]
+requires = []
+capabilities = ["actor.inky"]
+
+[[resources]]
+resource_id = "actor.mecha-hitler"
+sprite_names = []
+sprite_prefixes = ["SPR_MECHA_"]
+requires = ["actor.hitler"]
+capabilities = ["actor.mecha-hitler"]
+
+[[resources]]
+resource_id = "actor.mutant"
+sprite_names = []
+sprite_prefixes = ["SPR_MUT_"]
+requires = ["drop.clip"]
+capabilities = ["actor.mutant"]
+
+[[resources]]
+resource_id = "actor.officer"
+sprite_names = []
+sprite_prefixes = ["SPR_OFC_"]
+requires = ["drop.clip"]
+capabilities = ["actor.officer"]
+
+[[resources]]
+resource_id = "actor.pinky"
+sprite_names = []
+sprite_prefixes = ["SPR_PINKY_"]
+requires = []
+capabilities = ["actor.pinky"]
+
+[[resources]]
+resource_id = "actor.schabbs"
+sprite_names = []
+sprite_prefixes = ["SPR_SCHABB_"]
+requires = ["projectile.hypo"]
+capabilities = ["actor.schabbs"]
+
+[[resources]]
+resource_id = "actor.ss"
+sprite_names = []
+sprite_prefixes = ["SPR_SS_"]
+requires = ["drop.clip", "drop.machinegun"]
+capabilities = ["actor.ss"]
+
+[[resources]]
+resource_id = "drop.clip"
+sprite_names = ["SPR_STAT_26"]
+sprite_prefixes = []
+requires = []
+capabilities = ["pickup.bo_clip2"]
+
+[[resources]]
+resource_id = "drop.key1"
+sprite_names = ["SPR_STAT_20"]
+sprite_prefixes = []
+requires = []
+capabilities = ["pickup.bo_key1"]
+
+[[resources]]
+resource_id = "drop.machinegun"
+sprite_names = ["SPR_STAT_27"]
+sprite_prefixes = []
+requires = []
+capabilities = ["pickup.bo_machinegun"]
+
+[[resources]]
+resource_id = "player.weapons"
+sprite_names = []
+sprite_prefixes = ["SPR_KNIFE", "SPR_PISTOL", "SPR_MACHINEGUN", "MACHINEGUNATK", "SPR_CHAIN"]
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "presentation.overlays"
+sprite_names = ["SPR_DEMO", "SPR_DEATHCAM"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "projectile.fire"
+sprite_names = []
+sprite_prefixes = ["SPR_FIRE"]
+requires = []
+capabilities = ["projectile.fire"]
+
+[[resources]]
+resource_id = "projectile.hypo"
+sprite_names = []
+sprite_prefixes = ["SPR_HYPO"]
+requires = []
+capabilities = ["projectile.hypo"]
+
+[[resources]]
+resource_id = "projectile.rocket"
+sprite_names = []
+sprite_prefixes = ["SPR_ROCKET_", "SPR_SMOKE_", "SPR_BOOM_"]
+requires = []
+capabilities = ["projectile.rocket"]
+
+[[resources]]
+resource_id = "scenery.dead-guard"
+sprite_names = ["SPR_GRD_DEAD"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.0"
+sprite_names = ["SPR_STAT_0"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.1"
+sprite_names = ["SPR_STAT_1"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.10"
+sprite_names = ["SPR_STAT_10"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.11"
+sprite_names = ["SPR_STAT_11"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.12"
+sprite_names = ["SPR_STAT_12"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.13"
+sprite_names = ["SPR_STAT_13"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.14"
+sprite_names = ["SPR_STAT_14"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.15"
+sprite_names = ["SPR_STAT_15"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.16"
+sprite_names = ["SPR_STAT_16"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.17"
+sprite_names = ["SPR_STAT_17"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.18"
+sprite_names = ["SPR_STAT_18"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.19"
+sprite_names = ["SPR_STAT_19"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.2"
+sprite_names = ["SPR_STAT_2"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.20"
+sprite_names = ["SPR_STAT_20"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.21"
+sprite_names = ["SPR_STAT_21"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.22"
+sprite_names = ["SPR_STAT_22"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.23"
+sprite_names = ["SPR_STAT_23"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.24"
+sprite_names = ["SPR_STAT_24"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.25"
+sprite_names = ["SPR_STAT_25"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.26"
+sprite_names = ["SPR_STAT_26"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.27"
+sprite_names = ["SPR_STAT_27"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.28"
+sprite_names = ["SPR_STAT_28"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.29"
+sprite_names = ["SPR_STAT_29"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.3"
+sprite_names = ["SPR_STAT_3"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.30"
+sprite_names = ["SPR_STAT_30"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.31"
+sprite_names = ["SPR_STAT_31"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.32"
+sprite_names = ["SPR_STAT_32"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.33"
+sprite_names = ["SPR_STAT_33"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.34"
+sprite_names = ["SPR_STAT_34"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.35"
+sprite_names = ["SPR_STAT_35"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.36"
+sprite_names = ["SPR_STAT_36"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.37"
+sprite_names = ["SPR_STAT_37"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.38"
+sprite_names = ["SPR_STAT_38"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.39"
+sprite_names = ["SPR_STAT_39"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.4"
+sprite_names = ["SPR_STAT_4"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.40"
+sprite_names = ["SPR_STAT_40"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.41"
+sprite_names = ["SPR_STAT_41"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.42"
+sprite_names = ["SPR_STAT_42"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.43"
+sprite_names = ["SPR_STAT_43"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.44"
+sprite_names = ["SPR_STAT_44"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.45"
+sprite_names = ["SPR_STAT_45"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.46"
+sprite_names = ["SPR_STAT_46"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.47"
+sprite_names = ["SPR_STAT_47"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.48"
+sprite_names = ["SPR_STAT_26"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.5"
+sprite_names = ["SPR_STAT_5"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.6"
+sprite_names = ["SPR_STAT_6"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.7"
+sprite_names = ["SPR_STAT_7"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.8"
+sprite_names = ["SPR_STAT_8"]
+sprite_prefixes = []
+requires = []
+capabilities = []
+
+[[resources]]
+resource_id = "static.9"
+sprite_names = ["SPR_STAT_9"]
+sprite_prefixes = []
+requires = []
+capabilities = []

@@ -1,0 +1,50 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 117
+"bank" = [0, 0]
+"notes" = 60
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 2
+"program" = 39
+"bank" = [0, 0]
+"notes" = 120
+"name" = "Synth Bass 1"
+
+[["instruments"]]
+"channel" = 3
+"program" = 56
+"bank" = [0, 0]
+"notes" = 20
+"name" = "Orchestra Hit"
+
+[["instruments"]]
+"channel" = 4
+"program" = 80
+"bank" = [0, 0]
+"notes" = 226
+"name" = "Ocarina"
+
+[["instruments"]]
+"channel" = 5
+"program" = 85
+"bank" = [0, 0]
+"notes" = 1
+"name" = "Lead 5 (charang)"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 398
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "1d72fa0bc98fac343d409754aecf8eeacece4e10ca9b7d419b6592e305da85d1"
+"authority" = "fan-conversion"

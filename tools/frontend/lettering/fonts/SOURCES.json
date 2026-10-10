@@ -1,0 +1,30 @@
+[
+  {
+    "file": "BlackOpsOne-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/blackopsone/BlackOpsOne-Regular.ttf",
+    "size": 166532,
+    "sha256": "282a825b5f294377387e3969f765408157dbea8da0f5d0aae68c6bc704b145b3",
+    "note": "SIL OFL 1.1, license in blackopsone-OFL.txt"
+  },
+  {
+    "file": "AlfaSlabOne-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/alfaslabone/AlfaSlabOne-Regular.ttf",
+    "size": 97376,
+    "sha256": "28664afa698a3393bd5a29eec750230a0645c5301d62200e5f2d3a027fb2299d",
+    "note": "SIL OFL 1.1, license in alfaslabone-OFL.txt"
+  },
+  {
+    "file": "Anton-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf",
+    "size": 170812,
+    "sha256": "a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab",
+    "note": "SIL OFL 1.1, license in anton-OFL.txt"
+  },
+  {
+    "file": "RussoOne-Regular.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/russoone/RussoOne-Regular.ttf",
+    "size": 39124,
+    "sha256": "bc0abcc660bd8b7ad3000ecb2898a27c58a29a50f7ec81652fa12e75148d09df",
+    "note": "SIL OFL 1.1, license in russoone-OFL.txt"
+  }
+]

@@ -1,0 +1,57 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "POW"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/POW/score.toml"
+"sha256" = "fb86a504b4335716b8cd592227d6f82decd32da95d9bda959b1b8e76bfa81916"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/POW.imf"
+"sha256" = "91f79eb52d3abedf6d5a413540ce3dcbfcbf1b3d13b41d080ea512dadf7e618b"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/POW/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -1.4672
+"ch03" = 1.2488
+"ch04" = -7.7545
+"ch05" = 4.5792
+"ch06" = -3.6817
+"ch07" = -5.8708
+"ch08" = -2.06
+"ch09" = -5.0638
+
+["doc"."pan"]
+"ch02" = 55
+"ch03" = 101
+"ch04" = 64
+"ch05" = 30
+"ch06" = 39
+"ch07" = 87
+"ch09" = 65

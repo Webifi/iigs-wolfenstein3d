@@ -1,0 +1,64 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 39
+"bank" = [0, 0]
+"notes" = 51
+"name" = "Synth Bass 1"
+
+[["instruments"]]
+"channel" = 2
+"program" = 82
+"bank" = [0, 0]
+"notes" = 39
+"name" = "Lead 2 (sawtooth)"
+
+[["instruments"]]
+"channel" = 3
+"program" = 57
+"bank" = [0, 0]
+"notes" = 20
+"name" = "Trumpet"
+
+[["instruments"]]
+"channel" = 4
+"program" = 61
+"bank" = [0, 0]
+"notes" = 9
+"name" = "French Horn"
+
+[["instruments"]]
+"channel" = 5
+"program" = 57
+"bank" = [0, 0]
+"notes" = 25
+"name" = "Trumpet"
+
+[["instruments"]]
+"channel" = 6
+"program" = 73
+"bank" = [0, 0]
+"notes" = 25
+"name" = "Piccolo"
+
+[["instruments"]]
+"channel" = 8
+"program" = 48
+"bank" = [0, 0]
+"notes" = 39
+"name" = "Timpani"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 261
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "d28d887aea2ff17877177fcb4cd7b870f0af83500ec37ab7d3fb7ca039b29917"
+"authority" = "project-arrangement"

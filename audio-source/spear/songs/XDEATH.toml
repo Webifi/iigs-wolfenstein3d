@@ -1,0 +1,53 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XDEATH"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XDEATH/score.toml"
+"sha256" = "06c474ab168571f09764ba6c6af88c6f67bea0880dfe13e09d1274fa5f0f99a6"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/XDEATH.imf"
+"sha256" = "14a1ea7b38f60beeb7cf57639440fc7b1ca548e4511994bf9ca078f5aac16534"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XDEATH/sampling.toml"
+"song_gain_steps" = 26
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch04" = -5.9198
+"ch05" = -6.9321
+"ch06" = -6.9641
+"ch08" = -4.5372
+"ch09" = -9.6415
+"k40" = -5.9789
+
+["doc"."pan"]
+"ch04" = 98
+"ch05" = 108
+"ch06" = 19
+"ch08" = 64
+"ch09" = 63

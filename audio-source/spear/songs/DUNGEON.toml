@@ -1,0 +1,59 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "DUNGEON"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/DUNGEON/score.toml"
+"sha256" = "a9cf067fce9e97724232b47a2d51b6eddb848ca9400a428a4209ecf4046c3f96"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/DUNGEON.imf"
+"sha256" = "777d5726d4fe7d1ca7f6a394e20106391a41b91b800594b459e16361aead9cc8"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/DUNGEON/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch01" = -1.583
+"ch02" = -4.3214
+"ch03" = -1.0217
+"ch04" = -10.347
+"ch05" = -5.3258
+"ch06" = -3.5201
+"ch07" = 4.4459
+"k38" = -4.6123
+"k40" = -4.6123
+"k70" = -4.6123
+
+["doc"."pan"]
+"ch01" = 27
+"ch02" = 101
+"ch03" = 65
+"ch04" = 63
+"ch05" = 66
+"ch06" = 64
+"ch07" = 64

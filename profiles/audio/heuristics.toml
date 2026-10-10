@@ -1,0 +1,24 @@
+# Distances used to rank audition suggestions among observations of the SAME
+# OPL patch. Values are feature scales: larger values give a feature less weight.
+# These are initial musical units, not fitted probabilities or acceptance gates.
+# "learn" reports patch-only, part-only, and accompaniment-aware held-out results.
+format = 1
+
+[notes]
+median_pitch = 12.0 # One octave.
+pitch_span = 12.0
+distinct_pitch_fraction = 0.5
+log_note_seconds = 1.0 # One doubling/halving of note duration.
+log_gap_seconds = 1.0
+mean_melodic_step = 6.0
+repeated_pitch_fraction = 0.5
+
+[accompaniment]
+accompanying_voices = 3.0
+lowest_voice_fraction = 0.5
+highest_voice_fraction = 0.5
+interval_above_bass = 12.0
+interval_from_ensemble = 12.0
+shared_onset_fraction = 0.5
+harmonic_interval_fraction = 0.5
+parallel_motion_fraction = 0.5

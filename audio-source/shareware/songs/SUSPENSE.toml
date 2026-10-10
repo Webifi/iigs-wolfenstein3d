@@ -1,0 +1,90 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "SUSPENSE"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/SUSPENSE/score.toml"
+"sha256" = "0520e30fb8b27073aca7b9320a556d57c8a47fec5243f452104725627fc75420"
+"authority" = "project-arrangement"
+
+["original"]
+"file" = "../licensed/SUSPENSE.imf"
+"sha256" = "3d3f56f3147dcc322eaecd1221999f8946280913cc6786504a3d63c38b124e47"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "listed"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"song_gain_steps" = 22
+"loop_layout" = "repeated-endpoint"
+"sampling_policy" = "../inputs/SUSPENSE/sampling.toml"
+
+["doc"."levels"]
+"ch03" = 3.0
+"ch04" = 0.7
+"ch05" = -1.2
+"ch06" = -1.2
+"ch07" = 2.2
+"k36" = -1.6
+"k38" = 0.6
+
+["doc"."pan"]
+"ch03" = 67
+"ch04" = 64
+"ch05" = 64
+"ch06" = 64
+"ch07" = 64
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 36
+"bytes" = 2048
+"rate" = 6000
+
+[["doc"."capture"]]
+"channel" = 7
+"key" = 33
+"bytes" = 8192
+"rate" = 10000
+"fine_static" = false
+"release_baked" = true
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 38
+"bytes" = 4096
+"rate" = 12000
+
+[["doc"."capture"]]
+"channel" = 6
+"key" = 40
+"bytes" = 4096
+"rate" = 8000
+"release_seconds" = 1.5
+"fine_static" = false
+
+[["doc"."capture"]]
+"channel" = 6
+"key" = 37
+"bytes" = 4096
+"rate" = 8000
+"release_seconds" = 1.5
+"fine_static" = false

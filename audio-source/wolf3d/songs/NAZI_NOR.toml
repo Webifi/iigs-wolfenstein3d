@@ -1,0 +1,55 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "NAZI_NOR"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/NAZI_NOR/score.toml"
+"sha256" = "fa8990925cb744d3ffd3a46ce40e08fbaacb149d107d0b92ac2758818e6be938"
+"authority" = "project-arrangement"
+
+["original"]
+"file" = "../licensed/NAZI_NOR.imf"
+"sha256" = "ee9207f54616ebf4c9ce28cda4ddac8a71535e87c69d53f6755a22c69221c81f"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "listed"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"song_gain_steps" = 18
+"loop_layout" = "repeated-endpoint"
+"sampling_policy" = "../inputs/NAZI_NOR/sampling.toml"
+
+["doc"."levels"]
+"ch03" = 2.9
+"ch04" = -0.5
+"ch05" = 1.6
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 36
+"rate" = 10000
+"bytes" = 4096
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 38
+"rate" = 16000
+"bytes" = 8192

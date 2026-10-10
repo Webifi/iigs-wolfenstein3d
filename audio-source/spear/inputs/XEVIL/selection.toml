@@ -1,0 +1,43 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 4
+"program" = 18
+"bank" = [0, 0]
+"notes" = 47
+"name" = "Percussive Organ"
+
+[["instruments"]]
+"channel" = 5
+"program" = 63
+"bank" = [0, 0]
+"notes" = 49
+"name" = "Synth Brass 1"
+
+[["instruments"]]
+"channel" = 6
+"program" = 128
+"bank" = [0, 0]
+"notes" = 144
+"name" = "Gunshot"
+
+[["instruments"]]
+"channel" = 7
+"program" = 21
+"bank" = [0, 0]
+"notes" = 47
+"name" = "Reed Organ"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 1033
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "a71c2ae9a43c014f3c4090cca639c0b45c4df433ee4f401b4a6086bc31bf9f4b"
+"authority" = "composer-original"

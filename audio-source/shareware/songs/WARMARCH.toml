@@ -1,0 +1,89 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "WARMARCH"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/WARMARCH/score.toml"
+"sha256" = "3155e58e6bee14c8a595721ab6ca322ba2860da8e014b2fbe254a6a2e7c600fd"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/WARMARCH.imf"
+"sha256" = "056025b46821256b50948715410952bc5d393dcac11529c582711e625301ec20"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "listed"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"song_gain_steps" = 16
+"loop_layout" = "repeated-endpoint"
+"sampling_policy" = "../inputs/WARMARCH/sampling.toml"
+
+["doc"."levels"]
+"ch01" = 2.6
+"ch02" = -1.0
+"ch03" = 0.1
+"ch04" = 0.4
+"ch05" = 0.9
+"ch06" = 0.9
+"ch07" = 2.8
+"ch08" = -0.1
+"ch09" = 0.0
+"k35" = -0.7
+"k40" = 1.6
+
+["doc"."pan"]
+"ch01" = 70
+"ch02" = 41
+"ch03" = 63
+"ch04" = 88
+"ch05" = 90
+"ch06" = 53
+"ch07" = 89
+"ch08" = 22
+"ch09" = 106
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 35
+"bytes" = 2048
+"rate" = 6000
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 40
+"bytes" = 4096
+"rate" = 12000
+
+[["doc"."capture"]]
+"channel" = 8
+"key" = 23
+"bytes" = 4096
+"rate" = 6000
+"release_baked" = true
+
+[["doc"."capture"]]
+"channel" = 4
+"key" = 43
+"bytes" = 8192
+"rate" = 6000
+"release_seconds" = 1.9
+"fine_static" = false

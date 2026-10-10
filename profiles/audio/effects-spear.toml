@@ -1,0 +1,491 @@
+# Source IDs and digitized replacements from the original id audio headers and WL_MAIN.C.
+# -1 means this effect has no original PCM replacement in this edition.
+# Synthetic Roland layers belong in the generated, editable per-effect recipe.
+format = 1
+source_rate = 7043
+
+[[effect]]
+id = 0
+name = "HITWALLSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 1
+name = "MISSILEHITSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 2
+name = "SELECTITEMSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 3
+name = "GHOSTSIGHTSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 4
+name = "MOVEGUN2SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 5
+name = "MOVEGUN1SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 6
+name = "NOWAYSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 7
+name = "NAZIHITPLAYERSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 8
+name = "MISSILEFIRESND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 9
+name = "PLAYERDEATHSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 10
+name = "DOGDEATHSND"
+digitized = 14
+digitized_shareware = 14
+
+[[effect]]
+id = 11
+name = "ATKGATLINGSND"
+digitized = 6
+digitized_shareware = 6
+
+[[effect]]
+id = 12
+name = "GETKEYSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 13
+name = "NOITEMSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 14
+name = "WALK1SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 15
+name = "WALK2SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 16
+name = "TAKEDAMAGESND"
+digitized = 12
+digitized_shareware = 12
+
+[[effect]]
+id = 17
+name = "GAMEOVERSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 18
+name = "OPENDOORSND"
+digitized = 3
+digitized_shareware = 3
+
+[[effect]]
+id = 19
+name = "CLOSEDOORSND"
+digitized = 2
+digitized_shareware = 2
+
+[[effect]]
+id = 20
+name = "DONOTHINGSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 21
+name = "HALTSND"
+digitized = 0
+digitized_shareware = 0
+
+[[effect]]
+id = 22
+name = "DEATHSCREAM2SND"
+digitized = 11
+digitized_shareware = 11
+
+[[effect]]
+id = 23
+name = "ATKKNIFESND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 24
+name = "ATKPISTOLSND"
+digitized = 5
+digitized_shareware = 5
+
+[[effect]]
+id = 25
+name = "DEATHSCREAM3SND"
+digitized = 23
+digitized_shareware = 23
+
+[[effect]]
+id = 26
+name = "ATKMACHINEGUNSND"
+digitized = 4
+digitized_shareware = 4
+
+[[effect]]
+id = 27
+name = "HITENEMYSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 28
+name = "SHOOTDOORSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 29
+name = "DEATHSCREAM1SND"
+digitized = 10
+digitized_shareware = 10
+
+[[effect]]
+id = 30
+name = "GETMACHINESND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 31
+name = "GETAMMOSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 32
+name = "SHOOTSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 33
+name = "HEALTH1SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 34
+name = "HEALTH2SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 35
+name = "BONUS1SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 36
+name = "BONUS2SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 37
+name = "BONUS3SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 38
+name = "GETGATLINGSND"
+digitized = 38
+digitized_shareware = 38
+
+[[effect]]
+id = 39
+name = "ESCPRESSEDSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 40
+name = "LEVELDONESND"
+digitized = 22
+digitized_shareware = 22
+
+[[effect]]
+id = 41
+name = "DOGBARKSND"
+digitized = 1
+digitized_shareware = 1
+
+[[effect]]
+id = 42
+name = "ENDBONUS1SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 43
+name = "ENDBONUS2SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 44
+name = "BONUS1UPSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 45
+name = "BONUS4SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 46
+name = "PUSHWALLSND"
+digitized = 13
+digitized_shareware = 13
+
+[[effect]]
+id = 47
+name = "NOBONUSSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 48
+name = "PERCENT100SND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 49
+name = "BOSSACTIVESND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 50
+name = "DEATHSCREAM4SND"
+digitized = 23
+digitized_shareware = 23
+
+[[effect]]
+id = 51
+name = "SCHUTZADSND"
+digitized = 7
+digitized_shareware = 7
+
+[[effect]]
+id = 52
+name = "AHHHGSND"
+digitized = 15
+digitized_shareware = 15
+
+[[effect]]
+id = 53
+name = "DEATHSCREAM5SND"
+digitized = 24
+digitized_shareware = 24
+
+[[effect]]
+id = 54
+name = "DEATHSCREAM7SND"
+digitized = 26
+digitized_shareware = 26
+
+[[effect]]
+id = 55
+name = "DEATHSCREAM8SND"
+digitized = 27
+digitized_shareware = 27
+
+[[effect]]
+id = 56
+name = "LEBENSND"
+digitized = 16
+digitized_shareware = 16
+
+[[effect]]
+id = 57
+name = "DEATHSCREAM6SND"
+digitized = 25
+digitized_shareware = 25
+
+[[effect]]
+id = 58
+name = "NAZIFIRESND"
+digitized = 17
+digitized_shareware = 17
+
+[[effect]]
+id = 59
+name = "BOSSFIRESND"
+digitized = 8
+digitized_shareware = 8
+
+[[effect]]
+id = 60
+name = "SSFIRESND"
+digitized = 9
+digitized_shareware = 9
+
+[[effect]]
+id = 61
+name = "SLURPIESND"
+digitized = 18
+digitized_shareware = 18
+
+[[effect]]
+id = 62
+name = "GHOSTFADESND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 63
+name = "DEATHSCREAM9SND"
+digitized = 28
+digitized_shareware = 28
+
+[[effect]]
+id = 64
+name = "GETAMMOBOXSND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 65
+name = "ANGELSIGHTSND"
+digitized = 36
+digitized_shareware = 36
+
+[[effect]]
+id = 66
+name = "SPIONSND"
+digitized = 19
+digitized_shareware = 19
+
+[[effect]]
+id = 67
+name = "NEINSOVASSND"
+digitized = 20
+digitized_shareware = 20
+
+[[effect]]
+id = 68
+name = "DOGATTACKSND"
+digitized = 21
+digitized_shareware = 21
+
+[[effect]]
+id = 69
+name = "ANGELFIRESND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 70
+name = "TRANSSIGHTSND"
+digitized = 29
+digitized_shareware = 29
+
+[[effect]]
+id = 71
+name = "TRANSDEATHSND"
+digitized = 30
+digitized_shareware = 30
+
+[[effect]]
+id = 72
+name = "WILHELMSIGHTSND"
+digitized = 31
+digitized_shareware = 31
+
+[[effect]]
+id = 73
+name = "WILHELMDEATHSND"
+digitized = 32
+digitized_shareware = 32
+
+[[effect]]
+id = 74
+name = "UBERDEATHSND"
+digitized = 33
+digitized_shareware = 33
+
+[[effect]]
+id = 75
+name = "KNIGHTSIGHTSND"
+digitized = 34
+digitized_shareware = 34
+
+[[effect]]
+id = 76
+name = "KNIGHTDEATHSND"
+digitized = 35
+digitized_shareware = 35
+
+[[effect]]
+id = 77
+name = "ANGELDEATHSND"
+digitized = 37
+digitized_shareware = 37
+
+[[effect]]
+id = 78
+name = "KNIGHTMISSILESND"
+digitized = -1
+digitized_shareware = -1
+
+[[effect]]
+id = 79
+name = "GETSPEARSND"
+digitized = 39
+digitized_shareware = 39
+
+[[effect]]
+id = 80
+name = "ANGELTIREDSND"
+digitized = -1
+digitized_shareware = -1

@@ -1,0 +1,9 @@
+format = 2
+game = "spear-mission3"
+
+[boot_picture]
+source = "data/boot-picture-spear-mission3.png"
+
+[content]
+wall_pages = 134
+save_blocks = 27

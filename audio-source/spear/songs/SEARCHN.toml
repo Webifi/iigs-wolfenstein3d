@@ -1,0 +1,56 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "SEARCHN"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/SEARCHN/score.toml"
+"sha256" = "6acfebf9e7a55a793eb54cdf90ed1f8c995fb5a250d53393f68ba960ae4ed1e9"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/SEARCHN.imf"
+"sha256" = "bb50d925c1e95c9985fb638222302bedf1f56b13aa5701e2b02ce7879d5bfe04"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/SEARCHN/sampling.toml"
+"song_gain_steps" = 14
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = 1.6766
+"ch04" = 2.3348
+"ch05" = 1.7066
+"ch06" = 2.5436
+"ch07" = -10.3722
+"ch09" = -6.7351
+"k36" = 1.4729
+"k40" = 1.4729
+
+["doc"."pan"]
+"ch02" = 63
+"ch04" = 87
+"ch05" = 42
+"ch06" = 61
+"ch07" = 80
+"ch08" = 63

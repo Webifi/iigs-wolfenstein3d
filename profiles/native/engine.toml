@@ -1,0 +1,137 @@
+"format" = 2
+"objects" = ["build/obj/wolf.o", "build/obj/tics.o", "build/obj/ray_programs.o", "build/obj/raypages.o", "build/obj/ui_death.o", "build/obj/doc.o", "build/obj/sound.o", "build/obj/sound_cache.o", "build/obj/music.o", "build/obj/music_flow.o", "build/obj/music_compact.o", "build/obj/music_blocks.o", "build/obj/audio_settings.o", "build/obj/audio_disk.o", "build/obj/scalers.o", "build/obj/sprites.o", "build/obj/hud.o", "build/obj/level.o", "build/obj/keys.o", "build/obj/mouse.o", "build/obj/j13.o", "build/obj/cpu_info.o", "build/obj/irq.o", "build/obj/truepixels.o", "build/obj/flash.o", "build/obj/lglue.o", "build/obj/lplay.o", "build/obj/lagent.o", "build/obj/lact.o", "build/obj/lsight.o", "build/obj/lsetup.o", "build/obj/lregistered.o", "build/obj/lboss.o", "build/obj/lprojectile.o", "build/obj/ldeathcam.o", "build/obj/ui_deathcam.o", "build/obj/ui_bossnotice.o", "build/obj/ui_overlays.o", "build/obj/levelio.o", "build/obj/ui_main.o", "build/obj/ui_draw.o", "build/obj/ui_update.o", "build/obj/ui_rowcache.o", "build/obj/ui_dim.o", "build/obj/ui_gray.o", "build/obj/ui_dimstub.o", "build/obj/ui_palette.o", "build/obj/ui_numbers.o", "build/obj/ui_disk.o", "build/obj/ui_cache.o", "build/obj/ui_data.o", "build/obj/ui_bridge.o", "build/obj/ui_hooks.o", "build/obj/ui_save.o", "build/obj/ui_nameedit.o", "build/obj/ui_write.o", "build/obj/ui_sound.o", "build/obj/ui_options.o", "build/obj/ui_controls.o", "build/obj/ui_bench.o", "build/obj/ui_benchmath.o", "build/obj/ui_title.o", "build/obj/ui_attract.o", "build/obj/ui_attract_data.o", "build/obj/ui_demo.o", "build/obj/ui_scores.o", "build/obj/ui_quit.o", "build/obj/ui_quitrom.o", "build/obj/flow.o", "build/obj/continue.o", "build/obj/tally.o", "build/obj/tally_art.o", "build/obj/victory.o", "build/obj/ending.o", "build/obj/gamesave.o", "build/obj/gamesave_menu.o", "build/obj/ui_words.o", "build/obj/ui_steel.o", "build/obj/ui_frontend.o", "build/obj/ui_slotmeta.o", "build/obj/ui_extra.o", "build/obj/ui_progress.o", "build/obj/ui_lettering.o", "build/obj/viewdef.o", "build/obj/lights.o", "build/obj/leveldirectory.o", "build/obj/ui_loading.o", "build/obj/debug.o", "build/obj/debug_aux.o", "build/obj/debug_logic.o"]
+
+["settings"]
+"linker" = "src/iigs/wolf.scm"
+"ray_stride" = 16
+"entry" = "SEG_CODE"
+
+["inputs"]
+"profile_environment" = "WOLF_PROFILE"
+"data_environment" = "WOLF_DOS_DATA"
+"music_environment" = "WOLF_MUSIC_PACK"
+"effect_samples_environment" = "WOLF_EFFECT_SAMPLES"
+"reference_environment" = "WOLF_REFERENCE_SOURCE"
+
+["media"]
+"boot" = "build/boot/boot.raw"
+"loader" = "build/boot/loader.raw"
+"elf" = "build/wolf.elf"
+"store" = "build/assets/episode.bin@VIRTUAL_STORE"
+"picture_file" = "build/assets/boot-shared.shr@MENU_CACHE_0"
+"data_lists" = ["build/assets/load-list.txt", "build/assets/menu-boot-loads.txt", "build/assets/ui-word-loads.txt", "build/assets/root-loads.txt"]
+"data" = ["build/assets/ui.bin@UI", "build/assets/view-height.bin@VIEW_HEIGHT", "build/assets/weapon-mask.bin@WEAPON_RUNS", "build/assets/map.bin@MAP", "build/assets/clips.bin@CLIPS", "build/assets/tables.bin@TABLES", "build/assets/logic.bin@LOGIC_BASE", "build/assets/demos.bin@DEMOS"]
+"hd_only" = true
+"hard_disks" = ["wolf-hd.po"]
+"menu" = "build/assets/menu-disk.bin"
+
+[["asset_step"]]
+"arguments" = ["tools/prepare_profile.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_campaign.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/prepare_audio.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_tics.py", "2", "64"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_config.py", "1", "four", "pair", "0", "rows"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_colors.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_assets.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_world.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_logic.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_demos.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_scalers.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_sound.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/share_effects.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_sprites.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/check_art_coverage.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_ui.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_views.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_shading.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_tints.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_menu.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_menu_cache.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/frontend/build_words.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_weapon_masks.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_weapon_drawers.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_ray_tables.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_ray_height.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_controls.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_mouse.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_death.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/gen_ray_programs.py"]
+
+[["asset_step"]]
+"arguments" = ["tools/build_loads.py"]
+
+[["post_link"]]
+"arguments" = ["tools/build_floor_previews.py"]
+
+[["post_link"]]
+"arguments" = ["tools/build_episode.py"]
+
+[["post_link"]]
+"arguments" = ["tools/check_depth_memory.py"]
+
+[["post_link"]]
+"arguments" = ["tools/check_registered_assets.py"]
+
+[["post_link"]]
+"arguments" = ["tools/check_registered_views.py"]
+
+[["post_link"]]
+"arguments" = ["tools/check_boot_tables.py"]

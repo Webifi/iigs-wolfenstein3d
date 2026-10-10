@@ -1,0 +1,58 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XAWARD"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XAWARD/score.toml"
+"sha256" = "167fbfe456c0275145db47497b01a87aba5121918e86ed03a6b1b91857aa2498"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/XAWARD.imf"
+"sha256" = "6b92e5bd6c532230dcd2ee8635375a87ca80b05c2ade0585e0396140f2aac97f"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XAWARD/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -3.1303
+"ch03" = -7.7865
+"ch04" = -3.2192
+"ch05" = -2.5301
+"ch06" = -3.7511
+"ch07" = -4.8399
+"ch09" = -3.6251
+"k38" = -4.6699
+"k40" = -4.6699
+
+["doc"."pan"]
+"ch02" = 63
+"ch03" = 105
+"ch04" = 101
+"ch05" = 27
+"ch06" = 27
+"ch07" = 64
+"ch09" = 64

@@ -1,0 +1,28 @@
+# Sampling choices preserved from the established shareware conversion.
+# Program numbers are General MIDI 1..128 after instrument mapping.
+# These rules apply to the instrument wherever it appears, not to song titles.
+format = 1
+
+[capture]
+# Acoustic/Bass Drum and Acoustic/Electric Snare need the synthesizer's output.
+drum_keys = [35, 36, 38, 40]
+melodic_programs = [
+    29,  # Muted Guitar
+    39,  # Synth Bass 1
+    59,  # Tuba
+    61,  # French Horn
+    119, # Synth Drum
+    128, # Gunshot
+]
+# These sounds decay naturally. Preserve their played decay after note-off.
+decaying_programs = [29, 119, 128]
+
+[heuristics]
+# Capture an additional instrument when its filter envelope moves this far.
+# This detects behavior the starting sample alone cannot represent.
+filter_span_cents = 2400
+# A requested root may only occur as a short articulation. Use a nearby note
+# from the same sample region and velocity when it provides a longer body.
+# Explicit capture occurrence numbers and naturally decaying sounds stay fixed.
+root_search_semitones = 3
+minimum_hold_improvement = 1.5

@@ -1,0 +1,29 @@
+# Append [doc] to a generated song recipe if it does not already have it.
+[doc]
+auto_fit = true
+level_mode = "source" # fit to unchanged Roland part levels, using one output scale
+auto_levels = true # choose register encoding precision once, then freeze it during fitting
+capture_policy = "all-captured"
+capture_source = "instrument-track" # Requires the complete-track renderer; see tools/sc55/README.md.
+
+# Optional: protect one sound while fitting the others. Delete an override
+# to return that sound to automatic selection. Channels are 1..16, keys 0..127.
+# [[doc.sample]]
+# channel = 10
+# key = 36                 # bass drum; omit key to cover this whole channel
+# max_bytes = 8192         # power of two; larger retains more detail/tail
+# rate = 24000             # pin a one-shot rate; omit for automatic selection
+# tail_db = 50.0           # larger keeps quieter parts of the decay
+
+# [[doc.sample]]
+# channel = 1
+# attack_seconds = 0.10    # more of the real attack before a sustained loop
+# bandwidth_hz = 6000.0    # explicit low-pass choice; omit to preserve detail
+
+# Measured adjustments: start from suggested-levels.toml, then audition.
+# [doc.levels]
+# ch01 = 0.0               # dB, MIDI channel; k36 selects a drum key
+# [doc.pan]
+# ch01 = 64                # optional static MIDI pan, 0 left to 127 right
+# [doc.detune]
+# ch01 = 0.0               # optional cents on the second stereo oscillator

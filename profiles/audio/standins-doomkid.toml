@@ -1,0 +1,338 @@
+# Optional, explicitly selected MIDI stand-ins. These do not replace composer sources.
+# Use --fallback-sources with generate, or --sources to select this whole set.
+format = 1
+archive_sha256 = "01e00b0a735cbf075a0b999b66d0fe569aa61484cecf104a9b858a88479feaaf"
+archive_url = "https://www.mediafire.com/file/t6zzn3her8gov50/wolf3dmidi.zip/file"
+
+[[song]]
+name = "WONDERIN"
+authority = "composer-arrangement-copy"
+source_file = "WONDERIN.mid"
+source_member = "02 - Wondering About My Loved Ones.mid"
+source_sha256 = "a8d5245435faf03e7ac6d9c97467d793b87b9e9609df7e79b41f8a4f2dfcd4a6"
+selected_file = "WONDERIN.mid"
+selected_sha256 = "a8d5245435faf03e7ac6d9c97467d793b87b9e9609df7e79b41f8a4f2dfcd4a6"
+
+[[song]]
+name = "GETTHEM"
+authority = "composer-arrangement-copy"
+source_file = "GETTHEM.mid"
+source_member = "03 - Get Them Before They Get You.mid"
+source_sha256 = "9ee58162362db5f7c19510dd5e1d7d9ce524bc8f538acf5eaf4a3b941eba2f77"
+selected_file = "GETTHEM.mid"
+selected_sha256 = "9ee58162362db5f7c19510dd5e1d7d9ce524bc8f538acf5eaf4a3b941eba2f77"
+
+[[song]]
+name = "SEARCHN"
+authority = "composer-arrangement-copy"
+source_file = "SEARCHN.mid"
+source_member = "04 - Searching For the Enemy.mid"
+source_sha256 = "fe3f57c79c9d49c00085583482489113a55e155e43297499fdb87c6c1d3a9536"
+selected_file = "SEARCHN.mid"
+selected_sha256 = "fe3f57c79c9d49c00085583482489113a55e155e43297499fdb87c6c1d3a9536"
+
+[[song]]
+name = "POW"
+authority = "composer-arrangement-copy"
+source_file = "POW.mid"
+source_member = "05 - P.O.W..mid"
+source_sha256 = "06c0d821bfeb8450f641c9128aa5c17d210fa70050502785208c7ce768b0fba0"
+selected_file = "POW.mid"
+selected_sha256 = "06c0d821bfeb8450f641c9128aa5c17d210fa70050502785208c7ce768b0fba0"
+
+[[song]]
+name = "SUSPENSE"
+authority = "fan-conversion"
+source_file = "SUSPENSE.mid"
+source_member = "06 - Suspense.mid"
+source_sha256 = "354ad2c6171ce3e2ee67635bc8990549f6040e0316fd994880ccf589b32b8ca5"
+selected_file = "SUSPENSE.mid"
+selected_sha256 = "354ad2c6171ce3e2ee67635bc8990549f6040e0316fd994880ccf589b32b8ca5"
+
+[[song]]
+name = "WARMARCH"
+authority = "composer-arrangement-copy"
+source_file = "WARMARCH.mid"
+source_member = "07 - The March to War.mid"
+source_sha256 = "9727c4bc58def62f0ce2e74f4f92891756362c5d81fdd8765787a2beef7b568f"
+selected_file = "WARMARCH.mid"
+selected_sha256 = "9727c4bc58def62f0ce2e74f4f92891756362c5d81fdd8765787a2beef7b568f"
+
+[[song]]
+name = "CORNER"
+authority = "composer-arrangement-copy"
+source_file = "CORNER.mid"
+source_member = "08 - Enemy Around the Corner.mid"
+source_sha256 = "9e01ae78edc2b9834739cd9b2d97d36c42c3cee3efdd0c746084643b3cb52c48"
+selected_file = "CORNER.mid"
+selected_sha256 = "9e01ae78edc2b9834739cd9b2d97d36c42c3cee3efdd0c746084643b3cb52c48"
+
+[[song]]
+name = "NAZI_OMI"
+authority = "fan-conversion"
+source_file = "NAZI_OMI.mid"
+source_member = "09 - Nazi Anthem.mid"
+source_sha256 = "d8b2badff6f48b64fd5a83bc0d67441f2d0102f12ce2d3bbeb509dd45e693113"
+selected_file = "NAZI_OMI.mid"
+selected_sha256 = "d8b2badff6f48b64fd5a83bc0d67441f2d0102f12ce2d3bbeb509dd45e693113"
+
+[[song]]
+name = "INTROCW3"
+authority = "fan-conversion"
+source_file = "INTROCW3.mid"
+source_member = "10 - Lurking....mid"
+source_sha256 = "4dae1f773cc33546b672f3f0fabae04a9b62b39e8118bda1431318aa25d3082b"
+selected_file = "INTROCW3.mid"
+selected_sha256 = "4dae1f773cc33546b672f3f0fabae04a9b62b39e8118bda1431318aa25d3082b"
+
+[[song]]
+name = "GOINGAFT"
+authority = "fan-conversion"
+source_file = "GOINGAFT.mid"
+source_member = "11 - Going After Hitler.mid"
+source_sha256 = "9e4ed40592eb33921b5eba78fc67c57c7e843338431154e115cc77ffaa4e4b72"
+selected_file = "GOINGAFT.mid"
+selected_sha256 = "9e4ed40592eb33921b5eba78fc67c57c7e843338431154e115cc77ffaa4e4b72"
+
+[[song]]
+name = "HEADACHE"
+authority = "fan-conversion"
+source_file = "HEADACHE.mid"
+source_member = "12 - Pounding Headache.mid"
+source_sha256 = "1874b52e3d3fbd91386ceffe9a1d7dbc5af9001528240be6620484da44f386b6"
+selected_file = "HEADACHE.mid"
+selected_sha256 = "1874b52e3d3fbd91386ceffe9a1d7dbc5af9001528240be6620484da44f386b6"
+
+[[song]]
+name = "DUNGEON"
+authority = "fan-conversion"
+source_file = "DUNGEON.mid"
+source_member = "13 - Into the Dungeons.mid"
+source_sha256 = "542b7364e9ad415be4f84ac7a07449368fffa924d4548349091a8c26168c8cd6"
+selected_file = "DUNGEON.mid"
+selected_sha256 = "542b7364e9ad415be4f84ac7a07449368fffa924d4548349091a8c26168c8cd6"
+
+[[song]]
+name = "PREGNANT"
+authority = "fan-conversion"
+source_file = "PREGNANT.mid"
+source_member = "14 - Kill the S.O.B..mid"
+source_sha256 = "1d72fa0bc98fac343d409754aecf8eeacece4e10ca9b7d419b6592e305da85d1"
+selected_file = "PREGNANT.mid"
+selected_sha256 = "1d72fa0bc98fac343d409754aecf8eeacece4e10ca9b7d419b6592e305da85d1"
+
+[[song]]
+name = "NAZI_RAP"
+authority = "fan-conversion"
+source_file = "NAZI_RAP.mid"
+source_member = "15 - The Nazi Rap.mid"
+source_sha256 = "c33e76fa2a6a77be03d6ea9276986aef4d40f42953d125a93401f23b74111355"
+selected_file = "NAZI_RAP.mid"
+selected_sha256 = "c33e76fa2a6a77be03d6ea9276986aef4d40f42953d125a93401f23b74111355"
+
+[[song]]
+name = "TWELFTH"
+authority = "fan-conversion"
+source_file = "TWELFTH.mid"
+source_member = "16 - Twelfth Hour.mid"
+source_sha256 = "157b731285007d5e700b836e8b9624ec93eeae6c78f89202418353c8b9714a87"
+selected_file = "TWELFTH.mid"
+selected_sha256 = "157b731285007d5e700b836e8b9624ec93eeae6c78f89202418353c8b9714a87"
+
+[[song]]
+name = "ZEROHOUR"
+authority = "composer-arrangement-copy"
+source_file = "ZEROHOUR.mid"
+source_member = "17 - Zero Hour.mid"
+source_sha256 = "9f752c78c62331af31966d69378df376c7631522fc51f88c1b631d5efc3942f1"
+selected_file = "ZEROHOUR.mid"
+selected_sha256 = "9f752c78c62331af31966d69378df376c7631522fc51f88c1b631d5efc3942f1"
+
+[[song]]
+name = "ULTIMATE"
+authority = "composer-arrangement-copy"
+source_file = "ULTIMATE.mid"
+source_member = "18 - The Ultimate Challenge.mid"
+source_sha256 = "bc766a4c51966933da4cc97d6e9fbd98cad207c5b43d370b233e896062ebcc12"
+selected_file = "ULTIMATE.mid"
+selected_sha256 = "bc766a4c51966933da4cc97d6e9fbd98cad207c5b43d370b233e896062ebcc12"
+
+[[song]]
+name = "PACMAN"
+authority = "fan-conversion"
+source_file = "PACMAN.mid"
+source_member = "19 - Wolf Pac.mid"
+source_sha256 = "073ac40f04fe474b36159afa8857b71fe956d97c62289de53220633f42754c14"
+selected_file = "PACMAN.mid"
+selected_sha256 = "073ac40f04fe474b36159afa8857b71fe956d97c62289de53220633f42754c14"
+
+[[song]]
+name = "FUNKYOU"
+authority = "fan-conversion"
+source_file = "FUNKYOU.mid"
+source_member = "20 - Funk You!.mid"
+source_sha256 = "b49834c3be9c9836028a84809903a83c63add74c760e85f591a2ed97e42adc81"
+selected_file = "FUNKYOU.mid"
+selected_sha256 = "b49834c3be9c9836028a84809903a83c63add74c760e85f591a2ed97e42adc81"
+
+[[song]]
+name = "ENDLEVEL"
+authority = "fan-conversion"
+source_file = "ENDLEVEL.mid"
+source_member = "21 - End of Level.mid"
+source_sha256 = "467207cbd08838a81bea056400815ac39927b12e74ae6054448f18eecbe5570f"
+selected_file = "ENDLEVEL.mid"
+selected_sha256 = "467207cbd08838a81bea056400815ac39927b12e74ae6054448f18eecbe5570f"
+
+[[song]]
+name = "URAHERO"
+authority = "fan-conversion"
+source_file = "URAHERO.mid"
+source_member = "22 - U R A Hero.mid"
+source_sha256 = "489485f5ce5065385b5d77bca02d0da750b0027cbcb36cabbe3cb7099b10978b"
+selected_file = "URAHERO.mid"
+selected_sha256 = "489485f5ce5065385b5d77bca02d0da750b0027cbcb36cabbe3cb7099b10978b"
+
+[[song]]
+name = "ROSTER"
+authority = "fan-conversion"
+source_file = "ROSTER.mid"
+source_member = "23 - Roster.mid"
+source_sha256 = "d072defefa2410164d5874b9cdb644ea050d9a1c84d85590f7419bf3671f2ae4"
+selected_file = "ROSTER.mid"
+selected_sha256 = "d072defefa2410164d5874b9cdb644ea050d9a1c84d85590f7419bf3671f2ae4"
+
+[[song]]
+name = "HITLWLTZ"
+authority = "fan-conversion"
+source_file = "HITLWLTZ.mid"
+source_member = "24 - Hitler Waltz.mid"
+source_sha256 = "5b3f7706f591fc5b11a45e5d20c2150a4493eac4beb153e93a35380baf9a286d"
+selected_file = "HITLWLTZ.mid"
+selected_sha256 = "5b3f7706f591fc5b11a45e5d20c2150a4493eac4beb153e93a35380baf9a286d"
+
+[[song]]
+name = "SALUTE"
+authority = "fan-conversion"
+source_file = "SALUTE.mid"
+source_member = "25 - Salute.mid"
+source_sha256 = "a39124fc3c5312312279a771fed82c4c7682cabe8dbb6a8f2eb4113145eff4b3"
+selected_file = "SALUTE.mid"
+selected_sha256 = "a39124fc3c5312312279a771fed82c4c7682cabe8dbb6a8f2eb4113145eff4b3"
+
+[[song]]
+name = "VICTORS"
+authority = "fan-conversion"
+source_file = "VICTORS.mid"
+source_member = "26 - Victors.mid"
+source_sha256 = "9541a92c4850f5cbaa513858212a668b7e094d878274bddf763cfa076e61eda5"
+selected_file = "VICTORS.mid"
+selected_sha256 = "9541a92c4850f5cbaa513858212a668b7e094d878274bddf763cfa076e61eda5"
+
+[[song]]
+name = "VICMARCH"
+authority = "fan-conversion"
+source_file = "VICMARCH.mid"
+source_member = "27 - Victory March.mid"
+source_sha256 = "65955a6f6e1021d95b26faaee834a5a1bc9900d2c8a1eccaa9e479d5a6993c3a"
+selected_file = "VICMARCH.mid"
+selected_sha256 = "65955a6f6e1021d95b26faaee834a5a1bc9900d2c8a1eccaa9e479d5a6993c3a"
+
+[[song]]
+name = "XTOWER2"
+authority = "composer-arrangement-copy"
+source_file = "XTOWER2.mid"
+source_member = "28 - The Tower.mid"
+source_sha256 = "c9f7e9ed454486bce637babe6bb6739d310bff6828b7b095e9bb231b1ee620ac"
+selected_file = "XTOWER2.mid"
+selected_sha256 = "c9f7e9ed454486bce637babe6bb6739d310bff6828b7b095e9bb231b1ee620ac"
+
+[[song]]
+name = "XTIPTOE"
+authority = "fan-conversion"
+source_file = "XTIPTOE.mid"
+source_member = "29 - Tiptoeing Around.mid"
+source_sha256 = "5fb38bedb4afc936a004123660a8fc443820745195348f0fb494f14a94d57e90"
+selected_file = "XTIPTOE.mid"
+selected_sha256 = "5fb38bedb4afc936a004123660a8fc443820745195348f0fb494f14a94d57e90"
+
+[[song]]
+name = "XFUNKIE"
+authority = "composer-arrangement-copy"
+source_file = "XFUNKIE.mid"
+source_member = "30 - Funkie Colonel Bill.mid"
+source_sha256 = "3b2f97157f5cab3e813910f78645902f29fa46a9744d69b0286ce15a3ecbd53f"
+selected_file = "XFUNKIE.mid"
+selected_sha256 = "3b2f97157f5cab3e813910f78645902f29fa46a9744d69b0286ce15a3ecbd53f"
+
+[[song]]
+name = "XDEATH"
+authority = "fan-conversion"
+source_file = "XDEATH.mid"
+source_member = "31 - Death to the Nazis.mid"
+source_sha256 = "17cf12e5431e1f1ba48f4ba40d4dbe0d08f824050cdfb5cb97a349f0555fae69"
+selected_file = "XDEATH.mid"
+selected_sha256 = "17cf12e5431e1f1ba48f4ba40d4dbe0d08f824050cdfb5cb97a349f0555fae69"
+
+[[song]]
+name = "XGETYOU"
+authority = "fan-conversion"
+source_file = "XGETYOU.mid"
+source_member = "32 - The SS Gonna Get You.mid"
+source_sha256 = "cc1eb4d7971ab617b2d8dd8ce08a2b9443ba18fc3fc5f193bede9ba1fe164bac"
+selected_file = "XGETYOU.mid"
+selected_sha256 = "cc1eb4d7971ab617b2d8dd8ce08a2b9443ba18fc3fc5f193bede9ba1fe164bac"
+
+[[song]]
+name = "XPUTIT"
+authority = "fan-conversion"
+source_file = "XPUTIT.mid"
+source_member = "33 - Puttin' It to the Enemy.mid"
+source_sha256 = "5f8140cce9549599fbde9012eb9f0759be9c62055e30c01dce40e00aa3672d39"
+selected_file = "XPUTIT.mid"
+selected_sha256 = "5f8140cce9549599fbde9012eb9f0759be9c62055e30c01dce40e00aa3672d39"
+
+[[song]]
+name = "XEVIL"
+authority = "composer-arrangement-copy"
+source_file = "XEVIL.mid"
+source_member = "34 - Evil Incarnate.mid"
+source_sha256 = "67536f315cf8dbb2d5f4fab2a74beff1ad94afab814876de0270286098ab47fd"
+selected_file = "XEVIL.mid"
+selected_sha256 = "67536f315cf8dbb2d5f4fab2a74beff1ad94afab814876de0270286098ab47fd"
+
+[[song]]
+name = "XJAZNAZI"
+authority = "fan-conversion"
+source_file = "XJAZNAZI.mid"
+source_member = "35 - Jazzin' Them Nazis.MID"
+source_sha256 = "7f81b9bb5154b3aab6b5d9b2719c426ae9bb883e73747f49d92999e43e2e885a"
+selected_file = "XJAZNAZI.mid"
+selected_sha256 = "7f81b9bb5154b3aab6b5d9b2719c426ae9bb883e73747f49d92999e43e2e885a"
+
+[[song]]
+name = "XTHEEND"
+authority = "fan-conversion"
+source_file = "XTHEEND.mid"
+source_member = "36 - Is This THE END.mid"
+source_sha256 = "bd90de8f361fa25bca977f79cff4d8e994e2b19b4456f6c04796e9009dc3131a"
+selected_file = "XTHEEND.mid"
+selected_sha256 = "bd90de8f361fa25bca977f79cff4d8e994e2b19b4456f6c04796e9009dc3131a"
+
+[[song]]
+name = "XAWARD"
+authority = "fan-conversion"
+source_file = "XAWARD.mid"
+source_member = "37 - Award Ceremony.mid"
+source_sha256 = "3a3dcdb2a0c61298a2c90c99ba9018917f6fb7b1e739ec1133f7162f2e92117c"
+selected_file = "XAWARD.mid"
+selected_sha256 = "3a3dcdb2a0c61298a2c90c99ba9018917f6fb7b1e739ec1133f7162f2e92117c"
+
+[[song]]
+name = "NAZI_NOR"
+authority = "fan-conversion"
+source_file = "NAZI_NOR.mid"
+source_member = "01 - Horst Wessel Lied.mid"
+source_sha256 = "0435dc7a4121d58ef576c91b342712deb6f6173f0111edeab0e17f552868296e"
+selected_file = "NAZI_NOR.mid"
+selected_sha256 = "0435dc7a4121d58ef576c91b342712deb6f6173f0111edeab0e17f552868296e"

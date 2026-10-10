@@ -1,0 +1,100 @@
+# Rebuild with audio_compile.py music-pack THIS_FOLDER --data YOUR_DOS_FILES --out OUTPUT.
+# No Roland executable, ROM, SoundFont, DOC bank or native music stream is included.
+"format" = 2
+"profile" = "spear"
+
+[["songs"]]
+"id" = 0
+"name" = "XFUNKIE"
+
+[["songs"]]
+"id" = 1
+"name" = "DUNGEON"
+
+[["songs"]]
+"id" = 2
+"name" = "XDEATH"
+
+[["songs"]]
+"id" = 3
+"name" = "GETTHEM"
+
+[["songs"]]
+"id" = 4
+"name" = "XTIPTOE"
+
+[["songs"]]
+"id" = 5
+"name" = "GOINGAFT"
+
+[["songs"]]
+"id" = 6
+"name" = "URAHERO"
+
+[["songs"]]
+"id" = 7
+"name" = "XTHEEND"
+
+[["songs"]]
+"id" = 8
+"name" = "NAZI_OMI"
+
+[["songs"]]
+"id" = 9
+"name" = "POW"
+
+[["songs"]]
+"id" = 10
+"name" = "TWELFTH"
+
+[["songs"]]
+"id" = 11
+"name" = "SEARCHN"
+
+[["songs"]]
+"id" = 12
+"name" = "SUSPENSE"
+
+[["songs"]]
+"id" = 13
+"name" = "ZEROHOUR"
+
+[["songs"]]
+"id" = 14
+"name" = "WONDERIN"
+
+[["songs"]]
+"id" = 15
+"name" = "ULTIMATE"
+
+[["songs"]]
+"id" = 16
+"name" = "ENDLEVEL"
+
+[["songs"]]
+"id" = 17
+"name" = "XEVIL"
+
+[["songs"]]
+"id" = 18
+"name" = "XJAZNAZI"
+
+[["songs"]]
+"id" = 19
+"name" = "COPYPRO"
+
+[["songs"]]
+"id" = 20
+"name" = "XAWARD"
+
+[["songs"]]
+"id" = 21
+"name" = "XPUTIT"
+
+[["songs"]]
+"id" = 22
+"name" = "XGETYOU"
+
+[["songs"]]
+"id" = 23
+"name" = "XTOWER2"

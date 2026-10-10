@@ -1,0 +1,85 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 40
+"bank" = [0, 0]
+"notes" = 160
+"name" = "Synth Bass 2"
+
+[["instruments"]]
+"channel" = 3
+"program" = 85
+"bank" = [0, 0]
+"notes" = 32
+"name" = "Lead 5 (charang)"
+
+[["instruments"]]
+"channel" = 4
+"program" = 78
+"bank" = [0, 0]
+"notes" = 8
+"name" = "Shakuhachi"
+
+[["instruments"]]
+"channel" = 5
+"program" = 89
+"bank" = [0, 0]
+"notes" = 32
+"name" = "Pad 1 (new age)"
+
+[["instruments"]]
+"channel" = 6
+"program" = 58
+"bank" = [0, 0]
+"notes" = 28
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 7
+"program" = 119
+"bank" = [0, 0]
+"notes" = 96
+"name" = "Synth Drum"
+
+[["instruments"]]
+"channel" = 8
+"program" = 46
+"bank" = [0, 0]
+"notes" = 192
+"name" = "Pizzicato Strings"
+
+[["instruments"]]
+"channel" = 9
+"program" = 58
+"bank" = [0, 0]
+"notes" = 9
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 9
+"program" = 70
+"bank" = [0, 0]
+"notes" = 7
+"name" = "English Horn"
+
+[["instruments"]]
+"channel" = 9
+"program" = 71
+"bank" = [0, 0]
+"notes" = 9
+"name" = "Bassoon"
+
+[["instruments"]]
+"channel" = 9
+"program" = 72
+"bank" = [0, 0]
+"notes" = 6
+"name" = "Clarinet"
+
+["source"]
+"kind" = "midi"
+"sha256" = "741d54f2a10576dc4e86f8cf565f2420be2de0cd584331aab52ccf53636642ce"
+"authority" = "composer-original"

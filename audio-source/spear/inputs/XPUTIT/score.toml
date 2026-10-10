@@ -1,0 +1,9388 @@
+# Notes come from the matching licensed AdLib source. No original note sequence is stored.
+# source_note is one-based within source_channel; omitted source notes are not selected.
+# time_scale/duration_scale are rational [numerator, denominator]; deltas use MIDI ticks.
+# [[parts]] selects/transforms a voice; add contains only explicitly added notes.
+# order preserves simultaneous-event ordering; track preserves original MIDI setup order.
+format = 1
+source_sha256 = "bd19656d18002416b42c27244898a5e8f79a53be2ca42a924b65790ae3296815"
+division = 960
+midi_format = 1
+selected_notes = 1121
+added_notes = 0
+
+[[parts]]
+source_channel = 2
+channel = 1
+transpose = 0
+time_scale = [2158129, 786980]
+start_offset = 18
+duration_scale = [181, 66]
+duration_offset = -1
+velocity = 82
+on_track = 1
+off_track = 1
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [457, 494], source_note = 1, start_delta = -13, duration_delta = 2 },
+  { order = [498, 531], source_note = 2, start_delta = -12, duration_delta = 2 },
+  { order = [534, 548], source_note = 3, start_delta = -12 },
+  { order = [552, 560], source_note = 4, start_delta = -12, duration_delta = 2 },
+  { order = [562, 573], source_note = 5, start_delta = -10 },
+  { order = [577, 626], source_note = 6, start_delta = -10 },
+  { order = [630, 665], source_note = 7, start_delta = -10, duration_delta = 1 },
+  { order = [669, 702], source_note = 8, start_delta = -9 },
+  { order = [706, 722], source_note = 9, start_delta = -9 },
+  { order = [726, 734], source_note = 10, start_delta = -9, duration_delta = 1 },
+  { order = [738, 745], source_note = 11, start_delta = -9 },
+  { order = [751, 798], source_note = 12, start_delta = -9, duration_delta = 2 },
+  { order = [801, 838], source_note = 13, start_delta = -7 },
+  { order = [840, 871], source_note = 14, start_delta = -8, duration_delta = 1 },
+  { order = [872, 888], source_note = 15, start_delta = -9, duration_delta = 2 },
+  { order = [892, 900], source_note = 16, start_delta = -7, duration_delta = 1 },
+  { order = [904, 911], source_note = 17, start_delta = -8, duration_delta = 3 },
+  { order = [917, 966], source_note = 18, start_delta = -8, duration_delta = 2 },
+  { order = [970, 1009], source_note = 19, start_delta = -6, duration_delta = -1 },
+  { order = [1013, 1042], source_note = 20, start_delta = -7, duration_delta = 3 },
+  { order = [1043, 1059], source_note = 21, start_delta = -6 },
+  { order = [1061, 1071], source_note = 22, start_delta = -6, duration_delta = 1 },
+  { order = [1075, 1084], source_note = 23, start_delta = -6, duration_delta = 1 },
+  { order = [1088, 1135], source_note = 24, start_delta = -6, duration_delta = 3 },
+  { order = [1139, 1174], source_note = 25, start_delta = -7, duration_delta = 3 },
+  { order = [1178, 1211], source_note = 26, start_delta = -4 },
+  { order = [1215, 1231], source_note = 27, start_delta = -5, duration_delta = 1 },
+  { order = [1235, 1243], source_note = 28, start_delta = -5, duration_delta = 1 },
+  { order = [1247, 1254], source_note = 29, start_delta = -5, duration_delta = 2 },
+  { order = [1260, 1309], source_note = 30, start_delta = -5, duration_delta = 2 },
+  { order = [1313, 1348], source_note = 31, start_delta = -3 },
+  { order = [1352, 1385], source_note = 32, start_delta = -4, duration_delta = 3 },
+  { order = [1389, 1405], source_note = 33, start_delta = -3 },
+  { order = [1409, 1417], source_note = 34, start_delta = -3, duration_delta = 2 },
+  { order = [1421, 1428], source_note = 35, start_delta = -3, duration_delta = 1 },
+  { order = [1434, 1481], source_note = 36, start_delta = -2, duration_delta = 1 },
+  { order = [1484, 1521], source_note = 37, start_delta = -2 },
+  { order = [1525, 1554], source_note = 38, start_delta = -2, duration_delta = 2 },
+  { order = [1558, 1574], source_note = 39 },
+  { order = [1578, 1586], source_note = 40 },
+  { order = [1590, 1597], source_note = 41, start_delta = -1, duration_delta = 1 },
+  { order = [1603, 1652], source_note = 42 },
+  { order = [1656, 1695], source_note = 43, start_delta = -1, duration_delta = 2 },
+  { order = [1699, 1728], source_note = 44 },
+  { order = [1730, 1748], source_note = 45 },
+  { order = [1752, 1760], source_note = 46, duration_delta = 1 },
+  { order = [1764, 1773], source_note = 47, start_delta = -1, duration_delta = 3 },
+  { order = [1777, 1824], source_note = 48, start_delta = 1, duration_delta = 1 },
+  { order = [1828, 1863], source_note = 49, start_delta = 1, duration_delta = 2 },
+  { order = [1867, 1900], source_note = 50, duration_delta = 3 },
+  { order = [1904, 1920], source_note = 51, start_delta = 2, duration_delta = 1 },
+  { order = [1924, 1932], source_note = 52, start_delta = 3 },
+  { order = [1937, 1943], source_note = 53, start_delta = 2 },
+  { order = [1949, 1998], source_note = 54, start_delta = 2, duration_delta = 1 },
+  { order = [2002, 2037], source_note = 55, start_delta = 2, duration_delta = 2 },
+  { order = [2041, 2074], source_note = 56, start_delta = 4, duration_delta = 1 },
+  { order = [2076, 2094], source_note = 57, start_delta = 4, duration_delta = 1 },
+  { order = [2099, 2106], source_note = 58, start_delta = 4 },
+  { order = [2110, 2117], source_note = 59, start_delta = 3, duration_delta = 2 },
+  { order = [2123, 2170], source_note = 60, start_delta = 3, duration_delta = 2 },
+  { order = [2173, 2210], source_note = 61, start_delta = 5 },
+  { order = [2214, 2243], source_note = 62, start_delta = 5 },
+  { order = [2247, 2263], source_note = 63, start_delta = 5, duration_delta = 2 },
+  { order = [2267, 2275], source_note = 64, start_delta = 5, duration_delta = 2 },
+  { order = [2279, 2286], source_note = 65, start_delta = 4, duration_delta = 3 },
+  { order = [2292, 2341], source_note = 66, start_delta = 6 },
+  { order = [2345, 2384], source_note = 67, start_delta = 6, duration_delta = 2 },
+  { order = [2388, 2417], source_note = 68, start_delta = 7, duration_delta = 1 },
+  { order = [2421, 2437], source_note = 69, start_delta = 7, duration_delta = 2 },
+  { order = [2439, 2449], source_note = 70, start_delta = 7, duration_delta = 1 },
+  { order = [2453, 2462], source_note = 71, start_delta = 8, duration_delta = 1 },
+  { order = [2466, 2501], source_note = 72, start_delta = 8 },
+  { order = [2505, 2522], source_note = 73, start_delta = 7, duration_delta = 1 },
+  { order = [2526, 2561], source_note = 74, start_delta = 7, duration_delta = 1 },
+  { order = [2565, 2598], source_note = 75, start_delta = 8 },
+  { order = [2602, 2618], source_note = 76, start_delta = 8, duration_delta = 2 },
+  { order = [2621, 2627], source_note = 77, start_delta = 8, duration_delta = 2 },
+  { order = [2631, 2638], source_note = 78, start_delta = 8, duration_delta = 2 },
+  { order = [2644, 2693], source_note = 79, start_delta = 8, duration_delta = 2 },
+  { order = [2697, 2732], source_note = 80, start_delta = 10 },
+  { order = [2736, 2769], source_note = 81, start_delta = 10, duration_delta = 2 },
+  { order = [2773, 2789], source_note = 82, start_delta = 10, duration_delta = 1 },
+  { order = [2793, 2801], source_note = 83, start_delta = 11 },
+  { order = [2805, 2812], source_note = 84, start_delta = 11 },
+  { order = [2818, 2865], source_note = 85, start_delta = 10, duration_delta = 1 },
+  { order = [2866, 2905], source_note = 86, start_delta = 10, duration_delta = 2 },
+  { order = [2909, 2938], source_note = 87, start_delta = 12, duration_delta = 1 },
+  { order = [2940, 2958], source_note = 88, start_delta = 12, duration_delta = 1 },
+  { order = [2962, 2970], source_note = 89, start_delta = 13 },
+  { order = [2974, 2981], source_note = 90, start_delta = 12, duration_delta = 1 },
+  { order = [2987, 3036], source_note = 91, start_delta = 12 },
+  { order = [3040, 3079], source_note = 92, start_delta = 12, duration_delta = 2 },
+  { order = [3083, 3112], source_note = 93, start_delta = 13, duration_delta = 2 },
+  { order = [3116, 3132], source_note = 94, start_delta = 13 },
+  { order = [3136, 3144], source_note = 95, start_delta = 13, duration_delta = 3 },
+  { order = [3148, 3157], source_note = 96, start_delta = 14, duration_delta = 1 },
+  { order = [3161, 3223], source_note = 97, start_delta = 14, duration_delta = 2 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 5
+channel = 2
+transpose = 0
+time_scale = [1802, 657]
+start_offset = 2
+duration_scale = [96, 35]
+duration_offset = 0
+velocity = 90
+on_track = 2
+off_track = 2
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [126, 130], source_note = 1, start_delta = -3, velocity = 102 },
+  { order = [160, 161], source_note = 2, start_delta = -2, velocity = 94 },
+  { order = [165, 168], source_note = 3, start_delta = -2, velocity = 100 },
+  { order = [203, 204], source_note = 4, start_delta = -2, velocity = 88 },
+  { order = [209, 212], source_note = 5, start_delta = -2, velocity = 98 },
+  { order = [244, 245], source_note = 6, start_delta = -3, duration_delta = 1, velocity = 88 },
+  { order = [249, 252], source_note = 7, start_delta = -2, velocity = 94 },
+  { order = [286, 287], source_note = 8, start_delta = -1, duration_delta = -1 },
+  { order = [291, 294], source_note = 9, start_delta = -3, duration_delta = 1, velocity = 96 },
+  { order = [326, 327], source_note = 10, start_delta = -1 },
+  { order = [331, 334], source_note = 11, start_delta = -1, velocity = 100 },
+  { order = [370, 371], source_note = 12, start_delta = -1, duration_delta = -1 },
+  { order = [375, 378], source_note = 13, start_delta = -2, duration_delta = 1, velocity = 94 },
+  { order = [410, 411], source_note = 14, start_delta = -2 },
+  { order = [415, 418], source_note = 15, start_delta = -2, velocity = 98 },
+  { order = [452, 453], source_note = 16, start_delta = -1, duration_delta = -1 },
+  { order = [463, 473], source_note = 17, start_delta = -2, velocity = 102 },
+  { order = [527, 528], source_note = 18, start_delta = -1, velocity = 94 },
+  { order = [538, 544], source_note = 19, start_delta = -1, velocity = 100 },
+  { order = [621, 622], source_note = 20, start_delta = -1, velocity = 88 },
+  { order = [636, 642], source_note = 21, start_delta = -1, velocity = 98 },
+  { order = [698, 699], source_note = 22, start_delta = -1, velocity = 88 },
+  { order = [712, 718], source_note = 23, start_delta = -2, duration_delta = 2, velocity = 94 },
+  { order = [794, 795], source_note = 24, start_delta = -1 },
+  { order = [805, 811], source_note = 25, start_delta = -1, velocity = 96 },
+  { order = [867, 868], source_note = 26, duration_delta = -2 },
+  { order = [878, 884], source_note = 27, start_delta = -2, duration_delta = 1, velocity = 100 },
+  { order = [962, 963], source_note = 28, duration_delta = -1 },
+  { order = [976, 982], source_note = 29, duration_delta = -1, velocity = 94 },
+  { order = [1038, 1039], source_note = 30, duration_delta = -1 },
+  { order = [1049, 1055], source_note = 31, velocity = 98 },
+  { order = [1131, 1132], source_note = 32, duration_delta = -1 },
+  { order = [1145, 1153], source_note = 33, duration_delta = -2, velocity = 102 },
+  { order = [1207, 1208], source_note = 34, velocity = 94 },
+  { order = [1221, 1227], source_note = 35, duration_delta = 1, velocity = 100 },
+  { order = [1304, 1305], source_note = 36, start_delta = 1, duration_delta = -1, velocity = 88 },
+  { order = [1319, 1325], source_note = 37, velocity = 98 },
+  { order = [1381, 1382], source_note = 38, start_delta = -1, duration_delta = 1, velocity = 88 },
+  { order = [1395, 1401], source_note = 39, velocity = 94 },
+  { order = [1477, 1478], source_note = 40 },
+  { order = [1488, 1494], source_note = 41, velocity = 96 },
+  { order = [1550, 1551], source_note = 42, duration_delta = 1 },
+  { order = [1564, 1570], source_note = 43, duration_delta = -1, velocity = 100 },
+  { order = [1648, 1649], source_note = 44, start_delta = -1, duration_delta = 2 },
+  { order = [1662, 1668], source_note = 45, start_delta = 1, duration_delta = -1, velocity = 94 },
+  { order = [1724, 1725], source_note = 46 },
+  { order = [1738, 1744], source_note = 47, start_delta = -1, duration_delta = 1, velocity = 98 },
+  { order = [1820, 1821], source_note = 48, start_delta = 2, duration_delta = -1 },
+  { order = [1834, 1842], source_note = 49, start_delta = 1, duration_delta = -1, velocity = 102 },
+  { order = [1896, 1897], source_note = 50, start_delta = 1, velocity = 94 },
+  { order = [1910, 1916], source_note = 51, start_delta = 1, duration_delta = -1, velocity = 100 },
+  { order = [1993, 1994], source_note = 52, duration_delta = 2, velocity = 88 },
+  { order = [2008, 2014], source_note = 53, start_delta = 1, velocity = 98 },
+  { order = [2070, 2071], source_note = 54, duration_delta = 1, velocity = 88 },
+  { order = [2084, 2090], source_note = 55, duration_delta = 1, velocity = 94 },
+  { order = [2166, 2167], source_note = 56, start_delta = 2, duration_delta = -1 },
+  { order = [2177, 2183], source_note = 57, start_delta = 1, duration_delta = -1, velocity = 96 },
+  { order = [2239, 2240], source_note = 58, start_delta = 1 },
+  { order = [2253, 2259], source_note = 59, duration_delta = 1, velocity = 100 },
+  { order = [2337, 2338], source_note = 60, start_delta = 1 },
+  { order = [2351, 2357], source_note = 61, start_delta = 1, velocity = 94 },
+  { order = [2413, 2414], source_note = 62, start_delta = 2 },
+  { order = [2427, 2433], source_note = 63, start_delta = 1, duration_delta = 1, velocity = 98 },
+  { order = [2518, 2519], source_note = 64, start_delta = 1, duration_delta = 1 },
+  { order = [2532, 2540], source_note = 65, duration_delta = 1, velocity = 102 },
+  { order = [2594, 2595], source_note = 66, start_delta = 1, velocity = 94 },
+  { order = [2604, 2614], source_note = 67, start_delta = 1, velocity = 100 },
+  { order = [2688, 2689], source_note = 68, start_delta = 2, velocity = 88 },
+  { order = [2703, 2709], source_note = 69, start_delta = 1, velocity = 98 },
+  { order = [2765, 2766], source_note = 70, start_delta = 2, duration_delta = -1, velocity = 88 },
+  { order = [2779, 2785], source_note = 71, start_delta = 3, duration_delta = -1, velocity = 94 },
+  { order = [2861, 2862], source_note = 72, start_delta = 2 },
+  { order = [2872, 2878], source_note = 73, start_delta = 2, velocity = 96 },
+  { order = [2934, 2935], source_note = 74, start_delta = 2 },
+  { order = [2948, 2954], source_note = 75, start_delta = 2, velocity = 100 },
+  { order = [3032, 3033], source_note = 76, start_delta = 3 },
+  { order = [3046, 3052], source_note = 77, start_delta = 3, duration_delta = -2, velocity = 94 },
+  { order = [3108, 3109], source_note = 78, start_delta = 3, duration_delta = 1 },
+  { order = [3122, 3128], source_note = 79, start_delta = 2, duration_delta = 1, velocity = 98 },
+  { order = [3221, 3222], source_note = 80, start_delta = 3 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 6
+channel = 3
+transpose = 0
+time_scale = [1, 1]
+start_offset = 20052
+duration_scale = [127611, 46525]
+duration_offset = 0
+velocity = 60
+on_track = 3
+off_track = 3
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [465, 3224], source_note = 1 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 7
+channel = 4
+transpose = 0
+time_scale = [738749, 269370]
+start_offset = 7
+duration_scale = [96, 35]
+duration_offset = -1
+velocity = 46
+on_track = 4
+off_track = 4
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [133, 137], source_note = 1, start_delta = -7, duration_delta = 1, velocity = 42 },
+  { order = [141, 145], source_note = 2, start_delta = -8, duration_delta = 2, velocity = 42 },
+  { order = [153, 158], source_note = 3, start_delta = -7, duration_delta = 1, velocity = 44 },
+  { order = [163, 169], source_note = 4, start_delta = -6, duration_delta = -1, velocity = 44 },
+  { order = [177, 182], source_note = 5, start_delta = -7, duration_delta = 2 },
+  { order = [185, 189], source_note = 6, start_delta = -7, velocity = 48 },
+  { order = [193, 197], source_note = 7, start_delta = -7, velocity = 48 },
+  { order = [207, 213], source_note = 8, start_delta = -6, velocity = 50 },
+  { order = [217, 221], source_note = 9, start_delta = -6, velocity = 52 },
+  { order = [225, 229], source_note = 10, start_delta = -6, velocity = 52 },
+  { order = [237, 242], source_note = 11, start_delta = -6, duration_delta = 1, velocity = 54 },
+  { order = [247, 253], source_note = 12, start_delta = -5, duration_delta = 1, velocity = 54 },
+  { order = [261, 266], source_note = 13, start_delta = -5, velocity = 56 },
+  { order = [271, 275], source_note = 14, start_delta = -7, duration_delta = 2, velocity = 58 },
+  { order = [279, 283], source_note = 15, start_delta = -7, duration_delta = 2, velocity = 58 },
+  { order = [289, 295], source_note = 16, start_delta = -5, duration_delta = 1, velocity = 60 },
+  { order = [299, 303], source_note = 17, start_delta = -6, duration_delta = 2, velocity = 60 },
+  { order = [311, 316], source_note = 18, start_delta = -5, velocity = 58 },
+  { order = [319, 323], source_note = 19, start_delta = -5, velocity = 58 },
+  { order = [329, 335], source_note = 20, start_delta = -5, duration_delta = 1, velocity = 56 },
+  { order = [343, 348], source_note = 21, start_delta = -5, duration_delta = 2, velocity = 54 },
+  { order = [351, 355], source_note = 22, start_delta = -4, duration_delta = -1, velocity = 54 },
+  { order = [363, 368], source_note = 23, start_delta = -4, duration_delta = 1, velocity = 52 },
+  { order = [373, 379], source_note = 24, start_delta = -5, duration_delta = 2, velocity = 52 },
+  { order = [383, 387], source_note = 25, start_delta = -5, duration_delta = 2, velocity = 50 },
+  { order = [395, 399], source_note = 26, start_delta = -4, duration_delta = -1, velocity = 48 },
+  { order = [403, 407], source_note = 27, start_delta = -4, duration_delta = 1, velocity = 48 },
+  { order = [413, 419], source_note = 28, start_delta = -5, duration_delta = 2 },
+  { order = [427, 432], source_note = 29, start_delta = -3, velocity = 44 },
+  { order = [437, 441], source_note = 30, start_delta = -4, duration_delta = 2, velocity = 44 },
+  { order = [445, 449], source_note = 31, start_delta = -3, duration_delta = 1, velocity = 42 },
+  { order = [455, 472], source_note = 32, start_delta = -3, velocity = 30 },
+  { order = [477, 484], source_note = 33, start_delta = -4, duration_delta = 2, velocity = 32 },
+  { order = [493, 509], source_note = 34, start_delta = -2, duration_delta = 1, velocity = 34 },
+  { order = [518, 524], source_note = 35, start_delta = -3, duration_delta = 2, velocity = 36 },
+  { order = [530, 545], source_note = 36, start_delta = -2, velocity = 38 },
+  { order = [572, 589], source_note = 37, start_delta = -2, velocity = 40 },
+  { order = [597, 604], source_note = 38, start_delta = -3, velocity = 42 },
+  { order = [609, 614], source_note = 39, start_delta = -2, duration_delta = -1, velocity = 44 },
+  { order = [625, 643], source_note = 40, start_delta = -3, duration_delta = 3 },
+  { order = [648, 655], source_note = 41, start_delta = -3, duration_delta = 2 },
+  { order = [664, 680], source_note = 42, start_delta = -1, velocity = 48 },
+  { order = [689, 695], source_note = 43, start_delta = -2, velocity = 50 },
+  { order = [701, 719], source_note = 44, start_delta = -2, duration_delta = 2, velocity = 52 },
+  { order = [749, 763], source_note = 45, start_delta = -2, duration_delta = 1, velocity = 54 },
+  { order = [773, 780], source_note = 46, start_delta = -2, duration_delta = 1, velocity = 56 },
+  { order = [785, 790], source_note = 47, start_delta = -2, duration_delta = 1, velocity = 58 },
+  { order = [797, 812], source_note = 48, start_delta = -1, velocity = 60 },
+  { order = [817, 824], source_note = 49, start_delta = -1, velocity = 60 },
+  { order = [837, 854], source_note = 50, start_delta = -2, duration_delta = 1, velocity = 58 },
+  { order = [858, 863], source_note = 51, start_delta = -1, duration_delta = 1, velocity = 56 },
+  { order = [870, 885], source_note = 52, velocity = 54 },
+  { order = [915, 928], source_note = 53, duration_delta = 1, velocity = 52 },
+  { order = [937, 944], source_note = 54, velocity = 50 },
+  { order = [953, 959], source_note = 55, velocity = 48 },
+  { order = [965, 983], source_note = 56 },
+  { order = [988, 995], source_note = 57, start_delta = -1, duration_delta = 1, velocity = 44 },
+  { order = [1008, 1024], source_note = 58, duration_delta = 1, velocity = 42 },
+  { order = [1029, 1034], source_note = 59, velocity = 40 },
+  { order = [1041, 1056], source_note = 60, start_delta = -1, duration_delta = 2, velocity = 38 },
+  { order = [1083, 1100], source_note = 61, duration_delta = 2, velocity = 36 },
+  { order = [1110, 1117], source_note = 62, velocity = 34 },
+  { order = [1122, 1128], source_note = 63, duration_delta = 2, velocity = 32 },
+  { order = [1134, 1152], source_note = 64, start_delta = 2, velocity = 30 },
+  { order = [1157, 1164], source_note = 65, start_delta = 1, velocity = 32 },
+  { order = [1173, 1189], source_note = 66, start_delta = 1, duration_delta = 2, velocity = 34 },
+  { order = [1198, 1204], source_note = 67, duration_delta = 1, velocity = 36 },
+  { order = [1210, 1228], source_note = 68, duration_delta = 2, velocity = 38 },
+  { order = [1258, 1271], source_note = 69, duration_delta = 1, velocity = 40 },
+  { order = [1280, 1287], source_note = 70, start_delta = 2, duration_delta = 1, velocity = 42 },
+  { order = [1292, 1297], source_note = 71, start_delta = 1, duration_delta = 2, velocity = 44 },
+  { order = [1308, 1326], source_note = 72, start_delta = 2, duration_delta = 1 },
+  { order = [1331, 1338], source_note = 73, start_delta = 1, duration_delta = 2 },
+  { order = [1347, 1363], source_note = 74, start_delta = 1, duration_delta = 2, velocity = 48 },
+  { order = [1372, 1378], source_note = 75, start_delta = 3, velocity = 50 },
+  { order = [1384, 1402], source_note = 76, start_delta = 2, velocity = 52 },
+  { order = [1432, 1446], source_note = 77, start_delta = 3, velocity = 54 },
+  { order = [1456, 1463], source_note = 78, start_delta = 2, velocity = 56 },
+  { order = [1468, 1473], source_note = 79, start_delta = 2, velocity = 58 },
+  { order = [1480, 1495], source_note = 80, start_delta = 3, velocity = 60 },
+  { order = [1500, 1507], source_note = 81, start_delta = 4, velocity = 60 },
+  { order = [1520, 1536], source_note = 82, start_delta = 4, velocity = 58 },
+  { order = [1541, 1546], source_note = 83, start_delta = 4, velocity = 56 },
+  { order = [1553, 1571], source_note = 84, start_delta = 3, velocity = 54 },
+  { order = [1601, 1615], source_note = 85, start_delta = 3, duration_delta = 3, velocity = 52 },
+  { order = [1623, 1630], source_note = 86, start_delta = 3, duration_delta = 1, velocity = 50 },
+  { order = [1639, 1645], source_note = 87, start_delta = 4, velocity = 48 },
+  { order = [1651, 1669], source_note = 88, start_delta = 5 },
+  { order = [1674, 1681], source_note = 89, start_delta = 3, duration_delta = 2, velocity = 44 },
+  { order = [1694, 1710], source_note = 90, start_delta = 4, duration_delta = 2, velocity = 42 },
+  { order = [1715, 1720], source_note = 91, start_delta = 3, duration_delta = 2, velocity = 40 },
+  { order = [1727, 1745], source_note = 92, start_delta = 5, velocity = 38 },
+  { order = [1772, 1789], source_note = 93, start_delta = 4, duration_delta = 2, velocity = 36 },
+  { order = [1799, 1806], source_note = 94, start_delta = 5, velocity = 34 },
+  { order = [1811, 1817], source_note = 95, start_delta = 5, duration_delta = 1, velocity = 32 },
+  { order = [1823, 1841], source_note = 96, start_delta = 4, duration_delta = 2, velocity = 30 },
+  { order = [1846, 1853], source_note = 97, start_delta = 5, duration_delta = 1, velocity = 32 },
+  { order = [1862, 1878], source_note = 98, start_delta = 6, duration_delta = 1, velocity = 34 },
+  { order = [1887, 1893], source_note = 99, start_delta = 5, duration_delta = 2, velocity = 36 },
+  { order = [1899, 1917], source_note = 100, start_delta = 5, duration_delta = 1, velocity = 38 },
+  { order = [1947, 1961], source_note = 101, start_delta = 6, velocity = 40 },
+  { order = [1969, 1976], source_note = 102, start_delta = 6, velocity = 42 },
+  { order = [1981, 1986], source_note = 103, start_delta = 6, velocity = 44 },
+  { order = [1997, 2015], source_note = 104, start_delta = 4, duration_delta = 3 },
+  { order = [2020, 2027], source_note = 105, start_delta = 6, duration_delta = -1 },
+  { order = [2036, 2052], source_note = 106, start_delta = 6, duration_delta = 1, velocity = 48 },
+  { order = [2061, 2067], source_note = 107, start_delta = 6, duration_delta = -1, velocity = 50 },
+  { order = [2073, 2091], source_note = 108, start_delta = 6, duration_delta = 1, velocity = 52 },
+  { order = [2121, 2135], source_note = 109, start_delta = 6, duration_delta = 2, velocity = 54 },
+  { order = [2145, 2152], source_note = 110, start_delta = 7, velocity = 56 },
+  { order = [2157, 2162], source_note = 111, start_delta = 7, velocity = 58 },
+  { order = [2169, 2184], source_note = 112, start_delta = 7, velocity = 60 },
+  { order = [2189, 2196], source_note = 113, start_delta = 6, duration_delta = 1, velocity = 60 },
+  { order = [2209, 2225], source_note = 114, start_delta = 6, duration_delta = 2, velocity = 58 },
+  { order = [2230, 2235], source_note = 115, start_delta = 6, duration_delta = 2, velocity = 56 },
+  { order = [2242, 2260], source_note = 116, start_delta = 8, velocity = 54 },
+  { order = [2290, 2303], source_note = 117, start_delta = 7, duration_delta = 1, velocity = 52 },
+  { order = [2312, 2319], source_note = 118, start_delta = 8, duration_delta = -1, velocity = 50 },
+  { order = [2328, 2333], source_note = 119, start_delta = 8, duration_delta = -1, velocity = 48 },
+  { order = [2340, 2358], source_note = 120, start_delta = 7, duration_delta = 2 },
+  { order = [2363, 2370], source_note = 121, start_delta = 8, duration_delta = 1, velocity = 44 },
+  { order = [2383, 2399], source_note = 122, start_delta = 7, duration_delta = 3, velocity = 42 },
+  { order = [2404, 2409], source_note = 123, start_delta = 8, duration_delta = 2, velocity = 40 },
+  { order = [2416, 2434], source_note = 124, start_delta = 8, duration_delta = 1, velocity = 38 },
+  { order = [2461, 2478], source_note = 125, start_delta = 7, duration_delta = 2, velocity = 36 },
+  { order = [2488, 2495], source_note = 126, start_delta = 7, duration_delta = 1, velocity = 34 },
+  { order = [2500, 2515], source_note = 127, start_delta = 7, duration_delta = 3, velocity = 32 },
+  { order = [2521, 2539], source_note = 128, start_delta = 10, velocity = 30 },
+  { order = [2544, 2551], source_note = 129, start_delta = 9, duration_delta = 1, velocity = 32 },
+  { order = [2560, 2576], source_note = 130, start_delta = 8, duration_delta = 1, velocity = 34 },
+  { order = [2585, 2591], source_note = 131, start_delta = 9, duration_delta = 2, velocity = 36 },
+  { order = [2597, 2615], source_note = 132, start_delta = 10, duration_delta = 1, velocity = 38 },
+  { order = [2642, 2655], source_note = 133, start_delta = 9, duration_delta = 2, velocity = 40 },
+  { order = [2664, 2671], source_note = 134, start_delta = 11, velocity = 42 },
+  { order = [2676, 2681], source_note = 135, start_delta = 9, velocity = 44 },
+  { order = [2692, 2710], source_note = 136, start_delta = 10, duration_delta = 1 },
+  { order = [2715, 2722], source_note = 137, start_delta = 10, duration_delta = -1 },
+  { order = [2731, 2747], source_note = 138, start_delta = 10, duration_delta = 1, velocity = 48 },
+  { order = [2756, 2762], source_note = 139, start_delta = 10, duration_delta = 1, velocity = 50 },
+  { order = [2768, 2786], source_note = 140, start_delta = 11, duration_delta = 1, velocity = 52 },
+  { order = [2816, 2830], source_note = 141, start_delta = 10, velocity = 54 },
+  { order = [2840, 2847], source_note = 142, start_delta = 11, velocity = 56 },
+  { order = [2852, 2857], source_note = 143, start_delta = 10, duration_delta = 2, velocity = 58 },
+  { order = [2864, 2879], source_note = 144, start_delta = 11, velocity = 60 },
+  { order = [2884, 2891], source_note = 145, start_delta = 10, duration_delta = 2, velocity = 60 },
+  { order = [2904, 2921], source_note = 146, start_delta = 12, velocity = 58 },
+  { order = [2925, 2930], source_note = 147, start_delta = 12, velocity = 56 },
+  { order = [2937, 2955], source_note = 148, start_delta = 11, duration_delta = 2, velocity = 54 },
+  { order = [2985, 2999], source_note = 149, start_delta = 11, duration_delta = 2, velocity = 52 },
+  { order = [3007, 3014], source_note = 150, start_delta = 11, duration_delta = 2, velocity = 50 },
+  { order = [3023, 3028], source_note = 151, start_delta = 12, duration_delta = 1, velocity = 48 },
+  { order = [3035, 3053], source_note = 152, start_delta = 13 },
+  { order = [3058, 3065], source_note = 153, start_delta = 12, duration_delta = 2, velocity = 44 },
+  { order = [3078, 3094], source_note = 154, start_delta = 12, duration_delta = 1, velocity = 42 },
+  { order = [3099, 3104], source_note = 155, start_delta = 12, duration_delta = 2, velocity = 40 },
+  { order = [3111, 3129], source_note = 156, start_delta = 12, duration_delta = 2, velocity = 38 },
+  { order = [3156, 3173], source_note = 157, start_delta = 13, velocity = 36 },
+  { order = [3183, 3190], source_note = 158, start_delta = 13, velocity = 34 },
+  { order = [3195, 3218], source_note = 159, start_delta = 13, velocity = 32 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 8
+channel = 5
+transpose = 0
+time_scale = [993, 362]
+start_offset = -6
+duration_scale = [181, 66]
+duration_offset = 0
+velocity = 46
+on_track = 5
+off_track = 5
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [128, 131], source_note = 1, start_delta = 4, duration_delta = 1, velocity = 40 },
+  { order = [136, 138], source_note = 2, start_delta = 5, duration_delta = -1, velocity = 42 },
+  { order = [144, 147], source_note = 3, start_delta = 5, duration_delta = 1, velocity = 42 },
+  { order = [156, 159], source_note = 4, start_delta = 6, duration_delta = -1, velocity = 44 },
+  { order = [167, 171], source_note = 5, start_delta = 5, duration_delta = -1, velocity = 44 },
+  { order = [180, 183], source_note = 6, start_delta = 5, duration_delta = -1 },
+  { order = [188, 191], source_note = 7, start_delta = 5, duration_delta = 1, velocity = 48 },
+  { order = [196, 199], source_note = 8, start_delta = 5, velocity = 48 },
+  { order = [211, 215], source_note = 9, start_delta = 5, velocity = 50 },
+  { order = [220, 222], source_note = 10, start_delta = 5, duration_delta = 1, velocity = 52 },
+  { order = [228, 231], source_note = 11, start_delta = 5, duration_delta = -1, velocity = 52 },
+  { order = [240, 243], source_note = 12, start_delta = 4, duration_delta = -1, velocity = 54 },
+  { order = [251, 255], source_note = 13, start_delta = 4, duration_delta = 1, velocity = 54 },
+  { order = [264, 267], source_note = 14, start_delta = 3, duration_delta = 1, velocity = 56 },
+  { order = [274, 277], source_note = 15, start_delta = 5, duration_delta = -1, velocity = 58 },
+  { order = [282, 285], source_note = 16, start_delta = 5, velocity = 58 },
+  { order = [293, 297], source_note = 17, start_delta = 4, velocity = 60 },
+  { order = [302, 304], source_note = 18, start_delta = 4, duration_delta = -1, velocity = 60 },
+  { order = [314, 317], source_note = 19, start_delta = 4, duration_delta = -1, velocity = 58 },
+  { order = [322, 325], source_note = 20, start_delta = 4, velocity = 58 },
+  { order = [333, 337], source_note = 21, start_delta = 3, velocity = 56 },
+  { order = [346, 349], source_note = 22, start_delta = 5, duration_delta = -1, velocity = 54 },
+  { order = [354, 357], source_note = 23, start_delta = 3, duration_delta = 1, velocity = 54 },
+  { order = [366, 369], source_note = 24, start_delta = 4, duration_delta = -1, velocity = 52 },
+  { order = [377, 381], source_note = 25, start_delta = 4, duration_delta = -1, velocity = 52 },
+  { order = [386, 388], source_note = 26, start_delta = 3, duration_delta = 1, velocity = 50 },
+  { order = [398, 401], source_note = 27, start_delta = 2, duration_delta = 2, velocity = 48 },
+  { order = [406, 409], source_note = 28, start_delta = 4, velocity = 48 },
+  { order = [417, 421], source_note = 29, start_delta = 2, duration_delta = 1 },
+  { order = [430, 433], source_note = 30, start_delta = 2, velocity = 44 },
+  { order = [440, 443], source_note = 31, start_delta = 3, duration_delta = -1, velocity = 44 },
+  { order = [448, 451], source_note = 32, start_delta = 3, velocity = 42 },
+  { order = [467, 474], source_note = 33, start_delta = 2, velocity = 30 },
+  { order = [481, 485], source_note = 34, start_delta = 3, velocity = 32 },
+  { order = [506, 511], source_note = 35, start_delta = 3, velocity = 34 },
+  { order = [522, 525], source_note = 36, start_delta = 1, duration_delta = 2, velocity = 36 },
+  { order = [541, 547], source_note = 37, start_delta = 2, duration_delta = 1, velocity = 38 },
+  { order = [585, 590], source_note = 38, start_delta = 2, duration_delta = 1, velocity = 40 },
+  { order = [601, 606], source_note = 39, start_delta = 3, duration_delta = -1, velocity = 42 },
+  { order = [613, 616], source_note = 40, start_delta = 2, duration_delta = -1, velocity = 44 },
+  { order = [639, 645], source_note = 41, start_delta = 2 },
+  { order = [652, 656], source_note = 42, start_delta = 1, duration_delta = 1 },
+  { order = [677, 682], source_note = 43, start_delta = 1, duration_delta = 1, velocity = 48 },
+  { order = [693, 696], source_note = 44, start_delta = 1, velocity = 50 },
+  { order = [715, 721], source_note = 45, start_delta = 2, duration_delta = -1, velocity = 52 },
+  { order = [759, 764], source_note = 46, start_delta = 1, duration_delta = -1, velocity = 54 },
+  { order = [777, 782], source_note = 47, start_delta = 1, velocity = 56 },
+  { order = [789, 792], source_note = 48, start_delta = 1, duration_delta = 1, velocity = 58 },
+  { order = [808, 814], source_note = 49, start_delta = 2, duration_delta = -1, velocity = 60 },
+  { order = [821, 825], source_note = 50, start_delta = 2, duration_delta = -1, velocity = 60 },
+  { order = [850, 855], source_note = 51, start_delta = 1, duration_delta = 1, velocity = 58 },
+  { order = [862, 865], source_note = 52, duration_delta = 1, velocity = 56 },
+  { order = [881, 887], source_note = 53, velocity = 54 },
+  { order = [925, 930], source_note = 54, duration_delta = 1, velocity = 52 },
+  { order = [941, 946], source_note = 55, start_delta = 2, velocity = 50 },
+  { order = [957, 960], source_note = 56, start_delta = 2, velocity = 48 },
+  { order = [979, 985], source_note = 57, start_delta = 2, duration_delta = -1 },
+  { order = [992, 996], source_note = 58, start_delta = 1, duration_delta = 1, velocity = 44 },
+  { order = [1021, 1026], source_note = 59, start_delta = 1, duration_delta = 1, velocity = 42 },
+  { order = [1033, 1036], source_note = 60, velocity = 40 },
+  { order = [1052, 1058], source_note = 61, duration_delta = 1, velocity = 38 },
+  { order = [1096, 1101], source_note = 62, start_delta = -1, velocity = 36 },
+  { order = [1114, 1119], source_note = 63, velocity = 34 },
+  { order = [1126, 1129], source_note = 64, velocity = 32 },
+  { order = [1148, 1154], source_note = 65, duration_delta = 2, velocity = 30 },
+  { order = [1161, 1165], source_note = 66, duration_delta = -1, velocity = 32 },
+  { order = [1186, 1191], source_note = 67, velocity = 34 },
+  { order = [1202, 1205], source_note = 68, duration_delta = -1, velocity = 36 },
+  { order = [1224, 1230], source_note = 69, velocity = 38 },
+  { order = [1268, 1273], source_note = 70, duration_delta = 1, velocity = 40 },
+  { order = [1284, 1289], source_note = 71, duration_delta = -1, velocity = 42 },
+  { order = [1296, 1299], source_note = 72, start_delta = 1, duration_delta = -1, velocity = 44 },
+  { order = [1322, 1328], source_note = 73 },
+  { order = [1335, 1339], source_note = 74, start_delta = -1, duration_delta = 1 },
+  { order = [1360, 1365], source_note = 75, duration_delta = -1, velocity = 48 },
+  { order = [1376, 1379], source_note = 76, start_delta = -1, duration_delta = 1, velocity = 50 },
+  { order = [1398, 1404], source_note = 77, start_delta = -1, velocity = 52 },
+  { order = [1442, 1447], source_note = 78, start_delta = -2, velocity = 54 },
+  { order = [1460, 1465], source_note = 79, start_delta = -1, velocity = 56 },
+  { order = [1472, 1475], source_note = 80, start_delta = -1, duration_delta = -1, velocity = 58 },
+  { order = [1491, 1497], source_note = 81, start_delta = -1, velocity = 60 },
+  { order = [1504, 1508], source_note = 82, start_delta = -1, velocity = 60 },
+  { order = [1533, 1538], source_note = 83, start_delta = -2, duration_delta = 2, velocity = 58 },
+  { order = [1545, 1548], source_note = 84, start_delta = -1, velocity = 56 },
+  { order = [1567, 1573], source_note = 85, start_delta = -1, duration_delta = -1, velocity = 54 },
+  { order = [1611, 1616], source_note = 86, start_delta = -2, duration_delta = -1, velocity = 52 },
+  { order = [1627, 1632], source_note = 87, start_delta = -2, velocity = 50 },
+  { order = [1643, 1646], source_note = 88, start_delta = -3, duration_delta = 1, velocity = 48 },
+  { order = [1665, 1671], source_note = 89, start_delta = -2, duration_delta = 1 },
+  { order = [1678, 1682], source_note = 90, start_delta = -1, duration_delta = -2, velocity = 44 },
+  { order = [1707, 1712], source_note = 91, start_delta = -2, velocity = 42 },
+  { order = [1719, 1722], source_note = 92, start_delta = -2, duration_delta = 1, velocity = 40 },
+  { order = [1741, 1747], source_note = 93, start_delta = -3, duration_delta = 1, velocity = 38 },
+  { order = [1785, 1790], source_note = 94, start_delta = -3, duration_delta = 1, velocity = 36 },
+  { order = [1803, 1808], source_note = 95, start_delta = -3, duration_delta = -1, velocity = 34 },
+  { order = [1815, 1818], source_note = 96, start_delta = -2, duration_delta = -2, velocity = 32 },
+  { order = [1837, 1843], source_note = 97, start_delta = -4, duration_delta = 1, velocity = 30 },
+  { order = [1850, 1854], source_note = 98, start_delta = -3, duration_delta = 1, velocity = 32 },
+  { order = [1875, 1880], source_note = 99, start_delta = -3, velocity = 34 },
+  { order = [1891, 1894], source_note = 100, start_delta = -2, duration_delta = -1, velocity = 36 },
+  { order = [1913, 1919], source_note = 101, start_delta = -2, duration_delta = -1, velocity = 38 },
+  { order = [1957, 1962], source_note = 102, start_delta = -4, duration_delta = -1, velocity = 40 },
+  { order = [1973, 1978], source_note = 103, start_delta = -3, duration_delta = -1, velocity = 42 },
+  { order = [1985, 1988], source_note = 104, start_delta = -3, velocity = 44 },
+  { order = [2011, 2017], source_note = 105, start_delta = -4, duration_delta = 1 },
+  { order = [2024, 2028], source_note = 106, start_delta = -5, duration_delta = 1 },
+  { order = [2049, 2054], source_note = 107, start_delta = -4, velocity = 48 },
+  { order = [2065, 2068], source_note = 108, start_delta = -4, duration_delta = -1, velocity = 50 },
+  { order = [2087, 2093], source_note = 109, start_delta = -4, velocity = 52 },
+  { order = [2131, 2136], source_note = 110, start_delta = -4, duration_delta = 1, velocity = 54 },
+  { order = [2149, 2154], source_note = 111, start_delta = -4, duration_delta = -1, velocity = 56 },
+  { order = [2161, 2164], source_note = 112, start_delta = -3, duration_delta = -1, velocity = 58 },
+  { order = [2180, 2186], source_note = 113, start_delta = -3, velocity = 60 },
+  { order = [2193, 2197], source_note = 114, start_delta = -4, duration_delta = 1, velocity = 60 },
+  { order = [2222, 2227], source_note = 115, start_delta = -5, velocity = 58 },
+  { order = [2234, 2237], source_note = 116, start_delta = -5, duration_delta = 2, velocity = 56 },
+  { order = [2256, 2262], source_note = 117, start_delta = -5, duration_delta = 2, velocity = 54 },
+  { order = [2300, 2305], source_note = 118, start_delta = -5, velocity = 52 },
+  { order = [2316, 2321], source_note = 119, start_delta = -5, duration_delta = 1, velocity = 50 },
+  { order = [2332, 2335], source_note = 120, start_delta = -5, velocity = 48 },
+  { order = [2354, 2360], source_note = 121, start_delta = -5 },
+  { order = [2367, 2371], source_note = 122, start_delta = -6, duration_delta = 1, velocity = 44 },
+  { order = [2396, 2401], source_note = 123, start_delta = -6, velocity = 42 },
+  { order = [2408, 2411], source_note = 124, start_delta = -5, duration_delta = -1, velocity = 40 },
+  { order = [2430, 2436], source_note = 125, start_delta = -4, duration_delta = -1, velocity = 38 },
+  { order = [2474, 2479], source_note = 126, start_delta = -5, duration_delta = -1, velocity = 36 },
+  { order = [2492, 2497], source_note = 127, start_delta = -6, duration_delta = -1, velocity = 34 },
+  { order = [2513, 2516], source_note = 128, start_delta = -6, duration_delta = 1, velocity = 32 },
+  { order = [2535, 2541], source_note = 129, start_delta = -6, duration_delta = 1, velocity = 30 },
+  { order = [2548, 2552], source_note = 130, start_delta = -5, duration_delta = -1, velocity = 32 },
+  { order = [2573, 2578], source_note = 131, start_delta = -5, duration_delta = -1, velocity = 34 },
+  { order = [2589, 2592], source_note = 132, start_delta = -5, velocity = 36 },
+  { order = [2611, 2617], source_note = 133, start_delta = -6, duration_delta = 1, velocity = 38 },
+  { order = [2652, 2657], source_note = 134, start_delta = -6, duration_delta = -1, velocity = 40 },
+  { order = [2668, 2673], source_note = 135, start_delta = -6, duration_delta = -1, velocity = 42 },
+  { order = [2680, 2683], source_note = 136, start_delta = -7, velocity = 44 },
+  { order = [2706, 2712], source_note = 137, start_delta = -6 },
+  { order = [2719, 2723], source_note = 138, start_delta = -5 },
+  { order = [2744, 2749], source_note = 139, start_delta = -7, velocity = 48 },
+  { order = [2760, 2763], source_note = 140, start_delta = -7, duration_delta = 1, velocity = 50 },
+  { order = [2782, 2788], source_note = 141, start_delta = -7, duration_delta = 2, velocity = 52 },
+  { order = [2826, 2831], source_note = 142, start_delta = -8, duration_delta = 2, velocity = 54 },
+  { order = [2844, 2849], source_note = 143, start_delta = -7, velocity = 56 },
+  { order = [2856, 2859], source_note = 144, start_delta = -6, velocity = 58 },
+  { order = [2875, 2881], source_note = 145, start_delta = -6, duration_delta = 1, velocity = 60 },
+  { order = [2888, 2892], source_note = 146, start_delta = -7, velocity = 60 },
+  { order = [2917, 2922], source_note = 147, start_delta = -8, duration_delta = 1, velocity = 58 },
+  { order = [2929, 2932], source_note = 148, start_delta = -7, velocity = 56 },
+  { order = [2951, 2957], source_note = 149, start_delta = -7, duration_delta = -1, velocity = 54 },
+  { order = [2995, 3000], source_note = 150, start_delta = -7, velocity = 52 },
+  { order = [3011, 3016], source_note = 151, start_delta = -7, duration_delta = 1, velocity = 50 },
+  { order = [3027, 3030], source_note = 152, start_delta = -9, duration_delta = 2, velocity = 48 },
+  { order = [3049, 3055], source_note = 153, start_delta = -8, duration_delta = 2 },
+  { order = [3062, 3066], source_note = 154, start_delta = -8, duration_delta = -1, velocity = 44 },
+  { order = [3091, 3096], source_note = 155, start_delta = -6, duration_delta = -2, velocity = 42 },
+  { order = [3103, 3106], source_note = 156, start_delta = -8, duration_delta = 1, velocity = 40 },
+  { order = [3125, 3131], source_note = 157, start_delta = -7, velocity = 38 },
+  { order = [3169, 3174], source_note = 158, start_delta = -8, duration_delta = 1, velocity = 36 },
+  { order = [3187, 3192], source_note = 159, start_delta = -8, duration_delta = 1, velocity = 34 },
+  { order = [3199, 3219], source_note = 160, start_delta = -8, velocity = 32 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 9
+channel = 6
+transpose = 0
+time_scale = [990, 361]
+start_offset = 8
+duration_scale = [3, 1]
+duration_offset = 0
+velocity = 106
+on_track = 6
+off_track = 6
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [469, 470], source_note = 1, start_delta = -2, duration_delta = -3 },
+  { order = [482, 483], source_note = 2, start_delta = -3, velocity = 94 },
+  { order = [487, 488], source_note = 3, start_delta = -2, velocity = 90 },
+  { order = [490, 491], source_note = 4, start_delta = -3, duration_delta = -1, velocity = 96 },
+  { order = [507, 508], source_note = 5, start_delta = -3, duration_delta = -1, velocity = 100 },
+  { order = [542, 543], source_note = 6, start_delta = -2, duration_delta = -1 },
+  { order = [586, 587], source_note = 7, start_delta = -2, velocity = 94 },
+  { order = [591, 592], source_note = 8, start_delta = -3, duration_delta = 1, velocity = 90 },
+  { order = [594, 595], source_note = 9, start_delta = -1, velocity = 96 },
+  { order = [602, 603], source_note = 10, start_delta = -3, velocity = 100 },
+  { order = [640, 641], source_note = 11, start_delta = -1, duration_delta = -1 },
+  { order = [653, 654], source_note = 12, start_delta = -2, duration_delta = -1, velocity = 94 },
+  { order = [658, 659], source_note = 13, start_delta = -2, velocity = 90 },
+  { order = [661, 662], source_note = 14, start_delta = -2, velocity = 96 },
+  { order = [678, 679], source_note = 15, start_delta = -1, velocity = 100 },
+  { order = [716, 717], source_note = 16, duration_delta = -1 },
+  { order = [760, 761], source_note = 17, start_delta = -1, velocity = 94 },
+  { order = [765, 766], source_note = 18, duration_delta = -1, velocity = 90 },
+  { order = [769, 770], source_note = 19, duration_delta = -1, velocity = 96 },
+  { order = [778, 779], source_note = 20, velocity = 100 },
+  { order = [809, 810], source_note = 21, start_delta = -1, duration_delta = -1 },
+  { order = [822, 823], source_note = 22, start_delta = -1, duration_delta = 1, velocity = 94 },
+  { order = [828, 829], source_note = 23, duration_delta = -1, velocity = 90 },
+  { order = [833, 834], source_note = 24, duration_delta = -1, velocity = 96 },
+  { order = [851, 852], source_note = 25, velocity = 100 },
+  { order = [882, 883], source_note = 26 },
+  { order = [926, 927], source_note = 27, velocity = 94 },
+  { order = [931, 932], source_note = 28, velocity = 90 },
+  { order = [934, 935], source_note = 29, velocity = 96 },
+  { order = [942, 943], source_note = 30, velocity = 100 },
+  { order = [980, 981], source_note = 31, duration_delta = 1 },
+  { order = [993, 994], source_note = 32, start_delta = 2, velocity = 94 },
+  { order = [999, 1000], source_note = 33, start_delta = 2, duration_delta = -1, velocity = 90 },
+  { order = [1003, 1005], source_note = 34, start_delta = 1, velocity = 96 },
+  { order = [1022, 1023], source_note = 35, start_delta = 1, velocity = 100 },
+  { order = [1053, 1054], source_note = 36, start_delta = 1, duration_delta = 1 },
+  { order = [1097, 1098], source_note = 37, start_delta = 2, velocity = 94 },
+  { order = [1102, 1103], source_note = 38, start_delta = 3, duration_delta = -1, velocity = 90 },
+  { order = [1106, 1107], source_note = 39, start_delta = 3, velocity = 96 },
+  { order = [1115, 1116], source_note = 40, start_delta = 3, velocity = 100 },
+  { order = [1149, 1150], source_note = 41, start_delta = 2 },
+  { order = [1162, 1163], source_note = 42, start_delta = 3, velocity = 94 },
+  { order = [1167, 1168], source_note = 43, start_delta = 3, velocity = 90 },
+  { order = [1170, 1171], source_note = 44, start_delta = 3, velocity = 96 },
+  { order = [1187, 1188], source_note = 45, start_delta = 4, duration_delta = -3, velocity = 100 },
+  { order = [1225, 1226], source_note = 46, start_delta = 4 },
+  { order = [1269, 1270], source_note = 47, start_delta = 3, velocity = 94 },
+  { order = [1274, 1275], source_note = 48, start_delta = 4, velocity = 90 },
+  { order = [1277, 1278], source_note = 49, start_delta = 3, duration_delta = -1, velocity = 96 },
+  { order = [1285, 1286], source_note = 50, start_delta = 3, velocity = 100 },
+  { order = [1323, 1324], source_note = 51, start_delta = 3, duration_delta = -1 },
+  { order = [1336, 1337], source_note = 52, start_delta = 4, velocity = 94 },
+  { order = [1341, 1342], source_note = 53, start_delta = 4, velocity = 90 },
+  { order = [1344, 1345], source_note = 54, start_delta = 5, duration_delta = -1, velocity = 96 },
+  { order = [1361, 1362], source_note = 55, start_delta = 4, velocity = 100 },
+  { order = [1399, 1400], source_note = 56, start_delta = 5, duration_delta = -2 },
+  { order = [1443, 1444], source_note = 57, start_delta = 6, duration_delta = -2, velocity = 94 },
+  { order = [1448, 1449], source_note = 58, start_delta = 5, duration_delta = -2, velocity = 90 },
+  { order = [1452, 1453], source_note = 59, start_delta = 4, duration_delta = 1, velocity = 96 },
+  { order = [1461, 1462], source_note = 60, start_delta = 4, velocity = 100 },
+  { order = [1492, 1493], source_note = 61, start_delta = 5, duration_delta = -1 },
+  { order = [1505, 1506], source_note = 62, start_delta = 5, velocity = 94 },
+  { order = [1511, 1512], source_note = 63, start_delta = 5, duration_delta = -1, velocity = 90 },
+  { order = [1516, 1517], source_note = 64, start_delta = 6, duration_delta = -2, velocity = 96 },
+  { order = [1534, 1535], source_note = 65, start_delta = 5, velocity = 100 },
+  { order = [1568, 1569], source_note = 66, start_delta = 7, duration_delta = -3 },
+  { order = [1612, 1613], source_note = 67, start_delta = 7, duration_delta = -2, velocity = 94 },
+  { order = [1617, 1618], source_note = 68, start_delta = 7, duration_delta = -3, velocity = 90 },
+  { order = [1620, 1621], source_note = 69, start_delta = 7, duration_delta = -1, velocity = 96 },
+  { order = [1628, 1629], source_note = 70, start_delta = 7, velocity = 100 },
+  { order = [1666, 1667], source_note = 71, start_delta = 6 },
+  { order = [1679, 1680], source_note = 72, start_delta = 7, duration_delta = -2, velocity = 94 },
+  { order = [1685, 1686], source_note = 73, start_delta = 8, duration_delta = -2, velocity = 90 },
+  { order = [1690, 1691], source_note = 74, start_delta = 7, velocity = 96 },
+  { order = [1708, 1709], source_note = 75, start_delta = 7, velocity = 100 },
+  { order = [1742, 1743], source_note = 76, start_delta = 7 },
+  { order = [1786, 1787], source_note = 77, start_delta = 8, velocity = 94 },
+  { order = [1791, 1792], source_note = 78, start_delta = 8, duration_delta = -2, velocity = 90 },
+  { order = [1795, 1796], source_note = 79, start_delta = 7, velocity = 96 },
+  { order = [1804, 1805], source_note = 80, start_delta = 8, duration_delta = -2, velocity = 100 },
+  { order = [1838, 1839], source_note = 81, start_delta = 8 },
+  { order = [1851, 1852], source_note = 82, start_delta = 8, velocity = 94 },
+  { order = [1856, 1857], source_note = 83, start_delta = 9, duration_delta = -1, velocity = 90 },
+  { order = [1859, 1860], source_note = 84, start_delta = 8, duration_delta = -1, velocity = 96 },
+  { order = [1876, 1877], source_note = 85, start_delta = 8, duration_delta = -1, velocity = 100 },
+  { order = [1914, 1915], source_note = 86, start_delta = 7 },
+  { order = [1958, 1959], source_note = 87, start_delta = 8, velocity = 94 },
+  { order = [1963, 1964], source_note = 88, start_delta = 9, velocity = 90 },
+  { order = [1966, 1967], source_note = 89, start_delta = 9, velocity = 96 },
+  { order = [1974, 1975], source_note = 90, start_delta = 9, velocity = 100 },
+  { order = [2012, 2013], source_note = 91, start_delta = 9, duration_delta = -1 },
+  { order = [2025, 2026], source_note = 92, start_delta = 9, velocity = 94 },
+  { order = [2030, 2031], source_note = 93, start_delta = 9, duration_delta = 1, velocity = 90 },
+  { order = [2033, 2034], source_note = 94, start_delta = 10, velocity = 96 },
+  { order = [2050, 2051], source_note = 95, start_delta = 10, velocity = 100 },
+  { order = [2088, 2089], source_note = 96, start_delta = 11, duration_delta = -1 },
+  { order = [2132, 2133], source_note = 97, start_delta = 10, velocity = 94 },
+  { order = [2137, 2138], source_note = 98, start_delta = 10, duration_delta = -1, velocity = 90 },
+  { order = [2141, 2142], source_note = 99, start_delta = 10, velocity = 96 },
+  { order = [2150, 2151], source_note = 100, start_delta = 11, duration_delta = -1, velocity = 100 },
+  { order = [2181, 2182], source_note = 101, start_delta = 10 },
+  { order = [2194, 2195], source_note = 102, start_delta = 11, velocity = 94 },
+  { order = [2200, 2201], source_note = 103, start_delta = 11, velocity = 90 },
+  { order = [2205, 2206], source_note = 104, start_delta = 11, velocity = 96 },
+  { order = [2223, 2224], source_note = 105, start_delta = 11, velocity = 100 },
+  { order = [2257, 2258], source_note = 106, start_delta = 11 },
+  { order = [2301, 2302], source_note = 107, start_delta = 11, velocity = 94 },
+  { order = [2306, 2307], source_note = 108, start_delta = 11, duration_delta = -1, velocity = 90 },
+  { order = [2309, 2310], source_note = 109, start_delta = 12, duration_delta = -2, velocity = 96 },
+  { order = [2317, 2318], source_note = 110, start_delta = 12, velocity = 100 },
+  { order = [2355, 2356], source_note = 111, start_delta = 12 },
+  { order = [2368, 2369], source_note = 112, start_delta = 12, velocity = 94 },
+  { order = [2374, 2375], source_note = 113, start_delta = 12, duration_delta = -1, velocity = 90 },
+  { order = [2379, 2380], source_note = 114, start_delta = 12, velocity = 96 },
+  { order = [2397, 2398], source_note = 115, start_delta = 12, duration_delta = -1, velocity = 100 },
+  { order = [2431, 2432], source_note = 116, start_delta = 12 },
+  { order = [2475, 2476], source_note = 117, start_delta = 14, velocity = 94 },
+  { order = [2480, 2481], source_note = 118, start_delta = 13, velocity = 90 },
+  { order = [2484, 2485], source_note = 119, start_delta = 14, duration_delta = -1, velocity = 96 },
+  { order = [2493, 2494], source_note = 120, start_delta = 13, duration_delta = -1, velocity = 100 },
+  { order = [2536, 2537], source_note = 121, start_delta = 14 },
+  { order = [2549, 2550], source_note = 122, start_delta = 15, duration_delta = -2, velocity = 94 },
+  { order = [2554, 2555], source_note = 123, start_delta = 14, duration_delta = -2, velocity = 90 },
+  { order = [2557, 2558], source_note = 124, start_delta = 15, duration_delta = -3, velocity = 96 },
+  { order = [2574, 2575], source_note = 125, start_delta = 13, duration_delta = 1, velocity = 100 },
+  { order = [2612, 2613], source_note = 126, start_delta = 13 },
+  { order = [2653, 2654], source_note = 127, start_delta = 15, duration_delta = -1, velocity = 94 },
+  { order = [2658, 2659], source_note = 128, start_delta = 15, duration_delta = -1, velocity = 90 },
+  { order = [2661, 2662], source_note = 129, start_delta = 14, velocity = 96 },
+  { order = [2669, 2670], source_note = 130, start_delta = 15, duration_delta = -1, velocity = 100 },
+  { order = [2707, 2708], source_note = 131, start_delta = 16, duration_delta = -3 },
+  { order = [2720, 2721], source_note = 132, start_delta = 15, velocity = 94 },
+  { order = [2725, 2726], source_note = 133, start_delta = 15, velocity = 90 },
+  { order = [2728, 2729], source_note = 134, start_delta = 16, duration_delta = -1, velocity = 96 },
+  { order = [2745, 2746], source_note = 135, start_delta = 15, velocity = 100 },
+  { order = [2783, 2784], source_note = 136, start_delta = 15, duration_delta = -1 },
+  { order = [2827, 2828], source_note = 137, start_delta = 15, velocity = 94 },
+  { order = [2832, 2833], source_note = 138, start_delta = 16, velocity = 90 },
+  { order = [2836, 2837], source_note = 139, start_delta = 17, duration_delta = -3, velocity = 96 },
+  { order = [2845, 2846], source_note = 140, start_delta = 16, velocity = 100 },
+  { order = [2876, 2877], source_note = 141, start_delta = 17, duration_delta = -1 },
+  { order = [2889, 2890], source_note = 142, start_delta = 16, velocity = 94 },
+  { order = [2894, 2896], source_note = 143, start_delta = 15, velocity = 90 },
+  { order = [2900, 2901], source_note = 144, start_delta = 16, velocity = 96 },
+  { order = [2918, 2919], source_note = 145, start_delta = 17, velocity = 100 },
+  { order = [2952, 2953], source_note = 146, start_delta = 17 },
+  { order = [2996, 2997], source_note = 147, start_delta = 18, duration_delta = -2, velocity = 94 },
+  { order = [3001, 3002], source_note = 148, start_delta = 17, velocity = 90 },
+  { order = [3004, 3005], source_note = 149, start_delta = 18, duration_delta = -1, velocity = 96 },
+  { order = [3012, 3013], source_note = 150, start_delta = 17, velocity = 100 },
+  { order = [3050, 3051], source_note = 151, start_delta = 17 },
+  { order = [3063, 3064], source_note = 152, start_delta = 18, duration_delta = -2, velocity = 94 },
+  { order = [3069, 3070], source_note = 153, start_delta = 17, velocity = 90 },
+  { order = [3074, 3075], source_note = 154, start_delta = 19, duration_delta = -1, velocity = 96 },
+  { order = [3092, 3093], source_note = 155, start_delta = 17, duration_delta = 1, velocity = 100 },
+  { order = [3126, 3127], source_note = 156, start_delta = 18 },
+  { order = [3170, 3171], source_note = 157, start_delta = 19, velocity = 94 },
+  { order = [3175, 3176], source_note = 158, start_delta = 18, velocity = 90 },
+  { order = [3179, 3180], source_note = 159, start_delta = 19, duration_delta = -1, velocity = 96 },
+  { order = [3188, 3189], source_note = 160, start_delta = 19, duration_delta = -1, velocity = 100 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 2
+channel = 8
+transpose = 12
+time_scale = [122069, 44516]
+start_offset = 30
+duration_scale = [984, 361]
+duration_offset = 3
+velocity = 80
+on_track = 8
+off_track = 8
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [460, 495], source_note = 1, start_delta = -3, duration_delta = -10 },
+  { order = [502, 532], source_note = 2, start_delta = -11 },
+  { order = [536, 549], source_note = 3, start_delta = -17, duration_delta = -6 },
+  { order = [555, 563], source_note = 4, start_delta = -12, duration_delta = -4 },
+  { order = [567, 574], source_note = 5, start_delta = -10, duration_delta = -12 },
+  { order = [581, 627], source_note = 6, start_delta = -11, duration_delta = 5 },
+  { order = [633, 666], source_note = 7, start_delta = -9, duration_delta = -2 },
+  { order = [673, 703], source_note = 8, start_delta = -10 },
+  { order = [709, 723], source_note = 9, start_delta = -7, duration_delta = -13 },
+  { order = [729, 735], source_note = 10, start_delta = -7, duration_delta = -13 },
+  { order = [741, 746], source_note = 11, start_delta = -11, duration_delta = -10 },
+  { order = [755, 799], source_note = 12, start_delta = -7, duration_delta = 4 },
+  { order = [803, 841], source_note = 13, start_delta = -8, duration_delta = -1 },
+  { order = [846, 873], source_note = 14, start_delta = -6, duration_delta = 2 },
+  { order = [876, 889], source_note = 15, start_delta = -8, duration_delta = -10 },
+  { order = [895, 901], source_note = 16, start_delta = -9, duration_delta = -9 },
+  { order = [907, 912], source_note = 17, start_delta = -9, duration_delta = -8 },
+  { order = [920, 967], source_note = 18, start_delta = -11, duration_delta = 10 },
+  { order = [973, 1010], source_note = 19, start_delta = -8 },
+  { order = [1017, 1044], source_note = 20, start_delta = -4, duration_delta = 1 },
+  { order = [1047, 1062], source_note = 21, start_delta = -4, duration_delta = -9 },
+  { order = [1066, 1072], source_note = 22, start_delta = -3, duration_delta = -13 },
+  { order = [1078, 1085], source_note = 23, start_delta = -5, duration_delta = -5 },
+  { order = [1091, 1136], source_note = 24, start_delta = -3, duration_delta = 5 },
+  { order = [1142, 1175], source_note = 25, start_delta = -3, duration_delta = -1 },
+  { order = [1182, 1212], source_note = 26, start_delta = -5, duration_delta = 1 },
+  { order = [1218, 1232], source_note = 27, start_delta = -11, duration_delta = -3 },
+  { order = [1238, 1244], source_note = 28, start_delta = -5, duration_delta = -4 },
+  { order = [1250, 1255], source_note = 29, start_delta = -5, duration_delta = -9 },
+  { order = [1264, 1310], source_note = 30, start_delta = -2, duration_delta = 5 },
+  { order = [1316, 1349], source_note = 31, start_delta = -4, duration_delta = 1 },
+  { order = [1356, 1386], source_note = 32, duration_delta = -1 },
+  { order = [1392, 1406], source_note = 33, start_delta = -1, duration_delta = -6 },
+  { order = [1412, 1418], source_note = 34, duration_delta = -11 },
+  { order = [1424, 1429], source_note = 35, start_delta = -2, duration_delta = -10 },
+  { order = [1438, 1482], source_note = 36, duration_delta = 6 },
+  { order = [1486, 1522], source_note = 37, start_delta = -2 },
+  { order = [1529, 1555], source_note = 38 },
+  { order = [1561, 1575], source_note = 39, start_delta = -1, duration_delta = -9 },
+  { order = [1581, 1587], source_note = 40, duration_delta = -10 },
+  { order = [1593, 1598], source_note = 41, start_delta = 4, duration_delta = -13 },
+  { order = [1607, 1653], source_note = 42, duration_delta = 6 },
+  { order = [1659, 1696], source_note = 43, start_delta = -5, duration_delta = 6 },
+  { order = [1703, 1731], source_note = 44, start_delta = 1, duration_delta = 6 },
+  { order = [1735, 1749], source_note = 45, start_delta = 4, duration_delta = -12 },
+  { order = [1755, 1761], source_note = 46, start_delta = 1, duration_delta = -3 },
+  { order = [1767, 1774], source_note = 47, start_delta = 5, duration_delta = -11 },
+  { order = [1781, 1825], source_note = 48, start_delta = 2, duration_delta = 7 },
+  { order = [1831, 1864], source_note = 49, start_delta = 6, duration_delta = -1 },
+  { order = [1871, 1901], source_note = 50, start_delta = 6 },
+  { order = [1907, 1921], source_note = 51, duration_delta = -5 },
+  { order = [1927, 1933], source_note = 52, start_delta = 1, duration_delta = -7 },
+  { order = [1939, 1944], source_note = 53, start_delta = -4, duration_delta = 4 },
+  { order = [1953, 1999], source_note = 54, start_delta = 8, duration_delta = 3 },
+  { order = [2005, 2038], source_note = 55, start_delta = 4, duration_delta = 2 },
+  { order = [2045, 2077], source_note = 56, start_delta = 8, duration_delta = -1 },
+  { order = [2081, 2095], source_note = 57, start_delta = 9, duration_delta = -8 },
+  { order = [2101, 2107], source_note = 58, start_delta = -2, duration_delta = -2 },
+  { order = [2113, 2118], source_note = 59, start_delta = 6, duration_delta = -2 },
+  { order = [2127, 2171], source_note = 60, start_delta = 9, duration_delta = 4 },
+  { order = [2175, 2211], source_note = 61, start_delta = 8 },
+  { order = [2218, 2244], source_note = 62, start_delta = 10, duration_delta = -2 },
+  { order = [2250, 2264], source_note = 63, start_delta = 9, duration_delta = -11 },
+  { order = [2270, 2276], source_note = 64, start_delta = 7, duration_delta = -8 },
+  { order = [2282, 2287], source_note = 65, start_delta = 11, duration_delta = -12 },
+  { order = [2295, 2342], source_note = 66, start_delta = 11, duration_delta = 4 },
+  { order = [2348, 2385], source_note = 67, start_delta = 13, duration_delta = -2 },
+  { order = [2392, 2418], source_note = 68, start_delta = 12, duration_delta = -1 },
+  { order = [2424, 2440], source_note = 69, start_delta = 8, duration_delta = -4 },
+  { order = [2444, 2450], source_note = 70, start_delta = 14, duration_delta = -13 },
+  { order = [2456, 2463], source_note = 71, start_delta = 11, duration_delta = -9 },
+  { order = [2469, 2502], source_note = 72, start_delta = 14, duration_delta = -3 },
+  { order = [2509, 2523], source_note = 73, start_delta = 10, duration_delta = -5 },
+  { order = [2529, 2562], source_note = 74, start_delta = 12 },
+  { order = [2569, 2599], source_note = 75, start_delta = 15, duration_delta = -3 },
+  { order = [2606, 2619], source_note = 76, start_delta = 9, duration_delta = -6 },
+  { order = [2623, 2628], source_note = 77, start_delta = 15, duration_delta = -6 },
+  { order = [2634, 2639], source_note = 78, start_delta = 15, duration_delta = -11 },
+  { order = [2648, 2694], source_note = 79, start_delta = 12, duration_delta = 8 },
+  { order = [2700, 2733], source_note = 80, start_delta = 15 },
+  { order = [2740, 2770], source_note = 81, start_delta = 14, duration_delta = 2 },
+  { order = [2776, 2790], source_note = 82, start_delta = 15, duration_delta = -4 },
+  { order = [2796, 2802], source_note = 83, start_delta = 16, duration_delta = -11 },
+  { order = [2808, 2813], source_note = 84, start_delta = 17, duration_delta = -12 },
+  { order = [2822, 2867], source_note = 85, start_delta = 16, duration_delta = 11 },
+  { order = [2870, 2906], source_note = 86, start_delta = 19, duration_delta = -2 },
+  { order = [2913, 2941], source_note = 87, start_delta = 18, duration_delta = 5 },
+  { order = [2945, 2959], source_note = 88, start_delta = 16, duration_delta = -9 },
+  { order = [2965, 2971], source_note = 89, start_delta = 17, duration_delta = -10 },
+  { order = [2977, 2982], source_note = 90, start_delta = 19, duration_delta = -12 },
+  { order = [2991, 3037], source_note = 91, start_delta = 19, duration_delta = 3 },
+  { order = [3043, 3080], source_note = 92, start_delta = 14, duration_delta = 4 },
+  { order = [3087, 3113], source_note = 93, start_delta = 21, duration_delta = -2 },
+  { order = [3119, 3133], source_note = 94, start_delta = 16, duration_delta = -7 },
+  { order = [3139, 3145], source_note = 95, start_delta = 22, duration_delta = -11 },
+  { order = [3151, 3158], source_note = 96, start_delta = 18, duration_delta = -5 },
+  { order = [3164, 3225], source_note = 97, start_delta = 16, duration_delta = 16 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 2
+channel = 9
+transpose = 12
+time_scale = [122069, 44516]
+start_offset = 30
+duration_scale = [984, 361]
+duration_offset = 3
+velocity = 80
+on_track = 9
+off_track = 9
+off_velocity = 0
+off_status = 128
+notes = [
+  { order = [462, 496], source_note = 1, start_delta = -3, duration_delta = -10 },
+  { order = [504, 533], source_note = 2, start_delta = -11 },
+  { order = [537, 550], source_note = 3, start_delta = -17, duration_delta = -6 },
+  { order = [557, 564], source_note = 4, start_delta = -12, duration_delta = -4 },
+  { order = [569, 575], source_note = 5, start_delta = -10, duration_delta = -12 },
+  { order = [583, 628], source_note = 6, start_delta = -11, duration_delta = 5 },
+  { order = [635, 667], source_note = 7, start_delta = -9, duration_delta = -2 },
+  { order = [675, 704], source_note = 8, start_delta = -10 },
+  { order = [711, 724], source_note = 9, start_delta = -7, duration_delta = -13 },
+  { order = [731, 736], source_note = 10, start_delta = -7, duration_delta = -13 },
+  { order = [743, 747], source_note = 11, start_delta = -11, duration_delta = -10 },
+  { order = [757, 800], source_note = 12, start_delta = -7, duration_delta = 4 },
+  { order = [804, 842], source_note = 13, start_delta = -8, duration_delta = -1 },
+  { order = [848, 874], source_note = 14, start_delta = -6, duration_delta = 2 },
+  { order = [877, 890], source_note = 15, start_delta = -8, duration_delta = -10 },
+  { order = [897, 902], source_note = 16, start_delta = -9, duration_delta = -9 },
+  { order = [909, 913], source_note = 17, start_delta = -9, duration_delta = -8 },
+  { order = [922, 968], source_note = 18, start_delta = -11, duration_delta = 10 },
+  { order = [975, 1011], source_note = 19, start_delta = -8 },
+  { order = [1019, 1045], source_note = 20, start_delta = -4, duration_delta = 1 },
+  { order = [1048, 1063], source_note = 21, start_delta = -4, duration_delta = -9 },
+  { order = [1068, 1073], source_note = 22, start_delta = -3, duration_delta = -13 },
+  { order = [1080, 1086], source_note = 23, start_delta = -5, duration_delta = -5 },
+  { order = [1093, 1137], source_note = 24, start_delta = -3, duration_delta = 5 },
+  { order = [1144, 1176], source_note = 25, start_delta = -3, duration_delta = -1 },
+  { order = [1184, 1213], source_note = 26, start_delta = -5, duration_delta = 1 },
+  { order = [1220, 1233], source_note = 27, start_delta = -11, duration_delta = -3 },
+  { order = [1240, 1245], source_note = 28, start_delta = -5, duration_delta = -4 },
+  { order = [1252, 1256], source_note = 29, start_delta = -5, duration_delta = -9 },
+  { order = [1266, 1311], source_note = 30, start_delta = -2, duration_delta = 5 },
+  { order = [1318, 1350], source_note = 31, start_delta = -4, duration_delta = 1 },
+  { order = [1358, 1387], source_note = 32, duration_delta = -1 },
+  { order = [1394, 1407], source_note = 33, start_delta = -1, duration_delta = -6 },
+  { order = [1414, 1419], source_note = 34, duration_delta = -11 },
+  { order = [1426, 1430], source_note = 35, start_delta = -2, duration_delta = -10 },
+  { order = [1440, 1483], source_note = 36, duration_delta = 6 },
+  { order = [1487, 1523], source_note = 37, start_delta = -2 },
+  { order = [1531, 1556], source_note = 38 },
+  { order = [1563, 1576], source_note = 39, start_delta = -1, duration_delta = -9 },
+  { order = [1583, 1588], source_note = 40, duration_delta = -10 },
+  { order = [1595, 1599], source_note = 41, start_delta = 4, duration_delta = -13 },
+  { order = [1609, 1654], source_note = 42, duration_delta = 6 },
+  { order = [1661, 1697], source_note = 43, start_delta = -5, duration_delta = 6 },
+  { order = [1705, 1732], source_note = 44, start_delta = 1, duration_delta = 6 },
+  { order = [1737, 1750], source_note = 45, start_delta = 4, duration_delta = -12 },
+  { order = [1757, 1762], source_note = 46, start_delta = 1, duration_delta = -3 },
+  { order = [1769, 1775], source_note = 47, start_delta = 5, duration_delta = -11 },
+  { order = [1783, 1826], source_note = 48, start_delta = 2, duration_delta = 7 },
+  { order = [1833, 1865], source_note = 49, start_delta = 6, duration_delta = -1 },
+  { order = [1873, 1902], source_note = 50, start_delta = 6 },
+  { order = [1909, 1922], source_note = 51, duration_delta = -5 },
+  { order = [1929, 1934], source_note = 52, start_delta = 1, duration_delta = -7 },
+  { order = [1941, 1945], source_note = 53, start_delta = -4, duration_delta = 4 },
+  { order = [1955, 2000], source_note = 54, start_delta = 8, duration_delta = 3 },
+  { order = [2007, 2039], source_note = 55, start_delta = 4, duration_delta = 2 },
+  { order = [2047, 2078], source_note = 56, start_delta = 8, duration_delta = -1 },
+  { order = [2083, 2096], source_note = 57, start_delta = 9, duration_delta = -8 },
+  { order = [2103, 2108], source_note = 58, start_delta = -2, duration_delta = -2 },
+  { order = [2115, 2119], source_note = 59, start_delta = 6, duration_delta = -2 },
+  { order = [2129, 2172], source_note = 60, start_delta = 9, duration_delta = 4 },
+  { order = [2176, 2212], source_note = 61, start_delta = 8 },
+  { order = [2220, 2245], source_note = 62, start_delta = 10, duration_delta = -2 },
+  { order = [2252, 2265], source_note = 63, start_delta = 9, duration_delta = -11 },
+  { order = [2272, 2277], source_note = 64, start_delta = 7, duration_delta = -8 },
+  { order = [2284, 2288], source_note = 65, start_delta = 11, duration_delta = -12 },
+  { order = [2297, 2343], source_note = 66, start_delta = 11, duration_delta = 4 },
+  { order = [2350, 2386], source_note = 67, start_delta = 13, duration_delta = -2 },
+  { order = [2394, 2419], source_note = 68, start_delta = 12, duration_delta = -1 },
+  { order = [2426, 2441], source_note = 69, start_delta = 8, duration_delta = -4 },
+  { order = [2446, 2451], source_note = 70, start_delta = 14, duration_delta = -13 },
+  { order = [2458, 2464], source_note = 71, start_delta = 11, duration_delta = -9 },
+  { order = [2471, 2503], source_note = 72, start_delta = 14, duration_delta = -3 },
+  { order = [2511, 2524], source_note = 73, start_delta = 10, duration_delta = -5 },
+  { order = [2531, 2563], source_note = 74, start_delta = 12 },
+  { order = [2571, 2600], source_note = 75, start_delta = 15, duration_delta = -3 },
+  { order = [2608, 2620], source_note = 76, start_delta = 9, duration_delta = -6 },
+  { order = [2624, 2629], source_note = 77, start_delta = 15, duration_delta = -6 },
+  { order = [2636, 2640], source_note = 78, start_delta = 15, duration_delta = -11 },
+  { order = [2650, 2695], source_note = 79, start_delta = 12, duration_delta = 8 },
+  { order = [2702, 2734], source_note = 80, start_delta = 15 },
+  { order = [2742, 2771], source_note = 81, start_delta = 14, duration_delta = 2 },
+  { order = [2778, 2791], source_note = 82, start_delta = 15, duration_delta = -4 },
+  { order = [2798, 2803], source_note = 83, start_delta = 16, duration_delta = -11 },
+  { order = [2810, 2814], source_note = 84, start_delta = 17, duration_delta = -12 },
+  { order = [2824, 2868], source_note = 85, start_delta = 16, duration_delta = 11 },
+  { order = [2871, 2907], source_note = 86, start_delta = 19, duration_delta = -2 },
+  { order = [2915, 2942], source_note = 87, start_delta = 18, duration_delta = 5 },
+  { order = [2947, 2960], source_note = 88, start_delta = 16, duration_delta = -9 },
+  { order = [2967, 2972], source_note = 89, start_delta = 17, duration_delta = -10 },
+  { order = [2979, 2983], source_note = 90, start_delta = 19, duration_delta = -12 },
+  { order = [2993, 3038], source_note = 91, start_delta = 19, duration_delta = 3 },
+  { order = [3045, 3081], source_note = 92, start_delta = 14, duration_delta = 4 },
+  { order = [3089, 3114], source_note = 93, start_delta = 21, duration_delta = -2 },
+  { order = [3121, 3134], source_note = 94, start_delta = 16, duration_delta = -7 },
+  { order = [3141, 3146], source_note = 95, start_delta = 22, duration_delta = -11 },
+  { order = [3153, 3159], source_note = 96, start_delta = 18, duration_delta = -5 },
+  { order = [3166, 3226], source_note = 97, start_delta = 16, duration_delta = 16 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 3
+channel = 10
+transpose = 0
+time_scale = [979, 357]
+start_offset = 15
+duration_scale = [140, 51]
+duration_offset = 0
+velocity = 96
+on_track = 7
+off_track = 7
+off_velocity = 0
+off_status = 128
+drum_key = 38
+notes = [
+  { order = [124, 129], source_note = 1, start_delta = -17 },
+  { order = [134, 139], source_note = 2, start_delta = -17 },
+  { order = [142, 146], source_note = 3, start_delta = -17, duration_delta = 1, velocity = 90 },
+  { order = [148, 149], source_note = 4, start_delta = -17, velocity = 90 },
+  { order = [150, 151], source_note = 5, start_delta = -18, duration_delta = 1, velocity = 88 },
+  { order = [154, 157], source_note = 6, start_delta = -16, duration_delta = -2, velocity = 92 },
+  { order = [164, 170], source_note = 7, start_delta = -16, duration_delta = -1, velocity = 92 },
+  { order = [172, 173], source_note = 8, start_delta = -17, velocity = 84 },
+  { order = [174, 175], source_note = 9, start_delta = -17, velocity = 88 },
+  { order = [178, 181], source_note = 10, start_delta = -16, velocity = 98 },
+  { order = [186, 190], source_note = 11, start_delta = -15, duration_delta = -1, velocity = 92 },
+  { order = [194, 198], source_note = 12, start_delta = -15, duration_delta = -2 },
+  { order = [200, 201], source_note = 13, start_delta = -16, duration_delta = 2, velocity = 90 },
+  { order = [202, 205], source_note = 14, start_delta = -16, duration_delta = -1, velocity = 88 },
+  { order = [208, 214], source_note = 15, start_delta = -15 },
+  { order = [218, 223], source_note = 16, start_delta = -16, velocity = 94 },
+  { order = [226, 230], source_note = 17, start_delta = -15, velocity = 92 },
+  { order = [232, 233], source_note = 18, start_delta = -14, velocity = 88 },
+  { order = [234, 235], source_note = 19, start_delta = -15, velocity = 88 },
+  { order = [238, 241], source_note = 20, start_delta = -15, duration_delta = -1 },
+  { order = [248, 254], source_note = 21, start_delta = -14, duration_delta = -1, velocity = 90 },
+  { order = [256, 257], source_note = 22, start_delta = -15, duration_delta = 1, velocity = 88 },
+  { order = [258, 259], source_note = 23, start_delta = -16, duration_delta = 1, velocity = 90 },
+  { order = [262, 265], source_note = 24, start_delta = -14, velocity = 92 },
+  { order = [268, 269], source_note = 25, start_delta = -14, duration_delta = -2, velocity = 94 },
+  { order = [272, 276], source_note = 26, start_delta = -15 },
+  { order = [280, 284], source_note = 27, start_delta = -15, velocity = 94 },
+  { order = [290, 296], source_note = 28, start_delta = -13, duration_delta = -1, velocity = 98 },
+  { order = [300, 305], source_note = 29, start_delta = -14, duration_delta = -1 },
+  { order = [306, 307], source_note = 30, start_delta = -13, velocity = 90 },
+  { order = [308, 309], source_note = 31, start_delta = -13, velocity = 88 },
+  { order = [312, 315], source_note = 32, start_delta = -14, velocity = 100 },
+  { order = [320, 324], source_note = 33, start_delta = -14, velocity = 94 },
+  { order = [330, 336], source_note = 34, start_delta = -13, velocity = 92 },
+  { order = [338, 339], source_note = 35, start_delta = -14, duration_delta = 1, velocity = 84 },
+  { order = [340, 341], source_note = 36, start_delta = -13, velocity = 94 },
+  { order = [344, 347], source_note = 37, start_delta = -13 },
+  { order = [352, 356], source_note = 38, start_delta = -12, duration_delta = -1 },
+  { order = [358, 359], source_note = 39, start_delta = -14, duration_delta = 1, velocity = 90 },
+  { order = [360, 361], source_note = 40, start_delta = -13, duration_delta = 1, velocity = 90 },
+  { order = [364, 367], source_note = 41, start_delta = -13, duration_delta = 1 },
+  { order = [374, 380], source_note = 42, start_delta = -13 },
+  { order = [384, 389], source_note = 43, start_delta = -13, duration_delta = 1 },
+  { order = [390, 391], source_note = 44, start_delta = -12, duration_delta = -1, velocity = 88 },
+  { order = [392, 393], source_note = 45, start_delta = -11, duration_delta = -1, velocity = 90 },
+  { order = [396, 400], source_note = 46, start_delta = -12, velocity = 94 },
+  { order = [404, 408], source_note = 47, start_delta = -12, duration_delta = 1, velocity = 92 },
+  { order = [414, 420], source_note = 48, start_delta = -12, velocity = 92 },
+  { order = [422, 423], source_note = 49, start_delta = -12, velocity = 88 },
+  { order = [424, 425], source_note = 50, start_delta = -12, duration_delta = 1, velocity = 90 },
+  { order = [428, 431], source_note = 51, start_delta = -12, duration_delta = -1, velocity = 94 },
+  { order = [434, 435], source_note = 52, start_delta = -11, duration_delta = -1, velocity = 94 },
+  { order = [438, 442], source_note = 53, start_delta = -11, velocity = 98 },
+  { order = [446, 450], source_note = 54, start_delta = -12, duration_delta = 1, velocity = 94 },
+  { order = [458, 471], source_note = 55, start_delta = -11, duration_delta = -1 },
+  { order = [478, 486], source_note = 56, start_delta = -12 },
+  { order = [499, 510], source_note = 57, start_delta = -11, duration_delta = 2, velocity = 90 },
+  { order = [512, 513], source_note = 58, start_delta = -11, duration_delta = 1, velocity = 90 },
+  { order = [515, 516], source_note = 59, start_delta = -11, duration_delta = 1, velocity = 88 },
+  { order = [519, 523], source_note = 60, start_delta = -10, duration_delta = -1, velocity = 92 },
+  { order = [535, 546], source_note = 61, start_delta = -11, duration_delta = 1, velocity = 92 },
+  { order = [553, 558], source_note = 62, start_delta = -9, duration_delta = 1, velocity = 84 },
+  { order = [565, 570], source_note = 63, start_delta = -9, velocity = 88 },
+  { order = [578, 588], source_note = 64, start_delta = -9, duration_delta = -2, velocity = 98 },
+  { order = [598, 605], source_note = 65, start_delta = -9, velocity = 92 },
+  { order = [610, 615], source_note = 66, start_delta = -8 },
+  { order = [617, 618], source_note = 67, start_delta = -10, velocity = 90 },
+  { order = [620, 623], source_note = 68, start_delta = -9, velocity = 88 },
+  { order = [631, 644], source_note = 69, start_delta = -9 },
+  { order = [649, 657], source_note = 70, start_delta = -9, duration_delta = 1, velocity = 94 },
+  { order = [670, 681], source_note = 71, start_delta = -9, duration_delta = -1, velocity = 92 },
+  { order = [683, 684], source_note = 72, start_delta = -9, duration_delta = 1, velocity = 88 },
+  { order = [686, 687], source_note = 73, start_delta = -9, velocity = 88 },
+  { order = [690, 694], source_note = 74, start_delta = -8, duration_delta = -2 },
+  { order = [707, 720], source_note = 75, start_delta = -7, duration_delta = -1, velocity = 90 },
+  { order = [727, 732], source_note = 76, start_delta = -8, velocity = 88 },
+  { order = [739, 744], source_note = 77, start_delta = -8, duration_delta = 1, velocity = 90 },
+  { order = [752, 762], source_note = 78, start_delta = -8, duration_delta = -1, velocity = 92 },
+  { order = [768, 771], source_note = 79, start_delta = -8, velocity = 94 },
+  { order = [774, 781], source_note = 80, start_delta = -9 },
+  { order = [786, 791], source_note = 81, start_delta = -8, velocity = 94 },
+  { order = [802, 813], source_note = 82, start_delta = -7, duration_delta = -1, velocity = 98 },
+  { order = [818, 826], source_note = 83, start_delta = -7, duration_delta = 1 },
+  { order = [827, 830], source_note = 84, start_delta = -7, velocity = 90 },
+  { order = [832, 835], source_note = 85, start_delta = -8, duration_delta = 1, velocity = 88 },
+  { order = [843, 853], source_note = 86, start_delta = -7, velocity = 100 },
+  { order = [859, 864], source_note = 87, start_delta = -7, velocity = 94 },
+  { order = [875, 886], source_note = 88, start_delta = -7, duration_delta = 1, velocity = 92 },
+  { order = [893, 898], source_note = 89, start_delta = -6, duration_delta = -1, velocity = 84 },
+  { order = [905, 910], source_note = 90, start_delta = -7, duration_delta = 1, velocity = 94 },
+  { order = [918, 929], source_note = 91, start_delta = -6 },
+  { order = [938, 945], source_note = 92, start_delta = -7 },
+  { order = [947, 948], source_note = 93, start_delta = -6, duration_delta = -1, velocity = 90 },
+  { order = [950, 951], source_note = 94, start_delta = -5, duration_delta = -1, velocity = 90 },
+  { order = [954, 958], source_note = 95, start_delta = -6, duration_delta = -1 },
+  { order = [971, 984], source_note = 96, start_delta = -6 },
+  { order = [989, 997], source_note = 97, start_delta = -6 },
+  { order = [998, 1001], source_note = 98, start_delta = -5, velocity = 88 },
+  { order = [1004, 1006], source_note = 99, start_delta = -4, duration_delta = -1, velocity = 90 },
+  { order = [1014, 1025], source_note = 100, start_delta = -6, velocity = 94 },
+  { order = [1030, 1035], source_note = 101, start_delta = -5, duration_delta = -1, velocity = 92 },
+  { order = [1046, 1057], source_note = 102, start_delta = -5, duration_delta = 1, velocity = 92 },
+  { order = [1064, 1069], source_note = 103, start_delta = -5, duration_delta = 1, velocity = 88 },
+  { order = [1076, 1081], source_note = 104, start_delta = -5, duration_delta = -1, velocity = 90 },
+  { order = [1089, 1099], source_note = 105, start_delta = -5, duration_delta = 1, velocity = 94 },
+  { order = [1105, 1108], source_note = 106, start_delta = -5, duration_delta = 1, velocity = 94 },
+  { order = [1111, 1118], source_note = 107, start_delta = -4, duration_delta = -1, velocity = 98 },
+  { order = [1123, 1127], source_note = 108, start_delta = -5, velocity = 94 },
+  { order = [1140, 1151], source_note = 109, start_delta = -5, duration_delta = 1 },
+  { order = [1158, 1166], source_note = 110, start_delta = -3, duration_delta = -1 },
+  { order = [1179, 1190], source_note = 111, start_delta = -4, duration_delta = 1, velocity = 90 },
+  { order = [1192, 1193], source_note = 112, start_delta = -3, velocity = 90 },
+  { order = [1195, 1196], source_note = 113, start_delta = -3, duration_delta = -1, velocity = 88 },
+  { order = [1199, 1203], source_note = 114, start_delta = -4, duration_delta = 1, velocity = 92 },
+  { order = [1216, 1229], source_note = 115, start_delta = -2, duration_delta = -1, velocity = 92 },
+  { order = [1236, 1241], source_note = 116, start_delta = -4, duration_delta = 1, velocity = 84 },
+  { order = [1248, 1253], source_note = 117, start_delta = -3, velocity = 88 },
+  { order = [1261, 1272], source_note = 118, start_delta = -3, velocity = 98 },
+  { order = [1281, 1288], source_note = 119, start_delta = -2, velocity = 92 },
+  { order = [1293, 1298], source_note = 120, start_delta = -2, duration_delta = -1 },
+  { order = [1300, 1301], source_note = 121, start_delta = -2, duration_delta = -1, velocity = 90 },
+  { order = [1303, 1306], source_note = 122, start_delta = -2, duration_delta = -2, velocity = 88 },
+  { order = [1314, 1327], source_note = 123, start_delta = -1, duration_delta = -1 },
+  { order = [1332, 1340], source_note = 124, start_delta = -3, velocity = 94 },
+  { order = [1353, 1364], source_note = 125, start_delta = -3, duration_delta = 1, velocity = 92 },
+  { order = [1366, 1367], source_note = 126, start_delta = -2, duration_delta = 1, velocity = 88 },
+  { order = [1369, 1370], source_note = 127, start_delta = -3, duration_delta = 1, velocity = 88 },
+  { order = [1373, 1377], source_note = 128, start_delta = -1, duration_delta = -2 },
+  { order = [1390, 1403], source_note = 129, start_delta = -1, duration_delta = -1, velocity = 90 },
+  { order = [1410, 1415], source_note = 130, start_delta = -3, duration_delta = 2, velocity = 88 },
+  { order = [1422, 1427], source_note = 131, start_delta = -1, duration_delta = -1, velocity = 90 },
+  { order = [1435, 1445], source_note = 132, duration_delta = -2, velocity = 92 },
+  { order = [1451, 1454], source_note = 133, duration_delta = -2, velocity = 94 },
+  { order = [1457, 1464], source_note = 134, start_delta = -1 },
+  { order = [1469, 1474], source_note = 135, start_delta = -1, velocity = 94 },
+  { order = [1485, 1496], source_note = 136, start_delta = -2, duration_delta = 2, velocity = 98 },
+  { order = [1501, 1509], source_note = 137 },
+  { order = [1510, 1513], source_note = 138, start_delta = -1, duration_delta = 1, velocity = 90 },
+  { order = [1515, 1518], source_note = 139, duration_delta = -1, velocity = 88 },
+  { order = [1526, 1537], source_note = 140, start_delta = -1, velocity = 100 },
+  { order = [1543, 1547], source_note = 141, start_delta = 1, duration_delta = -1, velocity = 94 },
+  { order = [1559, 1572], source_note = 142, duration_delta = -1, velocity = 92 },
+  { order = [1579, 1584], source_note = 143, duration_delta = 1, velocity = 84 },
+  { order = [1591, 1596], source_note = 144, duration_delta = -1, velocity = 94 },
+  { order = [1604, 1614], source_note = 145, duration_delta = 1 },
+  { order = [1624, 1631], source_note = 146, duration_delta = 1 },
+  { order = [1633, 1634], source_note = 147, duration_delta = -1, velocity = 90 },
+  { order = [1636, 1637], source_note = 148, duration_delta = 1, velocity = 90 },
+  { order = [1641, 1644], source_note = 149, start_delta = 1 },
+  { order = [1657, 1670], source_note = 150, start_delta = 1, duration_delta = -1 },
+  { order = [1675, 1683], source_note = 151, duration_delta = 1 },
+  { order = [1684, 1687], source_note = 152, start_delta = 1, duration_delta = 1, velocity = 88 },
+  { order = [1689, 1692], source_note = 153, start_delta = 1, duration_delta = -1, velocity = 90 },
+  { order = [1700, 1711], source_note = 154, start_delta = 2, velocity = 94 },
+  { order = [1716, 1721], source_note = 155, start_delta = 1, velocity = 92 },
+  { order = [1733, 1746], source_note = 156, start_delta = 1, duration_delta = 1, velocity = 92 },
+  { order = [1753, 1758], source_note = 157, start_delta = 1, duration_delta = 1, velocity = 88 },
+  { order = [1765, 1770], source_note = 158, start_delta = 1, velocity = 90 },
+  { order = [1778, 1788], source_note = 159, start_delta = 3, duration_delta = -1, velocity = 94 },
+  { order = [1794, 1797], source_note = 160, start_delta = 2, duration_delta = -1, velocity = 94 },
+  { order = [1800, 1807], source_note = 161, start_delta = 1, duration_delta = 1, velocity = 98 },
+  { order = [1812, 1816], source_note = 162, start_delta = 2, duration_delta = 1, velocity = 94 },
+  { order = [1829, 1840], source_note = 163, start_delta = 3, duration_delta = 1 },
+  { order = [1847, 1855], source_note = 164, start_delta = 2, duration_delta = 1 },
+  { order = [1868, 1879], source_note = 165, start_delta = 2, duration_delta = 2, velocity = 90 },
+  { order = [1881, 1882], source_note = 166, start_delta = 2, velocity = 90 },
+  { order = [1884, 1885], source_note = 167, start_delta = 2, duration_delta = 1, velocity = 88 },
+  { order = [1888, 1892], source_note = 168, start_delta = 2, velocity = 92 },
+  { order = [1905, 1918], source_note = 169, start_delta = 4, duration_delta = -1, velocity = 92 },
+  { order = [1925, 1930], source_note = 170, start_delta = 4, duration_delta = -1, velocity = 84 },
+  { order = [1935, 1942], source_note = 171, start_delta = 3, velocity = 88 },
+  { order = [1950, 1960], source_note = 172, start_delta = 3, duration_delta = -1, velocity = 98 },
+  { order = [1970, 1977], source_note = 173, start_delta = 4, velocity = 92 },
+  { order = [1982, 1987], source_note = 174, start_delta = 3 },
+  { order = [1989, 1990], source_note = 175, start_delta = 3, velocity = 90 },
+  { order = [1992, 1995], source_note = 176, start_delta = 4, velocity = 88 },
+  { order = [2003, 2016], source_note = 177, start_delta = 4 },
+  { order = [2021, 2029], source_note = 178, start_delta = 4, duration_delta = -1, velocity = 94 },
+  { order = [2042, 2053], source_note = 179, start_delta = 5, duration_delta = -1, velocity = 92 },
+  { order = [2055, 2056], source_note = 180, start_delta = 5, duration_delta = 1, velocity = 88 },
+  { order = [2058, 2059], source_note = 181, start_delta = 4, velocity = 88 },
+  { order = [2062, 2066], source_note = 182, start_delta = 5, duration_delta = -1 },
+  { order = [2079, 2092], source_note = 183, start_delta = 4, duration_delta = 1, velocity = 90 },
+  { order = [2097, 2104], source_note = 184, start_delta = 5, duration_delta = -1, velocity = 88 },
+  { order = [2111, 2116], source_note = 185, start_delta = 6, velocity = 90 },
+  { order = [2124, 2134], source_note = 186, start_delta = 5, duration_delta = 1, velocity = 92 },
+  { order = [2140, 2143], source_note = 187, start_delta = 5, velocity = 94 },
+  { order = [2146, 2153], source_note = 188, start_delta = 4 },
+  { order = [2158, 2163], source_note = 189, start_delta = 4, velocity = 94 },
+  { order = [2174, 2185], source_note = 190, start_delta = 5, duration_delta = 1, velocity = 98 },
+  { order = [2190, 2198], source_note = 191, start_delta = 6, duration_delta = 1 },
+  { order = [2199, 2202], source_note = 192, start_delta = 6, duration_delta = 1, velocity = 90 },
+  { order = [2204, 2207], source_note = 193, start_delta = 6, duration_delta = 1, velocity = 88 },
+  { order = [2215, 2226], source_note = 194, start_delta = 6, velocity = 100 },
+  { order = [2231, 2236], source_note = 195, start_delta = 6, velocity = 94 },
+  { order = [2248, 2261], source_note = 196, start_delta = 7, velocity = 92 },
+  { order = [2268, 2273], source_note = 197, start_delta = 7, duration_delta = -1, velocity = 84 },
+  { order = [2280, 2285], source_note = 198, start_delta = 5, duration_delta = 2, velocity = 94 },
+  { order = [2293, 2304], source_note = 199, start_delta = 7, duration_delta = -1 },
+  { order = [2314, 2320], source_note = 200, start_delta = 7 },
+  { order = [2322, 2323], source_note = 201, start_delta = 8, velocity = 90 },
+  { order = [2325, 2326], source_note = 202, start_delta = 7, duration_delta = -1, velocity = 90 },
+  { order = [2329, 2334], source_note = 203, start_delta = 7, duration_delta = 1 },
+  { order = [2346, 2359], source_note = 204, start_delta = 7, duration_delta = -1 },
+  { order = [2364, 2372], source_note = 205, start_delta = 7 },
+  { order = [2373, 2376], source_note = 206, start_delta = 7, duration_delta = -1, velocity = 88 },
+  { order = [2378, 2381], source_note = 207, start_delta = 7, duration_delta = 1, velocity = 90 },
+  { order = [2389, 2400], source_note = 208, start_delta = 9, duration_delta = -1, velocity = 94 },
+  { order = [2405, 2410], source_note = 209, start_delta = 8, duration_delta = -1, velocity = 92 },
+  { order = [2422, 2435], source_note = 210, start_delta = 8, velocity = 92 },
+  { order = [2442, 2447], source_note = 211, start_delta = 8, duration_delta = 1, velocity = 88 },
+  { order = [2454, 2459], source_note = 212, start_delta = 9, duration_delta = -1, velocity = 90 },
+  { order = [2467, 2477], source_note = 213, start_delta = 9, duration_delta = 1, velocity = 94 },
+  { order = [2483, 2486], source_note = 214, start_delta = 8, velocity = 94 },
+  { order = [2489, 2496], source_note = 215, start_delta = 9, duration_delta = -1, velocity = 98 },
+  { order = [2506, 2514], source_note = 216, start_delta = 8, duration_delta = 1, velocity = 94 },
+  { order = [2527, 2538], source_note = 217, start_delta = 9, duration_delta = 1 },
+  { order = [2545, 2553], source_note = 218, start_delta = 9, duration_delta = -1 },
+  { order = [2566, 2577], source_note = 219, start_delta = 10, duration_delta = -1, velocity = 90 },
+  { order = [2579, 2580], source_note = 220, start_delta = 9, duration_delta = 1, velocity = 90 },
+  { order = [2582, 2583], source_note = 221, start_delta = 9, duration_delta = 1, velocity = 88 },
+  { order = [2586, 2590], source_note = 222, start_delta = 9, velocity = 92 },
+  { order = [2603, 2616], source_note = 223, start_delta = 9, duration_delta = 1, velocity = 92 },
+  { order = [2622, 2625], source_note = 224, start_delta = 10, velocity = 84 },
+  { order = [2632, 2637], source_note = 225, start_delta = 9, duration_delta = 1, velocity = 88 },
+  { order = [2645, 2656], source_note = 226, start_delta = 10, duration_delta = 1, velocity = 98 },
+  { order = [2665, 2672], source_note = 227, start_delta = 9, duration_delta = 1, velocity = 92 },
+  { order = [2677, 2682], source_note = 228, start_delta = 11 },
+  { order = [2684, 2685], source_note = 229, start_delta = 11, velocity = 90 },
+  { order = [2687, 2690], source_note = 230, start_delta = 11, duration_delta = -2, velocity = 88 },
+  { order = [2698, 2711], source_note = 231, start_delta = 11, duration_delta = -1 },
+  { order = [2716, 2724], source_note = 232, start_delta = 11, duration_delta = -1, velocity = 94 },
+  { order = [2737, 2748], source_note = 233, start_delta = 10, duration_delta = 1, velocity = 92 },
+  { order = [2750, 2751], source_note = 234, start_delta = 11, duration_delta = 1, velocity = 88 },
+  { order = [2753, 2754], source_note = 235, start_delta = 10, duration_delta = 1, velocity = 88 },
+  { order = [2757, 2761], source_note = 236, start_delta = 11, duration_delta = -1 },
+  { order = [2774, 2787], source_note = 237, start_delta = 10, duration_delta = 1, velocity = 90 },
+  { order = [2794, 2799], source_note = 238, start_delta = 12, duration_delta = -2, velocity = 88 },
+  { order = [2806, 2811], source_note = 239, start_delta = 12, duration_delta = -1, velocity = 90 },
+  { order = [2819, 2829], source_note = 240, start_delta = 12, duration_delta = -1, velocity = 92 },
+  { order = [2835, 2838], source_note = 241, start_delta = 12, duration_delta = -1, velocity = 94 },
+  { order = [2842, 2848], source_note = 242, start_delta = 13, duration_delta = -2 },
+  { order = [2853, 2858], source_note = 243, start_delta = 11, duration_delta = 2, velocity = 94 },
+  { order = [2869, 2880], source_note = 244, start_delta = 12, velocity = 98 },
+  { order = [2885, 2893], source_note = 245, start_delta = 12, duration_delta = 1 },
+  { order = [2895, 2897], source_note = 246, start_delta = 13, duration_delta = -2, velocity = 90 },
+  { order = [2899, 2902], source_note = 247, start_delta = 14, duration_delta = -1, velocity = 88 },
+  { order = [2910, 2920], source_note = 248, start_delta = 13, duration_delta = -1, velocity = 100 },
+  { order = [2926, 2931], source_note = 249, start_delta = 14, duration_delta = -1, velocity = 94 },
+  { order = [2943, 2956], source_note = 250, start_delta = 13, duration_delta = -1, velocity = 92 },
+  { order = [2963, 2968], source_note = 251, start_delta = 13, duration_delta = 1, velocity = 84 },
+  { order = [2975, 2980], source_note = 252, start_delta = 13, duration_delta = -1, velocity = 94 },
+  { order = [2988, 2998], source_note = 253, start_delta = 13 },
+  { order = [3008, 3015], source_note = 254, start_delta = 13, duration_delta = -1 },
+  { order = [3017, 3018], source_note = 255, start_delta = 13, duration_delta = 1, velocity = 90 },
+  { order = [3020, 3021], source_note = 256, start_delta = 13, duration_delta = 1, velocity = 90 },
+  { order = [3024, 3029], source_note = 257, start_delta = 13, duration_delta = 1 },
+  { order = [3041, 3054], source_note = 258, start_delta = 13 },
+  { order = [3059, 3067], source_note = 259, start_delta = 15, duration_delta = -1 },
+  { order = [3068, 3071], source_note = 260, start_delta = 15, velocity = 88 },
+  { order = [3073, 3076], source_note = 261, start_delta = 15, duration_delta = -1, velocity = 90 },
+  { order = [3084, 3095], source_note = 262, start_delta = 14, velocity = 94 },
+  { order = [3100, 3105], source_note = 263, start_delta = 14, duration_delta = 1, velocity = 92 },
+  { order = [3117, 3130], source_note = 264, start_delta = 14, duration_delta = 1, velocity = 92 },
+  { order = [3137, 3142], source_note = 265, start_delta = 14, duration_delta = 1, velocity = 88 },
+  { order = [3149, 3154], source_note = 266, start_delta = 15, velocity = 90 },
+  { order = [3162, 3172], source_note = 267, start_delta = 15, velocity = 94 },
+  { order = [3178, 3181], source_note = 268, start_delta = 14, velocity = 94 },
+  { order = [3185, 3191], source_note = 269, start_delta = 16, duration_delta = -1, velocity = 98 },
+  { order = [3197, 3200], source_note = 270, start_delta = 16, duration_delta = -2, velocity = 94 },
+]
+add = [
+]
+
+[[controls]]
+tick = 0
+track = 0
+order = 0
+message = "ff 7f 0b 05 0f 12 03 03 7f 7f 00 ff 01 03"
+
+[[controls]]
+tick = 0
+track = 0
+order = 1
+message = "ff 7f 0f 05 0f 1c 32 30 31 33 2e 30 31 2e 30 36 01 03"
+
+[[controls]]
+tick = 0
+track = 0
+order = 2
+message = "ff 7f 2a 05 0f 2d 4d 69 63 72 6f 73 6f 66 74 20 53 61 6e 73 20 53 65 72 69 66 2c 38 2e 32 35 2c 46 61 6c 73 65 2c 46 61 6c 73 65 2c 31"
+
+[[controls]]
+tick = 0
+track = 0
+order = 3
+message = "ff 51 03 07 a1 20"
+
+[[controls]]
+tick = 0
+track = 0
+order = 4
+message = "ff 58 04 04 02 18 08"
+
+[[controls]]
+tick = 0
+track = 0
+order = 5
+message = "ff 2f 00"
+
+[[controls]]
+tick = 0
+track = 1
+order = 6
+message = "ff 7f 05 05 0f 09 4a 48"
+
+[[controls]]
+tick = 0
+track = 1
+order = 7
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 1
+order = 8
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 1
+order = 9
+channel = 1
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 1
+order = 10
+channel = 1
+program = 13
+
+[[controls]]
+tick = 0
+track = 1
+order = 11
+channel = 1
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 1
+order = 12
+channel = 1
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 1
+order = 13
+channel = 1
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 1
+order = 14
+channel = 1
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 1
+order = 15
+channel = 1
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 1
+order = 16
+channel = 1
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 1
+order = 17
+channel = 1
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 1
+order = 18
+channel = 1
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 1
+order = 19
+channel = 1
+controller = 121
+value = 0
+
+[[controls]]
+tick = 0
+track = 2
+order = 20
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 2
+order = 21
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 2
+order = 22
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 2
+order = 23
+channel = 2
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 2
+order = 24
+channel = 2
+program = 117
+
+[[controls]]
+tick = 0
+track = 2
+order = 25
+channel = 2
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 2
+order = 26
+channel = 2
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 2
+order = 27
+channel = 2
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 2
+order = 28
+channel = 2
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 2
+order = 29
+channel = 2
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 2
+order = 30
+channel = 2
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 2
+order = 31
+channel = 2
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 2
+order = 32
+channel = 2
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 2
+order = 33
+channel = 2
+controller = 121
+value = 0
+
+[[controls]]
+tick = 0
+track = 3
+order = 34
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 3
+order = 35
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 3
+order = 36
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 3
+order = 37
+channel = 3
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 3
+order = 38
+channel = 3
+program = 58
+
+[[controls]]
+tick = 0
+track = 3
+order = 39
+channel = 3
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 3
+order = 40
+channel = 3
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 3
+order = 41
+channel = 3
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 3
+order = 42
+channel = 3
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 3
+order = 43
+channel = 3
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 3
+order = 44
+channel = 3
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 3
+order = 45
+channel = 3
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 3
+order = 46
+channel = 3
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 3
+order = 47
+channel = 3
+controller = 121
+value = 0
+
+[[controls]]
+tick = 0
+track = 4
+order = 48
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 4
+order = 49
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 4
+order = 50
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 4
+order = 51
+channel = 4
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 4
+order = 52
+channel = 4
+program = 46
+
+[[controls]]
+tick = 0
+track = 4
+order = 53
+channel = 4
+controller = 10
+value = 32
+
+[[controls]]
+tick = 0
+track = 4
+order = 54
+channel = 4
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 4
+order = 55
+channel = 4
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 4
+order = 56
+channel = 4
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 4
+order = 57
+channel = 4
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 4
+order = 58
+channel = 4
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 4
+order = 59
+channel = 4
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 4
+order = 60
+channel = 4
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 4
+order = 61
+channel = 4
+controller = 121
+value = 0
+
+[[controls]]
+tick = 0
+track = 5
+order = 62
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 5
+order = 63
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 5
+order = 64
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 5
+order = 65
+channel = 5
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 5
+order = 66
+channel = 5
+program = 46
+
+[[controls]]
+tick = 0
+track = 5
+order = 67
+channel = 5
+controller = 10
+value = 95
+
+[[controls]]
+tick = 0
+track = 5
+order = 68
+channel = 5
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 5
+order = 69
+channel = 5
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 5
+order = 70
+channel = 5
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 5
+order = 71
+channel = 5
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 5
+order = 72
+channel = 5
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 5
+order = 73
+channel = 5
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 5
+order = 74
+channel = 5
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 5
+order = 75
+channel = 5
+controller = 121
+value = 0
+
+[[controls]]
+tick = 0
+track = 6
+order = 76
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 6
+order = 77
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 6
+order = 78
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 6
+order = 79
+channel = 6
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 6
+order = 80
+channel = 6
+program = 117
+
+[[controls]]
+tick = 0
+track = 6
+order = 81
+channel = 6
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 6
+order = 82
+channel = 6
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 6
+order = 83
+channel = 6
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 6
+order = 84
+channel = 6
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 6
+order = 85
+channel = 6
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 6
+order = 86
+channel = 6
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 6
+order = 87
+channel = 6
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 6
+order = 88
+channel = 6
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 6
+order = 89
+channel = 6
+controller = 121
+value = 0
+
+[[controls]]
+tick = 0
+track = 7
+order = 90
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 7
+order = 91
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 7
+order = 92
+channel = 10
+controller = 7
+value = 64
+
+[[controls]]
+tick = 0
+track = 7
+order = 93
+message = "ff 7f 04 05 0f 10 19"
+
+[[controls]]
+tick = 0
+track = 7
+order = 94
+message = "ff 03 13 4b 49 54 2d 20 53 74 61 6e 64 61 72 64 20 4b 69 74 20 31"
+
+[[controls]]
+tick = 0
+track = 7
+order = 95
+channel = 10
+program = 1
+
+[[controls]]
+tick = 0
+track = 8
+order = 96
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 8
+order = 97
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 8
+order = 98
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 8
+order = 99
+channel = 8
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 8
+order = 100
+channel = 8
+program = 88
+
+[[controls]]
+tick = 0
+track = 8
+order = 101
+channel = 8
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 8
+order = 102
+channel = 8
+controller = 10
+value = 0
+
+[[controls]]
+tick = 0
+track = 8
+order = 103
+channel = 8
+controller = 121
+value = 0
+
+[[controls]]
+tick = 0
+track = 8
+order = 104
+channel = 8
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 8
+order = 105
+channel = 8
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 8
+order = 106
+channel = 8
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 8
+order = 107
+channel = 8
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 8
+order = 108
+channel = 8
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 8
+order = 109
+channel = 8
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 9
+order = 110
+message = "ff 7f 05 05 0f 09 0a 40"
+
+[[controls]]
+tick = 0
+track = 9
+order = 111
+message = "ff 7f 0f 05 0f 06 47 65 6e 65 72 61 6c 20 4d 49 44 49"
+
+[[controls]]
+tick = 0
+track = 9
+order = 112
+message = "ff 03 10 49 6e 73 74 72 75 6d 65 6e 74 20 54 72 61 63 6b"
+
+[[controls]]
+tick = 0
+track = 9
+order = 113
+channel = 9
+controller = 0
+value = 0
+
+[[controls]]
+tick = 0
+track = 9
+order = 114
+channel = 9
+program = 82
+
+[[controls]]
+tick = 0
+track = 9
+order = 115
+channel = 9
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 9
+order = 116
+channel = 9
+controller = 10
+value = 127
+
+[[controls]]
+tick = 0
+track = 9
+order = 117
+channel = 9
+controller = 101
+value = 127
+
+[[controls]]
+tick = 0
+track = 9
+order = 118
+channel = 9
+controller = 100
+value = 127
+
+[[controls]]
+tick = 0
+track = 9
+order = 119
+channel = 9
+controller = 6
+value = 24
+
+[[controls]]
+tick = 0
+track = 9
+order = 120
+channel = 9
+controller = 101
+value = 0
+
+[[controls]]
+tick = 0
+track = 9
+order = 121
+channel = 9
+controller = 100
+value = 0
+
+[[controls]]
+tick = 0
+track = 9
+order = 122
+channel = 9
+controller = 11
+value = 127
+
+[[controls]]
+tick = 0
+track = 9
+order = 123
+channel = 9
+controller = 121
+value = 0
+
+[[controls]]
+tick = 57
+track = 2
+order = 125
+channel = 2
+bend = 8191
+
+[[controls]]
+tick = 78
+track = 5
+order = 127
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 1031
+track = 4
+order = 132
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 1061
+track = 5
+order = 135
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 2004
+track = 4
+order = 140
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 2037
+track = 5
+order = 143
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 2995
+track = 4
+order = 152
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 3031
+track = 5
+order = 155
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 3980
+track = 4
+order = 162
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 4012
+track = 5
+order = 166
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 4961
+track = 4
+order = 176
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 4997
+track = 5
+order = 179
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 5938
+track = 4
+order = 184
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 5973
+track = 5
+order = 187
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 6917
+track = 4
+order = 192
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 6950
+track = 5
+order = 195
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 7910
+track = 4
+order = 206
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 7943
+track = 5
+order = 210
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 8887
+track = 4
+order = 216
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 8922
+track = 5
+order = 219
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 9863
+track = 4
+order = 224
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 9899
+track = 5
+order = 227
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 10848
+track = 4
+order = 236
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 10880
+track = 5
+order = 239
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 11819
+track = 4
+order = 246
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 11859
+track = 5
+order = 250
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 12812
+track = 4
+order = 260
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 12846
+track = 5
+order = 263
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 13787
+track = 4
+order = 270
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 13824
+track = 5
+order = 273
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 14766
+track = 4
+order = 278
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 14803
+track = 5
+order = 281
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 15749
+track = 4
+order = 288
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 15790
+track = 5
+order = 292
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 16730
+track = 4
+order = 298
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 16767
+track = 5
+order = 301
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 17719
+track = 4
+order = 310
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 17754
+track = 5
+order = 313
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 18698
+track = 4
+order = 318
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 18733
+track = 5
+order = 321
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 19685
+track = 4
+order = 328
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 19720
+track = 5
+order = 332
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 20672
+track = 4
+order = 342
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 20709
+track = 5
+order = 345
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 21655
+track = 4
+order = 350
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 21684
+track = 5
+order = 353
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 22631
+track = 4
+order = 362
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 22667
+track = 5
+order = 365
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 23623
+track = 4
+order = 372
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 23654
+track = 5
+order = 376
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 24602
+track = 4
+order = 382
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 24633
+track = 5
+order = 385
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 25580
+track = 4
+order = 394
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 25614
+track = 5
+order = 397
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 26559
+track = 4
+order = 402
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 26592
+track = 5
+order = 405
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 27540
+track = 4
+order = 412
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 27578
+track = 5
+order = 416
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 28529
+track = 4
+order = 426
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 28563
+track = 5
+order = 429
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 29510
+track = 4
+order = 436
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 29546
+track = 5
+order = 439
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 30487
+track = 4
+order = 444
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 30522
+track = 5
+order = 447
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 31474
+track = 4
+order = 454
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 31514
+track = 1
+order = 456
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 31534
+track = 8
+order = 459
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 31534
+track = 9
+order = 461
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 31557
+track = 3
+order = 464
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 31564
+track = 5
+order = 466
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 31582
+track = 6
+order = 468
+channel = 6
+bend = 8191
+
+[[controls]]
+tick = 32062
+track = 3
+order = 475
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 32526
+track = 4
+order = 476
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 32557
+track = 3
+order = 479
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 32563
+track = 5
+order = 480
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 33054
+track = 3
+order = 489
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 33521
+track = 4
+order = 492
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 33550
+track = 1
+order = 497
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 33561
+track = 3
+order = 500
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 33561
+track = 8
+order = 501
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 33561
+track = 9
+order = 503
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 33567
+track = 5
+order = 505
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 34062
+track = 3
+order = 514
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 34529
+track = 4
+order = 517
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 34560
+track = 3
+order = 520
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 34561
+track = 5
+order = 521
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 35045
+track = 3
+order = 526
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 35512
+track = 4
+order = 529
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 35556
+track = 3
+order = 539
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 35560
+track = 5
+order = 540
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 35892
+track = 1
+order = 551
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 35902
+track = 8
+order = 554
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 35902
+track = 9
+order = 556
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 36063
+track = 3
+order = 559
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 36228
+track = 1
+order = 561
+channel = 1
+bend = 8196
+
+[[controls]]
+tick = 36238
+track = 8
+order = 566
+channel = 8
+bend = 8196
+
+[[controls]]
+tick = 36238
+track = 9
+order = 568
+channel = 9
+bend = 8196
+
+[[controls]]
+tick = 36535
+track = 4
+order = 571
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 36568
+track = 1
+order = 576
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 36577
+track = 3
+order = 579
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 36577
+track = 8
+order = 580
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 36577
+track = 9
+order = 582
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 36583
+track = 5
+order = 584
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 37075
+track = 3
+order = 593
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 37541
+track = 4
+order = 596
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 37566
+track = 3
+order = 599
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 37572
+track = 5
+order = 600
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 38056
+track = 3
+order = 607
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 38515
+track = 4
+order = 608
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 38547
+track = 3
+order = 611
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 38553
+track = 5
+order = 612
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 39039
+track = 3
+order = 619
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 39515
+track = 4
+order = 624
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 39546
+track = 1
+order = 629
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 39557
+track = 8
+order = 632
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 39557
+track = 9
+order = 634
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 39563
+track = 3
+order = 637
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 39565
+track = 5
+order = 638
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 40056
+track = 3
+order = 646
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 40519
+track = 4
+order = 647
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 40550
+track = 3
+order = 650
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 40552
+track = 5
+order = 651
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 41047
+track = 3
+order = 660
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 41508
+track = 4
+order = 663
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 41541
+track = 1
+order = 668
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 41550
+track = 3
+order = 671
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 41550
+track = 8
+order = 672
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 41550
+track = 9
+order = 674
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 41556
+track = 5
+order = 676
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 42048
+track = 3
+order = 685
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 42514
+track = 4
+order = 688
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 42545
+track = 3
+order = 691
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 42549
+track = 5
+order = 692
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 43034
+track = 3
+order = 697
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 43501
+track = 4
+order = 700
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 43532
+track = 1
+order = 705
+channel = 1
+bend = 8193
+
+[[controls]]
+tick = 43543
+track = 8
+order = 708
+channel = 8
+bend = 8193
+
+[[controls]]
+tick = 43543
+track = 9
+order = 710
+channel = 9
+bend = 8193
+
+[[controls]]
+tick = 43547
+track = 3
+order = 713
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 43551
+track = 5
+order = 714
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 43877
+track = 1
+order = 725
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 43889
+track = 8
+order = 728
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 43889
+track = 9
+order = 730
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 44046
+track = 3
+order = 733
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 44209
+track = 1
+order = 737
+channel = 1
+bend = 8196
+
+[[controls]]
+tick = 44217
+track = 8
+order = 740
+channel = 8
+bend = 8196
+
+[[controls]]
+tick = 44217
+track = 9
+order = 742
+channel = 9
+bend = 8196
+
+[[controls]]
+tick = 44524
+track = 4
+order = 748
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 44549
+track = 1
+order = 750
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 44561
+track = 3
+order = 753
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 44561
+track = 8
+order = 754
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 44561
+track = 9
+order = 756
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 44565
+track = 5
+order = 758
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 45060
+track = 3
+order = 767
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 45525
+track = 4
+order = 772
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 45555
+track = 3
+order = 775
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 45561
+track = 5
+order = 776
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 46049
+track = 3
+order = 783
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 46510
+track = 4
+order = 784
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 46535
+track = 3
+order = 787
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 46540
+track = 5
+order = 788
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 47020
+track = 3
+order = 793
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 47487
+track = 4
+order = 796
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 47533
+track = 3
+order = 806
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 47537
+track = 5
+order = 807
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 48024
+track = 3
+order = 815
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 48485
+track = 4
+order = 816
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 48510
+track = 3
+order = 819
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 48516
+track = 5
+order = 820
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 49000
+track = 3
+order = 831
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 49472
+track = 4
+order = 836
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 49497
+track = 1
+order = 839
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 49509
+track = 3
+order = 844
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 49509
+track = 8
+order = 845
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 49509
+track = 9
+order = 847
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 49516
+track = 5
+order = 849
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 50008
+track = 3
+order = 856
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 50471
+track = 4
+order = 857
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 50501
+track = 3
+order = 860
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 50503
+track = 5
+order = 861
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 50987
+track = 3
+order = 866
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 51448
+track = 4
+order = 869
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 51496
+track = 3
+order = 879
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 51507
+track = 5
+order = 880
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 51840
+track = 1
+order = 891
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 51847
+track = 8
+order = 894
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 51847
+track = 9
+order = 896
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 52010
+track = 3
+order = 899
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 52179
+track = 1
+order = 903
+channel = 1
+bend = 8196
+
+[[controls]]
+tick = 52187
+track = 8
+order = 906
+channel = 8
+bend = 8196
+
+[[controls]]
+tick = 52187
+track = 9
+order = 908
+channel = 9
+bend = 8196
+
+[[controls]]
+tick = 52490
+track = 4
+order = 914
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 52525
+track = 1
+order = 916
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 52531
+track = 8
+order = 919
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 52531
+track = 9
+order = 921
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 52536
+track = 3
+order = 923
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 52538
+track = 5
+order = 924
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 53028
+track = 3
+order = 933
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 53489
+track = 4
+order = 936
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 53523
+track = 3
+order = 939
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 53527
+track = 5
+order = 940
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 54021
+track = 3
+order = 949
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 54487
+track = 4
+order = 952
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 54514
+track = 3
+order = 955
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 54520
+track = 5
+order = 956
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 55008
+track = 3
+order = 961
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 55474
+track = 4
+order = 964
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 55505
+track = 1
+order = 969
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 55512
+track = 8
+order = 972
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 55512
+track = 9
+order = 974
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 55518
+track = 3
+order = 977
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 55524
+track = 5
+order = 978
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 56008
+track = 3
+order = 986
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 56469
+track = 4
+order = 987
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 56499
+track = 3
+order = 990
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 56505
+track = 5
+order = 991
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 56997
+track = 3
+order = 1002
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 57457
+track = 4
+order = 1007
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 57492
+track = 1
+order = 1012
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 57504
+track = 3
+order = 1015
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 57504
+track = 8
+order = 1016
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 57504
+track = 9
+order = 1018
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 57509
+track = 5
+order = 1020
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 57995
+track = 3
+order = 1027
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 58450
+track = 4
+order = 1028
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 58481
+track = 3
+order = 1031
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 58485
+track = 5
+order = 1032
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 58965
+track = 3
+order = 1037
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 59431
+track = 4
+order = 1040
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 59479
+track = 3
+order = 1050
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 59483
+track = 5
+order = 1051
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 59813
+track = 1
+order = 1060
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 59825
+track = 8
+order = 1065
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 59825
+track = 9
+order = 1067
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 59982
+track = 3
+order = 1070
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 60145
+track = 1
+order = 1074
+channel = 1
+bend = 8187
+
+[[controls]]
+tick = 60155
+track = 8
+order = 1077
+channel = 8
+bend = 8187
+
+[[controls]]
+tick = 60155
+track = 9
+order = 1079
+channel = 9
+bend = 8187
+
+[[controls]]
+tick = 60449
+track = 4
+order = 1082
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 60485
+track = 1
+order = 1087
+channel = 1
+bend = 8195
+
+[[controls]]
+tick = 60497
+track = 8
+order = 1090
+channel = 8
+bend = 8195
+
+[[controls]]
+tick = 60497
+track = 9
+order = 1092
+channel = 9
+bend = 8195
+
+[[controls]]
+tick = 60501
+track = 3
+order = 1094
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 60506
+track = 5
+order = 1095
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 60998
+track = 3
+order = 1104
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 61464
+track = 4
+order = 1109
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 61495
+track = 3
+order = 1112
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 61497
+track = 5
+order = 1113
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 61985
+track = 3
+order = 1120
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 62440
+track = 4
+order = 1121
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 62471
+track = 3
+order = 1124
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 62476
+track = 5
+order = 1125
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 62962
+track = 3
+order = 1130
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 63429
+track = 4
+order = 1133
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 63457
+track = 1
+order = 1138
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 63469
+track = 8
+order = 1141
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 63469
+track = 9
+order = 1143
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 63475
+track = 3
+order = 1146
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 63477
+track = 5
+order = 1147
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 63968
+track = 3
+order = 1155
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 64427
+track = 4
+order = 1156
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 64456
+track = 3
+order = 1159
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 64462
+track = 5
+order = 1160
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 64953
+track = 3
+order = 1169
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 65414
+track = 4
+order = 1172
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 65445
+track = 1
+order = 1177
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 65452
+track = 3
+order = 1180
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 65452
+track = 8
+order = 1181
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 65452
+track = 9
+order = 1183
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 65458
+track = 5
+order = 1185
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 65953
+track = 3
+order = 1194
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 66414
+track = 4
+order = 1197
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 66445
+track = 3
+order = 1200
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 66451
+track = 5
+order = 1201
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 66933
+track = 3
+order = 1206
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 67399
+track = 4
+order = 1209
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 67430
+track = 1
+order = 1214
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 67432
+track = 8
+order = 1217
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 67432
+track = 9
+order = 1219
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 67443
+track = 3
+order = 1222
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 67449
+track = 5
+order = 1223
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 67781
+track = 1
+order = 1234
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 67789
+track = 8
+order = 1237
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 67789
+track = 9
+order = 1239
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 67950
+track = 3
+order = 1242
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 68121
+track = 1
+order = 1246
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 68129
+track = 8
+order = 1249
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 68129
+track = 9
+order = 1251
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 68430
+track = 4
+order = 1257
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 68461
+track = 1
+order = 1259
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 68472
+track = 3
+order = 1262
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 68472
+track = 8
+order = 1263
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 68472
+track = 9
+order = 1265
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 68478
+track = 5
+order = 1267
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 68977
+track = 3
+order = 1276
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 69438
+track = 4
+order = 1279
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 69473
+track = 3
+order = 1282
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 69479
+track = 5
+order = 1283
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 69964
+track = 3
+order = 1290
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 70427
+track = 4
+order = 1291
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 70456
+track = 3
+order = 1294
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 70462
+track = 5
+order = 1295
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 70949
+track = 3
+order = 1302
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 71410
+track = 4
+order = 1307
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 71441
+track = 1
+order = 1312
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 71448
+track = 8
+order = 1315
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 71448
+track = 9
+order = 1317
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 71454
+track = 3
+order = 1320
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 71460
+track = 5
+order = 1321
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 71950
+track = 3
+order = 1329
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 72410
+track = 4
+order = 1330
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 72435
+track = 3
+order = 1333
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 72441
+track = 5
+order = 1334
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 72933
+track = 3
+order = 1343
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 73395
+track = 4
+order = 1346
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 73422
+track = 1
+order = 1351
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 73434
+track = 3
+order = 1354
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 73434
+track = 8
+order = 1355
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 73434
+track = 9
+order = 1357
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 73440
+track = 5
+order = 1359
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 73931
+track = 3
+order = 1368
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 74392
+track = 4
+order = 1371
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 74426
+track = 3
+order = 1374
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 74432
+track = 5
+order = 1375
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 74912
+track = 3
+order = 1380
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 75379
+track = 4
+order = 1383
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 75409
+track = 1
+order = 1388
+channel = 1
+bend = 8193
+
+[[controls]]
+tick = 75419
+track = 8
+order = 1391
+channel = 8
+bend = 8193
+
+[[controls]]
+tick = 75419
+track = 9
+order = 1393
+channel = 9
+bend = 8193
+
+[[controls]]
+tick = 75425
+track = 3
+order = 1396
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 75431
+track = 5
+order = 1397
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 75765
+track = 1
+order = 1408
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 75776
+track = 8
+order = 1411
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 75776
+track = 9
+order = 1413
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 75936
+track = 3
+order = 1416
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 76097
+track = 1
+order = 1420
+channel = 1
+bend = 8193
+
+[[controls]]
+tick = 76106
+track = 8
+order = 1423
+channel = 8
+bend = 8193
+
+[[controls]]
+tick = 76106
+track = 9
+order = 1425
+channel = 9
+bend = 8193
+
+[[controls]]
+tick = 76408
+track = 4
+order = 1431
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 76433
+track = 1
+order = 1433
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 76442
+track = 3
+order = 1436
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 76442
+track = 8
+order = 1437
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 76442
+track = 9
+order = 1439
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 76448
+track = 5
+order = 1441
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 76945
+track = 3
+order = 1450
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 77414
+track = 4
+order = 1455
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 77445
+track = 3
+order = 1458
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 77450
+track = 5
+order = 1459
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 77934
+track = 3
+order = 1466
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 78393
+track = 4
+order = 1467
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 78426
+track = 3
+order = 1470
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 78432
+track = 5
+order = 1471
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 78913
+track = 3
+order = 1476
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 79386
+track = 4
+order = 1479
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 79430
+track = 3
+order = 1489
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 79436
+track = 5
+order = 1490
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 79927
+track = 3
+order = 1498
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 80388
+track = 4
+order = 1499
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 80417
+track = 3
+order = 1502
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 80423
+track = 5
+order = 1503
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 80914
+track = 3
+order = 1514
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 81381
+track = 4
+order = 1519
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 81415
+track = 1
+order = 1524
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 81425
+track = 3
+order = 1527
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 81425
+track = 8
+order = 1528
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 81425
+track = 9
+order = 1530
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 81429
+track = 5
+order = 1532
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 81920
+track = 3
+order = 1539
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 82379
+track = 4
+order = 1540
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 82408
+track = 3
+order = 1542
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 82412
+track = 5
+order = 1544
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 82899
+track = 3
+order = 1549
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 83366
+track = 4
+order = 1552
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 83397
+track = 1
+order = 1557
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 83404
+track = 8
+order = 1560
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 83404
+track = 9
+order = 1562
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 83410
+track = 3
+order = 1565
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 83416
+track = 5
+order = 1566
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 83748
+track = 1
+order = 1577
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 83756
+track = 8
+order = 1580
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 83756
+track = 9
+order = 1582
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 83917
+track = 3
+order = 1585
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 84082
+track = 1
+order = 1589
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 84094
+track = 8
+order = 1592
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 84094
+track = 9
+order = 1594
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 84391
+track = 4
+order = 1600
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 84420
+track = 1
+order = 1602
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 84428
+track = 3
+order = 1605
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 84428
+track = 8
+order = 1606
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 84428
+track = 9
+order = 1608
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 84433
+track = 5
+order = 1610
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 84923
+track = 3
+order = 1619
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 85384
+track = 4
+order = 1622
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 85415
+track = 3
+order = 1625
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 85420
+track = 5
+order = 1626
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 85912
+track = 3
+order = 1635
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 86373
+track = 4
+order = 1638
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 86401
+track = 3
+order = 1640
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 86407
+track = 5
+order = 1642
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 86891
+track = 3
+order = 1647
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 87358
+track = 4
+order = 1650
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 87386
+track = 1
+order = 1655
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 87390
+track = 8
+order = 1658
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 87390
+track = 9
+order = 1660
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 87400
+track = 3
+order = 1663
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 87406
+track = 5
+order = 1664
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 87891
+track = 3
+order = 1672
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 88352
+track = 4
+order = 1673
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 88383
+track = 3
+order = 1676
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 88389
+track = 5
+order = 1677
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 88884
+track = 3
+order = 1688
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 89351
+track = 4
+order = 1693
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 89387
+track = 1
+order = 1698
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 89395
+track = 3
+order = 1701
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 89395
+track = 8
+order = 1702
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 89395
+track = 9
+order = 1704
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 89400
+track = 5
+order = 1706
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 89888
+track = 3
+order = 1713
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 90343
+track = 4
+order = 1714
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 90380
+track = 3
+order = 1717
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 90385
+track = 5
+order = 1718
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 90865
+track = 3
+order = 1723
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 91332
+track = 4
+order = 1726
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 91361
+track = 1
+order = 1729
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 91372
+track = 8
+order = 1734
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 91372
+track = 9
+order = 1736
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 91374
+track = 3
+order = 1739
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 91380
+track = 5
+order = 1740
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 91712
+track = 1
+order = 1751
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 91720
+track = 8
+order = 1754
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 91720
+track = 9
+order = 1756
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 91883
+track = 3
+order = 1759
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 92046
+track = 1
+order = 1763
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 92058
+track = 8
+order = 1766
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 92058
+track = 9
+order = 1768
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 92359
+track = 4
+order = 1771
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 92390
+track = 1
+order = 1776
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 92398
+track = 3
+order = 1779
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 92398
+track = 8
+order = 1780
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 92398
+track = 9
+order = 1782
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 92409
+track = 5
+order = 1784
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 92901
+track = 3
+order = 1793
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 93367
+track = 4
+order = 1798
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 93396
+track = 3
+order = 1801
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 93402
+track = 5
+order = 1802
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 93888
+track = 3
+order = 1809
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 94343
+track = 4
+order = 1810
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 94379
+track = 3
+order = 1813
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 94385
+track = 5
+order = 1814
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 94869
+track = 3
+order = 1819
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 95335
+track = 4
+order = 1822
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 95366
+track = 1
+order = 1827
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 95377
+track = 8
+order = 1830
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 95377
+track = 9
+order = 1832
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 95383
+track = 3
+order = 1835
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 95387
+track = 5
+order = 1836
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 95873
+track = 3
+order = 1844
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 96334
+track = 4
+order = 1845
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 96364
+track = 3
+order = 1848
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 96364
+track = 5
+order = 1849
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 96850
+track = 3
+order = 1858
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 97317
+track = 4
+order = 1861
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 97345
+track = 1
+order = 1866
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 97357
+track = 3
+order = 1869
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 97357
+track = 8
+order = 1870
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 97357
+track = 9
+order = 1872
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 97363
+track = 5
+order = 1874
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 97860
+track = 3
+order = 1883
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 98325
+track = 4
+order = 1886
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 98355
+track = 3
+order = 1889
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 98359
+track = 5
+order = 1890
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 98841
+track = 3
+order = 1895
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 99302
+track = 4
+order = 1898
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 99338
+track = 1
+order = 1903
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 99342
+track = 8
+order = 1906
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 99342
+track = 9
+order = 1908
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 99352
+track = 3
+order = 1911
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 99358
+track = 5
+order = 1912
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 99692
+track = 1
+order = 1923
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 99697
+track = 8
+order = 1926
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 99697
+track = 9
+order = 1928
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 99859
+track = 3
+order = 1931
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 100018
+track = 1
+order = 1936
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 100018
+track = 8
+order = 1938
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 100018
+track = 9
+order = 1940
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 100320
+track = 4
+order = 1946
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 100344
+track = 1
+order = 1948
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 100356
+track = 3
+order = 1951
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 100356
+track = 8
+order = 1952
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 100356
+track = 9
+order = 1954
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 100360
+track = 5
+order = 1956
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 100851
+track = 3
+order = 1965
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 101318
+track = 4
+order = 1968
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 101349
+track = 3
+order = 1971
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 101351
+track = 5
+order = 1972
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 101838
+track = 3
+order = 1979
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 102295
+track = 4
+order = 1980
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 102330
+track = 3
+order = 1983
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 102336
+track = 5
+order = 1984
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 102821
+track = 3
+order = 1991
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 103297
+track = 4
+order = 1996
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 103328
+track = 1
+order = 2001
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 103336
+track = 8
+order = 2004
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 103336
+track = 9
+order = 2006
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 103342
+track = 3
+order = 2009
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 103347
+track = 5
+order = 2010
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 103839
+track = 3
+order = 2018
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 104300
+track = 4
+order = 2019
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 104330
+track = 3
+order = 2022
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 104334
+track = 5
+order = 2023
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 104826
+track = 3
+order = 2032
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 105292
+track = 4
+order = 2035
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 105323
+track = 1
+order = 2040
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 105333
+track = 3
+order = 2043
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 105333
+track = 8
+order = 2044
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 105333
+track = 9
+order = 2046
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 105336
+track = 5
+order = 2048
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 105830
+track = 3
+order = 2057
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 106291
+track = 4
+order = 2060
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 106327
+track = 3
+order = 2063
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 106329
+track = 5
+order = 2064
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 106811
+track = 3
+order = 2069
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 107278
+track = 4
+order = 2072
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 107303
+track = 1
+order = 2075
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 107314
+track = 8
+order = 2080
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 107314
+track = 9
+order = 2082
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 107316
+track = 3
+order = 2085
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 107322
+track = 5
+order = 2086
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 107660
+track = 1
+order = 2098
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 107660
+track = 8
+order = 2100
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 107660
+track = 9
+order = 2102
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 107819
+track = 3
+order = 2105
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 107980
+track = 1
+order = 2109
+channel = 1
+bend = 8193
+
+[[controls]]
+tick = 107988
+track = 8
+order = 2112
+channel = 8
+bend = 8193
+
+[[controls]]
+tick = 107988
+track = 9
+order = 2114
+channel = 9
+bend = 8193
+
+[[controls]]
+tick = 108295
+track = 4
+order = 2120
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 108320
+track = 1
+order = 2122
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 108332
+track = 3
+order = 2125
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 108332
+track = 8
+order = 2126
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 108332
+track = 9
+order = 2128
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 108334
+track = 5
+order = 2130
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 108831
+track = 3
+order = 2139
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 109303
+track = 4
+order = 2144
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 109332
+track = 3
+order = 2147
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 109338
+track = 5
+order = 2148
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 109824
+track = 3
+order = 2155
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 110282
+track = 4
+order = 2156
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 110315
+track = 3
+order = 2159
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 110321
+track = 5
+order = 2160
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 110803
+track = 3
+order = 2165
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 111269
+track = 4
+order = 2168
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 111313
+track = 3
+order = 2178
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 111319
+track = 5
+order = 2179
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 111803
+track = 3
+order = 2187
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 112264
+track = 4
+order = 2188
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 112295
+track = 3
+order = 2191
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 112300
+track = 5
+order = 2192
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 112792
+track = 3
+order = 2203
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 113262
+track = 4
+order = 2208
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 113293
+track = 1
+order = 2213
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 113304
+track = 3
+order = 2216
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 113304
+track = 8
+order = 2217
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 113304
+track = 9
+order = 2219
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 113306
+track = 5
+order = 2221
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 113804
+track = 3
+order = 2228
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 114266
+track = 4
+order = 2229
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 114297
+track = 3
+order = 2232
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 114299
+track = 5
+order = 2233
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 114789
+track = 3
+order = 2238
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 115255
+track = 4
+order = 2241
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 115284
+track = 1
+order = 2246
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 115294
+track = 8
+order = 2249
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 115294
+track = 9
+order = 2251
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 115297
+track = 3
+order = 2254
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 115303
+track = 5
+order = 2255
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 115635
+track = 1
+order = 2266
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 115643
+track = 8
+order = 2269
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 115643
+track = 9
+order = 2271
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 115806
+track = 3
+order = 2274
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 115969
+track = 1
+order = 2278
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 115981
+track = 8
+order = 2281
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 115981
+track = 9
+order = 2283
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 116280
+track = 4
+order = 2289
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 116311
+track = 1
+order = 2291
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 116321
+track = 8
+order = 2294
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 116321
+track = 9
+order = 2296
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 116327
+track = 3
+order = 2298
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 116332
+track = 5
+order = 2299
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 116824
+track = 3
+order = 2308
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 117285
+track = 4
+order = 2311
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 117313
+track = 3
+order = 2313
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 117319
+track = 5
+order = 2315
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 117811
+track = 3
+order = 2324
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 118272
+track = 4
+order = 2327
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 118308
+track = 3
+order = 2330
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 118310
+track = 5
+order = 2331
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 118798
+track = 3
+order = 2336
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 119258
+track = 4
+order = 2339
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 119289
+track = 1
+order = 2344
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 119301
+track = 8
+order = 2347
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 119301
+track = 9
+order = 2349
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 119303
+track = 3
+order = 2352
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 119308
+track = 5
+order = 2353
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 119794
+track = 3
+order = 2361
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 120257
+track = 4
+order = 2362
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 120288
+track = 3
+order = 2365
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 120289
+track = 5
+order = 2366
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 120785
+track = 3
+order = 2377
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 121249
+track = 4
+order = 2382
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 121284
+track = 1
+order = 2387
+channel = 1
+bend = 8189
+
+[[controls]]
+tick = 121294
+track = 3
+order = 2390
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 121294
+track = 8
+order = 2391
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 121294
+track = 9
+order = 2393
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 121299
+track = 5
+order = 2395
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 121785
+track = 3
+order = 2402
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 122246
+track = 4
+order = 2403
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 122277
+track = 3
+order = 2406
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 122282
+track = 5
+order = 2407
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 122762
+track = 3
+order = 2412
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 123225
+track = 4
+order = 2415
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 123258
+track = 1
+order = 2420
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 123264
+track = 8
+order = 2423
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 123264
+track = 9
+order = 2425
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 123275
+track = 3
+order = 2428
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 123281
+track = 5
+order = 2429
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 123609
+track = 1
+order = 2438
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 123621
+track = 8
+order = 2443
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 123621
+track = 9
+order = 2445
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 123780
+track = 3
+order = 2448
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 123947
+track = 1
+order = 2452
+channel = 1
+bend = 8190
+
+[[controls]]
+tick = 123955
+track = 8
+order = 2455
+channel = 8
+bend = 8190
+
+[[controls]]
+tick = 123955
+track = 9
+order = 2457
+channel = 9
+bend = 8190
+
+[[controls]]
+tick = 124250
+track = 4
+order = 2460
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 124287
+track = 1
+order = 2465
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 124298
+track = 8
+order = 2468
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 124298
+track = 9
+order = 2470
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 124302
+track = 3
+order = 2472
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 124306
+track = 5
+order = 2473
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 124800
+track = 3
+order = 2482
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 125262
+track = 4
+order = 2487
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 125291
+track = 3
+order = 2490
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 125293
+track = 5
+order = 2491
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 125781
+track = 3
+order = 2498
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 126241
+track = 4
+order = 2499
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 126272
+track = 1
+order = 2504
+channel = 1
+bend = 8195
+
+[[controls]]
+tick = 126280
+track = 3
+order = 2507
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 126280
+track = 8
+order = 2508
+channel = 8
+bend = 8195
+
+[[controls]]
+tick = 126280
+track = 9
+order = 2510
+channel = 9
+bend = 8195
+
+[[controls]]
+tick = 126286
+track = 5
+order = 2512
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 126769
+track = 3
+order = 2517
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 127236
+track = 4
+order = 2520
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 127265
+track = 1
+order = 2525
+channel = 1
+bend = 8183
+
+[[controls]]
+tick = 127274
+track = 8
+order = 2528
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 127274
+track = 9
+order = 2530
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 127278
+track = 3
+order = 2533
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 127284
+track = 5
+order = 2534
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 127770
+track = 3
+order = 2542
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 128231
+track = 4
+order = 2543
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 128261
+track = 3
+order = 2546
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 128267
+track = 5
+order = 2547
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 128757
+track = 3
+order = 2556
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 129223
+track = 4
+order = 2559
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 129254
+track = 1
+order = 2564
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 129265
+track = 3
+order = 2567
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 129265
+track = 8
+order = 2568
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 129265
+track = 9
+order = 2570
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 129271
+track = 5
+order = 2572
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 129767
+track = 3
+order = 2581
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 130227
+track = 4
+order = 2584
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 130258
+track = 3
+order = 2587
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 130264
+track = 5
+order = 2588
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 130744
+track = 3
+order = 2593
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 131210
+track = 4
+order = 2596
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 131239
+track = 1
+order = 2601
+channel = 1
+bend = 8191
+
+[[controls]]
+tick = 131245
+track = 8
+order = 2605
+channel = 8
+bend = 8191
+
+[[controls]]
+tick = 131245
+track = 9
+order = 2607
+channel = 9
+bend = 8191
+
+[[controls]]
+tick = 131251
+track = 3
+order = 2609
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 131256
+track = 5
+order = 2610
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 131756
+track = 3
+order = 2626
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 131925
+track = 1
+order = 2630
+channel = 1
+bend = 8195
+
+[[controls]]
+tick = 131936
+track = 8
+order = 2633
+channel = 8
+bend = 8195
+
+[[controls]]
+tick = 131936
+track = 9
+order = 2635
+channel = 9
+bend = 8195
+
+[[controls]]
+tick = 132238
+track = 4
+order = 2641
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 132268
+track = 1
+order = 2643
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 132276
+track = 3
+order = 2646
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 132276
+track = 8
+order = 2647
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 132276
+track = 9
+order = 2649
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 132282
+track = 5
+order = 2651
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 132785
+track = 3
+order = 2660
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 133246
+track = 4
+order = 2663
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 133280
+track = 3
+order = 2666
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 133286
+track = 5
+order = 2667
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 133772
+track = 3
+order = 2674
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 134232
+track = 4
+order = 2675
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 134263
+track = 3
+order = 2678
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 134267
+track = 5
+order = 2679
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 134753
+track = 3
+order = 2686
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 135225
+track = 4
+order = 2691
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 135256
+track = 1
+order = 2696
+channel = 1
+bend = 8183
+
+[[controls]]
+tick = 135265
+track = 8
+order = 2699
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 135265
+track = 9
+order = 2701
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 135271
+track = 3
+order = 2704
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 135275
+track = 5
+order = 2705
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 135765
+track = 3
+order = 2713
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 136224
+track = 4
+order = 2714
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 136254
+track = 3
+order = 2717
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 136260
+track = 5
+order = 2718
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 136750
+track = 3
+order = 2727
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 137216
+track = 4
+order = 2730
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 137247
+track = 1
+order = 2735
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 137255
+track = 3
+order = 2738
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 137255
+track = 8
+order = 2739
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 137255
+track = 9
+order = 2741
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 137260
+track = 5
+order = 2743
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 137746
+track = 3
+order = 2752
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 138209
+track = 4
+order = 2755
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 138241
+track = 3
+order = 2758
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 138247
+track = 5
+order = 2759
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 138731
+track = 3
+order = 2764
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 139192
+track = 4
+order = 2767
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 139221
+track = 1
+order = 2772
+channel = 1
+bend = 8196
+
+[[controls]]
+tick = 139230
+track = 8
+order = 2775
+channel = 8
+bend = 8196
+
+[[controls]]
+tick = 139230
+track = 9
+order = 2777
+channel = 9
+bend = 8196
+
+[[controls]]
+tick = 139236
+track = 3
+order = 2780
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 139240
+track = 5
+order = 2781
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 139576
+track = 1
+order = 2792
+channel = 1
+bend = 8187
+
+[[controls]]
+tick = 139585
+track = 8
+order = 2795
+channel = 8
+bend = 8187
+
+[[controls]]
+tick = 139585
+track = 9
+order = 2797
+channel = 9
+bend = 8187
+
+[[controls]]
+tick = 139749
+track = 3
+order = 2800
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 139908
+track = 1
+order = 2804
+channel = 1
+bend = 8195
+
+[[controls]]
+tick = 139918
+track = 8
+order = 2807
+channel = 8
+bend = 8195
+
+[[controls]]
+tick = 139918
+track = 9
+order = 2809
+channel = 9
+bend = 8195
+
+[[controls]]
+tick = 140217
+track = 4
+order = 2815
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 140244
+track = 1
+order = 2817
+channel = 1
+bend = 8183
+
+[[controls]]
+tick = 140254
+track = 3
+order = 2820
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 140254
+track = 8
+order = 2821
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 140254
+track = 9
+order = 2823
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 140257
+track = 5
+order = 2825
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 140755
+track = 3
+order = 2834
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 141227
+track = 4
+order = 2839
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 141256
+track = 3
+order = 2841
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 141262
+track = 5
+order = 2843
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 141747
+track = 3
+order = 2850
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 142202
+track = 4
+order = 2851
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 142239
+track = 3
+order = 2854
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 142245
+track = 5
+order = 2855
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 142725
+track = 3
+order = 2860
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 143191
+track = 4
+order = 2863
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 143237
+track = 3
+order = 2873
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 143243
+track = 5
+order = 2874
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 143729
+track = 3
+order = 2882
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 144193
+track = 4
+order = 2883
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 144224
+track = 3
+order = 2886
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 144230
+track = 5
+order = 2887
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 144721
+track = 3
+order = 2898
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 145188
+track = 4
+order = 2903
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 145221
+track = 1
+order = 2908
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 145230
+track = 3
+order = 2911
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 145230
+track = 8
+order = 2912
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 145230
+track = 9
+order = 2914
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 145236
+track = 5
+order = 2916
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 145722
+track = 3
+order = 2923
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 146181
+track = 4
+order = 2924
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 146209
+track = 3
+order = 2927
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 146213
+track = 5
+order = 2928
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 146695
+track = 3
+order = 2933
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 147162
+track = 4
+order = 2936
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 147192
+track = 1
+order = 2939
+channel = 1
+bend = 8196
+
+[[controls]]
+tick = 147200
+track = 8
+order = 2944
+channel = 8
+bend = 8196
+
+[[controls]]
+tick = 147200
+track = 9
+order = 2946
+channel = 9
+bend = 8196
+
+[[controls]]
+tick = 147206
+track = 3
+order = 2949
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 147217
+track = 5
+order = 2950
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 147544
+track = 1
+order = 2961
+channel = 1
+bend = 8187
+
+[[controls]]
+tick = 147552
+track = 8
+order = 2964
+channel = 8
+bend = 8187
+
+[[controls]]
+tick = 147552
+track = 9
+order = 2966
+channel = 9
+bend = 8187
+
+[[controls]]
+tick = 147713
+track = 3
+order = 2969
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 147878
+track = 1
+order = 2973
+channel = 1
+bend = 8183
+
+[[controls]]
+tick = 147889
+track = 8
+order = 2976
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 147889
+track = 9
+order = 2978
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 148187
+track = 4
+order = 2984
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 148218
+track = 1
+order = 2986
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 148229
+track = 3
+order = 2989
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 148229
+track = 8
+order = 2990
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 148229
+track = 9
+order = 2992
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 148235
+track = 5
+order = 2994
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 148730
+track = 3
+order = 3003
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 149197
+track = 4
+order = 3006
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 149228
+track = 3
+order = 3009
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 149233
+track = 5
+order = 3010
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 149723
+track = 3
+order = 3019
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 150190
+track = 4
+order = 3022
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 150220
+track = 3
+order = 3025
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 150222
+track = 5
+order = 3026
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 150712
+track = 3
+order = 3031
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 151173
+track = 4
+order = 3034
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 151207
+track = 1
+order = 3039
+channel = 1
+bend = 8183
+
+[[controls]]
+tick = 151213
+track = 8
+order = 3042
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 151213
+track = 9
+order = 3044
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 151221
+track = 3
+order = 3047
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 151226
+track = 5
+order = 3048
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 151712
+track = 3
+order = 3056
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 152173
+track = 4
+order = 3057
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 152204
+track = 3
+order = 3060
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 152209
+track = 5
+order = 3061
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 152705
+track = 3
+order = 3072
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 153166
+track = 4
+order = 3077
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 153196
+track = 1
+order = 3082
+channel = 1
+bend = 8194
+
+[[controls]]
+tick = 153208
+track = 3
+order = 3085
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 153208
+track = 8
+order = 3086
+channel = 8
+bend = 8194
+
+[[controls]]
+tick = 153208
+track = 9
+order = 3088
+channel = 9
+bend = 8194
+
+[[controls]]
+tick = 153214
+track = 5
+order = 3090
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 153703
+track = 3
+order = 3097
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 154164
+track = 4
+order = 3098
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 154195
+track = 3
+order = 3101
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 154200
+track = 5
+order = 3102
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 154680
+track = 3
+order = 3107
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 155141
+track = 4
+order = 3110
+channel = 4
+bend = 8191
+
+[[controls]]
+tick = 155176
+track = 1
+order = 3115
+channel = 1
+bend = 8196
+
+[[controls]]
+tick = 155182
+track = 8
+order = 3118
+channel = 8
+bend = 8196
+
+[[controls]]
+tick = 155182
+track = 9
+order = 3120
+channel = 9
+bend = 8196
+
+[[controls]]
+tick = 155193
+track = 3
+order = 3123
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 155199
+track = 5
+order = 3124
+channel = 5
+bend = 8193
+
+[[controls]]
+tick = 155527
+track = 1
+order = 3135
+channel = 1
+bend = 8187
+
+[[controls]]
+tick = 155539
+track = 8
+order = 3138
+channel = 8
+bend = 8187
+
+[[controls]]
+tick = 155539
+track = 9
+order = 3140
+channel = 9
+bend = 8187
+
+[[controls]]
+tick = 155698
+track = 3
+order = 3143
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 155865
+track = 1
+order = 3147
+channel = 1
+bend = 8195
+
+[[controls]]
+tick = 155873
+track = 8
+order = 3150
+channel = 8
+bend = 8195
+
+[[controls]]
+tick = 155873
+track = 9
+order = 3152
+channel = 9
+bend = 8195
+
+[[controls]]
+tick = 156170
+track = 4
+order = 3155
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 156211
+track = 1
+order = 3160
+channel = 1
+bend = 8183
+
+[[controls]]
+tick = 156216
+track = 8
+order = 3163
+channel = 8
+bend = 8189
+
+[[controls]]
+tick = 156216
+track = 9
+order = 3165
+channel = 9
+bend = 8189
+
+[[controls]]
+tick = 156218
+track = 3
+order = 3167
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 156224
+track = 5
+order = 3168
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 156716
+track = 3
+order = 3177
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 157182
+track = 4
+order = 3182
+channel = 4
+bend = 8193
+
+[[controls]]
+tick = 157211
+track = 3
+order = 3184
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 157217
+track = 5
+order = 3186
+channel = 5
+bend = 8195
+
+[[controls]]
+tick = 157703
+track = 3
+order = 3193
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 158161
+track = 4
+order = 3194
+channel = 4
+bend = 8194
+
+[[controls]]
+tick = 158190
+track = 3
+order = 3196
+channel = 3
+bend = 8190
+
+[[controls]]
+tick = 158194
+track = 5
+order = 3198
+channel = 5
+bend = 8189
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3201
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3202
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3203
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3204
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3205
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3206
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3207
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3208
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3209
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3210
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3211
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3212
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3213
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3214
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3215
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3216
+channel = 10
+controller = 64
+value = 0
+
+[[controls]]
+tick = 158328
+track = 7
+order = 3217
+message = "ff 2f 00"
+
+[[controls]]
+tick = 158682
+track = 3
+order = 3220
+channel = 3
+bend = 8533
+
+[[controls]]
+tick = 159179
+track = 1
+order = 3227
+channel = 1
+controller = 123
+value = 0
+
+[[controls]]
+tick = 159179
+track = 2
+order = 3228
+channel = 2
+controller = 123
+value = 0
+
+[[controls]]
+tick = 159179
+track = 3
+order = 3229
+channel = 3
+controller = 123
+value = 0
+
+[[controls]]
+tick = 159179
+track = 4
+order = 3230
+channel = 4
+controller = 123
+value = 0
+
+[[controls]]
+tick = 159179
+track = 5
+order = 3231
+channel = 5
+controller = 123
+value = 0
+
+[[controls]]
+tick = 159179
+track = 6
+order = 3232
+channel = 6
+controller = 123
+value = 0
+
+[[controls]]
+tick = 159179
+track = 8
+order = 3233
+channel = 8
+controller = 123
+value = 0
+
+[[controls]]
+tick = 159179
+track = 9
+order = 3234
+channel = 9
+controller = 123
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3235
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3236
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3237
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3238
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3239
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3240
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3241
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3242
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3243
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3244
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3245
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3246
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3247
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3248
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3249
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3250
+channel = 1
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 1
+order = 3251
+message = "ff 2f 00"
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3252
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3253
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3254
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3255
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3256
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3257
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3258
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3259
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3260
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3261
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3262
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3263
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3264
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3265
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3266
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3267
+channel = 2
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 2
+order = 3268
+message = "ff 2f 00"
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3269
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3270
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3271
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3272
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3273
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3274
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3275
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3276
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3277
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3278
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3279
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3280
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3281
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3282
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3283
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3284
+channel = 3
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 3
+order = 3285
+message = "ff 2f 00"
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3286
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3287
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3288
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3289
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3290
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3291
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3292
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3293
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3294
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3295
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3296
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3297
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3298
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3299
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3300
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3301
+channel = 4
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 4
+order = 3302
+message = "ff 2f 00"
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3303
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3304
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3305
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3306
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3307
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3308
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3309
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3310
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3311
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3312
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3313
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3314
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3315
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3316
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3317
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3318
+channel = 5
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 5
+order = 3319
+message = "ff 2f 00"
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3320
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3321
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3322
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3323
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3324
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3325
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3326
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3327
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3328
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3329
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3330
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3331
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3332
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3333
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3334
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3335
+channel = 6
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 6
+order = 3336
+message = "ff 2f 00"
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3337
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3338
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3339
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3340
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3341
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3342
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3343
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3344
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3345
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3346
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3347
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3348
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3349
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3350
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3351
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3352
+channel = 8
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 8
+order = 3353
+message = "ff 2f 00"
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3354
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3355
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3356
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3357
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3358
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3359
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3360
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3361
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3362
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3363
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3364
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3365
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3366
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3367
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3368
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3369
+channel = 9
+controller = 64
+value = 0
+
+[[controls]]
+tick = 161280
+track = 9
+order = 3370
+message = "ff 2f 00"

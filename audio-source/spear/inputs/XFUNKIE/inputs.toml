@@ -1,0 +1,507 @@
+# Capture identities and references. expected_bank_sha256 is a comparison receipt, not bank data.
+"format" = 2
+"midi_sha256" = "3c9b8a1ac87f30a45099d7be0c1d833df4c13a9d75a1a18ea3c5d1fb661e5357"
+"performance_sha256" = "703bc1085b06d72ee81cf1386cf27993905606fa9d90b5a33250b5768e54d581"
+"font_source_sha256" = "e6c6f2d82ebd0c0fb4c2f4851ad34ca6a2a5988ad737c4922470c59822dbf520"
+"original_sha256" = "10def3401605fd9382c99acead0f6970746b4a32be80e45710361e9f1a636b8d"
+"expected_bank_sha256" = "a4e8ce5e18523065f54447f6b1a470296401c5dfbebe70ea9fe79c43ef26414d"
+"unavailable" = []
+"performed_pan" = []
+
+["compiler_sources"]
+"tools/doccompiler/dmxmus.py" = "fa6b53502a3b7176c4e79a9d7b03e3dd51d42442ca6417de43a1652794d31756"
+"tools/doccompiler/pack.py" = "ad850f16b1739578385b324852cda5e7e4acec8ea0c9eca779ce9f0f874e1d69"
+"tools/doccompiler/build.py" = "925d30a338df038ef0e05466e1f2f711217d0ff47453f0c3ef3faba319d67473"
+"tools/doccompiler/cold_huffman.py" = "fac4ac3a9cee6211bae7a0875d06373067f67089025ae8956bdef3da79d463d3"
+"tools/doccompiler/mussmooth.py" = "87455907e38377ab2b52c0f55e71efa2d5b4e696beaa8751e168cae9cdfcd2f9"
+"tools/doccompiler/tone_safe.py" = "c40e2fa4ef0ae8737094a25944c4d372e84b5bba151e12d1dc3b9b8a54b0b9f3"
+"tools/doccompiler/musknee.py" = "73849083582cda66daed86332fe1004279ac0f69f5dabb95bdd5e59b6086b6ea"
+"tools/doccompiler/muspan.py" = "bf6201f4956eb5c6a69afddc8ca4a16e32007235d7fa6723c5ce609ee592171e"
+"tools/doccompiler/wolfpan.py" = "b84eabbaa28bb6e8a9dfa167c3a3456b1d829a83bf043a43e30551a62434a666"
+"tools/doccompiler/resample_cache.py" = "97626aa22477c751071fe19dd8092268a9f58e65571bc2ffdf2e049922d5cef4"
+"tools/doccompiler/museq.py" = "dd485f3d348b59707b1fc1f302b76f3adf58dae45f51e7dcfdfc24b8c9f5bb0d"
+"tools/doccompiler/musmotion.py" = "252bf0f550a6443a0a0c266c239e061583592ca713660c47317c8c60b4e6cee2"
+"tools/doccompiler/batchcompile.py" = "fc557c4715f5ad8b4398d63f4a7e822f6b3526e2e3fe443ebf8b62dfe97d6254"
+"tools/doccompiler/prepared.py" = "4c512ff27397dbb6e7b0474e52d38be139d0465b420bb0e29c3a5bc1e558ddb4"
+"tools/doccompiler/base_events.py" = "03c0d0924782266111265f9965d9abb574ed20112b953aeb7a42bc59c79f00a1"
+"tools/doccompiler/convert.py" = "0b498f09d86cc939d62c6273fbebf392a2b1007c0a6bf4c20cdad52a6c21a69d"
+"tools/doccompiler/bake_sweep.py" = "0f36af3275bcec4e067b3715bbdb8a70a2643aa7c2bb28c39af0ed6ac0ed0e81"
+"tools/doccompiler/pair_templates.py" = "0e0be43563b8470faa48c02a11826176c078c1340b7247d8a2dad8e3f9eb80d7"
+"tools/doccompiler/oplsynth.py" = "5aa363c9d5321573b96fc4e47b35e77e338b035f90a3b933df86c70e7ab124a8"
+"tools/doccompiler/sf2.py" = "c311cf21342deae05843f3c235d91bd71cae015fd932d0ba856478ef3b3e2a96"
+"tools/doccompiler/muscross.py" = "60a2d5bb20a869574c72b6936b9bd42ec7dbe0b657a11e0312d6b65548e1c569"
+"tools/doccompiler/opleg.py" = "82f95cd4fb6469b8f64429d6c389afcc36584b0ea88f94b040a93a082cef619a"
+"tools/doccompiler/unit2.py" = "31498c77d4b450cdc01d307a3f163debc3c9fa546453694a4c328498ce33dde7"
+"tools/doccompiler/mussc.py" = "01a1eeb33f6b87d511df0d781c19f4031e00eade7bc97b54dcf0a1deebc6f59b"
+"tools/doccompiler/oplchip.py" = "2d46b5ab1a2409e57942f75c6767b2ce99620f8b84e0351acc27b7425015704b"
+"tools/doccompiler/musfx.py" = "47db295250d34e46b3e6940a3ab96dcc3072dd2190f3e6fb37e453e990de190e"
+"tools/doccompiler/capture_tone.py" = "c61295593d600fe4b52750dfd4657b5be085f88d093c9c99aa185a03800baa89"
+"tools/doccompiler/sample_model.py" = "bec10641fcf35da31c44e503f11e27eccd94d6294262bd021adbc577770eace4"
+"tools/doccompiler/midiread.py" = "06dd6b9c4b15508678e984349800f9a413cfe7b67a9213cb5eed154f8d569d6c"
+"tools/doccompiler/capture_levels.py" = "a47e174a0e168e809a1f84547545dbbee8802a27a19bbd7175b3105fc637d970"
+"tools/doccompiler/musnoise.py" = "5ce97083d77a3fd5291af655ea955d7342355ea77d59f5099aacb477d91971e3"
+"tools/doccompiler/musbank.py" = "daa07cb4d6bc8462524d1ac6d1334195d3a9391d3786d3e7988f8fc893f3ed8e"
+"tools/doccompiler/musdsp.py" = "8520c97c5fdba5e1d35b5321bfe108f529af12c41347bc5f4fbaaf1747d746b0"
+"tools/doccompiler/inline_volume.py" = "d4280bad96af2fc5e9437ecd9ed03f809c1f74858e73f0994fab2eef9ce1429c"
+"tools/doccompiler/muschoir.py" = "150d5153922a7720b6476c6810ba1019f85c211b37b2799189f48811802c2e54"
+"tools/doccompiler/captured.py" = "3c90bb6d5bf9a2b0a105a096284f46cf5f672d0888a4102199aac20ab73f26b9"
+"tools/doccompiler/mussamp.py" = "ca92d14ee90d04943325ba09070a4daf5837e3abdc92d37d8b5dca8261c837a5"
+"tools/audio_compile.py" = "6d0a85fb6278510cde9ac898e51cad0b03663aa109e8b594a7f55d061f8db5c8"
+"tools/audio_recipes.py" = "625127b02f3ced9a613a1acb3c726e4c20bbc30c43bedbc534066217c4d331d1"
+"tools/audio_sampling.py" = "c621c91df9958e82c3f8480216cd650f5842c46f3239c8893bca12f1dfdadf99"
+"tools/audio_fit.py" = "f88155bb7f2347f25ef77a19cb684011bf88c236bb053e9e31ddffba82d5eba5"
+"tools/audio_performance_pan.py" = "c36d7f2b7c255d94f0f9c7cefb87eb7e9037ce8fed18bebbeab9835e717b1a1f"
+"tools/audio_context_fit.py" = "9f2ed34bdc1ce8e029cb529ad01e638569a8bedbd26acb23a7fc599a69d529c3"
+"tools/audio_timbre.py" = "bdb15266482342044ede547fd79f3615b8f35606015c6c2814e81fe264cd8826"
+"tools/audio_dsp.py" = "925ee8b4c0f55d3963276f0a8833b903665b709a6caf8c47f4ca930ffcd06abd"
+"tools/audio_preview.py" = "6cfb49c8bf7439d1826c3f150cd71768a055099b04502a916260aa89c6382f18"
+"tools/audio_levels.py" = "806e826deecd10b3f17b2d6c4f0ec77080c0766b8391482279c89af25ff7ef13"
+"tools/audio_resample.py" = "484a44bbdd246929bf506860a76027ae4b2fa7dd91670c6cfe07f2016f4ff282"
+"tools/music_score.py" = "50b8951962afb4e390f41fdbc74d9925a81e44bb7cdfdeec2107b47769ce076e"
+"tools/instrument_defaults.py" = "9dfba6495cf4a840b61f236d0d071b61825cd63b88e4283b2438ad3633354460"
+"tools/audio_tracks.py" = "3817957f208f07ba043b2c6b444350d199f9f5e6ecc4fa057d95e3a888281611"
+"tools/audio_track_sampling.py" = "9236bcee1c7a981c715b50ab0e25cfa1a8df89d4b3c711bd218f8729770fa391"
+"tools/audio_selective.py" = "0ac2b749edb872a15f78ea9016eb15a025e0b5836e702a6d6332119d05e90ce5"
+"tools/audio_defaults.py" = "d03611bfc33a9be2cf94e918f26d8d8fb462fe04579f34100a6d91d077b565e3"
+"tools/audio_intermediate.py" = "0b6f5ffe46217e08275291d6dd86176edda25d8aff1271e1f001d317f2546831"
+"tools/audio_score_delta.py" = "a6c13fefd99222ad5a1ae5fbb7355501a2f5733364447895332d4fda811fb5ac"
+"profiles/audio/sample-models.toml" = "fcbb4ffcd1ebbc27680fd4bf582a854a5f33d42cb0c13fdfc1c877d4ec37fd9f"
+"profiles/audio/source-levels.toml" = "7b2aa4d39b1eff7d7463d42efed0f2e4f694879bbbeaf6dc4d25a1555661349a"
+
+[["captures"]]
+"note" = [2, 3744, 40, 125, 40]
+"file" = "captures/f5ae57e9404b8be69d47d13751a73bcc7272ca10584fa21c3b92bc3618493a06.wav"
+"sha256" = "10e93ec7636f2c88fc619ad7b03ceda09001f48a2e2621c8493e82153b05142c"
+"identity" = "f5ae57e9404b8be69d47d13751a73bcc7272ca10584fa21c3b92bc3618493a06"
+
+[["captures"]]
+"note" = [2, 3792, 40, 125, 40]
+"file" = "captures/e5f8a38022a1b5dd96f53aa4432cbb68520e33e9cc8307bbadb319e101bc1a5d.wav"
+"sha256" = "c4c009767f902203cb44789d5f83f87d53b3f3be7d4c27673a0f494913a9eefd"
+"identity" = "e5f8a38022a1b5dd96f53aa4432cbb68520e33e9cc8307bbadb319e101bc1a5d"
+
+[["captures"]]
+"note" = [2, 3840, 52, 125, 52]
+"file" = "captures/546e022f09da813e97a41adea4486f57bb5f084b5790e25e095aed0254d18f21.wav"
+"sha256" = "03bcd3b39324a16643209959bad44490ead4e7537e5bb245bbb6b99ebfc5889d"
+"identity" = "546e022f09da813e97a41adea4486f57bb5f084b5790e25e095aed0254d18f21"
+
+[["captures"]]
+"note" = [2, 4176, 40, 125, 40]
+"file" = "captures/70c938a66f2c1b87e5f2fad161b842e051339fb459ebb17a12e0840551a99a23.wav"
+"sha256" = "a648dfc3ec963bec15381009944db1f6e67c1d2f1b4d13fff5a8d56c7084f5f0"
+"identity" = "70c938a66f2c1b87e5f2fad161b842e051339fb459ebb17a12e0840551a99a23"
+
+[["captures"]]
+"note" = [2, 4608, 40, 125, 40]
+"file" = "captures/99fc8d4392958f496af8e8a182a284dc95636947d294565c43880ef4938d064d.wav"
+"sha256" = "bd9f7c6b385b7b7d5ee2d5517e503e2cc14515111b94e954268b66e9250c3496"
+"identity" = "99fc8d4392958f496af8e8a182a284dc95636947d294565c43880ef4938d064d"
+
+[["captures"]]
+"note" = [2, 5424, 39, 125, 40]
+"file" = "captures/47b45422693855e550e00b547c39fbee6fbba08268ec0b73ab1ec502d9160198.wav"
+"sha256" = "4805dee2d91d0338faa388a2b135b6ef3946500a3a0a113d755c593e83a0e897"
+"identity" = "47b45422693855e550e00b547c39fbee6fbba08268ec0b73ab1ec502d9160198"
+
+[["captures"]]
+"note" = [2, 5472, 40, 125, 40]
+"file" = "captures/a53c9107259c1a0a71011fee3c02bbbd39c0f061d16b5e70690f2c3f6073d957.wav"
+"sha256" = "59f4a87ccc513ae71f2b15304443b88b39659f490509847b78d41962d23b2e56"
+"identity" = "a53c9107259c1a0a71011fee3c02bbbd39c0f061d16b5e70690f2c3f6073d957"
+
+[["captures"]]
+"note" = [2, 6816, 40, 125, 40]
+"file" = "captures/8be6af5b5ece464585db7920e004e51ae0984ee1569db275ea92af5ec9c6b3bf.wav"
+"sha256" = "75ab6560f29f320e0a3a81d4109dd38d41505d107a6bccc5b1e2ce706a6b42a7"
+"identity" = "8be6af5b5ece464585db7920e004e51ae0984ee1569db275ea92af5ec9c6b3bf"
+
+[["captures"]]
+"note" = [2, 6912, 52, 125, 52]
+"file" = "captures/8833941a6a3e5ef6692628aff9f92ad047a2f4a0a32e633a1d31f290288257a9.wav"
+"sha256" = "d94ff35b9691857a158efe02516f2a10f57e4ef93b887e674aea727f42eba650"
+"identity" = "8833941a6a3e5ef6692628aff9f92ad047a2f4a0a32e633a1d31f290288257a9"
+
+[["captures"]]
+"note" = [2, 7776, 40, 125, 40]
+"file" = "captures/4500252dbee07c88a6c941ff5b17d8b960e02edd64b7a546ad902e282f8db812.wav"
+"sha256" = "86c27d22af5e0ca2d073c531f2809a4889d3776992cc3598720a76e40a630508"
+"identity" = "4500252dbee07c88a6c941ff5b17d8b960e02edd64b7a546ad902e282f8db812"
+
+[["captures"]]
+"note" = [2, 7920, 40, 125, 40]
+"file" = "captures/f777e4eb28fc6bf1b291dc5ccd2545222e7be41ba0259d60975e6a1102948e6d.wav"
+"sha256" = "c515f54985de1fd8e6d9c42d8cb203684ae31a418673ea462ae748de94e070fc"
+"identity" = "f777e4eb28fc6bf1b291dc5ccd2545222e7be41ba0259d60975e6a1102948e6d"
+
+[["captures"]]
+"note" = [2, 8832, 40, 125, 40]
+"file" = "captures/ed28cc3f7e0d95b889887afa204451137f38196420252d4c33f736db29633ab7.wav"
+"sha256" = "0c563c10599fe99876f6878a964e6397860d6f03fa2bc28e5a1c28af69404817"
+"identity" = "ed28cc3f7e0d95b889887afa204451137f38196420252d4c33f736db29633ab7"
+
+[["captures"]]
+"note" = [2, 16032, 50, 125, 52]
+"file" = "captures/2a8088376d334ed125f8bba6940da7e4c002c521346757c0a65613bd501d02e8.wav"
+"sha256" = "1c8d52b4f855bb9a0fe20688868aee85964c5fb3aad23a6fbdb5ea8288e3a935"
+"identity" = "2a8088376d334ed125f8bba6940da7e4c002c521346757c0a65613bd501d02e8"
+
+[["captures"]]
+"note" = [2, 17568, 40, 125, 40]
+"file" = "captures/50e7ea69c645b6f3c26aba787c6dd5d064dcea7b6f95932dd79052c86ac7bda4.wav"
+"sha256" = "a872c3e21bdacee96d84f2929e05333ca97108327a0b3a887542c570c6b9fc00"
+"identity" = "50e7ea69c645b6f3c26aba787c6dd5d064dcea7b6f95932dd79052c86ac7bda4"
+
+[["captures"]]
+"note" = [2, 23760, 40, 125, 40]
+"file" = "captures/3540e7cdd8e02a2809b9fe95acb985a7769985a6753724b83abc6a2f0928e456.wav"
+"sha256" = "ed21bed107d95424f77b461ff5d46c217f217c328d9c29933347a0874a979ed1"
+"identity" = "3540e7cdd8e02a2809b9fe95acb985a7769985a6753724b83abc6a2f0928e456"
+
+[["captures"]]
+"note" = [3, 3744, 28, 125, 28]
+"file" = "captures/3750e899810096f089fd24b7f975e040525e731381551c34978291f29027f97f.wav"
+"sha256" = "495f6a6e166c325b89c73a13ccd445e0c286b2d3b641467d29753f905ceef4bd"
+"identity" = "3750e899810096f089fd24b7f975e040525e731381551c34978291f29027f97f"
+
+[["captures"]]
+"note" = [3, 3792, 28, 125, 28]
+"file" = "captures/c9991524bfa802f1417d9493d1e82250a719f15ec66e8619ab4954e8b6b62316.wav"
+"sha256" = "fc3600f1ac6d6235f05b619d8b35be780f463ae38c307588fe2c5ac43fef744b"
+"identity" = "c9991524bfa802f1417d9493d1e82250a719f15ec66e8619ab4954e8b6b62316"
+
+[["captures"]]
+"note" = [3, 3840, 40, 125, 40]
+"file" = "captures/89f3bb5afb575dffe9829fc9b9b499770da3b2c91a1123258d69696912aadbd8.wav"
+"sha256" = "6a94bde0202665b617f8b9b2daa9d620056a05588d90797bc221f1eb00e26fa8"
+"identity" = "89f3bb5afb575dffe9829fc9b9b499770da3b2c91a1123258d69696912aadbd8"
+
+[["captures"]]
+"note" = [3, 4176, 28, 125, 28]
+"file" = "captures/c1ceb80d65de627d0284899f915fa89288ddb3ac18625f2aeb7201b10d04077d.wav"
+"sha256" = "1a217280843720b307404284c970af5599ed009030f94d6126080b6bf4848cf5"
+"identity" = "c1ceb80d65de627d0284899f915fa89288ddb3ac18625f2aeb7201b10d04077d"
+
+[["captures"]]
+"note" = [3, 4608, 28, 125, 28]
+"file" = "captures/e049519a2fda6cb05911bbbe544011609a5d3fc695b37569c0ef3c57a19acae7.wav"
+"sha256" = "2f54230b7a4ccc23a97a233c352608e8e632764f9db7296d7ccf14dbf90c0c15"
+"identity" = "e049519a2fda6cb05911bbbe544011609a5d3fc695b37569c0ef3c57a19acae7"
+
+[["captures"]]
+"note" = [3, 5424, 27, 125, 28]
+"file" = "captures/015541396f0604772c921f334f8e7741173cfb98902577da18fb8a3b41abcb87.wav"
+"sha256" = "66747690ddcdffbddedd555087722b0b7a63bdbebdf9030b7273e67c46041bbb"
+"identity" = "015541396f0604772c921f334f8e7741173cfb98902577da18fb8a3b41abcb87"
+
+[["captures"]]
+"note" = [3, 5472, 28, 125, 28]
+"file" = "captures/ce803c9b5a95bc2009017678e85bc8768106826346fd482af9fa4428ea23d0d8.wav"
+"sha256" = "61410b42ccfe0fcfbe578b5bf2091c2cf3f415f26608c890d84f582f068a9637"
+"identity" = "ce803c9b5a95bc2009017678e85bc8768106826346fd482af9fa4428ea23d0d8"
+
+[["captures"]]
+"note" = [3, 6816, 28, 125, 28]
+"file" = "captures/24c4c9762899747da842250270b283eaedd94315c77a9d4dbba0361d15e0bde0.wav"
+"sha256" = "2c0262680ae5bcdbc58a3e9d31330a06deb4d37a872e11455c9b96255f4d730f"
+"identity" = "24c4c9762899747da842250270b283eaedd94315c77a9d4dbba0361d15e0bde0"
+
+[["captures"]]
+"note" = [3, 6912, 40, 125, 40]
+"file" = "captures/b6ff6af0c8c6701433c90ce19f3ae37a0925dd92789ecacc72ccb75615e8af5e.wav"
+"sha256" = "ce2ab7d9a554516c0d72801014064085605190eefb53a15cef7705579f99cac2"
+"identity" = "b6ff6af0c8c6701433c90ce19f3ae37a0925dd92789ecacc72ccb75615e8af5e"
+
+[["captures"]]
+"note" = [3, 7776, 28, 125, 28]
+"file" = "captures/ae8a6cdd86e56373740392b6ec7fc1c406d76cb078c7477df68b9179eb7ddbdf.wav"
+"sha256" = "f4d61772eb09a16ccf59285a588cd6e202248bb8012124af9b28e63db8920e51"
+"identity" = "ae8a6cdd86e56373740392b6ec7fc1c406d76cb078c7477df68b9179eb7ddbdf"
+
+[["captures"]]
+"note" = [3, 7920, 28, 125, 28]
+"file" = "captures/d958ef640dc4bebc2985a6e492e93e37fbafc07a612984ba84a3db6e5a23cf37.wav"
+"sha256" = "6272ecc94f4e1e6d3ac116294b851735c4a9a03b345102d7e3c3c6de34bf1543"
+"identity" = "d958ef640dc4bebc2985a6e492e93e37fbafc07a612984ba84a3db6e5a23cf37"
+
+[["captures"]]
+"note" = [3, 8832, 28, 125, 28]
+"file" = "captures/886b66034e5fdb159bf5903ef487ac678b335efae0a47ead4a26d762dfae078d.wav"
+"sha256" = "a164f4fea50bebe8d110ad81d5972cd82c41364285041c5ac9ef89cfcf8e2ffa"
+"identity" = "886b66034e5fdb159bf5903ef487ac678b335efae0a47ead4a26d762dfae078d"
+
+[["captures"]]
+"note" = [3, 16032, 38, 125, 40]
+"file" = "captures/c75519bc72501dfc37716903125b239a6b45e3a284a5128150d420ed335ff51d.wav"
+"sha256" = "1392f48f3628ad39c3f3cdc2c4e048c8a15f6c7e4174d5a1e3c06fd94facfc87"
+"identity" = "c75519bc72501dfc37716903125b239a6b45e3a284a5128150d420ed335ff51d"
+
+[["captures"]]
+"note" = [3, 17568, 28, 125, 28]
+"file" = "captures/1d74537f517c846eb6f261397ca808f4d747b20a9a8949552324d433c7bb8141.wav"
+"sha256" = "18d0551ec1040599cd5d6569c4e878912b8f8ce011780026157e56f62411c4a1"
+"identity" = "1d74537f517c846eb6f261397ca808f4d747b20a9a8949552324d433c7bb8141"
+
+[["captures"]]
+"note" = [3, 23760, 28, 125, 28]
+"file" = "captures/f7ad81fc13620431e6fd78092f5724fee512fe6d74879cc7118640ae26576640.wav"
+"sha256" = "1289d634b7cf86d6a33e454b3ee2fd74f79825228e8ba06bb4ab7d92d00e75e5"
+"identity" = "f7ad81fc13620431e6fd78092f5724fee512fe6d74879cc7118640ae26576640"
+
+[["captures"]]
+"note" = [7, 4578, 52, 84, 52]
+"file" = "captures/d4f04aabd59c2d06f0392170c626373e4161396425a719d3c2d94d54eb75f6bf.wav"
+"sha256" = "e3011b062b69eec89db9b05b1eb21f177e288a3fb628a037db384f7f872d32dc"
+"identity" = "d4f04aabd59c2d06f0392170c626373e4161396425a719d3c2d94d54eb75f6bf"
+
+[["captures"]]
+"note" = [8, 4578, 59, 84, 59]
+"file" = "captures/262d008e9857a81f2347268f15b0feadc838b94b4fa87a5a05eb1cd2ca6b52c4.wav"
+"sha256" = "40229270d160e0b41b9865b70be5acfad20c8bba162c925b14f089b11bb824a5"
+"identity" = "262d008e9857a81f2347268f15b0feadc838b94b4fa87a5a05eb1cd2ca6b52c4"
+
+[["captures"]]
+"note" = [9, 20736, 56, 64, 56]
+"file" = "captures/bc79ab17b9cf68f3e34a10b32b52bd1ba95b67ad3f03aee36bb7f68b61ef492e.wav"
+"sha256" = "2de493077c0ef881574ce9e0b245b9007c222d1931e71ed1c8bc1dc0d7a87db9"
+"identity" = "bc79ab17b9cf68f3e34a10b32b52bd1ba95b67ad3f03aee36bb7f68b61ef492e"
+
+[["captures"]]
+"note" = [10, 0, 35, 114, 35]
+"file" = "captures/2c836f5fae18c5c8d83249fd03841935ebd7fe7a5733e7ec88a280db227dae58.wav"
+"sha256" = "fb8df346a38bb406eb74b782f7d9dc6a23d7621630f1ff27875fa63a29c7db58"
+"identity" = "2c836f5fae18c5c8d83249fd03841935ebd7fe7a5733e7ec88a280db227dae58"
+
+[["captures"]]
+"note" = [10, 0, 42, 112, 42]
+"file" = "captures/4694d8a013ec9bd545e5ba5dbd08e6f2d116ce358d3f61071edd25535a581a8a.wav"
+"sha256" = "f0be4f4ed6f28d72f57215befe5e43668407b5399b04e1032715e3aad4e260c0"
+"identity" = "4694d8a013ec9bd545e5ba5dbd08e6f2d116ce358d3f61071edd25535a581a8a"
+
+[["captures"]]
+"note" = [10, 48, 42, 59, 42]
+"file" = "captures/8bc2b34385e63a9883bd180bc9182d8ffda6c6931f3d2136842045c1c3eb4648.wav"
+"sha256" = "e14908a0d27d04a09fa22560104618bee9d88f25ef2605b9d2190b218693e469"
+"identity" = "8bc2b34385e63a9883bd180bc9182d8ffda6c6931f3d2136842045c1c3eb4648"
+
+[["captures"]]
+"note" = [10, 96, 42, 42, 42]
+"file" = "captures/ec9de9c08d85b69ae56779f790c9ce126d362cb194bc00a16c54963f63663293.wav"
+"sha256" = "18b694ec14918d5f34b4a0f2ff957a62c9a80288c9be2152c9f7bd9fc18b6648"
+"identity" = "ec9de9c08d85b69ae56779f790c9ce126d362cb194bc00a16c54963f63663293"
+
+[["captures"]]
+"note" = [10, 144, 35, 103, 35]
+"file" = "captures/7a482dc0a1d1afcc17859e43f490606725c48420d25a50a454156ab73f5a9303.wav"
+"sha256" = "b6924e47a6821fe5b2d0c2ccb44e50c7057fd7769eced3051ef12aa27922a394"
+"identity" = "7a482dc0a1d1afcc17859e43f490606725c48420d25a50a454156ab73f5a9303"
+
+[["captures"]]
+"note" = [10, 144, 42, 46, 42]
+"file" = "captures/c552e1999426fd522630301c070de4e28d1eb8179d29f739c29255c53fd68c4b.wav"
+"sha256" = "30f3ba2d04dde52f3690a2ceade03b3134244ffab79f3f075f573df57ccbf16f"
+"identity" = "c552e1999426fd522630301c070de4e28d1eb8179d29f739c29255c53fd68c4b"
+
+[["captures"]]
+"note" = [10, 576, 42, 104, 42]
+"file" = "captures/27ff453fdf55315333eba099c819680b29200d5f9d85b8cca4e5ed9a9490f969.wav"
+"sha256" = "27bfee636307e58e129c9f089d352501d22333590dc038ff74b67e538463f1a1"
+"identity" = "27ff453fdf55315333eba099c819680b29200d5f9d85b8cca4e5ed9a9490f969"
+
+[["captures"]]
+"note" = [10, 1056, 42, 38, 42]
+"file" = "captures/868138d28c62b66d0526ebcfd385571cfe60a541866b1347e0fdeeb0558dfb18.wav"
+"sha256" = "2571c0dbe83bfacedd321ae109be856236943a9d59ba82f5a7a27679ea2625cc"
+"identity" = "868138d28c62b66d0526ebcfd385571cfe60a541866b1347e0fdeeb0558dfb18"
+
+[["captures"]]
+"note" = [10, 1344, 42, 89, 42]
+"file" = "captures/d62aa620b4a8faa283ac360df4caaac290ff7e645dd705ea9184d038d6192831.wav"
+"sha256" = "4caf089123debe3852386f6d3079e3e6506c1e43de95ce6b27c01a0b35e8e997"
+"identity" = "d62aa620b4a8faa283ac360df4caaac290ff7e645dd705ea9184d038d6192831"
+
+[["captures"]]
+"note" = [10, 1536, 35, 115, 35]
+"file" = "captures/4f62cb08c892881b91f0dbf39a9624ff130f9aace12d9bc8aa26e00f6376857a.wav"
+"sha256" = "77493cd7a43e4c4864534dc9707cdd351aa58bdcca84c0d559050b57fc799514"
+"identity" = "4f62cb08c892881b91f0dbf39a9624ff130f9aace12d9bc8aa26e00f6376857a"
+
+[["captures"]]
+"note" = [10, 1632, 42, 56, 42]
+"file" = "captures/4d41f1da871f5dd21b8e2a2667fd38eb57f28c167ac7afa5aa374230d8322aad.wav"
+"sha256" = "182b881923f1d8762e6c669e48a435176ac7384a094308d2580dbf1095f7031c"
+"identity" = "4d41f1da871f5dd21b8e2a2667fd38eb57f28c167ac7afa5aa374230d8322aad"
+
+[["captures"]]
+"note" = [10, 1920, 42, 59, 42]
+"file" = "captures/e150b7c39d3b2a3df7ad286de9dd0597ba57f776fc10ce5178f780b503bfedf9.wav"
+"sha256" = "aa5f1bca28648d2cc8e99a53f67538a41d67503756aad4a21b33dc1388a1ea1f"
+"identity" = "e150b7c39d3b2a3df7ad286de9dd0597ba57f776fc10ce5178f780b503bfedf9"
+
+[["captures"]]
+"note" = [10, 2208, 42, 29, 42]
+"file" = "captures/096ca3ae066fed2bb91453f9a4d5085969d4d4cd6b6174fa30f96b2bafb090e0.wav"
+"sha256" = "41f9f332b50fec44054ac47e2117ba5e469672b8c589ab28d7ca70a64a72bdc7"
+"identity" = "096ca3ae066fed2bb91453f9a4d5085969d4d4cd6b6174fa30f96b2bafb090e0"
+
+[["captures"]]
+"note" = [10, 2400, 42, 50, 42]
+"file" = "captures/822a90c197b6ca301fef687bfb47e5477de723a6474dc2ed45524ebcb8893b0e.wav"
+"sha256" = "b6f36b661a63d3d3826ab28f27d654a1c2704298739dfe3e3a7c342c3bccc23a"
+"identity" = "822a90c197b6ca301fef687bfb47e5477de723a6474dc2ed45524ebcb8893b0e"
+
+[["captures"]]
+"note" = [10, 2496, 42, 92, 42]
+"file" = "captures/b5cf0438899b4354e87a9f3dd0df6312b338b281b852de760a724b1816df6be8.wav"
+"sha256" = "41aeb40dd9bec7c2f34ce8f489ce23aeaf2974c61e9c60247931f7ea53acf9f6"
+"identity" = "b5cf0438899b4354e87a9f3dd0df6312b338b281b852de760a724b1816df6be8"
+
+[["captures"]]
+"note" = [10, 2688, 42, 65, 42]
+"file" = "captures/8984122c5a185f39c657bace4739c623b4aa5debc8cbcdd6017f2792a37aadb7.wav"
+"sha256" = "4df839f984326d127ea5d24c5076773c7a306db85d6cbe37b3674c880a15f14a"
+"identity" = "8984122c5a185f39c657bace4739c623b4aa5debc8cbcdd6017f2792a37aadb7"
+
+[["captures"]]
+"note" = [10, 2880, 42, 80, 42]
+"file" = "captures/1b60cc1e8306a97390c65a63e9c82468e6910c93c95e4ad8b79b480a4a2d5d99.wav"
+"sha256" = "38b24d0f2d91c88c78a191a4c7db2afa04747f6ed15d809b2db777dea9299154"
+"identity" = "1b60cc1e8306a97390c65a63e9c82468e6910c93c95e4ad8b79b480a4a2d5d99"
+
+[["captures"]]
+"note" = [10, 2976, 35, 106, 35]
+"file" = "captures/09067d93327b3b850708f4b86ac32198c562239f7bed9a70c7833b39c947aa23.wav"
+"sha256" = "58afb311d9c427e975265b18416626e0ec6bb3b247863dfd5320742e1989fd73"
+"identity" = "09067d93327b3b850708f4b86ac32198c562239f7bed9a70c7833b39c947aa23"
+
+[["captures"]]
+"note" = [10, 3072, 35, 117, 35]
+"file" = "captures/b9213b0a05ae07a20bfd565252279d6ebeb050a038975b49934dda89ecb39db2.wav"
+"sha256" = "43f8fdcfc2500a3819765b6dac31ce6e4b2b9b3a2cfb9e248d0b5eb019e79f89"
+"identity" = "b9213b0a05ae07a20bfd565252279d6ebeb050a038975b49934dda89ecb39db2"
+
+[["captures"]]
+"note" = [10, 3216, 35, 109, 35]
+"file" = "captures/afeafddf72df39986066073dbe659ec3341f5e388e8f5ad966d26fbd2d40bdb9.wav"
+"sha256" = "0850bf68d9be91d29bf7dbb10f9d27866a229d4fa24338808cb4be9cbab47802"
+"identity" = "afeafddf72df39986066073dbe659ec3341f5e388e8f5ad966d26fbd2d40bdb9"
+
+[["captures"]]
+"note" = [10, 3408, 35, 116, 35]
+"file" = "captures/dfe92b884e804d332e18ab011a6cf725794f42cb6bba0b7b55ed5961266bdab2.wav"
+"sha256" = "d20be66a9e33ea7b1e628e1e0f400f80a5afdc4d3e75988964bd6809d0086256"
+"identity" = "dfe92b884e804d332e18ab011a6cf725794f42cb6bba0b7b55ed5961266bdab2"
+
+[["captures"]]
+"note" = [10, 3744, 42, 46, 42]
+"file" = "captures/d1e165316db03f26fa3b5343716dd973ee12fcf45ee22df2768a23dc63389c8d.wav"
+"sha256" = "7b0e8dfa451364e55a309f2f68f01de9bfb88efca9beb6a969f475512ba77fcd"
+"identity" = "d1e165316db03f26fa3b5343716dd973ee12fcf45ee22df2768a23dc63389c8d"
+
+[["captures"]]
+"note" = [10, 3840, 35, 110, 35]
+"file" = "captures/c433e7521b0547f2bbe5ad183926e70628e19652ecdc9b3674e97911aa36e439.wav"
+"sha256" = "80413cdd79cd23c97070082a1bd0dd21eb25428522015fbb7811aedc95a3bf33"
+"identity" = "c433e7521b0547f2bbe5ad183926e70628e19652ecdc9b3674e97911aa36e439"
+
+[["captures"]]
+"note" = [10, 3984, 35, 100, 35]
+"file" = "captures/f6c9bf0c044b5ed67aacb73adaa90a5e97d37f13260c37b79f0152136b6409f8.wav"
+"sha256" = "6702da827c05f0313495082e9c3abe7f699bdba7cf95766de0290622c1cc8304"
+"identity" = "f6c9bf0c044b5ed67aacb73adaa90a5e97d37f13260c37b79f0152136b6409f8"
+
+[["captures"]]
+"note" = [10, 5184, 42, 98, 42]
+"file" = "captures/dc27cebd1f097f9805d5190ae92cc581cd77a27106c676aa191ef06b332a94d6.wav"
+"sha256" = "2e0dcb9e4cfd28045cb7aabf5b009f624561c8eaab8ae0d4fce245403e3ba975"
+"identity" = "dc27cebd1f097f9805d5190ae92cc581cd77a27106c676aa191ef06b332a94d6"
+
+[["captures"]]
+"note" = [10, 5664, 42, 42, 42]
+"file" = "captures/1134d6376f06b22397dc72ca4f7a18d0ce12356debf305c9c468302df555b3fb.wav"
+"sha256" = "ed49f789691b5157b5ae39fdae80e2ad4146364af4ab2061b9668d21ad191fa2"
+"identity" = "1134d6376f06b22397dc72ca4f7a18d0ce12356debf305c9c468302df555b3fb"
+
+[["captures"]]
+"note" = [10, 5856, 42, 68, 42]
+"file" = "captures/7985c9ea309726d395cf900aa961ffb1e753f4bce531cb36782bff454516a4ec.wav"
+"sha256" = "568a262eeb9d1c8366fe0de31c94019adec00b5b123ea9668648f58e2a34e633"
+"identity" = "7985c9ea309726d395cf900aa961ffb1e753f4bce531cb36782bff454516a4ec"
+
+[["captures"]]
+"note" = [10, 5952, 42, 86, 42]
+"file" = "captures/828718bb5fdeeed454820c8cf537fca94e3641404725c862ff7e5ba09280ef78.wav"
+"sha256" = "a9b4a5dbdd51fc63381fea9a2b315fcfc390671269e7a555de12839ea7987995"
+"identity" = "828718bb5fdeeed454820c8cf537fca94e3641404725c862ff7e5ba09280ef78"
+
+[["captures"]]
+"note" = [10, 6144, 35, 114, 35]
+"file" = "captures/342e028e945a25458ce0728959ef1619d7f9b76024c95331f9d2849883975ee9.wav"
+"sha256" = "0201a1124647e9da4a3458db981a47007df4200c7d16a189b7360b65904c4924"
+"identity" = "342e028e945a25458ce0728959ef1619d7f9b76024c95331f9d2849883975ee9"
+
+[["captures"]]
+"note" = [10, 6144, 42, 112, 42]
+"file" = "captures/b26bd9d40f072c0e769deec76e6b1ac57c5feb3ab4b7529d111c3fba5d7cc045.wav"
+"sha256" = "72687a420d0f44a41f07c9e35b2210b21b15daa0e3c6f294f5b41ba2aa39d8c0"
+"identity" = "b26bd9d40f072c0e769deec76e6b1ac57c5feb3ab4b7529d111c3fba5d7cc045"
+
+[["captures"]]
+"note" = [10, 6288, 35, 103, 35]
+"file" = "captures/ab5ec997daca06c4ca5637f1b193e50a5fffaf6add817c7bf6a36b56ee4ac28e.wav"
+"sha256" = "92df78fa9c7ff3b4fefb019b40b48f0ff23c110175cef20de6caf43cdffb0a8e"
+"identity" = "ab5ec997daca06c4ca5637f1b193e50a5fffaf6add817c7bf6a36b56ee4ac28e"
+
+[["captures"]]
+"note" = [10, 6432, 42, 24, 42]
+"file" = "captures/3dcfdc5e07c45f4ecb5d76dcca2e46b22a5d3e746e90a4b941f46a00f827d556.wav"
+"sha256" = "4c124f21fb96c85a6cf64c1ef1a42ba8fc6275bcb74a0de88539a71800e0a4c0"
+"identity" = "3dcfdc5e07c45f4ecb5d76dcca2e46b22a5d3e746e90a4b941f46a00f827d556"
+
+[["captures"]]
+"note" = [10, 6912, 35, 112, 35]
+"file" = "captures/7094ffe55b2e4f36ba022b57b457ad51df19351ab9e3aece78ecb2747b3641e6.wav"
+"sha256" = "391efcb2ff181845f2787c096b49ff06e38af5a436d1b5986a16c7d21bf4b415"
+"identity" = "7094ffe55b2e4f36ba022b57b457ad51df19351ab9e3aece78ecb2747b3641e6"
+
+[["captures"]]
+"note" = [10, 7872, 42, 83, 42]
+"file" = "captures/aba990500392aaf983999f7206961a1174e4e17984b53dffe57c1bb0eff0e17d.wav"
+"sha256" = "6438d3b3f6f15fe0cb7628e8e0f1f808a0d456478bf382da02cf07f1a1ba4867"
+"identity" = "aba990500392aaf983999f7206961a1174e4e17984b53dffe57c1bb0eff0e17d"
+
+[["captures"]]
+"note" = [10, 7968, 42, 53, 42]
+"file" = "captures/89b2306d97385fa51c14d43514c281f635a8b43539e223677d3ec47cb8991479.wav"
+"sha256" = "468f39cc94c7218ff0d7165202a08ea4ad6ffa223a04efe0ef37466c37ae5410"
+"identity" = "89b2306d97385fa51c14d43514c281f635a8b43539e223677d3ec47cb8991479"
+
+[["captures"]]
+"note" = [10, 10176, 42, 101, 42]
+"file" = "captures/6197b3731ceeb7bf45710be6527c5ee5caa44929b0bdf5a7dfdb0ae0fc725dab.wav"
+"sha256" = "c312b122ed11d02367150eaf91216762bf31b32f51ee0ebc2c9a55827521fe03"
+"identity" = "6197b3731ceeb7bf45710be6527c5ee5caa44929b0bdf5a7dfdb0ae0fc725dab"
+
+[["captures"]]
+"note" = [10, 11424, 35, 84, 35]
+"file" = "captures/e07babae90eb0b0cc273e594ac170b2ba6ea118a41c37bed7685f48b6ce66fd0.wav"
+"sha256" = "75f520957f70129a0ed76f2c3ef3fb1ea27941dc7a15e640214255d14d822a12"
+"identity" = "e07babae90eb0b0cc273e594ac170b2ba6ea118a41c37bed7685f48b6ce66fd0"
+
+[["captures"]]
+"note" = [10, 11520, 42, 71, 42]
+"file" = "captures/993e39cfa1576cf77e7984780921aa2ea0c0435afb6e10f6da8a14c081c9c930.wav"
+"sha256" = "8a5f3a2b8c1d4f8f09bccff2eda9f8331e6d62ecb592c0972cd47fe63410539b"
+"identity" = "993e39cfa1576cf77e7984780921aa2ea0c0435afb6e10f6da8a14c081c9c930"
+
+[["captures"]]
+"note" = [10, 14352, 35, 111, 35]
+"file" = "captures/0c27219996cbbe1d9402ce8fb34b408d37f8ca8e8dff10f44251dc3a7aa445e7.wav"
+"sha256" = "fa9d9a90f4d01db04923ccc89492b0007866ba96aebb9cdbae2fb2d1e12badee"
+"identity" = "0c27219996cbbe1d9402ce8fb34b408d37f8ca8e8dff10f44251dc3a7aa445e7"
+
+[["captures"]]
+"note" = [10, 17088, 38, 100, 38]
+"file" = "captures/e42d9860e9762e25ad5d28d0e50481a79f68601ed25f06f48d7691e054168d94.wav"
+"sha256" = "db16e1489893f1948c0a58bbd83184cea6a379e03307bd4efe6b5bfef31eea44"
+"identity" = "e42d9860e9762e25ad5d28d0e50481a79f68601ed25f06f48d7691e054168d94"

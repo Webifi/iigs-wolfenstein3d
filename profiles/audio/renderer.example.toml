@@ -1,0 +1,15 @@
+# Nuked-SC55 renderer: https://github.com/jcmoyer/Nuked-SC55
+# Paths are relative to this settings file, or absolute. Windows accepts C:/... paths.
+[renderer]
+executable = "path/to/nuked-sc55-render"
+track_executable = "path/to/nuked-sc55-track-render" # Build with tools/build_track_renderer.py.
+track_executable_sha256 = "" # Optional: pin the complete-track capture renderer too.
+rom_directory = "path/to/SC55-ROMs"
+romset = "mk1-v1.21" # Pin both model and revision; a model alone is not deterministic.
+executable_sha256 = "" # Optional: pin your local renderer build after checking it.
+
+# Not required for MIDI -> reference WAV. The DOC sample compiler uses this
+# as a starting bank, then captures/calibrates instruments against the emulator.
+[soundfont]
+file = "path/to/sc55_v12b.sf2"
+sha256 = "e6c6f2d82ebd0c0fb4c2f4851ad34ca6a2a5988ad737c4922470c59822dbf520"

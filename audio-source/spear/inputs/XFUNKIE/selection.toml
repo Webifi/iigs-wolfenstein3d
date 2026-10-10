@@ -1,0 +1,50 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 37
+"bank" = [0, 0]
+"notes" = 188
+"name" = "Slap Bass 1"
+
+[["instruments"]]
+"channel" = 3
+"program" = 36
+"bank" = [0, 0]
+"notes" = 188
+"name" = "Fretless Bass"
+
+[["instruments"]]
+"channel" = 7
+"program" = 96
+"bank" = [0, 0]
+"notes" = 22
+"name" = "Pad 8 (sweep)"
+
+[["instruments"]]
+"channel" = 8
+"program" = 96
+"bank" = [0, 0]
+"notes" = 22
+"name" = "Pad 8 (sweep)"
+
+[["instruments"]]
+"channel" = 9
+"program" = 103
+"bank" = [0, 0]
+"notes" = 33
+"name" = "FX 7 (echoes)"
+
+[["instruments"]]
+"channel" = 10
+"program" = 26
+"bank" = [0, 0]
+"notes" = 1070
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "3c9b8a1ac87f30a45099d7be0c1d833df4c13a9d75a1a18ea3c5d1fb661e5357"
+"authority" = "composer-original"

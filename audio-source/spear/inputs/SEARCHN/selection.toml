@@ -1,0 +1,64 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 119
+"bank" = [0, 0]
+"notes" = 72
+"name" = "Synth Drum"
+
+[["instruments"]]
+"channel" = 4
+"program" = 9
+"bank" = [0, 0]
+"notes" = 50
+"name" = "Celesta"
+
+[["instruments"]]
+"channel" = 5
+"program" = 47
+"bank" = [0, 0]
+"notes" = 50
+"name" = "Orchestral Harp"
+
+[["instruments"]]
+"channel" = 6
+"program" = 72
+"bank" = [0, 0]
+"notes" = 50
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 7
+"program" = 93
+"bank" = [0, 0]
+"notes" = 64
+"name" = "Pad 5 (bowed)"
+
+[["instruments"]]
+"channel" = 8
+"program" = 59
+"bank" = [0, 0]
+"notes" = 44
+"name" = "Tuba"
+
+[["instruments"]]
+"channel" = 9
+"program" = 29
+"bank" = [0, 0]
+"notes" = 384
+"name" = "Electric Guitar (muted)"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 378
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "98873e03a9f4351fcff7ad22fd973c24960a5ba3d4fca5a5c6ed6ef991c66624"
+"authority" = "composer-original"

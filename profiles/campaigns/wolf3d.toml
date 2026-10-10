@@ -1,0 +1,1282 @@
+# Source/compiled indices are zero-based. Display numbers are one-based.
+# Routes are explicit; floor zero is a valid destination. Titles are not IDs.
+# Editing metadata does not add the corresponding native gameplay behavior.
+format = 1
+profile_id = "wolf3d"
+campaign_id = "wolf3d"
+title = "Wolfenstein 3D registered"
+episode_menu_order = ["episode-1", "episode-2", "episode-3", "episode-4", "episode-5", "episode-6"]
+default_episode = "episode-1"
+source_references = [
+  "id Software WOLFSRC/WL_GAME.C: GameLoop, ElevatorBackTo, ScanInfoPlane",
+  "id Software WOLFSRC/WL_INTER.C: LevelCompleted, parTimes, Victory",
+  "id Software WOLFSRC/WL_AGENT.C: Cmd_Use, VictoryTile, GetBonus",
+  "id Software WOLFSRC/WL_ACT2.C: A_StartDeathCam, A_Victory",
+  "id Software WOLFSRC/WL_MENU.C: NewEmenu English episode titles",
+]
+
+[[episodes]]
+episode_id = "episode-1"
+title = "Escape from Wolfenstein"
+start_source_floor_index = 0
+boss_source_floor_indices = [8]
+ending_id = "wolf-ending-1"
+display_episode_number = 1
+
+[[episodes]]
+episode_id = "episode-2"
+title = "Operation: Eisenfaust"
+start_source_floor_index = 10
+boss_source_floor_indices = [17, 18]
+ending_id = "wolf-ending-2"
+display_episode_number = 2
+
+[[episodes]]
+episode_id = "episode-3"
+title = "Die, Fuhrer, Die!"
+start_source_floor_index = 20
+boss_source_floor_indices = [28]
+ending_id = "wolf-ending-3"
+display_episode_number = 3
+
+[[episodes]]
+episode_id = "episode-4"
+title = "A Dark Secret"
+start_source_floor_index = 30
+boss_source_floor_indices = [38]
+ending_id = "wolf-ending-4"
+display_episode_number = 4
+
+[[episodes]]
+episode_id = "episode-5"
+title = "Trail of the Madman"
+start_source_floor_index = 40
+boss_source_floor_indices = [48]
+ending_id = "wolf-ending-5"
+display_episode_number = 5
+
+[[episodes]]
+episode_id = "episode-6"
+title = "Confrontation"
+start_source_floor_index = 50
+boss_source_floor_indices = [58, 59]
+ending_id = "wolf-ending-6"
+display_episode_number = 6
+
+[[floors]]
+floor_id = "e1m1"
+source_floor_index = 0
+episode_id = "episode-1"
+display_floor_number = 1
+title = "Floor 1"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GETTHEM"
+par_seconds = 90
+
+[[floors]]
+floor_id = "e1m2"
+source_floor_index = 1
+episode_id = "episode-1"
+display_floor_number = 2
+title = "Floor 2"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SEARCHN"
+par_seconds = 120
+
+[[floors]]
+floor_id = "e1m3"
+source_floor_index = 2
+episode_id = "episode-1"
+display_floor_number = 3
+title = "Floor 3"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "POW"
+par_seconds = 120
+
+[[floors]]
+floor_id = "e1m4"
+source_floor_index = 3
+episode_id = "episode-1"
+display_floor_number = 4
+title = "Floor 4"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SUSPENSE"
+par_seconds = 210
+
+[[floors]]
+floor_id = "e1m5"
+source_floor_index = 4
+episode_id = "episode-1"
+display_floor_number = 5
+title = "Floor 5"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GETTHEM"
+par_seconds = 180
+
+[[floors]]
+floor_id = "e1m6"
+source_floor_index = 5
+episode_id = "episode-1"
+display_floor_number = 6
+title = "Floor 6"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SEARCHN"
+par_seconds = 180
+
+[[floors]]
+floor_id = "e1m7"
+source_floor_index = 6
+episode_id = "episode-1"
+display_floor_number = 7
+title = "Floor 7"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "POW"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e1m8"
+source_floor_index = 7
+episode_id = "episode-1"
+display_floor_number = 8
+title = "Floor 8"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SUSPENSE"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e1m9"
+source_floor_index = 8
+episode_id = "episode-1"
+display_floor_number = 9
+title = "Floor 9"
+role = "final_boss"
+tally_kind = "none"
+music_name = "WARMARCH"
+
+[[floors]]
+floor_id = "e1m10"
+source_floor_index = 9
+episode_id = "episode-1"
+display_floor_number = 10
+title = "Secret floor 10"
+role = "secret"
+tally_kind = "fixed_bonus"
+music_name = "CORNER"
+bonus_points = 15000
+
+[[floors]]
+floor_id = "e2m1"
+source_floor_index = 10
+episode_id = "episode-2"
+display_floor_number = 1
+title = "Floor 1"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_OMI"
+par_seconds = 90
+
+[[floors]]
+floor_id = "e2m2"
+source_floor_index = 11
+episode_id = "episode-2"
+display_floor_number = 2
+title = "Floor 2"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "PREGNANT"
+par_seconds = 210
+
+[[floors]]
+floor_id = "e2m3"
+source_floor_index = 12
+episode_id = "episode-2"
+display_floor_number = 3
+title = "Floor 3"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GOINGAFT"
+par_seconds = 180
+
+[[floors]]
+floor_id = "e2m4"
+source_floor_index = 13
+episode_id = "episode-2"
+display_floor_number = 4
+title = "Floor 4"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "HEADACHE"
+par_seconds = 120
+
+[[floors]]
+floor_id = "e2m5"
+source_floor_index = 14
+episode_id = "episode-2"
+display_floor_number = 5
+title = "Floor 5"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_OMI"
+par_seconds = 240
+
+[[floors]]
+floor_id = "e2m6"
+source_floor_index = 15
+episode_id = "episode-2"
+display_floor_number = 6
+title = "Floor 6"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "PREGNANT"
+par_seconds = 360
+
+[[floors]]
+floor_id = "e2m7"
+source_floor_index = 16
+episode_id = "episode-2"
+display_floor_number = 7
+title = "Floor 7"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "HEADACHE"
+par_seconds = 60
+
+[[floors]]
+floor_id = "e2m8"
+source_floor_index = 17
+episode_id = "episode-2"
+display_floor_number = 8
+title = "Floor 8"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GOINGAFT"
+par_seconds = 180
+
+[[floors]]
+floor_id = "e2m9"
+source_floor_index = 18
+episode_id = "episode-2"
+display_floor_number = 9
+title = "Floor 9"
+role = "final_boss"
+tally_kind = "none"
+music_name = "WARMARCH"
+
+[[floors]]
+floor_id = "e2m10"
+source_floor_index = 19
+episode_id = "episode-2"
+display_floor_number = 10
+title = "Secret floor 10"
+role = "secret"
+tally_kind = "fixed_bonus"
+music_name = "DUNGEON"
+bonus_points = 15000
+
+[[floors]]
+floor_id = "e3m1"
+source_floor_index = 20
+episode_id = "episode-3"
+display_floor_number = 1
+title = "Floor 1"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "INTROCW3"
+par_seconds = 90
+
+[[floors]]
+floor_id = "e3m2"
+source_floor_index = 21
+episode_id = "episode-3"
+display_floor_number = 2
+title = "Floor 2"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_RAP"
+par_seconds = 90
+
+[[floors]]
+floor_id = "e3m3"
+source_floor_index = 22
+episode_id = "episode-3"
+display_floor_number = 3
+title = "Floor 3"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "TWELFTH"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e3m4"
+source_floor_index = 23
+episode_id = "episode-3"
+display_floor_number = 4
+title = "Floor 4"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "ZEROHOUR"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e3m5"
+source_floor_index = 24
+episode_id = "episode-3"
+display_floor_number = 5
+title = "Floor 5"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "INTROCW3"
+par_seconds = 210
+
+[[floors]]
+floor_id = "e3m6"
+source_floor_index = 25
+episode_id = "episode-3"
+display_floor_number = 6
+title = "Floor 6"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_RAP"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e3m7"
+source_floor_index = 26
+episode_id = "episode-3"
+display_floor_number = 7
+title = "Floor 7"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "TWELFTH"
+par_seconds = 120
+
+[[floors]]
+floor_id = "e3m8"
+source_floor_index = 27
+episode_id = "episode-3"
+display_floor_number = 8
+title = "Floor 8"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "ZEROHOUR"
+par_seconds = 360
+
+[[floors]]
+floor_id = "e3m9"
+source_floor_index = 28
+episode_id = "episode-3"
+display_floor_number = 9
+title = "Floor 9"
+role = "final_boss"
+tally_kind = "none"
+music_name = "ULTIMATE"
+
+[[floors]]
+floor_id = "e3m10"
+source_floor_index = 29
+episode_id = "episode-3"
+display_floor_number = 10
+title = "Secret floor 10"
+role = "secret"
+tally_kind = "fixed_bonus"
+music_name = "PACMAN"
+bonus_points = 15000
+
+[[floors]]
+floor_id = "e4m1"
+source_floor_index = 30
+episode_id = "episode-4"
+display_floor_number = 1
+title = "Floor 1"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GETTHEM"
+par_seconds = 120
+
+[[floors]]
+floor_id = "e4m2"
+source_floor_index = 31
+episode_id = "episode-4"
+display_floor_number = 2
+title = "Floor 2"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SEARCHN"
+par_seconds = 120
+
+[[floors]]
+floor_id = "e4m3"
+source_floor_index = 32
+episode_id = "episode-4"
+display_floor_number = 3
+title = "Floor 3"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "POW"
+par_seconds = 90
+
+[[floors]]
+floor_id = "e4m4"
+source_floor_index = 33
+episode_id = "episode-4"
+display_floor_number = 4
+title = "Floor 4"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SUSPENSE"
+par_seconds = 60
+
+[[floors]]
+floor_id = "e4m5"
+source_floor_index = 34
+episode_id = "episode-4"
+display_floor_number = 5
+title = "Floor 5"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GETTHEM"
+par_seconds = 270
+
+[[floors]]
+floor_id = "e4m6"
+source_floor_index = 35
+episode_id = "episode-4"
+display_floor_number = 6
+title = "Floor 6"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SEARCHN"
+par_seconds = 210
+
+[[floors]]
+floor_id = "e4m7"
+source_floor_index = 36
+episode_id = "episode-4"
+display_floor_number = 7
+title = "Floor 7"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "POW"
+par_seconds = 120
+
+[[floors]]
+floor_id = "e4m8"
+source_floor_index = 37
+episode_id = "episode-4"
+display_floor_number = 8
+title = "Floor 8"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "SUSPENSE"
+par_seconds = 270
+
+[[floors]]
+floor_id = "e4m9"
+source_floor_index = 38
+episode_id = "episode-4"
+display_floor_number = 9
+title = "Floor 9"
+role = "final_boss"
+tally_kind = "none"
+music_name = "WARMARCH"
+
+[[floors]]
+floor_id = "e4m10"
+source_floor_index = 39
+episode_id = "episode-4"
+display_floor_number = 10
+title = "Secret floor 10"
+role = "secret"
+tally_kind = "fixed_bonus"
+music_name = "CORNER"
+bonus_points = 15000
+
+[[floors]]
+floor_id = "e5m1"
+source_floor_index = 40
+episode_id = "episode-5"
+display_floor_number = 1
+title = "Floor 1"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_OMI"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e5m2"
+source_floor_index = 41
+episode_id = "episode-5"
+display_floor_number = 2
+title = "Floor 2"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "PREGNANT"
+par_seconds = 90
+
+[[floors]]
+floor_id = "e5m3"
+source_floor_index = 42
+episode_id = "episode-5"
+display_floor_number = 3
+title = "Floor 3"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GOINGAFT"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e5m4"
+source_floor_index = 43
+episode_id = "episode-5"
+display_floor_number = 4
+title = "Floor 4"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "HEADACHE"
+par_seconds = 150
+
+[[floors]]
+floor_id = "e5m5"
+source_floor_index = 44
+episode_id = "episode-5"
+display_floor_number = 5
+title = "Floor 5"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_OMI"
+par_seconds = 240
+
+[[floors]]
+floor_id = "e5m6"
+source_floor_index = 45
+episode_id = "episode-5"
+display_floor_number = 6
+title = "Floor 6"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "PREGNANT"
+par_seconds = 180
+
+[[floors]]
+floor_id = "e5m7"
+source_floor_index = 46
+episode_id = "episode-5"
+display_floor_number = 7
+title = "Floor 7"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "HEADACHE"
+par_seconds = 270
+
+[[floors]]
+floor_id = "e5m8"
+source_floor_index = 47
+episode_id = "episode-5"
+display_floor_number = 8
+title = "Floor 8"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "GOINGAFT"
+par_seconds = 210
+
+[[floors]]
+floor_id = "e5m9"
+source_floor_index = 48
+episode_id = "episode-5"
+display_floor_number = 9
+title = "Floor 9"
+role = "final_boss"
+tally_kind = "none"
+music_name = "WARMARCH"
+
+[[floors]]
+floor_id = "e5m10"
+source_floor_index = 49
+episode_id = "episode-5"
+display_floor_number = 10
+title = "Secret floor 10"
+role = "secret"
+tally_kind = "fixed_bonus"
+music_name = "DUNGEON"
+bonus_points = 15000
+
+[[floors]]
+floor_id = "e6m1"
+source_floor_index = 50
+episode_id = "episode-6"
+display_floor_number = 1
+title = "Floor 1"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "INTROCW3"
+par_seconds = 390
+
+[[floors]]
+floor_id = "e6m2"
+source_floor_index = 51
+episode_id = "episode-6"
+display_floor_number = 2
+title = "Floor 2"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_RAP"
+par_seconds = 240
+
+[[floors]]
+floor_id = "e6m3"
+source_floor_index = 52
+episode_id = "episode-6"
+display_floor_number = 3
+title = "Floor 3"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "TWELFTH"
+par_seconds = 270
+
+[[floors]]
+floor_id = "e6m4"
+source_floor_index = 53
+episode_id = "episode-6"
+display_floor_number = 4
+title = "Floor 4"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "ZEROHOUR"
+par_seconds = 360
+
+[[floors]]
+floor_id = "e6m5"
+source_floor_index = 54
+episode_id = "episode-6"
+display_floor_number = 5
+title = "Floor 5"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "INTROCW3"
+par_seconds = 300
+
+[[floors]]
+floor_id = "e6m6"
+source_floor_index = 55
+episode_id = "episode-6"
+display_floor_number = 6
+title = "Floor 6"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "NAZI_RAP"
+par_seconds = 330
+
+[[floors]]
+floor_id = "e6m7"
+source_floor_index = 56
+episode_id = "episode-6"
+display_floor_number = 7
+title = "Floor 7"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "TWELFTH"
+par_seconds = 330
+
+[[floors]]
+floor_id = "e6m8"
+source_floor_index = 57
+episode_id = "episode-6"
+display_floor_number = 8
+title = "Floor 8"
+role = "normal"
+tally_kind = "par_ratios"
+music_name = "ZEROHOUR"
+par_seconds = 510
+
+[[floors]]
+floor_id = "e6m9"
+source_floor_index = 58
+episode_id = "episode-6"
+display_floor_number = 9
+title = "Floor 9"
+role = "final_boss"
+tally_kind = "none"
+music_name = "ULTIMATE"
+
+[[floors]]
+floor_id = "e6m10"
+source_floor_index = 59
+episode_id = "episode-6"
+display_floor_number = 10
+title = "Secret floor 10"
+role = "secret"
+tally_kind = "fixed_bonus"
+music_name = "FUNKYOU"
+bonus_points = 15000
+
+[[routes]]
+source_floor_index = 0
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 1
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 1
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 2
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 2
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 3
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 3
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 4
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 4
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 5
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 5
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 6
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 6
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 7
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 7
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 8
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 0
+trigger = "secret_exit"
+destination_kind = "floor"
+target_source_floor_index = 9
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 9
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 1
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 8
+trigger = "bj_exit"
+destination_kind = "ending"
+ending_id = "wolf-ending-1"
+show_tally = false
+
+[[routes]]
+source_floor_index = 10
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 11
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 11
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 12
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 12
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 13
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 13
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 14
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 14
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 15
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 15
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 16
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 16
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 17
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 17
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 18
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 10
+trigger = "secret_exit"
+destination_kind = "floor"
+target_source_floor_index = 19
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 19
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 11
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 18
+trigger = "boss_death"
+destination_kind = "ending"
+ending_id = "wolf-ending-2"
+show_tally = false
+
+[[routes]]
+source_floor_index = 20
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 21
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 21
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 22
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 22
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 23
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 23
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 24
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 24
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 25
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 25
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 26
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 26
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 27
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 27
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 28
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 26
+trigger = "secret_exit"
+destination_kind = "floor"
+target_source_floor_index = 29
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 29
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 27
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 28
+trigger = "boss_death"
+destination_kind = "ending"
+ending_id = "wolf-ending-3"
+show_tally = false
+
+[[routes]]
+source_floor_index = 30
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 31
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 31
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 32
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 32
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 33
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 33
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 34
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 34
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 35
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 35
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 36
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 36
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 37
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 37
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 38
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 32
+trigger = "secret_exit"
+destination_kind = "floor"
+target_source_floor_index = 39
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 39
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 33
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 38
+trigger = "boss_death"
+destination_kind = "ending"
+ending_id = "wolf-ending-4"
+show_tally = false
+
+[[routes]]
+source_floor_index = 40
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 41
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 41
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 42
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 42
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 43
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 43
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 44
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 44
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 45
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 45
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 46
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 46
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 47
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 47
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 48
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 44
+trigger = "secret_exit"
+destination_kind = "floor"
+target_source_floor_index = 49
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 49
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 45
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 48
+trigger = "bj_exit"
+destination_kind = "ending"
+ending_id = "wolf-ending-5"
+show_tally = false
+
+[[routes]]
+source_floor_index = 50
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 51
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 51
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 52
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 52
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 53
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 53
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 54
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 54
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 55
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 55
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 56
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 56
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 57
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 57
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 58
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 52
+trigger = "secret_exit"
+destination_kind = "floor"
+target_source_floor_index = 59
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 59
+trigger = "normal_exit"
+destination_kind = "floor"
+target_source_floor_index = 53
+show_tally = true
+arrival = "map_start"
+
+[[routes]]
+source_floor_index = 58
+trigger = "boss_death"
+destination_kind = "ending"
+ending_id = "wolf-ending-6"
+show_tally = false
+
+[[endings]]
+ending_id = "wolf-ending-1"
+kind = "wolf_episode"
+picture_role = "ending_first"
+picture_offset = 0
+music_name = "URAHERO"
+
+[[endings]]
+ending_id = "wolf-ending-2"
+kind = "wolf_episode"
+picture_role = "ending_first"
+picture_offset = 1
+music_name = "URAHERO"
+
+[[endings]]
+ending_id = "wolf-ending-3"
+kind = "wolf_episode"
+picture_role = "ending_first"
+picture_offset = 2
+music_name = "URAHERO"
+
+[[endings]]
+ending_id = "wolf-ending-4"
+kind = "wolf_episode"
+picture_role = "ending_first"
+picture_offset = 3
+music_name = "URAHERO"
+
+[[endings]]
+ending_id = "wolf-ending-5"
+kind = "wolf_episode"
+picture_role = "ending_first"
+picture_offset = 4
+music_name = "URAHERO"
+
+[[endings]]
+ending_id = "wolf-ending-6"
+kind = "wolf_episode"
+picture_role = "ending_first"
+picture_offset = 5
+music_name = "URAHERO"

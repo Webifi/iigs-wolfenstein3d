@@ -1,0 +1,43 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 82
+"bank" = [0, 0]
+"notes" = 20
+"name" = "Lead 2 (sawtooth)"
+
+[["instruments"]]
+"channel" = 3
+"program" = 120
+"bank" = [0, 0]
+"notes" = 3
+"name" = "Reverse Cymbal"
+
+[["instruments"]]
+"channel" = 4
+"program" = 19
+"bank" = [0, 0]
+"notes" = 32
+"name" = "Rock Organ"
+
+[["instruments"]]
+"channel" = 5
+"program" = 48
+"bank" = [0, 0]
+"notes" = 305
+"name" = "Timpani"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 347
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "9e4ed40592eb33921b5eba78fc67c57c7e843338431154e115cc77ffaa4e4b72"
+"authority" = "fan-conversion"

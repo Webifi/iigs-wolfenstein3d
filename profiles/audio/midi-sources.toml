@@ -1,0 +1,303 @@
+# Programs and channels use the printed MIDI convention: 1 through 128 / 1 through 16.
+# These defaults reproduce the eleven selected MIDI files; they do not rebuild DOC banks.
+# A source hash identifies the exact arrangement. Filenames alone are not trusted.
+format = 1
+
+[[song]]
+name = "NAZI_NOR"
+authority = "project-arrangement"
+source_file = "NAZI_NOR.mid"
+source_sha256 = "5e435de6329abbb7881b95c6c8aceea5f92228e85d03fe37929dddd1f09bb09f"
+selected_file = "01_NAZI_NOR_his.mid"
+selected_sha256 = "c94e41e84e769de355a7d4ef3c1f09b12b62d7abfb2fd3d46ff9b9fd572a5b76"
+
+[[song.change]]
+channel = 10
+from_program = 49 # Orchestra drum kit
+to_program = 1 # Standard drum kit
+
+[[song.change]]
+channel = 2
+from_program = 59 # Tuba
+to_program = 59 # Tuba
+
+[[song.change]]
+channel = 3
+from_program = 58 # Trombone
+to_program = 57 # Trumpet
+
+[[song.change]]
+channel = 4
+from_program = 71 # Bassoon
+to_program = 72 # Clarinet
+
+[[song.change]]
+channel = 5
+from_program = 59 # Tuba
+to_program = 58 # Trombone
+
+[[song]]
+name = "WONDERIN"
+authority = "composer-original"
+source_file = "wondering.mid"
+source_url = "https://web.archive.org/web/19970416092756id_/http://bpmusic.com:80/midi/wondering.mid"
+source_sha256 = "f034dfb71596c4711e9668d15d316772133a01ce434d6c409ef0f2dc67d9f7d4"
+selected_file = "02_WONDERIN_his.mid"
+selected_sha256 = "f034dfb71596c4711e9668d15d316772133a01ce434d6c409ef0f2dc67d9f7d4"
+
+[[song]]
+name = "GETTHEM"
+authority = "composer-original"
+source_file = "getthem.mid"
+source_url = "https://web.archive.org/web/19970416091501id_/http://bpmusic.com:80/midi/getthem.mid"
+source_sha256 = "511745ce9185592b4b8bb6c93721283957a6c3239996ceca4e9ea234db083917"
+selected_file = "03_GETTHEM_his.mid"
+selected_sha256 = "511745ce9185592b4b8bb6c93721283957a6c3239996ceca4e9ea234db083917"
+
+[[song]]
+name = "SEARCHN"
+authority = "composer-original"
+source_file = "searchn.mid"
+source_url = "https://web.archive.org/web/19970416092204id_/http://bpmusic.com:80/midi/searchn.mid"
+source_sha256 = "98873e03a9f4351fcff7ad22fd973c24960a5ba3d4fca5a5c6ed6ef991c66624"
+selected_file = "04_SEARCHN_his.mid"
+selected_sha256 = "98873e03a9f4351fcff7ad22fd973c24960a5ba3d4fca5a5c6ed6ef991c66624"
+
+[[song]]
+name = "POW"
+authority = "composer-original"
+source_file = "pow.mid"
+source_url = "https://web.archive.org/web/19970416092109id_/http://bpmusic.com:80/midi/pow.mid"
+source_sha256 = "741d54f2a10576dc4e86f8cf565f2420be2de0cd584331aab52ccf53636642ce"
+selected_file = "05_POW_his.mid"
+selected_sha256 = "741d54f2a10576dc4e86f8cf565f2420be2de0cd584331aab52ccf53636642ce"
+
+[[song]]
+name = "SUSPENSE"
+authority = "project-arrangement"
+source_file = "SUSPENSE.mid"
+source_sha256 = "4a5bfe792b8e3076c65e5ee36f68622794f566cf98546c966ec5f60d9fa7f892"
+selected_file = "06_SUSPENSE_his.mid"
+selected_sha256 = "0c19d4e91db1bcc9055bf24c02030e0b39f4bd8ae3b6c49aec951c94da1db5c5"
+
+[[song.change]]
+channel = 10
+from_program = 26 # TR-808 drum kit
+to_program = 1 # Standard drum kit
+
+[[song.change]]
+channel = 5
+from_program = 15 # Tubular Bells
+to_program = 15 # Tubular Bells
+
+[[song.change]]
+channel = 7
+from_program = 118 # Melodic Tom
+to_program = 119 # Synth Drum
+
+[[song.change]]
+channel = 3
+from_program = 88 # Lead 8 (bass + lead)
+to_program = 82 # Lead 2 (sawtooth)
+
+[[song.change]]
+channel = 4
+from_program = 109 # Kalimba
+to_program = 46 # Pizzicato Strings
+
+[[song.change]]
+channel = 6
+from_program = 61 # French Horn
+to_program = 59 # Tuba
+
+[[song]]
+name = "WARMARCH"
+authority = "composer-original"
+source_file = "warmarch.mid"
+source_url = "https://web.archive.org/web/19970416091931id_/http://bpmusic.com:80/midi/warmarch.mid"
+source_sha256 = "62cf5697f8ad066a506af38b5cf1aeafee9d204c4a9091c141358b9a67ed79d3"
+selected_file = "07_WARMARCH_his.mid"
+selected_sha256 = "62cf5697f8ad066a506af38b5cf1aeafee9d204c4a9091c141358b9a67ed79d3"
+
+[[song]]
+name = "CORNER"
+authority = "composer-original"
+source_file = "corner.mid"
+source_url = "https://web.archive.org/web/19970416091346id_/http://bpmusic.com:80/midi/corner.mid"
+source_sha256 = "785e8986bb3ce4c2b9d1476c2604c1f316a81c132b1aee58d7b808ea68533f88"
+selected_file = "08_CORNER_his.mid"
+selected_sha256 = "785e8986bb3ce4c2b9d1476c2604c1f316a81c132b1aee58d7b808ea68533f88"
+
+[[song]]
+name = "ENDLEVEL"
+authority = "project-arrangement"
+source_file = "ENDLEVEL.mid"
+source_sha256 = "94d404b118f744560bc860d84db55d43ebe731521ec0c9dad74a01bf2a39b517"
+selected_file = "09_ENDLEVEL_his.mid"
+selected_sha256 = "d28d887aea2ff17877177fcb4cd7b870f0af83500ec37ab7d3fb7ca039b29917"
+
+[[song.change]]
+channel = 10
+from_program = 49 # Orchestra drum kit
+to_program = 1 # Standard drum kit
+
+[[song.change]]
+channel = 1
+from_program = 39 # Synth Bass 1
+to_program = 39 # Synth Bass 1
+
+[[song.change]]
+channel = 8
+from_program = 48 # Timpani
+to_program = 48 # Timpani
+
+[[song.change]]
+channel = 3
+from_program = 59 # Tuba
+to_program = 57 # Trumpet
+
+[[song.change]]
+channel = 5
+from_program = 58 # Trombone
+to_program = 57 # Trumpet
+
+[[song.change]]
+channel = 6
+from_program = 58 # Trombone
+to_program = 73 # Piccolo
+
+[[song.change]]
+channel = 2
+from_program = 82 # Lead 2 (sawtooth)
+to_program = 82 # Lead 2 (sawtooth)
+
+[[song.change]]
+channel = 4
+from_program = 59 # Tuba
+to_program = 61 # French Horn
+
+[[song]]
+name = "ROSTER"
+authority = "project-arrangement"
+source_file = "ROSTER.mid"
+source_sha256 = "50c27a94dc9ce52b90b207aad428fc668e917bce83dafe7bdcf93f635a9d5ae2"
+selected_file = "10_ROSTER_his.mid"
+selected_sha256 = "5300f896ed6979f34a7ab74d11ce4a24907f4e8f5a0702d517ad2952614aa53e"
+
+[[song.change]]
+channel = 10
+from_program = 49 # Orchestra drum kit
+to_program = 1 # Standard drum kit
+
+[[song.change]]
+channel = 1
+from_program = 58 # Trombone
+to_program = 57 # Trumpet
+
+[[song.change]]
+channel = 2
+from_program = 59 # Tuba
+to_program = 59 # Tuba
+
+[[song.change]]
+channel = 3
+from_program = 71 # Bassoon
+to_program = 69 # Oboe
+
+[[song.change]]
+channel = 4
+from_program = 72 # Clarinet
+to_program = 72 # Clarinet
+
+[[song.change]]
+channel = 5
+from_program = 47 # Orchestral Harp
+to_program = 73 # Piccolo
+
+[[song]]
+name = "URAHERO"
+authority = "project-arrangement"
+source_file = "URAHERO.mid"
+source_sha256 = "5d047a5b704cf4634e2d028b8f3e625a76b515907c5bf32cb7a1d1d112976014"
+selected_file = "11_URAHERO_his.mid"
+selected_sha256 = "320c29a0ee419d375f686a45bfe06a87ef9941e8edd7126385fcb5a4aefa234c"
+
+[[song.change]]
+channel = 10
+from_program = 49 # Orchestra drum kit
+to_program = 1 # Standard drum kit
+
+[[song.change]]
+channel = 1
+from_program = 58 # Trombone
+to_program = 57 # Trumpet
+
+[[song.change]]
+channel = 2
+from_program = 59 # Tuba
+to_program = 58 # Trombone
+
+[[song.change]]
+channel = 3
+from_program = 59 # Tuba
+to_program = 72 # Clarinet
+
+[[song.change]]
+channel = 4
+from_program = 59 # Tuba
+to_program = 74 # Flute
+
+[[song.change]]
+channel = 8
+from_program = 47 # Orchestral Harp
+to_program = 29 # Electric Guitar (muted)
+
+[[song.change]]
+channel = 5
+from_program = 59 # Tuba
+to_program = 44 # Contrabass
+
+[[song]]
+name = "ZEROHOUR"
+authority = "composer-original"
+source_file = "zerohour.mid"
+source_url = "https://web.archive.org/web/19970416093055id_/http://bpmusic.com:80/midi/zerohour.mid"
+source_sha256 = "9cd4d5b08a463ce8f46369970aaeeb8b135cab0cd5280444794eb5c5a34ceee2"
+selected_file = "zerohour.mid"
+selected_sha256 = "9cd4d5b08a463ce8f46369970aaeeb8b135cab0cd5280444794eb5c5a34ceee2"
+
+[[song]]
+name = "ULTIMATE"
+authority = "composer-original"
+source_file = "ultimate.mid"
+source_url = "https://web.archive.org/web/19970416092603id_/http://bpmusic.com:80/midi/ultimate.mid"
+source_sha256 = "8611f86bda7405e981bedb6398f162e34c079e6c58ad96c0d9a43ed77ffaee58"
+selected_file = "ultimate.mid"
+selected_sha256 = "8611f86bda7405e981bedb6398f162e34c079e6c58ad96c0d9a43ed77ffaee58"
+
+[[song]]
+name = "XEVIL"
+authority = "composer-original"
+source_file = "evilincarnate.mid"
+source_url = "https://web.archive.org/web/19970416091358id_/http://bpmusic.com:80/midi/evilincarnate.mid"
+source_sha256 = "a71c2ae9a43c014f3c4090cca639c0b45c4df433ee4f401b4a6086bc31bf9f4b"
+selected_file = "evilincarnate.mid"
+selected_sha256 = "a71c2ae9a43c014f3c4090cca639c0b45c4df433ee4f401b4a6086bc31bf9f4b"
+
+[[song]]
+name = "XFUNKIE"
+authority = "composer-original"
+source_file = "funky.mid"
+source_url = "https://web.archive.org/web/19970416091435id_/http://bpmusic.com:80/midi/funky.mid"
+source_sha256 = "3c9b8a1ac87f30a45099d7be0c1d833df4c13a9d75a1a18ea3c5d1fb661e5357"
+selected_file = "funky.mid"
+selected_sha256 = "3c9b8a1ac87f30a45099d7be0c1d833df4c13a9d75a1a18ea3c5d1fb661e5357"
+
+[[song]]
+name = "XTOWER2"
+authority = "composer-original"
+source_file = "tower.mid"
+source_url = "https://web.archive.org/web/19970416092534id_/http://bpmusic.com:80/midi/tower.mid"
+source_sha256 = "f90a60576764ceed5e9d34e007b545a609fb4d5ed418902f18cb2a8eee48eaf8"
+selected_file = "tower.mid"
+selected_sha256 = "f90a60576764ceed5e9d34e007b545a609fb4d5ed418902f18cb2a8eee48eaf8"

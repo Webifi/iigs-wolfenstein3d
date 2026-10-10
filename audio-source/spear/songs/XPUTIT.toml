@@ -1,0 +1,58 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XPUTIT"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XPUTIT/score.toml"
+"sha256" = "0eb4d838d1f541165ae29db8fa220e968fb82816f612c543fc9b1cf347f46642"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/XPUTIT.imf"
+"sha256" = "bd19656d18002416b42c27244898a5e8f79a53be2ca42a924b65790ae3296815"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XPUTIT/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch01" = -7.594
+"ch02" = -3.3317
+"ch03" = -6.1564
+"ch04" = -2.9274
+"ch05" = -3.473
+"ch06" = -3.8961
+"ch08" = 1.8594
+"k38" = -5.3464
+
+["doc"."pan"]
+"ch01" = 62
+"ch02" = 67
+"ch03" = 64
+"ch04" = 26
+"ch05" = 100
+"ch06" = 58
+"ch08" = 7
+"ch09" = 118

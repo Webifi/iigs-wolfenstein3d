@@ -1,0 +1,9 @@
+"format" = 2
+"game" = "shareware"
+
+["boot_picture"]
+"source" = "data/boot-picture-shareware.png"
+
+[content]
+wall_pages = 106
+save_blocks = 24

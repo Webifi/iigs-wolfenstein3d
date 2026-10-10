@@ -1,0 +1,52 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "HEADACHE"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/HEADACHE/score.toml"
+"sha256" = "57639c6f27d2e7ae13f8511c1a2126c596c5bb8e580eb93e82cd4a242a011377"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/HEADACHE.imf"
+"sha256" = "2dd91f460ce0dfc1e14914c305ca374960bd78e9a3aff6e15b24e4a6d73c00c6"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/HEADACHE/sampling.toml"
+
+["doc"."levels"]
+"ch01" = 1.1742
+"ch02" = -2.2711
+"ch03" = -1.3103
+"ch04" = -3.2085
+"ch05" = 4.8134
+"ch06" = 1.1062
+
+["doc"."pan"]
+"ch01" = 61
+"ch02" = 62
+"ch03" = 28
+"ch04" = 104
+"ch05" = 64
+"ch06" = 62

@@ -1,0 +1,53 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "ULTIMATE"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/ULTIMATE/score.toml"
+"sha256" = "9f3bfe5cd18d996b59530d1d6f8533adfc63ac70723b0483fa8260aa1dee34eb"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/ULTIMATE.imf"
+"sha256" = "c249006fe2dbfca27cedf3ab2661eedbaf44051dbde38d49f0917dbd706efc07"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/ULTIMATE/sampling.toml"
+
+["doc"."levels"]
+"ch02" = 2.9758
+"ch05" = -1.8593
+"ch06" = 1.2434
+"ch07" = -1.3679
+"ch08" = 2.9834
+"k40" = 2.5152
+
+["doc"."pan"]
+"ch02" = 63
+"ch03" = 45
+"ch04" = 86
+"ch05" = 64
+"ch06" = 58
+"ch07" = 90
+"ch08" = 40

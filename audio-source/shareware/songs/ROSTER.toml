@@ -1,0 +1,58 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "ROSTER"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/ROSTER/score.toml"
+"sha256" = "2ed4f6076c5ad18d46cb5b6a6d5ff555b43b4abdc8d5d12b6b110e450c36f4fd"
+"authority" = "project-arrangement"
+
+["original"]
+"file" = "../licensed/ROSTER.imf"
+"sha256" = "e0d20a12e30efad52c400bfe90651ff9bb417234b1f08c75c30cdad924b96cf1"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "listed"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"song_gain_steps" = 15
+"loop_layout" = "repeated-endpoint"
+"sampling_policy" = "../inputs/ROSTER/sampling.toml"
+
+["doc"."levels"]
+"ch01" = 1.4
+"ch02" = -1.0
+"ch03" = -0.9
+"ch04" = 0.1
+"ch05" = -0.1
+
+["doc"."pan"]
+"ch01" = 64
+"ch02" = 64
+"ch03" = 64
+"ch04" = 64
+"ch05" = 64
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 38
+"bytes" = 8192
+"rate" = 16000

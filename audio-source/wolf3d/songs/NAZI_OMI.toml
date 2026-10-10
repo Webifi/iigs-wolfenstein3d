@@ -1,0 +1,57 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "NAZI_OMI"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/NAZI_OMI/score.toml"
+"sha256" = "e77630587e00e6679b752e4557e3164cd3a20133be8b702814b2aa7fb1d8e7b5"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/NAZI_OMI.imf"
+"sha256" = "e88ee6a7289617a0ec3acd8798c03ad94a3abb7f7353182c3e550378e4033596"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/NAZI_OMI/sampling.toml"
+
+["doc"."levels"]
+"ch01" = 4.1021
+"ch03" = 1.2871
+"ch06" = 1.2416
+"ch07" = -7.7002
+"ch08" = 2.5278
+"k38" = 0.5941
+"ch02" = -1.528
+"ch04" = 1.711
+"ch05" = 2.2664
+
+["doc"."pan"]
+"ch01" = 26
+"ch02" = 64
+"ch03" = 100
+"ch04" = 25
+"ch05" = 101
+"ch06" = 63
+"ch07" = 64
+"ch08" = 63

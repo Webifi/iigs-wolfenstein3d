@@ -1,0 +1,59 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XTOWER2"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XTOWER2/score.toml"
+"sha256" = "ed9192664836fb08c30d83b3da20f01c00712c3dfbb994900c0cfcf5fdfb77bf"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/XTOWER2.imf"
+"sha256" = "ad1efcef0e4a4ff9c526422fdb00f51e1f27d7e60f17f6936fb0793c34f2dbbd"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XTOWER2/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -0.6191
+"ch03" = 6.7531
+"ch04" = 8.2751
+"ch05" = 6.959
+"ch06" = 4.0157
+"ch07" = -7.4288
+"ch08" = -6.3146
+"ch09" = 7.3124
+"k36" = -5.5933
+
+["doc"."pan"]
+"ch02" = 69
+"ch03" = 90
+"ch04" = 67
+"ch05" = 41
+"ch06" = 61
+"ch07" = 68
+"ch08" = 82
+"ch09" = 66

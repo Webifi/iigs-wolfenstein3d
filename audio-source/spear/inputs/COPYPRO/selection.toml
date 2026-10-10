@@ -1,0 +1,43 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 4
+"program" = 71
+"bank" = [0, 0]
+"notes" = 65
+"name" = "Bassoon"
+
+[["instruments"]]
+"channel" = 5
+"program" = 72
+"bank" = [0, 0]
+"notes" = 128
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 6
+"program" = 74
+"bank" = [0, 0]
+"notes" = 128
+"name" = "Flute"
+
+[["instruments"]]
+"channel" = 7
+"program" = 72
+"bank" = [0, 0]
+"notes" = 128
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 8
+"program" = 41
+"bank" = [0, 0]
+"notes" = 121
+"name" = "Violin"
+
+["source"]
+"kind" = "midi"
+"sha256" = "d87baac012dec55c1b4699b1bd9ea8b6db9688e2119fe5511793c817fa91bd38"
+"authority" = "fan-conversion"

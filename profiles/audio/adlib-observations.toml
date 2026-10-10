@@ -1,0 +1,558 @@
+# Observed OPL-to-Roland choices. These are suggestions for new arrangements.
+# Same patch does not imply same orchestration or register in another song.
+# Edit song recipes to select programs; unresolved choices never become piano.
+format = 1
+
+[[patch]]
+id = "00000b00a8d64c4f000000"
+authority = "composer-original"
+candidates = [
+    "program 46 Pizzicato Strings, bank 0/0, transpose -12, drum -1",
+]
+evidence = [
+    "POW OPL 8 -> MIDI 8: 46 (192 notes); composer-original",
+    "SUSPENSE OPL 8 -> MIDI 7: 119 (42 notes); project-arrangement",
+]
+
+[[patch]]
+id = "00000d00e8a5efff000006"
+authority = "composer-original"
+candidates = [
+    "program 1 Drum kit, bank 0/0, transpose 0, drum 35",
+    "program 1 Drum kit, bank 0/0, transpose 0, drum 36",
+    "program 5 Electric Piano 1, bank 0/0, transpose -12, drum -1",
+    "program 26 Drum kit, bank 0/0, transpose 0, drum 35",
+    "program 119 Synth Drum, bank 0/0, transpose -16, drum -1",
+]
+evidence = [
+    "NAZI_NOR OPL 2 -> MIDI 10: 1 (77 notes); project-arrangement",
+    "GETTHEM OPL 5 -> MIDI 8: 5 (230 notes); composer-original",
+    "SEARCHN OPL 3 -> MIDI 2: 119 (72 notes); composer-original",
+    "SUSPENSE OPL 2 -> MIDI 10: 1 (336 notes); project-arrangement",
+    "URAHERO OPL 7 -> MIDI 10: 1 (30 notes); project-arrangement",
+    "ZEROHOUR OPL 2 -> MIDI 10: 1 (70 notes); composer-original",
+    "XFUNKIE OPL 4 -> MIDI 10: 26 (242 notes); composer-original",
+    "XEVIL OPL 8 -> MIDI 10: 1 (178 notes); composer-original",
+    "XTOWER2 OPL 8 -> MIDI 10: 1 (80 notes); composer-original",
+]
+
+[[patch]]
+id = "0000400009f75394000000"
+authority = "composer-original"
+candidates = [
+    "program 48 Timpani, bank 0/0, transpose -12, drum -1",
+    "program 119 Synth Drum, bank 0/0, transpose -26, drum -1",
+]
+evidence = [
+    "WONDERIN OPL 6 -> MIDI 6: 48 (80 notes); composer-original",
+    "CORNER OPL 6 -> MIDI 6: 119 (75 notes); composer-original",
+    "ENDLEVEL OPL 9 -> MIDI 8: 48 (39 notes); project-arrangement",
+]
+
+[[patch]]
+id = "01011100f0f0fff800000a"
+authority = "composer-original"
+candidates = [
+    "program 21 Reed Organ, bank 0/0, transpose 0, drum -1",
+    "program 76 Pan Flute, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "WARMARCH OPL 8 -> MIDI 5: 76 (18 notes); composer-original",
+    "XEVIL OPL 7 -> MIDI 7: 21 (47 notes); composer-original",
+]
+
+[[patch]]
+id = "01211880d4c4f28a00000a"
+authority = "composer-original"
+candidates = [
+    "program 36 Fretless Bass, bank 0/0, transpose 0, drum -1",
+    "program 37 Slap Bass 1, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "XFUNKIE OPL 2 -> MIDI 2: 37 (188 notes); composer-original",
+    "XFUNKIE OPL 3 -> MIDI 3: 36 (188 notes); composer-original",
+]
+
+[[patch]]
+id = "02012980f0f47533000000"
+authority = "composer-original"
+candidates = [
+    "program 16 Dulcimer, bank 0/0, transpose 0, drum -1",
+    "program 100 FX 4 (atmosphere), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "CORNER OPL 2 -> MIDI 2: 16 (120 notes); composer-original",
+    "XTOWER2 OPL 2 -> MIDI 2: 100 (140 notes); composer-original",
+]
+
+[[patch]]
+id = "02012980f5f275f3000000"
+authority = "composer-original"
+candidates = [
+    "program 9 Celesta, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "SEARCHN OPL 4 -> MIDI 4: 9 (50 notes); composer-original",
+]
+
+[[patch]]
+id = "05000000f0f877e500000e"
+authority = "composer-original"
+candidates = [
+    "program 26 Drum kit, bank 0/0, transpose 0, drum 42",
+]
+evidence = [
+    "XFUNKIE OPL 6 -> MIDI 10: 26 (736 notes); composer-original",
+]
+
+[[patch]]
+id = "05000000f0f8ffb901000e"
+authority = "composer-original"
+candidates = [
+    "program 1 Drum kit, bank 0/0, transpose 0, drum 40",
+]
+evidence = [
+    "ZEROHOUR OPL 3 -> MIDI 10: 1 (110 notes); composer-original",
+]
+
+[[patch]]
+id = "0600000055f8f0f500000e"
+authority = "composer-original"
+candidates = [
+    "program 1 Drum kit, bank 0/0, transpose 0, drum 40",
+]
+evidence = [
+    "CORNER OPL 7 -> MIDI 10: 1 (243 notes); composer-original",
+    "ULTIMATE OPL 5 -> MIDI 10: 1 (405 notes); composer-original",
+]
+
+[[patch]]
+id = "06000000f0f7f0f700000e"
+authority = "composer-original"
+candidates = [
+    "program 1 Drum kit, bank 0/0, transpose 0, drum 40",
+    "program 26 Drum kit, bank 0/0, transpose 0, drum 38",
+]
+evidence = [
+    "NAZI_NOR OPL 7 -> MIDI 10: 1 (258 notes); project-arrangement",
+    "GETTHEM OPL 2 -> MIDI 10: 1 (406 notes); composer-original",
+    "SEARCHN OPL 2 -> MIDI 10: 1 (306 notes); composer-original",
+    "SUSPENSE OPL 3 -> MIDI 10: 1 (27 notes); project-arrangement",
+    "ENDLEVEL OPL 8 -> MIDI 10: 1 (261 notes); project-arrangement",
+    "ROSTER OPL 7 -> MIDI 10: 1 (384 notes); project-arrangement",
+    "URAHERO OPL 8 -> MIDI 10: 1 (99 notes); project-arrangement",
+    "XFUNKIE OPL 5 -> MIDI 10: 26 (92 notes); composer-original",
+    "XEVIL OPL 9 -> MIDI 10: 1 (375 notes); composer-original",
+]
+
+[[patch]]
+id = "07000000f05cf0dc00000e"
+authority = "composer-original"
+candidates = [
+    "program 120 Reverse Cymbal, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "GETTHEM OPL 3 -> MIDI 7: 120 (28 notes); composer-original",
+]
+
+[[patch]]
+id = "13e14d00faf111f1000008"
+authority = "composer-original"
+candidates = [
+    "program 89 Pad 1 (new age), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "POW OPL 5 -> MIDI 5: 89 (32 notes); composer-original",
+    "CORNER OPL 3 -> MIDI 3: 89 (48 notes); composer-original",
+]
+
+[[patch]]
+id = "16e14d00faf111f1000008"
+authority = "composer-original"
+candidates = [
+    "program 89 Pad 1 (new age), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "XTOWER2 OPL 9 -> MIDI 9: 89 (65 notes); composer-original",
+]
+
+[[patch]]
+id = "20211b0063630a0b00000c"
+authority = "project-arrangement"
+candidates = [
+    "program 73 Piccolo, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "ENDLEVEL OPL 7 -> MIDI 6: 73 (25 notes); project-arrangement",
+]
+
+[[patch]]
+id = "21211500b4944cac00000a"
+authority = "composer-original"
+candidates = [
+    "program 40 Synth Bass 2, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "POW OPL 2 -> MIDI 2: 40 (160 notes); composer-original",
+]
+
+[[patch]]
+id = "21211580d3c32c2c00000a"
+authority = "composer-original"
+candidates = [
+    "program 33 Acoustic Bass, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "ZEROHOUR OPL 5 -> MIDI 5: 33 (252 notes); composer-original",
+]
+
+[[patch]]
+id = "2121160063630e0e00000c"
+authority = "composer-original"
+candidates = [
+    "program 57 Trumpet, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "WARMARCH OPL 9 -> MIDI 7: 57 (13 notes); composer-original",
+]
+
+[[patch]]
+id = "21219a8053a0561600000e"
+authority = "composer-original"
+candidates = [
+    "program 59 Tuba, bank 0/0, transpose 0, drum -1",
+    "program 61 French Horn, bank 0/0, transpose 0, drum -1",
+    "program 93 Pad 5 (bowed), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "NAZI_NOR OPL 6 -> MIDI 5: 58 (67 notes); project-arrangement",
+    "WONDERIN OPL 2 -> MIDI 2: 61 (180 notes); composer-original",
+    "SEARCHN OPL 7 -> MIDI 7: 93 (64 notes); composer-original",
+    "ENDLEVEL OPL 4 -> MIDI 3: 57 (20 notes); project-arrangement",
+    "ENDLEVEL OPL 5 -> MIDI 4: 61 (9 notes); project-arrangement",
+    "URAHERO OPL 3 -> MIDI 2: 58 (43 notes); project-arrangement",
+    "URAHERO OPL 4 -> MIDI 3: 72 (43 notes); project-arrangement",
+    "URAHERO OPL 5 -> MIDI 4: 74 (43 notes); project-arrangement",
+    "ULTIMATE OPL 2 -> MIDI 3: 59 (378 notes); composer-original",
+    "ULTIMATE OPL 3 -> MIDI 4: 59 (363 notes); composer-original",
+]
+
+[[patch]]
+id = "21a1168077608f2a000006"
+authority = "project-arrangement"
+candidates = [
+    "program 73 Piccolo, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "ROSTER OPL 6 -> MIDI 5: 73 (51 notes); project-arrangement",
+]
+
+[[patch]]
+id = "21a119807760bf2a000006"
+authority = "composer-original"
+candidates = [
+    "program 47 Orchestral Harp, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "SEARCHN OPL 5 -> MIDI 5: 47 (50 notes); composer-original",
+]
+
+[[patch]]
+id = "3021160073207e9e00000e"
+authority = "composer-original"
+candidates = [
+    "program 96 Pad 8 (sweep), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "XFUNKIE OPL 7 -> MIDI 7: 96 (22 notes); composer-original",
+    "XFUNKIE OPL 8 -> MIDI 8: 96 (22 notes); composer-original",
+]
+
+[[patch]]
+id = "3021160073807e9e00000e"
+authority = "composer-original"
+candidates = [
+    "program 39 Synth Bass 1, bank 0/0, transpose -24, drum -1",
+]
+evidence = [
+    "GETTHEM OPL 4 -> MIDI 3: 39 (333 notes); composer-original",
+    "ENDLEVEL OPL 2 -> MIDI 1: 39 (51 notes); project-arrangement",
+]
+
+[[patch]]
+id = "31168180a1c23074000008"
+authority = "composer-original"
+candidates = [
+    "program 63 Synth Brass 1, bank 0/0, transpose 0, drum -1",
+    "program 85 Lead 5 (charang), bank 0/0, transpose 12, drum -1",
+]
+evidence = [
+    "POW OPL 3 -> MIDI 3: 85 (32 notes); composer-original",
+    "XEVIL OPL 5 -> MIDI 5: 63 (47 notes); composer-original",
+]
+
+[[patch]]
+id = "3121160063630a0b00000c"
+authority = "composer-original"
+candidates = [
+    "program 67 Tenor Sax, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "ZEROHOUR OPL 9 -> MIDI 9: 67 (36 notes); composer-original",
+]
+
+[[patch]]
+id = "3121160073808e9e00000e"
+authority = "composer-original"
+candidates = [
+    "program 82 Lead 2 (sawtooth), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "ENDLEVEL OPL 3 -> MIDI 2: 82 (39 notes); project-arrangement",
+    "ULTIMATE OPL 9 -> MIDI 2: 82 (60 notes); composer-original",
+]
+
+[[patch]]
+id = "3122c300878b170e000002"
+authority = "composer-original"
+candidates = [
+    "program 69 Oboe, bank 0/0, transpose 0, drum -1",
+    "program 70 English Horn, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "WARMARCH OPL 6 -> MIDI 3: 70 (14 notes); composer-original",
+    "ULTIMATE OPL 8 -> MIDI 8: 69 (222 notes); composer-original",
+]
+
+[[patch]]
+id = "31324400f2f09a27000006"
+authority = "composer-original"
+candidates = [
+    "program 29 Electric Guitar (muted), bank 0/0, transpose 0, drum -1",
+    "program 82 Lead 2 (sawtooth), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "SEARCHN OPL 9 -> MIDI 9: 29 (384 notes); composer-original",
+    "XTOWER2 OPL 6 -> MIDI 6: 82 (12 notes); composer-original",
+]
+
+[[patch]]
+id = "31324500f1f25327000006"
+authority = "project-arrangement"
+candidates = [
+    "program 82 Lead 2 (sawtooth), bank 0/0, transpose 12, drum -1",
+]
+evidence = [
+    "SUSPENSE OPL 4 -> MIDI 3: 82 (13 notes); project-arrangement",
+]
+
+[[patch]]
+id = "31611b0061d2063600000c"
+authority = "composer-original"
+candidates = [
+    "program 57 Trumpet, bank 0/0, transpose 0, drum -1",
+    "program 58 Trombone, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "NAZI_NOR OPL 4 -> MIDI 3: 57 (67 notes); project-arrangement",
+    "POW OPL 6 -> MIDI 6: 58 (28 notes); composer-original",
+    "ENDLEVEL OPL 6 -> MIDI 5: 57 (25 notes); project-arrangement",
+    "ROSTER OPL 2 -> MIDI 1: 57 (30 notes); project-arrangement",
+    "ZEROHOUR OPL 8 -> MIDI 8: 57 (36 notes); composer-original",
+]
+
+[[patch]]
+id = "31611b0064d0076700000e"
+authority = "composer-original"
+candidates = [
+    "program 89 Pad 1 (new age), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "SUSPENSE OPL 7 -> MIDI 6: 59 (288 notes); project-arrangement",
+    "WARMARCH OPL 5 -> MIDI 2: 89 (6 notes); composer-original",
+]
+
+[[patch]]
+id = "32114400f8f5ff7f00000e"
+authority = "composer-original"
+candidates = [
+    "program 119 Synth Drum, bank 0/0, transpose 0, drum -1",
+    "program 128 Gunshot, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "POW OPL 7 -> MIDI 7: 119 (96 notes); composer-original",
+    "SUSPENSE OPL 5 -> MIDI 4: 46 (90 notes); project-arrangement",
+    "WARMARCH OPL 3 -> MIDI 8: 128 (48 notes); composer-original",
+]
+
+[[patch]]
+id = "32611c808260180700000c"
+authority = "composer-original"
+candidates = [
+    "program 72 Clarinet, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "SEARCHN OPL 6 -> MIDI 6: 72 (50 notes); composer-original",
+    "ROSTER OPL 5 -> MIDI 4: 72 (48 notes); project-arrangement",
+]
+
+[[patch]]
+id = "32619a805160193900000c"
+authority = "composer-original"
+candidates = [
+    "program 72 Clarinet, bank 0/0, transpose 0, drum -1",
+    "program 83 Lead 3 (calliope), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "WONDERIN OPL 8 -> MIDI 8: 83 (39 notes); composer-original",
+    "GETTHEM OPL 8 -> MIDI 5: 72 (180 notes); composer-original",
+    "WARMARCH OPL 5 -> MIDI 2: 72 (18 notes); composer-original",
+    "CORNER OPL 5 -> MIDI 5: 72 (62 notes); composer-original",
+]
+
+[[patch]]
+id = "6121190053a0581800000c"
+authority = "composer-original"
+candidates = [
+    "program 58 Trombone, bank 0/0, transpose 0, drum -1",
+    "program 59 Tuba, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "NAZI_NOR OPL 3 -> MIDI 2: 59 (94 notes); project-arrangement",
+    "GETTHEM OPL 9 -> MIDI 6: 58 (180 notes); composer-original",
+    "WARMARCH OPL 7 -> MIDI 4: 59 (60 notes); composer-original",
+    "ROSTER OPL 3 -> MIDI 2: 59 (32 notes); project-arrangement",
+    "URAHERO OPL 6 -> MIDI 5: 44 (30 notes); project-arrangement",
+]
+
+[[patch]]
+id = "6121190073a0571700000c"
+authority = "project-arrangement"
+candidates = [
+    "program 57 Trumpet, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "URAHERO OPL 2 -> MIDI 1: 57 (26 notes); project-arrangement",
+]
+
+[[patch]]
+id = "61e1a78072508e1a000002"
+authority = "composer-original"
+candidates = [
+    "program 53 Choir Aahs, bank 0/0, transpose 0, drum -1",
+    "program 73 Piccolo, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "WONDERIN OPL 9 -> MIDI 9: 53 (19 notes); composer-original",
+    "ULTIMATE OPL 6 -> MIDI 6: 73 (384 notes); composer-original",
+]
+
+[[patch]]
+id = "70228d006e6b170e000002"
+authority = "composer-original"
+candidates = [
+    "program 69 Oboe, bank 0/0, transpose 0, drum -1",
+    "program 71 Bassoon, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "GETTHEM OPL 6 -> MIDI 2: 69 (54 notes); composer-original",
+    "WARMARCH OPL 9 -> MIDI 6: 71 (6 notes); composer-original",
+]
+
+[[patch]]
+id = "7122c3008e8b170e000002"
+authority = "project-arrangement"
+candidates = [
+    "program 69 Oboe, bank 0/0, transpose 0, drum -1",
+    "program 72 Clarinet, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "NAZI_NOR OPL 5 -> MIDI 4: 72 (67 notes); project-arrangement",
+    "ROSTER OPL 4 -> MIDI 3: 69 (59 notes); project-arrangement",
+]
+
+[[patch]]
+id = "716156005154031700000e"
+authority = "composer-original"
+candidates = [
+    "program 41 Violin, bank 0/0, transpose 0, drum -1",
+    "program 42 Viola, bank 0/0, transpose 0, drum -1",
+    "program 43 Cello, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "WONDERIN OPL 3 -> MIDI 3: 41 (128 notes); composer-original",
+    "WONDERIN OPL 4 -> MIDI 4: 42 (128 notes); composer-original",
+    "WONDERIN OPL 5 -> MIDI 5: 43 (128 notes); composer-original",
+]
+
+[[patch]]
+id = "93a14c00faf111f1000308"
+authority = "composer-original"
+candidates = [
+    "program 15 Tubular Bells, bank 0/0, transpose 12, drum -1",
+]
+evidence = [
+    "ZEROHOUR OPL 6 -> MIDI 6: 15 (12 notes); composer-original",
+]
+
+[[patch]]
+id = "a1e21380d660af2a000002"
+authority = "composer-original"
+candidates = [
+    "program 74 Flute, bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "GETTHEM OPL 7 -> MIDI 4: 74 (180 notes); composer-original",
+]
+
+[[patch]]
+id = "a2e21d809560242a000002"
+authority = "composer-original"
+candidates = [
+    "program 44 Contrabass, bank 0/0, transpose 12, drum -1",
+    "program 73 Piccolo, bank 0/0, transpose 12, drum -1",
+    "program 74 Flute, bank 0/0, transpose 12, drum -1",
+]
+evidence = [
+    "WONDERIN OPL 7 -> MIDI 7: 44 (49 notes); composer-original",
+    "WARMARCH OPL 4 -> MIDI 1: 73 (8 notes); composer-original",
+    "CORNER OPL 4 -> MIDI 4: 74 (46 notes); composer-original",
+]
+
+[[patch]]
+id = "d7d24f00f2f161b2000008"
+authority = "project-arrangement"
+candidates = [
+    "program 15 Tubular Bells, bank 0/0, transpose 12, drum -1",
+]
+evidence = [
+    "SUSPENSE OPL 6 -> MIDI 5: 15 (11 notes); project-arrangement",
+]
+
+[[patch]]
+id = "e2e1ca00f8c0e50e000008"
+authority = "composer-original"
+candidates = [
+    "program 18 Percussive Organ, bank 0/0, transpose 0, drum -1",
+    "program 103 FX 7 (echoes), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "XFUNKIE OPL 9 -> MIDI 9: 103 (33 notes); composer-original",
+    "XEVIL OPL 4 -> MIDI 4: 18 (47 notes); composer-original",
+]
+
+[[patch]]
+id = "f1e1180032f11113000000"
+authority = "composer-original"
+candidates = [
+    "program 29 Electric Guitar (muted), bank 0/0, transpose 0, drum -1",
+    "program 78 Shakuhachi, bank 0/0, transpose 0, drum -1",
+    "program 89 Pad 1 (new age), bank 0/0, transpose 0, drum -1",
+]
+evidence = [
+    "POW OPL 4 -> MIDI 4: 78 (8 notes); composer-original",
+    "ZEROHOUR OPL 7 -> MIDI 7: 29 (252 notes); composer-original",
+    "XTOWER2 OPL 3 -> MIDI 3: 89 (37 notes); composer-original",
+    "XTOWER2 OPL 4 -> MIDI 4: 89 (37 notes); composer-original",
+    "XTOWER2 OPL 5 -> MIDI 5: 89 (37 notes); composer-original",
+]

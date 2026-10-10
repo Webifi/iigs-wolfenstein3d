@@ -1,0 +1,97 @@
+# Capture identities and references. expected_bank_sha256 is a comparison receipt, not bank data.
+"format" = 2
+"midi_sha256" = "a71c2ae9a43c014f3c4090cca639c0b45c4df433ee4f401b4a6086bc31bf9f4b"
+"performance_sha256" = "26fa0f4dcc246e47348f53ab2d1d4b823886b7cf7094145edbd06ada1dfac95a"
+"font_source_sha256" = "e6c6f2d82ebd0c0fb4c2f4851ad34ca6a2a5988ad737c4922470c59822dbf520"
+"original_sha256" = "6bae3832be3736b13c17432cb196e83957ffe811f865b200e46d2e91297d191a"
+"expected_bank_sha256" = "a53ebec4e14c1a353e124199c1f0504fe859739edfbff17551720e72eac6939b"
+"unavailable" = []
+"performed_pan" = []
+
+["compiler_sources"]
+"tools/doccompiler/dmxmus.py" = "fa6b53502a3b7176c4e79a9d7b03e3dd51d42442ca6417de43a1652794d31756"
+"tools/doccompiler/pack.py" = "3f0cd6b23e315a945cc703d16a719a3e9348312185945895fe12ffb4b5d1050a"
+"tools/doccompiler/build.py" = "925d30a338df038ef0e05466e1f2f711217d0ff47453f0c3ef3faba319d67473"
+"tools/doccompiler/cold_huffman.py" = "fac4ac3a9cee6211bae7a0875d06373067f67089025ae8956bdef3da79d463d3"
+"tools/doccompiler/mussmooth.py" = "87455907e38377ab2b52c0f55e71efa2d5b4e696beaa8751e168cae9cdfcd2f9"
+"tools/doccompiler/tone_safe.py" = "c40e2fa4ef0ae8737094a25944c4d372e84b5bba151e12d1dc3b9b8a54b0b9f3"
+"tools/doccompiler/musknee.py" = "73849083582cda66daed86332fe1004279ac0f69f5dabb95bdd5e59b6086b6ea"
+"tools/doccompiler/muspan.py" = "bf6201f4956eb5c6a69afddc8ca4a16e32007235d7fa6723c5ce609ee592171e"
+"tools/doccompiler/wolfpan.py" = "b84eabbaa28bb6e8a9dfa167c3a3456b1d829a83bf043a43e30551a62434a666"
+"tools/doccompiler/resample_cache.py" = "dcae41e047344e667168f6d9da0720e694d7d8074ca5104d197ccc87baab9e12"
+"tools/doccompiler/museq.py" = "dd485f3d348b59707b1fc1f302b76f3adf58dae45f51e7dcfdfc24b8c9f5bb0d"
+"tools/doccompiler/musmotion.py" = "252bf0f550a6443a0a0c266c239e061583592ca713660c47317c8c60b4e6cee2"
+"tools/doccompiler/batchcompile.py" = "fc557c4715f5ad8b4398d63f4a7e822f6b3526e2e3fe443ebf8b62dfe97d6254"
+"tools/doccompiler/prepared.py" = "4c512ff27397dbb6e7b0474e52d38be139d0465b420bb0e29c3a5bc1e558ddb4"
+"tools/doccompiler/base_events.py" = "03c0d0924782266111265f9965d9abb574ed20112b953aeb7a42bc59c79f00a1"
+"tools/doccompiler/convert.py" = "1e38716c1e6b54b0df161825ed1716853702d9db7054425de5129aa162227c4c"
+"tools/doccompiler/bake_sweep.py" = "0f36af3275bcec4e067b3715bbdb8a70a2643aa7c2bb28c39af0ed6ac0ed0e81"
+"tools/doccompiler/pair_templates.py" = "0e0be43563b8470faa48c02a11826176c078c1340b7247d8a2dad8e3f9eb80d7"
+"tools/doccompiler/oplsynth.py" = "5aa363c9d5321573b96fc4e47b35e77e338b035f90a3b933df86c70e7ab124a8"
+"tools/doccompiler/sf2.py" = "c311cf21342deae05843f3c235d91bd71cae015fd932d0ba856478ef3b3e2a96"
+"tools/doccompiler/muscross.py" = "60a2d5bb20a869574c72b6936b9bd42ec7dbe0b657a11e0312d6b65548e1c569"
+"tools/doccompiler/opleg.py" = "82f95cd4fb6469b8f64429d6c389afcc36584b0ea88f94b040a93a082cef619a"
+"tools/doccompiler/unit2.py" = "31498c77d4b450cdc01d307a3f163debc3c9fa546453694a4c328498ce33dde7"
+"tools/doccompiler/mussc.py" = "7e3b31b6a9ab9ead55cabf2d51950cb668eba481449de97ab6b584ed057aa5a5"
+"tools/doccompiler/oplchip.py" = "2d46b5ab1a2409e57942f75c6767b2ce99620f8b84e0351acc27b7425015704b"
+"tools/doccompiler/musfx.py" = "47db295250d34e46b3e6940a3ab96dcc3072dd2190f3e6fb37e453e990de190e"
+"tools/doccompiler/capture_tone.py" = "c61295593d600fe4b52750dfd4657b5be085f88d093c9c99aa185a03800baa89"
+"tools/doccompiler/sample_model.py" = "bec10641fcf35da31c44e503f11e27eccd94d6294262bd021adbc577770eace4"
+"tools/doccompiler/midiread.py" = "06dd6b9c4b15508678e984349800f9a413cfe7b67a9213cb5eed154f8d569d6c"
+"tools/doccompiler/capture_levels.py" = "a47e174a0e168e809a1f84547545dbbee8802a27a19bbd7175b3105fc637d970"
+"tools/doccompiler/musnoise.py" = "5ce97083d77a3fd5291af655ea955d7342355ea77d59f5099aacb477d91971e3"
+"tools/doccompiler/musbank.py" = "daa07cb4d6bc8462524d1ac6d1334195d3a9391d3786d3e7988f8fc893f3ed8e"
+"tools/doccompiler/musdsp.py" = "2d1d1675716be630d5637320d4e615b1dde62f108938da40eab2cd6f7cb62c97"
+"tools/doccompiler/inline_volume.py" = "d4280bad96af2fc5e9437ecd9ed03f809c1f74858e73f0994fab2eef9ce1429c"
+"tools/doccompiler/muschoir.py" = "150d5153922a7720b6476c6810ba1019f85c211b37b2799189f48811802c2e54"
+"tools/doccompiler/captured.py" = "3c90bb6d5bf9a2b0a105a096284f46cf5f672d0888a4102199aac20ab73f26b9"
+"tools/doccompiler/mussamp.py" = "ca92d14ee90d04943325ba09070a4daf5837e3abdc92d37d8b5dca8261c837a5"
+"tools/native_host.py" = "b0fc41c61b18de9f7f3536ac10c1732499fccf08d9d85fbc7121db670e95dec5"
+"tools/host_kernels.c" = "904586ea675aeb00c8082a7d442ca82c24a00fa6e421386e62ca0a95096b3e81"
+"tools/audio_compile.py" = "94b9ed6765c092bc7ac6b785613551f993bcc879c5690aa815aa963d47af6894"
+"tools/audio_recipes.py" = "625127b02f3ced9a613a1acb3c726e4c20bbc30c43bedbc534066217c4d331d1"
+"tools/audio_sampling.py" = "c621c91df9958e82c3f8480216cd650f5842c46f3239c8893bca12f1dfdadf99"
+"tools/audio_preview_native.py" = "62126a5f5dec0ffbf0ff23e964e1938082a528c1a39e0c31c9d4f7f36515b6da"
+"tools/audio_preview_kernel.c" = "457454205dd1dc27daf4c900e1165ccc8d2c2315e3cc7dfee3b37937f182f9bd"
+"tools/audio_fit.py" = "f88155bb7f2347f25ef77a19cb684011bf88c236bb053e9e31ddffba82d5eba5"
+"tools/audio_performance_pan.py" = "eed30fcd3e465dd072acd3dcb9c6232e19d6d1197e6360039909db5a2bc7a97e"
+"tools/audio_context_fit.py" = "9f2ed34bdc1ce8e029cb529ad01e638569a8bedbd26acb23a7fc599a69d529c3"
+"tools/audio_timbre.py" = "bdb15266482342044ede547fd79f3615b8f35606015c6c2814e81fe264cd8826"
+"tools/audio_dsp.py" = "925ee8b4c0f55d3963276f0a8833b903665b709a6caf8c47f4ca930ffcd06abd"
+"tools/audio_preview.py" = "8aff4146c8c9580ea342fbd6f3ebf07e23f0117cbd856cb50409569ccc956cbc"
+"tools/audio_levels.py" = "806e826deecd10b3f17b2d6c4f0ec77080c0766b8391482279c89af25ff7ef13"
+"tools/audio_resample.py" = "484a44bbdd246929bf506860a76027ae4b2fa7dd91670c6cfe07f2016f4ff282"
+"tools/music_score.py" = "50b8951962afb4e390f41fdbc74d9925a81e44bb7cdfdeec2107b47769ce076e"
+"tools/instrument_defaults.py" = "9dfba6495cf4a840b61f236d0d071b61825cd63b88e4283b2438ad3633354460"
+"tools/audio_tracks.py" = "3817957f208f07ba043b2c6b444350d199f9f5e6ecc4fa057d95e3a888281611"
+"tools/audio_track_sampling.py" = "9236bcee1c7a981c715b50ab0e25cfa1a8df89d4b3c711bd218f8729770fa391"
+"tools/audio_selective.py" = "0ac2b749edb872a15f78ea9016eb15a025e0b5836e702a6d6332119d05e90ce5"
+"tools/audio_defaults.py" = "d03611bfc33a9be2cf94e918f26d8d8fb462fe04579f34100a6d91d077b565e3"
+"tools/audio_intermediate.py" = "0b6f5ffe46217e08275291d6dd86176edda25d8aff1271e1f001d317f2546831"
+"tools/audio_score_delta.py" = "a6c13fefd99222ad5a1ae5fbb7355501a2f5733364447895332d4fda811fb5ac"
+"profiles/audio/sample-models.toml" = "fcbb4ffcd1ebbc27680fd4bf582a854a5f33d42cb0c13fdfc1c877d4ec37fd9f"
+"profiles/audio/source-levels.toml" = "7b2aa4d39b1eff7d7463d42efed0f2e4f694879bbbeaf6dc4d25a1555661349a"
+
+[["captures"]]
+"note" = [5, 10752, 23, 126, 23]
+"file" = "captures/32c4499dc289499ef38fc753b9eeb800aac1889bc06b8268ab4540318f73c9eb.wav"
+"sha256" = "3a3e522d02d7ed280edf4f28078612cab701afbc7bdd16e73e4af5497ec8cdc8"
+"identity" = "32c4499dc289499ef38fc753b9eeb800aac1889bc06b8268ab4540318f73c9eb"
+
+[["captures"]]
+"note" = [6, 3456, 27, 61, 27]
+"file" = "captures/9a63f8e71475e98cbb40c34d77bb71e23c37af85b7e45ec4beeaadd7b63ef751.wav"
+"sha256" = "344a3c71531125fb06265f13d5922bbf8f4f41341d4ccb73d08c7ac46fdab50b"
+"identity" = "9a63f8e71475e98cbb40c34d77bb71e23c37af85b7e45ec4beeaadd7b63ef751"
+
+[["captures"]]
+"note" = [10, 384, 35, 118, 35]
+"file" = "captures/d48cb35207b07b5ce7abb0bc550aaea0b34fafc87772d69d1667ae23dbbde3c6.wav"
+"sha256" = "0e94f8d902d4fe2071671d50a576d138e2febea825aa930199956faf2effd7f8"
+"identity" = "d48cb35207b07b5ce7abb0bc550aaea0b34fafc87772d69d1667ae23dbbde3c6"
+
+[["captures"]]
+"note" = [10, 3264, 40, 59, 40]
+"file" = "captures/31c6c49846a59b5ebb5c0d64bd2c88f2829b9e0f5ced0e6fdecdf5ec0afae1c8.wav"
+"sha256" = "aa33137957093b409fe2b2dd60f231f341473033d7ff3ba53279dbafa446d5ee"
+"identity" = "31c6c49846a59b5ebb5c0d64bd2c88f2829b9e0f5ced0e6fdecdf5ec0afae1c8"

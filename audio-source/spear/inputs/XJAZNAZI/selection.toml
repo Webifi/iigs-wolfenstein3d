@@ -1,0 +1,50 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 33
+"bank" = [0, 0]
+"notes" = 154
+"name" = "Acoustic Bass"
+
+[["instruments"]]
+"channel" = 6
+"program" = 18
+"bank" = [0, 0]
+"notes" = 264
+"name" = "Percussive Organ"
+
+[["instruments"]]
+"channel" = 7
+"program" = 18
+"bank" = [0, 0]
+"notes" = 102
+"name" = "Percussive Organ"
+
+[["instruments"]]
+"channel" = 8
+"program" = 76
+"bank" = [0, 0]
+"notes" = 35
+"name" = "Pan Flute"
+
+[["instruments"]]
+"channel" = 9
+"program" = 72
+"bank" = [0, 0]
+"notes" = 35
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 543
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "7f81b9bb5154b3aab6b5d9b2719c426ae9bb883e73747f49d92999e43e2e885a"
+"authority" = "fan-conversion"

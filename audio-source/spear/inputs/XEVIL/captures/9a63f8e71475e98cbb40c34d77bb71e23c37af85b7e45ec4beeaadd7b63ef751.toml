@@ -1,0 +1,48 @@
+"track_wav_sha256" = "db2eb44b54d418d897115937a7035be61a6f7d9c2f2d2c4d2b9f825e487c92f7"
+"trace_sha256" = "547b9dca7f1a732d84eb6b0f1417e30a28fee7e9f9ac2d397a87dd83c646cf4e"
+"note_ordinal" = 3
+"source_key" = 27
+"root_key" = 27
+"extraction_revision" = 3
+"renderer_sha256" = "49311b60539135233c75ca47238a424a1f0dca8302145e5e8905da0e3a33d91d"
+"note_binding" = "separated note-on and partial activation"
+"wav_sha256" = "344a3c71531125fb06265f13d5922bbf8f4f41341d4ccb73d08c7ac46fdab50b"
+"rate" = 64000
+"lead" = 0.05
+"quiet_lead_seconds" = 0.05
+"hold_seconds" = 0.1111109999999993
+"source" = "complete instrument track; output-only voice selection; original MIDI unchanged"
+"source_rate" = 64000
+"source_start_frame" = 508798
+"source_end_frame" = 607998
+"padded_idle_frames" = 0
+"register_trace_verified" = true
+"romset" = "mk1-v1.21"
+"tail_silence_verified" = true
+"isolated_note_probe" = false
+
+[["voice_activations"]]
+"slot" = 21
+"frame" = 512164
+"pitch" = 2960
+"stop" = 699607
+"loop" = 699607
+
+["rom_inputs"]
+"sc55_rom1.bin" = "7e1bacd1d7c62ed66e465ba05597dcd60dfc13fc23de0287fdbce6cf906c6544"
+"sc55_rom2.bin" = "effc6132d68f7e300aaef915ccdd08aba93606c22d23e580daf9ea6617913af1"
+"sc55_waverom1.bin" = "5655509a531804f97ea2d7ef05b8fec20ebf46216b389a84c44169257a4d2007"
+"sc55_waverom2.bin" = "c655b159792d999b90df9e4fa782cf56411ba1eaa0bb3ac2bdaf09e1391006b1"
+"sc55_waverom3.bin" = "334b2d16be3c2362210fdbec1c866ad58badeb0f84fd9bf5d0ac599baf077cc2"
+
+["played_note"]
+"start" = 7.999991999999999
+"tick" = 3456
+"clock140" = 1120
+"channel" = 6
+"key" = 27
+"velocity" = 61
+"program" = 128
+"bank" = [0, 0]
+"end" = 8.111102999999998
+"end_tick" = 3504

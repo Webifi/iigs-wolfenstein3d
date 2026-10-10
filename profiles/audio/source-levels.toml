@@ -1,0 +1,11 @@
+# One output scale for every song and instrument. Never normalize a song here.
+format = 1
+music_volume = 15
+system_volume = 15
+route = "stock-mono"
+# Model tables use (sample-128)*register/(127*255). The stock ROM01
+# emulator averages 32 oscillator slots plus two overhead slots, with
+# output factor 17/(4*32768): 127*255*17/(4*32768*34).
+# Its mono speaker sums the two DOC routes. The Roland comparison uses
+# (left+right)/2. This is an emulator scale, not physical-hardware calibration.
+oscillator_scale = 0.12353897094726562

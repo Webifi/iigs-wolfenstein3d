@@ -1,0 +1,618 @@
+{
+ "policy": {
+  "mode": "flat",
+  "level": 255,
+  "note": "interim: every effect at register 255 at volume 15"
+ },
+ "levels": {
+  "0": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "1": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "2": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "3": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "4": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "5": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "6": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "7": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "8": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "9": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "10": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "11": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "12": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "13": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "14": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "15": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "16": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "17": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "18": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "19": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "20": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "21": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "22": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "23": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "24": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "25": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "26": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "27": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "28": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "29": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "30": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "31": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "32": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "33": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "34": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "35": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "36": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "37": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "38": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "39": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "40": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "41": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "42": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "43": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "44": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "45": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "46": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "47": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "48": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "49": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "50": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "51": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "52": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "53": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "54": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "55": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "56": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "57": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "58": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "59": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "60": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "61": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "62": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "63": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "64": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "65": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "66": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "67": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "68": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "69": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "70": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "71": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "72": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "73": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "74": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "75": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "76": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "77": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "78": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "79": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "80": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "81": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "82": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "83": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "84": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "85": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  },
+  "86": {
+   "name": "",
+   "kind": "flat",
+   "original_peak_db": 0.0,
+   "original_lufs": 0.0,
+   "level": 255
+  }
+ }
+}

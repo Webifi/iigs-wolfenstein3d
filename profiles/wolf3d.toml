@@ -1,0 +1,153 @@
+# Copy this file to start a custom source profile. See README.md for each field.
+# File names are case-insensitive; no DOS executable is used.
+format = 1
+id = "wolf3d"
+title = "Wolfenstein 3D registered"
+engine = "wolf3d"
+publication = "user-supplied"
+conversion = "conversion/stock.toml"
+campaign = "campaigns/wolf3d.toml"
+map_semantics = "map-semantics/wolf3d.toml"
+
+[files]
+# Missions 2 and 3 replace these three files; the other five remain .SOD.
+MAPHEAD = "MAPHEAD.WL6"
+GAMEMAPS = "GAMEMAPS.WL6"
+VSWAP = "VSWAP.WL6"
+VGADICT = "VGADICT.WL6"
+VGAHEAD = "VGAHEAD.WL6"
+VGAGRAPH = "VGAGRAPH.WL6"
+AUDIOHED = "AUDIOHED.WL6"
+AUDIOT = "AUDIOT.WL6"
+
+[maps]
+episodes = 6
+count = 60
+width = 64
+height = 64
+compression = "carmack-rlew"
+# Keep high object numbers (including 256-259) intact during source decoding.
+
+[audio]
+sounds = 87 # Number of effects in each original sound bank.
+music = 27 # IMF chunks follow the three sound banks.
+# Original song names in source music-ID order; IDs begin at zero.
+song_names = [
+    "CORNER", "DUNGEON", "WARMARCH", "GETTHEM", "HEADACHE", "HITLWLTZ",
+    "INTROCW3", "NAZI_NOR", "NAZI_OMI", "POW", "SALUTE", "SEARCHN",
+    "SUSPENSE", "VICTORS", "WONDERIN", "FUNKYOU", "ENDLEVEL", "GOINGAFT",
+    "PREGNANT", "ULTIMATE", "NAZI_RAP", "ZEROHOUR", "TWELFTH", "ROSTER",
+    "URAHERO", "VICMARCH", "PACMAN",
+]
+# One song per source floor, in map order. Repeated songs share a bank.
+floor_songs = [
+    "GETTHEM", "SEARCHN", "POW", "SUSPENSE", "GETTHEM", "SEARCHN", "POW", "SUSPENSE", "WARMARCH", "CORNER",
+    "NAZI_OMI", "PREGNANT", "GOINGAFT", "HEADACHE", "NAZI_OMI", "PREGNANT", "HEADACHE", "GOINGAFT", "WARMARCH", "DUNGEON",
+    "INTROCW3", "NAZI_RAP", "TWELFTH", "ZEROHOUR", "INTROCW3", "NAZI_RAP", "TWELFTH", "ZEROHOUR", "ULTIMATE", "PACMAN",
+    "GETTHEM", "SEARCHN", "POW", "SUSPENSE", "GETTHEM", "SEARCHN", "POW", "SUSPENSE", "WARMARCH", "CORNER",
+    "NAZI_OMI", "PREGNANT", "GOINGAFT", "HEADACHE", "NAZI_OMI", "PREGNANT", "HEADACHE", "GOINGAFT", "WARMARCH", "DUNGEON",
+    "INTROCW3", "NAZI_RAP", "TWELFTH", "ZEROHOUR", "INTROCW3", "NAZI_RAP", "TWELFTH", "ZEROHOUR", "ULTIMATE", "FUNKYOU",
+]
+
+[audio.events]
+# These names define music coverage; they do not change native menu behavior.
+title = "NAZI_NOR"
+menu = "WONDERIN"
+tally = "ENDLEVEL"
+scores = "ROSTER"
+victory = "URAHERO"
+
+[[graphics.layouts]]
+# A layout must match both counts; changing a count does not repair a bad file.
+name = "apogee-1.4"
+chunks = 161
+pictures = 144
+first_picture = 3
+tile8_count = 35
+# Original recordings starting at roles.demo_first. The native Wolf loop uses four.
+demo_count = 4
+
+[graphics.layouts.roles]
+# Original VGAGRAPH chunk numbers, using names that describe their purpose.
+title = 99
+credits = 101
+rating = 100
+status_bar = 98
+difficulty_first = 31
+menu_cursor1 = 23
+menu_cursor2 = 24
+menu_options = 22
+menu_control = 38
+menu_customize = 39
+menu_load = 40
+menu_save = 41
+menu_episode_first = 42 # One 48 by 24 illustration per episode, in menu order.
+menu_scores = 102
+menu_getpsyched = 146
+quit_text = 148
+menu_logo = 13
+ending_face = 11
+tally_guy = 55
+tally_colon = 56
+tally_digit_first = 57
+tally_letter_first = 68
+tally_percent = 67
+tally_exclamation = 94
+tally_apostrophe = 95
+tally_guy_alt = 96
+victory_bj = 97
+weapon_first = 103
+key_first = 107
+hud_blank = 110
+hud_digit_first = 111
+face_first = 121
+demo_first = 151
+ending_first = 155
+
+[[graphics.layouts]]
+# A layout must match both counts; changing a count does not repair a bad file.
+name = "gt-id-1.4"
+chunks = 149
+pictures = 132
+first_picture = 3
+# The supplied GT 1.4 data expands to 35 tiles. The published GFXV_WL6.H
+# declares 72, which does not match this shipped asset set.
+tile8_count = 35
+# Original recordings starting at roles.demo_first. The native Wolf loop uses four.
+demo_count = 4
+
+[graphics.layouts.roles]
+# Original VGAGRAPH chunk numbers, using names that describe their purpose.
+title = 87
+credits = 89
+rating = 88
+status_bar = 86
+difficulty_first = 19
+menu_cursor1 = 11
+menu_cursor2 = 12
+menu_options = 10
+menu_control = 26
+menu_customize = 27
+menu_load = 28
+menu_save = 29
+menu_episode_first = 30 # One 48 by 24 illustration per episode, in menu order.
+menu_scores = 90
+menu_getpsyched = 134
+quit_text = 136
+ending_face = 5
+tally_guy = 43
+tally_colon = 44
+tally_digit_first = 45
+tally_letter_first = 56
+tally_percent = 55
+tally_exclamation = 82
+tally_apostrophe = 83
+tally_guy_alt = 84
+victory_bj = 85
+weapon_first = 91
+key_first = 95
+hud_blank = 98
+hud_digit_first = 99
+face_first = 109
+demo_first = 139
+ending_first = 143

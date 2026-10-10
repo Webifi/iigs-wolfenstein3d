@@ -1,0 +1,34 @@
+# Load-time estimates in nominal stock 65816 cycles, not host compression time.
+# HD block cost includes the measured firmware read and 512-byte RAM copy.
+# Floppy has a larger transfer cost, favoring smaller lossless payloads.
+# The native benchmark checks complete loads; these numbers guide per-unit choice.
+[hd]
+block_cycles = 10000
+
+[floppy]
+block_cycles = 50000
+
+[decode]
+copy_byte_cycles = 7
+b1_bit_cycles = 17
+b1_gamma_cycles = 18
+b1_refill_cycles = 25
+b1_literal_cycles = 42
+b1_match_cycles = 78
+b1_new_offset_cycles = 44
+lz16_command_cycles = 78
+lzsa_command_cycles = 130
+lzsa_extension_cycles = 45
+
+# The remaining space holds resident boot/menu data and writable game files.
+[budget]
+max_store_mib = 58
+# Keep this fraction of the estimated speed gain while selecting smaller units.
+# Every floor and overlay is constrained separately, including shared units.
+retain_load_gain_percent = 50
+
+# Build-time search only. These affect compressed size and building time;
+# decoded art, palette choices, audio, and gameplay memory remain identical.
+[encode]
+lz16_search_chain = 64
+lz16_minimum_match = 6

@@ -1,0 +1,15 @@
+# The shareware data ships with the project. Registered and Spear data stay
+# local: only their folder templates (README.md) belong in Git.
+*
+!/.gitignore
+!/README.md
+!/shareware/
+!/shareware/*
+!/wolf3d/
+!/wolf3d/README.md
+!/spear/
+!/spear/README.md
+!/spear-mission2/
+!/spear-mission2/README.md
+!/spear-mission3/
+!/spear-mission3/README.md

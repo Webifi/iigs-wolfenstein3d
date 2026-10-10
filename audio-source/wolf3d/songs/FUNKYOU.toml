@@ -1,0 +1,52 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "FUNKYOU"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/FUNKYOU/score.toml"
+"sha256" = "a184720d31cf413bed2bae8bfde1c8f9752f082709405ee586cee7fca1a83885"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/FUNKYOU.imf"
+"sha256" = "d75432b55131a0ff5291e7491724b4cc0b53ccf0429fe93d5ca554fdeb11453e"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/FUNKYOU/sampling.toml"
+
+["doc"."levels"]
+"ch01" = 2.8999
+"ch02" = 4.8937
+"ch04" = 0.0451
+"k35" = -2.1988
+"k38" = -2.1988
+"k42" = -2.1988
+"ch03" = 0.9268
+
+["doc"."pan"]
+"ch01" = 63
+"ch02" = 26
+"ch03" = 102
+"ch04" = 64
+"ch05" = 64

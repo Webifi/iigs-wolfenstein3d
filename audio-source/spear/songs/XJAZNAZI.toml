@@ -1,0 +1,57 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XJAZNAZI"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XJAZNAZI/score.toml"
+"sha256" = "f915d780c309d4685a84cd34b0245ec0e5dc7e9fbeca6b7d6c6592dfe7f731a8"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/XJAZNAZI.imf"
+"sha256" = "9f720f2582d1fdc2680805b286d330496a881092c5d3aac89712fd94d1c68a89"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XJAZNAZI/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -4.221
+"ch06" = -5.2544
+"ch07" = -5.3843
+"ch08" = -2.3007
+"ch09" = -6.231
+"k35" = -5.0207
+"k40" = -5.0207
+"k42" = -5.0207
+"k46" = -5.0207
+"k51" = -5.0207
+
+["doc"."pan"]
+"ch02" = 63
+"ch06" = 39
+"ch07" = 87
+"ch08" = 52
+"ch09" = 78

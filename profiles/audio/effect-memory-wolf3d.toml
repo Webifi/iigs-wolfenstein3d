@@ -1,0 +1,14 @@
+# Native RAM for effect descriptors and samples; end is exclusive.
+# Each generated load row reports only the bytes actually occupied on that floor.
+# The art packer must exclude those exact intervals before assigning art.
+format = 1
+
+[[ranges]]
+name = "primary"
+start = 0x390000
+end = 0x3ad800
+
+[[ranges]]
+name = "overflow"
+start = 0x100000
+end = 0x110000

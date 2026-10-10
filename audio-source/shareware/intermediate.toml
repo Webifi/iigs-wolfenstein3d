@@ -1,0 +1,48 @@
+# Rebuild with audio_compile.py music-pack THIS_FOLDER --data YOUR_DOS_FILES --out OUTPUT.
+# No Roland executable, ROM, SoundFont, DOC bank or native music stream is included.
+"format" = 2
+"profile" = "shareware"
+
+[["songs"]]
+"id" = 0
+"name" = "CORNER"
+
+[["songs"]]
+"id" = 2
+"name" = "WARMARCH"
+
+[["songs"]]
+"id" = 3
+"name" = "GETTHEM"
+
+[["songs"]]
+"id" = 7
+"name" = "NAZI_NOR"
+
+[["songs"]]
+"id" = 9
+"name" = "POW"
+
+[["songs"]]
+"id" = 11
+"name" = "SEARCHN"
+
+[["songs"]]
+"id" = 12
+"name" = "SUSPENSE"
+
+[["songs"]]
+"id" = 14
+"name" = "WONDERIN"
+
+[["songs"]]
+"id" = 16
+"name" = "ENDLEVEL"
+
+[["songs"]]
+"id" = 23
+"name" = "ROSTER"
+
+[["songs"]]
+"id" = 24
+"name" = "URAHERO"

@@ -1,0 +1,1133 @@
+# Recovered layered-effect instrument choices. Programs are 1-based GM.
+# These are the recorded synth recipes, not a claim that the reduced DOC
+# samples passed listening review. Keep the original pitch/timing contour.
+format = 1
+catalog = "wolf3d"
+
+[provenance]
+method = "layered Roland performance of the original effect contour"
+source = "section4.py LAYERS and synth-ledger.json"
+source_sha256 = "c839cacc8f6f45dac09517b667e993ff44c3cd744566afd3ad544a86698328ec"
+listening_accepted = false
+
+[[effect]]
+id = 2
+name = "SELECTITEMSND"
+contour_sha256 = "5c7ec41a579a212f4bb7aea72fb8ca12cf7f2c50189d638d2032b2519c2241c9"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 112
+volume = 96
+pan = 36
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Tuba"
+program = 59
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 114
+pan = 64
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Echo Drops"
+program = 103
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 84
+volume = 80
+pan = 100
+reverb = 120
+chorus = 32
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 90
+pan = 48
+reverb = 80
+chorus = 0
+
+[[effect]]
+id = 4
+name = "MOVEGUN2SND"
+contour_sha256 = "1ea4c1b9e84b6a774ac350bdf7a583264aaeff656ed2f98aca6e8cf5efefe308"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 120
+volume = 110
+pan = 40
+reverb = 48
+chorus = 0
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 100
+volume = 100
+pan = 72
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Reverse Cymbal"
+program = 120
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 88
+volume = 78
+pan = 96
+reverb = 110
+chorus = 0
+
+[[effect]]
+id = 6
+name = "NOWAYSND"
+contour_sha256 = "ea173ca9f0a6fe026c3bd28c8031bd93f70c82bce5f1623b6bfe6351b51f78de"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 110
+volume = 104
+pan = 40
+reverb = 56
+chorus = 0
+
+[[effect.layer]]
+role = "Clarinet"
+program = 72
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 104
+volume = 112
+pan = 64
+reverb = 72
+chorus = 0
+
+[[effect.layer]]
+role = "Reverse Cymbal"
+program = 120
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 80
+volume = 76
+pan = 100
+reverb = 112
+chorus = 0
+
+[[effect]]
+id = 12
+name = "GETKEYSND"
+contour_sha256 = "856c29d7c395119705d54834a98bfb27c1ae9c95f5b63245538e8f6fd5b2e1c7"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 100
+volume = 90
+pan = 36
+reverb = 48
+chorus = 0
+
+[[effect.layer]]
+role = "Piccolo"
+program = 73
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 112
+pan = 70
+reverb = 72
+chorus = 0
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 96
+pan = 48
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Echo Drops"
+program = 103
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 78
+volume = 74
+pan = 104
+reverb = 120
+chorus = 28
+
+[[effect]]
+id = 20
+name = "DONOTHINGSND"
+contour_sha256 = "57e8b71dc9b3ce706d9c17e38cb6eb7ed8c1a1ccaf1492a6e06f4e858f440cc9"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 112
+volume = 108
+pan = 44
+reverb = 56
+chorus = 0
+
+[[effect.layer]]
+role = "Tuba"
+program = 59
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 110
+volume = 116
+pan = 64
+reverb = 72
+chorus = 0
+
+[[effect.layer]]
+role = "Bowed Glass"
+program = 93
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 80
+volume = 76
+pan = 96
+reverb = 110
+chorus = 32
+
+[[effect]]
+id = 23
+name = "ATKKNIFESND"
+contour_sha256 = "726bd1c70938f9e5d312666d06a85c63e31539432f2a1d76be7f2d78f95d929b"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 120
+volume = 112
+pan = 32
+reverb = 48
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 110
+pan = 68
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Reverse Cymbal"
+program = 120
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 90
+volume = 80
+pan = 100
+reverb = 112
+chorus = 0
+
+[[effect]]
+id = 30
+name = "GETMACHINESND"
+contour_sha256 = "542bb0a61b61ed18fbaf2d94bba73bec64d1ac2e4a0319f6aecfb1f2a8e40b8b"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 96
+pan = 36
+reverb = 56
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 110
+volume = 114
+pan = 64
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Piccolo"
+program = 73
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 90
+volume = 88
+pan = 92
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Halo Pad"
+program = 95
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 76
+volume = 72
+pan = 108
+reverb = 120
+chorus = 36
+
+[[effect]]
+id = 31
+name = "GETAMMOSND"
+contour_sha256 = "b70da35e902631766094e9548ed8a5861e2e8357669371fde113f258778257e5"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 104
+volume = 100
+pan = 44
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trombone"
+program = 58
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 114
+pan = 68
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Echo Drops"
+program = 103
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 80
+volume = 76
+pan = 100
+reverb = 116
+chorus = 28
+
+[[effect]]
+id = 32
+name = "SHOOTSND"
+contour_sha256 = "7c22f7670ea45899964bc26ad21f8c5b4e4a7c4f7059f79f26881a1023febda9"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 122
+volume = 116
+pan = 36
+reverb = 48
+chorus = 0
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 104
+volume = 100
+pan = 72
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Reverse Cymbal"
+program = 120
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 92
+volume = 82
+pan = 104
+reverb = 120
+chorus = 0
+
+[[effect]]
+id = 33
+name = "HEALTH1SND"
+contour_sha256 = "a838e2dc6a3a6830241d356300ba302dfbaf7d7868bf05d29ae39c75ee0ab719"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 92
+pan = 40
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 112
+pan = 64
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Flute"
+program = 74
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 90
+volume = 86
+pan = 96
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Halo Pad"
+program = 95
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 74
+volume = 70
+pan = 112
+reverb = 120
+chorus = 32
+
+[[effect]]
+id = 34
+name = "HEALTH2SND"
+contour_sha256 = "cbf91328cbd00977d9326e1b1b0ec0d424e438ac081819962f724e81ce24ed23"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 100
+volume = 96
+pan = 42
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Clarinet"
+program = 72
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 112
+pan = 68
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Bowed Glass"
+program = 93
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 78
+volume = 74
+pan = 104
+reverb = 116
+chorus = 32
+
+[[effect]]
+id = 35
+name = "BONUS1SND"
+contour_sha256 = "aefe8dd72eeec30a1d1502bab7d3bf3e7d869d44fff540b65edb914177d343a5"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 100
+volume = 96
+pan = 36
+reverb = 56
+chorus = 0
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 104
+volume = 104
+pan = 56
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Clarinet"
+program = 72
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 100
+pan = 80
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Echo Drops"
+program = 103
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 76
+volume = 72
+pan = 108
+reverb = 120
+chorus = 24
+
+[[effect]]
+id = 36
+name = "BONUS2SND"
+contour_sha256 = "5c8625505deb34b88cb1a8c0f20dbb6caa3194ff7a90fae413b5298e24418a27"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 102
+volume = 96
+pan = 36
+reverb = 56
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 110
+volume = 114
+pan = 64
+reverb = 84
+chorus = 0
+
+[[effect.layer]]
+role = "Tubular Bells"
+program = 15
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 92
+volume = 90
+pan = 96
+reverb = 100
+chorus = 0
+
+[[effect.layer]]
+role = "Halo Pad"
+program = 95
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 74
+volume = 70
+pan = 112
+reverb = 124
+chorus = 32
+
+[[effect]]
+id = 37
+name = "BONUS3SND"
+contour_sha256 = "a34308eba6e39ada2e0646cede568c48b958e2248ac7f65cc88831669fc8140c"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 100
+volume = 96
+pan = 34
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 112
+pan = 60
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Flute"
+program = 74
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 92
+volume = 90
+pan = 92
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Echo Drops"
+program = 103
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 76
+volume = 72
+pan = 112
+reverb = 124
+chorus = 28
+
+[[effect]]
+id = 38
+name = "GETGATLINGSND"
+contour_sha256 = "2c371e65d74fd6462984bbd8ac57dd2cd13e12c5e8bb83e4bbd2bf2b52741c88"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 104
+pan = 36
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 112
+volume = 116
+pan = 64
+reverb = 90
+chorus = 0
+
+[[effect.layer]]
+role = "Tuba"
+program = 59
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 100
+pan = 48
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Halo Pad"
+program = 95
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 78
+volume = 74
+pan = 108
+reverb = 124
+chorus = 36
+
+[[effect]]
+id = 39
+name = "ESCPRESSEDSND"
+contour_sha256 = "588907f0c182a312fc4b8e1701df3c8522f9e7e0eb8d98c94603d2b0c1f54e41"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 116
+volume = 108
+pan = 36
+reverb = 48
+chorus = 0
+
+[[effect.layer]]
+role = "Tuba"
+program = 59
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 112
+pan = 68
+reverb = 72
+chorus = 0
+
+[[effect.layer]]
+role = "Reverse Cymbal"
+program = 120
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 84
+volume = 76
+pan = 104
+reverb = 112
+chorus = 0
+
+[[effect]]
+id = 40
+name = "LEVELDONESND"
+contour_sha256 = "5db286d581e263d1582810b3a7c388e9ee17c89f170a23ff99e7f3e231cab20f"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 114
+volume = 108
+pan = 32
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 116
+volume = 118
+pan = 64
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Piccolo"
+program = 73
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 92
+pan = 96
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Halo Pad"
+program = 95
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 78
+volume = 74
+pan = 112
+reverb = 124
+chorus = 32
+
+[[effect]]
+id = 42
+name = "ENDBONUS1SND"
+contour_sha256 = "8d88d871c186097a94035f83bdad14fc325e45b4cf403f5622218d8a0d35f600"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 118
+volume = 112
+pan = 40
+reverb = 48
+chorus = 0
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 108
+volume = 108
+pan = 72
+reverb = 80
+chorus = 0
+
+[[effect]]
+id = 43
+name = "ENDBONUS2SND"
+contour_sha256 = "5305dc95a662f8cc89d4e0df418e5e5f78ee06075c36ddbcb0168c3f74792562"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 92
+pan = 40
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 110
+volume = 114
+pan = 64
+reverb = 96
+chorus = 0
+
+[[effect.layer]]
+role = "Halo Pad"
+program = 95
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 84
+volume = 80
+pan = 100
+reverb = 124
+chorus = 36
+
+[[effect.layer]]
+role = "Bowed Glass"
+program = 93
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 72
+volume = 70
+pan = 80
+reverb = 116
+chorus = 28
+
+[[effect]]
+id = 44
+name = "BONUS1UPSND"
+contour_sha256 = "a48cb7c235ab855b282e94fe194279dac4c6a36426e6c2f9ca6e34e5c37707f9"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 112
+volume = 108
+pan = 32
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 114
+volume = 116
+pan = 60
+reverb = 90
+chorus = 0
+
+[[effect.layer]]
+role = "Piccolo"
+program = 73
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 92
+pan = 96
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Echo Drops"
+program = 103
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 80
+volume = 76
+pan = 112
+reverb = 124
+chorus = 28
+
+[[effect]]
+id = 45
+name = "BONUS4SND"
+contour_sha256 = "860602b44d9ace41ed803fbef3f692099f7132a58a121ce59dd85168810a5c86"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Gunshot"
+program = 128
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 100
+volume = 90
+pan = 36
+reverb = 48
+chorus = 0
+
+[[effect.layer]]
+role = "Piccolo"
+program = 73
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 112
+volume = 114
+pan = 68
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Celesta"
+program = 9
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 100
+volume = 100
+pan = 48
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Echo Drops"
+program = 103
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 78
+volume = 74
+pan = 108
+reverb = 124
+chorus = 32
+
+[[effect]]
+id = 47
+name = "NOBONUSSND"
+contour_sha256 = "86a622307e79c07e40c2ed724548f26409c2fa065e3ac3e2e9ca4764cf64b0de"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 104
+volume = 100
+pan = 40
+reverb = 56
+chorus = 0
+
+[[effect.layer]]
+role = "Tuba"
+program = 59
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 112
+volume = 116
+pan = 64
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Trombone"
+program = 58
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 96
+pan = 92
+reverb = 80
+chorus = 0
+
+[[effect.layer]]
+role = "Bowed Glass"
+program = 93
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 76
+volume = 72
+pan = 112
+reverb = 116
+chorus = 28
+
+[[effect]]
+id = 48
+name = "PERCENT100SND"
+contour_sha256 = "fe6f752fc689b809d5b2bbc11d9c1de2ea1527012e662cbf5894539599265a0f"
+expression_shape = "contour-gesture"
+
+[[effect.layer]]
+role = "Timpani"
+program = 48
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 110
+volume = 104
+pan = 32
+reverb = 64
+chorus = 0
+
+[[effect.layer]]
+role = "Trumpet"
+program = 57
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 114
+volume = 118
+pan = 64
+reverb = 96
+chorus = 0
+
+[[effect.layer]]
+role = "Flute"
+program = 74
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 96
+volume = 92
+pan = 96
+reverb = 88
+chorus = 0
+
+[[effect.layer]]
+role = "Halo Pad"
+program = 95
+bank_msb = 0
+bank_lsb = 0
+transpose = 0
+velocity = 80
+volume = 76
+pan = 112
+reverb = 127
+chorus = 36

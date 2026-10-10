@@ -1,0 +1,96 @@
+# Rebuild with audio_compile.py music-pack THIS_FOLDER --data YOUR_DOS_FILES --out OUTPUT.
+# No Roland executable, ROM, SoundFont, DOC bank or native music stream is included.
+"format" = 2
+"profile" = "wolf3d"
+
+[["songs"]]
+"id" = 0
+"name" = "CORNER"
+
+[["songs"]]
+"id" = 1
+"name" = "DUNGEON"
+
+[["songs"]]
+"id" = 2
+"name" = "WARMARCH"
+
+[["songs"]]
+"id" = 3
+"name" = "GETTHEM"
+
+[["songs"]]
+"id" = 4
+"name" = "HEADACHE"
+
+[["songs"]]
+"id" = 6
+"name" = "INTROCW3"
+
+[["songs"]]
+"id" = 7
+"name" = "NAZI_NOR"
+
+[["songs"]]
+"id" = 8
+"name" = "NAZI_OMI"
+
+[["songs"]]
+"id" = 9
+"name" = "POW"
+
+[["songs"]]
+"id" = 11
+"name" = "SEARCHN"
+
+[["songs"]]
+"id" = 12
+"name" = "SUSPENSE"
+
+[["songs"]]
+"id" = 14
+"name" = "WONDERIN"
+
+[["songs"]]
+"id" = 15
+"name" = "FUNKYOU"
+
+[["songs"]]
+"id" = 16
+"name" = "ENDLEVEL"
+
+[["songs"]]
+"id" = 17
+"name" = "GOINGAFT"
+
+[["songs"]]
+"id" = 18
+"name" = "PREGNANT"
+
+[["songs"]]
+"id" = 19
+"name" = "ULTIMATE"
+
+[["songs"]]
+"id" = 20
+"name" = "NAZI_RAP"
+
+[["songs"]]
+"id" = 21
+"name" = "ZEROHOUR"
+
+[["songs"]]
+"id" = 22
+"name" = "TWELFTH"
+
+[["songs"]]
+"id" = 23
+"name" = "ROSTER"
+
+[["songs"]]
+"id" = 24
+"name" = "URAHERO"
+
+[["songs"]]
+"id" = 26
+"name" = "PACMAN"

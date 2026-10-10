@@ -1,0 +1,52 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "COPYPRO"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/COPYPRO/score.toml"
+"sha256" = "1053b00a44e19652184a80a7b63980830fe4940fafae9b7c179cdbf9d1870907"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/COPYPRO.imf"
+"sha256" = "c7e2e188439bbde3eb109935181cb61c1d781b5bda3d9ad16fd75b2c4a67d353"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/COPYPRO/sampling.toml"
+"song_gain_steps" = 34
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch04" = -14.9888
+"ch05" = -13.407
+"ch06" = -12.7627
+"ch07" = -12.2503
+"ch08" = -13.3324
+
+["doc"."pan"]
+"ch04" = 63
+"ch05" = 64
+"ch06" = 63
+"ch07" = 64
+"ch08" = 64

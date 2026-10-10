@@ -1,0 +1,78 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 71
+"bank" = [0, 0]
+"notes" = 16
+"name" = "Bassoon"
+
+[["instruments"]]
+"channel" = 3
+"program" = 57
+"bank" = [0, 0]
+"notes" = 3
+"name" = "Trumpet"
+
+[["instruments"]]
+"channel" = 3
+"program" = 67
+"bank" = [0, 0]
+"notes" = 13
+"name" = "Tenor Sax"
+
+[["instruments"]]
+"channel" = 4
+"program" = 57
+"bank" = [0, 0]
+"notes" = 3
+"name" = "Trumpet"
+
+[["instruments"]]
+"channel" = 4
+"program" = 67
+"bank" = [0, 0]
+"notes" = 13
+"name" = "Tenor Sax"
+
+[["instruments"]]
+"channel" = 5
+"program" = 71
+"bank" = [0, 0]
+"notes" = 17
+"name" = "Bassoon"
+
+[["instruments"]]
+"channel" = 6
+"program" = 74
+"bank" = [0, 0]
+"notes" = 31
+"name" = "Flute"
+
+[["instruments"]]
+"channel" = 7
+"program" = 12
+"bank" = [0, 0]
+"notes" = 48
+"name" = "Vibraphone"
+
+[["instruments"]]
+"channel" = 8
+"program" = 33
+"bank" = [0, 0]
+"notes" = 88
+"name" = "Acoustic Bass"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 208
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "bd90de8f361fa25bca977f79cff4d8e994e2b19b4456f6c04796e9009dc3131a"
+"authority" = "fan-conversion"

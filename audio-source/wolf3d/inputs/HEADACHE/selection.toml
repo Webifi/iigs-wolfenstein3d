@@ -1,0 +1,57 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 117
+"bank" = [0, 0]
+"notes" = 55
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 2
+"program" = 71
+"bank" = [0, 0]
+"notes" = 72
+"name" = "Bassoon"
+
+[["instruments"]]
+"channel" = 3
+"program" = 69
+"bank" = [0, 0]
+"notes" = 12
+"name" = "Oboe"
+
+[["instruments"]]
+"channel" = 4
+"program" = 72
+"bank" = [0, 0]
+"notes" = 8
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 5
+"program" = 108
+"bank" = [0, 0]
+"notes" = 94
+"name" = "Koto"
+
+[["instruments"]]
+"channel" = 6
+"program" = 11
+"bank" = [0, 0]
+"notes" = 52
+"name" = "Music Box"
+
+[["instruments"]]
+"channel" = 10
+"program" = 33
+"bank" = [0, 0]
+"notes" = 104
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "1874b52e3d3fbd91386ceffe9a1d7dbc5af9001528240be6620484da44f386b6"
+"authority" = "fan-conversion"

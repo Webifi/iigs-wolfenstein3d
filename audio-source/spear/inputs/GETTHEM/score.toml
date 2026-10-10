@@ -1,0 +1,2732 @@
+# Notes come from the matching licensed AdLib source. No original note sequence is stored.
+# source_note is one-based within source_channel; omitted source notes are not selected.
+# time_scale/duration_scale are rational [numerator, denominator]; deltas use MIDI ticks.
+# [[parts]] selects/transforms a voice; add contains only explicitly added notes.
+# order preserves simultaneous-event ordering; track preserves original MIDI setup order.
+format = 1
+source_sha256 = "ada4bee0d2aa8fa0d0381d1a461805e5c84c2957b9503bb5eef91fbe7a846a42"
+division = 192
+midi_format = 0
+selected_notes = 1591
+added_notes = 0
+
+[[parts]]
+source_channel = 6
+channel = 2
+transpose = 0
+time_scale = [16, 21]
+start_offset = 386
+duration_scale = [96, 125]
+duration_offset = 2
+velocity = 68
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+notes = [
+  { order = [602, 715], source_note = 1, start_delta = 62, duration_delta = -22, velocity = 77 },
+  { order = [717, 726], source_note = 2, start_delta = 51, duration_delta = 1 },
+  { order = [728, 844], source_note = 3, start_delta = 53, duration_delta = -17 },
+  { order = [847, 857], source_note = 4, start_delta = 46, duration_delta = 1, velocity = 51 },
+  { order = [858, 963], source_note = 5, start_delta = 48, duration_delta = -16, velocity = 71 },
+  { order = [964, 972], source_note = 6, start_delta = 43, duration_delta = -4 },
+  { order = [973, 979], source_note = 7, start_delta = 41, duration_delta = -2 },
+  { order = [980, 992], source_note = 8, start_delta = 41, duration_delta = 1 },
+  { order = [994, 1122], source_note = 9, start_delta = 44, duration_delta = -23 },
+  { order = [1123, 1131], source_note = 10, start_delta = 32, duration_delta = 3, velocity = 51 },
+  { order = [1132, 1243], source_note = 11, start_delta = 36, duration_delta = -14, velocity = 65 },
+  { order = [1244, 1257], source_note = 12, start_delta = 30, velocity = 80 },
+  { order = [1258, 1269], source_note = 13, start_delta = 32, duration_delta = 1 },
+  { order = [1271, 1381], source_note = 14, start_delta = 35, duration_delta = -27 },
+  { order = [1386, 1393], source_note = 15, start_delta = 15, duration_delta = -2, velocity = 47 },
+  { order = [1394, 1401], source_note = 16, start_delta = 14, velocity = 71 },
+  { order = [1402, 1413], source_note = 17, start_delta = 15, velocity = 77 },
+  { order = [1416, 1526], source_note = 18, start_delta = 16, duration_delta = -27 },
+  { order = [1532, 1538], source_note = 19, start_delta = -4, duration_delta = 2, velocity = 62 },
+  { order = [1539, 1552], source_note = 20, duration_delta = -3, velocity = 77 },
+  { order = [1553, 1559], source_note = 21, start_delta = -2, duration_delta = 2, velocity = 77 },
+  { order = [1560, 1687], source_note = 22, start_delta = 2, duration_delta = -17 },
+  { order = [1694, 1799], source_note = 23, start_delta = 2, duration_delta = -21, velocity = 51 },
+  { order = [1800, 1819], source_note = 24, start_delta = -10, duration_delta = 6 },
+  { order = [1820, 1925], source_note = 25, duration_delta = -20 },
+  { order = [1927, 1947], source_note = 26, start_delta = -9, duration_delta = 5, velocity = 51 },
+  { order = [1948, 2002], source_note = 27, duration_delta = -14, velocity = 62 },
+  { order = [2003, 2023], source_note = 28, start_delta = -8, duration_delta = -5, velocity = 47 },
+  { order = [2024, 2057], source_note = 29, start_delta = -11, duration_delta = -7, velocity = 71 },
+  { order = [2058, 2082], source_note = 30, start_delta = -15, duration_delta = 1, velocity = 62 },
+  { order = [2084, 2217], source_note = 31, start_delta = -11, duration_delta = -17, velocity = 51 },
+  { order = [2220, 2325], source_note = 32, start_delta = -15, duration_delta = -17, velocity = 59 },
+  { order = [2326, 2336], source_note = 33, start_delta = -21, duration_delta = 2, velocity = 77 },
+  { order = [2337, 2345], source_note = 34, start_delta = -16, duration_delta = 2, velocity = 51 },
+  { order = [2347, 2453], source_note = 35, start_delta = -13, duration_delta = -20 },
+  { order = [2454, 2464], source_note = 36, start_delta = -23, velocity = 77 },
+  { order = [2465, 2474], source_note = 37, start_delta = -22, duration_delta = 2, velocity = 83 },
+  { order = [2476, 2582], source_note = 38, start_delta = -17, duration_delta = -22, velocity = 83 },
+  { order = [2583, 2597], source_note = 39, start_delta = -29, duration_delta = -1 },
+  { order = [2598, 2610], source_note = 40, start_delta = -28, duration_delta = 1, velocity = 71 },
+  { order = [2614, 2741], source_note = 41, start_delta = -25, duration_delta = -15, velocity = 74 },
+  { order = [2746, 2857], source_note = 42, start_delta = -23, duration_delta = -21 },
+  { order = [2858, 2865], source_note = 43, start_delta = -35, duration_delta = -2, velocity = 74 },
+  { order = [2866, 2873], source_note = 44, start_delta = -35, velocity = 77 },
+  { order = [2874, 2886], source_note = 45, start_delta = -33, duration_delta = 1, velocity = 77 },
+  { order = [2888, 3001], source_note = 46, start_delta = -30, duration_delta = -25, velocity = 77 },
+  { order = [3003, 3011], source_note = 47, start_delta = -46, duration_delta = -2 },
+  { order = [3012, 3019], source_note = 48, start_delta = -47, duration_delta = -3 },
+  { order = [3020, 3032], source_note = 49, start_delta = -49, velocity = 86 },
+  { order = [3034, 3145], source_note = 50, start_delta = -48, duration_delta = -21 },
+  { order = [3149, 3154], source_note = 51, start_delta = -63, velocity = 77 },
+  { order = [3155, 3161], source_note = 52, start_delta = -61, velocity = 71 },
+  { order = [3162, 3174], source_note = 53, start_delta = -60, velocity = 77 },
+  { order = [3176, 3309], source_note = 54, start_delta = -60, duration_delta = -20, velocity = 77 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 4
+channel = 3
+transpose = -24
+time_scale = [16, 21]
+start_offset = 366
+duration_scale = [13, 17]
+duration_offset = -1
+velocity = 59
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+notes = [
+  { order = [310, 313], source_note = 1, start_delta = -103, duration_delta = 1, velocity = 98 },
+  { order = [317, 319], source_note = 2, start_delta = -102, duration_delta = 2 },
+  { order = [322, 325], source_note = 3, start_delta = -99, duration_delta = 1 },
+  { order = [326, 329], source_note = 4, start_delta = -96, duration_delta = 3, velocity = 89 },
+  { order = [332, 335], source_note = 5, start_delta = -93, duration_delta = 4 },
+  { order = [336, 340], source_note = 6, start_delta = -89 },
+  { order = [342, 344], source_note = 7, start_delta = -87, duration_delta = 3, velocity = 92 },
+  { order = [346, 350], source_note = 8, start_delta = -84, duration_delta = 2, velocity = 46 },
+  { order = [352, 355], source_note = 9, start_delta = -82, duration_delta = 2 },
+  { order = [358, 360], source_note = 10, start_delta = -80, duration_delta = 3, velocity = 98 },
+  { order = [362, 365], source_note = 11, start_delta = -77, duration_delta = 3, velocity = 77 },
+  { order = [368, 370], source_note = 12, start_delta = -75, duration_delta = 3 },
+  { order = [372, 376], source_note = 13, start_delta = -72, duration_delta = 10, velocity = 86 },
+  { order = [377, 381], source_note = 14, start_delta = -61, duration_delta = 13, velocity = 95 },
+  { order = [382, 385], source_note = 15, start_delta = -51, duration_delta = 1, velocity = 80 },
+  { order = [388, 391], source_note = 16, start_delta = -48, duration_delta = 2, velocity = 77 },
+  { order = [394, 396], source_note = 17, start_delta = -47, duration_delta = 3 },
+  { order = [399, 401], source_note = 18, start_delta = -44, duration_delta = 4, velocity = 98 },
+  { order = [404, 406], source_note = 19, start_delta = -41, duration_delta = 2 },
+  { order = [408, 411], source_note = 20, start_delta = -38, duration_delta = 1, velocity = 68 },
+  { order = [414, 416], source_note = 21, start_delta = -36, duration_delta = 3, velocity = 89 },
+  { order = [418, 421], source_note = 22, start_delta = -32, duration_delta = 1 },
+  { order = [424, 427], source_note = 23, start_delta = -31 },
+  { order = [430, 432], source_note = 24, start_delta = -32, duration_delta = 3, velocity = 77 },
+  { order = [434, 437], source_note = 25, start_delta = -27, duration_delta = 2, velocity = 77 },
+  { order = [440, 442], source_note = 26, start_delta = -27, duration_delta = 3 },
+  { order = [444, 448], source_note = 27, start_delta = -22, duration_delta = 8, velocity = 83 },
+  { order = [449, 453], source_note = 28, start_delta = -16, duration_delta = 12, velocity = 104 },
+  { order = [454, 457], source_note = 29, start_delta = -6, duration_delta = 1, velocity = 98 },
+  { order = [460, 463], source_note = 30, start_delta = -6, duration_delta = 1 },
+  { order = [466, 468], source_note = 31, start_delta = -6, duration_delta = 3 },
+  { order = [470, 473], source_note = 32, duration_delta = 3, velocity = 89 },
+  { order = [476, 478], source_note = 33, duration_delta = 3 },
+  { order = [480, 483], source_note = 34, start_delta = 6, duration_delta = 1 },
+  { order = [486, 488], source_note = 35, start_delta = 7, duration_delta = 3, velocity = 92 },
+  { order = [490, 493], source_note = 36, start_delta = 10, duration_delta = 2, velocity = 46 },
+  { order = [496, 499], source_note = 37, start_delta = 10, duration_delta = 2 },
+  { order = [502, 504], source_note = 38, start_delta = 11, duration_delta = 4, velocity = 98 },
+  { order = [506, 509], source_note = 39, start_delta = 15, duration_delta = 1, velocity = 77 },
+  { order = [512, 514], source_note = 40, start_delta = 16, duration_delta = 4 },
+  { order = [516, 520], source_note = 41, start_delta = 20, duration_delta = 11, velocity = 86 },
+  { order = [521, 525], source_note = 42, start_delta = 29, duration_delta = 13, velocity = 95 },
+  { order = [526, 529], source_note = 43, start_delta = 39, duration_delta = 3, velocity = 80 },
+  { order = [532, 535], source_note = 44, start_delta = 41, velocity = 77 },
+  { order = [538, 540], source_note = 45, start_delta = 42, duration_delta = 3 },
+  { order = [542, 545], source_note = 46, start_delta = 45, duration_delta = 2, velocity = 98 },
+  { order = [548, 550], source_note = 47, start_delta = 46, duration_delta = 3 },
+  { order = [553, 555], source_note = 48, start_delta = 48, duration_delta = 3, velocity = 68 },
+  { order = [558, 560], source_note = 49, start_delta = 52, duration_delta = 4, velocity = 89 },
+  { order = [562, 565], source_note = 50, start_delta = 56, duration_delta = 2 },
+  { order = [568, 571], source_note = 51, start_delta = 59, duration_delta = 1 },
+  { order = [574, 576], source_note = 52, start_delta = 61, duration_delta = 4, velocity = 77 },
+  { order = [578, 581], source_note = 53, start_delta = 67, duration_delta = 2, velocity = 77 },
+  { order = [584, 586], source_note = 54, start_delta = 68, duration_delta = 3 },
+  { order = [588, 594], source_note = 55, start_delta = 71, duration_delta = 8, velocity = 83 },
+  { order = [595, 601], source_note = 56, start_delta = 77, duration_delta = 10, velocity = 104 },
+  { order = [603, 609], source_note = 57, start_delta = 86, duration_delta = -16, velocity = 98 },
+  { order = [615, 621], source_note = 58, start_delta = 70, duration_delta = -2 },
+  { order = [627, 630], source_note = 59, start_delta = 66, duration_delta = 1 },
+  { order = [634, 637], source_note = 60, start_delta = 65, duration_delta = 3, velocity = 89 },
+  { order = [643, 646], source_note = 61, start_delta = 66, duration_delta = 3 },
+  { order = [650, 654], source_note = 62, start_delta = 68 },
+  { order = [659, 661], source_note = 63, start_delta = 68, duration_delta = 3, velocity = 92 },
+  { order = [663, 673], source_note = 64, start_delta = 71, duration_delta = -3, velocity = 46 },
+  { order = [678, 681], source_note = 65, start_delta = 67, duration_delta = 2 },
+  { order = [687, 689], source_note = 66, start_delta = 67, duration_delta = 4, velocity = 98 },
+  { order = [691, 697], source_note = 67, start_delta = 71, duration_delta = -4, velocity = 77 },
+  { order = [703, 705], source_note = 68, start_delta = 64, duration_delta = 3 },
+  { order = [707, 714], source_note = 69, start_delta = 68, duration_delta = 6, velocity = 86 },
+  { order = [718, 727], source_note = 70, start_delta = 72, duration_delta = 4, velocity = 95 },
+  { order = [729, 735], source_note = 71, start_delta = 74, duration_delta = -3, velocity = 80 },
+  { order = [741, 747], source_note = 72, start_delta = 70, duration_delta = -3, velocity = 77 },
+  { order = [753, 755], source_note = 73, start_delta = 66, duration_delta = 1 },
+  { order = [757, 763], source_note = 74, start_delta = 69, duration_delta = -2, velocity = 98 },
+  { order = [769, 771], source_note = 75, start_delta = 64, duration_delta = 3 },
+  { order = [777, 779], source_note = 76, start_delta = 64, duration_delta = 3, velocity = 68 },
+  { order = [785, 787], source_note = 77, start_delta = 64, duration_delta = 5, velocity = 89 },
+  { order = [789, 795], source_note = 78, start_delta = 68 },
+  { order = [801, 807], source_note = 79, start_delta = 66, duration_delta = -2 },
+  { order = [813, 816], source_note = 80, start_delta = 62, duration_delta = 2, velocity = 77 },
+  { order = [820, 825], source_note = 81, start_delta = 62, duration_delta = -1, velocity = 77 },
+  { order = [828, 833], source_note = 82, start_delta = 61, duration_delta = 1 },
+  { order = [836, 846], source_note = 83, start_delta = 64, duration_delta = 4, velocity = 83 },
+  { order = [848, 856], source_note = 84, start_delta = 67, duration_delta = 6, velocity = 104 },
+  { order = [859, 865], source_note = 85, start_delta = 71, duration_delta = -5, velocity = 98 },
+  { order = [871, 877], source_note = 86, start_delta = 64, duration_delta = -2 },
+  { order = [883, 885], source_note = 87, start_delta = 62, duration_delta = 2 },
+  { order = [887, 893], source_note = 88, start_delta = 66, duration_delta = -1, velocity = 89 },
+  { order = [899, 901], source_note = 89, start_delta = 62, duration_delta = 3 },
+  { order = [903, 909], source_note = 90, start_delta = 66, duration_delta = -3 },
+  { order = [912, 917], source_note = 91, start_delta = 64, duration_delta = 2, velocity = 92 },
+  { order = [919, 925], source_note = 92, start_delta = 65, duration_delta = -1, velocity = 46 },
+  { order = [931, 934], source_note = 93, start_delta = 62, duration_delta = 1 },
+  { order = [937, 942], source_note = 94, start_delta = 64, duration_delta = 1, velocity = 98 },
+  { order = [944, 950], source_note = 95, start_delta = 66, velocity = 77 },
+  { order = [953, 958], source_note = 96, start_delta = 64 },
+  { order = [965, 977], source_note = 97, start_delta = 64, velocity = 86 },
+  { order = [981, 993], source_note = 98, start_delta = 63, duration_delta = 3, velocity = 95 },
+  { order = [995, 1001], source_note = 99, start_delta = 64, duration_delta = -3, velocity = 80 },
+  { order = [1007, 1013], source_note = 100, start_delta = 60, duration_delta = -3, velocity = 77 },
+  { order = [1019, 1024], source_note = 101, start_delta = 55 },
+  { order = [1029, 1032], source_note = 102, start_delta = 55, duration_delta = 3, velocity = 98 },
+  { order = [1035, 1040], source_note = 103, start_delta = 58 },
+  { order = [1046, 1051], source_note = 104, start_delta = 55, velocity = 68 },
+  { order = [1057, 1059], source_note = 105, start_delta = 54, duration_delta = 3, velocity = 89 },
+  { order = [1061, 1067], source_note = 106, start_delta = 58 },
+  { order = [1073, 1076], source_note = 107, start_delta = 55, duration_delta = 1 },
+  { order = [1079, 1085], source_note = 108, start_delta = 56, duration_delta = -1, velocity = 77 },
+  { order = [1091, 1094], source_note = 109, start_delta = 54, duration_delta = 2, velocity = 77 },
+  { order = [1097, 1105], source_note = 110, start_delta = 54 },
+  { order = [1108, 1130], source_note = 111, start_delta = 52, duration_delta = 8, velocity = 83 },
+  { order = [1133, 1139], source_note = 112, start_delta = 59, duration_delta = -3, velocity = 98 },
+  { order = [1145, 1151], source_note = 113, start_delta = 55, duration_delta = -3 },
+  { order = [1157, 1163], source_note = 114, start_delta = 51, duration_delta = -1 },
+  { order = [1167, 1173], source_note = 115, start_delta = 50, duration_delta = 1, velocity = 89 },
+  { order = [1176, 1182], source_note = 116, start_delta = 50 },
+  { order = [1183, 1190], source_note = 117, start_delta = 53, duration_delta = -3 },
+  { order = [1195, 1197], source_note = 118, start_delta = 50, duration_delta = 3, velocity = 92 },
+  { order = [1199, 1206], source_note = 119, start_delta = 53, duration_delta = -1, velocity = 46 },
+  { order = [1208, 1214], source_note = 120, start_delta = 52 },
+  { order = [1217, 1222], source_note = 121, start_delta = 52, duration_delta = 1, velocity = 98 },
+  { order = [1224, 1230], source_note = 122, start_delta = 53, velocity = 77 },
+  { order = [1233, 1238], source_note = 123, start_delta = 52 },
+  { order = [1245, 1255], source_note = 124, start_delta = 52, duration_delta = 2, velocity = 86 },
+  { order = [1259, 1270], source_note = 125, start_delta = 54, duration_delta = 5, velocity = 95 },
+  { order = [1272, 1279], source_note = 126, start_delta = 56, duration_delta = -4, velocity = 80 },
+  { order = [1285, 1291], source_note = 127, start_delta = 49, duration_delta = -1, velocity = 77 },
+  { order = [1297, 1302], source_note = 128, start_delta = 47 },
+  { order = [1307, 1313], source_note = 129, start_delta = 47, duration_delta = -2, velocity = 98 },
+  { order = [1316, 1318], source_note = 130, start_delta = 43, duration_delta = 3 },
+  { order = [1324, 1329], source_note = 131, start_delta = 44, duration_delta = -2, velocity = 68 },
+  { order = [1332, 1337], source_note = 132, start_delta = 42, duration_delta = 1, velocity = 89 },
+  { order = [1339, 1345], source_note = 133, start_delta = 43, duration_delta = -2 },
+  { order = [1348, 1351], source_note = 134, start_delta = 42, duration_delta = 3 },
+  { order = [1357, 1363], source_note = 135, start_delta = 42, duration_delta = -4, velocity = 77 },
+  { order = [1367, 1372], source_note = 136, start_delta = 39, duration_delta = 1, velocity = 77 },
+  { order = [1375, 1380], source_note = 137, start_delta = 40, duration_delta = -1 },
+  { order = [1387, 1400], source_note = 138, start_delta = 36, duration_delta = 1, velocity = 83 },
+  { order = [1403, 1415], source_note = 139, start_delta = 37, duration_delta = 2, velocity = 104 },
+  { order = [1417, 1423], source_note = 140, start_delta = 37, duration_delta = -4, velocity = 98 },
+  { order = [1429, 1435], source_note = 141, start_delta = 31, duration_delta = -3 },
+  { order = [1438, 1443], source_note = 142, start_delta = 29 },
+  { order = [1445, 1451], source_note = 143, start_delta = 29, duration_delta = -1, velocity = 89 },
+  { order = [1454, 1459], source_note = 144, start_delta = 26, duration_delta = 2 },
+  { order = [1461, 1467], source_note = 145, start_delta = 27 },
+  { order = [1470, 1475], source_note = 146, start_delta = 28, duration_delta = 2, velocity = 92 },
+  { order = [1477, 1483], source_note = 147, start_delta = 31, duration_delta = -1, velocity = 46 },
+  { order = [1489, 1495], source_note = 148, start_delta = 28, duration_delta = -3 },
+  { order = [1501, 1509], source_note = 149, start_delta = 24, duration_delta = -1, velocity = 98 },
+  { order = [1511, 1517], source_note = 150, start_delta = 23, duration_delta = -3, velocity = 77 },
+  { order = [1520, 1525], source_note = 151, start_delta = 20, duration_delta = 1 },
+  { order = [1533, 1544], source_note = 152, start_delta = 17, duration_delta = 3, velocity = 86 },
+  { order = [1545, 1558], source_note = 153, start_delta = 20, duration_delta = 6, velocity = 95 },
+  { order = [1561, 1567], source_note = 154, start_delta = 24, duration_delta = -6, velocity = 80 },
+  { order = [1573, 1579], source_note = 155, start_delta = 17, velocity = 77 },
+  { order = [1585, 1590], source_note = 156, start_delta = 16 },
+  { order = [1595, 1598], source_note = 157, start_delta = 14, duration_delta = 3, velocity = 98 },
+  { order = [1601, 1609], source_note = 158, start_delta = 17, duration_delta = -4 },
+  { order = [1612, 1617], source_note = 159, start_delta = 13, velocity = 68 },
+  { order = [1620, 1625], source_note = 160, start_delta = 13, duration_delta = 2, velocity = 89 },
+  { order = [1627, 1633], source_note = 161, start_delta = 15 },
+  { order = [1636, 1642], source_note = 162, start_delta = 15 },
+  { order = [1648, 1651], source_note = 163, start_delta = 11, duration_delta = 3, velocity = 77 },
+  { order = [1654, 1660], source_note = 164, start_delta = 13, velocity = 77 },
+  { order = [1663, 1671], source_note = 165, start_delta = 13 },
+  { order = [1673, 1693], source_note = 166, start_delta = 11, duration_delta = 13, velocity = 83 },
+  { order = [1695, 1701], source_note = 167, start_delta = 23, duration_delta = -4, velocity = 98 },
+  { order = [1708, 1713], source_note = 168, start_delta = 16, duration_delta = 1 },
+  { order = [1719, 1722], source_note = 169, start_delta = 15, duration_delta = 1 },
+  { order = [1726, 1729], source_note = 170, start_delta = 14, duration_delta = 1, velocity = 89 },
+  { order = [1735, 1738], source_note = 171, start_delta = 13, duration_delta = 3 },
+  { order = [1742, 1746], source_note = 172, start_delta = 14, duration_delta = -1 },
+  { order = [1751, 1753], source_note = 173, start_delta = 13, duration_delta = 4, velocity = 92 },
+  { order = [1755, 1765], source_note = 174, start_delta = 16, duration_delta = -4, velocity = 46 },
+  { order = [1770, 1773], source_note = 175, start_delta = 9, duration_delta = 1 },
+  { order = [1779, 1781], source_note = 176, start_delta = 7, duration_delta = 4, velocity = 98 },
+  { order = [1783, 1789], source_note = 177, start_delta = 12, duration_delta = -1, velocity = 77 },
+  { order = [1795, 1797], source_note = 178, start_delta = 7, duration_delta = 4 },
+  { order = [1801, 1808], source_note = 179, start_delta = 11, duration_delta = 6, velocity = 86 },
+  { order = [1810, 1818], source_note = 180, start_delta = 16, duration_delta = 7, velocity = 95 },
+  { order = [1821, 1827], source_note = 181, start_delta = 22, duration_delta = -3, velocity = 80 },
+  { order = [1833, 1839], source_note = 182, start_delta = 19, duration_delta = -2, velocity = 77 },
+  { order = [1845, 1847], source_note = 183, start_delta = 15, duration_delta = 3 },
+  { order = [1850, 1855], source_note = 184, start_delta = 17, duration_delta = -1, velocity = 98 },
+  { order = [1861, 1863], source_note = 185, start_delta = 13, duration_delta = 3 },
+  { order = [1868, 1871], source_note = 186, start_delta = 14, velocity = 68 },
+  { order = [1877, 1879], source_note = 187, start_delta = 13, duration_delta = 3, velocity = 89 },
+  { order = [1881, 1887], source_note = 188, start_delta = 16, duration_delta = -1 },
+  { order = [1893, 1899], source_note = 189, start_delta = 13, duration_delta = -2 },
+  { order = [1905, 1907], source_note = 190, start_delta = 9, duration_delta = 3, velocity = 77 },
+  { order = [1909, 1915], source_note = 191, start_delta = 13, duration_delta = -1, velocity = 77 },
+  { order = [1918, 1923], source_note = 192, start_delta = 11, duration_delta = 2 },
+  { order = [1928, 1937], source_note = 193, start_delta = 12, duration_delta = 5, velocity = 83 },
+  { order = [1938, 1946], source_note = 194, start_delta = 16, duration_delta = 8, velocity = 104 },
+  { order = [1949, 1955], source_note = 195, start_delta = 21, duration_delta = -3, velocity = 98 },
+  { order = [1961, 1967], source_note = 196, start_delta = 17, duration_delta = -3 },
+  { order = [1973, 1975], source_note = 197, start_delta = 13, duration_delta = 2 },
+  { order = [1977, 1983], source_note = 198, start_delta = 16, duration_delta = -1, velocity = 89 },
+  { order = [1989, 1991], source_note = 199, start_delta = 13, duration_delta = 3 },
+  { order = [1993, 1999], source_note = 200, start_delta = 16, duration_delta = -2 },
+  { order = [2004, 2009], source_note = 201, start_delta = 13, duration_delta = 1, velocity = 92 },
+  { order = [2011, 2017], source_note = 202, start_delta = 14, duration_delta = -1, velocity = 46 },
+  { order = [2025, 2028], source_note = 203, start_delta = 11, duration_delta = -1 },
+  { order = [2031, 2036], source_note = 204, start_delta = 10, velocity = 98 },
+  { order = [2038, 2044], source_note = 205, start_delta = 10, velocity = 77 },
+  { order = [2047, 2052], source_note = 206, start_delta = 10, duration_delta = -2 },
+  { order = [2059, 2069], source_note = 207, start_delta = 7, duration_delta = 2, velocity = 86 },
+  { order = [2071, 2083], source_note = 208, start_delta = 8, duration_delta = 5, velocity = 95 },
+  { order = [2085, 2091], source_note = 209, start_delta = 11, duration_delta = -3, velocity = 80 },
+  { order = [2097, 2103], source_note = 210, start_delta = 5, duration_delta = -2, velocity = 77 },
+  { order = [2109, 2114], source_note = 211, start_delta = 3 },
+  { order = [2119, 2122], source_note = 212, start_delta = 1, duration_delta = 2, velocity = 98 },
+  { order = [2125, 2130], source_note = 213, start_delta = 3 },
+  { order = [2136, 2141], source_note = 214, duration_delta = -1, velocity = 68 },
+  { order = [2147, 2149], source_note = 215, start_delta = -2, duration_delta = 3, velocity = 89 },
+  { order = [2151, 2157], source_note = 216, duration_delta = -2 },
+  { order = [2163, 2166], source_note = 217, start_delta = -2, duration_delta = 2 },
+  { order = [2169, 2174], source_note = 218, velocity = 77 },
+  { order = [2179, 2182], source_note = 219, start_delta = -1, duration_delta = 1, velocity = 77 },
+  { order = [2185, 2193], source_note = 220, start_delta = -2 },
+  { order = [2196, 2210], source_note = 221, start_delta = -4, duration_delta = 6, velocity = 83 },
+  { order = [2211, 2219], source_note = 222, duration_delta = 9, velocity = 104 },
+  { order = [2221, 2227], source_note = 223, start_delta = 7, duration_delta = -3, velocity = 98 },
+  { order = [2234, 2239], source_note = 224, duration_delta = -3 },
+  { order = [2245, 2248], source_note = 225, start_delta = -3, duration_delta = 2 },
+  { order = [2252, 2255], source_note = 226, start_delta = -3, duration_delta = 3, velocity = 89 },
+  { order = [2261, 2264], source_note = 227, start_delta = -3, duration_delta = 4 },
+  { order = [2268, 2272], source_note = 228 },
+  { order = [2277, 2279], source_note = 229, start_delta = -2, duration_delta = 3, velocity = 92 },
+  { order = [2281, 2291], source_note = 230, duration_delta = -4, velocity = 46 },
+  { order = [2296, 2299], source_note = 231, start_delta = -6, duration_delta = 3 },
+  { order = [2305, 2307], source_note = 232, start_delta = -4, duration_delta = 3, velocity = 98 },
+  { order = [2309, 2315], source_note = 233, duration_delta = -1, velocity = 77 },
+  { order = [2321, 2323], source_note = 234, start_delta = -3, duration_delta = 3 },
+  { order = [2327, 2334], source_note = 235, duration_delta = 4, velocity = 86 },
+  { order = [2338, 2346], source_note = 236, start_delta = 4, duration_delta = 7, velocity = 95 },
+  { order = [2348, 2355], source_note = 237, start_delta = 9, duration_delta = -3, velocity = 80 },
+  { order = [2361, 2367], source_note = 238, start_delta = 3, duration_delta = -2, velocity = 77 },
+  { order = [2373, 2375], source_note = 239, start_delta = -1, duration_delta = 3 },
+  { order = [2378, 2383], source_note = 240, start_delta = 1, duration_delta = -1, velocity = 98 },
+  { order = [2389, 2391], source_note = 241, start_delta = -3, duration_delta = 3 },
+  { order = [2396, 2399], source_note = 242, start_delta = -2, velocity = 68 },
+  { order = [2405, 2407], source_note = 243, start_delta = -2, duration_delta = 3, velocity = 89 },
+  { order = [2409, 2415], source_note = 244, start_delta = 1, duration_delta = -3 },
+  { order = [2421, 2427], source_note = 245, start_delta = -3 },
+  { order = [2433, 2435], source_note = 246, start_delta = -6, duration_delta = 3, velocity = 77 },
+  { order = [2437, 2443], source_note = 247, start_delta = -1, duration_delta = -1, velocity = 77 },
+  { order = [2446, 2451], source_note = 248, start_delta = -3, duration_delta = 1 },
+  { order = [2455, 2463], source_note = 249, start_delta = -1, duration_delta = 4, velocity = 83 },
+  { order = [2466, 2475], source_note = 250, duration_delta = 6, velocity = 104 },
+  { order = [2477, 2483], source_note = 251, start_delta = 4, duration_delta = -4, velocity = 98 },
+  { order = [2489, 2495], source_note = 252, duration_delta = -4 },
+  { order = [2501, 2503], source_note = 253, start_delta = -6, duration_delta = 3 },
+  { order = [2505, 2511], source_note = 254, start_delta = -2, duration_delta = -2, velocity = 89 },
+  { order = [2517, 2519], source_note = 255, start_delta = -5, duration_delta = 3 },
+  { order = [2521, 2527], source_note = 256, duration_delta = -2 },
+  { order = [2530, 2535], source_note = 257, start_delta = -3, duration_delta = 1, velocity = 92 },
+  { order = [2537, 2543], source_note = 258, start_delta = -3, duration_delta = -3, velocity = 46 },
+  { order = [2549, 2552], source_note = 259, start_delta = -6, duration_delta = 2 },
+  { order = [2555, 2560], source_note = 260, start_delta = -3, duration_delta = 1, velocity = 98 },
+  { order = [2562, 2568], source_note = 261, start_delta = -3, velocity = 77 },
+  { order = [2571, 2576], source_note = 262, start_delta = -4 },
+  { order = [2584, 2596], source_note = 263, start_delta = -6, velocity = 86 },
+  { order = [2599, 2611], source_note = 264, start_delta = -6, duration_delta = 4, velocity = 95 },
+  { order = [2612, 2619], source_note = 265, start_delta = -3, duration_delta = -3, velocity = 80 },
+  { order = [2625, 2631], source_note = 266, start_delta = -8, duration_delta = -2, velocity = 77 },
+  { order = [2637, 2642], source_note = 267, start_delta = -11 },
+  { order = [2647, 2650], source_note = 268, start_delta = -11, duration_delta = 2, velocity = 98 },
+  { order = [2653, 2658], source_note = 269, start_delta = -9 },
+  { order = [2664, 2669], source_note = 270, start_delta = -12, duration_delta = -1, velocity = 68 },
+  { order = [2675, 2677], source_note = 271, start_delta = -14, duration_delta = 3, velocity = 89 },
+  { order = [2679, 2685], source_note = 272, start_delta = -10, duration_delta = -3 },
+  { order = [2691, 2694], source_note = 273, start_delta = -14, duration_delta = 2 },
+  { order = [2697, 2702], source_note = 274, start_delta = -12, velocity = 77 },
+  { order = [2707, 2710], source_note = 275, start_delta = -14, duration_delta = 2, velocity = 77 },
+  { order = [2713, 2721], source_note = 276, start_delta = -12 },
+  { order = [2723, 2736], source_note = 277, start_delta = -14, duration_delta = 4, velocity = 83 },
+  { order = [2737, 2745], source_note = 278, start_delta = -11, duration_delta = 11, velocity = 104 },
+  { order = [2747, 2753], source_note = 279, start_delta = -2, duration_delta = -3, velocity = 98 },
+  { order = [2759, 2765], source_note = 280, start_delta = -7, duration_delta = -2 },
+  { order = [2771, 2777], source_note = 281, start_delta = -10, duration_delta = -1 },
+  { order = [2781, 2787], source_note = 282, start_delta = -12, velocity = 89 },
+  { order = [2790, 2796], source_note = 283, start_delta = -12 },
+  { order = [2797, 2804], source_note = 284, start_delta = -10, duration_delta = -3 },
+  { order = [2809, 2811], source_note = 285, start_delta = -14, duration_delta = 3, velocity = 92 },
+  { order = [2813, 2820], source_note = 286, start_delta = -10, duration_delta = -3, velocity = 46 },
+  { order = [2822, 2828], source_note = 287, start_delta = -12 },
+  { order = [2831, 2836], source_note = 288, start_delta = -12, duration_delta = 2, velocity = 98 },
+  { order = [2838, 2844], source_note = 289, start_delta = -10, velocity = 77 },
+  { order = [2847, 2852], source_note = 290, start_delta = -11 },
+  { order = [2859, 2871], source_note = 291, start_delta = -13, duration_delta = 2, velocity = 86 },
+  { order = [2875, 2887], source_note = 292, start_delta = -11, duration_delta = 5, velocity = 95 },
+  { order = [2889, 2895], source_note = 293, start_delta = -9, duration_delta = -3, velocity = 80 },
+  { order = [2901, 2907], source_note = 294, start_delta = -14, velocity = 77 },
+  { order = [2913, 2918], source_note = 295, start_delta = -16 },
+  { order = [2923, 2929], source_note = 296, start_delta = -16, duration_delta = -2, velocity = 98 },
+  { order = [2932, 2934], source_note = 297, start_delta = -19, duration_delta = 2 },
+  { order = [2940, 2945], source_note = 298, start_delta = -19, duration_delta = -2, velocity = 68 },
+  { order = [2948, 2953], source_note = 299, start_delta = -19, velocity = 89 },
+  { order = [2955, 2961], source_note = 300, start_delta = -19, duration_delta = -1 },
+  { order = [2964, 2967], source_note = 301, start_delta = -19, duration_delta = 3 },
+  { order = [2973, 2979], source_note = 302, start_delta = -19, duration_delta = -3, velocity = 77 },
+  { order = [2983, 2988], source_note = 303, start_delta = -22, duration_delta = 1, velocity = 77 },
+  { order = [2991, 2996], source_note = 304, start_delta = -20, duration_delta = -1 },
+  { order = [3004, 3018], source_note = 305, start_delta = -25, duration_delta = 1, velocity = 83 },
+  { order = [3021, 3033], source_note = 306, start_delta = -26, velocity = 104 },
+  { order = [3035, 3041], source_note = 307, start_delta = -27, duration_delta = -3, velocity = 98 },
+  { order = [3047, 3053], source_note = 308, start_delta = -32, duration_delta = -1 },
+  { order = [3056, 3061], source_note = 309, start_delta = -32, duration_delta = 1 },
+  { order = [3063, 3069], source_note = 310, start_delta = -29, duration_delta = -1, velocity = 89 },
+  { order = [3072, 3077], source_note = 311, start_delta = -32, duration_delta = 1 },
+  { order = [3079, 3085], source_note = 312, start_delta = -28, duration_delta = -3 },
+  { order = [3088, 3093], source_note = 313, start_delta = -31, duration_delta = 2, velocity = 92 },
+  { order = [3095, 3101], source_note = 314, start_delta = -29, duration_delta = -1, velocity = 46 },
+  { order = [3107, 3113], source_note = 315, start_delta = -32, duration_delta = -3 },
+  { order = [3119, 3127], source_note = 316, start_delta = -38, duration_delta = -1, velocity = 98 },
+  { order = [3129, 3135], source_note = 317, start_delta = -38, velocity = 77 },
+  { order = [3138, 3143], source_note = 318, start_delta = -38 },
+  { order = [3150, 3159], source_note = 319, start_delta = -42, duration_delta = 4, velocity = 86 },
+  { order = [3163, 3175], source_note = 320, start_delta = -38, duration_delta = 1, velocity = 95 },
+  { order = [3177, 3183], source_note = 321, start_delta = -39, velocity = 80 },
+  { order = [3189, 3195], source_note = 322, start_delta = -42, duration_delta = -3, velocity = 77 },
+  { order = [3201, 3206], source_note = 323, start_delta = -47 },
+  { order = [3211, 3214], source_note = 324, start_delta = -47, duration_delta = 3, velocity = 98 },
+  { order = [3217, 3225], source_note = 325, start_delta = -44 },
+  { order = [3228, 3233], source_note = 326, start_delta = -45, duration_delta = -1, velocity = 68 },
+  { order = [3236, 3241], source_note = 327, start_delta = -47, duration_delta = 1, velocity = 89 },
+  { order = [3243, 3249], source_note = 328, start_delta = -46, duration_delta = -1 },
+  { order = [3252, 3258], source_note = 329, start_delta = -47 },
+  { order = [3264, 3267], source_note = 330, start_delta = -51, duration_delta = 2, velocity = 77 },
+  { order = [3270, 3276], source_note = 331, start_delta = -51, velocity = 77 },
+  { order = [3279, 3287], source_note = 332, start_delta = -51 },
+  { order = [3290, 3311], source_note = 333, start_delta = -53, duration_delta = 9, velocity = 83 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 7
+channel = 4
+transpose = 0
+time_scale = [190, 251]
+start_offset = 530
+duration_scale = [2377, 3132]
+duration_offset = 0
+velocity = 68
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+notes = [
+  { order = [605, 612], source_note = 1, start_delta = -9, duration_delta = -9, velocity = 77 },
+  { order = [616, 625], source_note = 2, start_delta = -18, duration_delta = -2, velocity = 92 },
+  { order = [631, 641], source_note = 3, start_delta = -17, duration_delta = -2, velocity = 89 },
+  { order = [647, 657], source_note = 4, start_delta = -15, duration_delta = 1, velocity = 92 },
+  { order = [664, 671], source_note = 5, start_delta = -12 },
+  { order = [675, 685], source_note = 6, start_delta = -13, velocity = 77 },
+  { order = [692, 702], source_note = 7, start_delta = -11, duration_delta = -3, velocity = 80 },
+  { order = [709, 722], source_note = 8, start_delta = -13, duration_delta = 9, velocity = 92 },
+  { order = [731, 738], source_note = 9, start_delta = -6, duration_delta = -2, velocity = 65 },
+  { order = [742, 751], source_note = 10, start_delta = -8 },
+  { order = [758, 768], source_note = 11, start_delta = -9, velocity = 74 },
+  { order = [773, 784], source_note = 12, start_delta = -6, duration_delta = -2, velocity = 77 },
+  { order = [791, 798], source_note = 13, start_delta = -6, duration_delta = -1 },
+  { order = [804, 810], source_note = 14, start_delta = -8, duration_delta = 1, velocity = 83 },
+  { order = [821, 829], source_note = 15, start_delta = -9, duration_delta = 1 },
+  { order = [838, 854], source_note = 16, start_delta = -9, duration_delta = 8, velocity = 83 },
+  { order = [860, 869], source_note = 17, duration_delta = -3, velocity = 65 },
+  { order = [872, 882], source_note = 18, start_delta = -4, duration_delta = 1 },
+  { order = [889, 896], source_note = 19, start_delta = -1, duration_delta = 1, velocity = 77 },
+  { order = [905, 913], source_note = 20, velocity = 80 },
+  { order = [920, 930], source_note = 21, start_delta = 2, duration_delta = -1, velocity = 92 },
+  { order = [938, 948], source_note = 22, start_delta = 3, velocity = 83 },
+  { order = [954, 961], source_note = 23, start_delta = 4, duration_delta = 1 },
+  { order = [967, 975], source_note = 24, start_delta = 1, duration_delta = 2, velocity = 95 },
+  { order = [983, 989], source_note = 25, start_delta = 2, duration_delta = 4, velocity = 92 },
+  { order = [998, 1004], source_note = 26, start_delta = 5, duration_delta = -3 },
+  { order = [1010, 1016], source_note = 27 },
+  { order = [1021, 1026], source_note = 28, start_delta = -1, duration_delta = 2, velocity = 83 },
+  { order = [1037, 1042], source_note = 29, start_delta = 4, duration_delta = -2, velocity = 74 },
+  { order = [1048, 1054], source_note = 30, duration_delta = 3, velocity = 86 },
+  { order = [1064, 1070], source_note = 31, start_delta = 3, velocity = 77 },
+  { order = [1081, 1088], source_note = 32, start_delta = 3, velocity = 80 },
+  { order = [1098, 1104], source_note = 33, start_delta = 3, duration_delta = -1 },
+  { order = [1109, 1116], source_note = 34, duration_delta = 2, velocity = 80 },
+  { order = [1136, 1142], source_note = 35, start_delta = 8, velocity = 83 },
+  { order = [1148, 1154], source_note = 36, start_delta = 6, duration_delta = -1, velocity = 65 },
+  { order = [1159, 1164], source_note = 37, start_delta = 4, duration_delta = -1, velocity = 65 },
+  { order = [1170, 1181], source_note = 38, start_delta = 5, duration_delta = 2, velocity = 92 },
+  { order = [1186, 1192], source_note = 39, start_delta = 6, velocity = 77 },
+  { order = [1200, 1212], source_note = 40, start_delta = 10, duration_delta = -3, velocity = 101 },
+  { order = [1219, 1227], source_note = 41, start_delta = 9, duration_delta = 2, velocity = 107 },
+  { order = [1234, 1242], source_note = 42, start_delta = 12 },
+  { order = [1247, 1253], source_note = 43, start_delta = 9, duration_delta = 6, velocity = 113 },
+  { order = [1261, 1266], source_note = 44, start_delta = 12, duration_delta = 6, velocity = 113 },
+  { order = [1275, 1284], source_note = 45, start_delta = 15, duration_delta = -3, velocity = 74 },
+  { order = [1288, 1294], source_note = 46, start_delta = 11, duration_delta = 1 },
+  { order = [1299, 1304], source_note = 47, start_delta = 11, velocity = 77 },
+  { order = [1310, 1321], source_note = 48, start_delta = 8, duration_delta = 1, velocity = 98 },
+  { order = [1326, 1334], source_note = 49, start_delta = 8, duration_delta = 2, velocity = 107 },
+  { order = [1341, 1353], source_note = 50, start_delta = 9, duration_delta = 2, velocity = 80 },
+  { order = [1360, 1369], source_note = 51, start_delta = 7, duration_delta = 1, velocity = 89 },
+  { order = [1376, 1385], source_note = 52, start_delta = 9, duration_delta = -3, velocity = 77 },
+  { order = [1390, 1397], source_note = 53, start_delta = 2, duration_delta = 4, velocity = 98 },
+  { order = [1405, 1410], source_note = 54, start_delta = 4, duration_delta = 6, velocity = 83 },
+  { order = [1420, 1426], source_note = 55, start_delta = 5, velocity = 86 },
+  { order = [1431, 1439], source_note = 56, start_delta = 2, duration_delta = -1, velocity = 74 },
+  { order = [1447, 1455], source_note = 57, start_delta = 2, duration_delta = -1, velocity = 86 },
+  { order = [1462, 1474], source_note = 58, start_delta = 2, duration_delta = 2, velocity = 107 },
+  { order = [1478, 1486], source_note = 59, start_delta = 7, duration_delta = -1, velocity = 89 },
+  { order = [1490, 1498], source_note = 60, start_delta = 5, duration_delta = -3 },
+  { order = [1502, 1508], source_note = 61, start_delta = 2, velocity = 74 },
+  { order = [1512, 1523], source_note = 62, velocity = 92 },
+  { order = [1529, 1540], source_note = 63, start_delta = 1, velocity = 101 },
+  { order = [1546, 1556], source_note = 64, start_delta = -1, duration_delta = 5, velocity = 107 },
+  { order = [1564, 1570], source_note = 65, start_delta = 2, duration_delta = -4, velocity = 55 },
+  { order = [1576, 1582], source_note = 66, duration_delta = 1, velocity = 80 },
+  { order = [1587, 1592], source_note = 67, start_delta = -1, duration_delta = 2, velocity = 80 },
+  { order = [1603, 1607], source_note = 68, duration_delta = -1, velocity = 51 },
+  { order = [1614, 1622], source_note = 69, start_delta = -3, duration_delta = 3, velocity = 83 },
+  { order = [1630, 1639], source_note = 70, start_delta = 1, velocity = 107 },
+  { order = [1645, 1659], source_note = 71, start_delta = 2, duration_delta = -1, velocity = 83 },
+  { order = [1664, 1670], source_note = 72, start_delta = 1, duration_delta = -1, velocity = 77 },
+  { order = [1674, 1684], source_note = 73, duration_delta = 10, velocity = 95 },
+  { order = [1698, 1705], source_note = 74, start_delta = 11, duration_delta = -2, velocity = 77 },
+  { order = [1709, 1716], source_note = 75, start_delta = 9, velocity = 92 },
+  { order = [1723, 1733], source_note = 76, start_delta = 12, duration_delta = -5, velocity = 89 },
+  { order = [1739, 1749], source_note = 77, start_delta = 12, duration_delta = -2, velocity = 92 },
+  { order = [1756, 1763], source_note = 78, start_delta = 12, duration_delta = -2 },
+  { order = [1767, 1777], source_note = 79, start_delta = 10, duration_delta = -3, velocity = 77 },
+  { order = [1784, 1794], source_note = 80, start_delta = 9, velocity = 80 },
+  { order = [1803, 1814], source_note = 81, start_delta = 9, duration_delta = 11, velocity = 92 },
+  { order = [1824, 1830], source_note = 82, start_delta = 22, velocity = 65 },
+  { order = [1834, 1844], source_note = 83, start_delta = 21, duration_delta = -1 },
+  { order = [1851, 1858], source_note = 84, start_delta = 20, duration_delta = -1, velocity = 74 },
+  { order = [1865, 1873], source_note = 85, start_delta = 22, duration_delta = -2, velocity = 77 },
+  { order = [1883, 1890], source_note = 86, start_delta = 21, duration_delta = -1 },
+  { order = [1896, 1902], source_note = 87, start_delta = 18, duration_delta = 1, velocity = 83 },
+  { order = [1911, 1919], source_note = 88, start_delta = 21, duration_delta = 1 },
+  { order = [1929, 1943], source_note = 89, start_delta = 18, duration_delta = 12, velocity = 83 },
+  { order = [1950, 1958], source_note = 90, start_delta = 32, duration_delta = -2, velocity = 65 },
+  { order = [1962, 1972], source_note = 91, start_delta = 30, duration_delta = -1 },
+  { order = [1979, 1986], source_note = 92, start_delta = 30, duration_delta = 1, velocity = 77 },
+  { order = [1994, 2007], source_note = 93, start_delta = 30, duration_delta = -2, velocity = 80 },
+  { order = [2012, 2022], source_note = 94, start_delta = 31, duration_delta = -1, velocity = 92 },
+  { order = [2032, 2042], source_note = 95, start_delta = 28, velocity = 83 },
+  { order = [2048, 2055], source_note = 96, start_delta = 30, duration_delta = -2 },
+  { order = [2061, 2067], source_note = 97, start_delta = 24, duration_delta = 5, velocity = 95 },
+  { order = [2073, 2081], source_note = 98, start_delta = 27, duration_delta = 5, velocity = 92 },
+  { order = [2088, 2094], source_note = 99, start_delta = 31, duration_delta = -3 },
+  { order = [2100, 2106], source_note = 100, start_delta = 27 },
+  { order = [2111, 2116], source_note = 101, start_delta = 26, duration_delta = 2, velocity = 83 },
+  { order = [2127, 2132], source_note = 102, start_delta = 28, duration_delta = -1, velocity = 74 },
+  { order = [2138, 2144], source_note = 103, start_delta = 25, duration_delta = 1, velocity = 86 },
+  { order = [2154, 2160], source_note = 104, start_delta = 26, duration_delta = 1, velocity = 77 },
+  { order = [2170, 2178], source_note = 105, start_delta = 27, duration_delta = 2, velocity = 80 },
+  { order = [2186, 2192], source_note = 106, start_delta = 28, duration_delta = -2 },
+  { order = [2197, 2204], source_note = 107, start_delta = 26, duration_delta = 1, velocity = 80 },
+  { order = [2224, 2231], source_note = 108, start_delta = 35, duration_delta = -2, velocity = 77 },
+  { order = [2235, 2242], source_note = 109, start_delta = 33, duration_delta = -2, velocity = 92 },
+  { order = [2249, 2259], source_note = 110, start_delta = 34, duration_delta = -2, velocity = 89 },
+  { order = [2265, 2275], source_note = 111, start_delta = 36, duration_delta = -1, velocity = 92 },
+  { order = [2282, 2289], source_note = 112, start_delta = 35 },
+  { order = [2293, 2303], source_note = 113, start_delta = 34, velocity = 77 },
+  { order = [2310, 2320], source_note = 114, start_delta = 38, velocity = 80 },
+  { order = [2329, 2342], source_note = 115, start_delta = 37, duration_delta = 12, velocity = 92 },
+  { order = [2351, 2360], source_note = 116, start_delta = 49, duration_delta = -3, velocity = 65 },
+  { order = [2362, 2372], source_note = 117, start_delta = 44, duration_delta = -1 },
+  { order = [2379, 2386], source_note = 118, start_delta = 45, duration_delta = -1, velocity = 74 },
+  { order = [2393, 2401], source_note = 119, start_delta = 46, duration_delta = -1, velocity = 77 },
+  { order = [2411, 2418], source_note = 120, start_delta = 45, duration_delta = -2 },
+  { order = [2424, 2430], source_note = 121, start_delta = 42, duration_delta = 2, velocity = 83 },
+  { order = [2439, 2447], source_note = 122, start_delta = 46, duration_delta = 2 },
+  { order = [2456, 2471], source_note = 123, start_delta = 45, duration_delta = 6, velocity = 83 },
+  { order = [2478, 2486], source_note = 124, start_delta = 55, duration_delta = -2, velocity = 65 },
+  { order = [2490, 2500], source_note = 125, start_delta = 52, duration_delta = -3 },
+  { order = [2507, 2514], source_note = 126, start_delta = 51, duration_delta = 1, velocity = 77 },
+  { order = [2522, 2533], source_note = 127, start_delta = 54, duration_delta = -1, velocity = 80 },
+  { order = [2538, 2548], source_note = 128, start_delta = 54, duration_delta = -2, velocity = 92 },
+  { order = [2556, 2566], source_note = 129, start_delta = 55, duration_delta = -1, velocity = 83 },
+  { order = [2572, 2579], source_note = 130, start_delta = 55 },
+  { order = [2586, 2593], source_note = 131, start_delta = 50, duration_delta = 2, velocity = 95 },
+  { order = [2601, 2607], source_note = 132, start_delta = 52, duration_delta = 5, velocity = 92 },
+  { order = [2616, 2622], source_note = 133, start_delta = 56, duration_delta = -1 },
+  { order = [2628, 2634], source_note = 134, start_delta = 53 },
+  { order = [2639, 2644], source_note = 135, start_delta = 53, duration_delta = 2, velocity = 83 },
+  { order = [2655, 2660], source_note = 136, start_delta = 56, velocity = 74 },
+  { order = [2666, 2672], source_note = 137, start_delta = 54, duration_delta = 1, velocity = 86 },
+  { order = [2682, 2688], source_note = 138, start_delta = 54, velocity = 77 },
+  { order = [2698, 2706], source_note = 139, start_delta = 54, duration_delta = 1, velocity = 80 },
+  { order = [2714, 2720], source_note = 140, start_delta = 56 },
+  { order = [2724, 2731], source_note = 141, start_delta = 56, duration_delta = 1, velocity = 80 },
+  { order = [2750, 2756], source_note = 142, start_delta = 68, duration_delta = -1, velocity = 83 },
+  { order = [2762, 2768], source_note = 143, start_delta = 64, velocity = 65 },
+  { order = [2773, 2778], source_note = 144, start_delta = 62, velocity = 65 },
+  { order = [2784, 2795], source_note = 145, start_delta = 61, duration_delta = 2, velocity = 92 },
+  { order = [2800, 2806], source_note = 146, start_delta = 64, duration_delta = -1, velocity = 77 },
+  { order = [2814, 2826], source_note = 147, start_delta = 66, duration_delta = -3, velocity = 101 },
+  { order = [2833, 2841], source_note = 148, start_delta = 66, duration_delta = 2, velocity = 107 },
+  { order = [2848, 2856], source_note = 149, start_delta = 69, duration_delta = -2 },
+  { order = [2861, 2869], source_note = 150, start_delta = 64, duration_delta = 5, velocity = 113 },
+  { order = [2877, 2882], source_note = 151, start_delta = 68, duration_delta = 6, velocity = 113 },
+  { order = [2892, 2898], source_note = 152, start_delta = 71, duration_delta = -2, velocity = 74 },
+  { order = [2904, 2910], source_note = 153, start_delta = 68, duration_delta = 1 },
+  { order = [2915, 2920], source_note = 154, start_delta = 68, duration_delta = -1, velocity = 77 },
+  { order = [2926, 2937], source_note = 155, start_delta = 65, duration_delta = 2, velocity = 98 },
+  { order = [2942, 2950], source_note = 156, start_delta = 65, duration_delta = 2, velocity = 107 },
+  { order = [2957, 2969], source_note = 157, start_delta = 67, duration_delta = 3, velocity = 80 },
+  { order = [2976, 2985], source_note = 158, start_delta = 66, duration_delta = 1, velocity = 89 },
+  { order = [2992, 3000], source_note = 159, start_delta = 68, duration_delta = -2, velocity = 77 },
+  { order = [3007, 3014], source_note = 160, start_delta = 61, duration_delta = 4, velocity = 98 },
+  { order = [3023, 3029], source_note = 161, start_delta = 59, duration_delta = 5, velocity = 83 },
+  { order = [3038, 3044], source_note = 162, start_delta = 62, velocity = 86 },
+  { order = [3049, 3057], source_note = 163, start_delta = 60, duration_delta = 3, velocity = 74 },
+  { order = [3065, 3073], source_note = 164, start_delta = 63, velocity = 86 },
+  { order = [3080, 3092], source_note = 165, start_delta = 66, velocity = 107 },
+  { order = [3096, 3104], source_note = 166, start_delta = 66, duration_delta = -1, velocity = 89 },
+  { order = [3108, 3116], source_note = 167, start_delta = 63, duration_delta = -2 },
+  { order = [3120, 3126], source_note = 168, start_delta = 59, duration_delta = 1, velocity = 74 },
+  { order = [3130, 3141], source_note = 169, start_delta = 60, duration_delta = 1, velocity = 92 },
+  { order = [3146, 3157], source_note = 170, start_delta = 61, duration_delta = 1, velocity = 101 },
+  { order = [3164, 3172], source_note = 171, start_delta = 60, duration_delta = 5, velocity = 107 },
+  { order = [3180, 3186], source_note = 172, start_delta = 63, duration_delta = -2, velocity = 55 },
+  { order = [3192, 3198], source_note = 173, start_delta = 59, duration_delta = -2, velocity = 80 },
+  { order = [3203, 3208], source_note = 174, start_delta = 57, duration_delta = 3, velocity = 80 },
+  { order = [3219, 3223], source_note = 175, start_delta = 60, velocity = 51 },
+  { order = [3230, 3238], source_note = 176, start_delta = 59, velocity = 83 },
+  { order = [3246, 3255], source_note = 177, start_delta = 59, velocity = 107 },
+  { order = [3261, 3275], source_note = 178, start_delta = 60, duration_delta = -3, velocity = 83 },
+  { order = [3280, 3286], source_note = 179, start_delta = 58, velocity = 77 },
+  { order = [3291, 3303], source_note = 180, start_delta = 54, duration_delta = 10, velocity = 95 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 7
+channel = 5
+transpose = -4
+time_scale = [190, 251]
+start_offset = 530
+duration_scale = [2377, 3132]
+duration_offset = 0
+velocity = 73
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+notes = [
+  { order = [606, 610], source_note = 1, start_delta = -9, duration_delta = -9 },
+  { order = [617, 624], source_note = 2, start_delta = -18, duration_delta = -2 },
+  { order = [632, 640], source_note = 3, start_delta = -17, duration_delta = -2 },
+  { order = [648, 656], source_note = 4, start_delta = -15, duration_delta = 1 },
+  { order = [665, 670], source_note = 5, start_delta = -12 },
+  { order = [676, 684], source_note = 6, start_delta = -13 },
+  { order = [693, 700], source_note = 7, start_delta = -11, duration_delta = -3 },
+  { order = [710, 723], source_note = 8, start_delta = -13, duration_delta = 9 },
+  { order = [732, 739], source_note = 9, start_delta = -6, duration_delta = -2 },
+  { order = [743, 750], source_note = 10, start_delta = -8 },
+  { order = [759, 766], source_note = 11, start_delta = -9 },
+  { order = [774, 782], source_note = 12, start_delta = -6, duration_delta = -2 },
+  { order = [792, 799], source_note = 13, start_delta = -6, duration_delta = -1 },
+  { order = [805, 812], source_note = 14, start_delta = -8, duration_delta = 1 },
+  { order = [822, 830], source_note = 15, start_delta = -9, duration_delta = 1 },
+  { order = [839, 852], source_note = 16, start_delta = -9, duration_delta = 8, key_delta = 1 },
+  { order = [861, 868], source_note = 17, duration_delta = -3 },
+  { order = [873, 880], source_note = 18, start_delta = -4, duration_delta = 1 },
+  { order = [890, 897], source_note = 19, start_delta = -1, duration_delta = 1 },
+  { order = [906, 914], source_note = 20 },
+  { order = [921, 928], source_note = 21, start_delta = 2, duration_delta = -1 },
+  { order = [939, 946], source_note = 22, start_delta = 3 },
+  { order = [955, 960], source_note = 23, start_delta = 4, duration_delta = 1 },
+  { order = [968, 974], source_note = 24, start_delta = 1, duration_delta = 2 },
+  { order = [984, 991], source_note = 25, start_delta = 2, duration_delta = 4 },
+  { order = [999, 1006], source_note = 26, start_delta = 5, duration_delta = -3 },
+  { order = [1011, 1015], source_note = 27 },
+  { order = [1022, 1027], source_note = 28, start_delta = -1, duration_delta = 2 },
+  { order = [1038, 1043], source_note = 29, start_delta = 4, duration_delta = -2 },
+  { order = [1049, 1053], source_note = 30, duration_delta = 3 },
+  { order = [1065, 1071], source_note = 31, start_delta = 3 },
+  { order = [1082, 1089], source_note = 32, start_delta = 3 },
+  { order = [1099, 1103], source_note = 33, start_delta = 3, duration_delta = -1 },
+  { order = [1110, 1117], source_note = 34, duration_delta = 2 },
+  { order = [1137, 1143], source_note = 35, start_delta = 8 },
+  { order = [1149, 1153], source_note = 36, start_delta = 6, duration_delta = -1 },
+  { order = [1160, 1165], source_note = 37, start_delta = 4, duration_delta = -1 },
+  { order = [1171, 1179], source_note = 38, start_delta = 5, duration_delta = 2 },
+  { order = [1187, 1191], source_note = 39, start_delta = 6 },
+  { order = [1201, 1210], source_note = 40, start_delta = 10, duration_delta = -3 },
+  { order = [1220, 1228], source_note = 41, start_delta = 9, duration_delta = 2 },
+  { order = [1235, 1240], source_note = 42, start_delta = 12 },
+  { order = [1248, 1252], source_note = 43, start_delta = 9, duration_delta = 6 },
+  { order = [1262, 1268], source_note = 44, start_delta = 12, duration_delta = 6 },
+  { order = [1276, 1282], source_note = 45, start_delta = 15, duration_delta = -3 },
+  { order = [1289, 1293], source_note = 46, start_delta = 11, duration_delta = 1 },
+  { order = [1300, 1305], source_note = 47, start_delta = 11 },
+  { order = [1311, 1319], source_note = 48, start_delta = 8, duration_delta = 1 },
+  { order = [1327, 1336], source_note = 49, start_delta = 8, duration_delta = 2 },
+  { order = [1342, 1354], source_note = 50, start_delta = 9, duration_delta = 2 },
+  { order = [1361, 1370], source_note = 51, start_delta = 7, duration_delta = 1 },
+  { order = [1377, 1383], source_note = 52, start_delta = 9, duration_delta = -3 },
+  { order = [1391, 1396], source_note = 53, start_delta = 2, duration_delta = 4, key_delta = 1 },
+  { order = [1406, 1412], source_note = 54, start_delta = 4, duration_delta = 6, key_delta = 1 },
+  { order = [1421, 1427], source_note = 55, start_delta = 5 },
+  { order = [1432, 1440], source_note = 56, start_delta = 2, duration_delta = -1 },
+  { order = [1448, 1456], source_note = 57, start_delta = 2, duration_delta = -1 },
+  { order = [1463, 1472], source_note = 58, start_delta = 2, duration_delta = 2 },
+  { order = [1479, 1485], source_note = 59, start_delta = 7, duration_delta = -1 },
+  { order = [1491, 1497], source_note = 60, start_delta = 5, duration_delta = -3 },
+  { order = [1503, 1507], source_note = 61, start_delta = 2 },
+  { order = [1513, 1521], source_note = 62 },
+  { order = [1530, 1542], source_note = 63, start_delta = 1 },
+  { order = [1547, 1555], source_note = 64, start_delta = -1, duration_delta = 5 },
+  { order = [1565, 1572], source_note = 65, start_delta = 2, duration_delta = -4 },
+  { order = [1577, 1581], source_note = 66, duration_delta = 1 },
+  { order = [1588, 1593], source_note = 67, start_delta = -1, duration_delta = 2 },
+  { order = [1604, 1608], source_note = 68, duration_delta = -1 },
+  { order = [1615, 1624], source_note = 69, start_delta = -3, duration_delta = 3 },
+  { order = [1631, 1640], source_note = 70, start_delta = 1 },
+  { order = [1646, 1657], source_note = 71, start_delta = 2, duration_delta = -1 },
+  { order = [1665, 1669], source_note = 72, start_delta = 1, duration_delta = -1 },
+  { order = [1675, 1685], source_note = 73, duration_delta = 10 },
+  { order = [1699, 1703], source_note = 74, start_delta = 11, duration_delta = -2 },
+  { order = [1710, 1715], source_note = 75, start_delta = 9 },
+  { order = [1724, 1732], source_note = 76, start_delta = 12, duration_delta = -5 },
+  { order = [1740, 1748], source_note = 77, start_delta = 12, duration_delta = -2 },
+  { order = [1757, 1762], source_note = 78, start_delta = 12, duration_delta = -2 },
+  { order = [1768, 1776], source_note = 79, start_delta = 10, duration_delta = -3 },
+  { order = [1785, 1792], source_note = 80, start_delta = 9 },
+  { order = [1804, 1813], source_note = 81, start_delta = 9, duration_delta = 11 },
+  { order = [1825, 1832], source_note = 82, start_delta = 22 },
+  { order = [1835, 1842], source_note = 83, start_delta = 21, duration_delta = -1 },
+  { order = [1852, 1859], source_note = 84, start_delta = 20, duration_delta = -1 },
+  { order = [1866, 1874], source_note = 85, start_delta = 22, duration_delta = -2 },
+  { order = [1884, 1891], source_note = 86, start_delta = 21, duration_delta = -1 },
+  { order = [1897, 1904], source_note = 87, start_delta = 18, duration_delta = 1 },
+  { order = [1912, 1920], source_note = 88, start_delta = 21, duration_delta = 1 },
+  { order = [1930, 1942], source_note = 89, start_delta = 18, duration_delta = 12, key_delta = 1 },
+  { order = [1951, 1957], source_note = 90, start_delta = 32, duration_delta = -2 },
+  { order = [1963, 1970], source_note = 91, start_delta = 30, duration_delta = -1 },
+  { order = [1980, 1985], source_note = 92, start_delta = 30, duration_delta = 1 },
+  { order = [1995, 2005], source_note = 93, start_delta = 30, duration_delta = -2 },
+  { order = [2013, 2020], source_note = 94, start_delta = 31, duration_delta = -1 },
+  { order = [2033, 2040], source_note = 95, start_delta = 28 },
+  { order = [2049, 2054], source_note = 96, start_delta = 30, duration_delta = -2 },
+  { order = [2062, 2066], source_note = 97, start_delta = 24, duration_delta = 5 },
+  { order = [2074, 2079], source_note = 98, start_delta = 27, duration_delta = 5 },
+  { order = [2089, 2095], source_note = 99, start_delta = 31, duration_delta = -3 },
+  { order = [2101, 2105], source_note = 100, start_delta = 27 },
+  { order = [2112, 2117], source_note = 101, start_delta = 26, duration_delta = 2 },
+  { order = [2128, 2133], source_note = 102, start_delta = 28, duration_delta = -1 },
+  { order = [2139, 2143], source_note = 103, start_delta = 25, duration_delta = 1 },
+  { order = [2155, 2161], source_note = 104, start_delta = 26, duration_delta = 1 },
+  { order = [2171, 2176], source_note = 105, start_delta = 27, duration_delta = 2 },
+  { order = [2187, 2191], source_note = 106, start_delta = 28, duration_delta = -2 },
+  { order = [2198, 2205], source_note = 107, start_delta = 26, duration_delta = 1 },
+  { order = [2225, 2229], source_note = 108, start_delta = 35, duration_delta = -2 },
+  { order = [2236, 2241], source_note = 109, start_delta = 33, duration_delta = -2 },
+  { order = [2250, 2258], source_note = 110, start_delta = 34, duration_delta = -2 },
+  { order = [2266, 2274], source_note = 111, start_delta = 36, duration_delta = -1 },
+  { order = [2283, 2288], source_note = 112, start_delta = 35 },
+  { order = [2294, 2302], source_note = 113, start_delta = 34 },
+  { order = [2311, 2318], source_note = 114, start_delta = 38 },
+  { order = [2330, 2343], source_note = 115, start_delta = 37, duration_delta = 12 },
+  { order = [2352, 2358], source_note = 116, start_delta = 49, duration_delta = -3 },
+  { order = [2363, 2370], source_note = 117, start_delta = 44, duration_delta = -1 },
+  { order = [2380, 2387], source_note = 118, start_delta = 45, duration_delta = -1 },
+  { order = [2394, 2402], source_note = 119, start_delta = 46, duration_delta = -1 },
+  { order = [2412, 2419], source_note = 120, start_delta = 45, duration_delta = -2 },
+  { order = [2425, 2432], source_note = 121, start_delta = 42, duration_delta = 2 },
+  { order = [2440, 2448], source_note = 122, start_delta = 46, duration_delta = 2 },
+  { order = [2457, 2469], source_note = 123, start_delta = 45, duration_delta = 6, key_delta = 1 },
+  { order = [2479, 2485], source_note = 124, start_delta = 55, duration_delta = -2 },
+  { order = [2491, 2498], source_note = 125, start_delta = 52, duration_delta = -3 },
+  { order = [2508, 2513], source_note = 126, start_delta = 51, duration_delta = 1 },
+  { order = [2523, 2531], source_note = 127, start_delta = 54, duration_delta = -1 },
+  { order = [2539, 2546], source_note = 128, start_delta = 54, duration_delta = -2 },
+  { order = [2557, 2564], source_note = 129, start_delta = 55, duration_delta = -1 },
+  { order = [2573, 2578], source_note = 130, start_delta = 55 },
+  { order = [2587, 2592], source_note = 131, start_delta = 50, duration_delta = 2 },
+  { order = [2602, 2609], source_note = 132, start_delta = 52, duration_delta = 5 },
+  { order = [2617, 2623], source_note = 133, start_delta = 56, duration_delta = -1 },
+  { order = [2629, 2633], source_note = 134, start_delta = 53 },
+  { order = [2640, 2645], source_note = 135, start_delta = 53, duration_delta = 2 },
+  { order = [2656, 2661], source_note = 136, start_delta = 56 },
+  { order = [2667, 2671], source_note = 137, start_delta = 54, duration_delta = 1 },
+  { order = [2683, 2689], source_note = 138, start_delta = 54 },
+  { order = [2699, 2704], source_note = 139, start_delta = 54, duration_delta = 1 },
+  { order = [2715, 2719], source_note = 140, start_delta = 56 },
+  { order = [2725, 2730], source_note = 141, start_delta = 56, duration_delta = 1 },
+  { order = [2751, 2757], source_note = 142, start_delta = 68, duration_delta = -1 },
+  { order = [2763, 2767], source_note = 143, start_delta = 64 },
+  { order = [2774, 2779], source_note = 144, start_delta = 62 },
+  { order = [2785, 2793], source_note = 145, start_delta = 61, duration_delta = 2 },
+  { order = [2801, 2805], source_note = 146, start_delta = 64, duration_delta = -1 },
+  { order = [2815, 2824], source_note = 147, start_delta = 66, duration_delta = -3 },
+  { order = [2834, 2842], source_note = 148, start_delta = 66, duration_delta = 2 },
+  { order = [2849, 2854], source_note = 149, start_delta = 69, duration_delta = -2 },
+  { order = [2862, 2868], source_note = 150, start_delta = 64, duration_delta = 5 },
+  { order = [2878, 2884], source_note = 151, start_delta = 68, duration_delta = 6 },
+  { order = [2893, 2899], source_note = 152, start_delta = 71, duration_delta = -2 },
+  { order = [2905, 2909], source_note = 153, start_delta = 68, duration_delta = 1 },
+  { order = [2916, 2921], source_note = 154, start_delta = 68, duration_delta = -1 },
+  { order = [2927, 2935], source_note = 155, start_delta = 65, duration_delta = 2 },
+  { order = [2943, 2952], source_note = 156, start_delta = 65, duration_delta = 2 },
+  { order = [2958, 2970], source_note = 157, start_delta = 67, duration_delta = 3 },
+  { order = [2977, 2986], source_note = 158, start_delta = 66, duration_delta = 1 },
+  { order = [2993, 2998], source_note = 159, start_delta = 68, duration_delta = -2 },
+  { order = [3008, 3016], source_note = 160, start_delta = 61, duration_delta = 4, key_delta = 1 },
+  { order = [3024, 3031], source_note = 161, start_delta = 59, duration_delta = 5, key_delta = 1 },
+  { order = [3039, 3045], source_note = 162, start_delta = 62 },
+  { order = [3050, 3058], source_note = 163, start_delta = 60, duration_delta = 3 },
+  { order = [3066, 3074], source_note = 164, start_delta = 63 },
+  { order = [3081, 3090], source_note = 165, start_delta = 66 },
+  { order = [3097, 3103], source_note = 166, start_delta = 66, duration_delta = -1 },
+  { order = [3109, 3115], source_note = 167, start_delta = 63, duration_delta = -2 },
+  { order = [3121, 3125], source_note = 168, start_delta = 59, duration_delta = 1 },
+  { order = [3131, 3139], source_note = 169, start_delta = 60, duration_delta = 1 },
+  { order = [3147, 3158], source_note = 170, start_delta = 61, duration_delta = 1 },
+  { order = [3165, 3171], source_note = 171, start_delta = 60, duration_delta = 5 },
+  { order = [3181, 3188], source_note = 172, start_delta = 63, duration_delta = -2 },
+  { order = [3193, 3197], source_note = 173, start_delta = 59, duration_delta = -2 },
+  { order = [3204, 3209], source_note = 174, start_delta = 57, duration_delta = 3 },
+  { order = [3220, 3224], source_note = 175, start_delta = 60 },
+  { order = [3231, 3240], source_note = 176, start_delta = 59 },
+  { order = [3247, 3256], source_note = 177, start_delta = 59 },
+  { order = [3262, 3273], source_note = 178, start_delta = 60, duration_delta = -3 },
+  { order = [3281, 3285], source_note = 179, start_delta = 58 },
+  { order = [3292, 3304], source_note = 180, start_delta = 54, duration_delta = 10 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 9
+channel = 6
+transpose = 0
+time_scale = [185, 244]
+start_offset = 507
+duration_scale = [101, 133]
+duration_offset = 0
+velocity = 73
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+notes = [
+  { order = [607, 613], source_note = 1, start_delta = -14, duration_delta = -2 },
+  { order = [618, 623], source_note = 2, start_delta = -16, duration_delta = -3 },
+  { order = [633, 639], source_note = 3, start_delta = -15, duration_delta = -2 },
+  { order = [649, 655], source_note = 4, start_delta = -14 },
+  { order = [666, 669], source_note = 5, start_delta = -11, duration_delta = -1 },
+  { order = [677, 683], source_note = 6, start_delta = -12 },
+  { order = [694, 701], source_note = 7, start_delta = -11, duration_delta = -3 },
+  { order = [711, 721], source_note = 8, start_delta = -13, duration_delta = 9 },
+  { order = [733, 740], source_note = 9, start_delta = -7, duration_delta = -1 },
+  { order = [744, 749], source_note = 10, start_delta = -8, duration_delta = -1 },
+  { order = [760, 767], source_note = 11, start_delta = -10 },
+  { order = [775, 783], source_note = 12, start_delta = -8, duration_delta = -1 },
+  { order = [793, 800], source_note = 13, start_delta = -7, duration_delta = -2 },
+  { order = [806, 811], source_note = 14, start_delta = -10, duration_delta = 2 },
+  { order = [823, 831], source_note = 15, start_delta = -11, duration_delta = 1 },
+  { order = [840, 853], source_note = 16, start_delta = -11, duration_delta = 8 },
+  { order = [862, 867], source_note = 17, start_delta = -3, duration_delta = -3 },
+  { order = [874, 881], source_note = 18, start_delta = -7, duration_delta = 1 },
+  { order = [891, 898], source_note = 19, start_delta = -4 },
+  { order = [907, 915], source_note = 20, start_delta = -4, duration_delta = 1 },
+  { order = [922, 929], source_note = 21, start_delta = -2, duration_delta = -1 },
+  { order = [940, 947], source_note = 22, start_delta = -2 },
+  { order = [956, 959], source_note = 23, start_delta = -1 },
+  { order = [969, 976], source_note = 24, start_delta = -3, duration_delta = 2 },
+  { order = [985, 990], source_note = 25, start_delta = -2, duration_delta = 4 },
+  { order = [1000, 1005], source_note = 26, duration_delta = -3 },
+  { order = [1012, 1017], source_note = 27, start_delta = -6 },
+  { order = [1023, 1028], source_note = 28, start_delta = -7, duration_delta = 2 },
+  { order = [1039, 1044], source_note = 29, start_delta = -3, duration_delta = -2 },
+  { order = [1050, 1055], source_note = 30, start_delta = -6, duration_delta = 2 },
+  { order = [1066, 1072], source_note = 31, start_delta = -3 },
+  { order = [1083, 1090], source_note = 32, start_delta = -4, duration_delta = 1 },
+  { order = [1100, 1102], source_note = 33, start_delta = -4 },
+  { order = [1111, 1115], source_note = 34, start_delta = -8, duration_delta = 2 },
+  { order = [1138, 1144], source_note = 35, duration_delta = 1 },
+  { order = [1150, 1155], source_note = 36, start_delta = -1, duration_delta = -1 },
+  { order = [1161, 1166], source_note = 37, start_delta = -3, duration_delta = -1 },
+  { order = [1172, 1180], source_note = 38, start_delta = -3, duration_delta = 1 },
+  { order = [1188, 1193], source_note = 39, start_delta = -2 },
+  { order = [1202, 1211], source_note = 40, start_delta = 2, duration_delta = -3 },
+  { order = [1221, 1229], source_note = 41, duration_delta = 1 },
+  { order = [1236, 1241], source_note = 42, start_delta = 3 },
+  { order = [1249, 1254], source_note = 43, duration_delta = 5 },
+  { order = [1263, 1267], source_note = 44, start_delta = 1, duration_delta = 7 },
+  { order = [1277, 1283], source_note = 45, start_delta = 5, duration_delta = -3 },
+  { order = [1290, 1295], source_note = 46, start_delta = 1 },
+  { order = [1301, 1306], source_note = 47, duration_delta = -1 },
+  { order = [1312, 1320], source_note = 48, start_delta = -2, duration_delta = 1 },
+  { order = [1328, 1335], source_note = 49, start_delta = -3, duration_delta = 1 },
+  { order = [1343, 1355], source_note = 50, start_delta = -2, duration_delta = 2 },
+  { order = [1362, 1371], source_note = 51, start_delta = -4, duration_delta = 1 },
+  { order = [1378, 1384], source_note = 52, start_delta = -3, duration_delta = -3 },
+  { order = [1392, 1398], source_note = 53, start_delta = -10, duration_delta = 4 },
+  { order = [1407, 1411], source_note = 54, start_delta = -8, duration_delta = 5 },
+  { order = [1422, 1428], source_note = 55, start_delta = -7, duration_delta = -1 },
+  { order = [1433, 1441], source_note = 56, start_delta = -12 },
+  { order = [1449, 1457], source_note = 57, start_delta = -11, duration_delta = -1 },
+  { order = [1464, 1473], source_note = 58, start_delta = -11, duration_delta = 2 },
+  { order = [1480, 1484], source_note = 59, start_delta = -7, duration_delta = -1 },
+  { order = [1492, 1496], source_note = 60, start_delta = -10, duration_delta = -2 },
+  { order = [1504, 1506], source_note = 61, start_delta = -12, duration_delta = 1 },
+  { order = [1514, 1522], source_note = 62, start_delta = -14 },
+  { order = [1531, 1541], source_note = 63, start_delta = -13, duration_delta = -1 },
+  { order = [1548, 1557], source_note = 64, start_delta = -15, duration_delta = 5 },
+  { order = [1566, 1571], source_note = 65, start_delta = -13, duration_delta = -3 },
+  { order = [1578, 1583], source_note = 66, start_delta = -15 },
+  { order = [1589, 1594], source_note = 67, start_delta = -17, duration_delta = 3 },
+  { order = [1605, 1606], source_note = 68, start_delta = -16, duration_delta = -1 },
+  { order = [1616, 1623], source_note = 69, start_delta = -19, duration_delta = 2 },
+  { order = [1632, 1641], source_note = 70, start_delta = -16 },
+  { order = [1647, 1658], source_note = 71, start_delta = -14, duration_delta = -1 },
+  { order = [1666, 1668], source_note = 72, start_delta = -15, duration_delta = -1 },
+  { order = [1676, 1686], source_note = 73, start_delta = -17, duration_delta = 10 },
+  { order = [1700, 1706], source_note = 74, start_delta = -7, duration_delta = -2 },
+  { order = [1711, 1717], source_note = 75, start_delta = -10, duration_delta = 1 },
+  { order = [1725, 1731], source_note = 76, start_delta = -6, duration_delta = -5 },
+  { order = [1741, 1747], source_note = 77, start_delta = -7, duration_delta = -2 },
+  { order = [1758, 1761], source_note = 78, start_delta = -7, duration_delta = -2 },
+  { order = [1769, 1775], source_note = 79, start_delta = -9, duration_delta = -2 },
+  { order = [1786, 1793], source_note = 80, start_delta = -10 },
+  { order = [1805, 1815], source_note = 81, start_delta = -11, duration_delta = 12 },
+  { order = [1826, 1831], source_note = 82, start_delta = 1 },
+  { order = [1836, 1843], source_note = 83, start_delta = -1 },
+  { order = [1853, 1860], source_note = 84, start_delta = -1 },
+  { order = [1867, 1875], source_note = 85, start_delta = 1, duration_delta = -1 },
+  { order = [1885, 1892], source_note = 86, duration_delta = -1 },
+  { order = [1898, 1903], source_note = 87, start_delta = -3 },
+  { order = [1913, 1921], source_note = 88, start_delta = -1, duration_delta = 1 },
+  { order = [1931, 1944], source_note = 89, start_delta = -4, duration_delta = 12 },
+  { order = [1952, 1956], source_note = 90, start_delta = 10, duration_delta = -3 },
+  { order = [1964, 1971], source_note = 91, start_delta = 7, duration_delta = -1 },
+  { order = [1981, 1987], source_note = 92, start_delta = 6, duration_delta = 1 },
+  { order = [1996, 2006], source_note = 93, start_delta = 7, duration_delta = -2 },
+  { order = [2014, 2021], source_note = 94, start_delta = 7, duration_delta = -1 },
+  { order = [2034, 2041], source_note = 95, start_delta = 3 },
+  { order = [2050, 2053], source_note = 96, start_delta = 5, duration_delta = -2 },
+  { order = [2063, 2068], source_note = 97, start_delta = -1, duration_delta = 4 },
+  { order = [2075, 2080], source_note = 98, start_delta = 3, duration_delta = 4 },
+  { order = [2090, 2096], source_note = 99, start_delta = 5, duration_delta = -3 },
+  { order = [2102, 2107], source_note = 100, start_delta = 1 },
+  { order = [2113, 2118], source_note = 101, duration_delta = 1 },
+  { order = [2129, 2134], source_note = 102, start_delta = 2, duration_delta = -1 },
+  { order = [2140, 2145], source_note = 103, duration_delta = 1 },
+  { order = [2156, 2162], source_note = 104, start_delta = -1, duration_delta = 1 },
+  { order = [2172, 2177], source_note = 105, duration_delta = 2 },
+  { order = [2188, 2190], source_note = 106 },
+  { order = [2199, 2203], source_note = 107, duration_delta = 1 },
+  { order = [2226, 2232], source_note = 108, start_delta = 8, duration_delta = -1 },
+  { order = [2237, 2243], source_note = 109, start_delta = 5, duration_delta = -3 },
+  { order = [2251, 2257], source_note = 110, start_delta = 7, duration_delta = -2 },
+  { order = [2267, 2273], source_note = 111, start_delta = 8, duration_delta = -1 },
+  { order = [2284, 2287], source_note = 112, start_delta = 7, duration_delta = -1 },
+  { order = [2295, 2301], source_note = 113, start_delta = 5 },
+  { order = [2312, 2319], source_note = 114, start_delta = 9, duration_delta = 1 },
+  { order = [2331, 2341], source_note = 115, start_delta = 7, duration_delta = 12 },
+  { order = [2353, 2359], source_note = 116, start_delta = 18, duration_delta = -2 },
+  { order = [2364, 2371], source_note = 117, start_delta = 14, duration_delta = -1 },
+  { order = [2381, 2388], source_note = 118, start_delta = 13 },
+  { order = [2395, 2403], source_note = 119, start_delta = 16 },
+  { order = [2413, 2420], source_note = 120, start_delta = 14, duration_delta = -2 },
+  { order = [2426, 2431], source_note = 121, start_delta = 11, duration_delta = 2 },
+  { order = [2441, 2449], source_note = 122, start_delta = 14, duration_delta = 2 },
+  { order = [2458, 2470], source_note = 123, start_delta = 12, duration_delta = 7 },
+  { order = [2480, 2484], source_note = 124, start_delta = 23, duration_delta = -3 },
+  { order = [2492, 2499], source_note = 125, start_delta = 19, duration_delta = -2 },
+  { order = [2509, 2515], source_note = 126, start_delta = 19 },
+  { order = [2524, 2532], source_note = 127, start_delta = 20, duration_delta = -1 },
+  { order = [2540, 2547], source_note = 128, start_delta = 20, duration_delta = -2 },
+  { order = [2558, 2565], source_note = 129, start_delta = 20 },
+  { order = [2574, 2577], source_note = 130, start_delta = 21, duration_delta = -1 },
+  { order = [2588, 2594], source_note = 131, start_delta = 15, duration_delta = 3 },
+  { order = [2603, 2608], source_note = 132, start_delta = 17, duration_delta = 4 },
+  { order = [2618, 2624], source_note = 133, start_delta = 22, duration_delta = -2 },
+  { order = [2630, 2635], source_note = 134, start_delta = 18 },
+  { order = [2641, 2646], source_note = 135, start_delta = 17, duration_delta = 2 },
+  { order = [2657, 2662], source_note = 136, start_delta = 19, duration_delta = 1 },
+  { order = [2668, 2673], source_note = 137, start_delta = 17, duration_delta = 1 },
+  { order = [2684, 2690], source_note = 138, start_delta = 17 },
+  { order = [2700, 2705], source_note = 139, start_delta = 17, duration_delta = 1 },
+  { order = [2716, 2718], source_note = 140, start_delta = 20, duration_delta = -1 },
+  { order = [2726, 2732], source_note = 141, start_delta = 19, duration_delta = 1 },
+  { order = [2752, 2758], source_note = 142, start_delta = 30, duration_delta = -1 },
+  { order = [2764, 2769], source_note = 143, start_delta = 26 },
+  { order = [2775, 2780], source_note = 144, start_delta = 24 },
+  { order = [2786, 2794], source_note = 145, start_delta = 24, duration_delta = 1 },
+  { order = [2802, 2807], source_note = 146, start_delta = 25, duration_delta = -1 },
+  { order = [2816, 2825], source_note = 147, start_delta = 28, duration_delta = -3 },
+  { order = [2835, 2843], source_note = 148, start_delta = 27, duration_delta = 3 },
+  { order = [2850, 2855], source_note = 149, start_delta = 30, duration_delta = -1 },
+  { order = [2863, 2870], source_note = 150, start_delta = 25, duration_delta = 5 },
+  { order = [2879, 2883], source_note = 151, start_delta = 27, duration_delta = 7 },
+  { order = [2894, 2900], source_note = 152, start_delta = 31, duration_delta = -2 },
+  { order = [2906, 2911], source_note = 153, start_delta = 28 },
+  { order = [2917, 2922], source_note = 154, start_delta = 27, duration_delta = -1 },
+  { order = [2928, 2936], source_note = 155, start_delta = 24, duration_delta = 2 },
+  { order = [2944, 2951], source_note = 156, start_delta = 25, duration_delta = 2 },
+  { order = [2959, 2971], source_note = 157, start_delta = 25, duration_delta = 4 },
+  { order = [2978, 2987], source_note = 158, start_delta = 25, duration_delta = 1 },
+  { order = [2994, 2999], source_note = 159, start_delta = 27, duration_delta = -2 },
+  { order = [3009, 3015], source_note = 160, start_delta = 19, duration_delta = 3 },
+  { order = [3025, 3030], source_note = 161, start_delta = 18, duration_delta = 4 },
+  { order = [3040, 3046], source_note = 162, start_delta = 20 },
+  { order = [3051, 3059], source_note = 163, start_delta = 17, duration_delta = 2 },
+  { order = [3067, 3075], source_note = 164, start_delta = 20 },
+  { order = [3082, 3091], source_note = 165, start_delta = 22 },
+  { order = [3098, 3102], source_note = 166, start_delta = 23, duration_delta = -2 },
+  { order = [3110, 3114], source_note = 167, start_delta = 19, duration_delta = -2 },
+  { order = [3122, 3124], source_note = 168, start_delta = 16 },
+  { order = [3132, 3140], source_note = 169, start_delta = 17 },
+  { order = [3148, 3156], source_note = 170, start_delta = 17, duration_delta = 1 },
+  { order = [3166, 3173], source_note = 171, start_delta = 15, duration_delta = 4 },
+  { order = [3182, 3187], source_note = 172, start_delta = 17, duration_delta = -2 },
+  { order = [3194, 3199], source_note = 173, start_delta = 14, duration_delta = -2 },
+  { order = [3205, 3210], source_note = 174, start_delta = 11, duration_delta = 3 },
+  { order = [3221, 3222], source_note = 175, start_delta = 15 },
+  { order = [3232, 3239], source_note = 176, start_delta = 13 },
+  { order = [3248, 3257], source_note = 177, start_delta = 13 },
+  { order = [3263, 3274], source_note = 178, start_delta = 13, duration_delta = -3 },
+  { order = [3282, 3284], source_note = 179, start_delta = 12, duration_delta = -1 },
+  { order = [3293, 3302], source_note = 180, start_delta = 6, duration_delta = 10 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 3
+channel = 7
+transpose = 0
+time_scale = [1340, 1763]
+start_offset = 442
+duration_scale = [967, 1260]
+duration_offset = 1
+velocity = 94
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+notes = [
+  { order = [716, 725], source_note = 1, start_delta = 4, duration_delta = 5 },
+  { order = [835, 842], source_note = 2 },
+  { order = [845, 851], source_note = 3, start_delta = 5 },
+  { order = [978, 987], source_note = 4, start_delta = 8, duration_delta = -3 },
+  { order = [1107, 1118], source_note = 5, duration_delta = -5 },
+  { order = [1121, 1127], source_note = 6, duration_delta = 1 },
+  { order = [1256, 1278], source_note = 7, start_delta = 1, duration_delta = -2 },
+  { order = [1399, 1414], source_note = 8, start_delta = -12 },
+  { order = [1528, 1536], source_note = 9, start_delta = -20, duration_delta = -6 },
+  { order = [1543, 1551], source_note = 10, start_delta = -22, duration_delta = -3 },
+  { order = [1681, 1690], source_note = 11, start_delta = -22, duration_delta = 4 },
+  { order = [1809, 1817], source_note = 12, start_delta = -21, duration_delta = 5 },
+  { order = [1926, 1934], source_note = 13, start_delta = -21, duration_delta = -1 },
+  { order = [1936, 1941], source_note = 14, start_delta = -14 },
+  { order = [2070, 2077], source_note = 15, start_delta = -17, duration_delta = -2 },
+  { order = [2195, 2206], source_note = 16, start_delta = -27, duration_delta = -2 },
+  { order = [2209, 2215], source_note = 17, start_delta = -21 },
+  { order = [2335, 2354], source_note = 18, start_delta = -17, duration_delta = -1 },
+  { order = [2462, 2473], source_note = 19, start_delta = -18 },
+  { order = [2581, 2590], source_note = 20, start_delta = -18, duration_delta = -5 },
+  { order = [2595, 2604], source_note = 21, start_delta = -18, duration_delta = -3 },
+  { order = [2734, 2742], source_note = 22, start_delta = -19, duration_delta = 4 },
+  { order = [2872, 2885], source_note = 23, start_delta = -19, duration_delta = 4 },
+  { order = [3002, 3010], source_note = 24, start_delta = -28, duration_delta = -3 },
+  { order = [3017, 3027], source_note = 25, start_delta = -30, duration_delta = -1 },
+  { order = [3160, 3169], source_note = 26, start_delta = -34, duration_delta = -4 },
+  { order = [3289, 3297], source_note = 27, start_delta = -46, duration_delta = -2 },
+  { order = [3300, 3307], source_note = 28, start_delta = -42, duration_delta = -1 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 5
+channel = 8
+transpose = -12
+time_scale = [49, 64]
+start_offset = 213
+duration_scale = [25124, 32495]
+duration_offset = 1
+velocity = 83
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+notes = [
+  { order = [34, 66], source_note = 1, start_delta = -238, duration_delta = 2, velocity = 74 },
+  { order = [76, 99], source_note = 2, start_delta = -234, duration_delta = 1, velocity = 80 },
+  { order = [112, 115], source_note = 3, start_delta = -226, duration_delta = 1, velocity = 89 },
+  { order = [119, 122], source_note = 4, start_delta = -219, duration_delta = 1, velocity = 92 },
+  { order = [126, 129], source_note = 5, start_delta = -211, velocity = 68 },
+  { order = [131, 134], source_note = 6, start_delta = -207, duration_delta = 2 },
+  { order = [138, 141], source_note = 7, start_delta = -199, velocity = 98 },
+  { order = [145, 150], source_note = 8, start_delta = -192, duration_delta = 11, velocity = 112 },
+  { order = [154, 155], source_note = 9, start_delta = -170, duration_delta = 2, velocity = 89 },
+  { order = [157, 160], source_note = 10, start_delta = -166, duration_delta = 2, velocity = 71 },
+  { order = [164, 167], source_note = 11, start_delta = -158, duration_delta = -1, velocity = 86 },
+  { order = [171, 174], source_note = 12, start_delta = -150, duration_delta = 2, velocity = 101 },
+  { order = [178, 180], source_note = 13, start_delta = -142, velocity = 68 },
+  { order = [183, 186], source_note = 14, start_delta = -139 },
+  { order = [190, 193], source_note = 15, start_delta = -133, duration_delta = 2, velocity = 104 },
+  { order = [197, 202], source_note = 16, start_delta = -123, duration_delta = 11, velocity = 101 },
+  { order = [205, 207], source_note = 17, start_delta = -104, duration_delta = 1, velocity = 92 },
+  { order = [209, 212], source_note = 18, start_delta = -101, duration_delta = 1 },
+  { order = [216, 219], source_note = 19, start_delta = -92, duration_delta = 2, velocity = 92 },
+  { order = [223, 226], source_note = 20, start_delta = -84, duration_delta = 2, velocity = 98 },
+  { order = [230, 232], source_note = 21, start_delta = -77, duration_delta = 1, velocity = 59 },
+  { order = [235, 238], source_note = 22, start_delta = -74, duration_delta = 1, velocity = 80 },
+  { order = [242, 244], source_note = 23, start_delta = -64, duration_delta = -1, velocity = 86 },
+  { order = [249, 254], source_note = 24, start_delta = -57, duration_delta = 11, velocity = 112 },
+  { order = [257, 259], source_note = 25, start_delta = -35, duration_delta = 1 },
+  { order = [261, 264], source_note = 26, start_delta = -33, duration_delta = 2, velocity = 68 },
+  { order = [268, 271], source_note = 27, start_delta = -23, duration_delta = 1, velocity = 86 },
+  { order = [275, 278], source_note = 28, start_delta = -17, duration_delta = 2 },
+  { order = [282, 284], source_note = 29, start_delta = -10, duration_delta = 1, velocity = 74 },
+  { order = [287, 290], source_note = 30, start_delta = -6, velocity = 77 },
+  { order = [295, 297], source_note = 31, duration_delta = 3, velocity = 92 },
+  { order = [300, 306], source_note = 32, start_delta = 8, duration_delta = 9, velocity = 98 },
+  { order = [311, 314], source_note = 33, start_delta = 20, duration_delta = 1, velocity = 74 },
+  { order = [316, 321], source_note = 34, start_delta = 22, velocity = 80 },
+  { order = [327, 331], source_note = 35, start_delta = 28, duration_delta = 1, velocity = 89 },
+  { order = [337, 341], source_note = 36, start_delta = 33, velocity = 92 },
+  { order = [347, 351], source_note = 37, start_delta = 37, velocity = 68 },
+  { order = [353, 357], source_note = 38, start_delta = 38, duration_delta = 2 },
+  { order = [363, 367], source_note = 39, start_delta = 42, velocity = 98 },
+  { order = [373, 379], source_note = 40, start_delta = 47, duration_delta = 9, velocity = 112 },
+  { order = [384, 386], source_note = 41, start_delta = 66, velocity = 89 },
+  { order = [389, 393], source_note = 42, start_delta = 68, velocity = 71 },
+  { order = [398, 403], source_note = 43, start_delta = 72, velocity = 86 },
+  { order = [409, 413], source_note = 44, start_delta = 75, duration_delta = 1, velocity = 101 },
+  { order = [419, 422], source_note = 45, start_delta = 81, velocity = 68 },
+  { order = [425, 429], source_note = 46, start_delta = 82, duration_delta = -2 },
+  { order = [435, 439], source_note = 47, start_delta = 84, velocity = 104 },
+  { order = [445, 451], source_note = 48, start_delta = 88, duration_delta = 6, velocity = 101 },
+  { order = [455, 458], source_note = 49, start_delta = 102, velocity = 92 },
+  { order = [461, 465], source_note = 50, start_delta = 103, duration_delta = -1 },
+  { order = [471, 475], source_note = 51, start_delta = 107, duration_delta = 1, velocity = 92 },
+  { order = [481, 485], source_note = 52, start_delta = 112, duration_delta = 1, velocity = 98 },
+  { order = [491, 494], source_note = 53, start_delta = 115, duration_delta = -1, velocity = 59 },
+  { order = [497, 501], source_note = 54, start_delta = 116, velocity = 80 },
+  { order = [507, 510], source_note = 55, start_delta = 118, duration_delta = 1, velocity = 86 },
+  { order = [517, 523], source_note = 56, start_delta = 123, duration_delta = 11, velocity = 112 },
+  { order = [527, 530], source_note = 57, start_delta = 141 },
+  { order = [533, 537], source_note = 58, start_delta = 139, duration_delta = 2, velocity = 68 },
+  { order = [543, 547], source_note = 59, start_delta = 145, duration_delta = 1, velocity = 86 },
+  { order = [552, 557], source_note = 60, start_delta = 150, duration_delta = 1 },
+  { order = [563, 566], source_note = 61, start_delta = 155, duration_delta = 1, velocity = 74 },
+  { order = [569, 573], source_note = 62, start_delta = 157, duration_delta = 1, velocity = 77 },
+  { order = [580, 583], source_note = 63, start_delta = 163, duration_delta = 1, velocity = 92 },
+  { order = [589, 597], source_note = 64, start_delta = 167, duration_delta = 6, velocity = 98 },
+  { order = [608, 614], source_note = 65, start_delta = 163, duration_delta = -2, velocity = 77 },
+  { order = [619, 626], source_note = 66, start_delta = 160, duration_delta = -2 },
+  { order = [635, 642], source_note = 67, start_delta = 158, velocity = 92 },
+  { order = [651, 658], source_note = 68, start_delta = 160, duration_delta = -1, velocity = 89 },
+  { order = [668, 674], source_note = 69, start_delta = 160, duration_delta = -2, velocity = 80 },
+  { order = [679, 686], source_note = 70, start_delta = 158, duration_delta = -1 },
+  { order = [695, 699], source_note = 71, start_delta = 157, duration_delta = -3, velocity = 98 },
+  { order = [708, 720], source_note = 72, start_delta = 157, velocity = 104 },
+  { order = [734, 737], source_note = 73, start_delta = 161, duration_delta = -4, velocity = 86 },
+  { order = [746, 752], source_note = 74, start_delta = 152, velocity = 71 },
+  { order = [761, 765], source_note = 75, start_delta = 153, duration_delta = -4, velocity = 89 },
+  { order = [776, 781], source_note = 76, start_delta = 149, velocity = 80 },
+  { order = [790, 796], source_note = 77, start_delta = 152, duration_delta = -2 },
+  { order = [802, 809], source_note = 78, start_delta = 149, duration_delta = -5, velocity = 74 },
+  { order = [814, 817], source_note = 79, start_delta = 144, velocity = 59 },
+  { order = [819, 826], source_note = 80, start_delta = 145, duration_delta = -3, velocity = 92 },
+  { order = [837, 850], source_note = 81, start_delta = 145, velocity = 120 },
+  { order = [863, 866], source_note = 82, start_delta = 144, velocity = 89 },
+  { order = [875, 879], source_note = 83, start_delta = 140, velocity = 74 },
+  { order = [888, 894], source_note = 84, start_delta = 144, duration_delta = -3 },
+  { order = [904, 911], source_note = 85, start_delta = 143, duration_delta = -4 },
+  { order = [923, 926], source_note = 86, start_delta = 138, velocity = 80 },
+  { order = [932, 936], source_note = 87, start_delta = 138, duration_delta = 2, velocity = 77 },
+  { order = [945, 951], source_note = 88, start_delta = 140, duration_delta = -2, velocity = 77 },
+  { order = [966, 986], source_note = 89, start_delta = 136, duration_delta = -6, velocity = 86 },
+  { order = [997, 1002], source_note = 90, start_delta = 135, duration_delta = -3, velocity = 77 },
+  { order = [1009, 1018], source_note = 91, start_delta = 129, duration_delta = -3, velocity = 65 },
+  { order = [1030, 1034], source_note = 92, start_delta = 126, duration_delta = 1, velocity = 80 },
+  { order = [1045, 1056], source_note = 93, start_delta = 126, duration_delta = -3, velocity = 77 },
+  { order = [1062, 1068], source_note = 94, start_delta = 127, duration_delta = -3, velocity = 89 },
+  { order = [1074, 1077], source_note = 95, start_delta = 122, velocity = 68 },
+  { order = [1080, 1086], source_note = 96, start_delta = 123, duration_delta = -4, velocity = 53 },
+  { order = [1092, 1096], source_note = 97, start_delta = 120, velocity = 77 },
+  { order = [1112, 1125], source_note = 98, start_delta = 118, duration_delta = -2, velocity = 101 },
+  { order = [1135, 1141], source_note = 99, start_delta = 121, duration_delta = -2, velocity = 77 },
+  { order = [1146, 1156], source_note = 100, start_delta = 119, duration_delta = -5 },
+  { order = [1168, 1175], source_note = 101, start_delta = 114, duration_delta = -2, velocity = 92 },
+  { order = [1184, 1194], source_note = 102, start_delta = 115, duration_delta = -3, velocity = 89 },
+  { order = [1204, 1207], source_note = 103, start_delta = 110, duration_delta = 1, velocity = 80 },
+  { order = [1209, 1216], source_note = 104, start_delta = 112, duration_delta = -1 },
+  { order = [1225, 1232], source_note = 105, start_delta = 112, duration_delta = -2, velocity = 98 },
+  { order = [1246, 1264], source_note = 106, start_delta = 109, duration_delta = -3, velocity = 104 },
+  { order = [1274, 1281], source_note = 107, start_delta = 111, duration_delta = -4, velocity = 86 },
+  { order = [1287, 1296], source_note = 108, start_delta = 106, duration_delta = -3, velocity = 71 },
+  { order = [1308, 1315], source_note = 109, start_delta = 101, duration_delta = -4, velocity = 89 },
+  { order = [1323, 1331], source_note = 110, start_delta = 100, duration_delta = -4, velocity = 80 },
+  { order = [1340, 1346], source_note = 111, start_delta = 96, duration_delta = -4 },
+  { order = [1349, 1356], source_note = 112, start_delta = 95, duration_delta = -2, velocity = 74 },
+  { order = [1358, 1364], source_note = 113, start_delta = 94, duration_delta = -5, velocity = 59 },
+  { order = [1366, 1373], source_note = 114, start_delta = 92, duration_delta = -2, velocity = 92 },
+  { order = [1388, 1408], source_note = 115, start_delta = 86, duration_delta = -7, velocity = 120 },
+  { order = [1418, 1424], source_note = 116, start_delta = 84, duration_delta = -4, velocity = 89 },
+  { order = [1430, 1437], source_note = 117, start_delta = 79, duration_delta = -5, velocity = 74 },
+  { order = [1446, 1452], source_note = 118, start_delta = 76, duration_delta = -4 },
+  { order = [1465, 1469], source_note = 119, start_delta = 73, duration_delta = 1 },
+  { order = [1481, 1487], source_note = 120, start_delta = 74, duration_delta = -2, velocity = 80 },
+  { order = [1493, 1500], source_note = 121, start_delta = 70, duration_delta = -1, velocity = 77 },
+  { order = [1515, 1518], source_note = 122, start_delta = 65, duration_delta = -1, velocity = 77 },
+  { order = [1534, 1550], source_note = 123, start_delta = 59, duration_delta = -2, velocity = 86 },
+  { order = [1563, 1568], source_note = 124, start_delta = 62, duration_delta = -4, velocity = 77 },
+  { order = [1575, 1584], source_note = 125, start_delta = 59, duration_delta = -4, velocity = 65 },
+  { order = [1596, 1600], source_note = 126, start_delta = 55, velocity = 80 },
+  { order = [1611, 1619], source_note = 127, start_delta = 53, duration_delta = -1, velocity = 77 },
+  { order = [1628, 1634], source_note = 128, start_delta = 54, duration_delta = -3, velocity = 89 },
+  { order = [1637, 1643], source_note = 129, start_delta = 51, duration_delta = -2, velocity = 68 },
+  { order = [1649, 1652], source_note = 130, start_delta = 49, velocity = 53 },
+  { order = [1655, 1662], source_note = 131, start_delta = 50, duration_delta = -2, velocity = 77 },
+  { order = [1677, 1688], source_note = 132, start_delta = 48, duration_delta = 3, velocity = 101 },
+  { order = [1696, 1702], source_note = 133, start_delta = 54, duration_delta = -2, velocity = 74 },
+  { order = [1707, 1718], source_note = 134, start_delta = 51, duration_delta = -6, velocity = 80 },
+  { order = [1727, 1734], source_note = 135, start_delta = 47, duration_delta = -3, velocity = 89 },
+  { order = [1743, 1750], source_note = 136, start_delta = 45, duration_delta = -1, velocity = 92 },
+  { order = [1759, 1766], source_note = 137, start_delta = 45, duration_delta = -4, velocity = 68 },
+  { order = [1771, 1778], source_note = 138, start_delta = 40, duration_delta = -3 },
+  { order = [1787, 1791], source_note = 139, start_delta = 37, duration_delta = 1, velocity = 98 },
+  { order = [1802, 1812], source_note = 140, start_delta = 39, duration_delta = 3, velocity = 112 },
+  { order = [1823, 1828], source_note = 141, start_delta = 46, duration_delta = -1, velocity = 89 },
+  { order = [1837, 1841], source_note = 142, start_delta = 45, duration_delta = -3, velocity = 71 },
+  { order = [1849, 1857], source_note = 143, start_delta = 44, duration_delta = -6, velocity = 86 },
+  { order = [1869, 1876], source_note = 144, start_delta = 39, velocity = 101 },
+  { order = [1882, 1888], source_note = 145, start_delta = 40, duration_delta = -5, velocity = 68 },
+  { order = [1894, 1901], source_note = 146, start_delta = 36, duration_delta = -4 },
+  { order = [1910, 1917], source_note = 147, start_delta = 34, duration_delta = -3, velocity = 104 },
+  { order = [1932, 1940], source_note = 148, start_delta = 31, duration_delta = 5, velocity = 101 },
+  { order = [1953, 1959], source_note = 149, start_delta = 35, duration_delta = -1, velocity = 92 },
+  { order = [1965, 1969], source_note = 150, start_delta = 33 },
+  { order = [1978, 1988], source_note = 151, start_delta = 34, duration_delta = -4, velocity = 92 },
+  { order = [1997, 2001], source_note = 152, start_delta = 34, duration_delta = -4, velocity = 98 },
+  { order = [2015, 2018], source_note = 153, start_delta = 27, duration_delta = 1, velocity = 59 },
+  { order = [2026, 2030], source_note = 154, start_delta = 24, duration_delta = 1, velocity = 80 },
+  { order = [2039, 2045], source_note = 155, start_delta = 25, duration_delta = -1, velocity = 86 },
+  { order = [2060, 2076], source_note = 156, start_delta = 19, duration_delta = -1, velocity = 112 },
+  { order = [2086, 2092], source_note = 157, start_delta = 21, duration_delta = -4 },
+  { order = [2098, 2108], source_note = 158, start_delta = 14, duration_delta = -3, velocity = 68 },
+  { order = [2120, 2124], source_note = 159, start_delta = 11, velocity = 86 },
+  { order = [2135, 2146], source_note = 160, start_delta = 11, duration_delta = -4 },
+  { order = [2152, 2158], source_note = 161, start_delta = 9, duration_delta = -3, velocity = 74 },
+  { order = [2164, 2168], source_note = 162, start_delta = 6, duration_delta = 1, velocity = 77 },
+  { order = [2181, 2184], source_note = 163, start_delta = 5, velocity = 92 },
+  { order = [2200, 2213], source_note = 164, duration_delta = 5, velocity = 98 },
+  { order = [2222, 2228], source_note = 165, start_delta = 8, duration_delta = -2, velocity = 74 },
+  { order = [2233, 2244], source_note = 166, start_delta = 5, duration_delta = -7, velocity = 80 },
+  { order = [2253, 2260], source_note = 167, velocity = 89 },
+  { order = [2269, 2276], source_note = 168, start_delta = 1, duration_delta = -1, velocity = 92 },
+  { order = [2285, 2292], source_note = 169, start_delta = -2, duration_delta = -2, velocity = 68 },
+  { order = [2297, 2304], source_note = 170, start_delta = -4, duration_delta = -1 },
+  { order = [2313, 2317], source_note = 171, start_delta = -3, velocity = 98 },
+  { order = [2328, 2340], source_note = 172, start_delta = -3, duration_delta = 3, velocity = 112 },
+  { order = [2350, 2356], source_note = 173, start_delta = 3, duration_delta = -4, velocity = 89 },
+  { order = [2365, 2369], source_note = 174, duration_delta = -4, velocity = 71 },
+  { order = [2377, 2385], source_note = 175, start_delta = -2, duration_delta = -6, velocity = 86 },
+  { order = [2397, 2404], source_note = 176, start_delta = -7, velocity = 101 },
+  { order = [2410, 2416], source_note = 177, start_delta = -6, duration_delta = -5, velocity = 68 },
+  { order = [2422, 2429], source_note = 178, start_delta = -11, duration_delta = -2 },
+  { order = [2438, 2445], source_note = 179, start_delta = -10, duration_delta = -3, velocity = 104 },
+  { order = [2459, 2468], source_note = 180, start_delta = -12, duration_delta = -1, velocity = 101 },
+  { order = [2481, 2487], source_note = 181, start_delta = -13, duration_delta = -1, velocity = 92 },
+  { order = [2493, 2497], source_note = 182, start_delta = -15, duration_delta = -2 },
+  { order = [2506, 2516], source_note = 183, start_delta = -14, duration_delta = -4, velocity = 92 },
+  { order = [2525, 2529], source_note = 184, start_delta = -13, duration_delta = -3, velocity = 98 },
+  { order = [2541, 2544], source_note = 185, start_delta = -20, duration_delta = -2, velocity = 59 },
+  { order = [2550, 2554], source_note = 186, start_delta = -21, duration_delta = 1, velocity = 80 },
+  { order = [2563, 2569], source_note = 187, start_delta = -18, duration_delta = -2, velocity = 86 },
+  { order = [2585, 2605], source_note = 188, start_delta = -26, duration_delta = -3, velocity = 112 },
+  { order = [2613, 2620], source_note = 189, start_delta = -22, duration_delta = -5 },
+  { order = [2626, 2636], source_note = 190, start_delta = -28, duration_delta = -4, velocity = 68 },
+  { order = [2648, 2652], source_note = 191, start_delta = -31, duration_delta = 1, velocity = 86 },
+  { order = [2663, 2674], source_note = 192, start_delta = -30, duration_delta = -5 },
+  { order = [2680, 2686], source_note = 193, start_delta = -33, duration_delta = -5, velocity = 74 },
+  { order = [2692, 2696], source_note = 194, start_delta = -37, duration_delta = 1, velocity = 77 },
+  { order = [2709, 2712], source_note = 195, start_delta = -38, duration_delta = 2, velocity = 92 },
+  { order = [2727, 2739], source_note = 196, start_delta = -40, duration_delta = 5, velocity = 98 },
+  { order = [2749, 2755], source_note = 197, start_delta = -30, duration_delta = -3, velocity = 77 },
+  { order = [2760, 2770], source_note = 198, start_delta = -33, duration_delta = -5 },
+  { order = [2782, 2789], source_note = 199, start_delta = -39, duration_delta = -1, velocity = 92 },
+  { order = [2798, 2808], source_note = 200, start_delta = -39, duration_delta = -4, velocity = 89 },
+  { order = [2818, 2821], source_note = 201, start_delta = -44, duration_delta = 1, velocity = 80 },
+  { order = [2823, 2830], source_note = 202, start_delta = -41, duration_delta = -2 },
+  { order = [2839, 2846], source_note = 203, start_delta = -41, duration_delta = -3, velocity = 98 },
+  { order = [2860, 2880], source_note = 204, start_delta = -46, duration_delta = -2, velocity = 104 },
+  { order = [2891, 2897], source_note = 205, start_delta = -44, duration_delta = -4, velocity = 86 },
+  { order = [2903, 2912], source_note = 206, start_delta = -48, duration_delta = -3, velocity = 71 },
+  { order = [2924, 2931], source_note = 207, start_delta = -53, duration_delta = -3, velocity = 89 },
+  { order = [2939, 2947], source_note = 208, start_delta = -53, duration_delta = -4, velocity = 80 },
+  { order = [2956, 2962], source_note = 209, start_delta = -56, duration_delta = -4 },
+  { order = [2965, 2972], source_note = 210, start_delta = -57, duration_delta = -1, velocity = 74 },
+  { order = [2974, 2980], source_note = 211, start_delta = -57, duration_delta = -5, velocity = 59 },
+  { order = [2982, 2989], source_note = 212, start_delta = -59, duration_delta = -2, velocity = 92 },
+  { order = [3005, 3026], source_note = 213, start_delta = -66, duration_delta = -8, velocity = 120 },
+  { order = [3036, 3042], source_note = 214, start_delta = -69, duration_delta = -4, velocity = 89 },
+  { order = [3048, 3055], source_note = 215, start_delta = -74, duration_delta = -1, velocity = 74 },
+  { order = [3064, 3070], source_note = 216, start_delta = -72, duration_delta = -3 },
+  { order = [3083, 3087], source_note = 217, start_delta = -76 },
+  { order = [3099, 3105], source_note = 218, start_delta = -77, duration_delta = -2, velocity = 80 },
+  { order = [3111, 3118], source_note = 219, start_delta = -81, duration_delta = -2, velocity = 77 },
+  { order = [3133, 3136], source_note = 220, start_delta = -85, duration_delta = -1, velocity = 77 },
+  { order = [3151, 3168], source_note = 221, start_delta = -90, duration_delta = -3, velocity = 86 },
+  { order = [3179, 3184], source_note = 222, start_delta = -88, duration_delta = -2, velocity = 77 },
+  { order = [3191, 3200], source_note = 223, start_delta = -92, duration_delta = -6, velocity = 65 },
+  { order = [3212, 3216], source_note = 224, start_delta = -97, velocity = 80 },
+  { order = [3227, 3235], source_note = 225, start_delta = -94, duration_delta = -3, velocity = 77 },
+  { order = [3244, 3250], source_note = 226, start_delta = -98, duration_delta = -4, velocity = 89 },
+  { order = [3253, 3259], source_note = 227, start_delta = -99, duration_delta = -2, velocity = 68 },
+  { order = [3265, 3268], source_note = 228, start_delta = -105, velocity = 53 },
+  { order = [3271, 3278], source_note = 229, start_delta = -104, duration_delta = -1, velocity = 77 },
+  { order = [3294, 3305], source_note = 230, start_delta = -108, duration_delta = 1, velocity = 101 },
+]
+add = [
+]
+
+[[parts]]
+source_channel = 2
+channel = 10
+transpose = 0
+time_scale = [187, 244]
+start_offset = 359
+duration_scale = [43, 54]
+duration_offset = 0
+velocity = 49
+on_track = 0
+off_track = 0
+off_velocity = 0
+off_status = 144
+drum_key = 40
+notes = [
+  { order = [35, 67], source_note = 1, start_delta = -380, duration_delta = -4, velocity = 76 },
+  { order = [81, 92], source_note = 2, start_delta = -380, duration_delta = 1, velocity = 14 },
+  { order = [110, 111], source_note = 3, start_delta = -377, duration_delta = 1, velocity = 32 },
+  { order = [113, 114], source_note = 4, start_delta = -373, velocity = 94 },
+  { order = [117, 118], source_note = 5, start_delta = -371, duration_delta = 1, velocity = 55 },
+  { order = [120, 121], source_note = 6, start_delta = -367, duration_delta = 1, velocity = 32 },
+  { order = [124, 125], source_note = 7, start_delta = -362, duration_delta = 1, velocity = 91 },
+  { order = [127, 128], source_note = 8, start_delta = -358, duration_delta = 1, velocity = 36 },
+  { order = [132, 133], source_note = 9, start_delta = -355, duration_delta = 1, velocity = 36 },
+  { order = [135, 136], source_note = 10, start_delta = -351, duration_delta = 1, velocity = 70 },
+  { order = [139, 140], source_note = 11, start_delta = -348, duration_delta = 1 },
+  { order = [142, 143], source_note = 12, start_delta = -343, duration_delta = 1, velocity = 19 },
+  { order = [146, 147], source_note = 13, start_delta = -339, duration_delta = 3, velocity = 82 },
+  { order = [149, 151], source_note = 14, start_delta = -328, duration_delta = 3, velocity = 73 },
+  { order = [153, 156], source_note = 15, start_delta = -316, velocity = 64 },
+  { order = [158, 159], source_note = 16, start_delta = -314, duration_delta = 1, velocity = 36 },
+  { order = [162, 163], source_note = 17, start_delta = -309, velocity = 43 },
+  { order = [165, 166], source_note = 18, start_delta = -306, velocity = 82 },
+  { order = [169, 170], source_note = 19, start_delta = -302, duration_delta = 1, velocity = 40 },
+  { order = [172, 173], source_note = 20, start_delta = -299, duration_delta = 1 },
+  { order = [176, 177], source_note = 21, start_delta = -294, duration_delta = 2, velocity = 73 },
+  { order = [179, 181], source_note = 22, start_delta = -290, velocity = 40 },
+  { order = [184, 185], source_note = 23, start_delta = -289, duration_delta = 1, velocity = 36 },
+  { order = [187, 188], source_note = 24, start_delta = -284, duration_delta = 1, velocity = 58 },
+  { order = [191, 192], source_note = 25, start_delta = -281, duration_delta = 2 },
+  { order = [194, 195], source_note = 26, start_delta = -276, duration_delta = 1, velocity = 46 },
+  { order = [198, 199], source_note = 27, start_delta = -273, duration_delta = 3, velocity = 73 },
+  { order = [201, 203], source_note = 28, start_delta = -262, duration_delta = 2, velocity = 70 },
+  { order = [206, 208], source_note = 29, start_delta = -251, duration_delta = -2, velocity = 79 },
+  { order = [210, 211], source_note = 30, start_delta = -251, duration_delta = 1, velocity = 32 },
+  { order = [214, 215], source_note = 31, start_delta = -247, duration_delta = 2 },
+  { order = [217, 218], source_note = 32, start_delta = -241, duration_delta = 1, velocity = 67 },
+  { order = [221, 222], source_note = 33, start_delta = -238, duration_delta = 2, velocity = 40 },
+  { order = [224, 225], source_note = 34, start_delta = -235, duration_delta = 2, velocity = 40 },
+  { order = [228, 229], source_note = 35, start_delta = -231, duration_delta = 2, velocity = 73 },
+  { order = [231, 233], source_note = 36, start_delta = -226, velocity = 40 },
+  { order = [236, 237], source_note = 37, start_delta = -223, duration_delta = 1, velocity = 32 },
+  { order = [239, 240], source_note = 38, start_delta = -218, duration_delta = 1, velocity = 67 },
+  { order = [243, 245], source_note = 39, start_delta = -215, duration_delta = -1 },
+  { order = [246, 247], source_note = 40, start_delta = -212, duration_delta = 2, velocity = 28 },
+  { order = [250, 251], source_note = 41, start_delta = -208, duration_delta = 2, velocity = 67 },
+  { order = [253, 255], source_note = 42, start_delta = -197, duration_delta = 3, velocity = 67 },
+  { order = [258, 260], source_note = 43, start_delta = -187, duration_delta = 1, velocity = 79 },
+  { order = [262, 263], source_note = 44, start_delta = -182 },
+  { order = [266, 267], source_note = 45, start_delta = -178, duration_delta = 1 },
+  { order = [269, 270], source_note = 46, start_delta = -175, duration_delta = 1, velocity = 73 },
+  { order = [273, 274], source_note = 47, start_delta = -172, duration_delta = 1, velocity = 43 },
+  { order = [276, 277], source_note = 48, start_delta = -169, duration_delta = 1 },
+  { order = [280, 281], source_note = 49, start_delta = -166, duration_delta = 2, velocity = 73 },
+  { order = [283, 285], source_note = 50, start_delta = -161, velocity = 40 },
+  { order = [288, 289], source_note = 51, start_delta = -159, duration_delta = 1, velocity = 46 },
+  { order = [291, 292], source_note = 52, start_delta = -156, duration_delta = 1, velocity = 58 },
+  { order = [294, 296], source_note = 53, start_delta = -151, duration_delta = 1, velocity = 64 },
+  { order = [298, 299], source_note = 54, start_delta = -147, duration_delta = 1 },
+  { order = [301, 302], source_note = 55, start_delta = -142 },
+  { order = [303, 304], source_note = 56, start_delta = -138 },
+  { order = [305, 307], source_note = 57, start_delta = -134, velocity = 58 },
+  { order = [308, 309], source_note = 58, start_delta = -131 },
+  { order = [312, 315], source_note = 59, start_delta = -132, duration_delta = -1, velocity = 76 },
+  { order = [318, 320], source_note = 60, start_delta = -131, duration_delta = 1, velocity = 14 },
+  { order = [323, 324], source_note = 61, start_delta = -129, duration_delta = 1, velocity = 32 },
+  { order = [328, 330], source_note = 62, start_delta = -125, duration_delta = 1, velocity = 94 },
+  { order = [333, 334], source_note = 63, start_delta = -123, duration_delta = 1, velocity = 55 },
+  { order = [338, 339], source_note = 64, start_delta = -121, velocity = 32 },
+  { order = [343, 345], source_note = 65, start_delta = -118, duration_delta = 1, velocity = 91 },
+  { order = [348, 349], source_note = 66, start_delta = -117, duration_delta = 1, velocity = 36 },
+  { order = [354, 356], source_note = 67, start_delta = -113, duration_delta = -1, velocity = 36 },
+  { order = [359, 361], source_note = 68, start_delta = -113, duration_delta = 1, velocity = 70 },
+  { order = [364, 366], source_note = 69, start_delta = -111, duration_delta = 1 },
+  { order = [369, 371], source_note = 70, start_delta = -108, velocity = 19 },
+  { order = [374, 375], source_note = 71, start_delta = -106, duration_delta = 3, velocity = 82 },
+  { order = [378, 380], source_note = 72, start_delta = -97, duration_delta = 4, velocity = 73 },
+  { order = [383, 387], source_note = 73, start_delta = -86, duration_delta = -2, velocity = 64 },
+  { order = [390, 392], source_note = 74, start_delta = -86, duration_delta = 1, velocity = 36 },
+  { order = [395, 397], source_note = 75, start_delta = -84, velocity = 43 },
+  { order = [400, 402], source_note = 76, start_delta = -83, duration_delta = 1, velocity = 82 },
+  { order = [405, 407], source_note = 77, start_delta = -81, velocity = 40 },
+  { order = [410, 412], source_note = 78, start_delta = -79 },
+  { order = [415, 417], source_note = 79, start_delta = -76, duration_delta = 2, velocity = 73 },
+  { order = [420, 423], source_note = 80, start_delta = -73, velocity = 40 },
+  { order = [426, 428], source_note = 81, start_delta = -74, duration_delta = -1, velocity = 36 },
+  { order = [431, 433], source_note = 82, start_delta = -72, velocity = 58 },
+  { order = [436, 438], source_note = 83, start_delta = -71, duration_delta = 1 },
+  { order = [441, 443], source_note = 84, start_delta = -69, duration_delta = 1, velocity = 46 },
+  { order = [446, 447], source_note = 85, start_delta = -68, duration_delta = 2, velocity = 73 },
+  { order = [450, 452], source_note = 86, start_delta = -61, duration_delta = 2, velocity = 70 },
+  { order = [456, 459], source_note = 87, start_delta = -51, duration_delta = -3, velocity = 79 },
+  { order = [462, 464], source_note = 88, start_delta = -53, velocity = 32 },
+  { order = [467, 469], source_note = 89, start_delta = -52, duration_delta = 1 },
+  { order = [472, 474], source_note = 90, start_delta = -49, duration_delta = 1, velocity = 67 },
+  { order = [477, 479], source_note = 91, start_delta = -47, duration_delta = 2, velocity = 40 },
+  { order = [482, 484], source_note = 92, start_delta = -43, duration_delta = -1, velocity = 40 },
+  { order = [487, 489], source_note = 93, start_delta = -42, duration_delta = 1, velocity = 73 },
+  { order = [492, 495], source_note = 94, start_delta = -41, velocity = 40 },
+  { order = [498, 500], source_note = 95, start_delta = -40, velocity = 32 },
+  { order = [503, 505], source_note = 96, start_delta = -38, velocity = 67 },
+  { order = [508, 511], source_note = 97, start_delta = -38 },
+  { order = [513, 515], source_note = 98, start_delta = -35, velocity = 28 },
+  { order = [518, 519], source_note = 99, start_delta = -33, duration_delta = 2, velocity = 67 },
+  { order = [522, 524], source_note = 100, start_delta = -22, duration_delta = 1, velocity = 67 },
+  { order = [528, 531], source_note = 101, start_delta = -15, duration_delta = -1, velocity = 79 },
+  { order = [534, 536], source_note = 102, start_delta = -15, duration_delta = -1 },
+  { order = [539, 541], source_note = 103, start_delta = -13 },
+  { order = [544, 546], source_note = 104, start_delta = -13, duration_delta = 2, velocity = 73 },
+  { order = [549, 551], source_note = 105, start_delta = -10, velocity = 43 },
+  { order = [554, 556], source_note = 106, start_delta = -8 },
+  { order = [559, 561], source_note = 107, start_delta = -6, duration_delta = 1, velocity = 73 },
+  { order = [564, 567], source_note = 108, start_delta = -3, velocity = 40 },
+  { order = [570, 572], source_note = 109, velocity = 46 },
+  { order = [575, 577], source_note = 110, start_delta = 4, velocity = 58 },
+  { order = [579, 582], source_note = 111, start_delta = 6, velocity = 64 },
+  { order = [585, 587], source_note = 112, start_delta = 8, duration_delta = 1 },
+  { order = [590, 591], source_note = 113, start_delta = 11, duration_delta = -1 },
+  { order = [592, 593], source_note = 114, start_delta = 14 },
+  { order = [596, 598], source_note = 115, start_delta = 16, duration_delta = 1, velocity = 58 },
+  { order = [599, 600], source_note = 116, start_delta = 20, duration_delta = 1 },
+  { order = [604, 611], source_note = 117, start_delta = 19, duration_delta = -15, velocity = 76 },
+  { order = [620, 622], source_note = 118, start_delta = 2, velocity = 14 },
+  { order = [628, 629], source_note = 119, start_delta = 1, velocity = 32 },
+  { order = [636, 638], source_note = 120, duration_delta = 1, velocity = 94 },
+  { order = [644, 645], source_note = 121, duration_delta = 1, velocity = 55 },
+  { order = [652, 653], source_note = 122, duration_delta = 1, velocity = 32 },
+  { order = [660, 662], source_note = 123, start_delta = 2, duration_delta = 1, velocity = 91 },
+  { order = [667, 672], source_note = 124, start_delta = 1, velocity = 36 },
+  { order = [680, 682], source_note = 125, start_delta = -1, duration_delta = 1, velocity = 36 },
+  { order = [688, 690], source_note = 126, duration_delta = 1, velocity = 70 },
+  { order = [696, 698], source_note = 127, start_delta = -4 },
+  { order = [704, 706], source_note = 128, start_delta = -4, velocity = 19 },
+  { order = [712, 713], source_note = 129, start_delta = -6, duration_delta = 3, velocity = 82 },
+  { order = [719, 724], source_note = 130, duration_delta = -2, velocity = 73 },
+  { order = [730, 736], source_note = 131, start_delta = 1, duration_delta = -4, velocity = 64 },
+  { order = [745, 748], source_note = 132, start_delta = -8, duration_delta = -1, velocity = 36 },
+  { order = [754, 756], source_note = 133, start_delta = -8, velocity = 43 },
+  { order = [762, 764], source_note = 134, start_delta = -11, duration_delta = 1, velocity = 82 },
+  { order = [770, 772], source_note = 135, start_delta = -9, velocity = 40 },
+  { order = [778, 780], source_note = 136, start_delta = -12 },
+  { order = [786, 788], source_note = 137, start_delta = -10, velocity = 73 },
+  { order = [794, 797], source_note = 138, start_delta = -11, velocity = 40 },
+  { order = [803, 808], source_note = 139, start_delta = -12, duration_delta = -3, velocity = 36 },
+  { order = [815, 818], source_note = 140, start_delta = -16, velocity = 58 },
+  { order = [824, 827], source_note = 141, start_delta = -19 },
+  { order = [832, 834], source_note = 142, start_delta = -18, velocity = 46 },
+  { order = [841, 843], source_note = 143, start_delta = -21, duration_delta = 2, velocity = 73 },
+  { order = [849, 855], source_note = 144, start_delta = -16, velocity = 70 },
+  { order = [864, 870], source_note = 145, start_delta = -18, duration_delta = -3, velocity = 79 },
+  { order = [876, 878], source_note = 146, start_delta = -22, duration_delta = 2, velocity = 32 },
+  { order = [884, 886], source_note = 147, start_delta = -20 },
+  { order = [892, 895], source_note = 148, start_delta = -21, velocity = 67 },
+  { order = [900, 902], source_note = 149, start_delta = -21, velocity = 40 },
+  { order = [908, 910], source_note = 150, start_delta = -22, duration_delta = -1, velocity = 40 },
+  { order = [916, 918], source_note = 151, start_delta = -22, duration_delta = 1, velocity = 73 },
+  { order = [924, 927], source_note = 152, start_delta = -24, duration_delta = -1, velocity = 40 },
+  { order = [933, 935], source_note = 153, start_delta = -25, duration_delta = 1, velocity = 32 },
+  { order = [941, 943], source_note = 154, start_delta = -24, velocity = 67 },
+  { order = [949, 952], source_note = 155, start_delta = -22, duration_delta = -3 },
+  { order = [957, 962], source_note = 156, start_delta = -25, duration_delta = -1, velocity = 28 },
+  { order = [970, 971], source_note = 157, start_delta = -30, duration_delta = 2, velocity = 67 },
+  { order = [982, 988], source_note = 158, start_delta = -27, duration_delta = -1, velocity = 67 },
+  { order = [996, 1003], source_note = 159, start_delta = -26, duration_delta = -6, velocity = 79 },
+  { order = [1008, 1014], source_note = 160, start_delta = -33, duration_delta = -5 },
+  { order = [1020, 1025], source_note = 161, start_delta = -35, duration_delta = -3 },
+  { order = [1031, 1033], source_note = 162, start_delta = -38, duration_delta = 1, velocity = 73 },
+  { order = [1036, 1041], source_note = 163, start_delta = -34, duration_delta = -4, velocity = 43 },
+  { order = [1047, 1052], source_note = 164, start_delta = -39, duration_delta = -1 },
+  { order = [1058, 1060], source_note = 165, start_delta = -40, duration_delta = 2, velocity = 73 },
+  { order = [1063, 1069], source_note = 166, start_delta = -37, duration_delta = -4, velocity = 40 },
+  { order = [1075, 1078], source_note = 167, start_delta = -42, duration_delta = 1, velocity = 46 },
+  { order = [1084, 1087], source_note = 168, start_delta = -40, duration_delta = -4, velocity = 58 },
+  { order = [1093, 1095], source_note = 169, start_delta = -44, duration_delta = 1, velocity = 64 },
+  { order = [1101, 1106], source_note = 170, start_delta = -45, duration_delta = -1 },
+  { order = [1113, 1114], source_note = 171, start_delta = -49, duration_delta = 1 },
+  { order = [1119, 1120], source_note = 172, start_delta = -48, duration_delta = 1 },
+  { order = [1124, 1126], source_note = 173, start_delta = -46, duration_delta = 1, velocity = 58 },
+  { order = [1128, 1129], source_note = 174, start_delta = -43, duration_delta = 1 },
+  { order = [1134, 1140], source_note = 175, start_delta = -43, duration_delta = -3, velocity = 76 },
+  { order = [1147, 1152], source_note = 176, start_delta = -46, duration_delta = -3, velocity = 14 },
+  { order = [1158, 1162], source_note = 177, start_delta = -49, duration_delta = -3, velocity = 32 },
+  { order = [1169, 1174], source_note = 178, start_delta = -50, duration_delta = -2, velocity = 94 },
+  { order = [1177, 1178], source_note = 179, start_delta = -52, duration_delta = 1, velocity = 55 },
+  { order = [1185, 1189], source_note = 180, start_delta = -51, duration_delta = -2, velocity = 32 },
+  { order = [1196, 1198], source_note = 181, start_delta = -54, duration_delta = 1, velocity = 91 },
+  { order = [1203, 1205], source_note = 182, start_delta = -53, duration_delta = -1, velocity = 36 },
+  { order = [1213, 1215], source_note = 183, start_delta = -54, duration_delta = -2, velocity = 36 },
+  { order = [1218, 1223], source_note = 184, start_delta = -53, duration_delta = -3, velocity = 70 },
+  { order = [1226, 1231], source_note = 185, start_delta = -54, duration_delta = -2 },
+  { order = [1237, 1239], source_note = 186, start_delta = -56, duration_delta = 1, velocity = 19 },
+  { order = [1250, 1251], source_note = 187, start_delta = -60, duration_delta = 3, velocity = 82 },
+  { order = [1260, 1265], source_note = 188, start_delta = -58, duration_delta = 1, velocity = 73 },
+  { order = [1273, 1280], source_note = 189, start_delta = -54, duration_delta = -7, velocity = 64 },
+  { order = [1286, 1292], source_note = 190, start_delta = -60, duration_delta = -2, velocity = 36 },
+  { order = [1298, 1303], source_note = 191, start_delta = -62, duration_delta = -2, velocity = 43 },
+  { order = [1309, 1314], source_note = 192, start_delta = -65, duration_delta = -3, velocity = 82 },
+  { order = [1317, 1322], source_note = 193, start_delta = -67, velocity = 40 },
+  { order = [1325, 1330], source_note = 194, start_delta = -69, duration_delta = -3 },
+  { order = [1333, 1338], source_note = 195, start_delta = -70, duration_delta = -1, velocity = 73 },
+  { order = [1344, 1347], source_note = 196, start_delta = -74, velocity = 40 },
+  { order = [1350, 1352], source_note = 197, start_delta = -72, velocity = 36 },
+  { order = [1359, 1365], source_note = 198, start_delta = -74, duration_delta = -4, velocity = 58 },
+  { order = [1368, 1374], source_note = 199, start_delta = -76, duration_delta = -2 },
+  { order = [1379, 1382], source_note = 200, start_delta = -79, duration_delta = -1, velocity = 46 },
+  { order = [1389, 1395], source_note = 201, start_delta = -81, duration_delta = -4, velocity = 73 },
+  { order = [1404, 1409], source_note = 202, start_delta = -83, duration_delta = -1, velocity = 70 },
+  { order = [1419, 1425], source_note = 203, start_delta = -84, duration_delta = -4, velocity = 79 },
+  { order = [1434, 1436], source_note = 204, start_delta = -92, velocity = 32 },
+  { order = [1442, 1444], source_note = 205, start_delta = -93 },
+  { order = [1450, 1453], source_note = 206, start_delta = -96, velocity = 67 },
+  { order = [1458, 1460], source_note = 207, start_delta = -96, velocity = 40 },
+  { order = [1466, 1468], source_note = 208, start_delta = -96, duration_delta = 1, velocity = 40 },
+  { order = [1471, 1476], source_note = 209, start_delta = -93, duration_delta = -1, velocity = 73 },
+  { order = [1482, 1488], source_note = 210, start_delta = -95, duration_delta = -1, velocity = 40 },
+  { order = [1494, 1499], source_note = 211, start_delta = -99, duration_delta = -1, velocity = 32 },
+  { order = [1505, 1510], source_note = 212, start_delta = -102, duration_delta = -1, velocity = 67 },
+  { order = [1516, 1519], source_note = 213, start_delta = -105, duration_delta = -1 },
+  { order = [1524, 1527], source_note = 214, start_delta = -106, duration_delta = 1, velocity = 28 },
+  { order = [1535, 1537], source_note = 215, start_delta = -110, duration_delta = 2, velocity = 67 },
+  { order = [1549, 1554], source_note = 216, start_delta = -110, duration_delta = 1, velocity = 67 },
+  { order = [1562, 1569], source_note = 217, start_delta = -105, duration_delta = -7, velocity = 79 },
+  { order = [1574, 1580], source_note = 218, start_delta = -109, duration_delta = -3 },
+  { order = [1586, 1591], source_note = 219, start_delta = -111, duration_delta = -4 },
+  { order = [1597, 1599], source_note = 220, start_delta = -115, duration_delta = 1, velocity = 73 },
+  { order = [1602, 1610], source_note = 221, start_delta = -113, duration_delta = -7, velocity = 43 },
+  { order = [1613, 1618], source_note = 222, start_delta = -118, duration_delta = -1 },
+  { order = [1621, 1626], source_note = 223, start_delta = -117, velocity = 73 },
+  { order = [1629, 1635], source_note = 224, start_delta = -116, duration_delta = -4, velocity = 40 },
+  { order = [1638, 1644], source_note = 225, start_delta = -118, duration_delta = -2, velocity = 46 },
+  { order = [1650, 1653], source_note = 226, start_delta = -121, velocity = 58 },
+  { order = [1656, 1661], source_note = 227, start_delta = -120, duration_delta = -1, velocity = 64 },
+  { order = [1667, 1672], source_note = 228, start_delta = -123, duration_delta = -2 },
+  { order = [1678, 1679], source_note = 229, start_delta = -125, duration_delta = 2 },
+  { order = [1680, 1682], source_note = 230, start_delta = -121, duration_delta = 2 },
+  { order = [1683, 1689], source_note = 231, start_delta = -116, duration_delta = -1, velocity = 58 },
+  { order = [1691, 1692], source_note = 232, start_delta = -115, duration_delta = 1 },
+  { order = [1697, 1704], source_note = 233, start_delta = -115, duration_delta = -5, velocity = 76 },
+  { order = [1712, 1714], source_note = 234, start_delta = -122, duration_delta = 1, velocity = 14 },
+  { order = [1720, 1721], source_note = 235, start_delta = -122, duration_delta = 1, velocity = 32 },
+  { order = [1728, 1730], source_note = 236, start_delta = -125, duration_delta = -1, velocity = 94 },
+  { order = [1736, 1737], source_note = 237, start_delta = -125, duration_delta = 1, velocity = 55 },
+  { order = [1744, 1745], source_note = 238, start_delta = -126, duration_delta = -1, velocity = 32 },
+  { order = [1752, 1754], source_note = 239, start_delta = -126, velocity = 91 },
+  { order = [1760, 1764], source_note = 240, start_delta = -127, duration_delta = -2, velocity = 36 },
+  { order = [1772, 1774], source_note = 241, start_delta = -133, duration_delta = 1, velocity = 36 },
+  { order = [1780, 1782], source_note = 242, start_delta = -133, duration_delta = 1, velocity = 70 },
+  { order = [1788, 1790], source_note = 243, start_delta = -134, duration_delta = 1 },
+  { order = [1796, 1798], source_note = 244, start_delta = -133, duration_delta = 1, velocity = 19 },
+  { order = [1806, 1807], source_note = 245, start_delta = -137, duration_delta = 3, velocity = 82 },
+  { order = [1811, 1816], source_note = 246, start_delta = -129, duration_delta = -1, velocity = 73 },
+  { order = [1822, 1829], source_note = 247, start_delta = -125, duration_delta = -3, velocity = 64 },
+  { order = [1838, 1840], source_note = 248, start_delta = -131, velocity = 36 },
+  { order = [1846, 1848], source_note = 249, start_delta = -131, velocity = 43 },
+  { order = [1854, 1856], source_note = 250, start_delta = -133, duration_delta = -1, velocity = 82 },
+  { order = [1862, 1864], source_note = 251, start_delta = -134, velocity = 40 },
+  { order = [1870, 1872], source_note = 252, start_delta = -135 },
+  { order = [1878, 1880], source_note = 253, start_delta = -135, duration_delta = -1, velocity = 73 },
+  { order = [1886, 1889], source_note = 254, start_delta = -137, velocity = 40 },
+  { order = [1895, 1900], source_note = 255, start_delta = -138, duration_delta = -3, velocity = 36 },
+  { order = [1906, 1908], source_note = 256, start_delta = -141, duration_delta = 1, velocity = 58 },
+  { order = [1914, 1916], source_note = 257, start_delta = -141, duration_delta = 1 },
+  { order = [1922, 1924], source_note = 258, start_delta = -141, velocity = 46 },
+  { order = [1933, 1935], source_note = 259, start_delta = -146, duration_delta = 3, velocity = 73 },
+  { order = [1939, 1945], source_note = 260, start_delta = -138, velocity = 70 },
+  { order = [1954, 1960], source_note = 261, start_delta = -137, duration_delta = -2, velocity = 79 },
+  { order = [1966, 1968], source_note = 262, start_delta = -142, velocity = 32 },
+  { order = [1974, 1976], source_note = 263, start_delta = -142 },
+  { order = [1982, 1984], source_note = 264, start_delta = -144, duration_delta = 2, velocity = 67 },
+  { order = [1990, 1992], source_note = 265, start_delta = -144, velocity = 40 },
+  { order = [1998, 2000], source_note = 266, start_delta = -144, duration_delta = -1, velocity = 40 },
+  { order = [2008, 2010], source_note = 267, start_delta = -146, duration_delta = 1, velocity = 73 },
+  { order = [2016, 2019], source_note = 268, start_delta = -147, velocity = 40 },
+  { order = [2027, 2029], source_note = 269, start_delta = -151, duration_delta = 1, velocity = 32 },
+  { order = [2035, 2037], source_note = 270, start_delta = -152, duration_delta = 1, velocity = 67 },
+  { order = [2043, 2046], source_note = 271, start_delta = -150, duration_delta = -2 },
+  { order = [2051, 2056], source_note = 272, start_delta = -153, duration_delta = -3, velocity = 28 },
+  { order = [2064, 2065], source_note = 273, start_delta = -161, duration_delta = 2, velocity = 67 },
+  { order = [2072, 2078], source_note = 274, start_delta = -155, velocity = 67 },
+  { order = [2087, 2093], source_note = 275, start_delta = -155, duration_delta = -4, velocity = 79 },
+  { order = [2099, 2104], source_note = 276, start_delta = -159, duration_delta = -5 },
+  { order = [2110, 2115], source_note = 277, start_delta = -161, duration_delta = -3 },
+  { order = [2121, 2123], source_note = 278, start_delta = -165, velocity = 73 },
+  { order = [2126, 2131], source_note = 279, start_delta = -163, duration_delta = -3, velocity = 43 },
+  { order = [2137, 2142], source_note = 280, start_delta = -165, duration_delta = -4 },
+  { order = [2148, 2150], source_note = 281, start_delta = -169, velocity = 73 },
+  { order = [2153, 2159], source_note = 282, start_delta = -168, duration_delta = -4, velocity = 40 },
+  { order = [2165, 2167], source_note = 283, start_delta = -170, duration_delta = 2, velocity = 46 },
+  { order = [2173, 2175], source_note = 284, start_delta = -168, duration_delta = -1, velocity = 58 },
+  { order = [2180, 2183], source_note = 285, start_delta = -170, duration_delta = -2, velocity = 64 },
+  { order = [2189, 2194], source_note = 286, start_delta = -174, duration_delta = -1 },
+  { order = [2201, 2202], source_note = 287, start_delta = -175 },
+  { order = [2207, 2208], source_note = 288, start_delta = -172, duration_delta = 1 },
+  { order = [2212, 2214], source_note = 289, start_delta = -171, duration_delta = -1, velocity = 58 },
+  { order = [2216, 2218], source_note = 290, start_delta = -167 },
+  { order = [2223, 2230], source_note = 291, start_delta = -168, duration_delta = -4, velocity = 76 },
+  { order = [2238, 2240], source_note = 292, start_delta = -176, duration_delta = -1, velocity = 14 },
+  { order = [2246, 2247], source_note = 293, start_delta = -176, velocity = 32 },
+  { order = [2254, 2256], source_note = 294, start_delta = -178, duration_delta = 2, velocity = 94 },
+  { order = [2262, 2263], source_note = 295, start_delta = -178, duration_delta = 1, velocity = 55 },
+  { order = [2270, 2271], source_note = 296, start_delta = -177, duration_delta = 1, velocity = 32 },
+  { order = [2278, 2280], source_note = 297, start_delta = -177, velocity = 91 },
+  { order = [2286, 2290], source_note = 298, start_delta = -180, velocity = 36 },
+  { order = [2298, 2300], source_note = 299, start_delta = -181, duration_delta = -1, velocity = 36 },
+  { order = [2306, 2308], source_note = 300, start_delta = -181, duration_delta = 1, velocity = 70 },
+  { order = [2314, 2316], source_note = 301, start_delta = -182, duration_delta = 1 },
+  { order = [2322, 2324], source_note = 302, start_delta = -180, velocity = 19 },
+  { order = [2332, 2333], source_note = 303, start_delta = -185, duration_delta = 3, velocity = 82 },
+  { order = [2339, 2344], source_note = 304, start_delta = -179, velocity = 73 },
+  { order = [2349, 2357], source_note = 305, start_delta = -174, duration_delta = -7, velocity = 64 },
+  { order = [2366, 2368], source_note = 306, start_delta = -184, duration_delta = 1, velocity = 36 },
+  { order = [2374, 2376], source_note = 307, start_delta = -183, velocity = 43 },
+  { order = [2382, 2384], source_note = 308, start_delta = -185, duration_delta = -1, velocity = 82 },
+  { order = [2390, 2392], source_note = 309, start_delta = -186, duration_delta = 1, velocity = 40 },
+  { order = [2398, 2400], source_note = 310, start_delta = -188, duration_delta = 1 },
+  { order = [2406, 2408], source_note = 311, start_delta = -186, duration_delta = -1, velocity = 73 },
+  { order = [2414, 2417], source_note = 312, start_delta = -190, velocity = 40 },
+  { order = [2423, 2428], source_note = 313, start_delta = -190, duration_delta = -2, velocity = 36 },
+  { order = [2434, 2436], source_note = 314, start_delta = -192, duration_delta = 1, velocity = 58 },
+  { order = [2442, 2444], source_note = 315, start_delta = -192 },
+  { order = [2450, 2452], source_note = 316, start_delta = -191, velocity = 46 },
+  { order = [2460, 2461], source_note = 317, start_delta = -196, duration_delta = 2, velocity = 73 },
+  { order = [2467, 2472], source_note = 318, start_delta = -192, velocity = 70 },
+  { order = [2482, 2488], source_note = 319, start_delta = -191, duration_delta = -3, velocity = 79 },
+  { order = [2494, 2496], source_note = 320, start_delta = -196, duration_delta = -1, velocity = 32 },
+  { order = [2502, 2504], source_note = 321, start_delta = -197 },
+  { order = [2510, 2512], source_note = 322, start_delta = -198, velocity = 67 },
+  { order = [2518, 2520], source_note = 323, start_delta = -197, velocity = 40 },
+  { order = [2526, 2528], source_note = 324, start_delta = -197, duration_delta = -1, velocity = 40 },
+  { order = [2534, 2536], source_note = 325, start_delta = -199, duration_delta = 1, velocity = 73 },
+  { order = [2542, 2545], source_note = 326, start_delta = -202, velocity = 40 },
+  { order = [2551, 2553], source_note = 327, start_delta = -202, velocity = 32 },
+  { order = [2559, 2561], source_note = 328, start_delta = -201, velocity = 67 },
+  { order = [2567, 2570], source_note = 329, start_delta = -199, duration_delta = -4 },
+  { order = [2575, 2580], source_note = 330, start_delta = -203, duration_delta = -2, velocity = 28 },
+  { order = [2589, 2591], source_note = 331, start_delta = -211, duration_delta = 2, velocity = 67 },
+  { order = [2600, 2606], source_note = 332, start_delta = -206, duration_delta = -2, velocity = 67 },
+  { order = [2615, 2621], source_note = 333, start_delta = -205, duration_delta = -3, velocity = 79 },
+  { order = [2627, 2632], source_note = 334, start_delta = -209, duration_delta = -3 },
+  { order = [2638, 2643], source_note = 335, start_delta = -211, duration_delta = -2 },
+  { order = [2649, 2651], source_note = 336, start_delta = -214, duration_delta = 1, velocity = 73 },
+  { order = [2654, 2659], source_note = 337, start_delta = -211, duration_delta = -2, velocity = 43 },
+  { order = [2665, 2670], source_note = 338, start_delta = -214, duration_delta = -4 },
+  { order = [2676, 2678], source_note = 339, start_delta = -216, velocity = 73 },
+  { order = [2681, 2687], source_note = 340, start_delta = -215, duration_delta = -4, velocity = 40 },
+  { order = [2693, 2695], source_note = 341, start_delta = -219, duration_delta = 1, velocity = 46 },
+  { order = [2701, 2703], source_note = 342, start_delta = -217, duration_delta = -4, velocity = 58 },
+  { order = [2708, 2711], source_note = 343, start_delta = -220, duration_delta = 1, velocity = 64 },
+  { order = [2717, 2722], source_note = 344, start_delta = -221, duration_delta = -2 },
+  { order = [2728, 2729], source_note = 345, start_delta = -221, duration_delta = -1 },
+  { order = [2733, 2735], source_note = 346, start_delta = -220, duration_delta = 1 },
+  { order = [2738, 2740], source_note = 347, start_delta = -218, duration_delta = 2, velocity = 58 },
+  { order = [2743, 2744], source_note = 348, start_delta = -213, duration_delta = 1 },
+  { order = [2748, 2754], source_note = 349, start_delta = -213, duration_delta = -3, velocity = 76 },
+  { order = [2761, 2766], source_note = 350, start_delta = -216, duration_delta = -4, velocity = 14 },
+  { order = [2772, 2776], source_note = 351, start_delta = -220, duration_delta = -3, velocity = 32 },
+  { order = [2783, 2788], source_note = 352, start_delta = -223, duration_delta = -2, velocity = 94 },
+  { order = [2791, 2792], source_note = 353, start_delta = -223, velocity = 55 },
+  { order = [2799, 2803], source_note = 354, start_delta = -223, duration_delta = -3, velocity = 32 },
+  { order = [2810, 2812], source_note = 355, start_delta = -226, duration_delta = 1, velocity = 91 },
+  { order = [2817, 2819], source_note = 356, start_delta = -227, velocity = 36 },
+  { order = [2827, 2829], source_note = 357, start_delta = -227, velocity = 36 },
+  { order = [2832, 2837], source_note = 358, start_delta = -226, duration_delta = -2, velocity = 70 },
+  { order = [2840, 2845], source_note = 359, start_delta = -225, duration_delta = -1 },
+  { order = [2851, 2853], source_note = 360, start_delta = -227, velocity = 19 },
+  { order = [2864, 2867], source_note = 361, start_delta = -234, duration_delta = 2, velocity = 82 },
+  { order = [2876, 2881], source_note = 362, start_delta = -229, velocity = 73 },
+  { order = [2890, 2896], source_note = 363, start_delta = -228, duration_delta = -4, velocity = 64 },
+  { order = [2902, 2908], source_note = 364, start_delta = -231, duration_delta = -3, velocity = 36 },
+  { order = [2914, 2919], source_note = 365, start_delta = -234, duration_delta = -2, velocity = 43 },
+  { order = [2925, 2930], source_note = 366, start_delta = -238, duration_delta = -3, velocity = 82 },
+  { order = [2933, 2938], source_note = 367, start_delta = -238, velocity = 40 },
+  { order = [2941, 2946], source_note = 368, start_delta = -240, duration_delta = -3 },
+  { order = [2949, 2954], source_note = 369, start_delta = -241, duration_delta = -1, velocity = 73 },
+  { order = [2960, 2963], source_note = 370, start_delta = -245, velocity = 40 },
+  { order = [2966, 2968], source_note = 371, start_delta = -241, duration_delta = 1, velocity = 36 },
+  { order = [2975, 2981], source_note = 372, start_delta = -243, duration_delta = -4, velocity = 58 },
+  { order = [2984, 2990], source_note = 373, start_delta = -245, duration_delta = -2 },
+  { order = [2995, 2997], source_note = 374, start_delta = -248, velocity = 46 },
+  { order = [3006, 3013], source_note = 375, start_delta = -252, duration_delta = -4, velocity = 73 },
+  { order = [3022, 3028], source_note = 376, start_delta = -255, duration_delta = -3, velocity = 70 },
+  { order = [3037, 3043], source_note = 377, start_delta = -256, duration_delta = -3, velocity = 79 },
+  { order = [3052, 3054], source_note = 378, start_delta = -262, duration_delta = 1, velocity = 32 },
+  { order = [3060, 3062], source_note = 379, start_delta = -261, duration_delta = 1 },
+  { order = [3068, 3071], source_note = 380, start_delta = -262, velocity = 67 },
+  { order = [3076, 3078], source_note = 381, start_delta = -262, duration_delta = 2, velocity = 40 },
+  { order = [3084, 3086], source_note = 382, start_delta = -263, duration_delta = -1, velocity = 40 },
+  { order = [3089, 3094], source_note = 383, start_delta = -260, duration_delta = -2, velocity = 73 },
+  { order = [3100, 3106], source_note = 384, start_delta = -264, duration_delta = -3, velocity = 40 },
+  { order = [3112, 3117], source_note = 385, start_delta = -268, duration_delta = -2, velocity = 32 },
+  { order = [3123, 3128], source_note = 386, start_delta = -272, duration_delta = -1, velocity = 67 },
+  { order = [3134, 3137], source_note = 387, start_delta = -273, duration_delta = -1 },
+  { order = [3142, 3144], source_note = 388, start_delta = -272, velocity = 28 },
+  { order = [3152, 3153], source_note = 389, start_delta = -278, duration_delta = 2, velocity = 67 },
+  { order = [3167, 3170], source_note = 390, start_delta = -279, duration_delta = 3, velocity = 67 },
+  { order = [3178, 3185], source_note = 391, start_delta = -275, duration_delta = -4, velocity = 79 },
+  { order = [3190, 3196], source_note = 392, start_delta = -279, duration_delta = -5 },
+  { order = [3202, 3207], source_note = 393, start_delta = -284, duration_delta = -1 },
+  { order = [3213, 3215], source_note = 394, start_delta = -285, velocity = 73 },
+  { order = [3218, 3226], source_note = 395, start_delta = -282, duration_delta = -4, velocity = 43 },
+  { order = [3229, 3234], source_note = 396, start_delta = -284, duration_delta = -4 },
+  { order = [3237, 3242], source_note = 397, start_delta = -286, duration_delta = -2, velocity = 73 },
+  { order = [3245, 3251], source_note = 398, start_delta = -287, duration_delta = -3, velocity = 40 },
+  { order = [3254, 3260], source_note = 399, start_delta = -288, duration_delta = -3, velocity = 46 },
+  { order = [3266, 3269], source_note = 400, start_delta = -293, velocity = 58 },
+  { order = [3272, 3277], source_note = 401, start_delta = -293, duration_delta = -2, velocity = 64 },
+  { order = [3283, 3288], source_note = 402, start_delta = -295, duration_delta = -2 },
+  { order = [3295, 3296], source_note = 403, start_delta = -300 },
+  { order = [3298, 3299], source_note = 404, start_delta = -295 },
+  { order = [3301, 3306], source_note = 405, start_delta = -291, duration_delta = -3, velocity = 58 },
+  { order = [3308, 3310], source_note = 406, start_delta = -292, duration_delta = 1 },
+]
+add = [
+]
+
+[[controls]]
+tick = 0
+track = 0
+order = 0
+message = "ff 03 1c 47 65 74 20 54 68 65 6d 20 42 65 66 6f 72 65 20 54 68 65 79 20 47 65 74 20 59 6f 75"
+
+[[controls]]
+tick = 0
+track = 0
+order = 1
+message = "ff 02 30 31 39 39 33 2c 20 52 6f 62 65 72 74 20 43 2e 20 50 72 69 6e 63 65 20 2d 20 62 6f 62 62 79 20 70 72 69 6e 63 65 20 4d 75 73 69 63 2c 20 42 4d 49"
+
+[[controls]]
+tick = 0
+track = 0
+order = 2
+message = "ff 01 10 52 6f 62 65 72 74 20 43 2e 20 50 72 69 6e 63 65"
+
+[[controls]]
+tick = 0
+track = 0
+order = 3
+message = "ff 01 55 4e 4f 54 20 46 4f 52 20 50 55 42 4c 49 43 20 50 45 52 46 4f 52 4d 41 4e 43 45 20 57 49 54 48 4f 55 54 20 41 20 4c 49 43 45 4e 53 45 20 46 52 4f 4d 20 42 4d 49 20 2d 20 6c 69 63 65 6e 73 65 40 62 70 6d 75 73 69 63 2e 63 6f 6d 20 66 6f 72 20 69 6e 66 6f 0a"
+
+[[controls]]
+tick = 0
+track = 0
+order = 4
+message = "ff 58 04 04 02 18 08"
+
+[[controls]]
+tick = 0
+track = 0
+order = 5
+message = "ff 59 02 00 00"
+
+[[controls]]
+tick = 0
+track = 0
+order = 6
+message = "ff 51 03 05 16 15"
+
+[[controls]]
+tick = 0
+track = 0
+order = 7
+message = "ff 06 07 47 45 54 54 48 45 4d"
+
+[[controls]]
+tick = 0
+track = 0
+order = 8
+channel = 2
+program = 69
+
+[[controls]]
+tick = 0
+track = 0
+order = 9
+channel = 2
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 10
+channel = 2
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 0
+order = 11
+channel = 3
+program = 39
+
+[[controls]]
+tick = 0
+track = 0
+order = 12
+channel = 3
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 13
+channel = 3
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 0
+order = 14
+channel = 4
+program = 74
+
+[[controls]]
+tick = 0
+track = 0
+order = 15
+channel = 4
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 16
+channel = 4
+controller = 10
+value = 44
+
+[[controls]]
+tick = 0
+track = 0
+order = 17
+channel = 5
+program = 72
+
+[[controls]]
+tick = 0
+track = 0
+order = 18
+channel = 5
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 19
+channel = 5
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 0
+order = 20
+channel = 6
+program = 58
+
+[[controls]]
+tick = 0
+track = 0
+order = 21
+channel = 6
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 22
+channel = 6
+controller = 10
+value = 84
+
+[[controls]]
+tick = 0
+track = 0
+order = 23
+channel = 7
+program = 120
+
+[[controls]]
+tick = 0
+track = 0
+order = 24
+channel = 7
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 25
+channel = 7
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 0
+order = 26
+channel = 8
+program = 5
+
+[[controls]]
+tick = 0
+track = 0
+order = 27
+channel = 8
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 28
+channel = 8
+controller = 10
+value = 64
+
+[[controls]]
+tick = 0
+track = 0
+order = 29
+channel = 10
+program = 1
+
+[[controls]]
+tick = 0
+track = 0
+order = 30
+channel = 10
+controller = 7
+value = 127
+
+[[controls]]
+tick = 0
+track = 0
+order = 31
+channel = 10
+controller = 10
+value = 64
+
+[[controls]]
+tick = 1
+track = 0
+order = 32
+channel = 2
+bend = 8192
+
+[[controls]]
+tick = 3
+track = 0
+order = 33
+channel = 3
+bend = 8192
+
+[[controls]]
+tick = 4
+track = 0
+order = 36
+channel = 4
+bend = 8192
+
+[[controls]]
+tick = 4
+track = 0
+order = 37
+channel = 2
+controller = 100
+value = 0
+
+[[controls]]
+tick = 6
+track = 0
+order = 38
+channel = 5
+bend = 8192
+
+[[controls]]
+tick = 6
+track = 0
+order = 39
+channel = 2
+controller = 101
+value = 0
+
+[[controls]]
+tick = 8
+track = 0
+order = 40
+channel = 6
+bend = 8192
+
+[[controls]]
+tick = 8
+track = 0
+order = 41
+channel = 2
+controller = 6
+value = 2
+
+[[controls]]
+tick = 9
+track = 0
+order = 42
+channel = 7
+bend = 8192
+
+[[controls]]
+tick = 9
+track = 0
+order = 43
+channel = 3
+controller = 100
+value = 0
+
+[[controls]]
+tick = 11
+track = 0
+order = 44
+channel = 8
+bend = 8192
+
+[[controls]]
+tick = 11
+track = 0
+order = 45
+channel = 3
+controller = 101
+value = 0
+
+[[controls]]
+tick = 12
+track = 0
+order = 46
+channel = 3
+controller = 6
+value = 2
+
+[[controls]]
+tick = 14
+track = 0
+order = 47
+channel = 10
+bend = 8259
+
+[[controls]]
+tick = 14
+track = 0
+order = 48
+channel = 4
+controller = 100
+value = 0
+
+[[controls]]
+tick = 16
+track = 0
+order = 49
+channel = 4
+controller = 101
+value = 0
+
+[[controls]]
+tick = 17
+track = 0
+order = 50
+channel = 4
+controller = 6
+value = 2
+
+[[controls]]
+tick = 19
+track = 0
+order = 51
+channel = 5
+controller = 100
+value = 0
+
+[[controls]]
+tick = 20
+track = 0
+order = 52
+channel = 5
+controller = 101
+value = 0
+
+[[controls]]
+tick = 22
+track = 0
+order = 53
+channel = 5
+controller = 6
+value = 2
+
+[[controls]]
+tick = 24
+track = 0
+order = 54
+channel = 6
+controller = 100
+value = 0
+
+[[controls]]
+tick = 25
+track = 0
+order = 55
+channel = 6
+controller = 101
+value = 0
+
+[[controls]]
+tick = 27
+track = 0
+order = 56
+channel = 6
+controller = 6
+value = 2
+
+[[controls]]
+tick = 28
+track = 0
+order = 57
+channel = 7
+controller = 100
+value = 0
+
+[[controls]]
+tick = 30
+track = 0
+order = 58
+channel = 7
+controller = 101
+value = 0
+
+[[controls]]
+tick = 32
+track = 0
+order = 59
+channel = 7
+controller = 6
+value = 2
+
+[[controls]]
+tick = 33
+track = 0
+order = 60
+channel = 8
+controller = 100
+value = 0
+
+[[controls]]
+tick = 35
+track = 0
+order = 61
+channel = 8
+controller = 101
+value = 0
+
+[[controls]]
+tick = 36
+track = 0
+order = 62
+channel = 8
+controller = 6
+value = 2
+
+[[controls]]
+tick = 43
+track = 0
+order = 63
+channel = 10
+controller = 100
+value = 0
+
+[[controls]]
+tick = 44
+track = 0
+order = 64
+channel = 10
+controller = 101
+value = 0
+
+[[controls]]
+tick = 46
+track = 0
+order = 65
+channel = 10
+controller = 6
+value = 2
+
+[[controls]]
+tick = 78
+track = 0
+order = 68
+channel = 2
+controller = 91
+value = 40
+
+[[controls]]
+tick = 80
+track = 0
+order = 69
+channel = 3
+controller = 91
+value = 40
+
+[[controls]]
+tick = 81
+track = 0
+order = 70
+channel = 4
+controller = 91
+value = 40
+
+[[controls]]
+tick = 83
+track = 0
+order = 71
+channel = 5
+controller = 91
+value = 40
+
+[[controls]]
+tick = 84
+track = 0
+order = 72
+channel = 6
+controller = 91
+value = 40
+
+[[controls]]
+tick = 86
+track = 0
+order = 73
+channel = 7
+controller = 91
+value = 40
+
+[[controls]]
+tick = 88
+track = 0
+order = 74
+channel = 8
+controller = 91
+value = 40
+
+[[controls]]
+tick = 91
+track = 0
+order = 75
+channel = 10
+controller = 91
+value = 40
+
+[[controls]]
+tick = 105
+track = 0
+order = 77
+channel = 2
+controller = 93
+value = 0
+
+[[controls]]
+tick = 107
+track = 0
+order = 78
+channel = 3
+controller = 93
+value = 0
+
+[[controls]]
+tick = 108
+track = 0
+order = 79
+channel = 4
+controller = 93
+value = 0
+
+[[controls]]
+tick = 110
+track = 0
+order = 80
+channel = 5
+controller = 93
+value = 0
+
+[[controls]]
+tick = 112
+track = 0
+order = 82
+channel = 6
+controller = 93
+value = 0
+
+[[controls]]
+tick = 113
+track = 0
+order = 83
+channel = 7
+controller = 93
+value = 0
+
+[[controls]]
+tick = 115
+track = 0
+order = 84
+channel = 8
+controller = 93
+value = 0
+
+[[controls]]
+tick = 118
+track = 0
+order = 85
+channel = 10
+controller = 93
+value = 0
+
+[[controls]]
+tick = 131
+track = 0
+order = 86
+channel = 10
+controller = 99
+value = 28
+
+[[controls]]
+tick = 134
+track = 0
+order = 87
+channel = 10
+controller = 98
+value = 46
+
+[[controls]]
+tick = 134
+track = 0
+order = 88
+channel = 10
+controller = 6
+value = 66
+
+[[controls]]
+tick = 137
+track = 0
+order = 89
+channel = 10
+controller = 99
+value = 28
+
+[[controls]]
+tick = 139
+track = 0
+order = 90
+channel = 10
+controller = 98
+value = 44
+
+[[controls]]
+tick = 142
+track = 0
+order = 91
+channel = 10
+controller = 6
+value = 66
+
+[[controls]]
+tick = 145
+track = 0
+order = 93
+channel = 10
+controller = 99
+value = 28
+
+[[controls]]
+tick = 145
+track = 0
+order = 94
+channel = 10
+controller = 98
+value = 42
+
+[[controls]]
+tick = 147
+track = 0
+order = 95
+channel = 10
+controller = 6
+value = 66
+
+[[controls]]
+tick = 150
+track = 0
+order = 96
+channel = 10
+controller = 99
+value = 28
+
+[[controls]]
+tick = 153
+track = 0
+order = 97
+channel = 10
+controller = 98
+value = 57
+
+[[controls]]
+tick = 153
+track = 0
+order = 98
+channel = 10
+controller = 6
+value = 0
+
+[[controls]]
+tick = 158
+track = 0
+order = 100
+channel = 10
+controller = 99
+value = 28
+
+[[controls]]
+tick = 158
+track = 0
+order = 101
+channel = 10
+controller = 98
+value = 55
+
+[[controls]]
+tick = 161
+track = 0
+order = 102
+channel = 10
+controller = 6
+value = 0
+
+[[controls]]
+tick = 163
+track = 0
+order = 103
+channel = 10
+controller = 99
+value = 28
+
+[[controls]]
+tick = 166
+track = 0
+order = 104
+channel = 10
+controller = 98
+value = 52
+
+[[controls]]
+tick = 166
+track = 0
+order = 105
+channel = 10
+controller = 6
+value = 0
+
+[[controls]]
+tick = 169
+track = 0
+order = 106
+channel = 10
+controller = 99
+value = 28
+
+[[controls]]
+tick = 171
+track = 0
+order = 107
+channel = 10
+controller = 98
+value = 49
+
+[[controls]]
+tick = 172
+track = 0
+order = 108
+channel = 10
+controller = 6
+value = 0
+
+[[controls]]
+tick = 192
+track = 0
+order = 109
+channel = 10
+bend = 8271
+
+[[controls]]
+tick = 384
+track = 0
+order = 116
+channel = 10
+bend = 8272
+
+[[controls]]
+tick = 576
+track = 0
+order = 123
+channel = 10
+bend = 8281
+
+[[controls]]
+tick = 768
+track = 0
+order = 130
+channel = 10
+bend = 8274
+
+[[controls]]
+tick = 960
+track = 0
+order = 137
+channel = 10
+bend = 8265
+
+[[controls]]
+tick = 1152
+track = 0
+order = 144
+channel = 10
+bend = 8263
+
+[[controls]]
+tick = 1344
+track = 0
+order = 148
+channel = 10
+bend = 8264
+
+[[controls]]
+tick = 1536
+track = 0
+order = 152
+channel = 10
+bend = 8276
+
+[[controls]]
+tick = 1728
+track = 0
+order = 161
+channel = 10
+bend = 8274
+
+[[controls]]
+tick = 1920
+track = 0
+order = 168
+channel = 10
+bend = 8271
+
+[[controls]]
+tick = 2112
+track = 0
+order = 175
+channel = 10
+bend = 8258
+
+[[controls]]
+tick = 2304
+track = 0
+order = 182
+channel = 10
+bend = 8261
+
+[[controls]]
+tick = 2496
+track = 0
+order = 189
+channel = 10
+bend = 8274
+
+[[controls]]
+tick = 2688
+track = 0
+order = 196
+channel = 10
+bend = 8276
+
+[[controls]]
+tick = 2880
+track = 0
+order = 200
+channel = 10
+bend = 8272
+
+[[controls]]
+tick = 3072
+track = 0
+order = 204
+channel = 10
+bend = 8274
+
+[[controls]]
+tick = 3264
+track = 0
+order = 213
+channel = 10
+bend = 8265
+
+[[controls]]
+tick = 3456
+track = 0
+order = 220
+channel = 10
+bend = 8270
+
+[[controls]]
+tick = 3648
+track = 0
+order = 227
+channel = 10
+bend = 8259
+
+[[controls]]
+tick = 3840
+track = 0
+order = 234
+channel = 10
+bend = 8261
+
+[[controls]]
+tick = 4032
+track = 0
+order = 241
+channel = 10
+bend = 8256
+
+[[controls]]
+tick = 4224
+track = 0
+order = 248
+channel = 10
+bend = 8258
+
+[[controls]]
+tick = 4416
+track = 0
+order = 252
+channel = 10
+bend = 8272
+
+[[controls]]
+tick = 4608
+track = 0
+order = 256
+channel = 10
+bend = 8269
+
+[[controls]]
+tick = 4800
+track = 0
+order = 265
+channel = 10
+bend = 8277
+
+[[controls]]
+tick = 4992
+track = 0
+order = 272
+channel = 10
+bend = 8275
+
+[[controls]]
+tick = 5184
+track = 0
+order = 279
+channel = 10
+bend = 8271
+
+[[controls]]
+tick = 5376
+track = 0
+order = 286
+channel = 10
+bend = 8259
+
+[[controls]]
+tick = 5568
+track = 0
+order = 293
+channel = 10
+bend = 8192
+
+[[controls]]
+tick = 43008
+track = 0
+order = 3312
+message = "ff 2f 00"

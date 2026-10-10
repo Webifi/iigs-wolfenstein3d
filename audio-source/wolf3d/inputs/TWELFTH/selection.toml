@@ -1,0 +1,92 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 19
+"bank" = [0, 0]
+"notes" = 112
+"name" = "Rock Organ"
+
+[["instruments"]]
+"channel" = 1
+"program" = 33
+"bank" = [0, 0]
+"notes" = 112
+"name" = "Acoustic Bass"
+
+[["instruments"]]
+"channel" = 2
+"program" = 33
+"bank" = [0, 0]
+"notes" = 138
+"name" = "Acoustic Bass"
+
+[["instruments"]]
+"channel" = 3
+"program" = 117
+"bank" = [0, 0]
+"notes" = 128
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 4
+"program" = 69
+"bank" = [0, 0]
+"notes" = 78
+"name" = "Oboe"
+
+[["instruments"]]
+"channel" = 5
+"program" = 72
+"bank" = [0, 0]
+"notes" = 96
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 6
+"program" = 9
+"bank" = [0, 0]
+"notes" = 12
+"name" = "Celesta"
+
+[["instruments"]]
+"channel" = 7
+"program" = 12
+"bank" = [0, 0]
+"notes" = 48
+"name" = "Vibraphone"
+
+[["instruments"]]
+"channel" = 7
+"program" = 15
+"bank" = [0, 0]
+"notes" = 12
+"name" = "Tubular Bells"
+
+[["instruments"]]
+"channel" = 8
+"program" = 123
+"bank" = [0, 0]
+"notes" = 224
+"name" = "Seashore"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 244
+"name" = "Drum kit"
+
+[["instruments"]]
+"channel" = 11
+"program" = 123
+"bank" = [0, 0]
+"notes" = 224
+"name" = "Seashore"
+
+["source"]
+"kind" = "midi"
+"sha256" = "157b731285007d5e700b836e8b9624ec93eeae6c78f89202418353c8b9714a87"
+"authority" = "fan-conversion"

@@ -1,0 +1,607 @@
+# Explicit, editable correspondences between the two arrangements.
+# These annotations are checked against pitch sequences and relative onset intervals.
+# OPL channels are 1..9; MIDI channels are 1..16. They need not have the same number.
+# Project arrangements are never labeled as recovered composer MIDI.
+format = 1
+
+[[song]]
+name = "NAZI_NOR"
+imf_sha256 = "ee9207f54616ebf4c9ce28cda4ddac8a71535e87c69d53f6755a22c69221c81f"
+midi_sha256 = "c94e41e84e769de355a7d4ef3c1f09b12b62d7abfb2fd3d46ff9b9fd572a5b76"
+authority = "project-arrangement"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 10
+drum_key = 36
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 10
+drum_key = 38
+
+[[song]]
+name = "WONDERIN"
+imf_sha256 = "f01d39e54932b6d0449fb47544a28a66d93de00b5a0b84586eec484b9015ecf6"
+midi_sha256 = "f034dfb71596c4711e9668d15d316772133a01ce434d6c409ef0f2dc67d9f7d4"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 9
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 8
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 5
+
+[[song]]
+name = "GETTHEM"
+imf_sha256 = "1554dd047870bc2efe555d0477b9621c11e645c815e01c49054ff2500922fef1"
+midi_sha256 = "511745ce9185592b4b8bb6c93721283957a6c3239996ceca4e9ea234db083917"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 10
+drum_key = 40
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 8
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 7
+
+[[song]]
+name = "SEARCHN"
+imf_sha256 = "ceadfb3e99476a2afd0a11f07028d7782376cf3d36782eb2c3ef5fded8ac02aa"
+midi_sha256 = "98873e03a9f4351fcff7ad22fd973c24960a5ba3d4fca5a5c6ed6ef991c66624"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 10
+drum_key = 40
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 9
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 8
+
+[[song]]
+name = "POW"
+imf_sha256 = "9ad57462bf5a428406547396a9592b486b27ad337af45286d45a1f75d0e5ceaa"
+midi_sha256 = "741d54f2a10576dc4e86f8cf565f2420be2de0cd584331aab52ccf53636642ce"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 8
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 9
+
+[[song]]
+name = "SUSPENSE"
+imf_sha256 = "3d3f56f3147dcc322eaecd1221999f8946280913cc6786504a3d63c38b124e47"
+midi_sha256 = "0c19d4e91db1bcc9055bf24c02030e0b39f4bd8ae3b6c49aec951c94da1db5c5"
+authority = "project-arrangement"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 10
+drum_key = 36
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 10
+drum_key = 38
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 6
+
+[[song]]
+name = "WARMARCH"
+imf_sha256 = "056025b46821256b50948715410952bc5d393dcac11529c582711e625301ec20"
+midi_sha256 = "62cf5697f8ad066a506af38b5cf1aeafee9d204c4a9091c141358b9a67ed79d3"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 1
+midi_program = 73 # Piccolo
+patch = "a2e21d809560242a000002"
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 2
+midi_program = 72 # Clarinet
+patch = "32619a805160193900000c"
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 3
+midi_program = 70 # English Horn
+patch = "3122c300878b170e000002"
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 5
+midi_program = 76 # Pan Flute
+patch = "01011100f0f0fff800000a"
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 6
+midi_program = 71 # Bassoon
+patch = "70228d006e6b170e000002"
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 4
+midi_program = 59 # Tuba
+patch = "6121190053a0581800000c"
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 7
+midi_program = 57 # Trumpet
+patch = "2121160063630e0e00000c"
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 2
+midi_program = 89 # Pad 1 (new age)
+patch = "31611b0064d0076700000e"
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 8
+midi_program = 128 # Gunshot
+patch = "32114400f8f5ff7f00000e"
+
+[[song]]
+name = "CORNER"
+imf_sha256 = "d49ab397eaf23d605f051fe386ed7955719fecb45593159248aec91a8c88294c"
+midi_sha256 = "785e8986bb3ce4c2b9d1476c2604c1f316a81c132b1aee58d7b808ea68533f88"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 10
+drum_key = 40
+
+[[song]]
+name = "ENDLEVEL"
+imf_sha256 = "9d4d16ccff95fb0add3c31655cd0ba027987925ddde03fba24149f5e2f11342a"
+midi_sha256 = "d28d887aea2ff17877177fcb4cd7b870f0af83500ec37ab7d3fb7ca039b29917"
+authority = "project-arrangement"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 1
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 8
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 10
+drum_key = 38
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 4
+
+[[song]]
+name = "ROSTER"
+imf_sha256 = "e0d20a12e30efad52c400bfe90651ff9bb417234b1f08c75c30cdad924b96cf1"
+midi_sha256 = "5300f896ed6979f34a7ab74d11ce4a24907f4e8f5a0702d517ad2952614aa53e"
+authority = "project-arrangement"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 1
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 10
+drum_key = 38
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 5
+
+[[song]]
+name = "URAHERO"
+imf_sha256 = "0b0edcb500ef9d5ec670d3856a307c3adc9ced382f4c972f759bf4a4459f999a"
+midi_sha256 = "320c29a0ee419d375f686a45bfe06a87ef9941e8edd7126385fcb5a4aefa234c"
+authority = "project-arrangement"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 1
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 10
+drum_key = 36
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 10
+drum_key = 38
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 8
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 5
+
+[[song]]
+name = "ZEROHOUR"
+imf_sha256 = "2649ebeb283703173fa53a23f6578854a3b2477fadf163cc1eecaf3fa4e6f21a"
+midi_sha256 = "9cd4d5b08a463ce8f46369970aaeeb8b135cab0cd5280444794eb5c5a34ceee2"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 8
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 9
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 10
+drum_key = 36
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 10
+drum_key = 40
+
+[[song]]
+name = "ULTIMATE"
+imf_sha256 = "c249006fe2dbfca27cedf3ab2661eedbaf44051dbde38d49f0917dbd706efc07"
+midi_sha256 = "8611f86bda7405e981bedb6398f162e34c079e6c58ad96c0d9a43ed77ffaee58"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 10
+drum_key = 40
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 8
+
+[[song]]
+name = "XFUNKIE"
+imf_sha256 = "10def3401605fd9382c99acead0f6970746b4a32be80e45710361e9f1a636b8d"
+midi_sha256 = "3c9b8a1ac87f30a45099d7be0c1d833df4c13a9d75a1a18ea3c5d1fb661e5357"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 10
+drum_key = 35
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 10
+drum_key = 42
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 10
+drum_key = 38
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 8
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 9
+
+[[song]]
+name = "XEVIL"
+imf_sha256 = "6bae3832be3736b13c17432cb196e83957ffe811f865b200e46d2e91297d191a"
+midi_sha256 = "a71c2ae9a43c014f3c4090cca639c0b45c4df433ee4f401b4a6086bc31bf9f4b"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 7
+midi_channel = 7
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 10
+drum_key = 35
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 10
+drum_key = 40
+
+[[song]]
+name = "XTOWER2"
+imf_sha256 = "ad1efcef0e4a4ff9c526422fdb00f51e1f27d7e60f17f6936fb0793c34f2dbbd"
+midi_sha256 = "f90a60576764ceed5e9d34e007b545a609fb4d5ed418902f18cb2a8eee48eaf8"
+authority = "composer-original"
+
+[[song.part]]
+opl_channel = 3
+midi_channel = 3
+
+[[song.part]]
+opl_channel = 4
+midi_channel = 4
+
+[[song.part]]
+opl_channel = 5
+midi_channel = 5
+
+[[song.part]]
+opl_channel = 8
+midi_channel = 10
+drum_key = 36
+
+[[song.part]]
+opl_channel = 6
+midi_channel = 6
+
+[[song.part]]
+opl_channel = 2
+midi_channel = 2
+
+[[song.part]]
+opl_channel = 9
+midi_channel = 9

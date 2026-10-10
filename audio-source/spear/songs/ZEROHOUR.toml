@@ -1,0 +1,55 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "ZEROHOUR"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/ZEROHOUR/score.toml"
+"sha256" = "585f4301558bf40a152793ab0ab5843da78cab301176e174e159f1cfe03219ab"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/ZEROHOUR.imf"
+"sha256" = "e39ec2ffb7310085fd4845f77c516ddfaa49dc65d7cbd740900ac430d5f85900"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/ZEROHOUR/sampling.toml"
+"song_gain_steps" = 14
+"level_mode" = "source"
+
+["doc"."pan"]
+"ch05" = 76
+"ch06" = 48
+"ch07" = 52
+"ch08" = 85
+"ch09" = 43
+
+["doc"."levels"]
+"ch06" = 3.927
+"ch07" = 1.1161
+"ch08" = 8.3611
+"ch09" = 1.3689
+"k36" = 2.8485
+"k40" = 2.8485
+"k42" = 2.8485
+"k46" = 2.8485

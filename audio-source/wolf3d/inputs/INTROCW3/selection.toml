@@ -1,0 +1,78 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 69
+"bank" = [0, 0]
+"notes" = 108
+"name" = "Oboe"
+
+[["instruments"]]
+"channel" = 2
+"program" = 57
+"bank" = [0, 0]
+"notes" = 26
+"name" = "Trumpet"
+
+[["instruments"]]
+"channel" = 3
+"program" = 74
+"bank" = [0, 0]
+"notes" = 16
+"name" = "Flute"
+
+[["instruments"]]
+"channel" = 4
+"program" = 10
+"bank" = [0, 0]
+"notes" = 1
+"name" = "Glockenspiel"
+
+[["instruments"]]
+"channel" = 5
+"program" = 74
+"bank" = [0, 0]
+"notes" = 16
+"name" = "Flute"
+
+[["instruments"]]
+"channel" = 6
+"program" = 33
+"bank" = [0, 0]
+"notes" = 48
+"name" = "Acoustic Bass"
+
+[["instruments"]]
+"channel" = 7
+"program" = 29
+"bank" = [0, 0]
+"notes" = 48
+"name" = "Electric Guitar (muted)"
+
+[["instruments"]]
+"channel" = 8
+"program" = 117
+"bank" = [0, 0]
+"notes" = 156
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 9
+"program" = 15
+"bank" = [0, 0]
+"notes" = 109
+"name" = "Tubular Bells"
+
+[["instruments"]]
+"channel" = 10
+"program" = 2
+"bank" = [0, 0]
+"notes" = 221
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "4dae1f773cc33546b672f3f0fabae04a9b62b39e8118bda1431318aa25d3082b"
+"authority" = "fan-conversion"

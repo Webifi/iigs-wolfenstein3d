@@ -1,0 +1,66 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "CORNER"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/CORNER/score.toml"
+"sha256" = "de1c312b868160a10249ee512afe09d7143b7c9fede46afde0aed451b5a8fd8f"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/CORNER.imf"
+"sha256" = "d49ab397eaf23d605f051fe386ed7955719fecb45593159248aec91a8c88294c"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "listed"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"song_gain_steps" = 24
+"loop_layout" = "repeated-endpoint"
+"sampling_policy" = "../inputs/CORNER/sampling.toml"
+
+["doc"."levels"]
+"ch02" = -1.5
+"ch03" = 11.0
+"ch04" = -1.4
+"ch05" = -2.4
+"ch06" = -3.1
+
+["doc"."pan"]
+"ch02" = 51
+"ch03" = 79
+"ch04" = 52
+"ch05" = 78
+"ch06" = 88
+
+[["doc"."capture"]]
+"channel" = 6
+"key" = 26
+"bytes" = 8192
+"rate" = 10000
+"fine_static" = false
+"release_baked" = true
+
+[["doc"."capture"]]
+"channel" = 10
+"key" = 40
+"bytes" = 8192
+"rate" = 16000

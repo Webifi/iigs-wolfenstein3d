@@ -1,0 +1,57 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 57
+"bank" = [0, 0]
+"notes" = 26
+"name" = "Trumpet"
+
+[["instruments"]]
+"channel" = 2
+"program" = 58
+"bank" = [0, 0]
+"notes" = 43
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 3
+"program" = 72
+"bank" = [0, 0]
+"notes" = 43
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 4
+"program" = 74
+"bank" = [0, 0]
+"notes" = 43
+"name" = "Flute"
+
+[["instruments"]]
+"channel" = 5
+"program" = 44
+"bank" = [0, 0]
+"notes" = 30
+"name" = "Contrabass"
+
+[["instruments"]]
+"channel" = 8
+"program" = 29
+"bank" = [0, 0]
+"notes" = 218
+"name" = "Electric Guitar (muted)"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 129
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "320c29a0ee419d375f686a45bfe06a87ef9941e8edd7126385fcb5a4aefa234c"
+"authority" = "project-arrangement"

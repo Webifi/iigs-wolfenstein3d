@@ -1,0 +1,40 @@
+# Opt-in preparation only. This does not replace game samples or build images.
+format = 1
+
+[digitized]
+# Read every original PCM byte from licensed VSWAP; retain its catalog rate.
+rate = "source"
+duration = "full"
+
+[opl]
+# Keep the explicitly supplied, hash-checked OPL recording and its whole duration.
+# An input already shortened by an older renderer remains shortened. To restore
+# it, supply the full render's sample package or a named override below.
+input = "preserved"
+sample_rate = 7042.65625
+duration = "full"
+
+[doc]
+# Zero stops DOC playback. This changes only original zero bytes, by one step.
+zero_bytes = "replace-with-one"
+# Preserve descriptor levels and configured volume controls.
+levels = "current"
+# No peak normalization, trimming, fades, bandwidth reduction or resampling.
+
+[stream_analysis]
+# Memory/transfer estimates, NOT an implemented player or a speed guarantee.
+# Two 1024-byte buffers per effect voice fit in the existing 4 KiB pool.
+buffer_bytes = 1024
+buffers_per_voice = 2
+voices = 2
+effects_doc_bytes = 16384
+
+# Optional individual OPL recording replacement. Paths are relative to this file.
+# The recording is unsigned 8-bit mono PCM, with no terminator; gain is unchanged.
+# Repeat this table for other effects. Digitized voices cannot be overridden here.
+# [[opl_override]]
+# name = "HITWALLSND"
+# file = "samples/hitwall-full.u8"
+# sha256 = "the SHA-256 of that complete PCM file"
+# sample_rate = 7042.65625
+# note = "Complete retained OPL render before historical tail fitting."

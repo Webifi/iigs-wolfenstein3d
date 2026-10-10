@@ -1,0 +1,15 @@
+{
+  "sources": {
+    "VGAGRAPH.WL1": "d5176f843c53415132db199c19f38591eaf3cedd35a4f7eb2698c1865d83030d",
+    "VGAHEAD.WL1": "f4cc800dc8444373092d4eaa5d6ab59d63d23a510a9d38b73ca9b3dbb700d18b",
+    "VGADICT.WL1": "59878fec65f033b00dbb1240317d1793f5858213dc8013b4d68f9ac8b45b0c80"
+  },
+  "assets": {
+    "headings.json": "d2e39bcd8d35eeea68619f2dd43fde3357aff3cb2bcbde843a2f5d52f41e3b53",
+    "preview-titles.json": "51d70b60c0b140109ec14d9554c0944669dfd493f41e8443b5f623ecfc0d1997",
+    "cursors.json": "33b03f38bc95561e4094526a3bd084268d46df2c59c123811db2cd5e35a85127"
+  },
+  "headings": 14,
+  "preview_titles": 2,
+  "cursors": 4
+}

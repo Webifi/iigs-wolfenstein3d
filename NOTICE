@@ -1,0 +1,48 @@
+Wolfenstein 3D / Spear of Destiny for the Apple IIgs
+
+Original game source and assets: id Software, https://github.com/id-Software/wolf3d.
+The original limited-use license is retained in LICENSE-id.txt. Original game
+music is by Bobby Prince. Apogee and FormGen published the original games.
+This notice does not grant a new license for the game data.
+
+Platform code and color-conversion tools include adaptations from IIgs Doom,
+https://github.com/Webifi/iigs-doom. These cover boot/loading, disk packing,
+B1 compression, DOC audio, input and build-host color conversion. The compiled
+DOC player and other adapted platform code retain their source licenses;
+this notice does not relicense them. The renderer and game logic follow
+Wolfenstein 3D. No Doom game data is included.
+
+ELF decoding and MAME test observers include adapted profiling infrastructure.
+The build uses the original Wolf source tables and VGA palette data retained
+under data/reference. Campaign picture and sound IDs follow the original DOS
+headers. Original game graphics remain the property of their rights holders.
+
+Menu item fonts: Black Ops One, with Alfa Slab One, Anton and Russo One retained
+for the lettering tool. These fonts use SIL Open Font License 1.1. Complete
+licenses and source hashes accompany the TTFs in tools/frontend/lettering/fonts.
+The derived bitmap masks use other names. Original title pictures come from
+Wolfenstein 3D; additional letter masks use those silhouettes as references.
+The Cathedral attribution is a shape reference, not a verified production
+credit. See tools/frontend/lettering/NOTICE.
+
+The Wolf boot picture includes adapted mail-order cover art by Ken Rieger
+(id Software, distributed by Apogee) and supplied loading artwork. Cover source:
+https://fontsinuse.com/uses/53003/wolfenstein-3d-dos.
+
+AdLib effect captures were made with Nuked-OPL3 in OPL2 mode, revision
+765ec962e473aeb767e4cba74ffdc8f588ffbfe8:
+https://github.com/nukeykt/Nuked-OPL3.
+Nuked-OPL3 is copyright Nuke.YKT and LGPL-2.1-or-later. It is a build-time
+renderer and is not linked into the IIgs program. Original effect data remains
+id Software's game data.
+
+Build-host TOML parsing: tools/vendor/tomli contains Tomli 2.2.1 by Taneli
+Hukkinen, https://github.com/hukkin/tomli/tree/2.2.1, under its included MIT
+license (tools/vendor/tomli/LICENSE). Python 3.11+ uses stdlib tomllib; the
+bundled fallback supports Python 3.9/3.10.
+
+Offline DOC previews: tools/doc_render.py and tools/doc_output.py follow the
+MAME ES5503 behavior and Apple IIgs board-filter equations. The referenced
+ES5503 implementation credits R. Belmont under BSD-3-Clause; see
+tools/doc_model_LICENSE.txt. No MAME executable or Apple ROM is included or
+needed for this path.

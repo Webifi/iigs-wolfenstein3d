@@ -1,0 +1,130 @@
+# Complete reachable Spear sounds; weights affect pin ranking only.
+"format" = 1
+"silent_prefixes" = ["static.", "scenery."]
+
+["common"]
+"HITWALLSND" = 1
+"SELECTITEMSND" = 1
+"MOVEGUN2SND" = 1
+"MOVEGUN1SND" = 1
+"NOWAYSND" = 1
+"PLAYERDEATHSND" = 1
+"ATKGATLINGSND" = 25
+"GETKEYSND" = 1
+"TAKEDAMAGESND" = 1
+"OPENDOORSND" = 1
+"CLOSEDOORSND" = 1
+"DONOTHINGSND" = 1
+"ATKKNIFESND" = 3
+"ATKPISTOLSND" = 40
+"ATKMACHINEGUNSND" = 30
+"GETMACHINESND" = 1
+"GETAMMOSND" = 1
+"SHOOTSND" = 1
+"HEALTH1SND" = 1
+"HEALTH2SND" = 1
+"BONUS1SND" = 1
+"BONUS2SND" = 1
+"BONUS3SND" = 1
+"GETGATLINGSND" = 1
+"ESCPRESSEDSND" = 1
+"LEVELDONESND" = 1
+"ENDBONUS1SND" = 1
+"ENDBONUS2SND" = 1
+"BONUS1UPSND" = 1
+"BONUS4SND" = 1
+"PUSHWALLSND" = 1
+"NOBONUSSND" = 1
+"PERCENT100SND" = 1
+"HALTSND" = 1
+"DEATHSCREAM1SND" = 1
+"NAZIFIRESND" = 1
+"SLURPIESND" = 1
+"DEATHSCREAM6SND" = 1
+"GETAMMOBOXSND" = 1
+"GETSPEARSND" = 1
+
+["resources"]
+
+["resources"."actor.dog"]
+"DOGBARKSND" = 1
+"DOGATTACKSND" = 8
+"DOGDEATHSND" = 1.0
+
+["resources"."actor.guard"]
+"HALTSND" = 1
+"NAZIFIRESND" = 8
+"DEATHSCREAM1SND" = 0.125
+"DEATHSCREAM2SND" = 0.125
+"DEATHSCREAM3SND" = 0.125
+"DEATHSCREAM4SND" = 0.125
+"DEATHSCREAM5SND" = 0.125
+"DEATHSCREAM7SND" = 0.125
+"DEATHSCREAM8SND" = 0.125
+"DEATHSCREAM9SND" = 0.125
+
+["resources"."actor.mutant"]
+"NAZIFIRESND" = 8
+"AHHHGSND" = 1.0
+
+["resources"."actor.officer"]
+"SPIONSND" = 1
+"NAZIFIRESND" = 8
+"NEINSOVASSND" = 1.0
+
+["resources"."actor.ss"]
+"SCHUTZADSND" = 1
+"SSFIRESND" = 8
+"LEBENSND" = 1.0
+
+["resources"."drop.clip"]
+"GETAMMOSND" = 1
+
+["resources"."drop.key1"]
+"GETKEYSND" = 1
+
+["resources"."drop.machinegun"]
+"GETMACHINESND" = 1
+
+["resources"."player.weapons"]
+
+["resources"."presentation.overlays"]
+
+["resources"."projectile.rocket"]
+"MISSILEFIRESND" = 8
+"MISSILEHITSND" = 8
+
+["resources"."actor.angel"]
+"ANGELSIGHTSND" = 1
+"ANGELDEATHSND" = 1
+"ANGELTIREDSND" = 4
+"SLURPIESND" = 1
+
+["resources"."actor.death-knight"]
+"KNIGHTSIGHTSND" = 1
+"KNIGHTDEATHSND" = 1
+"BOSSFIRESND" = 8
+
+["resources"."actor.spectre"]
+"GHOSTSIGHTSND" = 1
+
+["resources"."actor.trans"]
+"TRANSSIGHTSND" = 1
+"TRANSDEATHSND" = 1
+"BOSSFIRESND" = 8
+
+["resources"."actor.uber"]
+"UBERDEATHSND" = 1
+"BOSSFIRESND" = 8
+
+["resources"."actor.will"]
+"WILHELMSIGHTSND" = 1
+"WILHELMDEATHSND" = 1
+"BOSSFIRESND" = 8
+
+["resources"."projectile.heavy-rocket"]
+"KNIGHTMISSILESND" = 8
+"MISSILEHITSND" = 8
+
+["resources"."projectile.spark"]
+"ANGELFIRESND" = 8

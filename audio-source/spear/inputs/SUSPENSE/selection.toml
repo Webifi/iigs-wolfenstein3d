@@ -1,0 +1,50 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 3
+"program" = 82
+"bank" = [0, 0]
+"notes" = 13
+"name" = "Lead 2 (sawtooth)"
+
+[["instruments"]]
+"channel" = 4
+"program" = 46
+"bank" = [0, 0]
+"notes" = 90
+"name" = "Pizzicato Strings"
+
+[["instruments"]]
+"channel" = 5
+"program" = 15
+"bank" = [0, 0]
+"notes" = 11
+"name" = "Tubular Bells"
+
+[["instruments"]]
+"channel" = 6
+"program" = 59
+"bank" = [0, 0]
+"notes" = 288
+"name" = "Tuba"
+
+[["instruments"]]
+"channel" = 7
+"program" = 119
+"bank" = [0, 0]
+"notes" = 42
+"name" = "Synth Drum"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 363
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "0c19d4e91db1bcc9055bf24c02030e0b39f4bd8ae3b6c49aec951c94da1db5c5"
+"authority" = "project-arrangement"

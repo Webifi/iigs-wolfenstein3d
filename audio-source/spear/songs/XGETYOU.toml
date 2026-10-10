@@ -1,0 +1,54 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XGETYOU"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XGETYOU/score.toml"
+"sha256" = "6f34e336d0019c4df990af87e5fd10c516273903300a49279a8808334f528c9f"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/XGETYOU.imf"
+"sha256" = "37f1aaab86e5b6dc4aaa2b7e1cc82f158c73ad15301ba644176c2b5e79dd2529"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XGETYOU/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -7.1858
+"ch03" = -5.2021
+"ch04" = -6.8314
+"ch05" = -0.282
+"k35" = -4.5119
+"k38" = -4.5119
+"k42" = -4.5119
+"k51" = -4.5119
+
+["doc"."pan"]
+"ch02" = 64
+"ch03" = 62
+"ch04" = 19
+"ch05" = 112

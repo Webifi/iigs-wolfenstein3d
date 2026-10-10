@@ -1,0 +1,49 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "NAZI_RAP"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/NAZI_RAP/score.toml"
+"sha256" = "c36e6202b989cf8cfb84b858752446c45eac6624367e8e1270217db7815231bb"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/NAZI_RAP.imf"
+"sha256" = "52526a95c47cf06be051b369d4239ca4a20021ccc363fd6fc08aaa12065b4564"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/NAZI_RAP/sampling.toml"
+
+["doc"."levels"]
+"ch04" = -1.8321
+"ch05" = 10.9227
+"k35" = 1.8379
+"k40" = 1.8379
+"k42" = 1.8379
+"k46" = 1.8379
+
+["doc"."pan"]
+"ch04" = 87
+"ch05" = 65
+"ch06" = 39

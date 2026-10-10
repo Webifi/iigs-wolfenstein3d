@@ -1,0 +1,55 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "ENDLEVEL"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/ENDLEVEL/score.toml"
+"sha256" = "92f9b3d3323379b8c5a31f50b94faf8a3259db4dd591458305fb130b8b3a7d00"
+"authority" = "project-arrangement"
+
+["original"]
+"file" = "../licensed/ENDLEVEL.imf"
+"sha256" = "89f83cf0ffa9ab7f0ab42476705afb9ede1f8d278a49b5300ddf660dbfbfba5f"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/ENDLEVEL/sampling.toml"
+"song_gain_steps" = 18
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch01" = -1.4914
+"ch04" = -5.7167
+"ch05" = 4.0724
+"ch06" = 0.6069
+"ch08" = 1.2426
+"k38" = -1.051
+
+["doc"."pan"]
+"ch01" = 63
+"ch02" = 63
+"ch03" = 62
+"ch04" = 74
+"ch05" = 65
+"ch06" = 62
+"ch08" = 63

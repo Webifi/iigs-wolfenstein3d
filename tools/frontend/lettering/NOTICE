@@ -1,0 +1,5 @@
+Item font sources: Black Ops One, Alfa Slab One, Anton, and Russo One. Each is distributed under SIL Open Font License 1.1; complete copyright and license text accompanies its TTF in fonts/. These existing local files are rasterized at build time with CoreText. Anton bitmap output is widened; the source font file is unchanged.
+
+New title masks are drawn in hand.py using the original Wolf letter silhouettes as reference. DS Cathedral is not rendered by this tool and its binary is not included. The claimed in-game source typeface remains a shape attribution, not a verified production credit.
+
+Original Wolfenstein 3-D and Doom graphics belong to id Software and their respective rights holders. They are extracted from existing local game data for this project; no new license for those game assets is asserted. Asset decoders and original-letter extraction derive from the existing project tools.

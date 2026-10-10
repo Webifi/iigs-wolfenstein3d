@@ -1,0 +1,56 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "URAHERO"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/URAHERO/score.toml"
+"sha256" = "72bfd79b82df2d47d483a219682535af31f702f2bba19f2564b3d268e422b64f"
+"authority" = "project-arrangement"
+
+["original"]
+"file" = "../licensed/URAHERO.imf"
+"sha256" = "230f89d995724e36db060d2d2c61fcc2380702c010493c17f4a6632daa8f76b0"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/URAHERO/sampling.toml"
+"song_gain_steps" = 18
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch01" = 3.0428
+"ch02" = 1.5639
+"ch03" = -1.0978
+"ch04" = 0.9155
+"ch05" = -0.664
+"ch08" = -4.8116
+"k36" = -2.0014
+"k38" = -2.0014
+
+["doc"."pan"]
+"ch01" = 63
+"ch02" = 65
+"ch03" = 62
+"ch04" = 64
+"ch05" = 63
+"ch08" = 63

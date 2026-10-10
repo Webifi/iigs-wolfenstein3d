@@ -1,0 +1,10 @@
+# MIDI programs are 1-based. These mappings select a modeling sample only;
+# the original program change is retained for the Roland performance.
+format = 1
+
+[[alias]]
+soundfont_sha256 = "e6c6f2d82ebd0c0fb4c2f4851ad34ca6a2a5988ad737c4922470c59822dbf520"
+bank = 128
+performed_program = 2
+model_program = 1
+reason = "SC-55 mk1 v1.21: the complete INTROCW3 percussion performance renders identically with programs 2 and 1. This font stores that kit at program 1."

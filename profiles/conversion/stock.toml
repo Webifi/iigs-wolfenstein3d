@@ -1,0 +1,49 @@
+# Quality settings for stock 320x200 Super Hi-Res conversion.
+# These are the accepted numerical settings, exposed without reducing quality.
+format = 1
+
+[artwork]
+metric = "oklab"
+chroma_weight = 3.0
+palette_alignment = "soft-permutation"
+# Alignment reorders the fitted colors and remaps pixels. It must preserve RGB.
+# A shared slot area does NOT mean identical RGB grays in every palette.
+
+[page]
+rounds = 30
+restarts = 1
+dither_mode = "fs"
+serpentine = true
+dither_candidates = 2
+dither_amount = 0.6
+flat_snap = 700
+
+[hallway_title]
+palettes = 16
+restarts = 3
+dither_candidates = 2
+dither_amount = 0.45
+# x0,y0,x1,y1,weight; upper edges are excluded. Face pixels avoid diffusion.
+protected_boxes = [[34, 66, 72, 108, 30], [180, 94, 206, 118, 18]]
+
+[other_title]
+palettes = 16
+restarts = 3
+dither_candidates = 3
+dither_amount = 1.0
+
+[world]
+# Share of world color fitting based on the complete floor wall-art census.
+# The remainder uses projected views, retaining their screen-area priorities.
+# This changes color fitting only; it does not reserve or replace palette slots.
+wall_coverage_share = 0.20
+# Linear-light multipliers, far to near. Each is a complete stored atlas.
+light_gains = [0.28, 0.44, 0.64, 1.0]
+# Samples used to fit each floor palette; intermediate lights use that palette.
+# Keeping these anchors preserves the established palette and its full-bright art.
+palette_fit_gains = [0.28, 0.64, 1.0]
+error_chroma_weight = 2.0
+error_hue_weight = 2.0
+large_error_scale = 20.0
+noise_chroma_weight = 2.0
+noise_hue_weight = 6.0

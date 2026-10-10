@@ -1,0 +1,47 @@
+# Expected starts for DOC pin ranking, following the original floor planner.
+# This does not determine which sounds exist or alter samples, rates or levels.
+# Actor/projectile starts use native-effects-wolf3d.toml, counted from map actors.
+# Pickups count actual map objects; potential enemy drops are not extra pickups.
+# Weapon availability accumulates through each episode, resetting at its start.
+format = 1
+
+[common]
+DONOTHINGSND = 2
+NOWAYSND = 2
+LEVELDONESND = 1
+
+[initial_weapons]
+ATKPISTOLSND = 40
+ATKKNIFESND = 3
+
+[doors]
+OPENDOORSND = 2
+CLOSEDOORSND = 1
+
+[pushwall]
+PUSHWALLSND = 4
+
+[pickups]
+bo_gibs = "SLURPIESND"
+bo_alpo = "HEALTH1SND"
+bo_firstaid = "HEALTH2SND"
+bo_key1 = "GETKEYSND"
+bo_key2 = "GETKEYSND"
+bo_key3 = "GETKEYSND"
+bo_key4 = "GETKEYSND"
+bo_cross = "BONUS1SND"
+bo_chalice = "BONUS2SND"
+bo_bible = "BONUS3SND"
+bo_crown = "BONUS4SND"
+bo_clip = "GETAMMOSND"
+bo_clip2 = "GETAMMOSND"
+bo_machinegun = "GETMACHINESND"
+bo_chaingun = "GETGATLINGSND"
+bo_food = "HEALTH1SND"
+bo_fullheal = "BONUS1UPSND"
+
+[pickup_weapons.bo_machinegun]
+ATKMACHINEGUNSND = 30
+
+[pickup_weapons.bo_chaingun]
+ATKGATLINGSND = 25

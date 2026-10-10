@@ -1,0 +1,71 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 13
+"bank" = [0, 0]
+"notes" = 97
+"name" = "Marimba"
+
+[["instruments"]]
+"channel" = 2
+"program" = 117
+"bank" = [0, 0]
+"notes" = 80
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 3
+"program" = 58
+"bank" = [0, 0]
+"notes" = 1
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 4
+"program" = 46
+"bank" = [0, 0]
+"notes" = 159
+"name" = "Pizzicato Strings"
+
+[["instruments"]]
+"channel" = 5
+"program" = 46
+"bank" = [0, 0]
+"notes" = 160
+"name" = "Pizzicato Strings"
+
+[["instruments"]]
+"channel" = 6
+"program" = 117
+"bank" = [0, 0]
+"notes" = 160
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 8
+"program" = 88
+"bank" = [0, 0]
+"notes" = 97
+"name" = "Lead 8 (bass + lead)"
+
+[["instruments"]]
+"channel" = 9
+"program" = 82
+"bank" = [0, 0]
+"notes" = 97
+"name" = "Lead 2 (sawtooth)"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 270
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "5f8140cce9549599fbde9012eb9f0759be9c62055e30c01dce40e00aa3672d39"
+"authority" = "fan-conversion"

@@ -1,0 +1,21 @@
+build/
+/dist/
+snap/
+__pycache__/
+*.pyc
+.dev/
+# Build caches: the build regenerates them.
+data/palette-cache/
+
+# Licensed preview exports and staged DOS data (game-data/.gitignore keeps owner data out).
+/licensed-data/
+/data/frontend-previews/registered/
+/data/frontend-previews/spear*/
+
+# Local machine settings: the MAME kit and its ROM folders (tools/mame_kit.py).
+tools/mame-local.json
+# Apple IIgs ROM images are not redistributable.
+/roms/
+.DS_Store
+*.orig
+*.rej

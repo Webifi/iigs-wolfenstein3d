@@ -1,0 +1,58 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "WONDERIN"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/WONDERIN/score.toml"
+"sha256" = "1b4cf549096da9d33e66fc63f61dad825daf7c6155de19ec47d97d169861e9f1"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/WONDERIN.imf"
+"sha256" = "1553f2bfa5446075b79fe0e05dfac9fabf26a81a7f535984a3c5b77a332cf3d5"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/WONDERIN/sampling.toml"
+"song_gain_steps" = 24
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -8.3592
+"ch03" = -6.1039
+"ch04" = -8.2531
+"ch05" = -7.0594
+"ch06" = -4.4527
+"ch07" = -5.3692
+"ch08" = -4.5325
+"ch09" = -2.4523
+
+["doc"."pan"]
+"ch02" = 82
+"ch03" = 29
+"ch04" = 40
+"ch05" = 53
+"ch06" = 88
+"ch07" = 74
+"ch08" = 63
+"ch09" = 54

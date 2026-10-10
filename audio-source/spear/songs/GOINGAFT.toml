@@ -1,0 +1,55 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "GOINGAFT"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/GOINGAFT/score.toml"
+"sha256" = "04b03af529251ebbcf54306cc5a47172f9991ab6e11fd0c7dcff8a32009ae14f"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/GOINGAFT.imf"
+"sha256" = "dc0327ba59c062ccb3a102598c5ff826456aeb462877bac9c3a4ad23aa3c88d6"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "all-captured"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = false
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/GOINGAFT/sampling.toml"
+"song_gain_steps" = 30
+"level_mode" = "source"
+
+["doc"."quality"]
+"native_level_range" = 1
+
+["doc"."levels"]
+"ch02" = -6.7505
+"ch03" = -3.6915
+"ch04" = -4.6089
+"ch05" = -3.6981
+"k35" = -4.0154
+"k40" = -4.0154
+
+["doc"."pan"]
+"ch02" = 61
+"ch03" = 40
+"ch04" = 62
+"ch05" = 87

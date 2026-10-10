@@ -1,0 +1,54 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XFUNKIE"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XFUNKIE/score.toml"
+"sha256" = "4ff5d19b5cbdc32f45b14dd2850f32674c07e892f961ab72c831c8be9548e60c"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/XFUNKIE.imf"
+"sha256" = "10def3401605fd9382c99acead0f6970746b4a32be80e45710361e9f1a636b8d"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "all-captured"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = false
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XFUNKIE/sampling.toml"
+"song_gain_steps" = 24
+"level_mode" = "source"
+
+["doc"."pan"]
+"ch02" = 64
+"ch03" = 63
+"ch07" = 54
+"ch08" = 79
+"ch09" = 64
+
+["doc"."levels"]
+"ch03" = -0.4139
+"ch07" = 2.7571
+"ch08" = 3.2491
+"ch09" = 2.3942
+"k35" = 0.6452
+"k38" = 0.6452
+"k42" = 0.6452

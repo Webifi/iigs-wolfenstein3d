@@ -1,0 +1,126 @@
+# Source-file identities and asset roles for this campaign.
+# Filenames are case-insensitive; decoding reads data files only.
+format = 1
+id = "spear-mission3"
+title = "Spear of Destiny: Ultimate Challenge"
+engine = "spear"
+publication = "user-supplied"
+conversion = "conversion/spear.toml"
+campaign = "campaigns/spear-mission3.toml"
+map_semantics = "map-semantics/spear.toml"
+
+[files]
+# Missions 2 and 3 replace these three files; the other five remain .SOD.
+MAPHEAD = "MAPHEAD.SD3"
+GAMEMAPS = "GAMEMAPS.SD3"
+VSWAP = "VSWAP.SD3"
+VGADICT = "VGADICT.SOD"
+VGAHEAD = "VGAHEAD.SOD"
+VGAGRAPH = "VGAGRAPH.SOD"
+AUDIOHED = "AUDIOHED.SOD"
+AUDIOT = "AUDIOT.SOD"
+
+[maps]
+episodes = 1
+count = 21
+width = 64
+height = 64
+compression = "carmack-rlew"
+# Keep high object numbers (including 256-259) intact during source decoding.
+
+[audio]
+sounds = 81 # Number of effects in each original sound bank.
+music = 24 # IMF chunks follow the three sound banks.
+# Original song names in source music-ID order; IDs begin at zero.
+song_names = [
+    "XFUNKIE", "DUNGEON", "XDEATH", "GETTHEM", "XTIPTOE", "GOINGAFT",
+    "URAHERO", "XTHEEND", "NAZI_OMI", "POW", "TWELFTH", "SEARCHN",
+    "SUSPENSE", "ZEROHOUR", "WONDERIN", "ULTIMATE", "ENDLEVEL", "XEVIL",
+    "XJAZNAZI", "COPYPRO", "XAWARD", "XPUTIT", "XGETYOU", "XTOWER2",
+]
+# One song per source floor, in map order. Repeated songs share a bank.
+floor_songs = [
+    "XTIPTOE", "XFUNKIE", "XDEATH", "XGETYOU", "ULTIMATE",
+    "DUNGEON", "GOINGAFT", "POW", "TWELFTH", "ULTIMATE",
+    "NAZI_OMI", "GETTHEM", "SUSPENSE", "SEARCHN", "ZEROHOUR",
+    "ULTIMATE", "XPUTIT", "ULTIMATE", "XJAZNAZI", "XFUNKIE",
+    "XEVIL",
+]
+
+[audio.events]
+# These names define music coverage; they do not change native menu behavior.
+title = "XTOWER2"
+menu = "WONDERIN"
+tally = "ENDLEVEL"
+scores = "XAWARD"
+victory = "URAHERO"
+ending = "XTHEEND"
+copy_protection = "COPYPRO"
+
+[[graphics.layouts]]
+# A layout must match both counts; changing a count does not repair a bad file.
+name = "spear"
+chunks = 169
+pictures = 147
+first_picture = 3
+tile8_count = 35
+# Four recorded demos beginning at roles.demo_first in VGAGRAPH.
+demo_count = 4
+
+[graphics.layouts.roles]
+# Original VGAGRAPH chunk numbers, using names that describe their purpose.
+title_top = 79
+title_bottom = 80
+title_palette = 153
+credits = 92
+rating = 91
+status_bar = 90
+difficulty_first = 21
+tally_guy = 36
+tally_colon = 37
+tally_digit_first = 38
+tally_letter_first = 49
+tally_percent = 48
+tally_exclamation = 75
+tally_apostrophe = 76
+tally_guy_alt = 77
+victory_bj = 78
+weapon_first = 101
+key_first = 105
+hud_blank = 108
+hud_digit_first = 109
+face_first = 119
+face_ouch = 147
+demo_first = 164
+ending_first = 168
+
+
+# VGAGRAPH picture indices used by the native menu.
+menu_cursor1 = 5
+menu_cursor2 = 6
+menu_options = 16
+menu_control = 15
+menu_customize = 9
+menu_load = 27
+menu_save = 28
+menu_scores = 29
+menu_getpsyched = 149
+quit_text = 151
+ending_picture_1 = 81
+ending_picture_2 = 82
+ending_picture_3 = 83
+ending_picture_4 = 84
+ending_picture_5 = 85
+ending_picture_6 = 86
+ending_picture_7 = 87
+ending_picture_8 = 88
+ending_picture_9 = 89
+ending_palette_1 = 154
+ending_palette_2 = 155
+ending_palette_3 = 156
+ending_palette_4 = 157
+ending_palette_5 = 158
+ending_palette_6 = 159
+ending_palette_7 = 160
+ending_palette_8 = 161
+ending_palette_9 = 162

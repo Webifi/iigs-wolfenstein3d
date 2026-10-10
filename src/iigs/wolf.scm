@@ -1,0 +1,51 @@
+(load "build/gen/memmap.scm")
+(define memories
+  `((memory Debug (address (,SEG_DEBUG . ,SEG_DEBUG_LAST)) (section debugcode))
+    (memory DebugAux (address (,SEG_DEBUG_AUX . ,SEG_DEBUG_AUX_LAST)) (section debugaux))
+    (memory BufferSOUND (address (,SEG_BUFFER_SOUND . ,SEG_BUFFER_SOUND_LAST)) (section buffersound))
+    (memory BufferGRAY (address (,SEG_BUFFER_GRAY . ,SEG_BUFFER_GRAY_LAST)) (section buffergray))
+    (memory BufferSAVE (address (,SEG_BUFFER_SAVE . ,SEG_BUFFER_SAVE_LAST)) (section buffersave))
+    (memory BufferIRQ (address (,SEG_BUFFER_IRQ . ,(- SEG_FLOPPY_STREAM 1))) (section bufferirq))
+    (memory FloppyStream (address (,SEG_FLOPPY_STREAM . ,SEG_FLOPPY_STREAM_LAST)) (section floppystream))
+    (memory Input (address (,SEG_INPUT . ,SEG_INPUT_LAST)) (section inputcode))
+    (memory UiExtra (address (,SEG_UI_EXTRA . ,SEG_UI_EXTRA_LAST)) (section uiextra))
+    (memory AttractState (address (,SEG_ATTRACT_STATE . ,SEG_ATTRACT_STATE_LAST)) (section attractdata))
+    (memory UiFast (address (,SEG_UI_FAST . ,SEG_UI_FAST_LAST)) (section uifastcode streamplan))
+    ;; The HLZ store decoder (src/iigs/hlz.inc), resident: the dispatch and the decode
+    ;; loop in SEG_HLZ, with per-unit setup in SEG_HLZ_SETUP.
+    (memory Hlz (address (,SEG_HLZ . ,SEG_HLZ_LAST)) (section hlzcode))
+    (memory HlzSetup (address (,SEG_HLZ_SETUP . ,SEG_HLZ_SETUP_LAST)) (section hlzsetup))
+    ;; IRQ entry, palette hook and firmware bridges share this bank-0 window.
+    ;; IrqTail begins immediately afterward and holds the remaining helpers.
+    (memory IRQ (address (,SEG_IRQ . ,SEG_IRQ_LAST)) (section irqcode))
+    (memory IrqTail (address (,SEG_IRQ_TAIL . ,(- SEG_BUFFER_IRQ 1))) (section tailirq menucopycode menucopydata))
+    ;; Resident gray code occupies the gap between the effect image
+    ;; and the gray catalog; neither data load may overlap it.
+    (memory GrayCode (address (,SEG_GRAY_CODE . ,(- SEG_BUFFER_GRAY 1))) (section graycode))
+    (memory CpuInfo (address (,SEG_CPU_INFO . ,SEG_CPU_INFO_LAST)) (section cpuinfo weaponbounds))
+    (memory Sound (address (,SEG_SOUND . ,(- SEG_BUFFER_SOUND 1))) (section soundcode sounddata))
+    (memory RegisteredMenu (address (,SEG_REGISTERED_MENU . ,SEG_REGISTERED_MENU_LAST)) (section registeredmenu registeredmenudata))
+    (memory Menu (address (,SEG_MENU . ,SEG_MENU_LAST)) (section menucode menudata))
+    (memory LevelIO (address (,SEG_LEVEL_IO . ,SEG_LEVEL_IO_LAST)) (section levelio))
+    ;; Loader helpers use their own region so growth cannot move gameplay preparation.
+    (memory IoTail (address (,SEG_IO_TAIL . ,SEG_IO_TAIL_LAST)) (section tailio))
+    (memory FloorDirectory (address (,SEG_FLOOR_DIRECTORY . ,SEG_FLOOR_DIRECTORY_LAST)) (section leveldirectory))
+    (memory Code (address (,SEG_CODE . ,SEG_CODE_LAST)) (section gamecode code savecode2))
+    (memory CodeTail (address (,SEG_CODE_TAIL . ,SEG_CODE_TAIL_LAST)) (section tailcode buffertail))
+    (memory LogicLow (address (,SEG_LOGIC_LOW . ,SEG_LOGIC_LOW_LAST)) (section lowlogic))
+    (memory RegisteredLogic (address (,SEG_REGISTERED_LOGIC . ,SEG_REGISTERED_LOGIC_LAST)) (section registeredlogic registereddata))
+    (memory WallCast (address (,SEG_WALL_CAST . ,SEG_WALL_CAST_LAST)) (section wallcast))
+    ;; REGISTERED_LINEIDS holds per-cell visibility IDs; keep that region unlinked.
+    (memory Logic (address (,SEG_LOGIC . ,SEG_LOGIC_LAST)) (section logiccode))
+    (memory LogicTail (address (,SEG_LOGIC_TAIL . ,SEG_LOGIC_TAIL_LAST)) (section logictail))
+    (memory SlotNames (address (,SEG_SLOT_NAMES . ,SEG_SLOT_NAMES_LAST)) (section slotnames))
+    (memory Data (address (,SEG_DATA . ,SEG_DATA_LAST)) (section gamedata savecode4 spriteextra))
+    (memory Save (address (,SEG_SAVE . ,(- SEG_BUFFER_SAVE 1))) (section savecode savecode3 viewtest savecode5))
+    (memory SaveTail (address (,SEG_SAVE_TAIL . ,SEG_SAVE_TAIL_LAST)) (section tailhole))
+    (memory Hud (address (,SEG_HUD . ,SEG_HUD_LAST)) (section hudfast))
+    (memory HudTail (address (,SEG_HUD_TAIL . ,SEG_HUD_TAIL_LAST)) (section tailhud))
+    (memory Flow (address (,SEG_FLOW . ,SEG_FLOW_LAST)) (section flowcode))
+    (memory FlowTail (address (,SEG_FLOW_TAIL . ,SEG_FLOW_TAIL_LAST)) (section tailflow))
+    (memory Scale3 (address (,SEG_SCALE3 . ,SEG_SCALE3_LAST)) (section scale3 paintsetup))
+    (memory Scale4 (address (,SEG_SCALE4 . ,SEG_SCALE4_LAST)) (section scale4))
+    (memory Scale5 (address (,SEG_SCALE5 . ,SEG_SCALE5_LAST)) (section scale5 raycode))))

@@ -1,0 +1,347 @@
+# Optional, explicitly selected MIDI stand-ins. These do not replace composer sources.
+# Use --fallback-sources with generate, or --sources to select this whole set.
+format = 1
+archive_sha256 = "9b03deb98c89e106282d87a5e91e1c41c4a4841871c993c60de8f7a2dd5380b8"
+archive_url = "https://github.com/ericvids/wolfmidi/releases"
+
+[[song]]
+name = "COPYPRO"
+authority = "fan-conversion"
+source_file = "COPYPRO.mid"
+source_member = "MUSIC/COPYPRO"
+source_sha256 = "d87baac012dec55c1b4699b1bd9ea8b6db9688e2119fe5511793c817fa91bd38"
+selected_file = "COPYPRO.mid"
+selected_sha256 = "d87baac012dec55c1b4699b1bd9ea8b6db9688e2119fe5511793c817fa91bd38"
+
+[[song]]
+name = "CORNER"
+authority = "fan-conversion"
+source_file = "CORNER.mid"
+source_member = "MUSIC/CORNER"
+source_sha256 = "01a27c947b2455081d9dc2f64d04c4f70bf9e61b6279b61d16ac330c60cc178d"
+selected_file = "CORNER.mid"
+selected_sha256 = "01a27c947b2455081d9dc2f64d04c4f70bf9e61b6279b61d16ac330c60cc178d"
+
+[[song]]
+name = "DUNGEON"
+authority = "fan-conversion"
+source_file = "DUNGEON.mid"
+source_member = "MUSIC/DUNGEON"
+source_sha256 = "237848ac88b7884eef0beb49ad161f9d835f1898b3a2e56acbb03c8147ac17d5"
+selected_file = "DUNGEON.mid"
+selected_sha256 = "237848ac88b7884eef0beb49ad161f9d835f1898b3a2e56acbb03c8147ac17d5"
+
+[[song]]
+name = "ENDLEVEL"
+authority = "fan-conversion"
+source_file = "ENDLEVEL.mid"
+source_member = "MUSIC/ENDLEVEL"
+source_sha256 = "94d404b118f744560bc860d84db55d43ebe731521ec0c9dad74a01bf2a39b517"
+selected_file = "ENDLEVEL.mid"
+selected_sha256 = "94d404b118f744560bc860d84db55d43ebe731521ec0c9dad74a01bf2a39b517"
+
+[[song]]
+name = "FUNKYOU"
+authority = "fan-conversion"
+source_file = "FUNKYOU.mid"
+source_member = "MUSIC/FUNKYOU"
+source_sha256 = "254a54b6997d11ab851ec432225a3138e35ff8114fdf437d35b803640ab10c6f"
+selected_file = "FUNKYOU.mid"
+selected_sha256 = "254a54b6997d11ab851ec432225a3138e35ff8114fdf437d35b803640ab10c6f"
+
+[[song]]
+name = "GETTHEM"
+authority = "fan-conversion"
+source_file = "GETTHEM.mid"
+source_member = "MUSIC/GETTHEM"
+source_sha256 = "021a25e272d90050fc51f5acf3dfecdbaac0eba4245ed2962f4d94e720ca41a2"
+selected_file = "GETTHEM.mid"
+selected_sha256 = "021a25e272d90050fc51f5acf3dfecdbaac0eba4245ed2962f4d94e720ca41a2"
+
+[[song]]
+name = "GOINGAFT"
+authority = "fan-conversion"
+source_file = "GOINGAFT.mid"
+source_member = "MUSIC/GOINGAFT"
+source_sha256 = "2da25ec7fedb3cbd1ba50a1bd0b77bee223a82453bd6077048c6619d8625c539"
+selected_file = "GOINGAFT.mid"
+selected_sha256 = "2da25ec7fedb3cbd1ba50a1bd0b77bee223a82453bd6077048c6619d8625c539"
+
+[[song]]
+name = "HEADACHE"
+authority = "fan-conversion"
+source_file = "HEADACHE.mid"
+source_member = "MUSIC/HEADACHE"
+source_sha256 = "682fb343056ca674596a95c9df2d679fbf657ab6a7aeee719303fe2bee3d5154"
+selected_file = "HEADACHE.mid"
+selected_sha256 = "682fb343056ca674596a95c9df2d679fbf657ab6a7aeee719303fe2bee3d5154"
+
+[[song]]
+name = "HITLWLTZ"
+authority = "fan-conversion"
+source_file = "HITLWLTZ.mid"
+source_member = "MUSIC/HITLWLTZ"
+source_sha256 = "d87baac012dec55c1b4699b1bd9ea8b6db9688e2119fe5511793c817fa91bd38"
+selected_file = "HITLWLTZ.mid"
+selected_sha256 = "d87baac012dec55c1b4699b1bd9ea8b6db9688e2119fe5511793c817fa91bd38"
+
+[[song]]
+name = "INTROCW3"
+authority = "fan-conversion"
+source_file = "INTROCW3.mid"
+source_member = "MUSIC/INTROCW3"
+source_sha256 = "20add87d947e1e7457feeb80b4c073a246c4ecf3d11fecd682fe452c14837167"
+selected_file = "INTROCW3.mid"
+selected_sha256 = "20add87d947e1e7457feeb80b4c073a246c4ecf3d11fecd682fe452c14837167"
+
+[[song]]
+name = "NAZI_NOR"
+authority = "fan-conversion"
+source_file = "NAZI_NOR.mid"
+source_member = "MUSIC/NAZI_NOR"
+source_sha256 = "5e435de6329abbb7881b95c6c8aceea5f92228e85d03fe37929dddd1f09bb09f"
+selected_file = "NAZI_NOR.mid"
+selected_sha256 = "5e435de6329abbb7881b95c6c8aceea5f92228e85d03fe37929dddd1f09bb09f"
+
+[[song]]
+name = "NAZI_OMI"
+authority = "fan-conversion"
+source_file = "NAZI_OMI.mid"
+source_member = "MUSIC/NAZI_OMI"
+source_sha256 = "05dbe81bcad7f474602ac1cb07e2128784b83edd369a51a5ba47d92755aa5335"
+selected_file = "NAZI_OMI.mid"
+selected_sha256 = "05dbe81bcad7f474602ac1cb07e2128784b83edd369a51a5ba47d92755aa5335"
+
+[[song]]
+name = "NAZI_RAP"
+authority = "fan-conversion"
+source_file = "NAZI_RAP.mid"
+source_member = "MUSIC/NAZI_RAP"
+source_sha256 = "1c9f7353118e114e48fc4e92cb431086d96a3ea94a2916043869ccd87f2e38b3"
+selected_file = "NAZI_RAP.mid"
+selected_sha256 = "1c9f7353118e114e48fc4e92cb431086d96a3ea94a2916043869ccd87f2e38b3"
+
+[[song]]
+name = "PACMAN"
+authority = "fan-conversion"
+source_file = "PACMAN.mid"
+source_member = "MUSIC/PACMAN"
+source_sha256 = "29c26a57741d19ebcd9b6a35da22a316281f42eb8adc51d8e43a7e1df080bd6a"
+selected_file = "PACMAN.mid"
+selected_sha256 = "29c26a57741d19ebcd9b6a35da22a316281f42eb8adc51d8e43a7e1df080bd6a"
+
+[[song]]
+name = "POW"
+authority = "fan-conversion"
+source_file = "POW.mid"
+source_member = "MUSIC/POW"
+source_sha256 = "f34098b2aac807238783d6632cac2146d1e9831fdceb3d82e0ce3659f827193b"
+selected_file = "POW.mid"
+selected_sha256 = "f34098b2aac807238783d6632cac2146d1e9831fdceb3d82e0ce3659f827193b"
+
+[[song]]
+name = "PREGNANT"
+authority = "fan-conversion"
+source_file = "PREGNANT.mid"
+source_member = "MUSIC/PREGNANT"
+source_sha256 = "1c2eb40c0dbfa1dd05a48028e1657f50103d18ef2da671a92f84ebdd6268e74e"
+selected_file = "PREGNANT.mid"
+selected_sha256 = "1c2eb40c0dbfa1dd05a48028e1657f50103d18ef2da671a92f84ebdd6268e74e"
+
+[[song]]
+name = "ROSTER"
+authority = "fan-conversion"
+source_file = "ROSTER.mid"
+source_member = "MUSIC/ROSTER"
+source_sha256 = "50c27a94dc9ce52b90b207aad428fc668e917bce83dafe7bdcf93f635a9d5ae2"
+selected_file = "ROSTER.mid"
+selected_sha256 = "50c27a94dc9ce52b90b207aad428fc668e917bce83dafe7bdcf93f635a9d5ae2"
+
+[[song]]
+name = "SALUTE"
+authority = "fan-conversion"
+source_file = "SALUTE.mid"
+source_member = "MUSIC/SALUTE"
+source_sha256 = "fed9832d62bae0f39e9a77d91dd9cf716e9abf820f003c83d4d288fabc1fe157"
+selected_file = "SALUTE.mid"
+selected_sha256 = "fed9832d62bae0f39e9a77d91dd9cf716e9abf820f003c83d4d288fabc1fe157"
+
+[[song]]
+name = "SEARCHN"
+authority = "fan-conversion"
+source_file = "SEARCHN.mid"
+source_member = "MUSIC/SEARCHN"
+source_sha256 = "68c81386798b05dc86e9d492d5fe0b381d5d08a5415c63f8f88a9e5c2f21ed7f"
+selected_file = "SEARCHN.mid"
+selected_sha256 = "68c81386798b05dc86e9d492d5fe0b381d5d08a5415c63f8f88a9e5c2f21ed7f"
+
+[[song]]
+name = "SUSPENSE"
+authority = "fan-conversion"
+source_file = "SUSPENSE.mid"
+source_member = "MUSIC/SUSPENSE"
+source_sha256 = "4a5bfe792b8e3076c65e5ee36f68622794f566cf98546c966ec5f60d9fa7f892"
+selected_file = "SUSPENSE.mid"
+selected_sha256 = "4a5bfe792b8e3076c65e5ee36f68622794f566cf98546c966ec5f60d9fa7f892"
+
+[[song]]
+name = "TWELFTH"
+authority = "fan-conversion"
+source_file = "TWELFTH.mid"
+source_member = "MUSIC/TWELFTH"
+source_sha256 = "3e0a57fb1cacce85fda9813f8c32f6921c05f90bb61e33500d6ff59cc4e5988a"
+selected_file = "TWELFTH.mid"
+selected_sha256 = "3e0a57fb1cacce85fda9813f8c32f6921c05f90bb61e33500d6ff59cc4e5988a"
+
+[[song]]
+name = "ULTIMATE"
+authority = "fan-conversion"
+source_file = "ULTIMATE.mid"
+source_member = "MUSIC/ULTIMATE"
+source_sha256 = "c0b0ed71714062ef31c1442e520b43212b845d24a63ac87f0e3168f996e79cc2"
+selected_file = "ULTIMATE.mid"
+selected_sha256 = "c0b0ed71714062ef31c1442e520b43212b845d24a63ac87f0e3168f996e79cc2"
+
+[[song]]
+name = "URAHERO"
+authority = "fan-conversion"
+source_file = "URAHERO.mid"
+source_member = "MUSIC/URAHERO"
+source_sha256 = "5d047a5b704cf4634e2d028b8f3e625a76b515907c5bf32cb7a1d1d112976014"
+selected_file = "URAHERO.mid"
+selected_sha256 = "5d047a5b704cf4634e2d028b8f3e625a76b515907c5bf32cb7a1d1d112976014"
+
+[[song]]
+name = "VICMARCH"
+authority = "fan-conversion"
+source_file = "VICMARCH.mid"
+source_member = "MUSIC/VICMARCH"
+source_sha256 = "c93f2465a52cd30db5a8dbf1817a567fecddacbd21ef75a918136bc5190b53b0"
+selected_file = "VICMARCH.mid"
+selected_sha256 = "c93f2465a52cd30db5a8dbf1817a567fecddacbd21ef75a918136bc5190b53b0"
+
+[[song]]
+name = "VICTORS"
+authority = "fan-conversion"
+source_file = "VICTORS.mid"
+source_member = "MUSIC/VICTORS"
+source_sha256 = "f52b551759afc16bc9ab09973197d56fc5c0453ca5917a249339678adb521566"
+selected_file = "VICTORS.mid"
+selected_sha256 = "f52b551759afc16bc9ab09973197d56fc5c0453ca5917a249339678adb521566"
+
+[[song]]
+name = "WARMARCH"
+authority = "fan-conversion"
+source_file = "WARMARCH.mid"
+source_member = "MUSIC/WARMARCH"
+source_sha256 = "47de6e6caebd3cf18f602ebe7e1655ba673040765c830dd0b9811bd86e167343"
+selected_file = "WARMARCH.mid"
+selected_sha256 = "47de6e6caebd3cf18f602ebe7e1655ba673040765c830dd0b9811bd86e167343"
+
+[[song]]
+name = "WONDERIN"
+authority = "fan-conversion"
+source_file = "WONDERIN.mid"
+source_member = "MUSIC/WONDERIN"
+source_sha256 = "dfb1a45a80bf28b38691599c4499bec5476cb25b29bebd0c10ceb7678c7d1d00"
+selected_file = "WONDERIN.mid"
+selected_sha256 = "dfb1a45a80bf28b38691599c4499bec5476cb25b29bebd0c10ceb7678c7d1d00"
+
+[[song]]
+name = "XAWARD"
+authority = "fan-conversion"
+source_file = "XAWARD.mid"
+source_member = "MUSIC/XAWARD"
+source_sha256 = "f1f12fc2af1282c93085f23e1382c41f5e21d4099e359be8a8226c70d6d384f2"
+selected_file = "XAWARD.mid"
+selected_sha256 = "f1f12fc2af1282c93085f23e1382c41f5e21d4099e359be8a8226c70d6d384f2"
+
+[[song]]
+name = "XDEATH"
+authority = "fan-conversion"
+source_file = "XDEATH.mid"
+source_member = "MUSIC/XDEATH"
+source_sha256 = "79c7752069c4aed743cd946138b45db07379c2af646f28065f444b0525e2d9d9"
+selected_file = "XDEATH.mid"
+selected_sha256 = "79c7752069c4aed743cd946138b45db07379c2af646f28065f444b0525e2d9d9"
+
+[[song]]
+name = "XEVIL"
+authority = "fan-conversion"
+source_file = "XEVIL.mid"
+source_member = "MUSIC/XEVIL"
+source_sha256 = "8e49dcfc738ba59f1552bbdfff8eea314eb5315110c0adf4dfe186dd0c8e5b2e"
+selected_file = "XEVIL.mid"
+selected_sha256 = "8e49dcfc738ba59f1552bbdfff8eea314eb5315110c0adf4dfe186dd0c8e5b2e"
+
+[[song]]
+name = "XFUNKIE"
+authority = "fan-conversion"
+source_file = "XFUNKIE.mid"
+source_member = "MUSIC/XFUNKIE"
+source_sha256 = "dd9114369b4dffb7bac1557e685a65addb250bfa30dcc22eeabf5813aedff6aa"
+selected_file = "XFUNKIE.mid"
+selected_sha256 = "dd9114369b4dffb7bac1557e685a65addb250bfa30dcc22eeabf5813aedff6aa"
+
+[[song]]
+name = "XGETYOU"
+authority = "fan-conversion"
+source_file = "XGETYOU.mid"
+source_member = "MUSIC/XGETYOU"
+source_sha256 = "a28a0ac48c8c9b109f81e94ff262144a0ed873c635ba5cf2cb504b7a97c15c07"
+selected_file = "XGETYOU.mid"
+selected_sha256 = "a28a0ac48c8c9b109f81e94ff262144a0ed873c635ba5cf2cb504b7a97c15c07"
+
+[[song]]
+name = "XJAZNAZI"
+authority = "fan-conversion"
+source_file = "XJAZNAZI.mid"
+source_member = "MUSIC/XJAZNAZI"
+source_sha256 = "008ed6d3d27aea2c56b0a305f5a99e3c0b3e37bddf9e9a754dda21d094ec6827"
+selected_file = "XJAZNAZI.mid"
+selected_sha256 = "008ed6d3d27aea2c56b0a305f5a99e3c0b3e37bddf9e9a754dda21d094ec6827"
+
+[[song]]
+name = "XPUTIT"
+authority = "fan-conversion"
+source_file = "XPUTIT.mid"
+source_member = "MUSIC/XPUTIT"
+source_sha256 = "7a4005ebc0ee454b9b34c21733424661e5321f4a15549e80b44656fb46c6c36e"
+selected_file = "XPUTIT.mid"
+selected_sha256 = "7a4005ebc0ee454b9b34c21733424661e5321f4a15549e80b44656fb46c6c36e"
+
+[[song]]
+name = "XTHEEND"
+authority = "fan-conversion"
+source_file = "XTHEEND.mid"
+source_member = "MUSIC/XTHEEND"
+source_sha256 = "480830f96142ec1551c808a9364ee359adcdc59b9f7538e1f9681a5b2f17274b"
+selected_file = "XTHEEND.mid"
+selected_sha256 = "480830f96142ec1551c808a9364ee359adcdc59b9f7538e1f9681a5b2f17274b"
+
+[[song]]
+name = "XTIPTOE"
+authority = "fan-conversion"
+source_file = "XTIPTOE.mid"
+source_member = "MUSIC/XTIPTOE"
+source_sha256 = "3ebaa65aab325377b31b09ab78e6b7b515c49d7cb7955ae31f2a098c45a1695e"
+selected_file = "XTIPTOE.mid"
+selected_sha256 = "3ebaa65aab325377b31b09ab78e6b7b515c49d7cb7955ae31f2a098c45a1695e"
+
+[[song]]
+name = "XTOWER2"
+authority = "fan-conversion"
+source_file = "XTOWER2.mid"
+source_member = "MUSIC/XTOWER2"
+source_sha256 = "1f3fc02df89171b50aa2711d2dff0ac7313e4108924b0bc1b6164b64b56f5b10"
+selected_file = "XTOWER2.mid"
+selected_sha256 = "1f3fc02df89171b50aa2711d2dff0ac7313e4108924b0bc1b6164b64b56f5b10"
+
+[[song]]
+name = "ZEROHOUR"
+authority = "fan-conversion"
+source_file = "ZEROHOUR.mid"
+source_member = "MUSIC/ZEROHOUR"
+source_sha256 = "c3b8b32a9bc7dc356e2141dda3df11c1da2a46b4d9bf83b39987c2f64f270d60"
+selected_file = "ZEROHOUR.mid"
+selected_sha256 = "c3b8b32a9bc7dc356e2141dda3df11c1da2a46b4d9bf83b39987c2f64f270d60"

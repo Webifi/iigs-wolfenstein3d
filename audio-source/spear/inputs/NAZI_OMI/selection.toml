@@ -1,0 +1,71 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 1
+"program" = 46
+"bank" = [0, 0]
+"notes" = 91
+"name" = "Pizzicato Strings"
+
+[["instruments"]]
+"channel" = 2
+"program" = 117
+"bank" = [0, 0]
+"notes" = 91
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 3
+"program" = 46
+"bank" = [0, 0]
+"notes" = 91
+"name" = "Pizzicato Strings"
+
+[["instruments"]]
+"channel" = 4
+"program" = 76
+"bank" = [0, 0]
+"notes" = 64
+"name" = "Pan Flute"
+
+[["instruments"]]
+"channel" = 5
+"program" = 76
+"bank" = [0, 0]
+"notes" = 64
+"name" = "Pan Flute"
+
+[["instruments"]]
+"channel" = 6
+"program" = 79
+"bank" = [0, 0]
+"notes" = 64
+"name" = "Whistle"
+
+[["instruments"]]
+"channel" = 7
+"program" = 29
+"bank" = [0, 0]
+"notes" = 64
+"name" = "Electric Guitar (muted)"
+
+[["instruments"]]
+"channel" = 8
+"program" = 15
+"bank" = [9, 0]
+"notes" = 14
+"name" = "Tubular Bells"
+
+[["instruments"]]
+"channel" = 10
+"program" = 33
+"bank" = [0, 0]
+"notes" = 721
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "d8b2badff6f48b64fd5a83bc0d67441f2d0102f12ce2d3bbeb509dd45e693113"
+"authority" = "fan-conversion"

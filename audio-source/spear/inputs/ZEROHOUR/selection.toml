@@ -1,0 +1,50 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 5
+"program" = 33
+"bank" = [0, 0]
+"notes" = 254
+"name" = "Acoustic Bass"
+
+[["instruments"]]
+"channel" = 6
+"program" = 15
+"bank" = [0, 0]
+"notes" = 12
+"name" = "Tubular Bells"
+
+[["instruments"]]
+"channel" = 7
+"program" = 29
+"bank" = [0, 0]
+"notes" = 252
+"name" = "Electric Guitar (muted)"
+
+[["instruments"]]
+"channel" = 8
+"program" = 57
+"bank" = [0, 0]
+"notes" = 36
+"name" = "Trumpet"
+
+[["instruments"]]
+"channel" = 9
+"program" = 67
+"bank" = [0, 0]
+"notes" = 36
+"name" = "Tenor Sax"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 700
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "9cd4d5b08a463ce8f46369970aaeeb8b135cab0cd5280444794eb5c5a34ceee2"
+"authority" = "composer-original"

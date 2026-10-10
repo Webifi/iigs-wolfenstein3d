@@ -1,0 +1,284 @@
+# Approved source recordings at 7042.65625 Hz, before the unchanged DOC reducer.
+# Matching DOS AdLib source hashes are required. This restores existing recordings;
+# it does not claim new synthesis. Registered-only recordings remain unchanged.
+format = 1
+
+# HITWALLSND
+[[samples]]
+id = 0
+file = "00.u8"
+sha256 = "af8591b5c3327a8ed4d2ddfbbcdec56a5560bae1e9992c3e3536d9d1848efb22"
+original_sha256 = "c3dd20ce8fccb0f9f389db31fb823d3b7e63f3aede3bfe54464922ecbd6a5d85"
+
+# SELECTWPNSND
+[[samples]]
+id = 1
+file = "01.u8"
+sha256 = "e3c3c0f6a7ca3daae7e71c89331a3d50251ccfe88af6685fe4e4ef44dad1b4b7"
+original_sha256 = "c3780eb4abe5e46d6b9dbd01a12da70dd0a39b5e5e5546f2d188f5ad5dd70b6d"
+
+# SELECTITEMSND
+[[samples]]
+id = 2
+file = "02.u8"
+sha256 = "2021d0015398cd84d34075905849e0715a5896510296f83f2f3a508be1a18d7a"
+original_sha256 = "5c7ec41a579a212f4bb7aea72fb8ca12cf7f2c50189d638d2032b2519c2241c9"
+
+# HEARTBEATSND
+[[samples]]
+id = 3
+file = "03.u8"
+sha256 = "84d82683de5d6d3c894b190b793bb7f25e8b174ef23f1b0ac0363c1415eed4d7"
+original_sha256 = "11f90a4cec73d2546798c70a65397c959f66a55b00b14938623797ece1ce48bc"
+
+# MOVEGUN2SND
+[[samples]]
+id = 4
+file = "04.u8"
+sha256 = "df68d0f6ea0c155a26c9502aad6b20f1c4460e864367e50c494f7c480459f538"
+original_sha256 = "1ea4c1b9e84b6a774ac350bdf7a583264aaeff656ed2f98aca6e8cf5efefe308"
+
+# MOVEGUN1SND
+[[samples]]
+id = 5
+file = "05.u8"
+sha256 = "d5f5634ebf999b3ff3ae66d6f7fac2f79a01d44fb1fc61ea9a2f698647edb798"
+original_sha256 = "792750e35e39a5abce037d7495499b2f8c05fe1439fee751807d2fcb47f356ea"
+
+# NOWAYSND
+[[samples]]
+id = 6
+file = "06.u8"
+sha256 = "b6d8bc5c5bdf39424f2a8153fd0349dad160218030de78792d6ea42a9c1c9f03"
+original_sha256 = "ea173ca9f0a6fe026c3bd28c8031bd93f70c82bce5f1623b6bfe6351b51f78de"
+
+# NAZIHITPLAYERSND
+[[samples]]
+id = 7
+file = "07.u8"
+sha256 = "f93690d25192b9e679c9ec1b8454d511f6b61eff08b4d68919bf19cf58e93549"
+original_sha256 = "d5753f2d33111c5a9c5e3d8b32b76e04432d566d37341ea8c262a1eae4f918cf"
+
+# SCHABBSTHROWSND
+[[samples]]
+id = 8
+file = "08.u8"
+sha256 = "bc39daddad8088c1178e2bd10fae248fbcc5e43bdf632f2bbc722c1b3264cf48"
+original_sha256 = "035d6a801cb8d06b42854a0475c987c72718d185f06d5bc3bdeb75fb89396f2d"
+
+# PLAYERDEATHSND
+[[samples]]
+id = 9
+file = "09.u8"
+sha256 = "933e8af9b72242f93b7d132f2e8e8f0a31c785e7184defe8153dccc6f5d566e6"
+original_sha256 = "66e25420253701b14b41775c8b3d72aa9e2448f2890391142759f833ab676a7c"
+
+# GETKEYSND
+[[samples]]
+id = 12
+file = "12.u8"
+sha256 = "e06e0d5800c37b805faa31b7148b6c1cdcae4edb4348612bb90457394754c0f5"
+original_sha256 = "856c29d7c395119705d54834a98bfb27c1ae9c95f5b63245538e8f6fd5b2e1c7"
+
+# NOITEMSND
+[[samples]]
+id = 13
+file = "13.u8"
+sha256 = "75309ca211c77662bd6a83892a788e4d5f966321a981dfed170061be13420b16"
+original_sha256 = "c1c420c8815ffc319b7b5e5ea8283f8a3453bc33bc769ba9c11766e0749c1838"
+
+# WALK1SND
+[[samples]]
+id = 14
+file = "14.u8"
+sha256 = "f2ab3b65e0fbd6bd245baa0d9dc0931c84071bb4e2115682d2fc51786f490b88"
+original_sha256 = "cd53b38b91abd8762769f1eb8ade4a2435661629b8da2563833ac0e796fe6f09"
+
+# WALK2SND
+[[samples]]
+id = 15
+file = "15.u8"
+sha256 = "73da7a451eea7ae108be191cd77ff76705e3eab1d05be35a808442874940dd1a"
+original_sha256 = "11eecf2400f372759ad4425921af60f44868a7f33349538e22948742b7004373"
+
+# GAMEOVERSND
+[[samples]]
+id = 17
+file = "17.u8"
+sha256 = "23f9a0d2f93a48567a190472546e5e2c63943cbe1e316ccee8c7d3bf40bab005"
+original_sha256 = "4063ff7bce28a139c60c9b37c037644e4da61ec4335de09a7de42a2c0b9d793e"
+
+# DONOTHINGSND
+[[samples]]
+id = 20
+file = "20.u8"
+sha256 = "747a798cf87f43c98edf58a0778c7dc4ee12c31f756398f66580ca0ef5383721"
+original_sha256 = "57e8b71dc9b3ce706d9c17e38cb6eb7ed8c1a1ccaf1492a6e06f4e858f440cc9"
+
+# ATKKNIFESND
+[[samples]]
+id = 23
+file = "23.u8"
+sha256 = "912e5e0d352b9bbecb1c621be34da89ab613c548376666ae0fbb294cd14a28fb"
+original_sha256 = "726bd1c70938f9e5d312666d06a85c63e31539432f2a1d76be7f2d78f95d929b"
+
+# HITENEMYSND
+[[samples]]
+id = 27
+file = "27.u8"
+sha256 = "302fb3f68c6a325f3a0cfcdadf24f913a379dedb368735b731355c363981419f"
+original_sha256 = "a79f8551fce9e1ff07f83ee5a4ae0be8229326034d339fdd8688107da5f64120"
+
+# SHOOTDOORSND
+[[samples]]
+id = 28
+file = "28.u8"
+sha256 = "2991f1fe37a1a4834b392db8773fae93b20d653a0ca40413bad499becd5286fa"
+original_sha256 = "bcce650153a11b87ecd886c5fd39a38ec329ff988a767a07f6080822f6d47e7a"
+
+# GETMACHINESND
+[[samples]]
+id = 30
+file = "30.u8"
+sha256 = "822f68bc27bfafe76718b0e96765ccf7988f41a2c7116f3c7d74ac3f3fc74f35"
+original_sha256 = "542bb0a61b61ed18fbaf2d94bba73bec64d1ac2e4a0319f6aecfb1f2a8e40b8b"
+
+# GETAMMOSND
+[[samples]]
+id = 31
+file = "31.u8"
+sha256 = "54e3430e826d771b831e9a37f8facd056aa1a85e7fd9d68b24e5c136e738f44b"
+original_sha256 = "b70da35e902631766094e9548ed8a5861e2e8357669371fde113f258778257e5"
+
+# SHOOTSND
+[[samples]]
+id = 32
+file = "32.u8"
+sha256 = "5422502d15f91fae61d996f07d2f19358ea70f9e13e092e751295cea6f9fae96"
+original_sha256 = "7c22f7670ea45899964bc26ad21f8c5b4e4a7c4f7059f79f26881a1023febda9"
+
+# HEALTH1SND
+[[samples]]
+id = 33
+file = "33.u8"
+sha256 = "2e460c2b10d96c1142ea6a139e0bf168e977ed452f2303094f2b57f2766c9b4a"
+original_sha256 = "a838e2dc6a3a6830241d356300ba302dfbaf7d7868bf05d29ae39c75ee0ab719"
+
+# HEALTH2SND
+[[samples]]
+id = 34
+file = "34.u8"
+sha256 = "2b699617e266ee0a2466b44cac3c9365067c7a530a32d08560cb62f6b8c1b663"
+original_sha256 = "cbf91328cbd00977d9326e1b1b0ec0d424e438ac081819962f724e81ce24ed23"
+
+# BONUS1SND
+[[samples]]
+id = 35
+file = "35.u8"
+sha256 = "da596b3026b24fc6fc19f36c099315683fb42bd90f827bc80a19a9142709107f"
+original_sha256 = "aefe8dd72eeec30a1d1502bab7d3bf3e7d869d44fff540b65edb914177d343a5"
+
+# BONUS2SND
+[[samples]]
+id = 36
+file = "36.u8"
+sha256 = "41c11a00f0c4517a067b87e0e2a5371a3b804c4c8358058ddd52bfffe4a0b0ff"
+original_sha256 = "5c8625505deb34b88cb1a8c0f20dbb6caa3194ff7a90fae413b5298e24418a27"
+
+# BONUS3SND
+[[samples]]
+id = 37
+file = "37.u8"
+sha256 = "6d5378ff9e15684570d558395e1aff6b08e80ce61d49078392f227d01429141d"
+original_sha256 = "a34308eba6e39ada2e0646cede568c48b958e2248ac7f65cc88831669fc8140c"
+
+# GETGATLINGSND
+[[samples]]
+id = 38
+file = "38.u8"
+sha256 = "8436a531ec3b38ef0dc1eb18ddebef986b52dffe26de5dd7fd1935d54c0b244f"
+original_sha256 = "2c371e65d74fd6462984bbd8ac57dd2cd13e12c5e8bb83e4bbd2bf2b52741c88"
+
+# ESCPRESSEDSND
+[[samples]]
+id = 39
+file = "39.u8"
+sha256 = "85665875fa88a62edb18f94f9afc323519810163baca4cc38916686f89124b7e"
+original_sha256 = "588907f0c182a312fc4b8e1701df3c8522f9e7e0eb8d98c94603d2b0c1f54e41"
+
+# ENDBONUS1SND
+[[samples]]
+id = 42
+file = "42.u8"
+sha256 = "f2befaf6f6e7da6489ef07642ac1206854e97d8a7037453d95e2233d0a027c28"
+original_sha256 = "8d88d871c186097a94035f83bdad14fc325e45b4cf403f5622218d8a0d35f600"
+
+# ENDBONUS2SND
+[[samples]]
+id = 43
+file = "43.u8"
+sha256 = "178c9da2ecdf59a3fb4fdfea557050444fcf55e8c516ac64447baee258c5e5d9"
+original_sha256 = "5305dc95a662f8cc89d4e0df418e5e5f78ee06075c36ddbcb0168c3f74792562"
+
+# BONUS1UPSND
+[[samples]]
+id = 44
+file = "44.u8"
+sha256 = "ec322b2f05be1ee6b84c3fe19f4900c67fe1f71790b9338c834966a728d89932"
+original_sha256 = "a48cb7c235ab855b282e94fe194279dac4c6a36426e6c2f9ca6e34e5c37707f9"
+
+# BONUS4SND
+[[samples]]
+id = 45
+file = "45.u8"
+sha256 = "f3f3dce04dc9a7a5ee314723a9da1f6014088399499c0236adf36ced004622e7"
+original_sha256 = "860602b44d9ace41ed803fbef3f692099f7132a58a121ce59dd85168810a5c86"
+
+# NOBONUSSND
+[[samples]]
+id = 47
+file = "47.u8"
+sha256 = "0fd5d73435eefd2c8edc6876c5bdacbaeed02dfdbdc0f9a4deff511a7afd4bc4"
+original_sha256 = "86a622307e79c07e40c2ed724548f26409c2fa065e3ac3e2e9ca4764cf64b0de"
+
+# PERCENT100SND
+[[samples]]
+id = 48
+file = "48.u8"
+sha256 = "facff3808848a74bcdca2f26430b2b233a5c96a796e9459b83174f822b8354b2"
+original_sha256 = "fe6f752fc689b809d5b2bbc11d9c1de2ea1527012e662cbf5894539599265a0f"
+
+# BOSSACTIVESND
+[[samples]]
+id = 49
+file = "49.u8"
+sha256 = "c7c2cbf3098956d8673b94e60724e1518575b29a570d55c1c68c11e1ad1e623a"
+original_sha256 = "f0c1f5629af722c56b74dfe57c7f1cddf633c8700f10ade3b4e7dc74f73c1139"
+
+# FLAMETHROWERSND
+[[samples]]
+id = 69
+file = "69.u8"
+sha256 = "a7b750fe3f43eb64b501907a75796b325cb6fe2bc295baa444f2ef5b03bb8732"
+original_sha256 = "5ca631952b4e458a50a15660b7d9e0e60f4d88c2de1f744adc2a78a0f6ee6bdd"
+
+# GOOBSSND
+[[samples]]
+id = 71
+file = "71.u8"
+sha256 = "cb8770a4aabbc8661bbb69555172f263328989e36d5617a4e9927f9cbb890edf"
+original_sha256 = "c2effcab213643f33c6075aa226354fb67646d11a5503c66fed9e7ace730e5db"
+
+# MISSILEFIRESND
+[[samples]]
+id = 85
+file = "85.u8"
+sha256 = "3718136e1cc1998e919b4c1d451ff0526639c989bff82d65167e2f96e2a5e833"
+original_sha256 = "1d99ecea60db2f565aea65be341951251ce6049379b47ec84c02274404d58773"
+
+# MISSILEHITSND
+[[samples]]
+id = 86
+file = "86.u8"
+sha256 = "58c5502fc366d0d82168d7a9d74102753e1fb9cd04efeecacb684c2a795f7960"
+original_sha256 = "5009a42d2f1a9e73b353d3dfafdc4219a0c8ea37f6f31558ad90943e03f3357e"

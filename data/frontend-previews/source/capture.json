@@ -1,0 +1,24 @@
+{
+  "build_id": "EC09D052",
+  "elf_sha256": "3f17328d8c9a769c6daef306e9adadfda8e936e5030196299d3f4b0c49a81ee2",
+  "method": "First visible completed game frame at each original floor start. The capture-only fixture bypasses weapon projection before painting, so the real engine draws the unobstructed world. Viewport crop excludes all HUD rows. No playable file, gameplay movement or save writes.",
+  "weapon_disabled": true,
+  "viewport": [
+    52,
+    26,
+    214,
+    107
+  ],
+  "captures": {
+    "floor-01.shr": "66dcbb9295643d8c93e2653f6f9f9c898256ca4618aa563b295167e0158e3ae3",
+    "floor-02.shr": "17d24c64b8a8824af5c13d7e8dff05d167bd4de7276a80423af0f6a1fc201834",
+    "floor-03.shr": "ad8008ad651da2f586e4d894ec7b4dccbe56b52ef1ecdc068b49e523b3e4a300",
+    "floor-04.shr": "a87f992c70431da74f3110fe3774e92ad4aeb64ddb631da735a05d589ba1d0e9",
+    "floor-05.shr": "48cdbd4d7016a3c70157b5146469ba57baf923bf20d532feb40a196b81db2a95",
+    "floor-06.shr": "68bca0618e2ea730f15feeaa3342b1fe0e8d6c52b64ffef700bca4ce81f3b493",
+    "floor-07.shr": "32377106b98634b773a4a41231431c3ad2a45a7f6fe20ff31ae8511c9d513a99",
+    "floor-08.shr": "5d66a8c0f930272b2bd277082a03e52ee2d9b96d0d3a12efccdc1bb5dc114fc3",
+    "floor-09.shr": "1c03636358fcd8563d783884efe305027dfdda15bd8ec219cb8cf8a82b4990e1",
+    "floor-10.shr": "1acc95f3ef357cd25cf49f237374e5a11e3576ee838e4efc35144d66126d0fb1"
+  }
+}

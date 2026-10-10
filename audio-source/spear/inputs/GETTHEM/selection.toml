@@ -1,0 +1,64 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 69
+"bank" = [0, 0]
+"notes" = 54
+"name" = "Oboe"
+
+[["instruments"]]
+"channel" = 3
+"program" = 39
+"bank" = [0, 0]
+"notes" = 333
+"name" = "Synth Bass 1"
+
+[["instruments"]]
+"channel" = 4
+"program" = 74
+"bank" = [0, 0]
+"notes" = 180
+"name" = "Flute"
+
+[["instruments"]]
+"channel" = 5
+"program" = 72
+"bank" = [0, 0]
+"notes" = 180
+"name" = "Clarinet"
+
+[["instruments"]]
+"channel" = 6
+"program" = 58
+"bank" = [0, 0]
+"notes" = 180
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 7
+"program" = 120
+"bank" = [0, 0]
+"notes" = 28
+"name" = "Reverse Cymbal"
+
+[["instruments"]]
+"channel" = 8
+"program" = 5
+"bank" = [0, 0]
+"notes" = 230
+"name" = "Electric Piano 1"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 406
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "511745ce9185592b4b8bb6c93721283957a6c3239996ceca4e9ea234db083917"
+"authority" = "composer-original"

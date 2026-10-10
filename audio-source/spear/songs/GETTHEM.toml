@@ -1,0 +1,57 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "GETTHEM"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/GETTHEM/score.toml"
+"sha256" = "6750095638c150f8bc052e263a0ab824ebe6f1b98b5fd4eaa99889d23682ae43"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/GETTHEM.imf"
+"sha256" = "ada4bee0d2aa8fa0d0381d1a461805e5c84c2957b9503bb5eef91fbe7a846a42"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/GETTHEM/sampling.toml"
+"song_gain_steps" = 20
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -5.1294
+"ch03" = -3.8962
+"ch04" = -2.22
+"ch05" = -2.5476
+"ch06" = -0.9914
+"ch07" = -3.8045
+"ch08" = -2.1147
+"k40" = -1.049
+
+["doc"."pan"]
+"ch02" = 65
+"ch03" = 63
+"ch04" = 40
+"ch05" = 63
+"ch06" = 88
+"ch07" = 63
+"ch08" = 62

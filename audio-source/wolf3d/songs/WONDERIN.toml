@@ -1,0 +1,80 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "WONDERIN"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/WONDERIN/score.toml"
+"sha256" = "391a45099fdef11bb1cb5fce0d1b4179bcddc71be6ec8a827cc5f98d98c80488"
+"authority" = "composer-original"
+
+["original"]
+"file" = "../licensed/WONDERIN.imf"
+"sha256" = "f01d39e54932b6d0449fb47544a28a66d93de00b5a0b84586eec484b9015ecf6"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "listed"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"song_gain_steps" = 11
+"loop_layout" = "repeated-endpoint"
+"sampling_policy" = "../inputs/WONDERIN/sampling.toml"
+
+["doc"."quality"]
+"min_notes" = 40
+"merge_st" = 9
+"attack" = 0.04
+"cym_attack" = 0.04
+"noise_loop" = 255
+"f_mel" = 2000.0
+"f_cym" = 7000.0
+"f_drum" = 4000.0
+"drum_max" = 0.18
+"f_floor" = 4000.0
+
+["doc"."levels"]
+"ch02" = -3.4
+"ch03" = 1.1
+"ch04" = -2.9
+"ch05" = -0.8
+"ch06" = 2.9
+"ch07" = -0.9
+"ch08" = 0.0
+"ch09" = 3.2
+
+["doc"."pan"]
+"ch02" = 82
+"ch03" = 29
+"ch04" = 40
+"ch05" = 53
+"ch06" = 88
+"ch07" = 75
+"ch08" = 64
+"ch09" = 54
+
+[["doc"."capture"]]
+"channel" = 2
+"key" = 51
+"bytes" = 1024
+"loop_bytes" = 1024
+"loop_start" = 0.25
+"rate" = 8000
+"release_seconds" = 1.8
+"fine_static" = false

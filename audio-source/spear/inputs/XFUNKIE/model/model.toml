@@ -1,0 +1,3642 @@
+# Original sample regions and envelopes. PCM is stored in the adjacent WAV files.
+"format" = 1
+"source_sha256" = "e6c6f2d82ebd0c0fb4c2f4851ad34ca6a2a5988ad737c4922470c59822dbf520"
+
+[["samples"]]
+"id" = 170
+"file" = "sample-0170.wav"
+"sha256" = "e9a5de6b1ab9265a985b8e50080fb6446f0814c3dd799aa3a041e5cf44b69a34"
+"name" = "gm - 191"
+"start" = 958853
+"end" = 960568
+"ls" = 960048
+"le" = 960056
+"rate" = 32000
+"root" = 107
+"corr" = -22
+
+[["samples"]]
+"id" = 204
+"file" = "sample-0204.wav"
+"sha256" = "b42277c213397fcd923a9c7234a72536cf55237ad8c2b7fa6b7b29b3fc4f4800"
+"name" = "gm - 240"
+"start" = 1052984
+"end" = 1056366
+"ls" = 1055778
+"le" = 1055854
+"rate" = 32000
+"root" = 68
+"corr" = -24
+
+[["samples"]]
+"id" = 205
+"file" = "sample-0205.wav"
+"sha256" = "42eeb16205a1061e7772ee830eae1819901be522dc3224a4308dfcb7f5b733de"
+"name" = "gm - 241"
+"start" = 1056398
+"end" = 1057696
+"ls" = 1057167
+"le" = 1057184
+"rate" = 32000
+"root" = 94
+"corr" = -17
+
+[["samples"]]
+"id" = 206
+"file" = "sample-0206.wav"
+"sha256" = "55fc7661db6c1e47cdb2add8de29e814b63f4e67964c1a7c687c9c04a7fdcedc"
+"name" = "gm - 242"
+"start" = 1057728
+"end" = 1063405
+"ls" = 1062507
+"le" = 1062893
+"rate" = 32000
+"root" = 40
+"corr" = -18
+
+[["samples"]]
+"id" = 207
+"file" = "sample-0207.wav"
+"sha256" = "5e6a6ee4fa34ba7b5f5bb382f4cbc3c864acc48a27aab4607fa0aed45ca00c32"
+"name" = "gm - 243"
+"start" = 1063437
+"end" = 1069457
+"ls" = 1068579
+"le" = 1068945
+"rate" = 32000
+"root" = 41
+"corr" = -10
+
+[["samples"]]
+"id" = 208
+"file" = "sample-0208.wav"
+"sha256" = "0264aebcd21d3c9b447464b788bb1f06508c5cd91056d9ca3999bcb7fd9d7274"
+"name" = "gm - 244"
+"start" = 1069489
+"end" = 1072836
+"ls" = 1072202
+"le" = 1072324
+"rate" = 32000
+"root" = 60
+"corr" = -7
+
+[["samples"]]
+"id" = 209
+"file" = "sample-0209.wav"
+"sha256" = "9ffec9c1c13fc2e9f074825dc3e4c6bb6e5b44ffc1a02c88b33794526072d2c2"
+"name" = "gm - 245"
+"start" = 1072868
+"end" = 1074217
+"ls" = 1073644
+"le" = 1073705
+"rate" = 32000
+"root" = 72
+"corr" = -6
+
+[["samples"]]
+"id" = 210
+"file" = "sample-0210.wav"
+"sha256" = "f39710b11761b55875db3bde4caf49b8f76adacb6b3c2b52ba42019a5902e3d5"
+"name" = "gm - 246"
+"start" = 1074249
+"end" = 1075174
+"ls" = 1074632
+"le" = 1074662
+"rate" = 32000
+"root" = 84
+"corr" = -19
+
+[["samples"]]
+"id" = 211
+"file" = "sample-0211.wav"
+"sha256" = "73ef6139042591451554d9fdf32a40aa28527dac31534387e76029953827db5b"
+"name" = "gm - 247"
+"start" = 1075206
+"end" = 1076012
+"ls" = 1075479
+"le" = 1075500
+"rate" = 32000
+"root" = 91
+"corr" = 39
+
+[["samples"]]
+"id" = 212
+"file" = "sample-0212.wav"
+"sha256" = "2894883bb20b7254ff8e368121bdb4544710c4973d006dc4865652d9130eb7cc"
+"name" = "gm - 248"
+"start" = 1076044
+"end" = 1076776
+"ls" = 1076249
+"le" = 1076264
+"rate" = 32000
+"root" = 96
+"corr" = -32
+
+[["samples"]]
+"id" = 262
+"file" = "sample-0262.wav"
+"sha256" = "8b7952b82740504be5f3c1f1de70f21fbbaca487dcc0423fcee3562ef6ee95f7"
+"name" = "gm - 311"
+"start" = 1492135
+"end" = 1509074
+"ls" = 1497616
+"le" = 1508562
+"rate" = 32000
+"root" = 91
+"corr" = -15
+
+[["samples"]]
+"id" = 278
+"file" = "sample-0278.wav"
+"sha256" = "4a9d41a3203d3b07fc789ce4b164253b3ec50d6717a7961a8678c6be4ce4bdea"
+"name" = "gm - 332"
+"start" = 1795897
+"end" = 1836168
+"ls" = 1809188
+"le" = 1835656
+"rate" = 32000
+"root" = 55
+"corr" = -41
+
+[["samples"]]
+"id" = 279
+"file" = "sample-0279.wav"
+"sha256" = "33091d47a2b0ac21ad9b41665d52772f0c8c177ac2277ebab7be7b2d13b5bfa1"
+"name" = "gm - 333"
+"start" = 1836200
+"end" = 1875096
+"ls" = 1849026
+"le" = 1874584
+"rate" = 32000
+"root" = 60
+"corr" = -44
+
+[["samples"]]
+"id" = 280
+"file" = "sample-0280.wav"
+"sha256" = "c4b5bdb1cbb609d6ac88b8667ca8afc7d4b5c83f424e953da7afbefe28c62ea6"
+"name" = "gm - 334"
+"start" = 1875128
+"end" = 1906515
+"ls" = 1885441
+"le" = 1906003
+"rate" = 32000
+"root" = 72
+"corr" = -45
+
+[["samples"]]
+"id" = 281
+"file" = "sample-0281.wav"
+"sha256" = "9382aaabca2e611eaada7f1a85feac4fe2539ce2c98b6823e9276dcbf3ff5387"
+"name" = "gm - 335"
+"start" = 1906547
+"end" = 1929582
+"ls" = 1914072
+"le" = 1929070
+"rate" = 32000
+"root" = 84
+"corr" = -46
+
+[["samples"]]
+"id" = 282
+"file" = "sample-0282.wav"
+"sha256" = "813769793aee829543d02778b4913ad15c5451af3935d332248c8db15ba62f24"
+"name" = "gm - 336"
+"start" = 1929614
+"end" = 1943473
+"ls" = 1934083
+"le" = 1942961
+"rate" = 32000
+"root" = 96
+"corr" = -41
+
+[["samples"]]
+"id" = 283
+"file" = "sample-0283.wav"
+"sha256" = "efe68f69468ef97d6e64f480080c99b64b919bd956c33fa90f282835b51e251c"
+"name" = "gm - 337"
+"start" = 1943505
+"end" = 1976600
+"ls" = 1960780
+"le" = 1976088
+"rate" = 32000
+"root" = 92
+"corr" = 2
+
+[["samples"]]
+"id" = 284
+"file" = "sample-0284.wav"
+"sha256" = "8b5ee97fd3410994f0dc3b13c28c5eaf79a4cdd0222e267f4ecad9e8ad07dd75"
+"name" = "gm - 338"
+"start" = 1976632
+"end" = 1981496
+"ls" = 1978720
+"le" = 1980984
+"rate" = 32000
+"root" = 106
+"corr" = -27
+
+[["samples"]]
+"id" = 285
+"file" = "sample-0285.wav"
+"sha256" = "d15a959221625577f139b0a6d47ae9047ca39220b247d5668ead106fd402d275"
+"name" = "gm - 339"
+"start" = 1981528
+"end" = 2031909
+"ls" = 1998151
+"le" = 2031397
+"rate" = 32000
+"root" = 53
+"corr" = 9
+
+[["samples"]]
+"id" = 286
+"file" = "sample-0286.wav"
+"sha256" = "66f80b1301c6042a85f6b79e9a05dc816a09882575571cc93c280a5f5a8741d5"
+"name" = "gm - 340"
+"start" = 2031941
+"end" = 2076856
+"ls" = 2046742
+"le" = 2076344
+"rate" = 32000
+"root" = 57
+"corr" = -4
+
+[["samples"]]
+"id" = 287
+"file" = "sample-0287.wav"
+"sha256" = "3dceb967275402af61a5af3adbe9fc9ec76eca5c05e97dde8861be9ae988ee47"
+"name" = "gm - 341"
+"start" = 2076888
+"end" = 2118299
+"ls" = 2090521
+"le" = 2117787
+"rate" = 32000
+"root" = 61
+"corr" = -12
+
+[["samples"]]
+"id" = 288
+"file" = "sample-0288.wav"
+"sha256" = "323b93ba3a9c9cb1d5b97f001150cb91297fc8fcfce4738c3cac55d8b9158dcc"
+"name" = "gm - 342"
+"start" = 2118331
+"end" = 2157933
+"ls" = 2131361
+"le" = 2157421
+"rate" = 32000
+"root" = 66
+"corr" = -32
+
+[["samples"]]
+"id" = 289
+"file" = "sample-0289.wav"
+"sha256" = "2e6c5a2253dbac3aa24805ac7d114ba63f4c55e0663f851e6bf99a48e149c84b"
+"name" = "gm - 343"
+"start" = 2157965
+"end" = 2189110
+"ls" = 2168176
+"le" = 2188598
+"rate" = 32000
+"root" = 71
+"corr" = -8
+
+[["samples"]]
+"id" = 290
+"file" = "sample-0290.wav"
+"sha256" = "ae515052811d2ee03d8f356ccae78c21ac67f1d99ea92fe527486e8b8703770e"
+"name" = "gm - 344"
+"start" = 2189142
+"end" = 2225675
+"ls" = 2201149
+"le" = 2225163
+"rate" = 32000
+"root" = 73
+"corr" = -9
+
+[["samples"]]
+"id" = 530
+"file" = "sample-0530.wav"
+"sha256" = "2fe1208d8be91e6d85b76a6da428d4997765005a7acd991af92a0d92d5698026"
+"name" = "gm - 577"
+"start" = 3309256
+"end" = 3312302
+"ls" = 3309256
+"le" = 3312302
+"rate" = 32000
+"root" = 67
+"corr" = -30
+
+[["samples"]]
+"id" = 532
+"file" = "sample-0532.wav"
+"sha256" = "20ad6643e2f930373cb907995652373fc6604dca9be74c6cea89855be27b9a6d"
+"name" = "gm - 579"
+"start" = 3323865
+"end" = 3327707
+"ls" = 3323865
+"le" = 3327707
+"rate" = 32000
+"root" = 68
+"corr" = 36
+
+[["samples"]]
+"id" = 533
+"file" = "sample-0533.wav"
+"sha256" = "358711e7a3ebcbc5c8220044bdc03c1aae6a2ca2c9146469e4bca7c606869d27"
+"name" = "gm - 581"
+"start" = 3327739
+"end" = 3340991
+"ls" = 3337776
+"le" = 3340479
+"rate" = 32000
+"root" = 66
+"corr" = 0
+
+[["samples"]]
+"id" = 546
+"file" = "sample-0546.wav"
+"sha256" = "457cef1abc334d49e7623fcf5398c328f0c8f92d35547a56273319cfb3deffdc"
+"name" = "gm - 941"
+"start" = 3608618
+"end" = 3609616
+"ls" = 3608618
+"le" = 3609616
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 547
+"file" = "sample-0547.wav"
+"sha256" = "929ecbff6025060c9db7881bdb10fed9ee3cf85c264ec46190fd18a74a716b81"
+"name" = "gm - 942"
+"start" = 3609648
+"end" = 3616827
+"ls" = 3609648
+"le" = 3616827
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 548
+"file" = "sample-0548.wav"
+"sha256" = "19181ffc0e49031c101ac6177400bca3034f0ef1cf8ec0982e8e7aeedc98d623"
+"name" = "gm - 943"
+"start" = 3616859
+"end" = 3621316
+"ls" = 3616859
+"le" = 3621316
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 549
+"file" = "sample-0549.wav"
+"sha256" = "91718268c6a2af18a6bd3ee8d839f79233257d305f1e989fc34eb40c8cbf1913"
+"name" = "gm - 944"
+"start" = 3621348
+"end" = 3628116
+"ls" = 3621348
+"le" = 3628116
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 550
+"file" = "sample-0550.wav"
+"sha256" = "e21271042401566fc32263ee1797b3bf436ed0bd8eabe01c1d6a16e86ec7049d"
+"name" = "gm - 945"
+"start" = 3628148
+"end" = 3635382
+"ls" = 3628148
+"le" = 3635382
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 551
+"file" = "sample-0551.wav"
+"sha256" = "dce9fc9a7a7eb8d02ee24f0aa12cfd246019b5422f4d7528574112450f9eff3c"
+"name" = "gm - 946"
+"start" = 3635414
+"end" = 3635522
+"ls" = 3635414
+"le" = 3635522
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 552
+"file" = "sample-0552.wav"
+"sha256" = "10d6c9428ce66b2c84cec2c9b6e3a1612e0b191c32512b404f613d42d56e6496"
+"name" = "gm - 947"
+"start" = 3635554
+"end" = 3638915
+"ls" = 3635554
+"le" = 3638915
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 553
+"file" = "sample-0553.wav"
+"sha256" = "fbf3378e7e16dea61ebc73d8246990069610f22bf89a5d7fbbc9a74d35df2d8c"
+"name" = "gm - 948"
+"start" = 3638947
+"end" = 3643190
+"ls" = 3642491
+"le" = 3642678
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 554
+"file" = "sample-0554.wav"
+"sha256" = "f1225b029d59c9141283f05710f31d17e1b9a01ade04bc7981627ac99fe6996a"
+"name" = "gm - 949"
+"start" = 3643222
+"end" = 3647361
+"ls" = 3643222
+"le" = 3647361
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 558
+"file" = "sample-0558.wav"
+"sha256" = "ac3a77ce6e14d0a9d7de32a11d3483dcb9a62e8c9019feca5df70d0246a3ae7e"
+"name" = "gm - 952"
+"start" = 3662969
+"end" = 3669633
+"ls" = 3662969
+"le" = 3669633
+"rate" = 32000
+"root" = 60
+"corr" = -41
+
+[["samples"]]
+"id" = 559
+"file" = "sample-0559.wav"
+"sha256" = "a34b62fb0195415a5c25d3b7b8b5647193678e215c67deb427131ca0c3d10ef2"
+"name" = "gm - 953"
+"start" = 3669665
+"end" = 3678671
+"ls" = 3669665
+"le" = 3678671
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 563
+"file" = "sample-0563.wav"
+"sha256" = "f75810b564e63e6e38414f676ef58c45b1b9c82890b933349a14e02009239175"
+"name" = "gm - 617"
+"start" = 3728644
+"end" = 3767629
+"ls" = 3750343
+"le" = 3767117
+"rate" = 32000
+"root" = 60
+"corr" = -41
+
+[["samples"]]
+"id" = 564
+"file" = "sample-0564.wav"
+"sha256" = "42f687883cb53041a80738581081c63d5e64cec9b0cc4909c7da071516429354"
+"name" = "gm - 957"
+"start" = 3767661
+"end" = 3803050
+"ls" = 3783666
+"le" = 3802538
+"rate" = 32000
+"root" = 60
+"corr" = -41
+
+[["samples"]]
+"id" = 565
+"file" = "sample-0565.wav"
+"sha256" = "77b01b73b913203048fcb09a14d817c906dbd0cea7a4c4fc4f4a6de6a535060f"
+"name" = "gm - 958"
+"start" = 3803082
+"end" = 3830822
+"ls" = 3813926
+"le" = 3830310
+"rate" = 32000
+"root" = 63
+"corr" = -12
+
+[["samples"]]
+"id" = 566
+"file" = "sample-0566.wav"
+"sha256" = "d2903e8bd51bd760155bb03f9be99b0e662ef1a9517125d4bb29b51fc347d4a1"
+"name" = "gm - 959"
+"start" = 3830854
+"end" = 3861610
+"ls" = 3845476
+"le" = 3861098
+"rate" = 32000
+"root" = 67
+"corr" = 0
+
+[["samples"]]
+"id" = 567
+"file" = "sample-0567.wav"
+"sha256" = "bd9373256d678c1b790f13a598c7084bd054216b79f99f0998621f0bcda5f644"
+"name" = "gm - 960"
+"start" = 3861642
+"end" = 3867580
+"ls" = 3861642
+"le" = 3867580
+"rate" = 32000
+"root" = 60
+"corr" = -41
+
+[["samples"]]
+"id" = 569
+"file" = "sample-0569.wav"
+"sha256" = "da97c09d2dac647efcd51c70d2775b8cf94f22b4f0dbcb8cf06caebb946ce267"
+"name" = "gm - 962"
+"start" = 3870523
+"end" = 3877618
+"ls" = 3875776
+"le" = 3877106
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 570
+"file" = "sample-0570.wav"
+"sha256" = "36d542f48ead1efd653af5bb34357ddbb672c963802a5e30da14ca2d1b2666fa"
+"name" = "gm - 963"
+"start" = 3877650
+"end" = 3881331
+"ls" = 3877650
+"le" = 3881331
+"rate" = 32000
+"root" = 60
+"corr" = -41
+
+[["samples"]]
+"id" = 571
+"file" = "sample-0571.wav"
+"sha256" = "2849a8b07e41b24ce0304a15ad78fdeb031868979abe00f2b2d047c3579396bf"
+"name" = "gm - 964"
+"start" = 3881363
+"end" = 3885879
+"ls" = 3881363
+"le" = 3885879
+"rate" = 32000
+"root" = 60
+"corr" = -41
+
+[["samples"]]
+"id" = 574
+"file" = "sample-0574.wav"
+"sha256" = "76682baeb5be02b3eb689ff3ce44b6c15585142630ef2d3b30af589f340738ba"
+"name" = "gm - 967"
+"start" = 3894212
+"end" = 3902406
+"ls" = 3894212
+"le" = 3902406
+"rate" = 32000
+"root" = 61
+"corr" = -12
+
+[["samples"]]
+"id" = 575
+"file" = "sample-0575.wav"
+"sha256" = "63a3b04de4565bbcebecc99d8634693e84ff61422a53b3998881ad8fcbcc9f73"
+"name" = "gm - 968"
+"start" = 3902438
+"end" = 3904424
+"ls" = 3902438
+"le" = 3904424
+"rate" = 32000
+"root" = 61
+"corr" = -12
+
+[["samples"]]
+"id" = 577
+"file" = "sample-0577.wav"
+"sha256" = "7cf177a73c14ade36e4c7a3f33f912504d2eb9f5f5969326f2661a6f7df3601b"
+"name" = "gm - 970"
+"start" = 3906876
+"end" = 3910517
+"ls" = 3909706
+"le" = 3910005
+"rate" = 32000
+"root" = 61
+"corr" = -12
+
+[["samples"]]
+"id" = 578
+"file" = "sample-0578.wav"
+"sha256" = "94ef21cee1fc473b904b1d13dcdb4081fbc016f0e8eb82c393d00c777a184d4f"
+"name" = "gm - 971"
+"start" = 3910549
+"end" = 3912050
+"ls" = 3910549
+"le" = 3912050
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 579
+"file" = "sample-0579.wav"
+"sha256" = "82340f08db3b9885196fc3075ece4e055a47de9c25ba114275100b7a6bedd724"
+"name" = "gm - 972"
+"start" = 3912082
+"end" = 3919827
+"ls" = 3912082
+"le" = 3919827
+"rate" = 32000
+"root" = 66
+"corr" = 0
+
+[["samples"]]
+"id" = 581
+"file" = "sample-0581.wav"
+"sha256" = "96bf07faacf3a6103699df06ed89a84c65f4183a0e0a93eb0888fdb38bd16197"
+"name" = "gm - 973"
+"start" = 3921088
+"end" = 3924982
+"ls" = 3921088
+"le" = 3924982
+"rate" = 32000
+"root" = 70
+"corr" = 50
+
+[["samples"]]
+"id" = 582
+"file" = "sample-0582.wav"
+"sha256" = "a68a4938ddb400f06b3c23b022e922db1c6a328904d0d767df00f497cc3970a8"
+"name" = "gm - 974"
+"start" = 3925014
+"end" = 3930301
+"ls" = 3925014
+"le" = 3930301
+"rate" = 32000
+"root" = 70
+"corr" = 0
+
+[["samples"]]
+"id" = 583
+"file" = "sample-0583.wav"
+"sha256" = "82df5af88a4e5997defdfd928f7deb854a40453f566dedff0618d7eb3e7da827"
+"name" = "gm - 620"
+"start" = 3930333
+"end" = 3938063
+"ls" = 3936156
+"le" = 3937551
+"rate" = 32000
+"root" = 61
+"corr" = 0
+
+[["samples"]]
+"id" = 584
+"file" = "sample-0584.wav"
+"sha256" = "c82c808f8de0f08b41a5ad7a6dae9fe5df1fcb93ef56de30c4a9908dcbf8a393"
+"name" = "gm - 975"
+"start" = 3938095
+"end" = 3939317
+"ls" = 3938095
+"le" = 3939317
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 585
+"file" = "sample-0585.wav"
+"sha256" = "18913fc92371af5a41de6f9a08a9f0309efc10566876e3cec8171278aabd37fb"
+"name" = "gm - 976"
+"start" = 3939349
+"end" = 3952387
+"ls" = 3939349
+"le" = 3952387
+"rate" = 32000
+"root" = 61
+"corr" = -12
+
+[["samples"]]
+"id" = 586
+"file" = "sample-0586.wav"
+"sha256" = "c9d8dfc9ce7bc49bcbbc4c784f36a2e282474246966ecde8409cd4fc060e9a25"
+"name" = "gm - 977"
+"start" = 3952419
+"end" = 3976510
+"ls" = 3972616
+"le" = 3975998
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 587
+"file" = "sample-0587.wav"
+"sha256" = "9a33da1e94fa9f48842a6b429038b90f8ad1519199ce79345bf643e5e4754032"
+"name" = "gm - 580"
+"start" = 3976542
+"end" = 3978034
+"ls" = 3976542
+"le" = 3978034
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 593
+"file" = "sample-0593.wav"
+"sha256" = "6d64a01a647a277f2c7e92c436fcf020529829356839f03e759eeda43c70c262"
+"name" = "gm - 586"
+"start" = 4029908
+"end" = 4036861
+"ls" = 4029908
+"le" = 4036861
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 594
+"file" = "sample-0594.wav"
+"sha256" = "257318ef015f06bb44525dbf3efaed08b02b95e787f2681b18bdf15524c5c74d"
+"name" = "gm - 981"
+"start" = 4036893
+"end" = 4037433
+"ls" = 4036893
+"le" = 4037433
+"rate" = 32000
+"root" = 37
+"corr" = 0
+
+[["samples"]]
+"id" = 595
+"file" = "sample-0595.wav"
+"sha256" = "5333f161c688397988b13326a26b885362fb59e6907b717552f33cff78852a3c"
+"name" = "gm - 982"
+"start" = 4037465
+"end" = 4042891
+"ls" = 4037465
+"le" = 4042891
+"rate" = 32000
+"root" = 38
+"corr" = 0
+
+[["samples"]]
+"id" = 596
+"file" = "sample-0596.wav"
+"sha256" = "43444d59b3f9c6de884bbfa51740056ffb43d36061f0569be1ce61ef80122637"
+"name" = "gm - 983"
+"start" = 4042923
+"end" = 4057638
+"ls" = 4042923
+"le" = 4057638
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 597
+"file" = "sample-0597.wav"
+"sha256" = "aac8bde8c43ada0bec8b8845bf15d4d5cbb0130ab7c20008001c9ac9e9706035"
+"name" = "gm - 984"
+"start" = 4057670
+"end" = 4077787
+"ls" = 4071922
+"le" = 4077275
+"rate" = 32000
+"root" = 49
+"corr" = 0
+
+[["samples"]]
+"id" = 598
+"file" = "sample-0598.wav"
+"sha256" = "8c24b90b5d561f635bc5dee8a2f23be0083ec8c529c3ca06bc000d6dc89bf4f9"
+"name" = "gm - 985"
+"start" = 4077819
+"end" = 4087876
+"ls" = 4077819
+"le" = 4087876
+"rate" = 32000
+"root" = 56
+"corr" = 0
+
+[["samples"]]
+"id" = 599
+"file" = "sample-0599.wav"
+"sha256" = "04c4a506f40774d7f6ef51cf4276919e6d76e39d6b757de68e342242afc640de"
+"name" = "gm - 986"
+"start" = 4087908
+"end" = 4094802
+"ls" = 4087908
+"le" = 4094802
+"rate" = 32000
+"root" = 60
+"corr" = 0
+
+[["samples"]]
+"id" = 600
+"file" = "sample-0600.wav"
+"sha256" = "61d3a706c6d67b2a7c18db8528e951f205d585f4a9440d85f00df1d877bcb455"
+"name" = "gm - 987"
+"start" = 4094834
+"end" = 4096130
+"ls" = 4094834
+"le" = 4096130
+"rate" = 32000
+"root" = 75
+"corr" = 0
+
+[["presets"]]
+"bank" = 0
+"program" = 35
+"name" = "Fretless Bs."
+
+[["presets"."regions"]]
+"keys" = [0, 80]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11037
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2921
+"decayVolEnv" = 5320
+"releaseVolEnv" = -4450
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = 1902
+"sustainModEnv" = 0
+"releaseModEnv" = -3355
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [0, 80]
+"sampleModes" = 1
+"sampleID" = 204
+"initialAttenuation" = 266
+
+[["presets"."regions"]]
+"keys" = [81, 97]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11037
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2921
+"decayVolEnv" = 5320
+"releaseVolEnv" = -4450
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = 1902
+"sustainModEnv" = 0
+"releaseModEnv" = -3355
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [81, 97]
+"sampleModes" = 1
+"sampleID" = 205
+"initialAttenuation" = 266
+
+[["presets"."regions"]]
+"keys" = [98, 127]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11037
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2921
+"decayVolEnv" = 5320
+"releaseVolEnv" = -4450
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = 1902
+"sustainModEnv" = 0
+"releaseModEnv" = -3355
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [98, 127]
+"sampleModes" = 1
+"sampleID" = 170
+"initialAttenuation" = 266
+
+[["presets"]]
+"bank" = 0
+"program" = 36
+"name" = "Slap Bass 1"
+
+[["presets"."regions"]]
+"keys" = [0, 34]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [0, 34]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 206
+"initialAttenuation" = 94
+
+[["presets"."regions"]]
+"keys" = [35, 52]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [35, 52]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 207
+"initialAttenuation" = 94
+
+[["presets"."regions"]]
+"keys" = [53, 64]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [53, 64]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 208
+"initialAttenuation" = 94
+
+[["presets"."regions"]]
+"keys" = [65, 72]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [65, 72]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 209
+"initialAttenuation" = 94
+
+[["presets"."regions"]]
+"keys" = [73, 78]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [73, 78]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 210
+"initialAttenuation" = 94
+
+[["presets"."regions"]]
+"keys" = [79, 88]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [79, 88]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 211
+"initialAttenuation" = 94
+
+[["presets"."regions"]]
+"keys" = [89, 97]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [89, 97]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 212
+"initialAttenuation" = 94
+
+[["presets"."regions"]]
+"keys" = [98, 127]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 9837
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2931
+"decayVolEnv" = 3831
+"releaseVolEnv" = -6531
+"sustainVolEnv" = 224
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -1200
+"sustainModEnv" = 1000
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [98, 127]
+"initialFilterQ" = 30
+"modEnvToFilterFc" = 4800
+"sampleModes" = 1
+"sampleID" = 170
+"initialAttenuation" = 94
+
+[["presets"]]
+"bank" = 0
+"program" = 95
+"name" = "Sweep Pad"
+
+[["presets"."regions"]]
+"keys" = [0, 54]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11423
+"delayVolEnv" = -12000
+"attackVolEnv" = 0
+"holdVolEnv" = 1056
+"decayVolEnv" = 1174
+"releaseVolEnv" = 1681
+"sustainVolEnv" = 117
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = 0
+"delayModLFO" = -12000
+"freqModLFO" = -7624
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [0, 54]
+"initialFilterQ" = 100
+"modLfoToFilterFc" = 8000
+"modEnvToFilterFc" = -6000
+"fineTune" = -6
+"sampleModes" = 1
+"sampleID" = 278
+"initialAttenuation" = 324
+
+[["presets"."regions"]]
+"keys" = [55, 68]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11423
+"delayVolEnv" = -12000
+"attackVolEnv" = 0
+"holdVolEnv" = 1056
+"decayVolEnv" = 1174
+"releaseVolEnv" = 1681
+"sustainVolEnv" = 117
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = 0
+"delayModLFO" = -12000
+"freqModLFO" = -7624
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [55, 68]
+"initialFilterQ" = 100
+"modLfoToFilterFc" = 8000
+"modEnvToFilterFc" = -6000
+"fineTune" = -6
+"sampleModes" = 1
+"sampleID" = 279
+"initialAttenuation" = 324
+
+[["presets"."regions"]]
+"keys" = [69, 78]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11423
+"delayVolEnv" = -12000
+"attackVolEnv" = 0
+"holdVolEnv" = 1056
+"decayVolEnv" = 1174
+"releaseVolEnv" = 1681
+"sustainVolEnv" = 117
+"scaleTuning" = 100
+"overridingRootKey" = 73
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = 0
+"delayModLFO" = -12000
+"freqModLFO" = -7624
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [69, 78]
+"initialFilterQ" = 100
+"modLfoToFilterFc" = 8000
+"modEnvToFilterFc" = -6000
+"coarseTune" = 1
+"fineTune" = -6
+"sampleModes" = 1
+"sampleID" = 280
+"initialAttenuation" = 324
+
+[["presets"."regions"]]
+"keys" = [79, 90]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11423
+"delayVolEnv" = -12000
+"attackVolEnv" = 0
+"holdVolEnv" = 1056
+"decayVolEnv" = 1174
+"releaseVolEnv" = 1681
+"sustainVolEnv" = 117
+"scaleTuning" = 100
+"overridingRootKey" = 85
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = 0
+"delayModLFO" = -12000
+"freqModLFO" = -7624
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [79, 90]
+"initialFilterQ" = 100
+"modLfoToFilterFc" = 8000
+"modEnvToFilterFc" = -6000
+"coarseTune" = 1
+"fineTune" = -6
+"sampleModes" = 1
+"sampleID" = 281
+"initialAttenuation" = 324
+
+[["presets"."regions"]]
+"keys" = [91, 102]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11423
+"delayVolEnv" = -12000
+"attackVolEnv" = 0
+"holdVolEnv" = 1056
+"decayVolEnv" = 1174
+"releaseVolEnv" = 1681
+"sustainVolEnv" = 117
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = 0
+"delayModLFO" = -12000
+"freqModLFO" = -7624
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [91, 102]
+"initialFilterQ" = 100
+"modLfoToFilterFc" = 8000
+"modEnvToFilterFc" = -6000
+"fineTune" = -6
+"sampleModes" = 1
+"sampleID" = 282
+"initialAttenuation" = 324
+
+[["presets"."regions"]]
+"keys" = [103, 105]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11423
+"delayVolEnv" = -12000
+"attackVolEnv" = 0
+"holdVolEnv" = 1056
+"decayVolEnv" = 1174
+"releaseVolEnv" = 1681
+"sustainVolEnv" = 117
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = 0
+"delayModLFO" = -12000
+"freqModLFO" = -7624
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [103, 105]
+"initialFilterQ" = 100
+"modLfoToFilterFc" = 8000
+"modEnvToFilterFc" = -6000
+"fineTune" = -6
+"sampleModes" = 1
+"sampleID" = 283
+"initialAttenuation" = 324
+
+[["presets"."regions"]]
+"keys" = [106, 127]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 11423
+"delayVolEnv" = -12000
+"attackVolEnv" = 0
+"holdVolEnv" = 1056
+"decayVolEnv" = 1174
+"releaseVolEnv" = 1681
+"sustainVolEnv" = 117
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = 0
+"delayModLFO" = -12000
+"freqModLFO" = -7624
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [106, 127]
+"initialFilterQ" = 100
+"modLfoToFilterFc" = 8000
+"modEnvToFilterFc" = -6000
+"fineTune" = -6
+"sampleModes" = 1
+"sampleID" = 284
+"initialAttenuation" = 324
+
+[["presets"]]
+"bank" = 0
+"program" = 102
+"name" = "Echo Drops"
+
+[["presets"."regions"]]
+"keys" = [0, 53]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 10539
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = 1551
+"decayVolEnv" = 1251
+"releaseVolEnv" = 2525
+"sustainVolEnv" = 35
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [0, 53]
+"initialFilterQ" = 10
+"modEnvToFilterFc" = -3500
+"sampleModes" = 1
+"sampleID" = 285
+"initialAttenuation" = 202
+
+[["presets"."regions"]]
+"keys" = [54, 58]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 10539
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = 1551
+"decayVolEnv" = 1251
+"releaseVolEnv" = 2525
+"sustainVolEnv" = 35
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [54, 58]
+"initialFilterQ" = 10
+"modEnvToFilterFc" = -3500
+"sampleModes" = 1
+"sampleID" = 286
+"initialAttenuation" = 202
+
+[["presets"."regions"]]
+"keys" = [59, 62]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 10539
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = 1551
+"decayVolEnv" = 1251
+"releaseVolEnv" = 2525
+"sustainVolEnv" = 35
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [59, 62]
+"initialFilterQ" = 10
+"modEnvToFilterFc" = -3500
+"sampleModes" = 1
+"sampleID" = 287
+"initialAttenuation" = 202
+
+[["presets"."regions"]]
+"keys" = [63, 66]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 10539
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = 1551
+"decayVolEnv" = 1251
+"releaseVolEnv" = 2525
+"sustainVolEnv" = 35
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [63, 66]
+"initialFilterQ" = 10
+"modEnvToFilterFc" = -3500
+"sampleModes" = 1
+"sampleID" = 288
+"initialAttenuation" = 202
+
+[["presets"."regions"]]
+"keys" = [67, 71]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 10539
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = 1551
+"decayVolEnv" = 1251
+"releaseVolEnv" = 2525
+"sustainVolEnv" = 35
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [67, 71]
+"initialFilterQ" = 10
+"modEnvToFilterFc" = -3500
+"sampleModes" = 1
+"sampleID" = 289
+"initialAttenuation" = 202
+
+[["presets"."regions"]]
+"keys" = [72, 84]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 10539
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = 1551
+"decayVolEnv" = 1251
+"releaseVolEnv" = 2525
+"sustainVolEnv" = 35
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [72, 84]
+"initialFilterQ" = 10
+"modEnvToFilterFc" = -3500
+"sampleModes" = 1
+"sampleID" = 290
+"initialAttenuation" = 202
+
+[["presets"."regions"]]
+"keys" = [85, 127]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 10539
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = 1551
+"decayVolEnv" = 1251
+"releaseVolEnv" = 2525
+"sustainVolEnv" = 35
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [85, 127]
+"initialFilterQ" = 10
+"modEnvToFilterFc" = -3500
+"sampleModes" = 1
+"sampleID" = 262
+"initialAttenuation" = 202
+
+[["presets"]]
+"bank" = 128
+"program" = 25
+"name" = "TR-808"
+
+[["presets"."regions"]]
+"keys" = [27, 27]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -8320
+"decayVolEnv" = 196
+"releaseVolEnv" = 3829
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 27
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [27, 27]
+"pan" = -117
+"initialAttenuation" = 358
+"sampleID" = 546
+
+[["presets"."regions"]]
+"keys" = [28, 28]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4439
+"decayVolEnv" = -271
+"releaseVolEnv" = 3790
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 28
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [28, 28]
+"pan" = -117
+"initialAttenuation" = 238
+"sampleID" = 547
+
+[["presets"."regions"]]
+"keys" = [29, 29]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -2096
+"releaseVolEnv" = 3723
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 29
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [29, 29]
+"pan" = -78
+"initialAttenuation" = 330
+"coarseTune" = 3
+"exclusiveClass" = 7
+"sampleID" = 548
+
+[["presets"."regions"]]
+"keys" = [30, 30]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -3228
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3674
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 30
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [30, 30]
+"pan" = -78
+"initialAttenuation" = 314
+"coarseTune" = 2
+"exclusiveClass" = 7
+"sampleID" = 549
+
+[["presets"."regions"]]
+"keys" = [31, 31]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -7192
+"decayVolEnv" = 2316
+"releaseVolEnv" = 4273
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 31
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [31, 31]
+"initialAttenuation" = 197
+"sampleID" = 550
+
+[["presets"."regions"]]
+"keys" = [32, 32]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -5232
+"decayVolEnv" = -11999
+"releaseVolEnv" = 3611
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 32
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [32, 32]
+"pan" = -78
+"initialAttenuation" = 160
+"sampleID" = 551
+
+[["presets"."regions"]]
+"keys" = [33, 33]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -5232
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3651
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 33
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [33, 33]
+"initialAttenuation" = 281
+"sampleID" = 552
+
+[["presets"."regions"]]
+"keys" = [34, 34]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 1293
+"releaseVolEnv" = 1293
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 34
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [34, 34]
+"initialAttenuation" = 273
+"sampleModes" = 1
+"sampleID" = 553
+
+[["presets"."regions"]]
+"keys" = [35, 35]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4439
+"decayVolEnv" = -1684
+"releaseVolEnv" = 3695
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 35
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [35, 35]
+"initialAttenuation" = 190
+"fineTune" = 50
+"sampleID" = 554
+
+[["presets"."regions"]]
+"keys" = [36, 36]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 959
+"releaseVolEnv" = 3941
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 36
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [36, 36]
+"initialAttenuation" = 177
+"coarseTune" = -24
+"sampleID" = 593
+
+[["presets"."regions"]]
+"keys" = [37, 37]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2795
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3662
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [37, 37]
+"initialAttenuation" = 207
+"sampleID" = 594
+
+[["presets"."regions"]]
+"keys" = [38, 38]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -1586
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3705
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [38, 38]
+"initialAttenuation" = 200
+"sampleID" = 595
+
+[["presets"."regions"]]
+"keys" = [39, 39]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -3343
+"decayVolEnv" = -600
+"releaseVolEnv" = 3775
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 39
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [39, 39]
+"pan" = -78
+"initialAttenuation" = 253
+"sampleID" = 558
+
+[["presets"."regions"]]
+"keys" = [40, 40]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -3343
+"decayVolEnv" = -1490
+"releaseVolEnv" = 3717
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 40
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [40, 40]
+"initialAttenuation" = 157
+"sampleID" = 559
+
+[["presets"."regions"]]
+"keys" = [41, 41]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4674
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3634
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 56
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [41, 41]
+"pan" = -234
+"initialAttenuation" = 106
+"sampleModes" = 1
+"sampleID" = 593
+
+[["presets"."regions"]]
+"keys" = [42, 42]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = -4034
+"releaseVolEnv" = -4039
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 42
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [42, 42]
+"pan" = 156
+"initialAttenuation" = 139
+"exclusiveClass" = 1
+"sampleID" = 596
+
+[["presets"."regions"]]
+"keys" = [43, 43]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4674
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3634
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 55
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [43, 43]
+"pan" = -140
+"initialAttenuation" = 132
+"sampleID" = 593
+
+[["presets"."regions"]]
+"keys" = [44, 44]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3622
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 44
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [44, 44]
+"pan" = 156
+"initialAttenuation" = 326
+"exclusiveClass" = 1
+"sampleID" = 596
+
+[["presets"."regions"]]
+"keys" = [45, 45]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4674
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3634
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 53
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [45, 45]
+"pan" = -46
+"initialAttenuation" = 165
+"sampleID" = 593
+
+[["presets"."regions"]]
+"keys" = [46, 46]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3682
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 46
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [46, 46]
+"pan" = 156
+"initialAttenuation" = 138
+"exclusiveClass" = 1
+"sampleID" = 596
+
+[["presets"."regions"]]
+"keys" = [47, 47]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4674
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3634
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 51
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [47, 47]
+"pan" = 46
+"initialAttenuation" = 162
+"sampleID" = 593
+
+[["presets"."regions"]]
+"keys" = [48, 48]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4674
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3634
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 48
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [48, 48]
+"pan" = 140
+"initialAttenuation" = 131
+"sampleID" = 593
+
+[["presets"."regions"]]
+"keys" = [49, 49]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2279
+"releaseVolEnv" = 2279
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [49, 49]
+"pan" = 156
+"initialAttenuation" = 145
+"sampleModes" = 1
+"exclusiveClass" = 3
+"sampleID" = 597
+
+[["presets"."regions"]]
+"keys" = [50, 50]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4674
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3634
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 46
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [50, 50]
+"pan" = 234
+"initialAttenuation" = 109
+"sampleID" = 593
+
+[["presets"."regions"]]
+"keys" = [51, 51]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2837
+"releaseVolEnv" = 2837
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 51
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [51, 51]
+"pan" = -156
+"initialAttenuation" = 215
+"sampleID" = 564
+
+[["presets"."regions"]]
+"keys" = [52, 52]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2035
+"releaseVolEnv" = 2035
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 55
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [52, 52]
+"pan" = -156
+"initialAttenuation" = 245
+"sampleID" = 565
+
+[["presets"."regions"]]
+"keys" = [53, 53]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2509
+"releaseVolEnv" = 2509
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 60
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [53, 53]
+"pan" = -156
+"initialAttenuation" = 285
+"sampleID" = 566
+
+[["presets"."regions"]]
+"keys" = [54, 54]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4674
+"decayVolEnv" = -943
+"releaseVolEnv" = 3733
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 54
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [54, 54]
+"pan" = 78
+"initialAttenuation" = 271
+"sampleID" = 567
+
+[["presets"."regions"]]
+"keys" = [55, 55]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2222
+"releaseVolEnv" = 2222
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 46
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [55, 55]
+"pan" = -78
+"initialAttenuation" = 209
+"sampleModes" = 1
+"sampleID" = 563
+
+[["presets"."regions"]]
+"keys" = [56, 56]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3682
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [56, 56]
+"pan" = 156
+"initialAttenuation" = 176
+"sampleID" = 598
+
+[["presets"."regions"]]
+"keys" = [57, 57]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2222
+"releaseVolEnv" = 2222
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 56
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [57, 57]
+"pan" = -156
+"initialAttenuation" = 134
+"sampleModes" = 1
+"exclusiveClass" = 3
+"sampleID" = 563
+
+[["presets"."regions"]]
+"keys" = [58, 58]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 1674
+"releaseVolEnv" = 1674
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 58
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [58, 58]
+"pan" = -273
+"initialAttenuation" = 249
+"coarseTune" = -1
+"sampleModes" = 1
+"sampleID" = 569
+
+[["presets"."regions"]]
+"keys" = [59, 59]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2837
+"releaseVolEnv" = 2837
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 58
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [59, 59]
+"pan" = -234
+"initialAttenuation" = 197
+"sampleID" = 564
+
+[["presets"."regions"]]
+"keys" = [60, 60]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2795
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3682
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [60, 60]
+"pan" = 273
+"initialAttenuation" = 109
+"sampleID" = 570
+
+[["presets"."regions"]]
+"keys" = [61, 61]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -5232
+"decayVolEnv" = -3355
+"releaseVolEnv" = 3641
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 61
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [61, 61]
+"pan" = 273
+"initialAttenuation" = 114
+"sampleID" = 571
+
+[["presets"."regions"]]
+"keys" = [62, 62]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3682
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 62
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [62, 62]
+"pan" = -195
+"initialAttenuation" = 231
+"sampleID" = 599
+
+[["presets"."regions"]]
+"keys" = [63, 63]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3682
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 71
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [63, 63]
+"pan" = -156
+"initialAttenuation" = 206
+"sampleID" = 599
+
+[["presets"."regions"]]
+"keys" = [64, 64]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3682
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 78
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [64, 64]
+"pan" = -117
+"initialAttenuation" = 153
+"sampleID" = 599
+
+[["presets"."regions"]]
+"keys" = [65, 65]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3705
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 65
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [65, 65]
+"pan" = 156
+"initialAttenuation" = 391
+"sampleID" = 574
+
+[["presets"."regions"]]
+"keys" = [66, 66]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3705
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 71
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [66, 66]
+"pan" = 156
+"initialAttenuation" = 401
+"sampleID" = 574
+
+[["presets"."regions"]]
+"keys" = [67, 67]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2108
+"decayVolEnv" = -7248
+"releaseVolEnv" = 3666
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 69
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [67, 67]
+"pan" = -273
+"initialAttenuation" = 198
+"sampleID" = 530
+
+[["presets"."regions"]]
+"keys" = [68, 68]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2108
+"decayVolEnv" = -7248
+"releaseVolEnv" = 3666
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 75
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [68, 68]
+"pan" = -273
+"initialAttenuation" = 191
+"sampleID" = 530
+
+[["presets"."regions"]]
+"keys" = [69, 69]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2795
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3662
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 70
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [69, 69]
+"pan" = -273
+"initialAttenuation" = 244
+"sampleID" = 575
+
+[["presets"."regions"]]
+"keys" = [70, 70]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -1586
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3705
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 70
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [70, 70]
+"pan" = -312
+"initialAttenuation" = 186
+"sampleID" = 584
+
+[["presets"."regions"]]
+"keys" = [71, 71]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = -3986
+"releaseVolEnv" = -3986
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 72
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [71, 71]
+"pan" = 273
+"initialAttenuation" = 328
+"coarseTune" = 2
+"sampleModes" = 1
+"exclusiveClass" = 2
+"sampleID" = 577
+
+[["presets"."regions"]]
+"keys" = [72, 72]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = -1712
+"releaseVolEnv" = -1712
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 73
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [72, 72]
+"pan" = 273
+"initialAttenuation" = 298
+"sampleModes" = 1
+"exclusiveClass" = 2
+"sampleID" = 577
+
+[["presets"."regions"]]
+"keys" = [73, 73]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4025
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3662
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 73
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [73, 73]
+"pan" = 234
+"initialAttenuation" = 170
+"exclusiveClass" = 3
+"sampleID" = 578
+
+[["presets"."regions"]]
+"keys" = [74, 74]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2544
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3691
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 80
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [74, 74]
+"pan" = 234
+"initialAttenuation" = 195
+"coarseTune" = 2
+"fineTune" = -20
+"exclusiveClass" = 3
+"sampleID" = 579
+
+[["presets"."regions"]]
+"keys" = [75, 75]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -2096
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3682
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = -1
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [75, 75]
+"pan" = 156
+"initialAttenuation" = 197
+"sampleID" = 600
+
+[["presets"."regions"]]
+"keys" = [76, 76]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4025
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3641
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 76
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [76, 76]
+"pan" = 273
+"initialAttenuation" = 186
+"sampleID" = 532
+
+[["presets"."regions"]]
+"keys" = [77, 77]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4025
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3641
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 82
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [77, 77]
+"pan" = 273
+"initialAttenuation" = 190
+"sampleID" = 532
+
+[["presets"."regions"]]
+"keys" = [78, 78]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -1586
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3723
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 88
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [78, 78]
+"pan" = -156
+"initialAttenuation" = 313
+"exclusiveClass" = 4
+"sampleID" = 581
+
+[["presets"."regions"]]
+"keys" = [79, 79]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -1586
+"decayVolEnv" = -2804
+"releaseVolEnv" = 3723
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 89
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [79, 79]
+"pan" = -156
+"initialAttenuation" = 292
+"exclusiveClass" = 4
+"sampleID" = 582
+
+[["presets"."regions"]]
+"keys" = [80, 80]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = -1394
+"releaseVolEnv" = -1394
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 81
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [80, 80]
+"pan" = -312
+"initialAttenuation" = 307
+"sampleModes" = 1
+"exclusiveClass" = 5
+"sampleID" = 583
+
+[["presets"."regions"]]
+"keys" = [81, 81]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 1751
+"releaseVolEnv" = 1751
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 82
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [81, 81]
+"pan" = -312
+"initialAttenuation" = 250
+"sampleModes" = 1
+"exclusiveClass" = 5
+"sampleID" = 583
+
+[["presets"."regions"]]
+"keys" = [82, 82]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -1586
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3705
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 82
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [82, 82]
+"pan" = 234
+"initialAttenuation" = 256
+"sampleID" = 584
+
+[["presets"."regions"]]
+"keys" = [83, 83]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -943
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3739
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 84
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [83, 83]
+"pan" = 273
+"initialAttenuation" = 143
+"sampleID" = 585
+
+[["presets"."regions"]]
+"keys" = [84, 84]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 2108
+"releaseVolEnv" = 2108
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 84
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [84, 84]
+"pan" = 312
+"initialAttenuation" = 240
+"sampleModes" = 1
+"sampleID" = 586
+
+[["presets"."regions"]]
+"keys" = [85, 85]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -4025
+"decayVolEnv" = -4034
+"releaseVolEnv" = 3641
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 85
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [85, 85]
+"pan" = -234
+"initialAttenuation" = 144
+"sampleID" = 587
+
+[["presets"."regions"]]
+"keys" = [86, 86]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = -896
+"releaseVolEnv" = -896
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 92
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [86, 86]
+"pan" = -156
+"initialAttenuation" = 202
+"sampleModes" = 1
+"exclusiveClass" = 6
+"sampleID" = 533
+
+[["presets"."regions"]]
+"keys" = [87, 87]
+"velocities" = [0, 127]
+
+["presets"."regions"."generators"]
+"initialFilterFc" = 13500
+"delayVolEnv" = -12000
+"attackVolEnv" = -12000
+"holdVolEnv" = -11999
+"decayVolEnv" = 1896
+"releaseVolEnv" = 1896
+"sustainVolEnv" = 1000
+"scaleTuning" = 100
+"overridingRootKey" = 93
+"keynum" = -1
+"velocity" = -1
+"delayModEnv" = -12000
+"attackModEnv" = -12000
+"holdModEnv" = -12000
+"decayModEnv" = -12000
+"sustainModEnv" = 0
+"releaseModEnv" = -12000
+"delayModLFO" = -12000
+"freqModLFO" = 0
+"delayVibLFO" = -12000
+"freqVibLFO" = 0
+"keyRange" = [87, 87]
+"pan" = -156
+"initialAttenuation" = 141
+"sampleModes" = 1
+"exclusiveClass" = 6
+"sampleID" = 533

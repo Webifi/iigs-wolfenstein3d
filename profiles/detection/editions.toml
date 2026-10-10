@@ -1,0 +1,85 @@
+# Fingerprints identify campaign maps/art even when an installer renames them.
+# These are SHA-256 hashes, not game data. Graphics layouts are validated separately.
+# Equivalent editions can have the same map hashes; display all matching provenance.
+format = 1
+
+[[editions]]
+edition_id = "shareware-apogee-1.4"
+profile = "shareware"
+description = "Apogee shareware 1.4"
+[editions.map_files]
+MAPHEAD = "3458f661c9b875bca99ea22a7267771fad8f2a33c699ea732cf7c3322909bf8c"
+GAMEMAPS = "a6a6654b342f2c027bcb22bfce0a41f9fc0063b775e9e4da0c771970e53e11aa"
+VSWAP = "698f217257e2cbb951a4d110ba09140291f38d0121b3784d1d6be59c03a6b47b"
+
+[[editions]]
+edition_id = "registered-apogee-1.4"
+profile = "wolf3d"
+description = "Apogee registered 1.4"
+[editions.map_files]
+MAPHEAD = "289e04f47128a5ba19f9b3f912b4048e26dc16c6fa00205ead51efb1d8e23c69"
+GAMEMAPS = "3df9f2ad54c601e79ab117c8175477b5d96571ba9e290cb9cd7d910abfeaae56"
+VSWAP = "49ba24e0b3916732cd065122de4fe6fb6e6a5009c353eafa407c0e3a5a503407"
+
+[[editions]]
+edition_id = "registered-gt-1.4"
+profile = "wolf3d"
+description = "GT registered 1.4"
+[editions.map_files]
+MAPHEAD = "289e04f47128a5ba19f9b3f912b4048e26dc16c6fa00205ead51efb1d8e23c69"
+GAMEMAPS = "3df9f2ad54c601e79ab117c8175477b5d96571ba9e290cb9cd7d910abfeaae56"
+VSWAP = "175f3acb81cbc10297223e8916c1b90c5a0db0cf1d1d55732629624906aff083"
+
+[[editions]]
+edition_id = "spear-disk"
+profile = "spear"
+description = "Original disk installation"
+[editions.map_files]
+MAPHEAD = "3093aa7b0c88a3dfac9f5cc16d9f1b2fee338a9c4f43e1063ce15ca109498736"
+GAMEMAPS = "772d834d97d429388be3cd7caa517e49a7e82e06367bd6f16d46c6b96e25ae1d"
+VSWAP = "6d9e54808a4738f11c37964d032c9a1c68a8ca98fcb18e6ccba286502967a568"
+
+[[editions]]
+edition_id = "spear-cd"
+profile = "spear"
+description = "Super CD Pack"
+[editions.map_files]
+MAPHEAD = "3093aa7b0c88a3dfac9f5cc16d9f1b2fee338a9c4f43e1063ce15ca109498736"
+GAMEMAPS = "772d834d97d429388be3cd7caa517e49a7e82e06367bd6f16d46c6b96e25ae1d"
+VSWAP = "6d9e54808a4738f11c37964d032c9a1c68a8ca98fcb18e6ccba286502967a568"
+
+[[editions]]
+edition_id = "spear-mission2-disk"
+profile = "spear-mission2"
+description = "Original disk installation"
+[editions.map_files]
+MAPHEAD = "b3749cd2175284ed8b3ae4dbbd3704f5ef116b30ea49a373fed5538170bc0bbe"
+GAMEMAPS = "29c6c1c3dbd2fe21e2e642615a0f6943952c1d7aff70e148d1b3b54e254899ba"
+VSWAP = "97112755b1a07ab9ef5031f76ff04288de7e5bf910020e965f4bde9bcb7a96a6"
+
+[[editions]]
+edition_id = "spear-mission2-cd"
+profile = "spear-mission2"
+description = "Super CD Pack"
+[editions.map_files]
+MAPHEAD = "b3749cd2175284ed8b3ae4dbbd3704f5ef116b30ea49a373fed5538170bc0bbe"
+GAMEMAPS = "29c6c1c3dbd2fe21e2e642615a0f6943952c1d7aff70e148d1b3b54e254899ba"
+VSWAP = "97112755b1a07ab9ef5031f76ff04288de7e5bf910020e965f4bde9bcb7a96a6"
+
+[[editions]]
+edition_id = "spear-mission3-disk"
+profile = "spear-mission3"
+description = "Original disk installation"
+[editions.map_files]
+MAPHEAD = "3d7f82e2d578f9081da6887119c6324e19137dae5bee11cdf6a8e8147fc5d503"
+GAMEMAPS = "4f4a9d0a9cda58eb6dfc6663b8e63090a7f4e941b71b01261964c242b9bc7470"
+VSWAP = "d3e357682f5ff5e54c7406a191d207e8e25bfd2d42c80206a2e378fb658c4c5d"
+
+[[editions]]
+edition_id = "spear-mission3-cd"
+profile = "spear-mission3"
+description = "Super CD Pack"
+[editions.map_files]
+MAPHEAD = "104c903cd27251efd061963c1c6d103c24c174178e8a0bb752a35f7dbbdb97c0"
+GAMEMAPS = "f8e9c436cb07403713c4a2c77860b49d71350b42e85a9d28c634e25b081c62d0"
+VSWAP = "b3ecc158a7219d835755725cb58e21103dfbe46bd8590e3352eaa02f1d57d62d"

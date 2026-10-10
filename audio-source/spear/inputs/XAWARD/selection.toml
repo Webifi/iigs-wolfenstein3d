@@ -1,0 +1,64 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 62
+"bank" = [0, 0]
+"notes" = 54
+"name" = "Brass Section"
+
+[["instruments"]]
+"channel" = 3
+"program" = 61
+"bank" = [0, 0]
+"notes" = 88
+"name" = "French Horn"
+
+[["instruments"]]
+"channel" = 4
+"program" = 58
+"bank" = [0, 0]
+"notes" = 88
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 5
+"program" = 58
+"bank" = [0, 0]
+"notes" = 88
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 6
+"program" = 59
+"bank" = [0, 0]
+"notes" = 65
+"name" = "Tuba"
+
+[["instruments"]]
+"channel" = 7
+"program" = 33
+"bank" = [0, 0]
+"notes" = 60
+"name" = "Acoustic Bass"
+
+[["instruments"]]
+"channel" = 9
+"program" = 117
+"bank" = [0, 0]
+"notes" = 78
+"name" = "Taiko Drum"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 209
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "3a3dcdb2a0c61298a2c90c99ba9018917f6fb7b1e739ec1133f7162f2e92117c"
+"authority" = "fan-conversion"

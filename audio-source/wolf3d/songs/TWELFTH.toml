@@ -1,0 +1,60 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "TWELFTH"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/TWELFTH/score.toml"
+"sha256" = "0f7cd55ddfc714d4a0eb8c8236eeb0220005656a9a245f6c74473fb91bec66d2"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/TWELFTH.imf"
+"sha256" = "a6055f749e568bdb3107b42f1cc7de2cc296376bed2cbaf8c2a2c19f56385a3b"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/TWELFTH/sampling.toml"
+
+["doc"."pan"]
+"ch01" = 63
+"ch02" = 63
+"ch03" = 64
+"ch04" = 25
+"ch05" = 102
+"ch06" = 65
+"ch07" = 64
+"ch08" = 14
+"ch11" = 113
+
+["doc"."levels"]
+"ch02" = 1.937
+"ch03" = 1.6338
+"ch04" = 2.4109
+"ch05" = -0.3443
+"ch06" = 2.2679
+"ch07" = -5.1501
+"ch08" = -21.4046
+"k38" = 1.0819
+"k40" = 1.0819
+"ch11" = -21.4073
+"ch01" = 0.3048

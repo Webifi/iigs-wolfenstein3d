@@ -1,0 +1,71 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 100
+"bank" = [0, 0]
+"notes" = 140
+"name" = "FX 4 (atmosphere)"
+
+[["instruments"]]
+"channel" = 3
+"program" = 89
+"bank" = [0, 0]
+"notes" = 37
+"name" = "Pad 1 (new age)"
+
+[["instruments"]]
+"channel" = 4
+"program" = 89
+"bank" = [0, 0]
+"notes" = 37
+"name" = "Pad 1 (new age)"
+
+[["instruments"]]
+"channel" = 5
+"program" = 89
+"bank" = [0, 0]
+"notes" = 37
+"name" = "Pad 1 (new age)"
+
+[["instruments"]]
+"channel" = 6
+"program" = 82
+"bank" = [0, 0]
+"notes" = 12
+"name" = "Lead 2 (sawtooth)"
+
+[["instruments"]]
+"channel" = 7
+"program" = 50
+"bank" = [0, 0]
+"notes" = 15
+"name" = "String Ensemble 2"
+
+[["instruments"]]
+"channel" = 8
+"program" = 61
+"bank" = [0, 0]
+"notes" = 28
+"name" = "French Horn"
+
+[["instruments"]]
+"channel" = 9
+"program" = 89
+"bank" = [0, 0]
+"notes" = 65
+"name" = "Pad 1 (new age)"
+
+[["instruments"]]
+"channel" = 10
+"program" = 1
+"bank" = [0, 0]
+"notes" = 80
+"name" = "Drum kit"
+
+["source"]
+"kind" = "midi"
+"sha256" = "f90a60576764ceed5e9d34e007b545a609fb4d5ed418902f18cb2a8eee48eaf8"
+"authority" = "composer-original"

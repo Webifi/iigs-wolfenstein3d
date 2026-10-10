@@ -1,0 +1,59 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "INTROCW3"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/INTROCW3/score.toml"
+"sha256" = "332592a63eb64881db4df57e0f9f27c1a0dcda9731abd201a514a30f0a29fbff"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/INTROCW3.imf"
+"sha256" = "087a947cff3a33e9b936bebe74a9b8c4b5ee101387e4f916f31862dcc4312b9a"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/INTROCW3/sampling.toml"
+
+["doc"."levels"]
+"ch01" = 0.9501
+"ch02" = 8.0144
+"ch03" = 0.5819
+"ch04" = 4.6975
+"ch06" = 3.0206
+"ch07" = -10.2966
+"ch08" = 4.3082
+"ch09" = -0.1351
+"k38" = 3.0987
+"ch05" = 3.5678
+
+["doc"."pan"]
+"ch01" = 62
+"ch02" = 67
+"ch03" = 6
+"ch04" = 63
+"ch05" = 119
+"ch06" = 120
+"ch07" = 6
+"ch08" = 60
+"ch09" = 63

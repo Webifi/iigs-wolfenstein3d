@@ -1,0 +1,34 @@
+# Installed DOS container sets. Resolve paths relative to the input folder.
+# Shared files may live next to the maps or in another folder in that tree.
+# Content fingerprints distinguish mission data renamed to .SOD by installers.
+format = 1
+
+[[layouts]]
+extension = "WL1"
+shared_extension = "WL1"
+profile = "shareware"
+
+[[layouts]]
+extension = "WL6"
+shared_extension = "WL6"
+profile = "wolf3d"
+
+[[layouts]]
+extension = "SOD"
+shared_extension = "SOD"
+profile = "spear"
+
+[[layouts]]
+extension = "SD1"
+shared_extension = "SOD"
+profile = "spear"
+
+[[layouts]]
+extension = "SD2"
+shared_extension = "SOD"
+profile = "spear-mission2"
+
+[[layouts]]
+extension = "SD3"
+shared_extension = "SOD"
+profile = "spear-mission3"

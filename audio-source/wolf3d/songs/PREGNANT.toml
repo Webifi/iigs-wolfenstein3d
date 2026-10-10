@@ -1,0 +1,52 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "PREGNANT"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/PREGNANT/score.toml"
+"sha256" = "d0775fec85c9c99dfe418b2266edb378dc6a19a365b9886cb51140268075da9b"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/PREGNANT.imf"
+"sha256" = "0543de4ce34707757d30864008ae610007c6cf7aafc71f5633e323c13bfb91d8"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/PREGNANT/sampling.toml"
+
+["doc"."levels"]
+"ch01" = 3.2053
+"ch03" = 9.7467
+"ch04" = -1.5405
+"ch05" = -22.2016
+"k38" = 0.2527
+"k45" = 0.2527
+"k70" = 0.2527
+
+["doc"."pan"]
+"ch01" = 67
+"ch02" = 63
+"ch03" = 65
+"ch04" = 64
+"ch05" = 66

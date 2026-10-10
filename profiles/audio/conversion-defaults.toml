@@ -1,0 +1,462 @@
+# Source settings of the accepted shareware arrangements.
+# These preserve the existing mix and sample budgets; they contain no audio.
+# channel/key identify MIDI parts AFTER instrument-defaults.toml is applied.
+# Only an exact performed score and controller match selects a song entry.
+# Samples are regenerated from complete Roland instrument tracks.
+# levels: dB correction; pan: 0 left, 64 center, 127 right.
+format = 1
+# Keep the loop geometry used when these mixes were calibrated.
+loop_layout = "repeated-endpoint"
+
+[[song]]
+name = "NAZI_NOR"
+song_gain_steps = 18
+performance_sha256 = "36d0a22cb274450044bc103a3059908dbc742c19ad78c4204e15944e24b9d6b6"
+
+[song.levels]
+ch03 = 2.9
+ch04 = -0.5
+ch05 = 1.6
+
+[[song.capture]]
+channel = 10
+key = 36
+rate = 10000
+bytes = 4096
+
+[[song.capture]]
+channel = 10
+key = 38
+rate = 16000
+bytes = 8192
+
+[[song]]
+name = "WONDERIN"
+song_gain_steps = 11
+performance_sha256 = "25e988ee6dbc1d66fa7763e069066ae63643174565ea1be6c9f7789ace82fec6"
+
+# The saved mix calibration was measured at this sample-fitting configuration.
+[song.quality]
+min_notes = 40
+merge_st = 9
+attack = 0.04
+cym_attack = 0.04
+noise_loop = 255
+f_mel = 2000.0
+f_cym = 7000.0
+f_drum = 4000.0
+drum_max = 0.18
+f_floor = 4000.0
+
+[song.levels]
+ch02 = -3.4
+ch03 = 1.1
+ch04 = -2.9
+ch05 = -0.8
+ch06 = 2.9
+ch07 = -0.9
+ch08 = 0.0
+ch09 = 3.2
+
+[song.pan]
+ch02 = 82
+ch03 = 29
+ch04 = 40
+ch05 = 53
+ch06 = 88
+ch07 = 75
+ch08 = 64
+ch09 = 54
+
+[[song.capture]]
+channel = 2
+key = 51
+bytes = 1024
+loop_bytes = 1024
+loop_start = 0.25
+rate = 8000
+release_seconds = 1.8
+fine_static = false
+
+[[song]]
+name = "GETTHEM"
+song_gain_steps = 17
+performance_sha256 = "d78e80ab75efcf5dbb6a161e3c09135244cb752ffe8d8f62f8e494a0883c53ea"
+
+[song.levels]
+ch02 = -1.4
+ch03 = -0.9
+ch04 = 0.7
+ch05 = -0.4
+ch06 = 1.4
+ch07 = -3.3
+ch08 = 0.8
+
+[song.pan]
+ch02 = 65
+ch03 = 63
+ch04 = 40
+ch05 = 63
+ch06 = 88
+ch07 = 64
+ch08 = 62
+
+[[song.capture]]
+channel = 10
+key = 40
+bytes = 4096
+rate = 11000
+
+[[song.capture]]
+channel = 3
+key = 36
+bytes = 1024
+loop_bytes = 2048
+loop_start = 0.16
+rate = 16000
+release_seconds = 1.4
+fine_static = false
+
+[[song.capture]]
+channel = 3
+key = 41
+bytes = 1024
+loop_bytes = 2048
+loop_start = 0.16
+rate = 16000
+release_seconds = 1.4
+fine_static = false
+
+[[song]]
+name = "SEARCHN"
+song_gain_steps = 18
+performance_sha256 = "c78c644f6843c9056b6523a0624b00fc45f2085c9eb376d95b70c3e5d0c6c9c3"
+
+# The saved mix calibration was measured at this sample-fitting configuration.
+[song.quality]
+min_notes = 24
+merge_st = 7
+
+[song.levels]
+ch02 = 3.6
+ch04 = 5.2
+ch05 = 3.8
+ch06 = 2.8
+ch07 = -8.6
+ch09 = -4.8
+k36 = 2.7
+k40 = 4.4
+
+[[song.capture]]
+channel = 2
+key = 32
+rate = 7000
+bytes = 4096
+release_seconds = 1.9
+fine_static = false
+
+[[song.capture]]
+channel = 10
+key = 36
+rate = 10000
+bytes = 4096
+
+[[song.capture]]
+channel = 10
+key = 40
+rate = 12000
+bytes = 4096
+
+# Ordered roots preserve the original region's amplitude normalization.
+[[song.capture]]
+channel = 9
+key = 60
+rate = 10000
+bytes = 4096
+release_baked = true
+
+[[song.capture]]
+channel = 9
+key = 67
+rate = 12000
+bytes = 4096
+release_baked = true
+
+[[song.capture]]
+channel = 9
+key = 79
+rate = 16000
+bytes = 2048
+release_baked = true
+
+[[song]]
+name = "POW"
+song_gain_steps = 21
+performance_sha256 = "9ec5e3aaa057971be672706150e34c9e429c063415895fe5d9aac2e7c0c79899"
+
+[song.levels]
+ch02 = 1.5
+ch03 = 1.0
+ch04 = -4.5
+ch05 = 4.9
+ch06 = -3.6
+ch07 = -0.6
+ch08 = -2.5
+ch09 = -1.1
+
+[song.pan]
+ch02 = 56
+ch03 = 102
+ch04 = 64
+ch05 = 30
+ch06 = 39
+ch07 = 88
+ch09 = 66
+
+[[song.capture]]
+channel = 7
+key = 36
+bytes = 4096
+rate = 6500
+release_seconds = 1.9
+fine_static = false
+
+[[song]]
+name = "SUSPENSE"
+song_gain_steps = 22
+performance_sha256 = "4bfee942ff1d80de9c8019fe3c478cb0cfa9d135f04dedcfbe71f171394259df"
+
+[song.levels]
+ch03 = 3.0
+ch04 = 0.7
+ch05 = -1.2
+ch06 = -1.2
+ch07 = 2.2
+k36 = -1.6
+k38 = 0.6
+
+[song.pan]
+ch03 = 67
+ch04 = 64
+ch05 = 64
+ch06 = 64
+ch07 = 64
+
+[[song.capture]]
+channel = 10
+key = 36
+bytes = 2048
+rate = 6000
+
+[[song.capture]]
+channel = 7
+key = 33
+bytes = 8192
+rate = 10000
+fine_static = false
+release_baked = true
+
+[[song.capture]]
+channel = 10
+key = 38
+bytes = 4096
+rate = 12000
+
+[[song.capture]]
+channel = 6
+key = 40
+bytes = 4096
+rate = 8000
+release_seconds = 1.5
+fine_static = false
+
+[[song.capture]]
+channel = 6
+key = 37
+bytes = 4096
+rate = 8000
+release_seconds = 1.5
+fine_static = false
+
+[[song]]
+name = "WARMARCH"
+song_gain_steps = 16
+performance_sha256 = "b8ae04f8d336b2745bfb65cdb31c51b942285fe0346993ad2f9d59a43204d018"
+
+[song.levels]
+ch01 = 2.6
+ch02 = -1.0
+ch03 = 0.1
+ch04 = 0.4
+ch05 = 0.9
+ch06 = 0.9
+ch07 = 2.8
+ch08 = -0.1
+ch09 = 0.0
+k35 = -0.7
+k40 = 1.6
+
+[song.pan]
+ch01 = 70
+ch02 = 41
+ch03 = 63
+ch04 = 88
+ch05 = 90
+ch06 = 53
+ch07 = 89
+ch08 = 22
+ch09 = 106
+
+[[song.capture]]
+channel = 10
+key = 35
+bytes = 2048
+rate = 6000
+
+[[song.capture]]
+channel = 10
+key = 40
+bytes = 4096
+rate = 12000
+
+[[song.capture]]
+channel = 8
+key = 23
+bytes = 4096
+rate = 6000
+release_baked = true
+
+[[song.capture]]
+channel = 4
+key = 43
+bytes = 8192
+rate = 6000
+release_seconds = 1.9
+fine_static = false
+
+[[song]]
+name = "CORNER"
+song_gain_steps = 24
+performance_sha256 = "9b5a0d91ea55ae6e3034a023444d8852bb2cad821114f857e7faa7c95883177f"
+
+[song.levels]
+ch02 = -1.5
+ch03 = 11.0
+ch04 = -1.4
+ch05 = -2.4
+ch06 = -3.1
+
+[song.pan]
+ch02 = 51
+ch03 = 79
+ch04 = 52
+ch05 = 78
+ch06 = 88
+
+[[song.capture]]
+channel = 6
+key = 26
+bytes = 8192
+rate = 10000
+fine_static = false
+release_baked = true
+
+[[song.capture]]
+channel = 10
+key = 40
+bytes = 8192
+rate = 16000
+
+[[song]]
+name = "ENDLEVEL"
+song_gain_steps = 16
+performance_sha256 = "fd976aa25e05b93f5dea350c4f74a9c07ffde67d35a4260583c0151e2aeff711"
+
+[song.levels]
+ch01 = -2.8
+ch02 = 2.6
+ch03 = 0.8
+ch04 = 3.3
+ch05 = 2.4
+ch06 = -1.1
+ch08 = 0.7
+
+[song.pan]
+ch01 = 64
+ch02 = 64
+ch03 = 63
+ch04 = 75
+ch05 = 66
+ch06 = 63
+ch08 = 63
+
+[[song.capture]]
+channel = 10
+key = 38
+bytes = 4096
+rate = 11000
+
+[[song]]
+name = "ROSTER"
+song_gain_steps = 15
+performance_sha256 = "74bbfbe00457110d2c25a9dbbd8f377c89037e64ad4bd26b6d4e47dada9d64e7"
+
+[song.levels]
+ch01 = 1.4
+ch02 = -1.0
+ch03 = -0.9
+ch04 = 0.1
+ch05 = -0.1
+
+[song.pan]
+ch01 = 64
+ch02 = 64
+ch03 = 64
+ch04 = 64
+ch05 = 64
+
+[[song.capture]]
+channel = 10
+key = 38
+bytes = 8192
+rate = 16000
+
+[[song]]
+name = "URAHERO"
+song_gain_steps = 15
+performance_sha256 = "b8597f2f9f5f5758fd04fa9ecdb80ee337fcf5b85e6109fa0813e234f0073f0a"
+
+# The saved mix calibration was measured at this sample-fitting configuration.
+[song.quality]
+min_notes = 24
+merge_st = 7
+
+[song.levels]
+ch01 = 2.4
+ch02 = 0.9
+ch03 = -1.5
+ch04 = -0.5
+ch05 = 1.4
+ch08 = -1.6
+k36 = -2.6
+k38 = -0.8
+
+[song.pan]
+ch01 = 63
+ch02 = 65
+ch03 = 62
+ch04 = 65
+ch05 = 63
+ch08 = 64
+
+[[song.capture]]
+channel = 10
+key = 36
+bytes = 4096
+rate = 10000
+
+[[song.capture]]
+channel = 10
+key = 38
+bytes = 8192
+rate = 16000

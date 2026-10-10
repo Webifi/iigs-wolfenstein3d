@@ -1,0 +1,39 @@
+# Native music bench: copy this file and pin an exact game bundle before use.
+# python tools/audio_bench.py my-bench.toml --out build/audio-bench
+# Paths are relative to this profile, or absolute. No source rebuild is needed.
+# The output directory must be new. A failed run retains evidence and has no PASS.json.
+format = 1
+
+[files]
+disk = "frozen/wolf-hd.po"
+elf = "frozen/wolf.elf"
+emulator = "frozen/iigs"
+cfg = "frozen/cfg"
+nvram = "frozen/nvram"
+bank = "compiled/stored.bin"
+unit = "compiled/unit.bin"
+waves = "compiled/waves.bin"
+# Complete note/voice allocation and pre-optimization DOC writes from this bank.
+# These supply part labels only, and must match its compiled writes per oscillator.
+notes = "compiled/notes.json"
+ledger = "compiled/stereo.txt"
+
+[sha256]
+# Fill these from the exact files, not from another build's manifest.
+disk = "REQUIRED"
+elf = "REQUIRED"
+emulator = "REQUIRED"
+bank = "REQUIRED"
+unit = "REQUIRED"
+waves = "REQUIRED"
+notes = "REQUIRED"
+ledger = "REQUIRED"
+
+[playback]
+song_id = 3                 # GETTHEM, loaded by the automatic first demo
+demo_phase = 13
+music_volume = 12           # Must match the frozen game's actual setting
+system_volume = 5           # Must match its NVRAM and Sound Manager shadow
+speaker_bus = 0            # Stock mono DOC/speaker output; excludes drive buses
+timeout_seconds = 200
+rompath = "roms-extra;roms"

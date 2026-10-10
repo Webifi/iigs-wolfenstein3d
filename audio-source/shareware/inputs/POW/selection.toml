@@ -1,0 +1,2052 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 40
+"bank" = [0, 0]
+"notes" = 160
+"name" = "Synth Bass 2"
+
+[["instruments"]]
+"channel" = 3
+"program" = 85
+"bank" = [0, 0]
+"notes" = 32
+"name" = "Lead 5 (charang)"
+
+[["instruments"]]
+"channel" = 4
+"program" = 78
+"bank" = [0, 0]
+"notes" = 8
+"name" = "Shakuhachi"
+
+[["instruments"]]
+"channel" = 5
+"program" = 89
+"bank" = [0, 0]
+"notes" = 32
+"name" = "Pad 1 (new age)"
+
+[["instruments"]]
+"channel" = 6
+"program" = 58
+"bank" = [0, 0]
+"notes" = 28
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 7
+"program" = 119
+"bank" = [0, 0]
+"notes" = 96
+"name" = "Synth Drum"
+
+[["instruments"]]
+"channel" = 8
+"program" = 46
+"bank" = [0, 0]
+"notes" = 192
+"name" = "Pizzicato Strings"
+
+[["instruments"]]
+"channel" = 9
+"program" = 58
+"bank" = [0, 0]
+"notes" = 9
+"name" = "Trombone"
+
+[["instruments"]]
+"channel" = 9
+"program" = 70
+"bank" = [0, 0]
+"notes" = 7
+"name" = "English Horn"
+
+[["instruments"]]
+"channel" = 9
+"program" = 71
+"bank" = [0, 0]
+"notes" = 9
+"name" = "Bassoon"
+
+[["instruments"]]
+"channel" = 9
+"program" = 72
+"bank" = [0, 0]
+"notes" = 6
+"name" = "Clarinet"
+
+["source"]
+"kind" = "midi"
+"sha256" = "741d54f2a10576dc4e86f8cf565f2420be2de0cd584331aab52ccf53636642ce"
+"authority" = "composer-original"
+
+["defaults"]
+"format" = 1
+
+[["defaults"."song"]]
+"name" = "NAZI_NOR"
+"authority" = "project-arrangement"
+"imf_sha256" = "ee9207f54616ebf4c9ce28cda4ddac8a71535e87c69d53f6755a22c69221c81f"
+"midi_sha256" = "c94e41e84e769de355a7d4ef3c1f09b12b62d7abfb2fd3d46ff9b9fd572a5b76"
+"midi_score_sha256" = "e71058e2b119737b4cc8a14b7b117b64db1a975fa8de88f6c8b2de0a114c2a9a"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 2
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 36
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "6121190053a0581800000c"
+"opl_channel" = 3
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0061d2063600000c"
+"opl_channel" = 4
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "7122c3008e8b170e000002"
+"opl_channel" = 5
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 6
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 7
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 38
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "WONDERIN"
+"authority" = "composer-original"
+"imf_sha256" = "f01d39e54932b6d0449fb47544a28a66d93de00b5a0b84586eec484b9015ecf6"
+"midi_sha256" = "f034dfb71596c4711e9668d15d316772133a01ce434d6c409ef0f2dc67d9f7d4"
+"midi_score_sha256" = "59989c5fc16a9ace24bec904697638031896a78b396873acc13d57374455f08d"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 61
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 41
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 42
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 43
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 48
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 44
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 83
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 1
+"program" = 53
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 2
+"program" = 61
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "716156005154031700000e"
+"opl_channel" = 3
+"program" = 41
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "716156005154031700000e"
+"opl_channel" = 4
+"program" = 42
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "716156005154031700000e"
+"opl_channel" = 5
+"program" = 43
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "0000400009f75394000000"
+"opl_channel" = 6
+"program" = 48
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -12
+
+[["defaults"."song"."imf"]]
+"patch" = "a2e21d809560242a000002"
+"opl_channel" = 7
+"program" = 44
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 12
+
+[["defaults"."song"."imf"]]
+"patch" = "32619a805160193900000c"
+"opl_channel" = 8
+"program" = 83
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "61e1a78072508e1a000002"
+"opl_channel" = 9
+"program" = 53
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "GETTHEM"
+"authority" = "composer-original"
+"imf_sha256" = "1554dd047870bc2efe555d0477b9621c11e645c815e01c49054ff2500922fef1"
+"midi_sha256" = "511745ce9185592b4b8bb6c93721283957a6c3239996ceca4e9ea234db083917"
+"midi_score_sha256" = "0e7c4d6ab5d40dd0118358ca27c7cc49ab475be86bc3aa90b616982a4e1bd466"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 69
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 39
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 74
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 120
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 5
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 2
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 40
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "07000000f05cf0dc00000e"
+"opl_channel" = 3
+"program" = 120
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3021160073807e9e00000e"
+"opl_channel" = 4
+"program" = 39
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -24
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 5
+"program" = 5
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -12
+
+[["defaults"."song"."imf"]]
+"patch" = "70228d006e6b170e000002"
+"opl_channel" = 6
+"program" = 69
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "a1e21380d660af2a000002"
+"opl_channel" = 7
+"program" = 74
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "32619a805160193900000c"
+"opl_channel" = 8
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "6121190053a0581800000c"
+"opl_channel" = 9
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "SEARCHN"
+"authority" = "composer-original"
+"imf_sha256" = "ceadfb3e99476a2afd0a11f07028d7782376cf3d36782eb2c3ef5fded8ac02aa"
+"midi_sha256" = "98873e03a9f4351fcff7ad22fd973c24960a5ba3d4fca5a5c6ed6ef991c66624"
+"midi_score_sha256" = "7aa0914d03b9f70519ab098e146d6ee8df45fa84f77b417cdc7c2fe9866af0e0"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 9
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 47
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 93
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 1
+"program" = 29
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 2
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 40
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 3
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -16
+
+[["defaults"."song"."imf"]]
+"patch" = "02012980f5f275f3000000"
+"opl_channel" = 4
+"program" = 9
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21a119807760bf2a000006"
+"opl_channel" = 5
+"program" = 47
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "32611c808260180700000c"
+"opl_channel" = 6
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 7
+"program" = 93
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0061d2063600000c"
+"opl_channel" = 8
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31324400f2f09a27000006"
+"opl_channel" = 9
+"program" = 29
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "POW"
+"authority" = "composer-original"
+"imf_sha256" = "9ad57462bf5a428406547396a9592b486b27ad337af45286d45a1f75d0e5ceaa"
+"midi_sha256" = "741d54f2a10576dc4e86f8cf565f2420be2de0cd584331aab52ccf53636642ce"
+"midi_score_sha256" = "d0c095bc01261c9b328a4774beab51375d7e148f8d062f1af0accea2e02d5fa8"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 40
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 85
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 78
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 46
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 1
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 10
+"program" = 71
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 19
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 25
+"program" = 70
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21211500b4944cac00000a"
+"opl_channel" = 2
+"program" = 40
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31168180a1c23074000008"
+"opl_channel" = 3
+"program" = 85
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 12
+
+[["defaults"."song"."imf"]]
+"patch" = "f1e1180032f11113000000"
+"opl_channel" = 4
+"program" = 78
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "13e14d00faf111f1000008"
+"opl_channel" = 5
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0061d2063600000c"
+"opl_channel" = 6
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "32114400f8f5ff7f00000e"
+"opl_channel" = 7
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000b00a8d64c4f000000"
+"opl_channel" = 8
+"program" = 46
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -12
+
+[["defaults"."song"]]
+"name" = "SUSPENSE"
+"authority" = "project-arrangement"
+"imf_sha256" = "3d3f56f3147dcc322eaecd1221999f8946280913cc6786504a3d63c38b124e47"
+"midi_sha256" = "0c19d4e91db1bcc9055bf24c02030e0b39f4bd8ae3b6c49aec951c94da1db5c5"
+"midi_score_sha256" = "d03a22b006f22168bc2ea76fb56ec55d4ae01e77728be8424128f70f202f3182"
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 46
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 15
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 2
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 36
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 3
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 38
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31324500f1f25327000006"
+"opl_channel" = 4
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 12
+
+[["defaults"."song"."imf"]]
+"patch" = "32114400f8f5ff7f00000e"
+"opl_channel" = 5
+"program" = 46
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "d7d24f00f2f161b2000008"
+"opl_channel" = 6
+"program" = 15
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 12
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0064d0076700000e"
+"opl_channel" = 7
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000b00a8d64c4f000000"
+"opl_channel" = 8
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -12
+
+[["defaults"."song"]]
+"name" = "WARMARCH"
+"authority" = "composer-original"
+"imf_sha256" = "056025b46821256b50948715410952bc5d393dcac11529c582711e625301ec20"
+"midi_sha256" = "62cf5697f8ad066a506af38b5cf1aeafee9d204c4a9091c141358b9a67ed79d3"
+"midi_score_sha256" = "40d10a611fe804211e24d618f434f1124819bf2b301787f611aba0f4305cc5d2"
+
+[["defaults"."song"."midi"]]
+"channel" = 1
+"first_note" = 1
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 19
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 70
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 76
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 71
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 128
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 1
+"program" = 128
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "32114400f8f5ff7f00000e"
+"opl_channel" = 3
+"program" = 128
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "a2e21d809560242a000002"
+"opl_channel" = 4
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 12
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0064d0076700000e"
+"opl_channel" = 5
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "32619a805160193900000c"
+"opl_channel" = 5
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3122c300878b170e000002"
+"opl_channel" = 6
+"program" = 70
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "6121190053a0581800000c"
+"opl_channel" = 7
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "01011100f0f0fff800000a"
+"opl_channel" = 8
+"program" = 76
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "2121160063630e0e00000c"
+"opl_channel" = 9
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "70228d006e6b170e000002"
+"opl_channel" = 9
+"program" = 71
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "CORNER"
+"authority" = "composer-original"
+"imf_sha256" = "d49ab397eaf23d605f051fe386ed7955719fecb45593159248aec91a8c88294c"
+"midi_sha256" = "785e8986bb3ce4c2b9d1476c2604c1f316a81c132b1aee58d7b808ea68533f88"
+"midi_score_sha256" = "bfc1b5cb827c56863c8e018b1d011b39863702c87de152ec8a35c2250d1628b6"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 16
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 74
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "02012980f0f47533000000"
+"opl_channel" = 2
+"program" = 16
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "13e14d00faf111f1000008"
+"opl_channel" = 3
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "a2e21d809560242a000002"
+"opl_channel" = 4
+"program" = 74
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 12
+
+[["defaults"."song"."imf"]]
+"patch" = "32619a805160193900000c"
+"opl_channel" = 5
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "0000400009f75394000000"
+"opl_channel" = 6
+"program" = 119
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -26
+
+[["defaults"."song"."imf"]]
+"patch" = "0600000055f8f0f500000e"
+"opl_channel" = 7
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 40
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "ENDLEVEL"
+"authority" = "project-arrangement"
+"imf_sha256" = "9d4d16ccff95fb0add3c31655cd0ba027987925ddde03fba24149f5e2f11342a"
+"midi_sha256" = "d28d887aea2ff17877177fcb4cd7b870f0af83500ec37ab7d3fb7ca039b29917"
+"midi_score_sha256" = "d22ff84beb5519436deced51b07e25a52822bcc53f8f0cfa16ebd473d88c9415"
+
+[["defaults"."song"."midi"]]
+"channel" = 1
+"first_note" = 1
+"program" = 39
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 61
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 48
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3021160073807e9e00000e"
+"opl_channel" = 2
+"program" = 39
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -12
+
+[["defaults"."song"."imf"]]
+"patch" = "3121160073808e9e00000e"
+"opl_channel" = 3
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 4
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 5
+"program" = 61
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0061d2063600000c"
+"opl_channel" = 6
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "20211b0063630a0b00000c"
+"opl_channel" = 7
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 8
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 38
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "0000400009f75394000000"
+"opl_channel" = 9
+"program" = 48
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = -12
+
+[["defaults"."song"]]
+"name" = "ROSTER"
+"authority" = "project-arrangement"
+"imf_sha256" = "e0d20a12e30efad52c400bfe90651ff9bb417234b1f08c75c30cdad924b96cf1"
+"midi_sha256" = "5300f896ed6979f34a7ab74d11ce4a24907f4e8f5a0702d517ad2952614aa53e"
+"midi_score_sha256" = "2ad72b0d33e05a0cd37734c6990a12a436a11def4f3a7fa79203ca366538cda9"
+
+[["defaults"."song"."midi"]]
+"channel" = 1
+"first_note" = 1
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 69
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0061d2063600000c"
+"opl_channel" = 2
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "6121190053a0581800000c"
+"opl_channel" = 3
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "7122c3008e8b170e000002"
+"opl_channel" = 4
+"program" = 69
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "32611c808260180700000c"
+"opl_channel" = 5
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21a1168077608f2a000006"
+"opl_channel" = 6
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 7
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 38
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "URAHERO"
+"authority" = "project-arrangement"
+"imf_sha256" = "0b0edcb500ef9d5ec670d3856a307c3adc9ced382f4c972f759bf4a4459f999a"
+"midi_sha256" = "320c29a0ee419d375f686a45bfe06a87ef9941e8edd7126385fcb5a4aefa234c"
+"midi_score_sha256" = "aefab09c8f89c83ba912e408d3dfa8265f3ec145c669b4283d6a61f1fa7dae3b"
+
+[["defaults"."song"."midi"]]
+"channel" = 1
+"first_note" = 1
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 74
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 44
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 29
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "6121190073a0571700000c"
+"opl_channel" = 2
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 3
+"program" = 58
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 4
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 5
+"program" = 74
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "6121190053a0581800000c"
+"opl_channel" = 6
+"program" = 44
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 7
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 36
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 8
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 38
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21a1168077608f2a000006"
+"opl_channel" = 9
+"program" = 29
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "ZEROHOUR"
+"authority" = "composer-original"
+"imf_sha256" = "2649ebeb283703173fa53a23f6578854a3b2477fadf163cc1eecaf3fa4e6f21a"
+"midi_sha256" = "9cd4d5b08a463ce8f46369970aaeeb8b135cab0cd5280444794eb5c5a34ceee2"
+"midi_score_sha256" = "979ae9455182c92b9f7aae1a4e96203a5fc56132897f7a06f18118e63f8ea798"
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 33
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 15
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 29
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 1
+"program" = 67
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 2
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 36
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "05000000f0f8ffb901000e"
+"opl_channel" = 3
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 40
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21211580d3c32c2c00000a"
+"opl_channel" = 5
+"program" = 33
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "93a14c00faf111f1000308"
+"opl_channel" = 6
+"program" = 15
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 12
+
+[["defaults"."song"."imf"]]
+"patch" = "f1e1180032f11113000000"
+"opl_channel" = 7
+"program" = 29
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31611b0061d2063600000c"
+"opl_channel" = 8
+"program" = 57
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3121160063630a0b00000c"
+"opl_channel" = 9
+"program" = 67
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "ULTIMATE"
+"authority" = "composer-original"
+"imf_sha256" = "c249006fe2dbfca27cedf3ab2661eedbaf44051dbde38d49f0917dbd706efc07"
+"midi_sha256" = "8611f86bda7405e981bedb6398f162e34c079e6c58ad96c0d9a43ed77ffaee58"
+"midi_score_sha256" = "fb078f0126b9b8bf03f879948bcc40cb41a302468813d12d44422efaac7e923c"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 61
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 72
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 69
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 2
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "21219a8053a0561600000e"
+"opl_channel" = 3
+"program" = 59
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "0600000055f8f0f500000e"
+"opl_channel" = 5
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 40
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "61e1a78072508e1a000002"
+"opl_channel" = 6
+"program" = 73
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3122c300878b170e000002"
+"opl_channel" = 8
+"program" = 69
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3121160073808e9e00000e"
+"opl_channel" = 9
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "XFUNKIE"
+"authority" = "composer-original"
+"imf_sha256" = "10def3401605fd9382c99acead0f6970746b4a32be80e45710361e9f1a636b8d"
+"midi_sha256" = "3c9b8a1ac87f30a45099d7be0c1d833df4c13a9d75a1a18ea3c5d1fb661e5357"
+"midi_score_sha256" = "0386600c20fc812578d9d0438f4459f628e4c6d7ae77f1fc6b84707237320e3d"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 37
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 36
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 96
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 96
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 1
+"program" = 103
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 26
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "01211880d4c4f28a00000a"
+"opl_channel" = 2
+"program" = 37
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "01211880d4c4f28a00000a"
+"opl_channel" = 3
+"program" = 36
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 4
+"program" = 26
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 35
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 5
+"program" = 26
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 38
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "05000000f0f877e500000e"
+"opl_channel" = 6
+"program" = 26
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 42
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3021160073207e9e00000e"
+"opl_channel" = 7
+"program" = 96
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "3021160073207e9e00000e"
+"opl_channel" = 8
+"program" = 96
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "e2e1ca00f8c0e50e000008"
+"opl_channel" = 9
+"program" = 103
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "XEVIL"
+"authority" = "composer-original"
+"imf_sha256" = "6bae3832be3736b13c17432cb196e83957ffe811f865b200e46d2e91297d191a"
+"midi_sha256" = "a71c2ae9a43c014f3c4090cca639c0b45c4df433ee4f401b4a6086bc31bf9f4b"
+"midi_score_sha256" = "7ef27e45b81f5a9604e2dec9b9c5972a2c960c0ad72b866a53b0f6e1af790aa0"
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 18
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 63
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 128
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 21
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "e2e1ca00f8c0e50e000008"
+"opl_channel" = 4
+"program" = 18
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31168180a1c23074000008"
+"opl_channel" = 5
+"program" = 63
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "01011100f0f0fff800000a"
+"opl_channel" = 7
+"program" = 21
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 8
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 35
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "06000000f0f7f0f700000e"
+"opl_channel" = 9
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 40
+"transpose" = 0
+
+[["defaults"."song"]]
+"name" = "XTOWER2"
+"authority" = "composer-original"
+"imf_sha256" = "ad1efcef0e4a4ff9c526422fdb00f51e1f27d7e60f17f6936fb0793c34f2dbbd"
+"midi_sha256" = "f90a60576764ceed5e9d34e007b545a609fb4d5ed418902f18cb2a8eee48eaf8"
+"midi_score_sha256" = "a171709734cbbcc9744d3a901a1ba534ee1ff0299ecd06553eca49b992f617ff"
+
+[["defaults"."song"."midi"]]
+"channel" = 2
+"first_note" = 1
+"program" = 100
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 3
+"first_note" = 1
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 4
+"first_note" = 1
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 5
+"first_note" = 1
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 6
+"first_note" = 1
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 7
+"first_note" = 1
+"program" = 50
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 8
+"first_note" = 1
+"program" = 61
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 9
+"first_note" = 1
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."midi"]]
+"channel" = 10
+"first_note" = 1
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "02012980f0f47533000000"
+"opl_channel" = 2
+"program" = 100
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "f1e1180032f11113000000"
+"opl_channel" = 3
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "f1e1180032f11113000000"
+"opl_channel" = 4
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "f1e1180032f11113000000"
+"opl_channel" = 5
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "31324400f2f09a27000006"
+"opl_channel" = 6
+"program" = 82
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "00000d00e8a5efff000006"
+"opl_channel" = 8
+"program" = 1
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = 36
+"transpose" = 0
+
+[["defaults"."song"."imf"]]
+"patch" = "16e14d00faf111f1000008"
+"opl_channel" = 9
+"program" = 89
+"bank_msb" = 0
+"bank_lsb" = 0
+"drum_key" = -1
+"transpose" = 0

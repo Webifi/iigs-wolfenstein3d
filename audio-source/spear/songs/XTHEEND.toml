@@ -1,0 +1,56 @@
+# Editable offline recipe: levels, pan, quality, captures and per-sample overrides.
+# The original AdLib source is supplied through --data; it is not bundled here.
+"format" = 1
+"kind" = "music"
+"name" = "XTHEEND"
+
+["source"]
+"kind" = "imf-delta"
+"file" = "../inputs/XTHEEND/score.toml"
+"sha256" = "85138fdd65f08c1d763569738bc0d3b272b611408b979d6cee696fe4b613e239"
+"authority" = "fan-conversion"
+
+["original"]
+"file" = "../licensed/XTHEEND.imf"
+"sha256" = "6c6325362bde211977e3d5f9377d4c83dd69900c8d7da5c858371c466bace0be"
+
+["render"]
+"reset" = "gs"
+"end" = "release"
+
+["capture"]
+"lead_seconds" = 0.05
+"tail_seconds" = 2.0
+
+["reconstruction"]
+"allow_unsupported" = false
+
+["doc"]
+"auto_fit" = true
+"capture_policy" = "calibrated-sf2-and-captures"
+"fallback_reason" = "Modeled samples and selected full-track captures, using the established conversion method"
+"auto_captures" = true
+"capture_selection" = "automatic"
+"auto_balance" = false
+"capture_source" = "instrument-track"
+"sampling_policy" = "../inputs/XTHEEND/sampling.toml"
+"song_gain_steps" = 22
+"level_mode" = "source"
+
+["doc"."levels"]
+"ch02" = -2.1305
+"ch05" = -0.637
+"ch06" = -4.8549
+"ch07" = -8.427
+"ch08" = -6.051
+"k35" = -3.8811
+"k38" = -3.8811
+
+["doc"."pan"]
+"ch02" = 26
+"ch03" = 7
+"ch04" = 119
+"ch05" = 98
+"ch06" = 63
+"ch07" = 64
+"ch08" = 62

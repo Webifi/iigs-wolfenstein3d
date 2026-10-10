@@ -1,0 +1,133 @@
+--- a/src/backend/pcm.cpp
++++ b/src/backend/pcm.cpp
+@@ -26,6 +26,49 @@
+ #include <cstdint>
+ #include <cstring>
+ 
++
++#include <cstdio>
++#include <cstdlib>
++#include <set>
++#include <utility>
++#include <string>
++static thread_local bool trace_enabled = false;
++static thread_local bool trace_gate = false;
++static thread_local std::set<unsigned> trace_notes;
++static thread_local std::set<std::pair<uint64_t,unsigned>> trace_activations;
++static thread_local bool trace_slot_selected[32]{};
++static thread_local uint64_t trace_frame = 0, trace_hash = 1469598103934665603ull;
++static thread_local unsigned trace_note = 0, trace_slot_note[32]{};
++static thread_local int trace_pan[32]{};
++static thread_local bool trace_active[32]{};
++static thread_local FILE* trace_file = nullptr;
++void PCM_TraceBegin() {
++    const char* path=std::getenv("SC55_CAPTURE_TRACE");
++    const char* selected=std::getenv("SC55_CAPTURE_NOTES");
++    trace_enabled=path || selected;
++    const char* activations=std::getenv("SC55_CAPTURE_ACTIVATIONS");
++    trace_gate=selected || activations;
++    if(activations) {
++        std::string s(activations);size_t at=0;
++        while(at<s.size()) {size_t end=s.find(',',at);auto item=s.substr(at,end-at);auto colon=item.find(':');trace_activations.insert({std::stoull(item.substr(0,colon)),std::stoul(item.substr(colon+1))});if(end==std::string::npos)break;at=end+1;}
++    }
++    if(path) {trace_file=std::fopen(path,"w");if(!trace_file) std::abort();}
++    if(selected) {
++        std::string s(selected);size_t at=0;
++        while(at<s.size()) {size_t end=s.find(',',at);trace_notes.insert(std::stoul(s.substr(at,end-at)));if(end==std::string::npos)break;at=end+1;}
++    }
++}
++void PCM_TraceFrame() {if(trace_enabled) ++trace_frame;}
++void PCM_TraceMidi(uint8_t status,const uint8_t* bytes,size_t size) {
++    if(trace_enabled && (status&0xf0)==0x90 && size>=2 && bytes[1]) {
++        ++trace_note;
++        if(trace_file) std::fprintf(trace_file,"N %u %u %u %u %llu\n",trace_note,(status&15)+1,bytes[0],bytes[1],(unsigned long long)trace_frame);
++    }
++}
++void PCM_TraceEnd() {
++    if(trace_file) {std::fprintf(trace_file,"E %u %llu %016llx\n",trace_note,(unsigned long long)trace_frame,(unsigned long long)trace_hash);std::fclose(trace_file);trace_file=nullptr;}
++}
++
+ uint8_t PCM_ReadROM(pcm_t& pcm, uint32_t address)
+ {
+     int bank;
+@@ -64,6 +107,10 @@
+ 
+ void PCM_Write(pcm_t& pcm, uint32_t address, uint8_t data)
+ {
++    if(trace_enabled) {
++        uint64_t words[]={pcm.mcu->cycles,address,data};
++        for(uint64_t word:words) {trace_hash^=word;trace_hash*=1099511628211ull;}
++    }
+     address &= 0x3f;
+     if (address < 0x4) // voice enable
+     {
+@@ -1097,6 +1144,11 @@
+ 
+             const bool active = okey && key;
+             const bool kon = key && !okey;
++            if(trace_enabled && kon && pcm.nfs) {
++                trace_slot_note[slot]=trace_note;
++                trace_slot_selected[slot]=trace_notes.contains(trace_note) || trace_activations.contains({trace_frame,(unsigned)slot});
++                if(trace_file) std::fprintf(trace_file,"V %u %u %llu %u %u %u\n",trace_note,slot,(unsigned long long)trace_frame,ram2[0],ram1[0],ram1[2]);
++            }
+ 
+             // address generator
+ 
+@@ -1451,7 +1503,11 @@
+ 
+             int sample3 = addclip20(multiv3 >> 6, multiv4 >> 13, ((multiv4 >> 12) | (multiv3 >> 5)) & 1);
+ 
++            if(trace_gate && !trace_slot_selected[slot]) sample3=0;
+             int pan = active ? ram2[1] : 0;
++            if(trace_file && pcm.nfs && active && (!trace_active[slot] || kon || trace_pan[slot]!=pan))
++                std::fprintf(trace_file,"P %u %llu %u\n",slot,(unsigned long long)trace_frame,pan);
++            if(pcm.nfs) {trace_pan[slot]=pan;trace_active[slot]=active;}
+             int rc = active ? ram2[2] : 0;
+ 
+             int sampl = multi(sample3, (int8_t)((pan >> 8) & 255));
+--- a/src/renderer/main.cpp
++++ b/src/renderer/main.cpp
+@@ -45,6 +45,10 @@
+ #include <io.h>
+ #endif
+ 
++void PCM_TraceBegin();
++void PCM_TraceFrame();
++void PCM_TraceMidi(uint8_t,const uint8_t*,size_t);
++void PCM_TraceEnd();
+ using namespace std::chrono_literals;
+ 
+ enum class R_EndBehavior
+@@ -944,6 +948,7 @@
+ template <typename SampleT, typename SilenceModel, bool ApplyGain>
+ void R_ReceiveSample(void* userdata, const AudioFrame<int32_t>& in)
+ {
++    PCM_TraceFrame();
+     R_TrackRenderState* state = (R_TrackRenderState*)userdata;
+ 
+     AudioFrame<SampleT> out;
+@@ -982,6 +987,8 @@
+ 
+ void R_PostEvent(Emulator& emu, const SMF_Data& data, const SMF_Event& ev)
+ {
++    auto payload=ev.GetData(data.bytes);
++    PCM_TraceMidi(ev.status,payload.data(),payload.size());
+     emu.PostMIDI(ev.status);
+     emu.PostMIDI(ev.GetData(data.bytes));
+ }
+@@ -1165,6 +1172,7 @@
+ 
+ void R_RenderOne(const SMF_Data& data, R_TrackRenderState& state)
+ {
++    PCM_TraceBegin();
+     uint64_t division = data.header.division;
+     uint64_t us_per_qn = 500000;
+ 
+@@ -1224,6 +1232,7 @@
+ 
+     state.mixer->MarkComplete(state.queue_id);
+ 
++    PCM_TraceEnd();
+     state.done = true;
+ }
+ 

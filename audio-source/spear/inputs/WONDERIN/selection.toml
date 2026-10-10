@@ -1,0 +1,64 @@
+# Selection provenance. The chosen instruments are applied by score.toml.
+# Change instruments in the synthesis recipe and export again to obtain matching captures.
+"changes" = []
+
+[["instruments"]]
+"channel" = 2
+"program" = 61
+"bank" = [0, 0]
+"notes" = 180
+"name" = "French Horn"
+
+[["instruments"]]
+"channel" = 3
+"program" = 41
+"bank" = [0, 0]
+"notes" = 128
+"name" = "Violin"
+
+[["instruments"]]
+"channel" = 4
+"program" = 42
+"bank" = [0, 0]
+"notes" = 128
+"name" = "Viola"
+
+[["instruments"]]
+"channel" = 5
+"program" = 43
+"bank" = [0, 0]
+"notes" = 128
+"name" = "Cello"
+
+[["instruments"]]
+"channel" = 6
+"program" = 48
+"bank" = [0, 0]
+"notes" = 80
+"name" = "Timpani"
+
+[["instruments"]]
+"channel" = 7
+"program" = 44
+"bank" = [0, 0]
+"notes" = 50
+"name" = "Contrabass"
+
+[["instruments"]]
+"channel" = 8
+"program" = 83
+"bank" = [0, 0]
+"notes" = 39
+"name" = "Lead 3 (calliope)"
+
+[["instruments"]]
+"channel" = 9
+"program" = 53
+"bank" = [0, 0]
+"notes" = 19
+"name" = "Choir Aahs"
+
+["source"]
+"kind" = "midi"
+"sha256" = "f034dfb71596c4711e9668d15d316772133a01ce434d6c409ef0f2dc67d9f7d4"
+"authority" = "composer-original"

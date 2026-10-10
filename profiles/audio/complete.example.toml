@@ -1,0 +1,23 @@
+# Developer build, including references, Python DOC rendering and standalone HTML.
+# python build_audio.py --profile shareware --data /path/to/WL1 \
+#   --settings complete.toml --out build/audio
+# Repeat the same command: only missing or outdated stages regenerate.
+format = 1
+
+[synthesis]
+settings = "renderer.toml" # See renderer.example.toml: emulator, ROMs, SoundFont.
+
+[adlib]
+# Developer-only Sound Blaster reference. This never feeds DOC conversion.
+# DOSBox-X runs the supplied IMF player through its SB16 card and mixer.
+executable = "path/to/dosbox-x"
+sha256 = "PIN_YOUR_DOSBOX_X_EXECUTABLE"
+
+[comparison]
+# DOC music and instrument WAVs use the same Python renderer as the easy build.
+# No MAME, IIgs ROMs, cfg or NVRAM are needed. Keep jobs low for long songs.
+jobs = 1
+
+[build]
+calypsi = "path/to/calypsi/bin"
+# Source effects are regenerated with the bundled OPL2 renderer (CC or cc).
