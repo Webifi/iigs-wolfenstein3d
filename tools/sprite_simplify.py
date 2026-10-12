@@ -66,6 +66,14 @@ def hanging_ivy(source):
             for dx in range(width):
                 sx = spans[y][round(dx * (len(spans[y]) - 1) / (width - 1))]
                 result[left + dx][y] = source[sx][y]
+    # Remove isolated edge texels that require additional column runs.
+    for x, top, bottom in (
+        (8, 1, 2), (10, 24, 25), (10, 56, 57), (11, 32, 34),
+        (14, 57, 58), (15, 0, 1), (15, 7, 8), (15, 13, 14), (15, 52, 53),
+        (33, 61, 62), (48, 32, 33), (50, 52, 53), (50, 58, 59),
+        (50, 61, 62), (51, 62, 64), (52, 63, 64),
+    ):
+        result[x][top:bottom] = [None] * (bottom - top)
     return result
 
 
@@ -131,17 +139,15 @@ def simplify(art):
                        for y, bit in enumerate(bits)])
 
     if key == TABLE_SOURCE:
-        # Keep the seat openings; close the back with wood and the leg recesses
-        # with the existing gray below the lower rail.
+        # Keep the seat and leg openings; close the left back with wood.
         for x in (10, 11):
             for y in range(37, 43):
                 assert result[x][y] is None
                 result[x][y] = 63
-        for left, right in ((11, 14), (16, 17), (19, 23), (38, 43), (47, 51)):
-            for x in range(left, right):
-                for y in range(51, 56):
-                    assert result[x][y] is None
-                    result[x][y] = source[19][58]
+        # The narrow recess below the left seat uses the lower rail's gray.
+        for y in range(51, 56):
+            assert result[16][y] is None
+            result[16][y] = source[19][58]
     elif key == IVY_SOURCE:
         result = hanging_ivy(source)
 
