@@ -420,9 +420,13 @@ ReadOverlay:  sta long:overlayPendingGroup
               sta long:overlayGameCold
               lda long:overlayPendingGroup
 ;;; A = a group of raw records for the bank-0 window: nothing else changes.
+              .extern J13Reset
 ReadRawGroup: sta long:overlayPendingGroup
               php
               sei
+              ; Finish private MCU commands before masked firmware disk I/O.
+              ; J13 keeps the observed held identities across this boundary.
+              jsl long:J13Reset
               phb
               phd
               ldx ##0x8200

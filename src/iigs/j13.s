@@ -3,7 +3,7 @@
 ;;; Only a matching MCU firmware fingerprint permits partial-release reads.
 ;;; Captured transitions enter the timestamped input ring with source tag 2.
 ;;; DOC interrupts sample registers; DATA interrupts retire private replies.
-;;; A short-lived DOC alarm sends parameters while the CPU does other work.
+;;; The existing short-lived DOC alarm sends a bounded batch of parameters.
 ;;; Controller service never installs a hook in the renderer.
 #include "memmap.inc"
 #include "frontend.inc"
@@ -16,10 +16,11 @@
               .public j13Owner, j13State, j13Timeouts, j13Samples, j13Events, j13Timer
               .public j13Keys, j13Mods, J13Sample, J13Pump
               .public J13SendIRQ, J13SendWake, j13SendTimer
+              .extern frameCount
               .extern I_GetTime, inputHead, inputTail, inputRing, inputDropped
               .extern CaptureInput, keyTalk, keyPending, keyReply, captureStatusMask, captureTalk, withoutRawKeys
               .extern J13FrameSite, J13AdbSite, fastAlarmHandled, noDocAlarm
-              .extern musicActive, uiGameOn, keyHeld, UiResetInput, attractActive
+              .extern musicActive, uiGameOn, keyHeld, UiResetInput, attractActive, boundKeys, boundBits
 AKD           .equ KBDSTRB
 MODIFIERS     .equ KEYMODREG
 ADBDATA       .equ DATAREG
@@ -71,7 +72,7 @@ initSecond:   clc
               adc ##(0x1a10-32)
 initAddress:  tax
               sep #0x20
-              jsr abs:.word0 (readMCU)
+              jsl long:readMCU
               plx
               bcs initDone
               cmp long:matrixROM,x
@@ -98,6 +99,7 @@ J13Prime:     php
               lda #3
               jsr abs:.word0 (sendBounded)
               lda long:AKD
+              sta abs:.word0 (sampleAKD)
               lda long:KBD
               and #127
               sta abs:.word0 (j13LastAscii)
@@ -109,7 +111,8 @@ primeDone:    plb
               rtl
 
 ;;; Mode transitions happen outside timed frames. Finish an owned command
-;;; before changing its IRQ mask; no game binding may remain held by J13.
+;;; before changing its IRQ mask. Retain observed keys between menu/game;
+;;; the UI resets its consumer, and game entry validates the held switches.
 J13Menu:      lda ##1
               bra setMode
 J13Benchmark: lda ##0
@@ -135,6 +138,8 @@ modeAvailable:
               lda 6,s                     ; requested A below B,Y,X
               sta abs:.word0 (j13NextMode)
               jsr abs:.word0 (finishOwner)
+              jsr abs:.word0 (restoreHeldSample)
+              stz abs:.word0 (rowWakeBudget)
               jsr abs:.word0 (removeOwnerIRQ)
               jsr abs:.word0 (stopSendTimer)
               jsr abs:.word0 (stopTimer)
@@ -153,7 +158,13 @@ modeAvailable:
               lda #.byte2 I_GetTime
               sta long:J13FrameSite+3
               rep #0x20
+              lda abs:.word0 (j13NextMode)
+              beq modeClearHeld
+              lda abs:.word0 (j13Mode)
+              bne modeKeepHeld
+modeClearHeld:
               jsr abs:.word0 (clearHeld)
+modeKeepHeld:
               lda abs:.word0 (j13NextMode)
               sta abs:.word0 (j13Mode)
               cmp ##2
@@ -162,7 +173,8 @@ modeAvailable:
               beq modeDone
               lda ##.word0 (J13EscapeFrame)
               bra installFrame
-installGame:  jsr abs:.word0 (initSendTimer)
+installGame:  jsl long:J13ValidateTracked
+              jsl long:initSendTimer
               sep #0x20
               lda #0x5c
               sta long:fastAlarmHandled
@@ -246,15 +258,20 @@ pollDone:     plb
 J13Frame:     php
               sei
               phb
+              sep #0x20
+              lda #2
+              pha
+              plb
+              rep #0x20
+              jsl long:I_GetTime
               phk
               plb
-              jsr abs:.word0 (readControllerClock)
+              sta abs:.word0 (controllerTime)
               jsr abs:.word0 (J13Sample)
               jsr abs:.word0 (ensureTimer)
-              jsr abs:.word0 (scheduleRow)
+              jsr abs:.word0 (deferRows)
               jsr abs:.word0 (serviceController)
               lda abs:.word0 (controllerTime)
-              ldx abs:.word0 (controllerTime+2)
               plb
               plp
               rtl
@@ -268,7 +285,6 @@ readControllerClock:
               jsl long:I_GetTime
               plb
               sta abs:.word0 (controllerTime)
-              stx abs:.word0 (controllerTime+2)
               rts
 J13EscapeFrame:
               php
@@ -306,12 +322,21 @@ j13Irq:       rep #0x30
               phk
               plb
               jsr abs:.word0 (J13Sample)
+              lda abs:.word0 (rowWakeBudget)
+              beq irqCaptureDone
+              dec abs:.word0 (rowWakeBudget)
+              bne irqCaptureDone
+              jsr abs:.word0 (scheduleRow)
+              jsr abs:.word0 (J13Pump)
 irqCaptureDone:
               jmp long:noDocAlarm
 
 ;;; Caller masks IRQs, DBR=code bank, A/X/Y16. Reserve room before touching C010.
 ;;; At most five modifiers, three releases and a repress pair can be queued.
-J13Sample:    jsr abs:.word0 (queueRoom)
+J13Sample:    lda long:inputHead
+              cmp long:inputTail
+              beq sampleRoom
+              jsr abs:.word0 (queueRoom)
               bcs sampleRoom
               rts
 sampleRoom:   inc abs:.word0 (j13Samples)
@@ -323,23 +348,57 @@ sampleRoom:   inc abs:.word0 (j13Samples)
               beq sampleUnchanged
               ora #128
 sampleFresh:  sta abs:.word0 (sampleAscii)
+              stz abs:.word0 (sampleRecover)
               and #127
               sta abs:.word0 (j13LastAscii)
               ; Snapshot character modifiers before acknowledging C010.
               lda long:MODIFIERS
               sta abs:.word0 (sampleMods)
+sampleMetadata:
               lda long:AKD
               sta abs:.word0 (sampleAKD)
               jsr abs:.word0 (readModifiers)
               stz abs:.word0 (sampleTimed)
-              bra sampleModifiers
+              jmp abs:.word0 (sampleModifiers)
 sampleUnchanged:
+              bra sampleSlowHeld
+;;; P3 enabled this path only after recovery finished. Fresh characters still
+;;; take sampleFresh. All-up and mode changes restore the general sampler.
+sampleSteadyHeld:
+              lda long:AKD
+              bpl sampleSteadyUp
+              rep #0x20
+              rts
+sampleSteadyUp:
+              sta abs:.word0 (sampleAKD)
+              lda #(sampleSlowHeld-sampleUnchanged-2)
+              sta abs:.word0 (sampleUnchanged+1)
+              jmp abs:.word0 (sampleIdleModifiers)
+sampleSlowHeld:
               sta abs:.word0 (sampleAscii)
+              ldx abs:.word0 (sampleAKD)
               lda long:AKD
               sta abs:.word0 (sampleAKD)
+              bmi sampleDown
+              bra sampleUpCheck
+sampleDown:
+              txa
+              bmi sampleDownKnown
+              lda #1
+              sta abs:.word0 (sampleRecover)
+              rep #0x20
+              jsr abs:.word0 (readControllerClock)
+              inc a
+              inc a
+              sta abs:.word0 (recoverTime)
+              sep #0x20
+              bra sampleHeld
+sampleDownKnown:
+              ldx abs:.word0 (sampleRecover)
+              bne sampleRecovery
+sampleHeld:
               ; With an ordinary key held, P3 replies already publish live
               ; modifiers. No new character means no translation work here.
-              bpl sampleIdleModifiers
               rep #0x20
               lda abs:.word0 (j13Mode)
               cmp ##2
@@ -366,6 +425,40 @@ sampleIdleReady:
               jsr abs:.word0 (updateModifiers)
 sampleNoModifierChange:
               jmp abs:.word0 (sampleRelease)
+sampleUpCheck:
+              ldx abs:.word0 (sampleRecover)
+              beq sampleIdleModifiers
+sampleRecovery:
+              ; AKD can rise before the MCU writes ASCII. A C010 read in
+              ; that interval can clear the later strobe even when the new
+              ; character equals the last one. Wait for character modifiers,
+              ; or retain the completed tap when AKD has already fallen.
+              ; Menu polls can run before the MCU finishes publishing the
+              ; character. Fresh strobes still bypass this recovery-only
+              ; delay; two clock edges guarantee at least one full tic.
+              rep #0x20
+              jsr abs:.word0 (readControllerClock)
+              sec
+              sbc abs:.word0 (recoverTime)
+              sep #0x20
+              bmi sampleHeld
+              lda long:MODIFIERS
+              bit #0x20
+              beq sampleRecovered
+              bit abs:.word0 (sampleAKD)
+              bmi sampleHeld
+sampleRecovered:
+              ; Metadata must precede the recovered character read: the MCU
+              ; may publish ASCII while the earlier C010 is being sampled.
+              and #0xf7
+              sta abs:.word0 (sampleMods)
+              lda long:KBD
+              ora #128
+              sta abs:.word0 (sampleAscii)
+              and #127
+              sta abs:.word0 (j13LastAscii)
+              stz abs:.word0 (sampleRecover)
+              jmp abs:.word0 (sampleMetadata)
 readModifiers:
               lda abs:.word0 (sampleMods)
               and #0xc7
@@ -456,7 +549,7 @@ sampleCharacter:
               cmp ##1
               bne sampleOrdinary
               lda abs:.word0 (j13MenuSeen)
-              bne sampleOrdinary
+              bne sampleMenuOrdinary
               ; Ignored title/demo keys do not opt gameplay in.
               lda long:attractActive
               bne sampleAttractKey
@@ -467,9 +560,11 @@ sampleCharacter:
 sampleAttractKey:
               lda abs:.word0 (newKey)
               cmp ##0x35
-              bne sampleOrdinary
+              bne sampleMenuOrdinary
 sampleMenuUsed:
               jsr abs:.word0 (menuUsed)
+sampleMenuOrdinary:
+              jsl long:J13ValidateTracked
 sampleOrdinary:
               jsr abs:.word0 (ordinaryDown)
 sampleRelease:lda abs:.word0 (sampleAKD)
@@ -497,9 +592,6 @@ ordinaryFind: lda abs:.word0 (j13Keys),x
               inx
               cpx ##6
               bcc ordinaryFind
-              lda abs:.word0 (j13Mode)
-              cmp ##2
-              bne ordinarySingle
               lda abs:.word0 (j13Matrix)
               beq ordinarySingle
               ldx abs:.word0 (newKey)
@@ -531,6 +623,8 @@ ordinaryRepress:
               lda abs:.word0 (newKey)
               jmp abs:.word0 (queue)
 releaseOrdinary:
+              jsr abs:.word0 (restoreHeldSample)
+              inc abs:.word0 (j13Generation)
               ldx ##0
 releaseKey:   lda abs:.word0 (j13Keys),x
               cmp ##NONE
@@ -589,36 +683,54 @@ queueTimed:   lda long:inputHead
               plx
               rts
 
-;;; Read live modifiers, then one of at most three held rows, per two tics.
-;;; Frame input starts the command; the short DOC alarm sends parameters.
-;;; The reply arrives through DATA IRQ, independently of picture duration.
-;;; One ordinary key needs only P3: AKD gives that key's release.
-scheduleRow:  lda abs:.word0 (j13Mode)
+;;; One batch per frame, at least two tics apart: P3 and every distinct held
+;;; row. One ordinary key needs only P3 because AKD supplies its release.
+;;; With overlapping keys, two existing music wakes move the batch away
+;;; from the frame boundary. The stopped-music sampler supplies the same
+;;; wakes; a sparse-wake frame falls back at the next foreground poll.
+deferRows:    lda abs:.word0 (knownCount)
               cmp ##2
-              beq scheduleGame
-              rts
-scheduleGame: lda abs:.word0 (j13State)
-              beq j13Long1
-              brl scheduleDone
-j13Long1:
+              bcc deferImmediate
+              lda long:frameCount
+              cmp abs:.word0 (rowArmFrame)
+              beq deferDone
+              sta abs:.word0 (rowArmFrame)
+              lda abs:.word0 (rowWakeBudget)
+              bne deferImmediate
+              lda ##2
+              sta abs:.word0 (rowWakeBudget)
+deferDone:    rts
+deferImmediate:
+              stz abs:.word0 (rowWakeBudget)
+              jmp abs:.word0 (scheduleRow)
+
+scheduleRow:  lda long:frameCount
+              cmp abs:.word0 (rowFrame)
+              beq scheduleReturn
+              lda abs:.word0 (j13Mode)
+              cmp ##2
+              bne scheduleReturn
+              lda abs:.word0 (j13State)
+              bne scheduleReturn
               lda abs:.word0 (j13Matrix)
-              bne j13Long2
-              brl scheduleDone
-j13Long2:
+              beq scheduleReturn
               lda abs:.word0 (knownCount)
-              cmp ##1
-              bcs scheduleHasKeys
-              rts
-scheduleHasKeys:
+              beq scheduleReturn
+              lda long:frameCount
+              sta abs:.word0 (rowFrame)
               lda abs:.word0 (controllerTime)
               sec
               sbc abs:.word0 (lastRowTime)
               cmp ##2
-              bcc scheduleDone
-              clc
-              adc abs:.word0 (lastRowTime)
+              bcs scheduleDue
+scheduleReturn:rts
+scheduleDue:  lda abs:.word0 (controllerTime)
               sta abs:.word0 (lastRowTime)
-              lda ##0xe8                  ; live P3 modifiers while a key is held
+              jsr abs:.word0 (cacheRows)
+              lda abs:.word0 (rowListSize)
+              lsr a
+              sta abs:.word0 (rowsLeft)
+              lda ##0xe8
               sta abs:.word0 (rowAddress)
               bra scheduleReady
 scheduleHeldRow:
@@ -627,39 +739,20 @@ scheduleHeldRow:
               bcs scheduleTwoKeys
               rts
 scheduleTwoKeys:
+              jsr abs:.word0 (cacheRows)
               ldx abs:.word0 (rowNext)
-schedulePick: inx
               inx
-              cpx ##6
+              inx
+              cpx abs:.word0 (rowListSize)
               bcc scheduleIndex
               ldx ##0
-scheduleIndex:lda abs:.word0 (j13Keys),x
-              cmp ##NONE
-              beq schedulePick
-              stx abs:.word0 (rowNext)
-              tax
-              lda long:pumpRows,x
-              and ##255
+scheduleIndex:stx abs:.word0 (rowNext)
+              lda abs:.word0 (rowList),x
+              sep #0x20
               sta abs:.word0 (rowAddress)
-              stz abs:.word0 (rowExpected)
-              ldy ##0
-scheduleMask: lda abs:.word0 (j13Keys),y
-              cmp ##64
-              bcs scheduleMaskNext
-              tax
-              lda long:pumpRows,x
-              and ##255
-              cmp abs:.word0 (rowAddress)
-              bne scheduleMaskNext
-              lda long:pumpMasks,x
-              and ##255
-              ora abs:.word0 (rowExpected)
+              xba
               sta abs:.word0 (rowExpected)
-scheduleMaskNext:
-              iny
-              iny
-              cpy ##6
-              bcc scheduleMask
+              rep #0x20
 scheduleReady:lda abs:.word0 (lastRowTime)
               clc
               adc ##70
@@ -667,6 +760,17 @@ scheduleReady:lda abs:.word0 (lastRowTime)
               lda ##1
               sta abs:.word0 (j13State)
 scheduleDone: rts
+
+restoreHeldSample:
+              lda ##(0x80 | ((sampleSlowHeld-sampleUnchanged-2) << 8))
+              sta abs:.word0 (sampleUnchanged)
+              rts
+
+cacheRows:    lda abs:.word0 (j13Generation)
+              cmp abs:.word0 (maskGeneration)
+              beq cacheRowsDone
+              jsl long:J13CacheRows
+cacheRowsDone:rts
 
 ;;; One status sample per call. Pending ADB Talk, DATA or mouse wins before
 ;;; acquisition. While owned, only DATA IRQ/parsing is masked; mouse runs.
@@ -701,7 +805,10 @@ j13Long4:
               sta abs:.word0 (j13Owner)
               sta long:keyTalk
               jsr abs:.word0 (installOwnerIRQ)
-              lda #9
+              rep #0x20
+              jsr abs:.word0 (startSendTimer)
+              sep #0x20
+pumpCommand:  lda #9
               sta long:ADBDATA
               sta long:ZIPCANCEL
               lda #2
@@ -709,7 +816,6 @@ j13Long4:
               rep #0x20
               lda abs:.word0 (j13Generation)
               sta abs:.word0 (rowGeneration)
-              jsr abs:.word0 (startSendTimer)
               rts
 pumpOwned:    lda abs:.word0 (rowStatus)
               bit #0x20
@@ -741,7 +847,6 @@ pumpHigh:     lda #0
               lda abs:.word0 (rowEnables)
               sta long:ADBSTATUS
               rep #0x20
-              jsr abs:.word0 (stopSendTimer)
               brl pumpDone
 pumpData:     lda long:ADBDATA
               sta abs:.word0 (rowValue)
@@ -763,6 +868,11 @@ pumpData:     lda long:ADBDATA
 pumpMatrixReply:
               lda abs:.word0 (rowValue)
               eor #255
+              cmp abs:.word0 (rowExpected)
+              bne pumpChangedRow
+              rep #0x20
+              brl batchReadDone
+pumpChangedRow:
               ora abs:.word0 (rowExpected)
               cmp abs:.word0 (rowExpected)
               beq pumpValidReply
@@ -786,14 +896,13 @@ pumpStatusDone:
               rts
 pumpValidReply:
               rep #0x20
-              jsr abs:.word0 (releaseOwner)
               jsr abs:.word0 (queueRoom)
               bcs pumpHaveRoom
-              brl pumpDone
+              brl pumpFinished
 pumpHaveRoom: lda abs:.word0 (rowGeneration)
               cmp abs:.word0 (j13Generation)
               beq pumpCurrentGeneration
-              brl pumpDone                  ; reply predates a newly pressed key
+              brl pumpFinished              ; reply predates a newly pressed key
 pumpCurrentGeneration:
               stz abs:.word0 (sampleTimed)
               ldy ##0
@@ -815,11 +924,17 @@ rowRelease:   lda abs:.word0 (j13Keys),y
               lda ##NONE
               sta abs:.word0 (j13Keys),y
               dec abs:.word0 (knownCount)
+              inc abs:.word0 (j13Generation)
 rowReleaseNext:
               iny
               iny
               cpy ##6
               bcc rowRelease
+batchReadDone:dec abs:.word0 (rowsLeft)
+              beq pumpFinished
+              jmp abs:.word0 (continueHeldRows)
+pumpFinished:
+              jsr abs:.word0 (releaseOwner)
 pumpDone:     rep #0x20
               rts
 
@@ -827,13 +942,12 @@ pumpDone:     rep #0x20
 ;;; down. Firmware P3 ($E8) supplies live independent switches; bits 0..2 are
 ;;; active low and Apple bits 6/7 active high. P3 is read only on validated ROM.
 pumpPhysicalReply:
-              jsr abs:.word0 (releaseOwner)
               ; An intervening character/all-up transition owns newer state.
               lda abs:.word0 (knownCount)
-              beq physicalDone
+              beq physicalReturn
               lda abs:.word0 (rowGeneration)
               cmp abs:.word0 (j13Generation)
-              bne physicalDone
+              bne physicalReturn
               lda abs:.word0 (rowValue)
               eor ##7
               and ##0xc7
@@ -841,16 +955,32 @@ pumpPhysicalReply:
               sta abs:.word0 (nextMods)
               lda ##1
               sta abs:.word0 (physicalValid)
+              lda abs:.word0 (sampleRecover)
+              bne physicalRecovery
+              sep #0x20
+              stz abs:.word0 (sampleUnchanged+1)
+              rep #0x20
+physicalRecovery:
+              lda abs:.word0 (nextMods)
+              cmp abs:.word0 (j13Mods)
+              beq physicalNoRoom
               jsr abs:.word0 (queueRoom)
               bcc physicalNoRoom
               stz abs:.word0 (sampleTimed)
               jsr abs:.word0 (updateModifiers)
 physicalNoRoom:
+continueHeldRows:
               lda abs:.word0 (knownCount)
               cmp ##2
               bcc physicalDone
-              jmp abs:.word0 (scheduleHeldRow)
-physicalDone: rts
+              jsr abs:.word0 (scheduleTwoKeys)
+              sep #0x20
+              lda abs:.word0 (rowEnables)
+              and #0x40
+              sta long:ADBSTATUS
+              jmp abs:.word0 (pumpCommand)
+physicalDone: jmp abs:.word0 (releaseOwner)
+physicalReturn:jmp abs:.word0 (releaseOwner)
 
  ; One foreground service step. The parameter alarm and DATA IRQ complete
  ; owned commands asynchronously; a busy raw ADB transaction defers capture.
@@ -942,8 +1072,8 @@ ownerDataIRQ:
 
 ;;; One-shot effects use oscillators 0..3 and no refill alarm. Oscillator 28
 ;;; is reserved here for parameter delivery. Its 1 ms period advances only
-;;; an owned exchange and stops as soon as both address bytes are sent.
-;;; It never runs while Off, in menus, or while waiting for the DATA reply.
+;;; an owned exchange; its budget also bounds a stalled reply.
+;;; It stays armed through a row batch and stops when ownership ends.
 ;;; The IRQ entry has saved all registers. Do not sample keys on this alarm.
 J13SendIRQ:   rep #0x30
               phk
@@ -959,36 +1089,40 @@ J13SendWake:  rep #0x30
               plb
               rtl
 sendAlarm:
-              lda abs:.word0 (j13SendTimer)
-              beq sendIRQDone
+              lda abs:.word0 (j13State)
+              cmp ##2
+              bcc sendIRQDone
               dec abs:.word0 (sendBudget)
               beq sendIRQTimeout
-              jsr abs:.word0 (J13Pump)
+              cmp ##4
+              bcs sendIRQDone
+              sep #0x20
+              lda long:ADBSTATUS
+              bit #0x20
+              bne sendIRQData
+              lsr a
+              bcs sendIRQWide
+              lda abs:.word0 (j13State)
+              cmp #2
+              bne sendIRQHigh
+              lda abs:.word0 (rowAddress)
+              sta long:ADBDATA
+              sta long:ZIPCANCEL
+              inc abs:.word0 (j13State)
+              bra sendIRQWide
+sendIRQHigh:  lda #0
+              sta long:ADBDATA
+              sta long:ZIPCANCEL
+              inc abs:.word0 (j13State)
+              lda abs:.word0 (rowEnables)
+              sta long:ADBSTATUS
+sendIRQWide:  rep #0x20
 sendIRQDone:  rts
 sendIRQTimeout:
               jmp abs:.word0 (serviceTimeout)
+sendIRQData:  rep #0x20
+              jmp abs:.word0 (J13Pump)
 
-initSendTimer:
-              sep #0x20
-              ldx ##0xbc
-              lda #1
-              jsr abs:.word0 (docRegister)
-              ldx ##0x1c
-              lda #0x88                   ; frequency 5000: approximately 1 ms
-              jsr abs:.word0 (docRegister)
-              ldx ##0x3c
-              lda #0x13
-              jsr abs:.word0 (docRegister)
-              ldx ##0x5c
-              lda #0
-              jsr abs:.word0 (docRegister)
-              ldx ##0xdc
-              jsr abs:.word0 (docRegister)
-              ldx ##0x9c
-              lda #255
-              jsr abs:.word0 (docRegister)
-              rep #0x20
-              rts
 startSendTimer:
               lda ##32
               sta abs:.word0 (sendBudget)
@@ -1056,6 +1190,9 @@ stopTimer:    lda abs:.word0 (j13Timer)
               jsr abs:.word0 (docRegister)
               rep #0x20
               rts
+docRegisterLong:
+              jsr abs:.word0 (docRegister)
+              rtl
 docRegister:  pha
 docReady:     lda long:SOUNDCTL
               bmi docReady
@@ -1069,6 +1206,9 @@ docReady:     lda long:SOUNDCTL
               sta long:SOUNDDATA
               rts
 
+;;; UI reset discards consumer events, not the identities of switches still
+;;; held on J13. Refresh them before the consumer resets; game entry validates
+;;; and republishes bindings. Raw/off mode still releases J13 ownership.
 J13Reset:     php
               sei
               rep #0x30
@@ -1077,17 +1217,25 @@ J13Reset:     php
               plb
               jsr abs:.word0 (finishOwner)
               jsr abs:.word0 (removeOwnerIRQ)
+              lda abs:.word0 (j13Mode)
+              beq resetClearHeld
+              jsr abs:.word0 (J13Sample)
+              bra resetDone
+resetClearHeld:
               jsr abs:.word0 (clearHeld)
+resetDone:
               plb
               plp
               rtl
-clearHeld:    lda ##NONE
+clearHeld:    jsr abs:.word0 (restoreHeldSample)
+              lda ##NONE
               sta abs:.word0 (j13Keys)
               sta abs:.word0 (j13Keys+2)
               sta abs:.word0 (j13Keys+4)
               stz abs:.word0 (j13Mods)
               stz abs:.word0 (knownCount)
               stz abs:.word0 (physicalValid)
+              stz abs:.word0 (sampleRecover)
               inc abs:.word0 (j13Generation)
               ; Remove only J13's held bit from the merged consumer state.
               ldx ##127
@@ -1098,6 +1246,7 @@ clearSource:  lda long:keyHeld,x
               dex
               bpl clearSource
               lda long:AKD
+              sta abs:.word0 (sampleAKD)
               lda long:KBD
               and #127
               sta abs:.word0 (j13LastAscii)
@@ -1169,7 +1318,7 @@ sendBudget:   .word 0
 j13Keys:      .word NONE,NONE,NONE
 j13Mods:      .word 0
 knownCount:   .word 0
-controllerTime:.word 0,0
+controllerTime:.word 0
 physicalMods: .word 0
 physicalValid:.word 0
 rowDeadline:  .word 0
@@ -1178,6 +1327,15 @@ newKey:       .word 0
 j13Generation:.word 0
 rowGeneration:.word 0
 rowNext:      .word 0
+rowFrame:     .word 0xffff
+rowArmFrame:  .word 0xffff
+rowWakeBudget:.word 0
+maskGeneration:.word 0xffff
+rowMasks:     .byte 0,0,0,0,0,0,0,0,0,0
+rowList:      .word 0,0,0
+rowListSize:  .word 0
+cacheMask:    .byte 0
+rowsLeft:     .word 0
 rowAddress:   .word 0
 rowExpected:  .word 0
 rowValue:     .word 0
@@ -1188,6 +1346,8 @@ lastRowTime:  .word 0
 sampleAscii:  .word 0
 sampleMods:   .word 0
 sampleAKD:    .word 0
+sampleRecover:.word 0
+recoverTime:  .word 0
 j13LastAscii: .word 0
 sampleTime:   .word 0
 sampleTimed:  .word 0
@@ -1222,9 +1382,11 @@ readBounded:  ldy     ##16384
               rts
 
 
+              .section uiextra, text, root
 modifierMasks: .byte 0x01, 0x02, 0x04, 0x80, 0x40
 modifierKeys:  .byte 0x38, 0x36, 0x39, 0x37, 0x3a, 0
 
+              .section inputcode, text, root, noreorder
 ;;; Translate the low seven ASCII bits to synthetic ADB identities.
 ;;; Navigation aliases take precedence (Ctrl-H becomes Left); shifted
 ;;; punctuation maps to its unshifted US key. This mapping cannot distinguish
@@ -1254,7 +1416,7 @@ readMCU:      lda     #9
               jsr     abs:.word0 sendBounded
               bcs     readMCUDone
               jsr     abs:.word0 readBounded
-readMCUDone:  rts
+readMCUDone:  rtl
 
 
 ;;; Scanner bytes followed by row-update bytes, in identifyLoop read order.
@@ -1264,7 +1426,8 @@ matrixROM:
 
 ;;; Indexed by the synthetic ADB identity from asciiKeys: MCU RAM row and
 ;;; active-low switch mask. Row $FF/mask 0 means no supported matrix entry.
-;;; Same-row keys share a read; pumpCachePair merges their expected masks.
+;;; Same-row keys share one read; the cached row list merges their masks.
+              .section uiextra, text, root
 pumpRows:
               .byte 0x31, 0x33, 0x32, 0x35, 0x34, 0x36, 0x31, 0x32, 0x33, 0x34, 0xff, 0x35, 0x32, 0x33, 0x34, 0x35
               .byte 0x36, 0x37, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x3a, 0x38, 0x3a, 0x39, 0x39, 0x3a, 0x3a
@@ -1278,6 +1441,7 @@ pumpMasks:
 
 
 
+              .section inputcode, text, root, noreorder
 bufferRestore: .byte 0
 bufferKeyboard:
               lda     #0x0a
@@ -1391,6 +1555,16 @@ noADBKeyboard:
               sep #0x20
               rts
 
+queueLong:    jsr abs:.word0 (queue)
+              rtl
+readBoundedLong:
+              jsr abs:.word0 (readBounded)
+              rtl
+updateModifiersLong:
+              jsr abs:.word0 (updateModifiers)
+              rtl
+
+              .section menucode, text, root
 ;;; A=raw transition, X=ring offset. Menu repeats use the merged ownership
 ;;; too: one keyboard's release cannot stop an arrow held on the other.
               .public J13MenuKey
@@ -1440,3 +1614,276 @@ menuKeyDone:  ply
 menuRaw:      .word 0
 menuWas:      .word 0
 menuSource:   .word 0
+
+
+              .section registeredmenu, text, root
+;;; Menu/game transitions retain observed ordinary identities. The UI resets
+;;; its event consumer separately, so gameplay entry verifies those keys and
+;;; republishes only switches still down. Menus retire released identities
+;;; before accepting another character, without manufacturing row presses.
+;;; Caller has IRQs masked, A/X/Y16 and DBR=input bank. No gameplay-frame call.
+J13ValidateTracked:
+              lda long:j13Matrix
+              beq validateReturn
+              lda long:knownCount
+              bne validateStart
+              lda long:j13Mode
+              cmp ##2
+              bne validateReturn
+              brl validateModifiers
+validateReturn:
+              rtl
+validateStart:
+              lda ##0
+              sta long:sampleTimed
+              ldy ##0
+validateSlot: tyx
+              lda long:j13Keys,x
+              cmp ##64
+              bcc validateMapped
+              brl validateNext
+validateMapped:
+              tax
+              lda long:pumpRows,x
+              and ##255
+              sta long:rowAddress
+              lda ##0
+              sta long:rowExpected
+              ldx ##0
+validateMask: lda long:j13Keys,x
+              cmp ##64
+              bcs validateMaskNext
+              phx
+              tax
+              lda long:pumpRows,x
+              and ##255
+              cmp long:rowAddress
+              bne validateMaskDone
+              lda long:pumpMasks,x
+              and ##255
+              ora long:rowExpected
+              sta long:rowExpected
+validateMaskDone:
+              plx
+validateMaskNext:
+              inx
+              inx
+              cpx ##6
+              bcc validateMask
+              phy
+              lda long:rowAddress
+              tax
+              sep #0x20
+              jsl long:readTransition
+              rep #0x20
+              ply
+              bcs validateForget
+              and ##255
+              sta long:rowValue
+              eor ##255
+              ora long:rowExpected
+              cmp long:rowExpected
+              bne validateForget
+              tyx
+              lda long:j13Keys,x
+              tax
+              lda long:pumpMasks,x
+              and long:rowValue
+              and ##255
+              bne validateForget
+              lda long:j13Mode
+              cmp ##2
+              bne validateNext
+              txa
+              ; Rebuild gameplay bindings, without reissuing menu/debug
+              ; actions such as the Escape that just closed the menu.
+              pha
+              lda ##.word0 (boundBits)    ; contiguous key and action tables
+              sec
+              sbc ##.word0 (boundKeys)
+              dec a
+              dec a
+              tax
+              pla
+validateBound:
+              cmp long:boundKeys,x
+              beq validatePublish
+              dex
+              dex
+              bpl validateBound
+              bra validateNext
+validatePublish:
+              jsl long:queueLong
+              bra validateNext
+validateForget:
+              tyx
+              lda long:j13Keys,x
+              ora ##128
+              jsl long:queueLong
+              lda ##NONE
+              tyx
+              sta long:j13Keys,x
+              lda long:knownCount
+              dec a
+              sta long:knownCount
+validateNext: iny
+              iny
+              cpy ##6
+              bcs validateModifiers
+              brl validateSlot
+validateModifiers:
+              lda long:j13Mode
+              cmp ##2
+              bne validateDone
+              ldx ##0xe8
+              sep #0x20
+              jsl long:readTransition
+              rep #0x20
+              bcs validateDone
+              eor ##7
+              and ##0xc7
+              sta long:physicalMods
+              sta long:nextMods
+              lda ##1
+              sta long:physicalValid
+              lda ##0
+              sta long:j13Mods
+              jsl long:updateModifiersLong
+validateDone: rtl
+
+
+              .section menucode, text, root
+;;; A8, X16 = a validated MCU address. Finish raw keyboard or mouse
+;;; service before issuing $09. Notifications may precede its one-byte reply;
+;;; preserve keyboard SRQs for the normal ADB parser instead of consuming
+;;; them as row bits. This bounded wait is only used outside gameplay frames.
+readTransition:
+              phx
+              rep #0x20
+              ldy ##1024
+transitionWait:
+              lda long:keyTalk
+              ora long:keyPending
+              bne transitionCapture
+              sep #0x20
+              lda long:ADBSTATUS
+              bit #0xa1
+              rep #0x20
+              bne transitionCapture
+              plx
+              sep #0x20
+              jsl long:readMCU
+              bcs transitionReturn
+              ldx ##16
+transitionByte:
+              cmp #8
+              beq transitionSRQ
+              cmp #0x20
+              beq transitionNotification
+              cmp #0x40
+              beq transitionNotification
+              clc
+transitionReturn:
+              rtl
+transitionSRQ:
+              lda #1
+              sta long:keyPending
+transitionNotification:
+              dex
+              beq transitionTimedOut
+              jsl long:readBoundedLong
+              bcc transitionByte
+              rtl
+transitionCapture:
+              phy
+              phb
+              sep #0x20
+              lda #2
+              pha
+              plb
+              rep #0x20
+              jsl long:CaptureInput
+              plb
+              ply
+              dey
+              bne transitionWait
+              plx
+              sep #0x20
+transitionTimedOut:
+              sec
+              rtl
+
+              .section uiextra, text, root
+initSendTimer:
+              sep #0x20
+              ldx ##0xbc
+              lda #1
+              jsl long:docRegisterLong
+              ldx ##0x1c
+              lda #0x88                   ; frequency 5000: approximately 1 ms
+              jsl long:docRegisterLong
+              ldx ##0x3c
+              lda #0x13
+              jsl long:docRegisterLong
+              ldx ##0x5c
+              lda #0
+              jsl long:docRegisterLong
+              ldx ##0xdc
+              jsl long:docRegisterLong
+              ldx ##0x9c
+              lda #255
+              jsl long:docRegisterLong
+              rep #0x20
+              rtl
+
+;;; Rebuild only when tracked identities change. DBR remains the input bank;
+;;; these long-addressed helpers and immutable tables use existing UiExtra.
+J13CacheRows:
+              sta abs:.word0 (maskGeneration)
+              ldx ##8
+              lda ##0
+cacheRowsClear:
+              sta abs:.word0 (rowMasks),x
+              dex
+              dex
+              bpl cacheRowsClear
+              ldy ##0
+cacheRowKey:  lda abs:.word0 (j13Keys),y
+              cmp ##64
+              bcs cacheRowNext
+              tax
+              sep #0x20
+              lda long:pumpMasks,x
+              beq cacheRow8Done
+              sta abs:.word0 (cacheMask)
+              lda long:pumpRows,x
+              sec
+              sbc #0x31
+              tax
+              lda abs:.word0 (rowMasks),x
+              ora abs:.word0 (cacheMask)
+              sta abs:.word0 (rowMasks),x
+cacheRow8Done:
+              rep #0x20
+cacheRowNext: iny
+              iny
+              cpy ##6
+              bcc cacheRowKey
+              ldx ##0
+              ldy ##0
+              sep #0x20
+cacheList:    lda abs:.word0 (rowMasks),x
+              beq cacheListNext
+              sta abs:.word0 (rowList+1),y
+              txa
+              clc
+              adc #0x31
+              sta abs:.word0 (rowList),y
+              iny
+              iny
+cacheListNext:inx
+              cpx ##10
+              bcc cacheList
+              rep #0x20
+              sty abs:.word0 (rowListSize)
+              rtl

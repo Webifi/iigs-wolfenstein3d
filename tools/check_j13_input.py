@@ -138,4 +138,123 @@ assert transitions(e)==[54,13,182,59]
 e=fresh();sample(e,23,mods=2);physical_reply(e,2)
 sample(e,23,mods=9)
 assert transitions(e)==[54,13]
-print(json.dumps({'checks':['overlap','partial-release','all-up','short-tap','same-key-two-sources','ring-backpressure','stale-row-generation','unknown-firmware-fallback','reply-after-all-up','idle-cache-handoff','stale-character-modifiers-at-all-up','late-modifier-reply','fresh-character-modifiers','repeat-modifiers']}))
+
+# An AKD rise can precede ASCII. If acknowledging C010 clears the later
+# strobe, the unchanged character byte still belongs to a fresh press.
+e=fresh();sample(e,ord('w'));sample(e,down=False,mods=0x20)
+sample(e,down=True,mods=0x20)
+assert transitions(e)==[13,141]
+e.wr16(S['I_GetTime']+1,44)
+sample(e,down=True,mods=0)
+assert transitions(e)==[13,141,13]
+sample(e,down=True,mods=0)
+assert transitions(e)==[13,141,13]
+sample(e,down=False,mods=0x20)
+assert transitions(e)==[13,141,13,141]
+
+# A completed tap retains the pending identity even if the next observed
+# register snapshot is already all-up with idle modifier flags.
+e=fresh();sample(e,ord('w'));sample(e,down=False,mods=0x20)
+sample(e,down=True,mods=0x20)
+e.wr16(S['I_GetTime']+1,44)
+sample(e,down=False,mods=0x20)
+assert transitions(e)==[13,141,13,141]
+consume(e);assert e.rd8(S['keyHeld']+13)==0
+
+# Do not recover on the AKD edge itself: C025 can still describe the old
+# character. Doom records the edge, then considers recovery on a later poll.
+e=fresh();sample(e,ord('w'));sample(e,down=False,mods=0)
+sample(e,down=True,mods=0)
+assert transitions(e)==[13,141]
+sample(e,8,mods=0)
+assert transitions(e)==[13,141,59]
+
+# A mode reset acknowledges a still-held key. Its AKD snapshot is the new
+# baseline, not a fabricated all-up edge that can revive the menu key.
+e=fresh();sample(e,27)
+e.db=S['J13Init']>>16;call(e,'J13Reset',long=True)
+before=transitions(e)
+sample(e,down=True,mods=0);sample(e,down=True,mods=0)
+assert transitions(e)==before
+
+# The MCU can publish the new character after the first C000 read and before
+# recovery sees associated metadata. Recover from the ordered later read.
+e=fresh();sample(e,ord('w'));sample(e,down=False,mods=0x20)
+sample(e,down=True,mods=0x20)
+read_before=e.rd8
+def publish_character(addr):
+    if addr==memmap.KEYMODREG:e.wr8(memmap.KBD,8)
+    return read_before(addr)
+e.rd8=publish_character
+e.wr16(S['I_GetTime']+1,44)
+sample(e,down=True,mods=0)
+assert transitions(e)==[13,141,59]
+
+# Complete the selected controller read in this deterministic register model.
+# Native tests separately exercise the MCU's actual replies and scheduling.
+def row_reply(e, value):
+    e.db=S['J13Init']>>16
+    e.wr16(S['j13State'],4);e.wr16(S['j13Owner'],1)
+    e.wr8(memmap.KMSTATUS,0x20);e.wr8(memmap.DATAREG,value)
+    call(e,'J13Pump')
+
+def physical_reply(e, value=7):
+    e.wr16(S['rowAddress'],0xe8)
+    e.wr16(S['rowGeneration'],e.rd16(S['j13Generation']))
+    row_reply(e,value)
+
+# Steady-held sampling must accept a second key, all-up, and a later repress.
+e=fresh();sample(e,ord('w'));physical_reply(e)
+for _ in range(8):sample(e,down=True)
+assert transitions(e)==[13]
+sample(e,8);assert transitions(e)==[13,59]
+sample(e,down=False,mods=0x20)
+assert transitions(e)==[13,59,141,187]
+sample(e,down=True,mods=0x20)
+e.wr16(S['I_GetTime']+1,44);sample(e,down=True,mods=0)
+assert transitions(e)==[13,59,141,187,59]
+
+# P3 continues to publish live modifiers while the character remains held.
+e=fresh();sample(e,ord('w'));physical_reply(e,3)
+assert e.rd16(S['j13Mods'])==4
+sample(e,down=True,mods=0)
+assert e.rd16(S['j13Mods'])==4
+physical_reply(e,7);assert e.rd16(S['j13Mods'])==0
+
+# Menus resume ordinary modifier sampling while preserving held identities.
+e=fresh();sample(e,ord('w'));physical_reply(e,3)
+e.wr16(S['j13Available'],1);e.db=S['J13Init']>>16
+call(e,'J13Menu',long=True);sample(e,down=True,mods=0x20)
+assert e.rd16(S['j13Mode'])==1 and e.rd16(S['j13Mods'])==0
+
+# A P3 reply must leave a pending same-character recovery active.
+e=fresh();sample(e,ord('w'));e.db=S['J13Init']>>16
+call(e,'restoreHeldSample');e.wr16(S['sampleRecover'],1)
+e.wr16(S['recoverTime'],44);physical_reply(e)
+e.wr16(S['I_GetTime']+1,44);sample(e,down=True,mods=0)
+assert transitions(e)==[13,141,13]
+
+# One shared row reply releases Z while A stays held.
+e=fresh();sample(e,ord('a'));sample(e,ord('z'))
+e.db=S['J13Init']>>16;call(e,'cacheRows')
+assert e.rd16(S['rowListSize'])==2
+e.wr16(S['rowsLeft'],1);physical_reply(e)
+assert e.rd16(S['rowAddress'])==0x31
+row_reply(e,0xfb);consume(e)
+assert e.rd8(S['keyHeld'])==2 and e.rd8(S['keyHeld']+6)==0
+assert e.rd16(S['j13State'])==0 and e.rd16(S['j13Owner'])==0
+
+# Every distinct held row is checked once, without inventing transitions.
+e=fresh()
+for c in 'awb':sample(e,ord(c))
+e.db=S['J13Init']>>16;call(e,'cacheRows')
+assert e.rd16(S['rowListSize'])==6
+e.wr16(S['rowsLeft'],3);physical_reply(e)
+seen=[]
+for _ in range(3):
+    seen.append(e.rd16(S['rowAddress']))
+    row_reply(e,e.rd16(S['rowExpected'])^255)
+assert len(set(seen))==3 and transitions(e)==[0,13,11]
+assert e.rd16(S['j13State'])==0 and e.rd16(S['j13Owner'])==0
+
+print(json.dumps({'checks':['overlap','partial-release','all-up','short-tap','same-key-two-sources','ring-backpressure','stale-row-generation','unknown-firmware-fallback','reply-after-all-up','idle-cache-handoff','stale-character-modifiers-at-all-up','late-modifier-reply','fresh-character-modifiers','repeat-modifiers','same-ascii-strobe-recovery','completed-recovery-tap','deferred-recovery-edge','mode-reset-held-key','ordered-recovery-snapshot','steady-held-repress','steady-held-live-modifiers','steady-held-menu-transition','pending-recovery-with-P3','same-row-independent-release','three-row-batch']}))

@@ -9,7 +9,8 @@
               .extern listValVec, dlControls, keyNames, boundKeys, boundBits, keyChars, heldKey, menuBindMouse
 
 NOKEY         .equ 0xffff
-KEY_COUNT     .equ 20                       ; the entries of boundKeys in keys.s
+KEY_COUNT     .equ 26                       ; the entries of boundKeys in keys.s
+KEY_OLD       .equ 20                       ; the entries that files without S_KEYPAD hold
 KEY_NONE      .equ 0x7f                     ; a code no key sends: an entry with no key
 MOUSE_A       .equ 0x7e                     ; keys.s counts the mouse buttons as keys
 MOUSE_B       .equ 0x70
@@ -272,7 +273,7 @@ keyTextEnd:   lda ##.word0 (ctlText)
               rts
 
 ;;; ---------------------------------------------------------------------------
-;;; The table of keys.s, and the 20 key codes of the settings image
+;;; The table of keys.s, and the 26 key codes of the settings image
 ;;; ---------------------------------------------------------------------------
 
 ;;; Keep the table keys.s starts with: its codes are the defaults, its bits
@@ -305,14 +306,32 @@ defaultEntry: lda abs:.word0 (ctlDef),x
               bpl defaultEntry
               rts
 
-;;; The 20 codes of the settings image into the table: 255 is no key. The
-;;; mouse buttons stay as keys.s has them.
+;;; The 26 codes of the settings image into the table: 255 is no key. The
+;;; mouse buttons stay as keys.s has them. A file without S_KEYPAD gets the
+;;; default keypad codes.
 ControlsApply:
               jsr abs:.word0 (ctlSnapshot)
               ldx ##SETTINGS_IN + S_KEYS
               ldy ##.word0 (ctlBytes)
               lda ##KEY_COUNT - 1
               .byte 0x54, 0x3f, 0x00         ; MVN: bank 0 to bank $3F
+              lda long:SETTINGS_IN + S_KEYPAD
+              and ##255
+              cmp ##1
+              beq applyKeypadSaved
+              ldx ##KEY_OLD * 2
+              ldy ##KEY_OLD
+applyKeypadDefault:
+              lda abs:.word0 (ctlDef),x
+              sep #0x20
+              sta abs:.word0 (ctlBytes),y
+              rep #0x20
+              inx
+              inx
+              iny
+              cpy ##KEY_COUNT
+              bcc applyKeypadDefault
+applyKeypadSaved:
               ldx ##0
               ldy ##0
 applyEntry:   jsr abs:.word0 (ctlIsMouse)
@@ -338,8 +357,12 @@ applyNext:    inx
               bcc applyEntry
               rts
 
-;;; The table into the 20 codes of the settings image.
+;;; The table into the 26 codes of the settings image.
 ControlsCollect:
+              sep #0x20
+              lda #1
+              sta long:SETTINGS_IN + S_KEYPAD
+              rep #0x20
               ldx ##0
               ldy ##0
 collectEntry: lda long:boundBits,x

@@ -13,12 +13,19 @@ p.add_argument('--mame',required=True,type=Path)
 p.add_argument('--name',required=True)
 p.add_argument('--j13',choices=('only','both'),default='both')
 p.add_argument('--view',choices=(214,320),type=int,default=214)
-p.add_argument('--case',choices=('keys','lifecycle','off-save','on-save','reload-off','reload-on','rom03'),default='keys')
+p.add_argument('--accelerator',choices=(0,5),type=int,default=0)
+p.add_argument('--case',choices=('keys','coexist','adb','lifecycle','off-save','on-save','reload-off','reload-on','rom03'),default='keys')
 p.add_argument('--disk',type=Path)
-a=p.parse_args();out=ROOT/'build/tests'/a.name;out.mkdir(parents=True,exist_ok=True)
+p.add_argument('--nvram',type=Path,help='copy a saved MAME NVRAM directory before boot')
+a=p.parse_args()
+if a.case in ('lifecycle','coexist','adb') and a.j13=='only':
+ p.error('this case uses ADB input; use --j13 both. The keys and pair checks cover J13-only input.')
+out=ROOT/'build/tests'/a.name;out.mkdir(parents=True,exist_ok=True)
+if a.nvram:shutil.copytree(a.nvram,out/'nvram',dirs_exist_ok=True)
 _,S=read(ROOT/'build/wolf.elf');shutil.copy2(ROOT/'build/wolf.elf',out/'wolf.elf')
 lua=memmap.fill(r'''
 local events={}
+local adbOnly=@ADB_ONLY@
 local completedFrames=0
 local resizeFrom,resizeFrame,resizeTime=nil,nil,nil
 local gameReadyFrame=nil
@@ -76,7 +83,21 @@ CALLS.game=function()
  gameReadyFrame=nil
  check(value('j13Mode')==2,'game capture not installed');report('game')
 end
-CALLS.view=function() check(value('viewWidth')==VIEW//2,'requested view was not applied') end
+local viewKey,viewRelease,viewReady=nil,nil,nil
+CALLS.view=function()
+ local now=manager.machine.time:as_double()
+ if viewRelease then
+  if now<viewRelease then return false end
+  field(viewKey):set_value(0);viewRelease=nil;viewReady=completedFrames+5
+  return false
+ end
+ if viewReady and completedFrames<viewReady then return false end
+ if value('viewWidth')~=VIEW//2 then
+  viewKey=value('viewWidth')>VIEW//2 and (adbOnly and '-  _' or 'J13 Minus') or (adbOnly and '=  +' or 'J13 Equals')
+  field(viewKey):set_value(1);viewRelease=now+0.15;return false
+ end
+ print('INPUT_SIZE '..value('viewWidth')*2)
+end
 CALLS.confirmarm=function() confirmReady=false end
 CALLS.confirmwait=function() return confirmReady end
 CALLS.resizebegin=function()
@@ -94,7 +115,7 @@ CALLS.clean=function()
  check(value('inputDropped')==0,'input ring overflow')
  check(value('j13Matrix')==1,'row reads became disabled')
 end
-for n,f in pairs({w='J13 W',left='J13 Left',space='J13 Space',shift='J13 Shift',control='J13 Control',adbw='w  W'}) do
+for n,f in pairs({w='J13 W',left='J13 Left',space='J13 Space',shift='J13 Shift',control='J13 Control',adbw='w  W',adbleft='Left Arrow',adbshift='Shift'}) do
  local raw=f
  CALLS[n..'-down']=function() field(raw):set_value(1) end
  CALLS[n..'-up']=function() field(raw):set_value(0) end
@@ -123,6 +144,42 @@ CALLS.shift=function() check(held(56)==2,'Shift not captured') end
 CALLS.shiftup=function() check(held(56)==0,'Shift stuck');CALLS.w() end
 CALLS.control=function() check(held(54)==2,'Control not captured') end
 CALLS.controlup=function() check(held(54)==0,'Control stuck');CALLS.w() end
+local playerCommand,playerTime=0,-1
+local coexistCheck=0
+local mouseMoving=false
+local coexistMouseBefore=0
+local playerFile=nil
+if @COEXIST@ then
+ playerFile=assert(io.open(OUTPUT..'/player-commands.tsv','w'))
+ mem:install_read_tap(S.LogicTicControls,S.LogicTicControls,'coexist-player-command',function(ad)
+  if manager.machine:side_effects_disabled() or cpu.state.PC.value~=ad+1 then return end
+  playerCommand=cpu.state.A.value&65535;playerTime=manager.machine.time:as_double()
+  playerFile:write(string.format('%.9f\t%d\n',playerTime,playerCommand))
+ end)
+ emu.add_machine_stop_notifier(function() if playerFile then playerFile:close() end end)
+end
+CALLS.adbgame=function()
+ gameReadyFrame=gameReadyFrame or completedFrames+2
+ if completedFrames<gameReadyFrame then return false end
+ gameReadyFrame=nil
+ check(value('j13Enabled')==0 and value('j13Mode')==0,'ADB-only run enabled J13')
+ check(mem:read_u8(S.J13AdbSite)==0xaf,'ADB-only retained private DATA handler')
+ check(mem:read_u8(S.fastAlarmHandled)==0xc2,'ADB-only retained DOC capture')
+ report('adb-only-game')
+end
+CALLS.cocheck=function()
+ coexistCheck=coexistCheck+1
+ local e=COEXPECT[coexistCheck]
+ check(e~=nil,'unexpected coexistence checkpoint')
+ for i,k in ipairs({13,59,56}) do check(held(k)==e[i],'coexistence source mismatch: '..e[5]..' key '..k) end
+ check((playerCommand&133)==e[4],'coexistence player command mismatch: '..e[5])
+ check(manager.machine.time:as_double()-playerTime<0.7,'coexistence lacks recent player command')
+ if adbOnly then
+  check(value('j13Enabled')==0 and value('j13Mode')==0,'ADB-only changed J13 mode')
+ else check(value('j13Enabled')==1 and value('j13Mode')==2,'coexistence lost J13 mode') end
+ CALLS.clean()
+ print(string.format('COEXIST_PASS %d %s W=%d Left=%d Shift=%d command=%d',coexistCheck,e[5],held(13),held(59),held(56),playerCommand))
+end
 CALLS.sources=function() check(held(13)==3,'two keyboard ownership not merged') end
 CALLS.adbheld=function() check(held(13)==1,'J13 release cleared ADB hold') end
 CALLS.timer=function() check(value('musicActive')==0 and value('j13Timer')==1,'muted input timer not running');report('muted') end
@@ -142,7 +199,7 @@ CALLS.offgame=function()
 end
 CALLS.rom03=function()
  check(value('j13Available')==0 and value('j13Enabled')==0,'ROM03 offered native J13')
- check(mem:read_u8(S.optActive+6)==0,'ROM03 J13 row selectable');report('rom03')
+ check(mem:read_u8(S.optActive+S.OP_J13)==0,'ROM03 J13 row selectable');report('rom03')
  capture('controls-rom03')
 end
 CALLS.done=function() report('DONE');print('J13_NATIVE_PASS') end
@@ -151,6 +208,19 @@ mem:install_write_tap(S.inputHead+1,S.inputHead+1,'mouse-delivery',function(_,d)
  local head=mem:read_u8(S.inputHead)|(d<<8)
  if mem:read_u16(S.inputRing+((head-8)&1023)+2)==1 then mouseReports=mouseReports+1 end
 end)
+emu.register_frame_done(function()
+ if mouseMoving then
+  field('Mouse X'):set_value(math.floor(manager.machine.time:as_double()*120)%256)
+  field('Mouse Y'):set_value(math.floor(manager.machine.time:as_double()*90)%256)
+ end
+end)
+CALLS.costart=function() coexistMouseBefore=mouseReports;mouseMoving=true end
+CALLS.coend=function()
+ mouseMoving=false
+ check(coexistCheck==#COEXPECT,'missing coexistence checkpoints')
+ check(mouseReports>coexistMouseBefore+10,'continuous ADB mouse reports missing')
+ print('COEXIST_MOUSE_PASS '..(mouseReports-coexistMouseBefore))
+end
 local mouseBefore=0
 CALLS.mouse=function()
  mouseBefore=mouseReports;field('Mouse X'):set_value(12)
@@ -206,8 +276,31 @@ emu.register_frame_done(function()
  end
 end)
 ''')
+co_steps=[];co_expect=[]
+def co_step(actions, held, label):
+ co_steps.extend('call='+action for action in actions)
+ co_steps.extend(['sleep=0.7','call=cocheck'])
+ command=(1 if held[0] else 0)|(4 if held[1] else 0)|(128 if held[2] else 0)
+ co_expect.append([*held,command,label])
+if a.case in ('coexist','adb'):
+ co_step([], [0,0,0], 'initial-all-up')
+ for forward,turn,fs,ts in ([('adb','adb',1,1)] if a.case=='adb' else [('adb','adb',1,1),('','',2,2),('adb','',1,2),('','adb',2,1)]):
+  co_step([forward+'w-down'],[fs,0,0],forward+'forward-held')
+  co_step([turn+'left-down'],[fs,ts,0],forward+'forward-'+turn+'left-held')
+  co_step([turn+'left-up'],[fs,0,0],forward+'forward-survives-'+turn+'left-release')
+  co_step([forward+'w-up'],[0,0,0],'all-up')
+ if a.case=='coexist':
+  for key,index,bit in [('w',0,1),('left',1,4),('shift',2,128)]:
+   for first,last in [('adb',''),('','adb')]:
+    held=[0,0,0];held[index]=1 if first=='adb' else 2
+    co_step([first+key+'-down'],held.copy(),key+'-'+first+'-first')
+    held[index]=3
+    co_step([last+key+'-down'],held.copy(),key+'-both')
+    held[index]=1 if last=='adb' else 2
+    co_step([first+key+'-up'],held.copy(),key+'-'+last+'-survives')
+    co_step([last+key+'-up'],[0,0,0],key+'-all-up')
 names=set(re.findall(r"value\('([^']+)'\)",lua))|set(re.findall(r'\bS\.(\w+)',lua))
-lua='local OUTPUT='+json.dumps(str(out))+'\nlocal S={'+','.join(n+'='+str(S[n]) for n in sorted(names))+'}\n'+lua.replace('==ADB','=='+str(int(a.j13=='both'))).replace('VIEW',str(a.view))
+lua='local COEXPECT='+json.dumps(co_expect).replace('[','{').replace(']','}')+'\nlocal OUTPUT='+json.dumps(str(out))+'\nlocal S={'+','.join(n+'='+str(S[n]) for n in sorted(names))+'}\n'+lua.replace('==ADB','=='+str(int(a.j13=='both'))).replace('VIEW',str(a.view)).replace('@ADB_ONLY@',str(a.case=='adb').lower()).replace('@COEXIST@',str(a.case in ('coexist','adb')).lower())
 (out/'observe.lua').write_text(lua)
 # Menu movement uses the real keyboard as well.
 j='J13 '
@@ -218,16 +311,23 @@ options=['key=Down','key=Down','key=Return','wait=7','sleep=0.3']
 controls=['key=Down','key=Return','wait=18','sleep=0.3']
 steps=['wait=1','sleep=1']
 if a.case=='lifecycle':
- steps+=['call=defaults','key=J13 Escape','wait=2','sleep=0.3','call=auto']+start+['call=game','call=w-down','sleep=0.4','call=left-down','sleep=0.4','call=mouse','sleep=0.6','call=mouseok','key=F6','wait=18','sleep=0.3','call=w-up','call=left-up','sleep=0.3','call=menuquiet']
+ steps+=['call=defaults','key=J13 Escape','wait=2','sleep=0.3','call=auto']+start+['call=game','call=view','call=w-down','sleep=0.4','call=left-down','sleep=0.4','call=mouse','sleep=0.6','call=mouseok','key=F6','wait=18','sleep=0.3','call=w-up','call=left-up','sleep=0.3','call=menuquiet']
  # Mouse buttons are accepted only by the explicit key-binding prompt.
  steps+=['key=Down','key=Down','key=Down','key=Return','wait=9','sleep=0.3','key=Return','sleep=0.3','call=bindwaiting','key=Mouse Button 0','sleep=0.3','call=bindwaiting','key=Mouse Button 1','sleep=0.3','call=bound','key=Return','key=Esc','call=bindcancelled','key=End','key=Return','key=Esc','wait=18','key=Esc','wait=2','key=Esc','wait=0','sleep=0.4','call=game','call=allup']
- steps+=['key=Equals','sleep=0.7','call=game','key=Minus','sleep=0.7','call=game']
+ # Full width cannot grow; exercise a real size change in both directions.
+ resize_keys=('Minus','Equals') if a.view==320 else ('Equals','Minus')
+ for key in resize_keys:steps+=['key='+key,'sleep=0.7','call=game']
  # Start and abort the benchmark through its real confirmation dialog.
- steps+=['key=Esc','wait=2','sleep=0.3','key=Home','key=Down']+options+['key=Down','key=Down','key=Return','sleep=0.3','key=Y','wait=10','sleep=0.3','call=benchmarkquiet','key=J13 Escape','wait=7','sleep=0.3','call=menuquiet','key=Esc','wait=2','key=Esc','wait=0','sleep=0.4','call=game']
+ steps+=['key=Esc','wait=2','sleep=0.3','key=Home']+options+['key=Down','key=Down','key=Return','sleep=0.3','key=Y','wait=10','sleep=0.3','call=benchmarkquiet','key=J13 Escape','wait=7','sleep=0.3','call=menuquiet','key=Esc','wait=2','key=Esc','wait=0','sleep=0.4','call=game']
  steps+=['call=confirmarm','key=F10','call=confirmwait','key=Y','wait=16','sleep=0.3','key=Return','sleep=10','end=']
+elif a.case in ('coexist','adb'):
+ if a.case=='adb':
+  steps+=['call=defaults','key=Esc','wait=2','sleep=0.3']+[step.replace('key=J13 ','key=') for step in start]+['call=adbgame']
+ else:
+  steps+=['call=defaults','key=J13 Escape','wait=2','sleep=0.3','call=auto']+start+['call=game']
+ steps+=['call=view','call=costart']+co_steps+['call=coend']
 elif a.case=='keys':
  steps+=['call=defaults','key='+j+'Escape','wait=2','sleep=0.3','call=auto']+start
- if a.view==320:steps+=['key=Equals','sleep=0.8','key=Equals','sleep=0.8']
  steps+=['call=game','call=view','call=w-down','sleep=4','call=w']
  for duration in (0.05,0.1,0.2):
   steps+=['call=stage',f'hold=J13 Left,{duration}','sleep=0.4','call=tap']
@@ -236,7 +336,7 @@ elif a.case=='keys':
   steps += ['call=stage','hold=J13 '+mod.capitalize()+',0.1','sleep=0.4','call=modtap','call='+mod+'-down','sleep=0.4','call='+mod,'call='+mod+'-up','sleep=0.4','call='+mod+'up']
  if a.j13=='both':
   steps+=['call=adbw-down','sleep=0.3','call=sources','call=w-up','sleep=0.3','call=adbheld','call=w-down','sleep=0.3','call=sources','call=adbw-up','sleep=0.3','call=w']
- steps+=['call=w-up','sleep=0.4','call=allup','key=J13 Escape','wait=2','sleep=0.3','key=Down']+options
+ steps+=['call=w-up','sleep=0.4','call=allup','key=J13 Escape','wait=2','sleep=0.3']+options
  # Display & Sound / Music: mute with real menu input, then resume.
  steps+=['key=Return','wait=17','sleep=0.3','key=Down']+['key=Left']*15+['key=Esc','wait=7','key=Esc','wait=2','key=Esc','wait=0','sleep=1','call=timer','call=w-down','sleep=1','call=stage','hold=J13 Left,0.1','sleep=0.4','call=tap','call=w-up','sleep=0.4','call=allup','key=J13 Escape','wait=2','sleep=0.3','call=clean','snap=menu']
 elif a.case in ('off-save','on-save'):
@@ -260,7 +360,7 @@ if a.case=='keys' and a.view==320:
  # Allow the full-width painter to finish before checking consumer state;
  # physical tap lengths remain exactly 50/100/200 ms.
  steps=['sleep=0.8' if x in ('sleep=0.3','sleep=0.4') else x for x in steps]
-cmd=[sys.executable,'tools/ui_test.py','--name',a.name,'--mame',str(a.mame),'--j13',a.j13,'--hd','--debug','--seconds','150','--lua',str(out/'observe.lua'),'--steps',';'.join(steps)]
+cmd=[sys.executable,'tools/ui_test.py','--name',a.name,'--mame',str(a.mame),'--j13',a.j13,'--accelerator',str(a.accelerator),'--hd','--debug','--seconds','150','--lua',str(out/'observe.lua'),'--steps',';'.join(steps)]
 if a.case=='rom03':cmd+=['--machine','apple2gs']
 if a.disk:cmd+=['--disk',str(a.disk)]
 r=subprocess.run(cmd,cwd=ROOT,capture_output=True,text=True,timeout=240)
@@ -271,5 +371,5 @@ sys.path.insert(0,str(ROOT/'tools/frontend/lettering'))
 from render import shr_screen
 from imaging import png
 for shot in out.glob('*.shr'):png(shot.with_name(shot.stem+'@2x.png'),shr_screen(shot.read_bytes()).rows,2)
-result=dict(case=a.case,j13=a.j13,view=a.view,passed=True,elf_sha256=hashlib.sha256((out/'wolf.elf').read_bytes()).hexdigest(),mame_sha256=hashlib.sha256(a.mame.read_bytes()).hexdigest(),tap_checks=log.count('TAP_PASS'),states=re.findall(r'^INPUT_STATE (.*)$',log,re.M),firmware_restored=('FIRMWARE_RESTORE_PASS' in log) if a.case=='lifecycle' else None,mouse_during_j13=('MOUSE_WITH_J13_PASS' in log) if a.case=='lifecycle' else None,mouse_binding=('MOUSE_BINDING_PASS' in log) if a.case=='lifecycle' else None)
+result=dict(coexist_checks=log.count('COEXIST_PASS'),coexist_states=re.findall(r'^COEXIST_PASS (.*)$',log,re.M),coexist_mouse_reports=re.findall(r'^COEXIST_MOUSE_PASS (.*)$',log,re.M),case=a.case,j13=a.j13,view=a.view,accelerator=a.accelerator,passed=True,elf_sha256=hashlib.sha256((out/'wolf.elf').read_bytes()).hexdigest(),mame_sha256=hashlib.sha256(a.mame.read_bytes()).hexdigest(),tap_checks=log.count('TAP_PASS'),states=re.findall(r'^INPUT_STATE (.*)$',log,re.M),firmware_restored=('FIRMWARE_RESTORE_PASS' in log) if a.case=='lifecycle' else None,mouse_during_j13=('MOUSE_WITH_J13_PASS' in log) if a.case=='lifecycle' else None,mouse_binding=('MOUSE_BINDING_PASS' in log) if a.case=='lifecycle' else None)
 (out/'result.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

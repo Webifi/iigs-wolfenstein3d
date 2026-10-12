@@ -72,7 +72,8 @@ S_VISITED_HI  .equ 22                 ; three upper words, through byte 27
 S_VSYNC       .equ 28                 ; wait for vertical blank before painting, default off
 S_DRAW_BUFFER .equ 29
 S_FAST_TRANSPARENCY .equ 30           ; bit 1: explicit choice, bit 0: enabled; old zero defaults on
-S_KEYS        .equ 32                 ; 20 key codes in the order of boundKeys (keys.s), 255 none
+S_KEYPAD      .equ 31                 ; 1: S_KEYS holds 26 codes; older files hold 20 (keypad codes default)
+S_KEYS        .equ 32                 ; 26 key codes in the order of boundKeys (keys.s), 255 none
 S_SCORES      .equ 64                 ; 7 high scores of 24 bytes, through 231
 S_SLOTS       .equ 232                ; 8 saved games of 32 bytes (the scores end at 232)
 SLOT_SIZE     .equ 32

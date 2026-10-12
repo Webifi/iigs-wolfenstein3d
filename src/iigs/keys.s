@@ -136,8 +136,10 @@ captureHeader:
               beq noKeyRequest
               ldx ##1
               stx abs:.word0 (keyPending)
+;;; A status byte ends this pass; the Talk below answers its request. KEGS keeps
+;;; the request byte valid until that Talk, so reading on would never stop (#1).
 noKeyRequest: lda abs:.word0 (keyHeaderByte)
-              bpl captureByte
+              bpl captureMouse
               and #7
               beq emptyKeyReply
               inc a
@@ -305,11 +307,11 @@ inputCaughtUp:
               sep #0x20
               lda abs:.word0 (keyAction)
               stz abs:.word0 (keyAction)
-              rts
+rawKeyNone:   rts
 
 ;;; A (8 bits) = raw ADB key code, bit 7 set on release.
 applyRawKey:  cmp #255
-              beq rawKeyDone
+              beq rawKeyNone
               sta abs:.word0 (keyRaw)
               rep #0x20
               and ##127
@@ -322,44 +324,59 @@ applyRawKey:  cmp #255
               ora abs:.word0 (keySource)
               sta abs:.word0 (keyHeld),x
               pla
-              bne rawKeyDone
+              bne rawKeyNone
               rep #0x20
               inc abs:.word0 (inputSerial)
               sep #0x20
               .extern DebugKey
               jsl long:DebugKey
-              beq remakeCommand
+              beq rawKeyRemake
               sta abs:.word0 (keyAction)
-              bra remakeCommand
+rawKeyRemake: jmp abs:.word0 (remakeCommand)
 rawKeyUp:     lda abs:.word0 (keySource)
               eor #255
               and abs:.word0 (keyHeld),x
               sta abs:.word0 (keyHeld),x
-              bne rawKeyDone
+              bne rawKeyNone
+              jmp abs:.word0 (remakeCommand)
+
+;;; Bank 2's Data region: the Code region has no room left in Spear.
+              .section savecode4, text, root
 remakeCommand:
               rep #0x20
               lda abs:.word0 (heldCommand)
               sta abs:.word0 (oldCommand)
               stz abs:.word0 (heldCommand)
-              ldx ##BOUND_KEYS-2
-bindingLoop:  lda abs:.word0 (boundKeys),x
-              tay
+;;; Two entries a pass with byte tests: 26 entries cost less than the 20 did.
+              sep #0x20
+              ldx ##BOUND_KEYS-4
+bindingLoop:  ldy abs:.word0 (boundKeys+2),x
               lda abs:.word0 (keyHeld),y
-              and ##255
+              beq bindingLow
+              rep #0x20
+              lda abs:.word0 (boundBits+2),x
+              tsb abs:.word0 (heldCommand)
+              sep #0x20
+bindingLow:   ldy abs:.word0 (boundKeys),x
+              lda abs:.word0 (keyHeld),y
               beq bindingNext
+              rep #0x20
               lda abs:.word0 (boundBits),x
-              ora abs:.word0 (heldCommand)
-              sta abs:.word0 (heldCommand)
+              tsb abs:.word0 (heldCommand)
+              sep #0x20
 bindingNext:  dex
               dex
+              dex
+              dex
               bpl bindingLoop
+              rep #0x20
               lda abs:.word0 (oldCommand)  ; new presses latch for one poll
               eor ##0xffff
               and abs:.word0 (heldCommand)
               ora abs:.word0 (keyLatch)
               sta abs:.word0 (keyLatch)
               sep #0x20
-rawKeyDone:   rts
+              rts
 
               .section gamedata, data, root
 inputSerial:  .word 0
@@ -402,6 +419,8 @@ mouseSensitivity: .word 4
 mouseWalk:    .word 1
 boundKeys:    .word 0x0d,0x3e,0x01,0x3d,0x3b,0x3c,0x00,0x02,0x2b,0x2f
               .word 0x31,0x0e,0x03,0x36,0x7e,0x70,0x3a,0x37,0x38,0x39
-BOUND_KEYS .equ 40
+              .word 0x5b,0x57,0x56,0x58,0x59,0x5c ; keypad 8 5 4 6 7 9, as in the 1998 IIgs port
+BOUND_KEYS .equ 52                       ; a multiple of 4: the binding loop reads two entries a pass
 boundBits:    .word 1,1,2,2,4,8,256,512,256,512,16,16,32,32,32,64,64,64,128,128
+              .word 1,2,4,8,256,512
 keyChars: .byte 0,0,0,0,0,0,0,0,0,'V',0,'B','Q',0,0,'R','Y',0,'1','2','3','4',0,0,'=',0,0,'-',0,0,']',0,0,'[',0,'P',0,0,0,0,'K',0,0,0,0,'N','M',0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,132,133,134,130,135,136,0,0,0,0,0,0,0,137,0,0,0,0,0,0,0,0,131,0,129,0,0,0,0,0,0,0
