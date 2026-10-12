@@ -55,12 +55,12 @@ for n,h in enumerate(heights):
         if PREPARED:
             pending=0xb0+(bank-3)*3
             restore=[' lda #0xb9',f' sta [{pending}]']
-            lines.extend([' .byte 0',f'wallOp{bank}: plb',*restore,' ply',' plx',' rts'])
+            lines.extend([' .byte 0',f'wallOp{bank}: plb',' ply',' plx',*restore,' rts'])
             # Restore the previous temporary exit before entering any row
             # code in this bank. A cut keeps only its exit in the direct page;
             # the list no longer contains a separate restore record.
-            lines.extend([f'cutOp{bank}: plb',*restore,' plx',f' stx dp:{pending}',
-                          ' lda #0x6b',f' sta long:0x{bank:02x}0000,x',' ply',' plx',' rts'])
+            lines.extend([f'cutOp{bank}: plb',' plx',' ply',*restore,f' stx dp:{pending}',
+                          ' lda #0x6b',f' sta long:0x{bank:02x}0000,x',' plx',' rts'])
         if PREPARED and bank==4:lines.extend(short_code)
     if PREPARED and h<64:
         for local,(row,tex) in enumerate(zip(range(top,bottom),texels)):
@@ -197,3 +197,13 @@ if PREPARED:
     text+='bufferModulo: .byte '+','.join(str(i*256%160) for i in range(101))+'\n'
     text+=' .section buffersound, text, root\nbufferScalePage: .byte '+','.join(map(str,pages))+'\n'
     (OUT/'buffer_scalers.inc').write_text(text)
+
+# Skip only overlaps meeting this row count. Source length gives a
+# conservative upper bound before view clipping or overlap.
+wall_band_min_rows = 12
+wall_band_minimum = [next((i*2-2 for i,h in enumerate(heights)
+                          if (n*h+63)//64 >= wall_band_min_rows), 399)
+                     for n in range(65)]
+(OUT/'wall_band_minimum.inc').write_text(
+    'WALL_BAND_MIN_ROWS .equ %d\n .word %s\n' %
+    (wall_band_min_rows, ','.join(map(str, wall_band_minimum))))

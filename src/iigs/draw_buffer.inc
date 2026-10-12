@@ -71,8 +71,7 @@ bufferSetDone:plp
 BufferLoad:   jsl long:J13SettingsLoad
               lda long:SETTINGS_IN+S_VSYNC
               jsl long:BufferVsyncSet
-              lda long:SETTINGS_IN+S_DRAW_BUFFER
-              bra BufferSet
+              jmp long:WallPaintLoad
 BufferStore:  jsl long:J13SettingsStore
               sep #0x20
               lda long:vsyncOn
@@ -80,7 +79,7 @@ BufferStore:  jsl long:J13SettingsStore
               lda long:bufferOn
               sta long:SETTINGS_IN+S_DRAW_BUFFER
               rep #0x20
-              rtl
+              jmp long:WallPaintStore
 bufferHooks:  lda long:bufferOn
               beq bufferHooksDirect
               lda ##.word0 (bufferBridge)
@@ -908,3 +907,5 @@ BufferChangeView:
 bufferViewKeep:
               rtl
 
+
+              .extern WallPaintLoad, WallPaintStore

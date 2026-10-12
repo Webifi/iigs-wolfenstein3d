@@ -70,7 +70,7 @@ S_MOUSE_VERSION .equ 20               ; 1 = calibrated 16-step mouse, 0 = legacy
 S_VISIT_VERSION .equ 21               ; 1 = 64-bit visited mask, 0 = legacy ten-floor mask
 S_VISITED_HI  .equ 22                 ; three upper words, through byte 27
 S_VSYNC       .equ 28                 ; wait for vertical blank before painting, default off
-S_DRAW_BUFFER .equ 29
+S_DRAW_BUFFER .equ 29                 ; 0 direct, 1 buffered, 2 wall bands
 S_FAST_TRANSPARENCY .equ 30           ; bit 1: explicit choice, bit 0: enabled; old zero defaults on
 S_KEYPAD      .equ 31                 ; 1: S_KEYS holds 26 codes; older files hold 20 (keypad codes default)
 S_KEYS        .equ 32                 ; 26 key codes in the order of boundKeys (keys.s), 255 none

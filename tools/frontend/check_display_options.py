@@ -25,7 +25,7 @@ a = p.parse_args()
 out = ROOT / 'build/tests' / a.name
 out.mkdir(parents=True, exist_ok=a.resume)
 elf = ROOT / 'build/wolf.elf'
-_, symbols = read(elf)
+segments, symbols = read(elf)
 assert not any(n in symbols for n in ('HiddenPaintSet', 'hiddenOn', 'hiddenPaint', 'hdBandPublish'))
 if a.resume:
     assert elf.read_bytes()==(out/'wolf.elf').read_bytes(), 'build changed since key route'
@@ -102,6 +102,9 @@ tap(S.transparencyDone,'quality-end',function()
 end)
 local function headers() return bytes(@MM:SPRITE_CMDS@,HEADER_BYTES) end
 CALLS['fast-default']=function() assert(mem:read_u16(S.fastTransparencyOn)==1,'legacy setting did not default on') end
+CALLS['paint-default']=function()
+ assert(mem:read_u16(S.wallPaintOn)==0 and mem:read_u16(S.bufferOn)==0,'painting did not default to Direct')
+end
 CALLS['fast-game-on']=function()
  assert(mem:read_u16(S.fastTransparencyOn)==1 and mem:read_u16(@MM:SPRITE_QUALITY_STATE@+4)==1)
  if fastHeaders then assert(headers()==fastHeaders,'On did not restore fast headers') else fastHeaders=headers() end
@@ -121,7 +124,7 @@ mem:install_write_tap(0x3f0,0x3f0,'frames',function(_,d) if d==2 then frames=fra
 CALLS['display']=function()
  assert(loaded==1,'legacy On setting was not loaded')
  assert(mem:read_u8(0x7c12)==0,'retired setting not cleared')
- rows({'Sound Effects','Music','View Size','Depth Shading','Vsync','Draw buffer','Fast transparency'})
+ rows({'Sound Effects','Music','View Size','Depth Shading','Vsync','Painting','Fast transparency'})
  directScalers=bytes(@MM:SEG_SCALE3@,3*65536)
  assert(mem:read_u16(S.bufferOn)==0,'draw buffer defaults to on')
 end
@@ -140,6 +143,17 @@ CALLS['buffer-off']=function()
  assert(mem:read_u16(S.bufferOn)==0)
  assert(bytes(@MM:SEG_SCALE3@,3*65536)==directScalers,'off did not restore scaler bytes')
 end
+CALLS['walls-menu-on']=function()
+ assert(mem:read_u16(S.wallPaintOn)==1 and mem:read_u16(S.bufferOn)==0)
+end
+CALLS['walls-game-on']=function()
+ CALLS['walls-menu-on']()
+ assert(mem:read_u16(S.tightDispatch+1)==(S.wallPaintBridge&65535),'wall painter was not installed on return')
+end
+CALLS['walls-game-off']=function()
+ assert(mem:read_u16(S.wallPaintOn)==0 and mem:read_u16(S.bufferOn)==0)
+ assert(mem:read_u16(S.tightDispatch+1)==(S.tightLoop&65535),'direct painter was not restored')
+end
 CALLS['shade-off']=function() assert(mem:read_u16(S.columnLight)==0) end
 CALLS['shade-on']=function() assert(mem:read_u16(S.columnLight)==1) end
 CALLS['view-larger']=function() assert(mem:read_u16(S.weaponViewIndex)==4) end
@@ -154,9 +168,9 @@ CALLS['done']=function()
 end
 CALLS['reboot']=function()
  assert(loaded==0 and mem:read_u8(0x7c12)==0)
- rows({'Sound Effects','Music','View Size','Depth Shading','Vsync','Draw buffer','Fast transparency'})
+ rows({'Sound Effects','Music','View Size','Depth Shading','Vsync','Painting','Fast transparency'})
  CALLS['vsync-on']()
- CALLS['buffer-on']()
+ CALLS['walls-menu-on']()
  assert(mem:read_u16(S.columnLight)==1 and mem:read_u16(S.weaponViewIndex)==2)
  assert(mem:read_u16(S.mouseWalk)==1 and mem:read_u16(S.mouseSensitivity)==5)
  assert(mem:read_u16(S.fastTransparencyOn)==0 and mem:read_u8(@MM:SETTINGS_IN@+30)==2,'fast transparency Off was not saved')
@@ -164,7 +178,7 @@ CALLS['reboot']=function()
 end
 ''').replace('SYMBOLS', '{' + ','.join(f'{n}={symbols[n]}' for n in (
     'LoadSettings', 'MenuDimOpen', 'UiKeepView', 'uiGameOn', 'columnLight',
-    'weaponViewIndex', 'mouseWalk', 'mouseSensitivity', 'vsyncOn', 'preparedAll', 'vsyncB', 'resumeKept', 'bufferOn', 'bufferBridge','fastTransparencyOn','ApplyTransparency','transparencyDone','resumeView') if n in symbols) + '}')
+    'weaponViewIndex', 'mouseWalk', 'mouseSensitivity', 'vsyncOn', 'preparedAll', 'vsyncB', 'resumeKept', 'bufferOn', 'bufferBridge','fastTransparencyOn','ApplyTransparency','transparencyDone','resumeView','wallPaintOn','tightDispatch','wallPaintBridge','tightLoop') if n in symbols) + '}')
 lua=lua.replace('LOGIC_FIELDS','{'+','.join(f'{n}={v}' for n,v in logic_capture.layout(symbols).items())+'}')
 lua=lua.replace('HEADER_BYTES',str(json.loads((ROOT/'build/levels/0/registered-art.json').read_text())['frames']*202))
 (out / 'observe.lua').write_text(lua)
@@ -173,7 +187,7 @@ start = ['key=Home','key=Return','wait=15','sleep=0.5','key=Return','wait=3','sl
 if int(re.search(r'#define CAMPAIGN_EPISODES (\d+)', (ROOT/'build/gen/campaign.inc').read_text()).group(1))>1:
     start[2:2]=['wait=19','sleep=0.5','key=Return']
 steps = ['wait=1','sleep=1','key=Esc','wait=2','sleep=0.5'] + display
-steps += ['call=display','call=fast-default','call=vsync-off','call=buffer-off','snap=display-sound',
+steps += ['call=display','call=fast-default','call=paint-default','call=vsync-off','call=buffer-off','snap=display-sound',
           'key=End','key=Up','key=Right','sleep=1','call=buffer-on','call=vsync-off','snap=buffer-on',
           'key=Up','key=Right','call=vsync-on','call=buffer-on',
           'key=Down','key=Left','sleep=1','call=buffer-off','call=vsync-on',
@@ -189,8 +203,15 @@ for mode in ('off','on','off'):
     steps += ['key=Esc','wait=2','sleep=0.5'] + display + ['key=End','key=Right','sleep=0.5','snap=fast-'+mode]
     if mode=='off': steps += ['call=fast-pending-off']
     steps += ['key=Esc','wait=7','key=End','key=Return','sleep=1','key=Esc','wait=2','key=Esc','wait=0','sleep=1','call=fast-game-'+mode]
+for key,enabled in (('Right',True),('Right',False),('Left',True)):
+    steps += ['key=Esc','wait=2','sleep=0.5'] + display + [
+        'key=End','key=Up','key='+key,'sleep=0.5']
+    if enabled: steps += ['call=walls-menu-on']
+    steps += ['key=Esc','wait=7','key=End','key=Return','sleep=1',
+              'key=Esc','wait=2','key=Esc','wait=0','sleep=5',
+              'call=walls-game-'+('on' if enabled else 'off')]
 steps += ['hold=Left,0.5','sleep=2','snap=game','key=Esc','wait=2','sleep=0.8','snap=game-menu',
-          'key=Esc','wait=0','sleep=1','snap=resumed','call=done','end=']
+          'key=Esc','wait=0','sleep=5','snap=resumed','call=done','end=']
 
 
 def run(name, steps, disk):
@@ -215,13 +236,27 @@ saved_image = saved_disk.read_bytes()
 _, saved = settings(saved_image)
 assert saved[18] == 0 and saved[12] == legacy[12]
 assert struct.unpack_from('<H', saved, 8)[0] == sum(saved[12:496]) & 65535
-assert saved[13:18] == legacy[13:18] and saved[19:28] == legacy[19:28] and saved[28] == 1 and saved[29] == 1 and saved[30] == 2 and saved[31:] == legacy[31:], 'unrelated saved settings changed'
+expected = bytearray(legacy)
+expected[18] = 0
+expected[28:32] = bytes((1, 2, 2, 1))
+if legacy[31] != 1:
+    for segment in segments:
+        at = symbols['boundKeys'] - segment['address']
+        if 0 <= at and at + 52 <= len(segment['data']):
+            expected[52:58] = segment['data'][at + 40:at + 52:2]
+            break
+    else:
+        raise AssertionError('default keypad bindings absent from ELF')
+struct.pack_into('<H', expected, 8, sum(expected[12:496]) & 65535)
+assert saved == expected, ('saved settings differ',
+                          [(i, a, b) for i, (a, b) in enumerate(zip(expected, saved)) if a != b])
 boot = run(a.name + '-saved', ['wait=1','sleep=1','key=Esc','wait=2','sleep=0.5'] + display +
            ['snap=saved-display','call=reboot','end='], saved_disk)
 assert 'DISPLAY_SAVED_BOOT_PASS' in boot, boot[-4000:]
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 report = dict(legacy_on_ignored=True, other_settings_preserved=True, saved_boot=True,
-              game_picture_restored=True, display_rows=7, fast_transparency_saved_off=True, fast_transparency_live_toggle=True, control_rows=4, vsync_saved_on=True, draw_buffer_saved_on=True, draw_buffer_independent=True, draw_buffer_toggle_restores_scalers=True, vsync_toggle_restores_bytes=True,
+              painting_default='Direct',
+              game_picture_restored=True, display_rows=7, fast_transparency_saved_off=True, fast_transparency_live_toggle=True, control_rows=4, vsync_saved_on=True, fast_walls_saved_on=True, fast_walls_live_toggle=True, draw_buffer_independent=True, draw_buffer_toggle_restores_scalers=True, vsync_toggle_restores_bytes=True,
               media_sha256=sha(ROOT / 'build/wolf-hd.po'), elf_sha256=sha(elf),
               legacy_fixture_sha256=sha(fixture))
 (out / 'result.json').write_text(json.dumps(report, indent=2) + '\n')

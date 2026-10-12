@@ -1039,3 +1039,5 @@ vsyncWait:    jmp long:vsyncViewWait
 vsyncReady:   rtl
 
 #include "draw_buffer.inc"
+
+#include "wall_paint.inc"

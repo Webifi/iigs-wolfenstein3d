@@ -17,6 +17,7 @@
               .extern VsyncToggle, vsyncOn, BufferToggle, bufferOn, BufferChangeView, BufferOptionValue
 
               .extern fastTransparencyOn, TransparencyToggle
+              .extern WallPaintMode, WallPaintToggle
 
 NOKEY         .equ 0xffff
 OP_COUNT      .equ 11
@@ -241,8 +242,11 @@ optValueTransparency:
               lda long:fastTransparencyOn
               bra optValueSwitch
 optValueBuffer:
-              lda long:bufferOn
-              bra optValueSwitch
+              jsl long:WallPaintMode
+              asl a
+              tax
+              lda abs:.word0 (paintModeNames),x
+              bra optValueText
 optValueVsync:
               lda long:vsyncOn
               bra optValueSwitch
@@ -319,7 +323,7 @@ optChange:    lda dp:UL_CUR
 changeTransparency:
               jsl long:TransparencyToggle
               rts
-changeBuffer: jsl long:BufferToggle
+changeBuffer: jsl long:WallPaintToggle
               rts
 changeVsync:  jsl long:VsyncToggle
               rts
@@ -376,7 +380,11 @@ oMusic:       .asciz "Music"
 oView:        .asciz "View Size"
 oShade:       .asciz "Depth Shading"
 oVsync:       .asciz "Vsync"
-oBuffer:      .asciz "Draw buffer"
+oBuffer:      .asciz "Painting"
+paintModeNames: .word .word0 (paintDirect), .word0 (paintBuffered), .word0 (paintWalls)
+paintDirect:  .asciz "Direct"
+paintBuffered: .asciz "Buffered"
+paintWalls:   .asciz "Fast walls"
 oTransparency: .asciz "Fast transparency"
 oMouse:       .asciz "Mouse Walk"
 oSpeed:       .asciz "Mouse Speed"

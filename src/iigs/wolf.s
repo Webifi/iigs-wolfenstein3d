@@ -914,7 +914,7 @@ weightEightViewLoad:
               lda ##1
               sta dp:FIRST
 ShowView:
-              jsl long:EnsureGameplayAssets
+              jsl long:WallPaintShow
 #if !WOLF_TRUE_PIXELS
               jsr abs:.word0 (EnsureRayHeights)
 #endif
@@ -3797,7 +3797,7 @@ tightRun:     sta dp:TIGHT_END
               sbc ##PAINT_GUARD+160*26
               bcc prepareChecked
               ldx dp:SCAN
-              jmp abs:.word0 (tightLoop)
+tightDispatch: jmp abs:.word0 (tightLoop)
               .public preparedAll, deferDone, deferOp, paintListDone, bufferFinishHook
               .public drawWeaponPose, weaponPoseCall, weaponPoseBank, weaponDrawerEntries
               .public viewScaleExit, viewScaleBottom
@@ -3916,6 +3916,7 @@ tightNext:    dec dp:PA_SX
               dex
               cpx dp:TIGHT_END
               bne tightLoop
+tightRangeDone:
               stx dp:SCAN
               txa
               cmp ##0x8000
@@ -3926,6 +3927,7 @@ tightNext:    dec dp:PA_SX
 tightAll:     jmp abs:.word0 (preparedAll)
 tightSource:  ldy abs:.word0 (heightIndex),x
 tightWall:    lda abs:.word0 (viewScaleAddr),y
+tightWallEntry:
               pha
               pei dp:PA_SX
               stx dp:WALL_COL
@@ -3940,7 +3942,7 @@ tightGrow:    sta abs:.word0 (oldHeight),x ; A: the new height
               bra tightWall
 tightHeight:  tay
               bcs tightGrow
-              lda abs:.word0 (oldHeight),x
+tightLower:   lda abs:.word0 (oldHeight),x
               sta dp:PA_OLD
               tya
               sta abs:.word0 (oldHeight),x
@@ -6938,3 +6940,8 @@ poolNext:     lda dp:OW_PTR
               adc ##SPR_RUN_BYTES
               sta dp:OW_PTR
               jmp abs:.word0 (poolLoop)
+
+              .extern WallPaintShow
+              .public tightDispatch, tightLoop, tightNext, tightRangeDone
+              .public tightWallEntry, tightLower, tightGrow
+              .public viewScaleAddr, viewScaleBank, sourceAddr, oldSource, oldHeight, lightDelta, rowCodeBase

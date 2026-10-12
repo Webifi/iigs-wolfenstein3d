@@ -215,7 +215,7 @@ UiPublishGame:GAME_ENTER
 
 ;;; One picture of the current pose, as the frame loop makes it.
 UiRender:     GAME_ENTER
-              jsl long:EnsureGameplayAssets
+              jsl long:WallPaintShow
               jsr abs:.word0 (EnsureRayHeights)
               jsr abs:.word0 (castFrame)
               jsr abs:.word0 (PrepareSprites)
@@ -380,3 +380,5 @@ DebugGodFace: lda long:LOGIC_BASE+V_faceframe
               adc ##19
               jmp abs:.word0 (hudFace)
 #endif
+
+              .extern WallPaintShow
