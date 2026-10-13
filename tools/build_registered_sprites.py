@@ -138,6 +138,14 @@ def build_floor(floor, code_digest, sound, reuse=True):
                 quality='sprite-quality-loads.json',
                 program_bytes=len(unit),wall_ranges=None if packed else len(program['wall_ranges']),
                 wall_aliases=len(program['wall_aliases']),wall_pages=report['wall_pages']))+'\n')
+            if report.get('compact_art'):
+                from dense_art import load_records
+                baked = segments(load_records(fixed_art.LAST_PROGRAM['baked_records']), folder, 'registered-art-baked')
+                (folder/'registered-art-baked.json').write_text(json.dumps(baked, indent=2)+'\n')
+                metadata = json.loads((folder/'fixed.json').read_text())
+                metadata['baked'] = 'registered-art-baked.json'
+                metadata['weapon_header_address'] = None
+                (folder/'fixed.json').write_text(json.dumps(metadata)+'\n')
         if report.get('layout')!='fixed':
             # Per-floor packing: the generator still writes the walls (packed, from the shared
             # column chunks and a loaded pointer table); only the rest of the art is stored.
@@ -198,7 +206,7 @@ def main():
     ids=sprite_ids();selected=config()['floor']-1
     if not args.finish:
         code=hashlib.sha256()
-        for name in ('native_host.py','host_kernels.c','build_registered_sprites.py','registered_art.py','sprite_simplify.py','fixed_art.py','fixed_store.py','fixed_units.py','sight_rooms.py','grow_rooms.py','line_proofs.py','line_regions.py','probe_art_overlap.py','pool_cover.py','floor_art.py','native_actors.py'):
+        for name in ('native_host.py','host_kernels.c','build_registered_sprites.py','registered_art.py','sprite_simplify.py','fixed_art.py','dense_art.py','memmap.py','viewgeometry.py','fixed_store.py','fixed_units.py','sight_rooms.py','grow_rooms.py','line_proofs.py','line_regions.py','probe_art_overlap.py','pool_cover.py','floor_art.py','native_actors.py'):
             code.update(source_bytes(ROOT/'tools'/name))
         pages,_,_=vswap()
         code.update(b''.join(pages))

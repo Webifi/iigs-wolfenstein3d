@@ -678,7 +678,7 @@ def generation_rows(floor):
         order += [dict(row, late=True, packed=True) for row in read_rows(folder/meta['quality'], folder)]
     if meta.get('baked'):
         # Per-floor packed art other than the walls; it loads after the generator is done.
-        order += [dict(row, late=True) for row in read_rows(folder/meta['baked'], folder)]
+        order += [dict(row, late=True, packed=True) for row in read_rows(folder/meta['baked'], folder)]
     return order
 
 
@@ -844,10 +844,20 @@ def join_effect_rows(rows):
             a=bytes(previous['data']) if 'data' in previous else (ROOT/previous['file']).read_bytes()
             b=bytes(row['data']) if 'data' in row else (ROOT/row['file']).read_bytes()
             end=row['address']+len(b)
-            if (previous['address']+len(a)==row['address'] and len(a)+len(b)<=32768
+            if (previous['address']+len(a)==row['address']
                     and previous['address']>>16==(end-1)>>16):
-                out[-1]=dict(previous,data=a+b,file='linked effects',packed=True)
-                continue
+                body=a+b
+                fits=len(body)<=32768
+                if not fits:
+                    # Larger joins are safe only when a packed input fits
+                    # the same decode stage; the output stays in one bank.
+                    options=storage_codec.candidates(body,ROOT/'build/b1cache',
+                              storage_codec.policy(ROOT,'hd'),False,b1_allowed=False)
+                    fits=any(o['codec'] in ('lzsa1','lz16') and
+                             o['blocks']*512<=row['stage'][1]-row['stage'][0] for o in options)
+                if fits:
+                    out[-1]=dict(previous,data=body,file='linked effects',packed=True)
+                    continue
         out.append(row)
     return out
 

@@ -6,17 +6,8 @@ from viewgeometry import HEIGHTS
 out=ROOT/'build/assets'
 indices=[min(range(len(HEIGHTS)),key=lambda i:abs(HEIGHTS[i]-h)) for h in range(1025)]
 
-# One word fuses midpoint height and the texel gap allowed by its perspective
-# slope. The bound permits 0.75 texel of ideal midpoint error before rounding.
-midpoints=bytearray()
-for left in HEIGHTS:
-    for index in range(256):
-        right=HEIGHTS[min(index,len(HEIGHTS)-1)]
-        height=indices[(left+right)//2]
-        gap=min(255,3*(left+right)//(2*abs(left-right))) if left!=right else 255
-        midpoints+=bytes((height,gap))
-assert len(midpoints)==102400
-(out/'ray-midpoint.bin').write_bytes(midpoints)
+from viewgeometry import midpoint_table
+(out/'ray-midpoint.bin').write_bytes(midpoint_table())
 from gen_ray_weights import build as build_weights
 build_weights()
 

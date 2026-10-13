@@ -84,6 +84,12 @@ def memory():
                              (max(a, memmap.BOOT_SEEDS_ART_END), b)]
                             if name == 'build/assets/ray-fixed.bin' else [(a, b)])
               if lo < hi]
+    # The midpoint lookup's right height is a doubled index below 400.
+    # Its remaining 112 bytes per row are not read by the renderer.
+    from fixed_art import split
+    static = [(lo, hi, name) for a, b, name in static
+              for lo, hi in (split([(a, b)], memmap.midpoint_art_ranges())[0]
+                             if name == 'build/assets/ray-midpoint.bin' else [(a, b)])]
     wall_paint = (memmap.WALL_PAINT, memmap.WALL_PAINT_END, 'wall painter')
     assert all(not overlap(wall_paint, row) for row in boot), 'boot load overlaps wall painter'
     runtime = [wall_paint,
@@ -118,6 +124,13 @@ def memory():
         art = spans(art_rows(floor))
         effects = spans(read_rows(ROOT/f'build/sound/effects-floor-{floor:02}-loads.json', ROOT/'build/sound'))
         disjoint(art + effects)
+        # Raw effects write whole sectors from their own start address,
+        # which need not itself be sector-aligned.
+        padded_effects = [(a, a + ((b-a+511) & ~511), name) for a, b, name in effects
+                          if memmap.SFX_BASE <= a < memmap.SFX_BASE_END]
+        for a in art:
+            for b in padded_effects:
+                assert not overlap(a, b), (floor, a, b, 'raw effect padding')
         for a in art + effects:
             for b in protected:
                 assert not overlap(a, b), (floor, a, b)

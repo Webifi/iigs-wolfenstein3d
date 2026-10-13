@@ -1162,6 +1162,33 @@ ART_STAGE = ART_BASE + 3 * ART_BYTES + ART_BYTES // 2
 assert STORE_ROOT_SIZE >= STORE_ROOT_BLOCKS * 512, 'the store root needs its blocks'
 
 
+
+def midpoint_art_ranges():
+    """Only right-height indices 0..199 are read from each 256-word row."""
+    return [(RAY_MIDPOINT + row * 512 + 400,
+             RAY_MIDPOINT + (row + 1) * 512) for row in range(200)]
+
+
+def compact_art_tails():
+    """Unused word-aligned tails available to floor-local packed art.
+
+    Keep the shared allocator's established ranges unchanged. These small
+    fragments are useful only when columns can be stored independently.
+    """
+    return [(REGISTERED_LINEIDS_END, LOGIC_TAIL),
+            (RAY_LOGIC_SETUP_END + 1, RAY_MIDPOINT),
+            (RAY_MIDPOINT_END, RAY_WEIGHTS_HIGH),
+            (THRUST_EXTRA_END + 1, SPARE_35),
+            (SHADING_END, SHADING_SPARE), (CLIPS_END, CLIPS_SPARE),
+            (ROWCODE_END, ROWCODE_SPARE), (THRUST_MAIN_END + 1, THRUST_SPARE),
+            (HORIZONTAL_END, HORIZONTAL_SPARE),
+            (WEAPON_ENTRIES_END, WEAPON_DRAWERS_2),
+            (THRUST_INDEX_END, SPRITE_QUALITY_STATE),
+            (REG_ENDPOINT_ORIGINALS_END, RAW_BOOT),
+            (WEAPON_RUNS_END, WEAPON_DRAWERS_1),
+            (VIEW_HEIGHT_END, VIEW_HEIGHT_SPARE)]
+
+
 def projections(symbols):
     """Resolve projection storage from ELF symbols, with compatibility defaults."""
     return (symbols.get('SPR_RECORDS', OLD_SPR_RECORDS),

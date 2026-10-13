@@ -11,7 +11,7 @@ from pathlib import Path
 import memmap
 from elf import read
 from emu816 import Emu
-from fixed_art import fast_frame
+from fixed_art import fast_frame, fast_columns_for
 from wolfdata import ROOT, PROFILE
 
 
@@ -78,6 +78,8 @@ def main():
                 shape = int(key)
                 fast = fast_frame(frame.get('mirror_of', shape)) if mode else None
                 art, columns = fast if fast else (frame, frame['columns'])
+                if fast:
+                    columns = fast_columns_for(frame.get('mirror_of', shape), columns, frame['columns'])
                 if fast and 'mirror_of' in frame:
                     art = dict(art, left=63-art['right'], right=63-art['left'])
                     columns = columns[::-1]

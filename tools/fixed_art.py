@@ -48,7 +48,13 @@ GROUP_LIMIT = memmap.GEN_USED - memmap.SFX_BASE
 class Space:
     """Free fragments, each inside one bank; first fit in the given order."""
     def __init__(self, ranges, ordered=False):
-        self.free = [[a, b] for a, b in ranges] if ordered else sorted([a, b] for a, b in ranges)
+        fragments = []
+        for a, b in ranges:
+            while a < b:
+                end = min(b, (a & ~65535) + 65536)
+                fragments.append([a, end])
+                a = end
+        self.free = fragments if ordered else sorted(fragments)
         self.records = []
         self.kinds = []
         self.last_request = None
@@ -83,8 +89,9 @@ def shape_runs(shape):
     import pool_cover
     from wolfdata import vswap, sprite
     pages, base, _ = vswap()
-    from sprite_simplify import world_sprite
-    arts = (sprite(pages[base + shape]), world_sprite(pages[base + shape]))
+    original = sprite(pages[base + shape])
+    fast = fast_frame(shape)
+    arts = (original, fast[0]) if fast else (original,)
     pools = pool_cover.pages()
     runs = set()
     for art in arts:
@@ -232,7 +239,7 @@ def group_strips(members, by_shape):
     return strips, bytes(blob)
 
 
-def pack_floor(floor, palette_dir):
+def pack_floor(floor, palette_dir, compact=False, protected_cache=None, required_sight=None):
     """Same return values as registered_art.pack_floor. The first layout that fits, in this
     order: 700, 500, 350, 250 sight rooms, then none; for each, walls in fill ranges before
     packed walls (a loaded pointer table). A layout with art in the in-game pause's $3C frame
@@ -261,7 +268,14 @@ def pack_floor(floor, palette_dir):
     if mirror_shape() in by_shape:
         header_bytes += FRAME_BYTES
     pages, raw_walls, ranges = wall_space(floor, header_bytes)
-    args = (floor, frames, receipt, walls, raw_walls, pages, header_bytes, weapon_shapes, FloorColors(receipt))
+    if compact:
+        from dense_art import extra_ranges
+        ranges += extra_ranges(floor)
+        ranges = split(ranges, [(memmap.DRAW_BUFFER, memmap.DRAW_BUFFER_END),
+                                (memmap.WALL_PAINT, memmap.WALL_PAINT_END)])[0]
+    if protected_cache is not None:
+        ranges = split(ranges, [(memmap.PLAY_CACHE, protected_cache)])[0]
+    args = (floor, frames, receipt, walls, raw_walls, pages, header_bytes, weapon_shapes, FloorColors(receipt), compact)
     sight_cache = {}
     cached = ranges
     for c, d in PLAY_CACHE:
@@ -270,6 +284,8 @@ def pack_floor(floor, palette_dir):
     if chosen is None or chosen[0] > 0 or in_frame(chosen[1][0]):
         whole = search(*args, ranges, sight_cache)
         if whole is None:
+            if not compact:
+                return pack_floor(floor, palette_dir, compact=True)
             raise ValueError(f'floor {floor + 1}: art does not fit')
         if chosen is None or (chosen[0], in_frame(chosen[1][0])) > (whole[0], in_frame(whole[1][0])):
             # The fewest top slots that keep the whole layout's quality (a bisection: more
@@ -300,6 +316,9 @@ def pack_floor(floor, palette_dir):
         usable = split(ranges, reserved)[0]
         chosen = search(*args, usable, sight_cache)
         if chosen is None:
+            if not compact:
+                return pack_floor(floor, palette_dir, compact=True, protected_cache=cache_start,
+                                  required_sight=quality(baseline)[0])
             raise ValueError(f'floor {floor + 1}: full draw buffer does not fit without evicting play cache')
     index, result, LAST_PROGRAM = chosen
     report = result[-1]
@@ -307,7 +326,7 @@ def pack_floor(floor, palette_dir):
                                 repacked=overlaps, baseline_free_bytes=baseline[1][-1]['free_bytes'],
                                 baseline_quality=quality(baseline), quality=quality(chosen),
                                 protected_play_end=cache_start)
-    if not overlaps:
+    if not overlaps and not compact:
         report['free_bytes'] -= buffer_end-buffer_start
     assert all(not (a < buffer_end and buffer_start < a + len(raw)) for a, raw in result[0])
     assert all(not (a < cache_start and memmap.PLAY_CACHE < a + len(raw)) for a, raw in result[0])
@@ -322,12 +341,15 @@ def pack_floor(floor, palette_dir):
     if wall_overlap:
         usable = split(ranges, [(buffer_start,buffer_end), (lo,hi), (memmap.PLAY_CACHE,old_cache)])[0]
         chosen = search(*args, usable, sight_cache)
-        if chosen is None:
-            raise ValueError(f'floor {floor + 1}: wall painter does not fit beside draw buffer')
+        if chosen is None or quality(chosen)[0] > quality(original)[0]:
+            if not compact:
+                return pack_floor(floor, palette_dir, compact=True, protected_cache=old_cache,
+                                  required_sight=quality(original)[0])
+            raise ValueError(f'floor {floor + 1}: wall painter does not fit beside draw buffer and sight tables')
         index, result, LAST_PROGRAM = chosen
         report = result[-1]
         report['draw_buffer'] = original[1][-1]['draw_buffer']
-    else:
+    elif not compact:
         report['free_bytes'] -= hi-lo
     assert quality(chosen)[0] <= quality(original)[0], 'wall painter would weaken sight tables'
     report['wall_paint'] = dict(address=lo, bytes=hi-lo, repacked=wall_overlap,
@@ -337,6 +359,9 @@ def pack_floor(floor, palette_dir):
     assert all(not (a < old_cache and memmap.PLAY_CACHE < a + len(raw)) for a, raw in result[0])
     assert all(not (a < memmap.WALL_PAINT_END and memmap.WALL_PAINT < a + len(raw))
                for a, raw in result[0]), 'floor art overlaps the reserved wall painter'
+    if required_sight is not None:
+        assert index <= required_sight, 'compact art would weaken sight tables'
+    report['compact_art'] = compact
     if SIGHT_ROOMS[index]:
         sight_needs(floor, SIGHT_ROOMS[index], sight_cache)  # later tries rewrote its files
     return result
@@ -355,11 +380,11 @@ def quality(found):
     return index, in_frame(result[0]), program.get('wall_mode') == 'pointers', stage
 
 
-def search(floor, frames, receipt, walls, raw_walls, pages, header_bytes, weapon_shapes, colors, ranges, sight_cache):
+def search(floor, frames, receipt, walls, raw_walls, pages, header_bytes, weapon_shapes, colors, compact, ranges, sight_cache):
     """(index in SIGHT_ROOMS, result, program) of the first layout that fits the ranges, a
     layout with art in the pause frame only when no later one fits without it; None."""
     framed = None
-    for index, rooms in enumerate(SIGHT_ROOMS):
+    for index, rooms in enumerate(SIGHT_ROOMS[:1] if compact else SIGHT_ROOMS):
         sight = sight_needs(floor, rooms, sight_cache) if rooms else None
         usable = ranges
         if sight:
@@ -368,7 +393,7 @@ def search(floor, frames, receipt, walls, raw_walls, pages, header_bytes, weapon
         for packed in (False, True):
             try:
                 result = place_all(floor, frames, receipt, walls, raw_walls, pages, header_bytes, weapon_shapes,
-                                   usable, sight, packed, mapped=colors)
+                                   usable, sight, packed, mapped=colors, compact=compact)
             except ValueError:
                 print(f'floor {floor + 1}: art does not fit with {rooms} sight rooms, packed walls {packed}', flush=True)
                 continue
@@ -453,28 +478,28 @@ def sight_needs(floor, rooms, cache):
 
 
 @functools.lru_cache(maxsize=1)
-def wall_packing(sprites, strings):
+def wall_packing(sprites, strings, alignment=2):
     """Wall matches and overlap paths depend on sprite bytes, not their addresses.
     Keep them while the floor search tries different free RAM ranges."""
     from probe_art_overlap import overlap_strings
     placed, unmatched = {}, set(strings)
     for index, raw in enumerate(sprites):
         for size in sorted({len(piece) for piece in unmatched}):
-            for at in range(0, len(raw)-size+1, 2):
+            for at in range(0, len(raw)-size+1, alignment):
                 piece = raw[at:at+size]
                 if piece in unmatched:
                     placed[piece] = index, at
                     unmatched.remove(piece)
-    blob, _ = overlap_strings(unmatched, alignment=2)
+    blob, _ = overlap_strings(unmatched, alignment=alignment)
     from probe_art_overlap import aligned_offsets
-    where = aligned_offsets(blob, unmatched, 2)
+    where = aligned_offsets(blob, unmatched, alignment)
     return placed, bytes(blob), where
 
 
-def packed_walls(space, sprite_records, sprite_kinds, strings):
+def packed_walls(space, sprite_records, sprite_kinds, strings, alignment=2):
     """Reuse sprite substrings, then place whole wall strings in free fragments."""
     sprites = [row for row, kind in zip(sprite_records, sprite_kinds) if kind == 'sprite art']
-    matches, blob, where = wall_packing(tuple(raw for _, raw in sprites), frozenset(strings))
+    matches, blob, where = wall_packing(tuple(raw for _, raw in sprites), frozenset(strings), alignment)
     placed = {piece: sprites[index][0] + at for piece, (index, at) in matches.items()}
     for start, end in cut_paths(blob, sorted(set((at, at + len(raw)) for raw, at in where.items())), space):
         address = space.place(blob[start:end], 'wall art')
@@ -515,13 +540,90 @@ def fast_frame(shape):
     art = world_sprite(pages[base + shape])
     if art == sprite(pages[base + shape]):
         return None
-    # Pool strips have floor-specific synthetic colors. Current eligible shapes
-    # have none; fail at build time if a profile introduces that combination.
-    assert shape not in pool_cover.pages(), f'sprite {shape}: simplified pool strips need a shared color table'
+    if shape in pool_cover.pages():
+        from sprite_simplify import source_pixels
+        from viewgeometry import HEIGHTS
+        original = sprite(pages[base + shape])
+        source, pixels = source_pixels(original), source_pixels(art)
+        start, end = pool_cover.pages()[shape][:2]
+        # The pool scaler retargets these rows to filtered source slots.
+        # Keep its feature and any rows sharing those slots unchanged.
+        protected = set(range(start, end))
+        for h in HEIGHTS:
+            if h >= 64:
+                break
+            patched = {row for height, row in pool_cover.plan().slot if height == h}
+            for tex in range(64):
+                if patched.intersection(range(pool_cover._e(h, tex), pool_cover._e(h, tex + 1))):
+                    protected.add(tex)
+        for x in range(64):
+            for y in protected:
+                pixels[x][y] = source[x][y]
+        columns = []
+        for column in pixels:
+            runs, y = [], 0
+            while y < 64:
+                if column[y] is None:
+                    y += 1
+                    continue
+                top = y
+                while y < 64 and column[y] is not None:
+                    y += 1
+                runs.append((top, y, bytes(column[top:y])))
+            columns.append(runs)
+        used = [x for x, col in enumerate(columns) if col]
+        art = dict(art, left=min(used), right=max(used), columns=columns[min(used):max(used)+1])
     columns = [[] for _ in range(64)]
     for x, column in enumerate(art['columns'], art['left']):
         columns[x] = [(a, b, bytes(raw)) for a, b, raw in column]
     return art, columns
+
+
+def fast_columns_for(shape, columns, original):
+    """Reuse the original floor's filtered strips in the simplified body."""
+    import pool_cover
+    if shape not in pool_cover.pages():
+        return columns
+    feature = pool_cover.pages()[shape][:2]
+    return [pool_cover.split_runs(col, feature)[0] +
+            [(a, b, bytes(raw)) for a, b, raw in original[x] if a >= 200]
+            for x, col in enumerate(columns)]
+
+
+def compact_sources(space, frames, receipt, colors):
+    """Pack exact mapped runs when shared index groups cannot fit the floor.
+
+    These floor-local bytes load directly. Source banks and command formats
+    are unchanged, so drawing needs no decompression or additional lookup.
+    """
+    from dense_art import frame_banks
+    if not hasattr(colors, 'compact_banks'):
+        runs = {}
+        for shape, art, columns, original in frames:
+            pieces = {raw for col in columns for a, b, raw in col}
+            fast = fast_frame(shape)
+            if fast:
+                pieces.update(raw for col in fast_columns_for(shape, fast[1], columns)
+                              for a, b, raw in col)
+            runs[shape] = pieces
+        groups = {(shape, light): {colors(raw, table) for raw in pieces}
+                  for shape, pieces in runs.items()
+                  for light, table in enumerate(receipt['sprite_lights'])}
+        colors.compact_banks = frame_banks(groups)
+        colors.compact_runs = runs
+    banks, offsets = {}, {}
+    for bank in sorted(colors.compact_banks, key=lambda b: -len(b.blob)):
+        address = space.place(bank.blob, 'sprite art', bias=BANK_BIAS)
+        for shape, light in bank.groups:
+            banks[shape, light] = address >> 16
+            positions = {}
+            for raw in colors.compact_runs[shape]:
+                piece = colors(raw, receipt['sprite_lights'][light])
+                at = bank.blob.find(piece)
+                assert at >= 0
+                positions[raw] = (address & 65535) + at
+            offsets[shape, light] = positions
+    return banks, offsets
 
 
 def frame_header(shape, art, columns, pointers, bank, lights):
@@ -548,7 +650,7 @@ def frame_header(shape, art, columns, pointers, bank, lights):
     return bytes(header)
 
 
-def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes, weapon_shapes, ranges, sight, packed=False, mapped=mapped):
+def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes, weapon_shapes, ranges, sight, packed=False, mapped=mapped, compact=False):
     from wolfdata import vswap, sprite
     import pool_cover
     pages, base, _ = vswap()
@@ -586,25 +688,29 @@ def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes
     global_ids = {members: n for n, (members, _) in enumerate(groups())}
     program = dict(groups=[global_ids[m] for m, _ in floor_groups], areas={}, strip_at={}, strips={},
                    commands={}, walls=[], sight=(sight_rows, sight['stride'], sight['rooms']) if sight else None)
-    for size, g, light, runs, strip_blob in sorted(units, key=lambda r: (-r[0], r[1], -1 if r[2] is None else r[2])):
-        members, blob = floor_groups[g]
-        span = 2 * len(blob)
-        if light is None:
-            data = b''.join(mapped(blob, lights[l]) for l in range(4)) + mapped(strip_blob, lights[0])
-            address = space.place(data, 'sprite art', bias=BANK_BIAS)
-            placed = [(l, address + span * l, address + 4 * span) for l in range(4)]
-        else:
-            data = mapped(blob, lights[light]) + mapped(strip_blob, lights[light])
-            address = space.place(data, 'sprite art', bias=BANK_BIAS)
-            placed = [(light, address, address + span)]
-        program['strips'][g] = (strip_blob, [(shape, x, a, blob_offset(strip_blob, raw)) for shape, x, a, raw in runs])
-        for l, area, strip_at in placed:
-            program['areas'][g, l] = area
-            program['strip_at'][g, l] = strip_at
-            positions = {(shape, x, a): (strip_at - area) + 2 * blob_offset(strip_blob, raw) for shape, x, a, raw in runs}
-            for shape in members:
-                art_banks[shape, l] = area >> 16
-                run_offsets[shape, l] = (area & 0xFFFF, blob, positions)
+    if compact:
+        program['groups'] = []
+        art_banks, run_offsets = compact_sources(space, frames, receipt, mapped)
+    else:
+        for size, g, light, runs, strip_blob in sorted(units, key=lambda r: (-r[0], r[1], -1 if r[2] is None else r[2])):
+            members, blob = floor_groups[g]
+            span = 2 * len(blob)
+            if light is None:
+                data = b''.join(mapped(blob, lights[l]) for l in range(4)) + mapped(strip_blob, lights[0])
+                address = space.place(data, 'sprite art', bias=BANK_BIAS)
+                placed = [(l, address + span * l, address + 4 * span) for l in range(4)]
+            else:
+                data = mapped(blob, lights[light]) + mapped(strip_blob, lights[light])
+                address = space.place(data, 'sprite art', bias=BANK_BIAS)
+                placed = [(light, address, address + span)]
+            program['strips'][g] = (strip_blob, [(shape, x, a, blob_offset(strip_blob, raw)) for shape, x, a, raw in runs])
+            for l, area, strip_at in placed:
+                program['areas'][g, l] = area
+                program['strip_at'][g, l] = strip_at
+                positions = {(shape, x, a): (strip_at - area) + 2 * blob_offset(strip_blob, raw) for shape, x, a, raw in runs}
+                for shape in members:
+                    art_banks[shape, l] = area >> 16
+                    run_offsets[shape, l] = (area & 0xFFFF, blob, positions)
     def command_keys(shape, columns):
         keys = []
         for x, column in enumerate(columns):
@@ -612,10 +718,13 @@ def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes
             for a, b, raw in sorted(column, reverse=True):
                 offsets = []
                 for light in range(4):
-                    start, blob, positions = run_offsets[shape, light]
-                    within = positions[shape, x, a] if a >= 200 else 2 * blob_offset(blob, raw)
-                    assert within >= 0
-                    offset = start + within - (a * 2 if a < 200 else 0)
+                    if compact:
+                        offset = run_offsets[shape, light][raw] - (a * 2 if a < 200 else 0)
+                    else:
+                        start, blob, positions = run_offsets[shape, light]
+                        within = positions[shape, x, a] if a >= 200 else 2 * blob_offset(blob, raw)
+                        assert within >= 0
+                        offset = start + within - (a * 2 if a < 200 else 0)
                     assert 0 <= offset < 65536
                     offsets.append(offset)
                 command += struct.pack('<5H', a | (b << 8), *offsets)
@@ -632,17 +741,45 @@ def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes
         keys = command_keys(shape, columns)
         unique = [keys[x] for x in range(64) if canon[x] == x]
         blocks.append((sum(map(len, unique)), shape, canon, keys))
-    for size, shape, canon, keys in sorted(blocks, key=lambda r: (-r[0], r[1])):
-        address = space.place(b''.join(keys[x] for x in range(64) if canon[x] == x), 'sprite commands')
-        program['commands'][shape] = address
-        command_banks[shape] = address >> 16
-        at = address & 0xFFFF
-        for x in range(64):
-            if canon[x] == x:
-                command_ptrs[shape, x] = at
-                at += len(keys[x])
-        for x in range(64):
-            command_ptrs[shape, x] = command_ptrs[shape, canon[x]]
+    if compact:
+        contents = {a >> 16: {} for a, b in space.free}
+        for size, shape, canon, keys in sorted(blocks, key=lambda r: (-r[0], r[1])):
+            pieces = set(keys)
+            choices = []
+            for bank, have in contents.items():
+                extra = pieces - have.keys()
+                ranges = [(a, b) for a, b in space.free if a >> 16 == bank]
+                room, cost = sum(b-a for a, b in ranges), sum(map(len, extra))
+                if cost > room:
+                    continue
+                trial = Space(ranges)
+                try:
+                    for raw in sorted(extra, key=lambda raw: (-len(raw), raw)):
+                        trial.place(raw, 'sprite commands')
+                except ValueError:
+                    continue
+                choices.append((cost, room-cost, bank))
+            if not choices:
+                raise ValueError(f'no command bank for sprite {shape}')
+            bank = min(choices)[2]
+            for raw in sorted(pieces-contents[bank].keys(), key=lambda raw: (-len(raw), raw)):
+                address = space.place(raw, 'sprite commands', bank=bank)
+                contents[bank][raw] = address & 65535
+            command_banks[shape] = bank
+            for x, key in enumerate(keys):
+                command_ptrs[shape, x] = contents[bank][key]
+    else:
+        for size, shape, canon, keys in sorted(blocks, key=lambda r: (-r[0], r[1])):
+            address = space.place(b''.join(keys[x] for x in range(64) if canon[x] == x), 'sprite commands')
+            program['commands'][shape] = address
+            command_banks[shape] = address >> 16
+            at = address & 0xFFFF
+            for x in range(64):
+                if canon[x] == x:
+                    command_ptrs[shape, x] = at
+                    at += len(keys[x])
+            for x in range(64):
+                command_ptrs[shape, x] = command_ptrs[shape, canon[x]]
 
     # Both modes share the lit source groups. Only changed shapes need another
     # command stream. A bank-local XOR program swaps their resident headers;
@@ -658,7 +795,8 @@ def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes
         if fast is None:
             continue
         fast_art, fast_columns = fast
-        keys = command_keys(shape, fast_columns)
+        drawable = fast_columns_for(shape, fast_columns, columns)
+        keys = command_keys(shape, drawable)
         unique = list(dict.fromkeys(keys))
         address = space.place(b''.join(unique), 'fast sprite commands')
         quality_records.append(space.records[-1])
@@ -694,7 +832,8 @@ def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes
     wall_addresses, placed = {}, {}
     if packed:
         placed = packed_walls(space, sprite_records, sprite_kinds,
-                              {mapped(raw, mapping) for raw in raw_walls for mapping in receipt['wall_lights']})
+                              {mapped(raw, mapping) for raw in raw_walls for mapping in receipt['wall_lights']},
+                              alignment=1 if compact else 2)
         program['wall_mode'] = 'pointers'
     for raw in raw_walls:
         for mapping in receipt['wall_lights']:
@@ -737,6 +876,10 @@ def place_all(floor, frames, receipt, walls, raw_walls, wall_pages, header_bytes
         # world headers. Off mode uses the original, unreflected commands.
         frame_offsets[len(sprite_ids())] = header_bytes - FRAME_BYTES
         headers[-FRAME_BYTES:] = mirror_header
+    if compact:
+        program['baked_records'] = [(a, raw) for (a, raw), kind in zip(sprite_records, sprite_kinds)
+                                    if kind in ('sprite art', 'sprite commands')]
+        program['baked_records'].append((memmap.SPRITE_CMDS, bytes(headers)))
     global LAST_PROGRAM
     LAST_PROGRAM = program
     space.records = sprite_records + space.records

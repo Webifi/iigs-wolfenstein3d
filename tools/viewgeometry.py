@@ -10,3 +10,17 @@ def scale_height(rows):
 def weapon_height(rows):
     """SimpleScaleShape receives viewheight+1 and discards its low bit."""
     return (rows+1)&~1
+
+
+def midpoint_table():
+    """Midpoint height and allowed texel gap for each pair of scaler heights."""
+    indices = [min(range(len(HEIGHTS)), key=lambda i: abs(HEIGHTS[i]-h))
+               for h in range(1025)]
+    data = bytearray()
+    for left in HEIGHTS:
+        for index in range(256):
+            right = HEIGHTS[min(index, len(HEIGHTS)-1)]
+            height = indices[(left+right)//2]
+            gap = min(255, 3*(left+right)//(2*abs(left-right))) if left != right else 255
+            data += bytes((height, gap))
+    return bytes(data)

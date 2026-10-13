@@ -52,7 +52,7 @@ def coverage_bounds(full):
     return result
 
 
-def coverage_only(full, colors):
+def coverage_only(full, colors, compact=False):
     """Share equal coverage; whole-pose drawers handle every color change.
 
     Pose identities are shared only when coverage and rendered pixels match
@@ -66,8 +66,10 @@ def coverage_only(full, colors):
             first = (view-width)//2-PAD
             old = struct.unpack_from('<H', full, (pose*4+vi)*2)[0]
             directory = len(blob)
-            blob.extend(bytes((width+2*PAD)*2))
+            if not compact:
+                blob.extend(bytes((width+2*PAD)*2))
             struct.pack_into('<H', blob, (pose*4+vi)*2, directory-2*first)
+            pointers = []
             for i in range(width+2*PAD):
                 pointer = struct.unpack_from('<H', full, old+2*(first+i))[0]
                 if pointer not in translated:
@@ -81,14 +83,20 @@ def coverage_only(full, colors):
                         runs[key] = len(blob)
                         blob.extend(raw)
                     translated[pointer] = runs[key]
-                struct.pack_into('<H', blob, directory+2*i, translated[pointer])
+                pointers.append(translated[pointer])
+                if not compact:
+                    struct.pack_into('<H', blob, directory+2*i, translated[pointer])
             pixels = tuple(sorted((address, tuple(c[offset] for c in colors))
                                   for address, offset in source_pixels(full, pose, vi).items()))
-            coverage = bytes(blob[directory:directory+(width+2*PAD)*2])
+            coverage = struct.pack('<%dH' % len(pointers), *pointers)
             key = view, coverage, pixels
             if key in pictures:
                 struct.pack_into('<H', blob, (pose*4+vi)*2, pictures[key])
             else:
+                if compact:
+                    directory = len(blob)
+                    blob.extend(coverage)
+                    struct.pack_into('<H', blob, (pose*4+vi)*2, directory-2*first)
                 pictures[key] = directory-2*first
     old_empty = struct.unpack_from('<H', full, len(full)-2)[0]
     empty_directory = len(blob)
@@ -188,7 +196,13 @@ def main():
                 bounds += [min((a//160 for a in pixels),default=0),max((a//160+1 for a in pixels),default=0)]
         (ROOT/'build/gen/buffer_weapon.inc').write_text('bufferWeaponRows: .byte '+','.join(map(str,bounds))+'\n')
         colors = [(ROOT/f'build/levels/{f}/weapon-pixels-00.bin').read_bytes() for f in range(PROFILE.floors)]
-        blob, empty_directory = coverage_only(blob, colors)
+        full = blob
+        blob, empty_directory = coverage_only(full, colors)
+        if len(blob) > memmap.WEAPON_RUNS_SIZE:
+            # Discard only unused directories from identical poses. Keep
+            # different pictures distinct even when their coverage agrees.
+            blob, empty_directory = coverage_only(full, colors, compact=True)
+        assert len(blob) <= memmap.WEAPON_RUNS_SIZE, 'weapon coverage overlaps the pose drawers'
     (ROOT/'build/gen/weapon_empty.inc').write_text('EMPTY_WEAPON_MASK .equ '+str(empty_directory)+'\n')
     (ROOT/'build/assets/weapon-mask.bin').write_bytes(blob)
     (ROOT/'build/assets/weapon-loads.json').write_text(json.dumps(segments(literals,ROOT/'build/assets','weapon-runs'))+'\n')
