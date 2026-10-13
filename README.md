@@ -51,6 +51,34 @@ keeps weapon edges on the same two-pixel boundaries as the world renderer.
 Two pixels share each screen byte, so that avoids extra masking where the
 weapon and background would otherwise share a byte.
 
+## Display settings
+
+These are under Options → Display & Sound. On first start the game runs a
+quick speed test and picks a view size for your machine: 2/3 on a stock
+IIgs, 3/4 with a ZipGS or TransWarp GS, and full with an AppleSqueezer GS.
+You can change any of them and save.
+
+- **View Size** (1/2, 2/3, 3/4, Full): smaller is faster. `-` and `=` change
+  it while you play.
+- **Depth Shading**: darkens things with distance. Turn it off if you'd
+  rather have the flat look. `P` toggles it while you play.
+- **Vsync**: waits for the vertical blank before painting. Less tearing if 
+  your CPU is fast enough, but it costs speed. Off by default.
+- **Painting**:
+  - **Direct** (default) draws straight to the screen. It's the fastest on a
+    stock IIgs, but in slow scenes you can see the frame being painted.
+  - **Buffered** paints off-screen first, then copies it over, so it now paints
+    top to bottom as fast as it can after the frame was rendered to the buffer
+    left to right. With a small enough view and fast enough CPU, can be combined with Vsync, but again costs CPU cycles for the extra copy.
+- **Fast walls** skips repainting the parts of a wall that come out the same
+  color as what's already on screen, which saves the most when a wall fills
+  the screen. On by default with an accelerator, off on a stock IIgs since the check can cost more than it saves on slower CPUs.
+- **Fast transparency** (on by default): uses simplified versions of some of the
+  more complex sprites like tables, chairs and vines, so they draw faster. Each
+  transition from colored pixel to transparent requires setup and clipping every
+  time that column is drawn, so fewer transitions reduce work. Turn it off for 
+  the original artwork.
+
 ## Where it stands
 
 The original campaigns are running, and the stock-speed results are okayish.
