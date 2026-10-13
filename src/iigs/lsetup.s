@@ -849,6 +849,10 @@ playerAngleKept:
               stz dp:L_SPEED+2
               stz dp:L_ANGLE
               jsr abs:.word0 (Thrust)
+              lda abs:PLAYER+O_X+1        ; actors check sight before the first player move
+              sta abs:V_plux
+              lda abs:PLAYER+O_Y+1
+              sta abs:V_pluy
               ldx ##62
 clearByPlayer:stz abs:AREABYPLAYER,x
               dex
