@@ -311,6 +311,32 @@ def pack_floor(floor, palette_dir):
         report['free_bytes'] -= buffer_end-buffer_start
     assert all(not (a < buffer_end and buffer_start < a + len(raw)) for a, raw in result[0])
     assert all(not (a < cache_start and memmap.PLAY_CACHE < a + len(raw)) for a, raw in result[0])
+    # Reserve wall metadata after measuring the existing draw-buffer layout,
+    # so the new reservation cannot consume its retained play-cache slots.
+    original = chosen
+    lo, hi = memmap.WALL_PAINT, memmap.WALL_PAINT_END
+    wall_overlap = any(a < hi and lo < a + len(raw) for a,raw in result[0])
+    old_cache = min((max(a,memmap.PLAY_CACHE) for a,raw in result[0]
+                     if a < memmap.PLAY_CACHE_END and memmap.PLAY_CACHE < a+len(raw)),
+                    default=memmap.PLAY_CACHE_END)
+    if wall_overlap:
+        usable = split(ranges, [(buffer_start,buffer_end), (lo,hi), (memmap.PLAY_CACHE,old_cache)])[0]
+        chosen = search(*args, usable, sight_cache)
+        if chosen is None:
+            raise ValueError(f'floor {floor + 1}: wall painter does not fit beside draw buffer')
+        index, result, LAST_PROGRAM = chosen
+        report = result[-1]
+        report['draw_buffer'] = original[1][-1]['draw_buffer']
+    else:
+        report['free_bytes'] -= hi-lo
+    assert quality(chosen)[0] <= quality(original)[0], 'wall painter would weaken sight tables'
+    report['wall_paint'] = dict(address=lo, bytes=hi-lo, repacked=wall_overlap,
+                               baseline_quality=quality(original),quality=quality(chosen),
+                               protected_play_end=old_cache)
+    assert all(not (a < buffer_end and buffer_start < a + len(raw)) for a, raw in result[0])
+    assert all(not (a < old_cache and memmap.PLAY_CACHE < a + len(raw)) for a, raw in result[0])
+    assert all(not (a < memmap.WALL_PAINT_END and memmap.WALL_PAINT < a + len(raw))
+               for a, raw in result[0]), 'floor art overlaps the reserved wall painter'
     if SIGHT_ROOMS[index]:
         sight_needs(floor, SIGHT_ROOMS[index], sight_cache)  # later tries rewrote its files
     return result

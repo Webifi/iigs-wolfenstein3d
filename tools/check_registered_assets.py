@@ -84,7 +84,10 @@ def memory():
                              (max(a, memmap.BOOT_SEEDS_ART_END), b)]
                             if name == 'build/assets/ray-fixed.bin' else [(a, b)])
               if lo < hi]
-    runtime = [(memmap.DRAW_BUFFER, memmap.DRAW_BUFFER_END, 'draw buffer'),
+    wall_paint = (memmap.WALL_PAINT, memmap.WALL_PAINT_END, 'wall painter')
+    assert all(not overlap(wall_paint, row) for row in boot), 'boot load overlaps wall painter'
+    runtime = [wall_paint,
+               (memmap.DRAW_BUFFER, memmap.DRAW_BUFFER_END, 'draw buffer'),
                (memmap.PAINT_STACK, memmap.LOADER, 'deferred paint stack'),
                (memmap.SHORT_LIGHT_MAPS, memmap.SHORT_LIGHT_SPARE, 'sixteen short-light horizontal maps'),
                (memmap.SEG_LOGIC_END, (memmap.LOGIC_CODE+0x5c00), 'visibility region IDs'),
@@ -121,7 +124,7 @@ def memory():
         for view in range(4):
             weights = json.loads((ASSETS/'view-weight-loads.json').read_text())[view]
             weapons = json.loads((ROOT/f'build/levels/{floor}/view-weapon-loads.json').read_text())[view]
-            disjoint(art + effects + spans(weights + weapons))
+            disjoint(art + effects + spans(weights + weapons) + [wall_paint])
         checked.append(dict(floor=floor, art_bytes=sum(b-a for a,b,_ in art)))
     return dict(floors=checked, fast_ram_last_bank='41', resident_lights=4,
                 boot_spans=len(boot), protected_game_spans=len(protected), selected_views=4)

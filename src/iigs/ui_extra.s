@@ -140,3 +140,53 @@ VsyncToggle:  lda long:vsyncOn
               jmp abs:.word0 (VsyncSet)
 
 #include "ui_preview_gray.inc"
+
+              .section uiextra, text, root, noreorder
+              .public ViewApply, ViewSelect, PaintingDefault
+              .extern ViewDefault, viewChosen, viewTestKind
+;;; A = the value for weaponViewIndex (twice the size). Flags and DBR are the caller's; X and Y are not.
+ViewApply:    php
+              sep #0x20
+              lda long:SETTINGS_IN + S_VIEW
+              cmp #4
+              bcs vaProbe
+              lda long:SETTINGS_IN + S_FAST_WALLS
+              cmp #5
+              bcc vaStored                ; both choices are explicit: no probe
+vaProbe:      rep #0x20
+              jsl long:ViewDefault
+              tax
+              sep #0x20
+              lda long:SETTINGS_IN + S_VIEW
+              cmp #4
+              bcc vaStored                ; a saved view still wins when Fast walls needed the probe
+              lda #S_VIEW_NOTSET
+              sta long:SETTINGS_IN + S_VIEW
+              rep #0x20
+              txa
+              sta long:viewChosen
+              bra vaSize
+vaStored:     lda long:SETTINGS_IN + S_VIEW
+vaSize:       rep #0x20
+              and ##255
+              asl a
+              plp
+              rtl
+
+;;; Mark an actual size-key/menu choice, even when later returned to the default.
+;;; A is the size; preserve it and the caller's flags.
+ViewSelect:   php
+              sep #0x20
+              sta long:SETTINGS_IN + S_VIEW
+              plp
+              rtl
+
+;;; Called after ViewApply. Automatic Fast walls follows the startup class.
+PaintingDefault:
+              lda long:viewTestKind
+              cmp ##2                    ; store-sensitive or balanced: accelerated
+              lda ##0
+              bcc paintingDefaultDone
+              lda ##1
+paintingDefaultDone:
+              rtl

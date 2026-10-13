@@ -177,18 +177,6 @@ MouseReset:   lda ##0
 MouseSettingsLoad:
               lda long:SETTINGS_IN + S_MSPEED
               and ##255
-              tax
-              lda long:SETTINGS_IN + S_MOUSE_VERSION
-              and ##255
-              cmp ##1
-              beq mouseNewSetting
-              cpx ##10
-              bcs mouseDefault
-              lda long:mouseLegacy,x
-              and ##255
-              bra mouseSettingReady
-mouseNewSetting:
-              txa
               cmp ##16
               bcc mouseSettingReady
 mouseDefault: lda ##4
@@ -199,8 +187,6 @@ MouseSettingsStore:
               sep #0x20
               lda long:mouseSensitivity
               sta long:SETTINGS_IN + S_MSPEED
-              lda #1
-              sta long:SETTINGS_IN + S_MOUSE_VERSION
               rep #0x20
               rtl
 

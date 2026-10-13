@@ -1,5 +1,5 @@
-;;; Exact constant wall bands use the snapshot bank during direct painting.
-;;; View setup patches the bounds; buffered painting keeps its prepared list.
+;;; Exact constant wall bands skip unchanged rows in either painting mode.
+;;; The dedicated tables and running code stay separate from the draw buffer.
 #include "prepared.inc"
 #include "memmap.inc"
               .extern EnsureGameplayAssets, viewWidth, viewTop, viewBottom, screenHold
@@ -8,12 +8,12 @@
               .extern viewScaleAddr, viewScaleBank, sourceAddr, oldSource
               .extern oldHeight, heightIndex, lightDelta, rowCodeBase
               .public WallPaintShow, WallPaintRefresh
-              .public WallPaintMode, WallPaintToggle, wallPaintOn
+              .public PaintingToggle, WallPaintToggle, wallPaintOn
               .public WallPaintLoad, WallPaintStore
+              .extern PaintingDefault
               .public wallBandTemplate, wallBandTemplateEnd, wallBandBuildEntry
 
 B_META        .equ WALL_PAINT_META
-B_FITS        .equ WALL_PAINT_FITS
 B_OLDKEY      .equ RAY
 B_KEY         .equ MAPIDX
 B_OLDH        .equ STEPX
@@ -37,54 +37,60 @@ wallPaintBridge: jmp long:WALL_PAINT_CODE
 
               .section debugaux, text, root
 wallPaintOn:  .word 0
-WallPaintMode:
-              lda long:wallPaintOn
-              beq wallModeBuffer
-              lda ##2
-              rtl
-wallModeBuffer:
+;;; The two choices are independent. Only menu changes make an automatic
+;;; choice explicit; collecting or saving untouched defaults does not.
+;;; Encodings differ by two, so changing both choices cannot cancel in the
+;;; additive settings checksum that controls Save Settings availability.
+PaintingToggle:
               lda long:bufferOn
-              rtl
-WallPaintToggle:
-              jsl long:WallPaintMode
-              clc
-              adc dp:U_MORE
-              bpl wallModePositive
-              lda ##2
-wallModePositive:
-              cmp ##3
-              bcc wallModeChosen
-              lda ##0
-wallModeChosen:
-              cmp ##2
-              bne wallModeOrdinary
-              lda ##1
-              sta long:wallPaintOn
-              lda ##0
+              eor ##1
+              sep #0x20
+              sta long:SETTINGS_IN+S_DRAW_BUFFER
+              rep #0x20
               jmp long:BufferSet
+WallPaintToggle:
+              lda long:wallPaintOn
+              eor ##1
+              sta long:wallPaintOn
+              inc a
+              asl a
+              sep #0x20
+              sta long:SETTINGS_IN+S_FAST_WALLS
+              rep #0x20
+              rtl
+
 WallPaintLoad:
+              lda long:SETTINGS_IN+S_FAST_WALLS
+              and ##255
+              cmp ##5
+              bcc wallLoadExplicit
+              jsl long:PaintingDefault
+              bra wallLoadEnabled
+wallLoadExplicit:
+              lsr a
+              lsr a
+wallLoadEnabled:
+              sta long:wallPaintOn
               lda long:SETTINGS_IN+S_DRAW_BUFFER
               and ##255
-              cmp ##3
-              bcc wallModeChosen
+              cmp ##2
+              bcc wallLoadBuffer
               lda ##0
-wallModeOrdinary:
-              pha
-              lda ##0
-              sta long:wallPaintOn
-              pla
+wallLoadBuffer:
               jmp long:BufferSet
 WallPaintStore:
-              lda long:wallPaintOn
-              beq wallStoreDone
+              lda long:SETTINGS_IN+S_DRAW_BUFFER
+              and ##255
+              cmp ##2
+              bcs wallStoreDone
+              lda long:bufferOn
               sep #0x20
-              lda #2
               sta long:SETTINGS_IN+S_DRAW_BUFFER
               rep #0x20
 wallStoreDone:rtl
 
-;;; Menu pictures can reuse the whole snapshot bank. Rebuild after the floor
-;;; art is present, before the view is drawn; no frame-loop test is required.
+;;; Build after floor art is restored and before the view is drawn. Dispatch
+;;; changes only here, so neither painting mode tests the option in its loop.
 WallPaintShow:
               jsl long:EnsureGameplayAssets
               jmp long:WallPaintRefresh
@@ -100,7 +106,6 @@ WallPaintRefresh:
               lda ##.word0 (tightLoop)
               sta long:tightDispatch+1
               lda long:screenHold
-              ora long:bufferOn
               beq wallRefreshActive
               jmp abs:.word0 (wallRefreshDone)
 wallRefreshActive:
@@ -144,7 +149,7 @@ wallRefreshDone:
 ;;; weapon bounds enter this loop. Both wall heights must cover the view;
 ;;; equal parity-color words then prove their projected overlap unchanged.
 ;;; The template occupies unused scaler-bank space in every edition. Only
-;;; its copy in the snapshot bank executes, after view setup patches it.
+;;; its copy in the reserved wall-painter region executes, after view setup.
               .section scale5, text, root
               .align 2
 wallBandTemplate:
@@ -231,23 +236,32 @@ wallBandBegin:
               lda long:WALL_LIGHT_POINTERS+2,x
               ora abs:.word0 (viewScaleBank),y
               sta dp:B_BANKS
+;;; A larger custom floor can safely use the full painter beyond the table.
               lda dp:B_KEY
-              lsr a
+              cmp ##WALL_PAINT_META_SIZE*4
+              bcs wallBandFull
               lsr a
               lsr a
               tax
-              lda long:B_FITS,x
+              stx dp:B_TEMP
+              lda long:B_META,x
+              sta dp:B_NEW0
+;;; The minimum height depends only on source-run length. Subtracting the
+;;; packed endpoints gives that length in the low byte; one shared lookup
+;;; replaces a duplicate minimum-height word for every wall token.
+              xba
+              sec
+              sbc dp:B_NEW0
+              and ##255
+              asl a
+              tax
+              lda long:WALL_PAINT_CODE+(wallBandMinHeight-wallBandTemplate),x
               cmp dp:B_HEIGHT
               bcs wallBandFull
               lda dp:B_OLDKEY
-              cmp ##0xffff
-              beq wallBandFull
-              lda dp:B_KEY
-              lsr a
-              lsr a
-              tax
-              lda long:B_META,x
-              sta dp:B_NEW0
+              cmp ##WALL_PAINT_META_SIZE*4
+              bcs wallBandFull
+              ldx dp:B_TEMP
               lda long:B_META+2,x
               sta dp:B_NEW0+2
               lda dp:B_OLDKEY
@@ -366,7 +380,7 @@ wallBandClear:
 wallBandDirectory:
               stx dp:B_HINDEX
               lda long:WALL_COLUMNS,x
-              cmp ##WALL_LIGHT_POINTERS_SIZE
+              cmp ##WALL_PAINT_META_SIZE*4
               bcs wallBandDirectoryNext
               bit ##15
               bne wallBandDirectoryNext
@@ -418,19 +432,6 @@ wallBandSourceEnd:
               sta long:B_META,x
               lda dp:B_RIGHT
               sta long:B_META+2,x
-              lda dp:B_KEY
-              lsr a
-              lsr a
-              lsr a
-              tay
-              lda dp:B_BOTTOM
-              sec
-              sbc dp:B_TOP
-              asl a
-              tax
-              lda long:WALL_PAINT_CODE+(wallBandMinHeight-wallBandTemplate),x
-              tyx
-              sta long:B_FITS,x
 wallBandDirectoryNext:
               ldx dp:B_HINDEX
               inx

@@ -79,13 +79,15 @@ newMagic:     sep #0x20
               sep #0x20
               lda #S_VIEW_NOTSET
               sta long:SETTINGS_IN + S_VIEW
+              lda #S_PAINT_NOTSET
+              sta long:SETTINGS_IN + S_DRAW_BUFFER
+              sta long:SETTINGS_IN + S_FAST_WALLS
               lda #1
               sta long:SETTINGS_IN + S_SHADE
               sta long:SETTINGS_IN + S_MWALK
+              sta long:SETTINGS_IN + S_FAST_TRANSPARENCY
               lda #4
               sta long:SETTINGS_IN + S_MSPEED
-              lda #1
-              sta long:SETTINGS_IN + S_MOUSE_VERSION
               rep #0x20
               jsr abs:.word0 (ControlsDefaults)
               jsr abs:.word0 (ControlsCollect)
@@ -135,11 +137,6 @@ CollectSettings:
               jsl long:VsyncStore
               jsl long:TransparencyStore
               jsl long:MouseSettingsStore
-              sep #0x20
-              ; Reserved settings byte stays zero; following fields keep their offsets.
-              lda #0
-              sta long:SETTINGS_IN + S_UNUSED_DRAW
-              rep #0x20
               jsr abs:.word0 (ControlsCollect)
               jmp abs:.word0 (SoundRecordStore)
 
@@ -480,17 +477,17 @@ buildSlot:    lda dp:U_ITEM
               lda dp:U_OUT
               sta abs:.word0 (slotPtrs),x
               lda dp:U_T6
-              beq buildLegacy
+              beq buildSlotLabel
               lda dp:U_ITEM
               jsl long:SlotName
               cmp ##0
-              beq buildLegacy
+              beq buildSlotLabel
               lda ##.word0 (slotNameBuf)
               sta dp:U_STR
               jsr abs:.word0 (OutStr)
               lda ##1
               jmp abs:.word0 (buildFlag)
-buildLegacy:
+buildSlotLabel:
               lda dp:U_ITEM
               inc a
               jsr abs:.word0 (NumToStr)

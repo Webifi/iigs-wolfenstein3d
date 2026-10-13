@@ -62,18 +62,16 @@ S_VIEW        .equ 12                 ; 0 half, 1 two thirds, 2 three quarters, 
 S_VIEW_NOTSET .equ 255                ; no size picked yet: ViewDefault (viewdef.s) chooses one at start
 S_SHADE       .equ 13                 ; depth shading 0 off, 1 on
 S_MWALK       .equ 14                 ; mouse walk 0 off, 1 on
-S_MSPEED      .equ 15                 ; mouse speed 0-15 (older files use 0-9)
-S_VISITED     .equ 16                 ; low visited word; version 0 uses ten bits
-S_UNUSED_DRAW .equ 18                 ; retired drawing option; ignored on load, zeroed on save
+S_MSPEED      .equ 15                 ; mouse speed 0-15
+S_VISITED     .equ 16                 ; low word of the 64-bit visited-floor mask
 S_J13         .equ 19                 ; bit 0: gameplay; bit 1: explicit choice (menus always accept J13)
-S_MOUSE_VERSION .equ 20               ; 1 = calibrated 16-step mouse, 0 = legacy scale
-S_VISIT_VERSION .equ 21               ; 1 = 64-bit visited mask, 0 = legacy ten-floor mask
 S_VISITED_HI  .equ 22                 ; three upper words, through byte 27
 S_VSYNC       .equ 28                 ; wait for vertical blank before painting, default off
-S_DRAW_BUFFER .equ 29                 ; 0 direct, 1 buffered, 2 wall bands
-S_FAST_TRANSPARENCY .equ 30           ; bit 1: explicit choice, bit 0: enabled; old zero defaults on
-S_KEYPAD      .equ 31                 ; 1: S_KEYS holds 26 codes; older files hold 20 (keypad codes default)
+S_DRAW_BUFFER .equ 29                 ; 0 direct, 1 buffered, 255 not set
+S_PAINT_NOTSET .equ 255               ; retain the automatic choice until the player picks a mode
+S_FAST_TRANSPARENCY .equ 30           ; 0 off, 1 on
 S_KEYS        .equ 32                 ; 26 key codes in the order of boundKeys (keys.s), 255 none
+S_FAST_WALLS  .equ 58                 ; 4 on, 2 off, 255 automatic
 S_SCORES      .equ 64                 ; 7 high scores of 24 bytes, through 231
 S_SLOTS       .equ 232                ; 8 saved games of 32 bytes (the scores end at 232)
 SLOT_SIZE     .equ 32
@@ -108,4 +106,3 @@ SX_EXTRA      .equ 336                ; two unused slot headers, kept 0
 #include "memmap.inc"
 #include "menu.inc"
 #include "steel-constants.inc"
-

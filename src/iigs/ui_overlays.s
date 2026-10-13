@@ -678,17 +678,12 @@ TransparencyToggle:
               rtl
 TransparencyLoad:
               lda long:SETTINGS_IN+S_FAST_TRANSPARENCY
-              bit ##2
-              bne transparencyExplicit
-              lda ##1
-transparencyExplicit:
               and ##1
               sta long:fastTransparencyOn
               rtl
 TransparencyStore:
               sep #0x20
               lda long:fastTransparencyOn
-              ora #2
               sta long:SETTINGS_IN+S_FAST_TRANSPARENCY
               rep #0x20
               rtl

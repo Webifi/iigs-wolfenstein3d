@@ -51,9 +51,10 @@ EXTRA_RANGES = (
 class Space:
     """Bank-local fragments; every allocation retains its exact payload."""
     def __init__(self, ranges):
-        ranges = [(lo, hi) for a, b in ranges
-                  for lo, hi in ((a, min(b, memmap.DRAW_BUFFER)),
-                                 (max(a, memmap.DRAW_BUFFER_END), b)) if lo < hi]
+        for start, end in ((memmap.DRAW_BUFFER, memmap.DRAW_BUFFER_END),
+                           (memmap.WALL_PAINT, memmap.WALL_PAINT_END)):
+            ranges = [(lo, hi) for a, b in ranges
+                      for lo, hi in ((a, min(b, start)), (max(a, end), b)) if lo < hi]
         self.free = [list(r) for r in sorted(ranges)]
         self.records = []
         self.kinds = []

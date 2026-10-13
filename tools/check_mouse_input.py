@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from elf import read
 from emu816 import Emu
-from gen_mouse import TURN, MOVE, LEGACY
+from gen_mouse import TURN, MOVE
 
 ROOT = Path(__file__).resolve().parents[1]
 segments, symbols = read(ROOT / 'build/wolf.elf')
@@ -71,17 +71,16 @@ for speed in range(16):
     assert signed(e.x)*256+signed(e.rd16(symbols['mouseFracX']))==13*MOVE[speed]
     assert e.y==0 and e.rd16(symbols['mouseFracY'])==0
     cases+=1
-# The settings version distinguishes old 0..9 sensitivity from the new
-# calibrated 0..15 scale; invalid stored values return to the default.
-for version in (0,1,255):
+# Invalid sensitivity values return to the default. Reserved bytes are untouched.
+for reserved in (0,1,255):
     for stored in range(256):
-        e.wr8(0x7c00+15,stored);e.wr8(0x7c00+20,version)
+        e.wr8(0x7c00+15,stored);e.wr8(0x7c00+20,reserved)
         e.wr16(symbols['mouseFracX'],123);e.wr16(symbols['mouseFracY'],42)
         call('MouseSettingsLoad')
-        expected=(stored if stored<16 else 4) if version==1 else (LEGACY[stored] if stored<10 else 4)
+        expected=stored if stored<16 else 4
         assert e.rd16(symbols['mouseSensitivity'])==expected
         assert e.rd16(symbols['mouseFracX'])==e.rd16(symbols['mouseFracY'])==0
         call('MouseSettingsStore')
-        assert e.rd8(0x7c00+15)==expected and e.rd8(0x7c00+20)==1
+        assert e.rd8(0x7c00+15)==expected and e.rd8(0x7c00+20)==reserved
         cases+=1
-print(json.dumps({'cases':cases,'max_nominal_cycles_two_axes':max(cycles),'turn_q8':TURN,'move_q8':MOVE,'legacy_steps':LEGACY}))
+print(json.dumps({'cases':cases,'max_nominal_cycles_two_axes':max(cycles),'turn_q8':TURN,'move_q8':MOVE}))

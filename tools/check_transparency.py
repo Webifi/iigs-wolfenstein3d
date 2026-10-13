@@ -88,13 +88,13 @@ def main():
             assert bytes(emu.m[address:address + len(data)]) == data, (floor, hex(address), 'Off restoration')
         results.append(dict(floor=floor, cycles=timings))
         print(f'floor {floor + 1}: original, fast and restored commands/colors exact; cycles {timings}', flush=True)
-    for saved, expected in ((0, 1), (2, 0), (3, 1)):
+    for saved, expected in ((0, 0), (1, 1)):
         emu.wr8(memmap.SETTINGS_IN + 30, saved)
         emu.wr8(memmap.SETTINGS_IN + 31, 0xa5)
         invoke(emu, symbols, 'TransparencyLoad')
         assert emu.rd16(symbols['fastTransparencyOn']) == expected
         invoke(emu, symbols, 'TransparencyStore')
-        assert emu.rd8(memmap.SETTINGS_IN + 30) == 2 | expected
+        assert emu.rd8(memmap.SETTINGS_IN + 30) == expected
         assert emu.rd8(memmap.SETTINGS_IN + 31) == 0xa5
     args.out.write_text(json.dumps(dict(profile=PROFILE.key, floors=results, settings='passed'), indent=2)+'\n')
 

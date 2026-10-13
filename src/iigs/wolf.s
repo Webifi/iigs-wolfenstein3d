@@ -622,6 +622,7 @@ notEscKey:    cmp #'-'
               beq sizeKeyDone
               lsr a
               dec a
+              jsl long:ViewSelect
 #if WOLF_PREPARED && !WOLF_TRUE_PIXELS
               jsr abs:.word0 (sizeArm)
 #else
@@ -637,6 +638,7 @@ notSmaller:   cmp #'='
               cmp ##3
               bcs sizeKeyDone
               inc a
+              jsl long:ViewSelect
 #if WOLF_PREPARED && !WOLF_TRUE_PIXELS
               jsr abs:.word0 (sizeArm)
 #else
@@ -731,6 +733,7 @@ expandRayHeight:
 
               .extern EnsureViewAssets, EnsureGameplayAssets
               .public ShowView
+              .extern ViewSelect
 setView:      cmp ##4
               bcc validView
               stz abs:.word0 (viewKeep)

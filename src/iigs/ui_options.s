@@ -17,10 +17,10 @@
               .extern VsyncToggle, vsyncOn, BufferToggle, bufferOn, BufferChangeView, BufferOptionValue
 
               .extern fastTransparencyOn, TransparencyToggle
-              .extern WallPaintMode, WallPaintToggle
+              .extern PaintingToggle, WallPaintToggle, wallPaintOn
 
 NOKEY         .equ 0xffff
-OP_COUNT      .equ 11
+OP_COUNT      .equ 12
 OP_X          .equ 42                       ; labels
 OP_Y          .equ 44
 OP_STEP_DISPLAY .equ 12                     ; Display & Sound has no picture below its rows
@@ -36,11 +36,12 @@ OP_VIEW       .equ 2
 OP_SHADE      .equ 3
 OP_VSYNC      .equ 4
 OP_BUFFER     .equ 5
-OP_TRANSPARENCY .equ 6
-OP_MWALK      .equ 7
-OP_MSPEED     .equ 8
-OP_J13        .equ 9
-OP_CONTROLS   .equ 10
+OP_WALLS      .equ 6
+OP_TRANSPARENCY .equ 7
+OP_MWALK      .equ 8
+OP_MSPEED     .equ 9
+OP_J13        .equ 10
+OP_CONTROLS   .equ 11
 
 OptionsScreen:
 rootDraw:     lda abs:.word0 (uiShortcut)
@@ -92,7 +93,7 @@ rootChanged:  sep #0x20
               cmp ##1
               beq rootControl
               stz abs:.word0 (optBase)
-              lda ##7
+              lda ##8
               sta abs:.word0 (optCount)
               lda ##LUMP_OPTIONS
               bra rootPage
@@ -201,6 +202,8 @@ optValueColor: stx dp:U_C
 optValueHave:
               cmp ##OP_VIEW
               beq optValueView
+              cmp ##OP_WALLS
+              beq optValueWalls
               cmp ##OP_TRANSPARENCY
               beq optValueTransparency
               cmp ##OP_BUFFER
@@ -241,8 +244,11 @@ optValueMouse:
 optValueTransparency:
               lda long:fastTransparencyOn
               bra optValueSwitch
+optValueWalls:
+              lda long:wallPaintOn
+              bra optValueSwitch
 optValueBuffer:
-              jsl long:WallPaintMode
+              lda long:bufferOn
               asl a
               tax
               lda abs:.word0 (paintModeNames),x
@@ -301,6 +307,8 @@ optChange:    lda dp:UL_CUR
               adc abs:.word0 (optBase)
               cmp ##OP_VIEW
               beq changeView
+              cmp ##OP_WALLS
+              beq changeWalls
               cmp ##OP_TRANSPARENCY
               beq changeTransparency
               cmp ##OP_BUFFER
@@ -323,7 +331,9 @@ optChange:    lda dp:UL_CUR
 changeTransparency:
               jsl long:TransparencyToggle
               rts
-changeBuffer: jsl long:WallPaintToggle
+changeWalls:  jsl long:WallPaintToggle
+              rts
+changeBuffer: jsl long:PaintingToggle
               rts
 changeVsync:  jsl long:VsyncToggle
               rts
@@ -372,16 +382,16 @@ optAfter:     rts
 
               .section menudata, data, root
 optCur:       .word 0
-optActive:    .byte 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+optActive:    .byte 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 optItems:     .word .word0 (oSound), .word0 (oMusic), .word0 (oView), .word0 (oShade), .word0 (oVsync), .word0 (oBuffer)
-              .word .word0 (oTransparency), .word0 (oMouse), .word0 (oSpeed), .word0 (oJ13), .word0 (oControls)
+              .word .word0 (paintWalls), .word0 (oTransparency), .word0 (oMouse), .word0 (oSpeed), .word0 (oJ13), .word0 (oControls)
 oSound:       .asciz "Sound Effects"
 oMusic:       .asciz "Music"
 oView:        .asciz "View Size"
 oShade:       .asciz "Depth Shading"
 oVsync:       .asciz "Vsync"
 oBuffer:      .asciz "Painting"
-paintModeNames: .word .word0 (paintDirect), .word0 (paintBuffered), .word0 (paintWalls)
+paintModeNames: .word .word0 (paintDirect), .word0 (paintBuffered)
 paintDirect:  .asciz "Direct"
 paintBuffered: .asciz "Buffered"
 paintWalls:   .asciz "Fast walls"
@@ -402,7 +412,7 @@ vFull:        .asciz "Full"
 
 rootCur:      .word 0
 optBase:      .word 0
-optCount:     .word 7
+optCount:     .word 8
 optIndex:     .word 0
 rootActive:   .byte 1,1,1,3
 rootItems:    .word .word0 (rDisplay), .word0 (rControls), .word0 (oBench), .word0 (oSave)
@@ -413,7 +423,7 @@ rControls:    .asciz "Controls"
 OptionsShortcut: pha
               stz abs:.word0 (optBase)
               stz abs:.word0 (optCur)
-              lda ##7
+              lda ##8
               sta abs:.word0 (optCount)
               pla
               cmp ##5

@@ -157,27 +157,11 @@ floorMaskDone: tyx
               rts
 
               .public LoadVisitedFloors, StoreVisitedFloors
-;;; JSL, preserve X/P. Settings checksums cover the version and all mask words.
-;;; Existing settings retain their ten visited floors; unrecorded floors clear.
+;;; JSL, preserve X/P. All 64 floor bits are stored; the first floor stays open.
 LoadVisitedFloors:
               php
               rep #0x30
               phx
-              ldx ##6
-visitClearHigh:
-              lda ##0
-              sta long:visitMask,x
-              dex
-              dex
-              bne visitClearHigh
-              lda long:SETTINGS_IN + S_VISITED
-              and ##0x03ff
-              ora ##1
-              sta long:visitMask
-              lda long:SETTINGS_IN + S_VISIT_VERSION
-              and ##255
-              cmp ##1
-              bne visitLoadDone
               ldx ##6
 visitLoadHigh:
               lda long:SETTINGS_IN + S_VISITED_HI-2,x
@@ -188,7 +172,6 @@ visitLoadHigh:
               lda long:SETTINGS_IN + S_VISITED
               ora ##1
               sta long:visitMask
-visitLoadDone:
               plx
               plp
               rtl
@@ -207,9 +190,6 @@ visitStoreHigh:
               dex
               dex
               bne visitStoreHigh
-              sep #0x20
-              lda #1
-              sta long:SETTINGS_IN + S_VISIT_VERSION
               plx
               plp
               rtl

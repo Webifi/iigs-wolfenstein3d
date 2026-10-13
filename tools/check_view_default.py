@@ -42,10 +42,12 @@ ROOT = Path(__file__).resolve().parents[1]
 MAME = mame_kit.BINARY
 ROMS = mame_kit.ROMPATH
 SETTINGS_IN = 0x7c00            # frontend.inc
-S_VIEW, S_SHADE, S_KEYS, S_SUM = 12, 13, 32, 8   # the bytes 12 to 15 are the view, shading, mouse walk and speed
+S_VIEW, S_SHADE, S_KEYS, S_SUM = 12, 13, 32, 8
+S_PAINT, S_WALLS = 29, 58
 NOTSET = 255
 KEYS = {'Return': 'Return', 'Esc': 'Esc', 'Down': 'Down Arrow', 'Up': 'Up Arrow', 'Left': 'Left Arrow',
-        'Right': 'Right Arrow', 'Space': 'Space', 'Minus': '-  _', 'Equals': '=  +'}
+        'Right': 'Right Arrow', 'Space': 'Space', 'Minus': '-  _', 'Equals': '=  +',
+        'F2': 'F2', 'Home': 'Home', 'A': 'a  A'}
 
 # (tag, mask, default, value) lines of the MAME cfg: a2_config is the CPU type, bus_timing the cache and the card.
 MODELS = {
@@ -74,15 +76,16 @@ MACHINES = {'stock-rom3': ('apple2gs', '5M'), 'twgs14-rom3': ('apple2gs', '5M')}
 
 # Options (screen 7) from the main menu (screen 2): Save Game is off before a game, so Options is two rows down.
 # Display & Sound (screen17): View Size2, Depth Shading3; root Options Save Settings3.
-TO_OPTIONS = ['wait=1', 'sleep=1', 'key=Space', 'wait=2', 'sleep=1', 'key=Down', 'sleep=0.3', 'key=Down', 'sleep=0.3',
+TO_OPTIONS = ['wait=1', 'sleep=1', 'key=Esc', 'wait=2', 'sleep=1', 'key=Down', 'sleep=0.3', 'key=Down', 'sleep=0.3',
               'key=Return', 'wait=7', 'key=Return', 'wait=17', 'sleep=1', 'snap=options']
 SAVE_ROOT = ['key=Esc', 'wait=7'] + ['key=Down', 'sleep=0.3'] * 3
 SAVE = ['sleep=0.5', 'snap=before-save', 'key=Return', 'sleep=8', 'snap=after-save']
-# a new game from the title menu, then the in-game menu: Save Game is two rows down, the slot list has slot 0 first
-NEW_GAME = ['wait=1', 'sleep=1', 'key=Space', 'wait=2', 'sleep=1', 'key=Return', 'wait=15', 'sleep=0.5', 'key=Return', 'wait=3', 'sleep=0.5', 'key=Return',
-            'wait=0', 'sleep=2']
-SAVE_GAME = ['key=Esc', 'wait=2', 'sleep=1', 'key=Down', 'sleep=0.3', 'key=Down', 'sleep=0.3', 'snap=game-menu',
-             'key=Return', 'wait=4', 'sleep=1', 'snap=slots', 'key=Return', 'sleep=12', 'snap=after-save', 'end=']
+# Start a new game, then wait for completed frames before changing view.
+NEW_GAME = ['wait=1', 'sleep=1', 'key=Esc', 'wait=2', 'sleep=1', 'key=Return', 'wait=15', 'sleep=0.5', 'key=Return', 'wait=3', 'sleep=0.5', 'key=Return',
+            'wait=0', 'waitframes=2']
+# F2 opens Save Game independently of the remembered main-menu row.
+SAVE_GAME = ['key=F2', 'wait=4', 'sleep=1', 'key=Home', 'snap=slots',
+             'key=Return', 'sleep=1', 'key=A', 'key=Return', 'sleep=12', 'snap=after-save', 'end=']
 FLOWS = {
     # a key goes down while the test runs (an ADB interrupt inside the loops); nothing else is pressed
     'inject': [],
@@ -91,12 +94,12 @@ FLOWS = {
     # a game saved with no size picked: the size stays not set
     'savegame': NEW_GAME + SAVE_GAME,
     # the = key in play (3/4), then a game saved: the size is stored
-    'savegamekeys': NEW_GAME + ['key=Equals', 'sleep=2'] + SAVE_GAME,
+    'savegamekeys': NEW_GAME + ['key=Equals', 'waitframes=2'] + SAVE_GAME,
     # a size picked: Full (two Right keys from 2/3), then Save Settings
     'pick': TO_OPTIONS + ['key=Down', 'sleep=0.3', 'key=Down', 'sleep=0.3', 'key=Right', 'sleep=0.3', 'key=Right',
                           'sleep=0.5', 'snap=picked'] + SAVE_ROOT + SAVE + ['end='],
-    # a size picked on a fast machine: Two Thirds (two Left keys from Full), then Save Settings
-    'pickdown': TO_OPTIONS + ['key=Down', 'sleep=0.3', 'key=Down', 'sleep=0.3', 'key=Left', 'sleep=0.3', 'key=Left',
+    # a size picked on a fast machine: Two Thirds (one Left key from 3/4), then Save Settings
+    'pickdown': TO_OPTIONS + ['key=Down', 'sleep=0.3', 'key=Down', 'sleep=0.3', 'key=Left',
                               'sleep=0.5', 'snap=picked'] + SAVE_ROOT + SAVE + ['end='],
     # depth shading changed, no size: Save Settings must keep the size not set
     'shade': TO_OPTIONS + ['key=Down', 'sleep=0.3'] * 3 + ['key=Right', 'sleep=0.5', 'snap=shade'] +
@@ -109,23 +112,24 @@ FLOWS = {
 CASES = {
     'fresh-stock': ('stock', 'fresh', None, None, dict(ran=True, size=1, view=2)),
     'fresh-stock-rom3': ('stock-rom3', 'fresh', None, None, dict(ran=True, size=1, view=2)),
-    'fresh-zip16': ('zip16', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    'fresh-twgs14': ('twgs14', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    # These emulator configurations expect the TWGS probe to select 2/3 view
-    # with I set, while the ZipGS configuration still selects full view.
-    'seiflag-twgs14': ('twgs14', 'fresh', 'seiflag', None, dict(ran=True, size=1, view=2, sei=True)),
-    'seiflag-twgs14noirq': ('twgs14noirq', 'fresh', 'seiflag', None, dict(ran=True, size=1, view=2, sei=True)),
-    'seiflag-zip16': ('zip16', 'fresh', 'seiflag', None, dict(ran=True, size=3, view=6, sei=True)),
+    'fresh-zip16': ('zip16', 'fresh', None, None, dict(ran=True, size=2, view=4)),
+    'fresh-twgs14': ('twgs14', 'fresh', None, None, dict(ran=True, size=2, view=4)),
+    # The probe enables CPU IRQs even with I set on entry, restoring caller
+    # flags afterward. The card's own configuration stays unchanged.
+    'seiflag-twgs14': ('twgs14', 'fresh', 'seiflag', None, dict(ran=True, size=2, view=4, sei=True)),
+    'seiflag-twgs14noirq': ('twgs14noirq', 'fresh', 'seiflag', None, dict(ran=True, size=2, view=4, sei=True)),
+    'seiflag-zip16': ('zip16', 'fresh', 'seiflag', None, dict(ran=True, size=2, view=4, sei=True)),
     'inject-stock': ('stock', 'fresh', 'inject', None, dict(ran=True, size=1, view=2)),
-    'inject-zip16': ('zip16', 'fresh', 'inject', None, dict(ran=True, size=3, view=6)),
+    'inject-zip16': ('zip16', 'fresh', 'inject', None, dict(ran=True, size=2, view=4)),
     'fresh-native16': ('native16', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    'fresh-zip7': ('zip7', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    'fresh-zip8': ('zip8', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    'fresh-zip12': ('zip12', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    'fresh-twgs7': ('twgs7', 'fresh', None, None, dict(ran=True, size=3, view=6)),
+    'fresh-zip7': ('zip7', 'fresh', None, None, dict(ran=True, size=2, view=4)),
+    'fresh-zip8': ('zip8', 'fresh', None, None, dict(ran=True, size=2, view=4)),
+    'fresh-zip12': ('zip12', 'fresh', None, None, dict(ran=True, size=2, view=4)),
+    # The 7 MHz band chooses 3/4; 10 MHz has A about equal to B and chooses full.
+    'fresh-twgs7': ('twgs7', 'fresh', None, None, dict(ran=True, size=2, view=4)),
     'fresh-twgs10': ('twgs10', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    'fresh-twgs14-rom3': ('twgs14-rom3', 'fresh', None, None, dict(ran=True, size=3, view=6)),
-    'fresh-twgs14noirq': ('twgs14noirq', 'fresh', None, None, dict(ran=True, size=3, view=6)),
+    'fresh-twgs14-rom3': ('twgs14-rom3', 'fresh', None, None, dict(ran=True, size=2, view=4)),
+    'fresh-twgs14noirq': ('twgs14noirq', 'fresh', None, None, dict(ran=True, size=2, view=4)),
     'bad-stock': ('stock', 'bad', None, None, dict(ran=True, size=1, view=2)),
     'set-full-stock': ('stock', 3, None, None, dict(ran=False, view=6)),
     'set-half-stock': ('stock', 0, None, None, dict(ran=False, view=0)),
@@ -134,13 +138,13 @@ CASES = {
     'shade-stock': ('stock', 'fresh', 'shade', None, dict(ran=True, size=1, view=2, disk=(NOTSET, 0))),
     'shade-again-stock': ('stock', 'disk', None, 'shade-stock', dict(ran=True, size=1, view=2, shade=0)),
     'pick-stock': ('stock', 'fresh', 'pick', None, dict(ran=True, size=1, view=6, disk=(3, 1))),
-    'pick-again-stock': ('stock', 'disk', None, 'pick-stock', dict(ran=False, view=6, shade=1)),
+    'pick-again-stock': ('stock', 'disk', None, 'pick-stock', dict(ran=True, size=1, view=6, shade=1)),
     'savegame-stock': ('stock', 'fresh', 'savegame', None, dict(ran=True, size=1, view=2, disk=(NOTSET, 1))),
     'savegame-again-stock': ('stock', 'disk', None, 'savegame-stock', dict(ran=True, size=1, view=2, shade=1)),
     'savegamekeys-stock': ('stock', 'fresh', 'savegamekeys', None, dict(ran=True, size=1, view=4, disk=(2, 1))),
-    'savegamekeys-again-stock': ('stock', 'disk', None, 'savegamekeys-stock', dict(ran=False, view=4)),
-    'pick-zip16': ('zip16', 'fresh', 'pickdown', None, dict(ran=True, size=3, view=2, disk=(1, 1))),
-    'pick-again-zip16': ('zip16', 'disk', None, 'pick-zip16', dict(ran=False, view=2)),
+    'savegamekeys-again-stock': ('stock', 'disk', None, 'savegamekeys-stock', dict(ran=True, size=1, view=4)),
+    'pick-zip16': ('zip16', 'fresh', 'pickdown', None, dict(ran=True, size=2, view=2, disk=(1, 1))),
+    'pick-again-zip16': ('zip16', 'disk', None, 'pick-zip16', dict(ran=True, size=2, view=2)),
 }
 
 OBSERVER = memmap.fill(r'''
@@ -151,9 +155,29 @@ local S = @SYMS@
 local steps = {@STEPS@}
 local limit = @LIMIT@
 local idx, stepStart, held = 1, nil, nil
+local completedFrames = 0
+mem:install_write_tap(0x3f0, 0x3f0, "vd-frames", function(o,d,m)
+  if d == 2 then completedFrames = completedFrames + 1 end
+end)
 local musicAt, finished, booted, entered = nil, false, false, false
 local inject, injectAt, injectKey = @INJECT@, nil, nil
 local setI = @SETI@
+local probeActive, stackMin, firmwareBefore = false, 65535, {}
+local measuredA, measuredB = false, false
+local cardWrites = 0
+mem:install_write_tap(0xbc0000, 0xbcffff, "vd-card-writes", function(o,d,m)
+  if probeActive then cardWrites = cardWrites + 1 end
+end)
+mem:install_write_tap(0x1200, 0x1fff, "vd-stack", function(o,d,m)
+  if probeActive then stackMin = math.min(stackMin, o) end
+end)
+local function firmwareSum()
+  local h = 0
+  for a = 0xa00, 0xaff do h = (h * 33 + mem:read_u8(a)) & 0xffffffff end
+  return h
+end
+print(string.format("VD_CONFIG cpu=%d bus=%d", manager.machine.ioport.ports[":a2_config"]:read(),
+  manager.machine.ioport.ports[":bus_timing"]:read()))
 local function now() return manager.machine.time:as_double() end
 local function sum()
   local h = 0
@@ -171,12 +195,19 @@ local function exec(name, fn)
     if cpu.state.PC.value == addr + 1 then fn() end
   end)
 end
+local function display(label)
+  local painting = mem:read_u16(S.bufferOn)
+  print(string.format("VD_%s view=%d sview=%d paint=%d spaint=%d walls=%d swalls=%d frames=%d width=%d wallpath=%d", label,
+    mem:read_u16(S.weaponViewIndex), mem:read_u8(@SVIEW@), painting, mem:read_u8(@SVIEW@ + 17), mem:read_u16(S.wallPaintOn), mem:read_u8(@SVIEW@ + 46), completedFrames, mem:read_u16(S.viewWidth)*2,
+    mem:read_u16(S.tightDispatch+1) == (S.wallPaintBridge & 65535) and 1 or 0))
+end
 local function final(why)
   if finished then return end
   finished = true
   local view = S.weaponViewIndex and mem:read_u16(S.weaponViewIndex) or -1
   local shade = S.columnLight and mem:read_u16(S.columnLight) or -1
   print(string.format("VD_FINAL t=%.4f why=%s view=%d sview=%d shade=%d", now(), why, view, mem:read_u8(@SVIEW@), shade))
+  display("DISPLAY")
   manager.machine:exit()
 end
 exec("MenuBoot", function() booted = true; print(string.format("VD_MENUBOOT t=%.4f", now())) end)
@@ -186,8 +217,33 @@ exec("ViewDefault", function()
   local st = cpu.state
   entered = true
   if setI then st.P.value = st.P.value | 4 end   -- an experiment: the test with the I flag set
-  print(string.format("VD_ENTRY t=%.4f P=0x%02x DB=0x%02x S=0x%04x sum=0x%08x music=%d", now(), st.P.value, st.DB.value,
-    st.S.value, sum(), mem:read_u16(S.musicActive)))
+  probeActive = true
+  for a = 0xa00, 0xaff do firmwareBefore[a] = mem:read_u8(a) end
+  print(string.format("VD_ENTRY t=%.4f P=0x%02x DB=0x%02x D=0x%04x S=0x%04x dp=0x%08x tw=0x%02x sum=0x%08x music=%d", now(), st.P.value, st.DB.value,
+    st.D.value, st.S.value, firmwareSum(), mem:read_u8(0xbc0000), sum(), mem:read_u16(S.musicActive)))
+  local returnPC = (mem:read_u16(st.S.value+1) + 1) & 65535
+  returnPC = returnPC | (mem:read_u8(st.S.value+3) << 16)
+  mem:install_read_tap(returnPC, returnPC, "vd-restored", function(o,d,m)
+    if probeActive and st.PC.value == o+1 then
+      local changed = 0
+      for a = 0xa00, 0xaff do if firmwareBefore[a] ~= mem:read_u8(a) then changed = changed + 1 end end
+      print(string.format("VD_RESTORED P=0x%02x DB=0x%02x D=0x%04x S=0x%04x dp=0x%08x tw=0x%02x stackmin=0x%04x dpbad=%d cardwrites=%d", st.P.value, st.DB.value,
+        st.D.value, st.S.value-3, firmwareSum(), mem:read_u8(0xbc0000), stackMin, changed, cardWrites))
+      probeActive = false
+    end
+  end)
+end)
+exec("vtBatchA", function()
+  if not measuredA then
+    print(string.format("VD_MEASURING tw=0x%02x P=0x%02x", mem:read_u8(0xbc0000), cpu.state.P.value))
+    measuredA = true
+  end
+end)
+exec("vtBatchB", function()
+  if not measuredB then
+    print(string.format("VD_MEASUREB tw=0x%02x P=0x%02x", mem:read_u8(0xbc0000), cpu.state.P.value))
+    measuredB = true
+  end
 end)
 if S.viewTestSize then
   mem:install_write_tap(S.viewTestSize + 1, S.viewTestSize + 1, "vd-exit", function(o, d, m)
@@ -210,6 +266,7 @@ emu.register_frame_done(function()
   if booted and not musicAt and mem:read_u16(S.musicActive) ~= 0 then   -- (before MenuBoot the RAM is not set yet)
     musicAt = t
     print(string.format("VD_MUSIC t=%.4f", t))
+    display("BOOT")
   end
   local s = steps[idx]
   if not s then
@@ -219,6 +276,9 @@ emu.register_frame_done(function()
   if not stepStart then stepStart = t end
   if s.k == "wait" then
     if mem:read_u8(0x3e4) == s.n then print(string.format("VD_WAIT %d t=%.4f", s.n, t)); idx = idx + 1; stepStart = nil end
+  elseif s.k == "waitframes" then
+    s.start = s.start or completedFrames
+    if completedFrames - s.start >= s.n then idx = idx + 1; stepStart = nil end
   elseif s.k == "sleep" then
     if t - stepStart >= s.d then idx = idx + 1; stepStart = nil end
   elseif s.k == "key" then
@@ -238,13 +298,17 @@ def cfg_xml(machine, model):
     return f'<mameconfig version="10"><system name="{machine}"><input>{ports}</input></system></mameconfig>'
 
 
-def settings_block(view, symbols=None, good=True):
+def settings_block(view, symbols=None, good=True, paint=0, walls=2):
     """A valid WOLF.SETTINGS block (bytes 8-9 the sum of 12-495) with the view byte view."""
     block = bytearray(512)
     block[:8] = b'WOLFSET\x02'
     block[S_VIEW:S_VIEW + 4] = bytes((view, 1, 1, 5))
-    block[S_KEYS:S_KEYS + 20] = bytes((0x0d, 0x3e, 0x01, 0x3d, 0x3b, 0x3c, 0x00, 0x02, 0x2b, 0x2f,
-                                       0x31, 0x0e, 0x03, 0x36, 0x7e, 0x70, 0x3a, 0x37, 0x38, 0x39))
+    block[S_KEYS:S_KEYS + 26] = bytes((0x0d, 0x3e, 0x01, 0x3d, 0x3b, 0x3c, 0x00, 0x02, 0x2b, 0x2f,
+                                       0x31, 0x0e, 0x03, 0x36, 0x7e, 0x70, 0x3a, 0x37, 0x38, 0x39,
+                                       0x5b, 0x57, 0x56, 0x58, 0x59, 0x5c))
+    block[30] = 1
+    block[S_PAINT] = paint
+    block[S_WALLS] = walls
     struct.pack_into('<H', block, S_SUM, (sum(block[12:496]) + (0 if good else 1)) & 0xffff)
     return bytes(block)
 
@@ -262,6 +326,8 @@ def steps_lua(steps):
         kind, _, arg = item.partition('=')
         if kind == 'key':
             out.append('{k="key",f=%r}' % KEYS[arg])
+        elif kind == 'waitframes':
+            out.append('{k="waitframes",n=%d}' % int(arg))
         elif kind == 'wait':
             out.append('{k="wait",n=%d}' % int(arg))
         elif kind == 'sleep':
@@ -309,11 +375,11 @@ def run_case(prefix, name, args):
         elif settings != 'fresh':
             at = settings_offset(disk)
             data = bytearray(disk.read_bytes())
-            data[at:at + 512] = settings_block(settings)
+            data[at:at + 512] = settings_block(**settings) if isinstance(settings, dict) else settings_block(settings)
             disk.write_bytes(data)
     _, symbols = read(args.elf)
-    want = ('MenuBoot', 'LoadSettings', 'PgPage', 'ViewDefault', 'viewTestA', 'viewTestB', 'viewTestKind',
-            'viewTestSize', 'weaponViewIndex', 'musicActive', 'columnLight')
+    want = ('MenuBoot', 'LoadSettings', 'PgPage', 'ViewDefault', 'vtBatchA', 'vtBatchB', 'viewTestA', 'viewTestB', 'viewTestKind',
+            'viewTestSize', 'weaponViewIndex', 'musicActive', 'columnLight', 'wallPaintOn', 'bufferOn', 'viewWidth', 'tightDispatch', 'wallPaintBridge')
     syms = '{' + ','.join('%s=%d' % (k, symbols[k]) for k in want if k in symbols) + '}'
     steps = args.steps.split(';') if args.steps else FLOWS[flow] if flow else []
     limit = (args.seconds * 2 if flow else args.seconds) * (1 if model == 'stock' else 2)
@@ -351,6 +417,11 @@ def run_case(prefix, name, args):
     at = settings_offset(disk)
     result['disk_sview'] = data[at + S_VIEW] if data[at:at + 7] == b'WOLFSET' else None
     result['disk_shade'] = data[at + S_SHADE] if data[at:at + 7] == b'WOLFSET' else None
+    result['disk_paint'] = data[at + S_PAINT] if data[at:at + 7] == b'WOLFSET' else None
+    result['disk_walls'] = data[at + S_WALLS] if data[at:at + 7] == b'WOLFSET' else None
+    result['disk_checksum_valid'] = struct.unpack_from('<H', data, at + S_SUM)[0] == sum(data[at+12:at+496]) & 0xffff
+    result['config_xml'] = cfg_xml(machine, model)
+    result['command'] = cmd
     result['model'], result['case'] = model, name
     return result
 

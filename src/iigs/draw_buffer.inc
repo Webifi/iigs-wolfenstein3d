@@ -76,8 +76,6 @@ BufferStore:  jsl long:J13SettingsStore
               sep #0x20
               lda long:vsyncOn
               sta long:SETTINGS_IN+S_VSYNC
-              lda long:bufferOn
-              sta long:SETTINGS_IN+S_DRAW_BUFFER
               rep #0x20
               jmp long:WallPaintStore
 bufferHooks:  lda long:bufferOn
@@ -891,7 +889,7 @@ vsyncViewCompare:
 
               .section buffersave, text, root
               .public BufferChangeView
-              .extern BufferMenuSound
+              .extern BufferMenuSound, ViewSelect
 BufferChangeView:
               lda long:weaponViewIndex
               lsr a
@@ -900,6 +898,7 @@ BufferChangeView:
               bmi bufferViewKeep
               cmp ##4
               bcs bufferViewKeep
+              jsl long:ViewSelect
               asl a
               sta long:weaponViewIndex
               lda ##2

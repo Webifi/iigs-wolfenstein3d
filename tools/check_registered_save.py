@@ -66,7 +66,7 @@ end)
     image=(out/'save/wolf-hd.po').read_bytes()
     block=struct.unpack_from('<H',image,512+436)[0]
     settings=image[block*512:(block+1)*512]
-    assert settings[21]==1 and int.from_bytes(settings[16:18]+settings[22:28],'little')&(1<<50)
+    assert int.from_bytes(settings[16:18]+settings[22:28],'little')&(1<<50)
     report=dict(fields=reports['save'],saved_visited_floor=50,cold_load_exact=True,method=__doc__,
                 elf_sha256=hashlib.sha256((ROOT/'build/wolf.elf').read_bytes()).hexdigest())
     (out/'result.json').write_text(json.dumps(report,indent=2)+'\n')
