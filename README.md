@@ -112,3 +112,7 @@ You can grab the latest build of the shareware Wolfenstein 3D for IIgs from
 
 If you want to try the full Wolfenstein 3D or Spear of Destiny and you have
 the data files from the original DOS releases, you can try [building your own release with them](BUILD.md).
+
+## What is the project status?
+
+I'm no longer actively developing this and have indefinitely paused any other IIGS development.
